@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 171105 (10065 per locale)
+/// Strings: 171802 (10106 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4174,6 +4174,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get floating_ball_action_popup_lookup => 'App-external lookup';
   String get floating_ball_action_screen_ocr => 'Screen OCR';
   String get floating_ball_action_switch_profile => 'Switch profile';
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   String get floating_ball_auto_restore_both => 'In and out of app';
   String get floating_ball_auto_restore_hint =>
@@ -5935,6 +5937,56 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object total,
   }) => 'Current: ${current} / ${total}';
   String get jump_to_char_hint => 'Enter character position…';
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  String get kavita_api_key_label => 'API key';
+  String get kavita_book_cached => 'Cached';
+  String get kavita_book_cancel => 'Cancel';
+  String get kavita_book_download => 'Download';
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  String get kavita_book_downloaded => 'Downloaded';
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  String get kavita_book_open => 'Read';
+  String get kavita_book_remove_download => 'Remove download';
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  String get kavita_books_search_hint => 'Search books';
+  String get kavita_books_servers_label => 'Server';
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  String get kavita_browse_series_empty => 'No manga in this library';
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  String get kavita_connect_test => 'Test connection';
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  String get kavita_http_allow => 'Allow plain HTTP';
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  String get kavita_name_label => 'Name';
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  String get kavita_server_add => 'Add Kavita server';
+  String get kavita_server_enabled => 'Enabled';
+  String get kavita_server_remove => 'Remove server';
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  String get kavita_settings_title => 'Kavita servers';
+  String get kavita_source_name => 'Kavita';
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  String get kavita_url_invalid => 'Enter a valid server address';
+  String get kavita_url_label => 'Server address';
   String get keep_screen_awake => 'Keep screen awake';
   String get lapis_style_ai_applied =>
       'AI suggestion loaded into the editor. Check the preview, then apply.';
@@ -6334,6 +6386,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_sort_filter => 'Sort and filter';
   String get library_view_discover => 'Discover';
   String get library_view_import => 'Import';
+  String get library_view_kavita => 'Kavita';
   String get library_view_media => 'Library';
   String get library_view_shelf => 'Shelf';
   String get library_view_sources => 'Sources';
@@ -21213,6 +21266,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -24191,6 +24247,95 @@ class _StringsAr extends _StringsEn {
   @override
   String get jump_to_char_hint => 'أدخل موضع الحرف…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'إبقاء الشاشة مستيقظة';
   @override
   String get lapis_style_ai_applied =>
@@ -24854,6 +24999,8 @@ class _StringsAr extends _StringsEn {
   String get library_view_discover => 'اكتشاف';
   @override
   String get library_view_import => 'استيراد';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'المكتبة';
   @override
@@ -45704,6 +45851,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -48756,6 +48906,95 @@ class _StringsDe extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Zeichenposition eingeben…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Bildschirm eingeschaltet lassen';
   @override
   String get lapis_style_ai_applied =>
@@ -49435,6 +49674,8 @@ class _StringsDe extends _StringsEn {
   String get library_view_discover => 'Entdecken';
   @override
   String get library_view_import => 'Importieren';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Bibliothek';
   @override
@@ -70500,6 +70741,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -73553,6 +73797,95 @@ class _StringsEs extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Introduce la posición del carácter…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Mantener pantalla encendida';
   @override
   String get lapis_style_ai_applied =>
@@ -74235,6 +74568,8 @@ class _StringsEs extends _StringsEn {
   String get library_view_discover => 'Descubrir';
   @override
   String get library_view_import => 'Importar';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Biblioteca';
   @override
@@ -95361,6 +95696,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -98425,6 +98763,95 @@ class _StringsFr extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Entrez la position du caractère…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Garder l\'écran allumé';
   @override
   String get lapis_style_ai_applied =>
@@ -99107,6 +99534,8 @@ class _StringsFr extends _StringsEn {
   String get library_view_discover => 'Découvrir';
   @override
   String get library_view_import => 'Importer';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Bibliothèque';
   @override
@@ -120176,6 +120605,9 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -123187,6 +123619,95 @@ class _StringsId extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Masukkan posisi karakter…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Layar selalu menyala';
   @override
   String get lapis_style_ai_applied =>
@@ -123861,6 +124382,8 @@ class _StringsId extends _StringsEn {
   String get library_view_discover => 'Jelajahi';
   @override
   String get library_view_import => 'Impor';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Perpustakaan';
   @override
@@ -144791,6 +145314,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -147830,6 +148356,95 @@ class _StringsIt extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Inserisci la posizione del carattere…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Mantieni lo schermo acceso';
   @override
   String get lapis_style_ai_applied =>
@@ -148503,6 +149118,8 @@ class _StringsIt extends _StringsEn {
   String get library_view_discover => 'Scopri';
   @override
   String get library_view_import => 'Importa';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Libreria';
   @override
@@ -169252,6 +169869,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'プロファイル切り替え';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'フローティングボールの自動復元';
   @override
   String get floating_ball_auto_restore_both => 'アプリ内外';
@@ -172117,6 +172737,95 @@ class _StringsJa extends _StringsEn {
   @override
   String get jump_to_char_hint => '文字位置を入力…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => '画面を常時点灯';
   @override
   String get lapis_style_ai_applied =>
@@ -172763,6 +173472,8 @@ class _StringsJa extends _StringsEn {
   String get library_view_discover => '見つける';
   @override
   String get library_view_import => 'インポート';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'ライブラリ';
   @override
@@ -192960,6 +193671,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -195825,6 +196539,95 @@ class _StringsKo extends _StringsEn {
   @override
   String get jump_to_char_hint => '문자 위치를 입력하세요…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => '화면 항상 켜기';
   @override
   String get lapis_style_ai_applied =>
@@ -196470,6 +197273,8 @@ class _StringsKo extends _StringsEn {
   String get library_view_discover => '발견';
   @override
   String get library_view_import => '가져오기';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => '라이브러리';
   @override
@@ -216980,6 +217785,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -220003,6 +220811,95 @@ class _StringsNl extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Voer tekenpositie in…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Scherm aan houden';
   @override
   String get lapis_style_ai_applied =>
@@ -220681,6 +221578,8 @@ class _StringsNl extends _StringsEn {
   String get library_view_discover => 'Ontdekken';
   @override
   String get library_view_import => 'Importeren';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Bibliotheek';
   @override
@@ -241682,6 +242581,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -244723,6 +245625,95 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Digite a posição do caractere…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Manter tela ligada';
   @override
   String get lapis_style_ai_applied =>
@@ -245403,6 +246394,8 @@ class _StringsPtBr extends _StringsEn {
   String get library_view_discover => 'Descobrir';
   @override
   String get library_view_import => 'Importar';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Biblioteca';
   @override
@@ -266407,6 +267400,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -269435,6 +270431,95 @@ class _StringsRu extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Введите позицию символа…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Не выключать экран';
   @override
   String get lapis_style_ai_applied =>
@@ -270114,6 +271199,8 @@ class _StringsRu extends _StringsEn {
   String get library_view_discover => 'Обзор';
   @override
   String get library_view_import => 'Импорт';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Библиотека';
   @override
@@ -291024,6 +292111,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -293996,6 +295086,95 @@ class _StringsTh extends _StringsEn {
   @override
   String get jump_to_char_hint => 'ป้อนตำแหน่งอักขระ…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'เปิดหน้าจอตลอด';
   @override
   String get lapis_style_ai_applied =>
@@ -294660,6 +295839,8 @@ class _StringsTh extends _StringsEn {
   String get library_view_discover => 'ค้นพบ';
   @override
   String get library_view_import => 'นำเข้า';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'คลัง';
   @override
@@ -315459,6 +316640,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -318475,6 +319659,95 @@ class _StringsTr extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Karakter konumu girin…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Ekranı açık tut';
   @override
   String get lapis_style_ai_applied =>
@@ -319147,6 +320420,8 @@ class _StringsTr extends _StringsEn {
   String get library_view_discover => 'Keşfet';
   @override
   String get library_view_import => 'İçe aktar';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Kütüphane';
   @override
@@ -340021,6 +341296,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => 'Switch profile';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -343023,6 +344301,95 @@ class _StringsVi extends _StringsEn {
   @override
   String get jump_to_char_hint => 'Nhập vị trí ký tự…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => 'Giữ màn hình sáng';
   @override
   String get lapis_style_ai_applied =>
@@ -343693,6 +345060,8 @@ class _StringsVi extends _StringsEn {
   String get library_view_discover => 'Khám phá';
   @override
   String get library_view_import => 'Nhập';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Thư viện';
   @override
@@ -363958,6 +365327,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => '切换配置';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      '切换配置（当前：${name}）';
+  @override
   String get floating_ball_auto_restore => '自动恢复悬浮球';
   @override
   String get floating_ball_auto_restore_both => '应用内外';
@@ -366674,6 +368046,90 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get jump_to_char_hint => '输入字符位置…';
   @override
+  String get kavita_api_key_hint => 'Kavita：用户设置 > 账户 > API 密钥';
+  @override
+  String get kavita_api_key_label => 'API 密钥';
+  @override
+  String get kavita_book_cached => '已缓存';
+  @override
+  String get kavita_book_cancel => '取消';
+  @override
+  String get kavita_book_download => '下载';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      '下载失败：${reason}';
+  @override
+  String get kavita_book_downloaded => '已下载';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      '正在下载 ${percent}%';
+  @override
+  String get kavita_book_no_chapters => '此书没有可阅读的文件';
+  @override
+  String get kavita_book_open => '阅读';
+  @override
+  String get kavita_book_remove_download => '移除下载';
+  @override
+  String get kavita_books_empty => '此服务器上没有 EPUB 书籍';
+  @override
+  String get kavita_books_search_hint => '搜索书籍';
+  @override
+  String get kavita_books_servers_label => '服务器';
+  @override
+  String get kavita_browse_libraries_empty => '此服务器上没有漫画库';
+  @override
+  String get kavita_browse_series_empty => '此库中没有漫画';
+  @override
+  String kavita_connect_failed({required Object reason}) => '连接失败：${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) => '已连接，${count} 个库';
+  @override
+  String get kavita_connect_test => '测试连接';
+  @override
+  String get kavita_connect_unauthorized => '服务器拒绝了该 API 密钥';
+  @override
+  String get kavita_http_allow => '允许明文 HTTP';
+  @override
+  String get kavita_http_allow_hint => '仅用于局域网内的服务器';
+  @override
+  String get kavita_name_hint => '可选，默认使用主机名';
+  @override
+  String get kavita_name_label => '名称';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) => '本机在第 ${local} 章，Kavita 服务器在第 ${server} 章。保留哪一个？';
+  @override
+  String get kavita_progress_conflict_title => '阅读进度不一致';
+  @override
+  String get kavita_progress_conflict_use_local => '保留本机';
+  @override
+  String get kavita_progress_conflict_use_server => '使用 Kavita';
+  @override
+  String get kavita_server_add => '添加 Kavita 服务器';
+  @override
+  String get kavita_server_enabled => '启用';
+  @override
+  String get kavita_server_remove => '移除服务器';
+  @override
+  String get kavita_settings_hint =>
+      '在自建 Kavita 服务器上阅读漫画和书籍，支持流式阅读、下载和双向阅读进度同步。Kavita 的 OPDS 仍可作为仅下载的备用途径。';
+  @override
+  String get kavita_settings_title => 'Kavita 服务器';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => '从你的 Kavita 服务器在线阅读漫画';
+  @override
+  String get kavita_url_hint => '例如 http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required => '需要在下方允许明文 HTTP';
+  @override
+  String get kavita_url_invalid => '请输入有效的服务器地址';
+  @override
+  String get kavita_url_label => '服务器地址';
+  @override
   String get keep_screen_awake => '阅读时防止息屏';
   @override
   String get lapis_style_ai_applied => 'AI 建议已填入编辑器，看过预览再应用。';
@@ -367292,6 +368748,8 @@ class _StringsZhCn extends _StringsEn {
   String get library_view_discover => '发现';
   @override
   String get library_view_import => '导入';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => '媒体库';
   @override
@@ -386545,6 +388003,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_action_switch_profile => '切換設定檔';
   @override
+  String floating_ball_action_switch_profile_tooltip({required Object name}) =>
+      'Switch profile (current: ${name})';
+  @override
   String get floating_ball_auto_restore => '自動恢復懸浮球';
   @override
   String get floating_ball_auto_restore_both => '應用內外';
@@ -389300,6 +390761,95 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get jump_to_char_hint => '輸入字符位置…';
   @override
+  String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
+  @override
+  String get kavita_api_key_label => 'API key';
+  @override
+  String get kavita_book_cached => 'Cached';
+  @override
+  String get kavita_book_cancel => 'Cancel';
+  @override
+  String get kavita_book_download => 'Download';
+  @override
+  String kavita_book_download_failed({required Object reason}) =>
+      'Download failed: ${reason}';
+  @override
+  String get kavita_book_downloaded => 'Downloaded';
+  @override
+  String kavita_book_downloading({required Object percent}) =>
+      'Downloading ${percent}%';
+  @override
+  String get kavita_book_no_chapters => 'This book has no readable file';
+  @override
+  String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_books_empty => 'No EPUB books found on this server';
+  @override
+  String get kavita_books_search_hint => 'Search books';
+  @override
+  String get kavita_books_servers_label => 'Server';
+  @override
+  String get kavita_browse_libraries_empty =>
+      'No manga libraries on this server';
+  @override
+  String get kavita_browse_series_empty => 'No manga in this library';
+  @override
+  String kavita_connect_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String kavita_connect_ok({required Object count}) =>
+      'Connected. ${count} libraries';
+  @override
+  String get kavita_connect_test => 'Test connection';
+  @override
+  String get kavita_connect_unauthorized => 'The server rejected the API key';
+  @override
+  String get kavita_http_allow => 'Allow plain HTTP';
+  @override
+  String get kavita_http_allow_hint => 'Only for servers on your local network';
+  @override
+  String get kavita_name_hint => 'Optional, defaults to the host name';
+  @override
+  String get kavita_name_label => 'Name';
+  @override
+  String kavita_progress_conflict_body({
+    required Object local,
+    required Object server,
+  }) =>
+      'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+  @override
+  String get kavita_progress_conflict_title => 'Reading progress differs';
+  @override
+  String get kavita_progress_conflict_use_local => 'Keep this device';
+  @override
+  String get kavita_progress_conflict_use_server => 'Use Kavita';
+  @override
+  String get kavita_server_add => 'Add Kavita server';
+  @override
+  String get kavita_server_enabled => 'Enabled';
+  @override
+  String get kavita_server_remove => 'Remove server';
+  @override
+  String get kavita_settings_hint =>
+      'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+  @override
+  String get kavita_settings_title => 'Kavita servers';
+  @override
+  String get kavita_source_name => 'Kavita';
+  @override
+  String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String get kavita_url_hint => 'For example http://192.168.1.10:5000';
+  @override
+  String get kavita_url_http_optin_required =>
+      'Plain HTTP must be allowed below';
+  @override
+  String get kavita_url_invalid => 'Enter a valid server address';
+  @override
+  String get kavita_url_label => 'Server address';
+  @override
   String get keep_screen_awake => '閱讀時防止螢幕關閉';
   @override
   String get lapis_style_ai_applied => 'AI 建議已填入編輯器，看過預覽再應用。';
@@ -389921,6 +391471,8 @@ class _StringsZhHk extends _StringsEn {
   String get library_view_discover => '發現';
   @override
   String get library_view_import => '導入';
+  @override
+  String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => '媒體庫';
   @override
@@ -408972,6 +410524,8 @@ extension on _StringsEn {
         return 'Screen OCR';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -411491,6 +413045,85 @@ extension on _StringsEn {
             'Current: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Enter character position…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Keep screen awake';
       case 'lapis_style_ai_applied':
@@ -412054,6 +413687,8 @@ extension on _StringsEn {
         return 'Discover';
       case 'library_view_import':
         return 'Import';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Library';
       case 'library_view_shelf':
@@ -429874,6 +431509,8 @@ extension on _StringsAr {
         return 'OCR للشاشة';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -432389,6 +434026,85 @@ extension on _StringsAr {
             'الحالي: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'أدخل موضع الحرف…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'إبقاء الشاشة مستيقظة';
       case 'lapis_style_ai_applied':
@@ -432951,6 +434667,8 @@ extension on _StringsAr {
         return 'اكتشاف';
       case 'library_view_import':
         return 'استيراد';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'المكتبة';
       case 'library_view_shelf':
@@ -450802,6 +452520,8 @@ extension on _StringsDe {
         return 'Bildschirm-OCR';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -453325,6 +455045,85 @@ extension on _StringsDe {
             'Aktuell: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Zeichenposition eingeben…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Bildschirm eingeschaltet lassen';
       case 'lapis_style_ai_applied':
@@ -453889,6 +455688,8 @@ extension on _StringsDe {
         return 'Entdecken';
       case 'library_view_import':
         return 'Importieren';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Bibliothek';
       case 'library_view_shelf':
@@ -471764,6 +473565,8 @@ extension on _StringsEs {
         return 'OCR de pantalla';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -474285,6 +476088,85 @@ extension on _StringsEs {
             'Actual: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Introduce la posición del carácter…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Mantener pantalla encendida';
       case 'lapis_style_ai_applied':
@@ -474848,6 +476730,8 @@ extension on _StringsEs {
         return 'Descubrir';
       case 'library_view_import':
         return 'Importar';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Biblioteca';
       case 'library_view_shelf':
@@ -492731,6 +494615,8 @@ extension on _StringsFr {
         return 'OCR de l\'écran';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -495254,6 +497140,85 @@ extension on _StringsFr {
             'Actuel : ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Entrez la position du caractère…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Garder l\'écran allumé';
       case 'lapis_style_ai_applied':
@@ -495817,6 +497782,8 @@ extension on _StringsFr {
         return 'Découvrir';
       case 'library_view_import':
         return 'Importer';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Bibliothèque';
       case 'library_view_shelf':
@@ -513679,6 +515646,8 @@ extension on _StringsId {
         return 'OCR layar';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -516198,6 +518167,85 @@ extension on _StringsId {
             'Saat ini: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Masukkan posisi karakter…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Layar selalu menyala';
       case 'lapis_style_ai_applied':
@@ -516761,6 +518809,8 @@ extension on _StringsId {
         return 'Jelajahi';
       case 'library_view_import':
         return 'Impor';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Perpustakaan';
       case 'library_view_shelf':
@@ -534605,6 +536655,8 @@ extension on _StringsIt {
         return 'OCR dello schermo';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -537126,6 +539178,85 @@ extension on _StringsIt {
             'Attuale: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Inserisci la posizione del carattere…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Mantieni lo schermo acceso';
       case 'lapis_style_ai_applied':
@@ -537689,6 +539820,8 @@ extension on _StringsIt {
         return 'Scopri';
       case 'library_view_import':
         return 'Importa';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Libreria';
       case 'library_view_shelf':
@@ -555512,6 +557645,8 @@ extension on _StringsJa {
         return '画面 OCR';
       case 'floating_ball_action_switch_profile':
         return 'プロファイル切り替え';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'フローティングボールの自動復元';
       case 'floating_ball_auto_restore_both':
@@ -558022,6 +560157,85 @@ extension on _StringsJa {
             '現在: ${current} / ${total}';
       case 'jump_to_char_hint':
         return '文字位置を入力…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return '画面を常時点灯';
       case 'lapis_style_ai_applied':
@@ -558582,6 +560796,8 @@ extension on _StringsJa {
         return '見つける';
       case 'library_view_import':
         return 'インポート';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'ライブラリ';
       case 'library_view_shelf':
@@ -576333,6 +578549,8 @@ extension on _StringsKo {
         return '화면 OCR';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -578843,6 +581061,85 @@ extension on _StringsKo {
             '현재: ${current} / ${total}';
       case 'jump_to_char_hint':
         return '문자 위치를 입력하세요…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return '화면 항상 켜기';
       case 'lapis_style_ai_applied':
@@ -579403,6 +581700,8 @@ extension on _StringsKo {
         return '발견';
       case 'library_view_import':
         return '가져오기';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return '라이브러리';
       case 'library_view_shelf':
@@ -597205,6 +599504,8 @@ extension on _StringsNl {
         return 'Scherm-OCR';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -599726,6 +602027,85 @@ extension on _StringsNl {
             'Huidig: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Voer tekenpositie in…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Scherm aan houden';
       case 'lapis_style_ai_applied':
@@ -600290,6 +602670,8 @@ extension on _StringsNl {
         return 'Ontdekken';
       case 'library_view_import':
         return 'Importeren';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Bibliotheek';
       case 'library_view_shelf':
@@ -618151,6 +620533,8 @@ extension on _StringsPtBr {
         return 'OCR da tela';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -620671,6 +623055,85 @@ extension on _StringsPtBr {
             'Atual: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Digite a posição do caractere…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Manter tela ligada';
       case 'lapis_style_ai_applied':
@@ -621234,6 +623697,8 @@ extension on _StringsPtBr {
         return 'Descobrir';
       case 'library_view_import':
         return 'Importar';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Biblioteca';
       case 'library_view_shelf':
@@ -639097,6 +641562,8 @@ extension on _StringsRu {
         return 'OCR экрана';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -641617,6 +644084,85 @@ extension on _StringsRu {
             'Текущая: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Введите позицию символа…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Не выключать экран';
       case 'lapis_style_ai_applied':
@@ -642180,6 +644726,8 @@ extension on _StringsRu {
         return 'Обзор';
       case 'library_view_import':
         return 'Импорт';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Библиотека';
       case 'library_view_shelf':
@@ -660017,6 +662565,8 @@ extension on _StringsTh {
         return 'OCR หน้าจอ';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -662535,6 +665085,85 @@ extension on _StringsTh {
             'ปัจจุบัน: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'ป้อนตำแหน่งอักขระ…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'เปิดหน้าจอตลอด';
       case 'lapis_style_ai_applied':
@@ -663099,6 +665728,8 @@ extension on _StringsTh {
         return 'ค้นพบ';
       case 'library_view_import':
         return 'นำเข้า';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'คลัง';
       case 'library_view_shelf':
@@ -680934,6 +683565,8 @@ extension on _StringsTr {
         return 'Ekran OCR';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -683454,6 +686087,85 @@ extension on _StringsTr {
             'Mevcut: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Karakter konumu girin…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Ekranı açık tut';
       case 'lapis_style_ai_applied':
@@ -684018,6 +686730,8 @@ extension on _StringsTr {
         return 'Keşfet';
       case 'library_view_import':
         return 'İçe aktar';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Kütüphane';
       case 'library_view_shelf':
@@ -701858,6 +704572,8 @@ extension on _StringsVi {
         return 'OCR màn hình';
       case 'floating_ball_action_switch_profile':
         return 'Switch profile';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -704376,6 +707092,85 @@ extension on _StringsVi {
             'Hiện tại: ${current} / ${total}';
       case 'jump_to_char_hint':
         return 'Nhập vị trí ký tự…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return 'Giữ màn hình sáng';
       case 'lapis_style_ai_applied':
@@ -704939,6 +707734,8 @@ extension on _StringsVi {
         return 'Khám phá';
       case 'library_view_import':
         return 'Nhập';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return 'Thư viện';
       case 'library_view_shelf':
@@ -722673,6 +725470,8 @@ extension on _StringsZhCn {
         return '截屏识字';
       case 'floating_ball_action_switch_profile':
         return '切换配置';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => '切换配置（当前：${name}）';
       case 'floating_ball_auto_restore':
         return '自动恢复悬浮球';
       case 'floating_ball_auto_restore_both':
@@ -725178,6 +727977,85 @@ extension on _StringsZhCn {
             '当前: ${current} / ${total}';
       case 'jump_to_char_hint':
         return '输入字符位置…';
+      case 'kavita_api_key_hint':
+        return 'Kavita：用户设置 > 账户 > API 密钥';
+      case 'kavita_api_key_label':
+        return 'API 密钥';
+      case 'kavita_book_cached':
+        return '已缓存';
+      case 'kavita_book_cancel':
+        return '取消';
+      case 'kavita_book_download':
+        return '下载';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => '下载失败：${reason}';
+      case 'kavita_book_downloaded':
+        return '已下载';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => '正在下载 ${percent}%';
+      case 'kavita_book_no_chapters':
+        return '此书没有可阅读的文件';
+      case 'kavita_book_open':
+        return '阅读';
+      case 'kavita_book_remove_download':
+        return '移除下载';
+      case 'kavita_books_empty':
+        return '此服务器上没有 EPUB 书籍';
+      case 'kavita_books_search_hint':
+        return '搜索书籍';
+      case 'kavita_books_servers_label':
+        return '服务器';
+      case 'kavita_browse_libraries_empty':
+        return '此服务器上没有漫画库';
+      case 'kavita_browse_series_empty':
+        return '此库中没有漫画';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => '连接失败：${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => '已连接，${count} 个库';
+      case 'kavita_connect_test':
+        return '测试连接';
+      case 'kavita_connect_unauthorized':
+        return '服务器拒绝了该 API 密钥';
+      case 'kavita_http_allow':
+        return '允许明文 HTTP';
+      case 'kavita_http_allow_hint':
+        return '仅用于局域网内的服务器';
+      case 'kavita_name_hint':
+        return '可选，默认使用主机名';
+      case 'kavita_name_label':
+        return '名称';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            '本机在第 ${local} 章，Kavita 服务器在第 ${server} 章。保留哪一个？';
+      case 'kavita_progress_conflict_title':
+        return '阅读进度不一致';
+      case 'kavita_progress_conflict_use_local':
+        return '保留本机';
+      case 'kavita_progress_conflict_use_server':
+        return '使用 Kavita';
+      case 'kavita_server_add':
+        return '添加 Kavita 服务器';
+      case 'kavita_server_enabled':
+        return '启用';
+      case 'kavita_server_remove':
+        return '移除服务器';
+      case 'kavita_settings_hint':
+        return '在自建 Kavita 服务器上阅读漫画和书籍，支持流式阅读、下载和双向阅读进度同步。Kavita 的 OPDS 仍可作为仅下载的备用途径。';
+      case 'kavita_settings_title':
+        return 'Kavita 服务器';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return '从你的 Kavita 服务器在线阅读漫画';
+      case 'kavita_url_hint':
+        return '例如 http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return '需要在下方允许明文 HTTP';
+      case 'kavita_url_invalid':
+        return '请输入有效的服务器地址';
+      case 'kavita_url_label':
+        return '服务器地址';
       case 'keep_screen_awake':
         return '阅读时防止息屏';
       case 'lapis_style_ai_applied':
@@ -725736,6 +728614,8 @@ extension on _StringsZhCn {
         return '发现';
       case 'library_view_import':
         return '导入';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return '媒体库';
       case 'library_view_shelf':
@@ -743360,6 +746240,8 @@ extension on _StringsZhHk {
         return '截屏識字';
       case 'floating_ball_action_switch_profile':
         return '切換設定檔';
+      case 'floating_ball_action_switch_profile_tooltip':
+        return ({required Object name}) => 'Switch profile (current: ${name})';
       case 'floating_ball_auto_restore':
         return '自動恢復懸浮球';
       case 'floating_ball_auto_restore_both':
@@ -745868,6 +748750,85 @@ extension on _StringsZhHk {
             '當前: ${current} / ${total}';
       case 'jump_to_char_hint':
         return '輸入字符位置…';
+      case 'kavita_api_key_hint':
+        return 'Kavita: User settings > Account > API key';
+      case 'kavita_api_key_label':
+        return 'API key';
+      case 'kavita_book_cached':
+        return 'Cached';
+      case 'kavita_book_cancel':
+        return 'Cancel';
+      case 'kavita_book_download':
+        return 'Download';
+      case 'kavita_book_download_failed':
+        return ({required Object reason}) => 'Download failed: ${reason}';
+      case 'kavita_book_downloaded':
+        return 'Downloaded';
+      case 'kavita_book_downloading':
+        return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_no_chapters':
+        return 'This book has no readable file';
+      case 'kavita_book_open':
+        return 'Read';
+      case 'kavita_book_remove_download':
+        return 'Remove download';
+      case 'kavita_books_empty':
+        return 'No EPUB books found on this server';
+      case 'kavita_books_search_hint':
+        return 'Search books';
+      case 'kavita_books_servers_label':
+        return 'Server';
+      case 'kavita_browse_libraries_empty':
+        return 'No manga libraries on this server';
+      case 'kavita_browse_series_empty':
+        return 'No manga in this library';
+      case 'kavita_connect_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'kavita_connect_ok':
+        return ({required Object count}) => 'Connected. ${count} libraries';
+      case 'kavita_connect_test':
+        return 'Test connection';
+      case 'kavita_connect_unauthorized':
+        return 'The server rejected the API key';
+      case 'kavita_http_allow':
+        return 'Allow plain HTTP';
+      case 'kavita_http_allow_hint':
+        return 'Only for servers on your local network';
+      case 'kavita_name_hint':
+        return 'Optional, defaults to the host name';
+      case 'kavita_name_label':
+        return 'Name';
+      case 'kavita_progress_conflict_body':
+        return ({required Object local, required Object server}) =>
+            'This device is at section ${local}, the Kavita server is at section ${server}. Which one do you want to keep?';
+      case 'kavita_progress_conflict_title':
+        return 'Reading progress differs';
+      case 'kavita_progress_conflict_use_local':
+        return 'Keep this device';
+      case 'kavita_progress_conflict_use_server':
+        return 'Use Kavita';
+      case 'kavita_server_add':
+        return 'Add Kavita server';
+      case 'kavita_server_enabled':
+        return 'Enabled';
+      case 'kavita_server_remove':
+        return 'Remove server';
+      case 'kavita_settings_hint':
+        return 'Read manga and books from your own Kavita server, with streaming, downloads and two-way reading progress. Kavita OPDS keeps working as a download-only fallback.';
+      case 'kavita_settings_title':
+        return 'Kavita servers';
+      case 'kavita_source_name':
+        return 'Kavita';
+      case 'kavita_source_subtitle':
+        return 'Stream manga from your Kavita server';
+      case 'kavita_url_hint':
+        return 'For example http://192.168.1.10:5000';
+      case 'kavita_url_http_optin_required':
+        return 'Plain HTTP must be allowed below';
+      case 'kavita_url_invalid':
+        return 'Enter a valid server address';
+      case 'kavita_url_label':
+        return 'Server address';
       case 'keep_screen_awake':
         return '閱讀時防止螢幕關閉';
       case 'lapis_style_ai_applied':
@@ -746426,6 +749387,8 @@ extension on _StringsZhHk {
         return '發現';
       case 'library_view_import':
         return '導入';
+      case 'library_view_kavita':
+        return 'Kavita';
       case 'library_view_media':
         return '媒體庫';
       case 'library_view_shelf':
