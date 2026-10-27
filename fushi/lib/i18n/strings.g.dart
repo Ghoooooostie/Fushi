@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173604 (10212 per locale)
+/// Strings: 173536 (10208 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14655,11 +14655,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_text_size_reset => 'Reset text size';
   String get web_browser_title => 'Browser';
   String get web_browser_toolbar_expand => 'Show toolbar';
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String get web_hub_browse => 'Web';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
@@ -39355,15 +39350,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -64505,15 +64491,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -89710,15 +89687,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -114997,15 +114965,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -139941,15 +139900,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -165045,15 +164995,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -189118,15 +189059,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -213254,15 +213186,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -238305,15 +238228,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -263430,15 +263344,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -288499,15 +288404,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -313244,15 +313140,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -338194,15 +338081,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -363071,15 +362949,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -385829,14 +385698,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_title => '浏览器';
   @override
   String get web_browser_toolbar_expand => '展开工具栏';
-  @override
-  String get web_browser_youtube_subtitles => 'YouTube 字幕查词';
-  @override
-  String get web_browser_youtube_subtitles_track_empty => '这个视频还没有字幕轨';
-  @override
-  String get web_browser_youtube_subtitles_track_live => '实时采集';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => '选中加载';
   @override
   String get web_hub_browse => '网页';
   @override
@@ -409300,15 +409161,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_video_ad_skipping => '正在略過廣告…';
@@ -430532,14 +430384,6 @@ extension on _StringsEn {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -451745,14 +451589,6 @@ extension on _StringsAr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -473034,14 +472870,6 @@ extension on _StringsDe {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -494305,14 +494133,6 @@ extension on _StringsEs {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -515594,14 +515414,6 @@ extension on _StringsFr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -536827,14 +536639,6 @@ extension on _StringsId {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -558096,14 +557900,6 @@ extension on _StringsIt {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -579233,14 +579029,6 @@ extension on _StringsJa {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -600383,14 +600171,6 @@ extension on _StringsKo {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -621644,14 +621424,6 @@ extension on _StringsNl {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -642900,14 +642672,6 @@ extension on _StringsPtBr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -664161,14 +663925,6 @@ extension on _StringsRu {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -685378,14 +685134,6 @@ extension on _StringsTh {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -706626,14 +706374,6 @@ extension on _StringsTr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -727857,14 +727597,6 @@ extension on _StringsVi {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -748834,14 +748566,6 @@ extension on _StringsZhCn {
         return '浏览器';
       case 'web_browser_toolbar_expand':
         return '展开工具栏';
-      case 'web_browser_youtube_subtitles':
-        return 'YouTube 字幕查词';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return '这个视频还没有字幕轨';
-      case 'web_browser_youtube_subtitles_track_live':
-        return '实时采集';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return '选中加载';
       case 'web_hub_browse':
         return '网页';
       case 'web_video_ad_skipping':
@@ -769901,14 +769625,6 @@ extension on _StringsZhHk {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
