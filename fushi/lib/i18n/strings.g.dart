@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173553 (10209 per locale)
+/// Strings: 173587 (10211 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1233,6 +1233,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_pending_mines_title => 'Pending cards';
   String get anki_pending_mines_unreachable =>
       'Anki can\'t be reached right now. The remaining cards stay in the queue.';
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   String get anki_refresh_hint =>
       'After creating or renaming a deck or note type in Anki, tap here to refresh.';
   String get anki_reposition_aggregate => 'Combine multiple dictionaries';
@@ -16486,6 +16490,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       'لا يمكن الوصول إلى Anki حاليًا. تبقى البطاقات المتبقية في قائمة الانتظار.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'بعد إنشاء أو إعادة تسمية مجموعة أو نوع ملاحظة في Anki، انقر هنا للتحديث.';
@@ -41261,6 +41271,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       'Anki ist gerade nicht erreichbar. Die übrigen Karten bleiben in der Warteschlange.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'Nach dem Erstellen oder Umbenennen eines Stapels oder Notiztyps in Anki hier tippen, um zu aktualisieren.';
@@ -66407,6 +66423,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       'No se puede acceder a Anki ahora mismo. Las tarjetas restantes permanecen en la cola.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'Después de crear o renombrar un mazo o tipo de nota en Anki, toca aquí para actualizar.';
@@ -91606,6 +91628,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       'Anki est injoignable pour le moment. Les cartes restantes restent dans la file.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'Après avoir créé ou renommé un paquet ou un type de note dans Anki, touchez ici pour actualiser.';
@@ -116869,6 +116897,12 @@ class _StringsId extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Anki tidak dapat dijangkau saat ini. Kartu yang tersisa tetap di antrean.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Setelah membuat atau mengganti nama dek atau tipe catatan di Anki, ketuk di sini untuk menyegarkan.';
   @override
@@ -141809,6 +141843,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       'Anki non è raggiungibile al momento. Le carte rimanenti restano in coda.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'Dopo aver creato o rinominato un mazzo o un tipo di nota in Anki, tocca qui per aggiornare.';
@@ -166836,6 +166876,12 @@ class _StringsJa extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       '現在 Anki に接続できません。残りのカードはキューに残ります。';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Anki でデッキやノートタイプを作成・名前変更したら、ここをタップして更新してください。';
   @override
@@ -190890,6 +190936,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       '지금은 Anki에 연결할 수 없습니다. 남은 카드는 대기열에 유지됩니다.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'Anki에서 덱이나 노트 유형을 만들거나 이름을 바꾼 뒤 여기를 눌러 새로고침하세요.';
@@ -215090,6 +215142,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       'Anki is nu niet bereikbaar. De resterende kaarten blijven in de wachtrij.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'Tik hier om te vernieuwen nadat je in Anki een deck of notitietype hebt gemaakt of hernoemd.';
@@ -240147,6 +240205,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       'Não foi possível acessar o Anki agora. Os cartões restantes permanecem na fila.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'Depois de criar ou renomear um baralho ou tipo de nota no Anki, toque aqui para atualizar.';
@@ -265250,6 +265314,12 @@ class _StringsRu extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Сейчас не удаётся связаться с Anki. Оставшиеся карточки остаются в очереди.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'После создания или переименования колоды либо типа заметки в Anki нажмите здесь, чтобы обновить.';
   @override
@@ -290285,6 +290355,12 @@ class _StringsTh extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'เชื่อมต่อ Anki ไม่ได้ในขณะนี้ การ์ดที่เหลือยังอยู่ในคิว';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'หลังสร้างหรือเปลี่ยนชื่อเด็คหรือชนิดโน้ตใน Anki แล้ว ให้แตะที่นี่เพื่อรีเฟรช';
   @override
@@ -315040,6 +315116,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable =>
       'Anki\'ye şu anda ulaşılamıyor. Kalan kartlar kuyrukta kalır.';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint =>
       'Anki\'de bir deste ya da not türü oluşturduktan veya yeniden adlandırdıktan sonra yenilemek için buraya dokunun.';
@@ -339976,6 +340058,12 @@ class _StringsVi extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Hiện không kết nối được Anki. Các thẻ còn lại vẫn ở trong hàng đợi.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Sau khi tạo hoặc đổi tên bộ thẻ hay loại ghi chú trong Anki, nhấn vào đây để làm mới.';
   @override
@@ -364699,6 +364787,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable => '现在连不上 Anki，剩下的卡片继续留在队列里';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      '连不上 Anki 时不报失败，而是把卡存进「待发卡片」稍后补发';
+  @override
+  String get anki_queue_undelivered_mines_title => '连不上 Anki 时暂存卡片';
+  @override
   String get anki_refresh_hint => '在 Anki 里新建或重命名牌组、笔记类型后，点此刷新。';
   @override
   String get anki_reposition_aggregate => '多本词典复合方式';
@@ -387468,6 +387561,12 @@ class _StringsZhHk extends _StringsEn {
   String get anki_pending_mines_title => '待發卡片';
   @override
   String get anki_pending_mines_unreachable => '現在連不上 Anki，剩下的卡片繼續留在隊列裡';
+  @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   @override
   String get anki_refresh_hint => '在 Anki 中新建或重新命名牌組、筆記類型後，點此重新整理。';
   @override
@@ -410747,6 +410846,10 @@ extension on _StringsEn {
         return 'Pending cards';
       case 'anki_pending_mines_unreachable':
         return 'Anki can\'t be reached right now. The remaining cards stay in the queue.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'After creating or renaming a deck or note type in Anki, tap here to refresh.';
       case 'anki_reposition_aggregate':
@@ -431959,6 +432062,10 @@ extension on _StringsAr {
         return 'البطاقات المعلّقة';
       case 'anki_pending_mines_unreachable':
         return 'لا يمكن الوصول إلى Anki حاليًا. تبقى البطاقات المتبقية في قائمة الانتظار.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'بعد إنشاء أو إعادة تسمية مجموعة أو نوع ملاحظة في Anki، انقر هنا للتحديث.';
       case 'anki_reposition_aggregate':
@@ -453175,6 +453282,10 @@ extension on _StringsDe {
         return 'Ausstehende Karten';
       case 'anki_pending_mines_unreachable':
         return 'Anki ist gerade nicht erreichbar. Die übrigen Karten bleiben in der Warteschlange.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Nach dem Erstellen oder Umbenennen eines Stapels oder Notiztyps in Anki hier tippen, um zu aktualisieren.';
       case 'anki_reposition_aggregate':
@@ -474453,6 +474564,10 @@ extension on _StringsEs {
         return 'Tarjetas pendientes';
       case 'anki_pending_mines_unreachable':
         return 'No se puede acceder a Anki ahora mismo. Las tarjetas restantes permanecen en la cola.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Después de crear o renombrar un mazo o tipo de nota en Anki, toca aquí para actualizar.';
       case 'anki_reposition_aggregate':
@@ -495721,6 +495836,10 @@ extension on _StringsFr {
         return 'Cartes en attente';
       case 'anki_pending_mines_unreachable':
         return 'Anki est injoignable pour le moment. Les cartes restantes restent dans la file.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Après avoir créé ou renommé un paquet ou un type de note dans Anki, touchez ici pour actualiser.';
       case 'anki_reposition_aggregate':
@@ -517000,6 +517119,10 @@ extension on _StringsId {
         return 'Kartu tertunda';
       case 'anki_pending_mines_unreachable':
         return 'Anki tidak dapat dijangkau saat ini. Kartu yang tersisa tetap di antrean.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Setelah membuat atau mengganti nama dek atau tipe catatan di Anki, ketuk di sini untuk menyegarkan.';
       case 'anki_reposition_aggregate':
@@ -538229,6 +538352,10 @@ extension on _StringsIt {
         return 'Carte in sospeso';
       case 'anki_pending_mines_unreachable':
         return 'Anki non è raggiungibile al momento. Le carte rimanenti restano in coda.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Dopo aver creato o rinominato un mazzo o un tipo di nota in Anki, tocca qui per aggiornare.';
       case 'anki_reposition_aggregate':
@@ -559481,6 +559608,10 @@ extension on _StringsJa {
         return '保留カード';
       case 'anki_pending_mines_unreachable':
         return '現在 Anki に接続できません。残りのカードはキューに残ります。';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Anki でデッキやノートタイプを作成・名前変更したら、ここをタップして更新してください。';
       case 'anki_reposition_aggregate':
@@ -580608,6 +580739,10 @@ extension on _StringsKo {
         return '보류 카드';
       case 'anki_pending_mines_unreachable':
         return '지금은 Anki에 연결할 수 없습니다. 남은 카드는 대기열에 유지됩니다.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Anki에서 덱이나 노트 유형을 만들거나 이름을 바꾼 뒤 여기를 눌러 새로고침하세요.';
       case 'anki_reposition_aggregate':
@@ -601765,6 +601900,10 @@ extension on _StringsNl {
         return 'Openstaande kaarten';
       case 'anki_pending_mines_unreachable':
         return 'Anki is nu niet bereikbaar. De resterende kaarten blijven in de wachtrij.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Tik hier om te vernieuwen nadat je in Anki een deck of notitietype hebt gemaakt of hernoemd.';
       case 'anki_reposition_aggregate':
@@ -623022,6 +623161,10 @@ extension on _StringsPtBr {
         return 'Cartões pendentes';
       case 'anki_pending_mines_unreachable':
         return 'Não foi possível acessar o Anki agora. Os cartões restantes permanecem na fila.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Depois de criar ou renomear um baralho ou tipo de nota no Anki, toque aqui para atualizar.';
       case 'anki_reposition_aggregate':
@@ -644272,6 +644415,10 @@ extension on _StringsRu {
         return 'Ожидающие карточки';
       case 'anki_pending_mines_unreachable':
         return 'Сейчас не удаётся связаться с Anki. Оставшиеся карточки остаются в очереди.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'После создания или переименования колоды либо типа заметки в Anki нажмите здесь, чтобы обновить.';
       case 'anki_reposition_aggregate':
@@ -665521,6 +665668,10 @@ extension on _StringsTh {
         return 'การ์ดที่รอส่ง';
       case 'anki_pending_mines_unreachable':
         return 'เชื่อมต่อ Anki ไม่ได้ในขณะนี้ การ์ดที่เหลือยังอยู่ในคิว';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'หลังสร้างหรือเปลี่ยนชื่อเด็คหรือชนิดโน้ตใน Anki แล้ว ให้แตะที่นี่เพื่อรีเฟรช';
       case 'anki_reposition_aggregate':
@@ -686737,6 +686888,10 @@ extension on _StringsTr {
         return 'Bekleyen kartlar';
       case 'anki_pending_mines_unreachable':
         return 'Anki\'ye şu anda ulaşılamıyor. Kalan kartlar kuyrukta kalır.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Anki\'de bir deste ya da not türü oluşturduktan veya yeniden adlandırdıktan sonra yenilemek için buraya dokunun.';
       case 'anki_reposition_aggregate':
@@ -707977,6 +708132,10 @@ extension on _StringsVi {
         return 'Thẻ chờ';
       case 'anki_pending_mines_unreachable':
         return 'Hiện không kết nối được Anki. Các thẻ còn lại vẫn ở trong hàng đợi.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Sau khi tạo hoặc đổi tên bộ thẻ hay loại ghi chú trong Anki, nhấn vào đây để làm mới.';
       case 'anki_reposition_aggregate':
@@ -729173,6 +729332,10 @@ extension on _StringsZhCn {
         return '待发卡片';
       case 'anki_pending_mines_unreachable':
         return '现在连不上 Anki，剩下的卡片继续留在队列里';
+      case 'anki_queue_undelivered_mines_hint':
+        return '连不上 Anki 时不报失败，而是把卡存进「待发卡片」稍后补发';
+      case 'anki_queue_undelivered_mines_title':
+        return '连不上 Anki 时暂存卡片';
       case 'anki_refresh_hint':
         return '在 Anki 里新建或重命名牌组、笔记类型后，点此刷新。';
       case 'anki_reposition_aggregate':
@@ -750141,6 +750304,10 @@ extension on _StringsZhHk {
         return '待發卡片';
       case 'anki_pending_mines_unreachable':
         return '現在連不上 Anki，剩下的卡片繼續留在隊列裡';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return '在 Anki 中新建或重新命名牌組、筆記類型後，點此重新整理。';
       case 'anki_reposition_aggregate':
