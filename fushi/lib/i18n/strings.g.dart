@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172771 (10163 per locale)
+/// Strings: 172822 (10166 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9630,6 +9630,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Align next subtitle to now';
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Align previous subtitle to now';
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle secondary subtitle obscure';
   String get shortcut_action_video_cycle_subtitle_obscure =>
@@ -13207,6 +13210,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_search_ai_rank => 'Rank with AI';
   String get video_search_ai_ranked => 'Results reordered by AI';
   String get video_search_ai_recommended => 'AI pick';
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   String get video_secondary_subtitle_sources => 'Secondary subtitle';
   String get video_setting_auto_play_next => 'Auto-play next episode';
   String get video_setting_auto_scrape => 'Auto-fetch series info';
@@ -30703,6 +30708,11 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'محاذاة الترجمة السابقة إلى الآن';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -36843,6 +36853,9 @@ class _StringsAr extends _StringsEn {
       'أُعيد ترتيب النتائج بواسطة الذكاء الاصطناعي';
   @override
   String get video_search_ai_recommended => 'اختيار الذكاء الاصطناعي';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'ترجمة ثانوية';
   @override
@@ -55617,6 +55630,11 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Vorherigen Untertitel auf jetzt ausrichten';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -61817,6 +61835,9 @@ class _StringsDe extends _StringsEn {
   String get video_search_ai_ranked => 'Ergebnisse von der KI neu geordnet';
   @override
   String get video_search_ai_recommended => 'KI-Empfehlung';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Sekundärer Untertitel';
   @override
@@ -80657,6 +80678,11 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Alinear subtítulo anterior al ahora';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -86872,6 +86898,9 @@ class _StringsEs extends _StringsEn {
   String get video_search_ai_ranked => 'Resultados reordenados por la IA';
   @override
   String get video_search_ai_recommended => 'Elección de la IA';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Subtítulo secundario';
   @override
@@ -105785,6 +105814,11 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Aligner le sous-titre précédent sur maintenant';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -112007,6 +112041,9 @@ class _StringsFr extends _StringsEn {
   String get video_search_ai_ranked => 'Résultats réordonnés par l\'IA';
   @override
   String get video_search_ai_recommended => 'Choix de l\'IA';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Sous-titre secondaire';
   @override
@@ -130681,6 +130718,11 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Selaraskan subtitle sebelumnya ke sekarang';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -136853,6 +136895,9 @@ class _StringsId extends _StringsEn {
   String get video_search_ai_ranked => 'Hasil diurutkan ulang oleh AI';
   @override
   String get video_search_ai_recommended => 'Pilihan AI';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Subtitle sekunder';
   @override
@@ -155611,6 +155656,11 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Allinea sottotitolo precedente al momento attuale';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -161798,6 +161848,9 @@ class _StringsIt extends _StringsEn {
   String get video_search_ai_ranked => 'Risultati riordinati dall\'IA';
   @override
   String get video_search_ai_recommended => 'Scelta dell\'IA';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Sottotitolo secondario';
   @override
@@ -179856,6 +179909,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '前の字幕を現在位置に合わせる';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -185861,6 +185919,9 @@ class _StringsJa extends _StringsEn {
   String get video_search_ai_ranked => 'AIが結果を並べ替えました';
   @override
   String get video_search_ai_recommended => 'AIのおすすめ';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
@@ -203817,6 +203878,11 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       '이전 자막을 현재 시점에 맞추기';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -209830,6 +209896,9 @@ class _StringsKo extends _StringsEn {
   String get video_search_ai_ranked => 'AI가 결과 순서를 재정렬했습니다';
   @override
   String get video_search_ai_recommended => 'AI 추천';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => '보조 자막';
   @override
@@ -228462,6 +228531,11 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Vorige ondertitel uitlijnen op nu';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -234652,6 +234726,9 @@ class _StringsNl extends _StringsEn {
   String get video_search_ai_ranked => 'Resultaten herordend door AI';
   @override
   String get video_search_ai_recommended => 'AI-keuze';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Secundaire ondertitel';
   @override
@@ -253428,6 +253505,11 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Alinhar legenda anterior ao momento atual';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -259624,6 +259706,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_search_ai_ranked => 'Resultados reordenados pela IA';
   @override
   String get video_search_ai_recommended => 'Escolha da IA';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Legenda secundária';
   @override
@@ -278371,6 +278456,11 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Совместить предыдущий субтитр с текущим моментом';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -284554,6 +284644,9 @@ class _StringsRu extends _StringsEn {
   String get video_search_ai_ranked => 'Результаты переупорядочены ИИ';
   @override
   String get video_search_ai_recommended => 'Выбор ИИ';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Вторичные субтитры';
   @override
@@ -303067,6 +303160,11 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'จัดคำบรรยายก่อนหน้าให้ตรงกับตอนนี้';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -309205,6 +309303,9 @@ class _StringsTh extends _StringsEn {
   String get video_search_ai_ranked => 'AI เรียงผลลัพธ์ใหม่แล้ว';
   @override
   String get video_search_ai_recommended => 'AI แนะนำ';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'คำบรรยายรอง';
   @override
@@ -327824,6 +327925,11 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Önceki altyazıyı şimdiye hizala';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -333993,6 +334099,9 @@ class _StringsTr extends _StringsEn {
       'Sonuçlar yapay zeka tarafından yeniden sıralandı';
   @override
   String get video_search_ai_recommended => 'Yapay zeka seçimi';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'İkincil altyazı';
   @override
@@ -352581,6 +352690,11 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Căn phụ đề trước đó về thời điểm hiện tại';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -358740,6 +358854,9 @@ class _StringsVi extends _StringsEn {
   String get video_search_ai_ranked => 'Kết quả đã được AI sắp xếp lại';
   @override
   String get video_search_ai_recommended => 'AI chọn';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Phụ đề phụ';
   @override
@@ -375968,6 +376085,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕对齐到当前时间';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      '复制当前副字幕台词';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => '复制当前台词';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       '循环副字幕遮蔽';
   @override
@@ -381584,6 +381706,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_search_ai_ranked => '结果已由 AI 重新排序';
   @override
   String get video_search_ai_recommended => 'AI 推荐';
+  @override
+  String get video_secondary_subtitle_copy_empty => '当前没有可复制的副字幕';
   @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
@@ -398956,6 +399080,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕對齊到當前時間';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -404860,6 +404989,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_search_ai_ranked => '結果已由 AI 重新排序';
   @override
   String get video_search_ai_recommended => 'AI 推薦';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
@@ -420886,6 +421018,10 @@ extension on _StringsEn {
         return 'Align next subtitle to now';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Align previous subtitle to now';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle secondary subtitle obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -426188,6 +426324,8 @@ extension on _StringsEn {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Secondary subtitle';
       case 'video_setting_auto_play_next':
@@ -441988,6 +442126,10 @@ extension on _StringsAr {
         return 'محاذاة الترجمة التالية إلى الآن';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'محاذاة الترجمة السابقة إلى الآن';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -447287,6 +447429,8 @@ extension on _StringsAr {
         return 'أُعيد ترتيب النتائج بواسطة الذكاء الاصطناعي';
       case 'video_search_ai_recommended':
         return 'اختيار الذكاء الاصطناعي';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'ترجمة ثانوية';
       case 'video_setting_auto_play_next':
@@ -463146,6 +463290,10 @@ extension on _StringsDe {
         return 'Nächsten Untertitel auf jetzt ausrichten';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Vorherigen Untertitel auf jetzt ausrichten';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -468461,6 +468609,8 @@ extension on _StringsDe {
         return 'Ergebnisse von der KI neu geordnet';
       case 'video_search_ai_recommended':
         return 'KI-Empfehlung';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sekundärer Untertitel';
       case 'video_setting_auto_play_next':
@@ -484308,6 +484458,10 @@ extension on _StringsEs {
         return 'Alinear siguiente subtítulo al ahora';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Alinear subtítulo anterior al ahora';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -489620,6 +489774,8 @@ extension on _StringsEs {
         return 'Resultados reordenados por la IA';
       case 'video_search_ai_recommended':
         return 'Elección de la IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Subtítulo secundario';
       case 'video_setting_auto_play_next':
@@ -505481,6 +505637,10 @@ extension on _StringsFr {
         return 'Aligner le sous-titre suivant sur maintenant';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Aligner le sous-titre précédent sur maintenant';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -510796,6 +510956,8 @@ extension on _StringsFr {
         return 'Résultats réordonnés par l\'IA';
       case 'video_search_ai_recommended':
         return 'Choix de l\'IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sous-titre secondaire';
       case 'video_setting_auto_play_next':
@@ -526614,6 +526776,10 @@ extension on _StringsId {
         return 'Selaraskan subtitle berikutnya ke sekarang';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Selaraskan subtitle sebelumnya ke sekarang';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -531917,6 +532083,8 @@ extension on _StringsId {
         return 'Hasil diurutkan ulang oleh AI';
       case 'video_search_ai_recommended':
         return 'Pilihan AI';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Subtitle sekunder';
       case 'video_setting_auto_play_next':
@@ -547756,6 +547924,10 @@ extension on _StringsIt {
         return 'Allinea sottotitolo successivo al momento attuale';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Allinea sottotitolo precedente al momento attuale';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -553071,6 +553243,8 @@ extension on _StringsIt {
         return 'Risultati riordinati dall\'IA';
       case 'video_search_ai_recommended':
         return 'Scelta dell\'IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sottotitolo secondario';
       case 'video_setting_auto_play_next':
@@ -568832,6 +569006,10 @@ extension on _StringsJa {
         return '次の字幕を現在位置に合わせる';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '前の字幕を現在位置に合わせる';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -574107,6 +574285,8 @@ extension on _StringsJa {
         return 'AIが結果を並べ替えました';
       case 'video_search_ai_recommended':
         return 'AIのおすすめ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -589857,6 +590037,10 @@ extension on _StringsKo {
         return '다음 자막을 현재 시점에 맞추기';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '이전 자막을 현재 시점에 맞추기';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -595138,6 +595322,8 @@ extension on _StringsKo {
         return 'AI가 결과 순서를 재정렬했습니다';
       case 'video_search_ai_recommended':
         return 'AI 추천';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '보조 자막';
       case 'video_setting_auto_play_next':
@@ -610972,6 +611158,10 @@ extension on _StringsNl {
         return 'Volgende ondertitel uitlijnen op nu';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Vorige ondertitel uitlijnen op nu';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -616280,6 +616470,8 @@ extension on _StringsNl {
         return 'Resultaten herordend door AI';
       case 'video_search_ai_recommended':
         return 'AI-keuze';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Secundaire ondertitel';
       case 'video_setting_auto_play_next':
@@ -632118,6 +632310,10 @@ extension on _StringsPtBr {
         return 'Alinhar próxima legenda ao momento atual';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Alinhar legenda anterior ao momento atual';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -637424,6 +637620,8 @@ extension on _StringsPtBr {
         return 'Resultados reordenados pela IA';
       case 'video_search_ai_recommended':
         return 'Escolha da IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Legenda secundária';
       case 'video_setting_auto_play_next':
@@ -653268,6 +653466,10 @@ extension on _StringsRu {
         return 'Совместить следующий субтитр с текущим моментом';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Совместить предыдущий субтитр с текущим моментом';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -658573,6 +658775,8 @@ extension on _StringsRu {
         return 'Результаты переупорядочены ИИ';
       case 'video_search_ai_recommended':
         return 'Выбор ИИ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Вторичные субтитры';
       case 'video_setting_auto_play_next':
@@ -674378,6 +674582,10 @@ extension on _StringsTh {
         return 'จัดคำบรรยายถัดไปให้ตรงกับตอนนี้';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'จัดคำบรรยายก่อนหน้าให้ตรงกับตอนนี้';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -679678,6 +679886,8 @@ extension on _StringsTh {
         return 'AI เรียงผลลัพธ์ใหม่แล้ว';
       case 'video_search_ai_recommended':
         return 'AI แนะนำ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'คำบรรยายรอง';
       case 'video_setting_auto_play_next':
@@ -695506,6 +695716,10 @@ extension on _StringsTr {
         return 'Sonraki altyazıyı şimdiye hizala';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Önceki altyazıyı şimdiye hizala';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -700812,6 +701026,8 @@ extension on _StringsTr {
         return 'Sonuçlar yapay zeka tarafından yeniden sıralandı';
       case 'video_search_ai_recommended':
         return 'Yapay zeka seçimi';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'İkincil altyazı';
       case 'video_setting_auto_play_next':
@@ -716629,6 +716845,10 @@ extension on _StringsVi {
         return 'Căn phụ đề tiếp theo về thời điểm hiện tại';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Căn phụ đề trước đó về thời điểm hiện tại';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -721932,6 +722152,8 @@ extension on _StringsVi {
         return 'Kết quả đã được AI sắp xếp lại';
       case 'video_search_ai_recommended':
         return 'AI chọn';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Phụ đề phụ';
       case 'video_setting_auto_play_next':
@@ -737589,6 +737811,10 @@ extension on _StringsZhCn {
         return '下一句字幕对齐到当前时间';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '上一句字幕对齐到当前时间';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return '复制当前副字幕台词';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return '复制当前台词';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return '循环副字幕遮蔽';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -742822,6 +743048,8 @@ extension on _StringsZhCn {
         return '结果已由 AI 重新排序';
       case 'video_search_ai_recommended':
         return 'AI 推荐';
+      case 'video_secondary_subtitle_copy_empty':
+        return '当前没有可复制的副字幕';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -758504,6 +758732,10 @@ extension on _StringsZhHk {
         return '下一句字幕對齊到當前時間';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '上一句字幕對齊到當前時間';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -763769,6 +764001,8 @@ extension on _StringsZhHk {
         return '結果已由 AI 重新排序';
       case 'video_search_ai_recommended':
         return 'AI 推薦';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
