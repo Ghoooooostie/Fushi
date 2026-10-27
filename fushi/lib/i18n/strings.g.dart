@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172108 (10124 per locale)
+/// Strings: 172584 (10152 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2197,6 +2197,39 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_voice_use => 'Use for reading aloud';
   String get audiobook_tts_voices_section => 'Voices';
   String get audiobook_tts_waiting => 'Synthesizing…';
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  String get audiobookshelf_browse_no_results => 'No matches';
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  String get audiobookshelf_item_download => 'Download';
+  String get audiobookshelf_item_episodes => 'Episodes';
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  String get audiobookshelf_item_stream => 'Stream';
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
   String get auto_add_book_name_to_tags => 'Auto-add work title to tags';
   String get auto_add_char_position_to_tags =>
       'Auto-add mining position to tags';
@@ -3341,6 +3374,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_audiobookshelf_name_hint =>
       'Leave empty to use the host name';
   String get discovery_audiobookshelf_name_label => 'Display name';
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
   String get discovery_audiobookshelf_password_label => 'Password';
   String get discovery_audiobookshelf_server_add => 'Add server';
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -3359,9 +3394,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_audiobookshelf_session_signed_out => 'Not signed in';
   String get discovery_audiobookshelf_session_test => 'Test connection';
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
   String get discovery_audiobookshelf_url_http_optin_required =>
@@ -6392,6 +6429,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   String get library_search => 'Search library';
   String get library_sort_filter => 'Sort and filter';
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   String get library_view_discover => 'Discover';
   String get library_view_import => 'Import';
   String get library_view_kavita => 'Kavita';
@@ -17912,6 +17950,64 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'إضافة عنوان الكتاب تلقائياً إلى الوسوم';
   @override
@@ -19882,6 +19978,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -19912,10 +20011,13 @@ class _StringsAr extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -25033,6 +25135,8 @@ class _StringsAr extends _StringsEn {
   String get library_search => 'بحث في المكتبة';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'اكتشاف';
   @override
@@ -42476,6 +42580,64 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Buchtitel automatisch zu Tags hinzufügen';
   @override
@@ -44484,6 +44646,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -44514,10 +44679,13 @@ class _StringsDe extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -49751,6 +49919,8 @@ class _StringsDe extends _StringsEn {
   String get library_search => 'Bibliothek durchsuchen';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Entdecken';
   @override
@@ -67405,6 +67575,64 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Añadir título del libro a las etiquetas automáticamente';
   @override
@@ -69415,6 +69643,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -69445,10 +69676,13 @@ class _StringsEs extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -74688,6 +74922,8 @@ class _StringsEs extends _StringsEn {
   String get library_search => 'Buscar biblioteca';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Descubrir';
   @override
@@ -92389,6 +92625,64 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Ajouter automatiquement le titre du livre aux étiquettes';
   @override
@@ -94414,6 +94708,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -94444,10 +94741,13 @@ class _StringsFr extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -99697,6 +99997,8 @@ class _StringsFr extends _StringsEn {
   String get library_search => 'Rechercher dans la bibliothèque';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Découvrir';
   @override
@@ -117401,6 +117703,64 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Tambahkan judul buku ke tag secara otomatis';
   @override
@@ -119383,6 +119743,9 @@ class _StringsId extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -119413,10 +119776,13 @@ class _StringsId extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -124588,6 +124954,8 @@ class _StringsId extends _StringsEn {
   String get library_search => 'Cari pustaka';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Jelajahi';
   @override
@@ -142125,6 +142493,64 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Aggiungi automaticamente il titolo del libro alle etichette';
   @override
@@ -144124,6 +144550,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -144154,10 +144583,13 @@ class _StringsIt extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -149367,6 +149799,8 @@ class _StringsIt extends _StringsEn {
   String get library_search => 'Cerca nella libreria';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Scopri';
   @override
@@ -166890,6 +167324,64 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags => 'タグに作品名を自動追加';
   @override
   String get auto_add_char_position_to_tags => 'タグにカード作成位置を自動追加';
@@ -168785,6 +169277,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -168815,10 +169310,13 @@ class _StringsJa extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -173764,6 +174262,8 @@ class _StringsJa extends _StringsEn {
   String get library_search => 'ライブラリを検索';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => '見つける';
   @override
@@ -190721,6 +191221,64 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags => '태그에 책 제목 자동 추가';
   @override
   String get auto_add_char_position_to_tags => '마이닝 위치를 태그에 자동 추가';
@@ -192617,6 +193175,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -192647,10 +193208,13 @@ class _StringsKo extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -197609,6 +198173,8 @@ class _StringsKo extends _StringsEn {
   String get library_search => '라이브러리 검색';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => '발견';
   @override
@@ -214732,6 +215298,64 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Boektitel automatisch aan labels toevoegen';
   @override
@@ -216730,6 +217354,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -216760,10 +217387,13 @@ class _StringsNl extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -221958,6 +222588,8 @@ class _StringsNl extends _StringsEn {
   String get library_search => 'Bibliotheek doorzoeken';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Ontdekken';
   @override
@@ -239563,6 +240195,64 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Adicionar título do livro às tags automaticamente';
   @override
@@ -241563,6 +242253,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -241593,10 +242286,13 @@ class _StringsPtBr extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -246817,6 +247513,8 @@ class _StringsPtBr extends _StringsEn {
   String get library_search => 'Buscar na biblioteca';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Descobrir';
   @override
@@ -264440,6 +265138,64 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Автодобавление названия книги в теги';
   @override
@@ -266433,6 +267189,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -266463,10 +267222,13 @@ class _StringsRu extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -271665,6 +272427,8 @@ class _StringsRu extends _StringsEn {
   String get library_search => 'Поиск в библиотеке';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Обзор';
   @override
@@ -289234,6 +289998,64 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags => 'เพิ่มชื่อหนังสือในแท็กอัตโนมัติ';
   @override
   String get auto_add_char_position_to_tags =>
@@ -291199,6 +292021,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -291229,10 +292054,13 @@ class _StringsTh extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -296348,6 +297176,8 @@ class _StringsTh extends _StringsEn {
   String get library_search => 'ค้นหาคลัง';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'ค้นพบ';
   @override
@@ -313770,6 +314600,64 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags =>
       'Kitap başlığını otomatik olarak etiketlere ekle';
   @override
@@ -315760,6 +316648,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -315790,10 +316681,13 @@ class _StringsTr extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -320972,6 +321866,8 @@ class _StringsTr extends _StringsEn {
   String get library_search => 'Kütüphanede ara';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Keşfet';
   @override
@@ -338478,6 +339374,64 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags => 'Tự thêm tên sách vào tag';
   @override
   String get auto_add_char_position_to_tags =>
@@ -340463,6 +341417,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -340493,10 +341450,13 @@ class _StringsVi extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -345655,6 +346615,8 @@ class _StringsVi extends _StringsEn {
   String get library_search => 'Tìm kiếm thư viện';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => 'Khám phá';
   @override
@@ -362828,6 +363790,59 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_tts_waiting => '正在合成…';
   @override
+  String get audiobookshelf_browse_choose_library => '选择媒体库';
+  @override
+  String get audiobookshelf_browse_continue => '继续收听';
+  @override
+  String get audiobookshelf_browse_empty => '这里还没有内容';
+  @override
+  String get audiobookshelf_browse_load_failed => '无法从服务器加载';
+  @override
+  String get audiobookshelf_browse_no_results => '没有匹配项';
+  @override
+  String get audiobookshelf_browse_search_hint => '在此库中搜索';
+  @override
+  String get audiobookshelf_item_download => '下载';
+  @override
+  String get audiobookshelf_item_episodes => '单集';
+  @override
+  String get audiobookshelf_item_no_audio => '此条目没有音频文件';
+  @override
+  String get audiobookshelf_item_stream => '流式播放';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      '无法更新服务器：${reason}';
+  @override
+  String get audiobookshelf_mark_finished => '标记为已听完';
+  @override
+  String get audiobookshelf_mark_finished_through => '把这一集及更早的都标记为已听完';
+  @override
+  String get audiobookshelf_mark_unfinished => '标记为未听完';
+  @override
+  String get audiobookshelf_marked_finished => '已标记为已听完';
+  @override
+  String get audiobookshelf_marked_unfinished => '已标记为未听完';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      '无法准备这本书：${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => '正在准备这本书…';
+  @override
+  String get audiobookshelf_subtitle_from_device => '从本机选择字幕文件';
+  @override
+  String get audiobookshelf_subtitle_message => '有字幕才能边听边查词、制卡。';
+  @override
+  String get audiobookshelf_subtitle_none => '不挂字幕，直接听';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      '和普通有声书 / 播客一样听，之后可以在打开时再补字幕。';
+  @override
+  String get audiobookshelf_subtitle_none_on_server => '音频旁没有找到字幕文件';
+  @override
+  String get audiobookshelf_subtitle_on_server => '服务器上的字幕';
+  @override
+  String get audiobookshelf_subtitle_title => '选择字幕';
+  @override
   String get auto_add_book_name_to_tags => '自动添加作品名到标签';
   @override
   String get auto_add_char_position_to_tags => '自动添加制卡位置到标签';
@@ -364648,6 +365663,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => '显示名称';
   @override
+  String get discovery_audiobookshelf_not_abs => '这个地址看起来不是 Audiobookshelf 服务器';
+  @override
   String get discovery_audiobookshelf_password_label => '密码';
   @override
   String get discovery_audiobookshelf_server_add => '添加服务器';
@@ -364678,9 +365695,12 @@ class _StringsZhCn extends _StringsEn {
   String get discovery_audiobookshelf_session_test => '测试连接';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      '浏览并下载自建 Audiobookshelf 服务器上的有声书；播客库不显示';
+      '在书库的 Audiobookshelf 标签里流式收听自建服务器上的有声书和播客；「发现」页只列有声书库';
   @override
   String get discovery_audiobookshelf_settings_title => 'Audiobookshelf 服务器';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      '这台服务器只允许单点登录，请改用 API 密钥登录';
   @override
   String get discovery_audiobookshelf_url_hint =>
       '例如 http://192.168.1.10:13378';
@@ -369384,6 +370404,8 @@ class _StringsZhCn extends _StringsEn {
   String get library_search => '搜索库';
   @override
   String get library_sort_filter => '排序与筛选';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => '发现';
   @override
@@ -385491,6 +386513,64 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_tts_waiting => 'Synthesizing…';
   @override
+  String get audiobookshelf_browse_choose_library => 'Choose library';
+  @override
+  String get audiobookshelf_browse_continue => 'Continue listening';
+  @override
+  String get audiobookshelf_browse_empty => 'Nothing here yet';
+  @override
+  String get audiobookshelf_browse_load_failed =>
+      'Could not load from the server';
+  @override
+  String get audiobookshelf_browse_no_results => 'No matches';
+  @override
+  String get audiobookshelf_browse_search_hint => 'Search this library';
+  @override
+  String get audiobookshelf_item_download => 'Download';
+  @override
+  String get audiobookshelf_item_episodes => 'Episodes';
+  @override
+  String get audiobookshelf_item_no_audio => 'This item has no audio files';
+  @override
+  String get audiobookshelf_item_stream => 'Stream';
+  @override
+  String audiobookshelf_mark_failed({required Object reason}) =>
+      'Could not update the server: ${reason}';
+  @override
+  String get audiobookshelf_mark_finished => 'Mark as finished';
+  @override
+  String get audiobookshelf_mark_finished_through =>
+      'Mark this and all older as finished';
+  @override
+  String get audiobookshelf_mark_unfinished => 'Mark as not finished';
+  @override
+  String get audiobookshelf_marked_finished => 'Marked as finished';
+  @override
+  String get audiobookshelf_marked_unfinished => 'Marked as not finished';
+  @override
+  String audiobookshelf_stream_failed({required Object reason}) =>
+      'Could not prepare the book: ${reason}';
+  @override
+  String get audiobookshelf_stream_preparing => 'Preparing the book…';
+  @override
+  String get audiobookshelf_subtitle_from_device =>
+      'Choose a file on this device';
+  @override
+  String get audiobookshelf_subtitle_message =>
+      'Subtitles let you look up words and make cards while you listen.';
+  @override
+  String get audiobookshelf_subtitle_none => 'Listen without a subtitle';
+  @override
+  String get audiobookshelf_subtitle_none_hint =>
+      'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+  @override
+  String get audiobookshelf_subtitle_none_on_server =>
+      'No subtitle files were found next to the audio';
+  @override
+  String get audiobookshelf_subtitle_on_server => 'On the server';
+  @override
+  String get audiobookshelf_subtitle_title => 'Choose a subtitle';
+  @override
   String get auto_add_book_name_to_tags => '自動將作品名加入標籤';
   @override
   String get auto_add_char_position_to_tags => '自動將製卡位置加入標籤';
@@ -387338,6 +388418,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_audiobookshelf_name_label => 'Display name';
   @override
+  String get discovery_audiobookshelf_not_abs =>
+      'That address doesn\'t look like an Audiobookshelf server';
+  @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
   String get discovery_audiobookshelf_server_add => 'Add server';
@@ -387368,10 +388451,13 @@ class _StringsZhHk extends _StringsEn {
   String get discovery_audiobookshelf_session_test => 'Test connection';
   @override
   String get discovery_audiobookshelf_settings_hint =>
-      'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+      'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -392148,6 +393234,8 @@ class _StringsZhHk extends _StringsEn {
   String get library_search => '搜索庫';
   @override
   String get library_sort_filter => 'Sort and filter';
+  @override
+  String get library_view_audiobookshelf => 'Audiobookshelf';
   @override
   String get library_view_discover => '發現';
   @override
@@ -408295,6 +409383,58 @@ extension on _StringsEn {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Auto-add work title to tags';
       case 'auto_add_char_position_to_tags':
@@ -410023,6 +411163,8 @@ extension on _StringsEn {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -410049,9 +411191,11 @@ extension on _StringsEn {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -414405,6 +415549,8 @@ extension on _StringsEn {
         return 'Search library';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Discover';
       case 'library_view_import':
@@ -429318,6 +430464,58 @@ extension on _StringsAr {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'إضافة عنوان الكتاب تلقائياً إلى الوسوم';
       case 'auto_add_char_position_to_tags':
@@ -431047,6 +432245,8 @@ extension on _StringsAr {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -431073,9 +432273,11 @@ extension on _StringsAr {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -435423,6 +436625,8 @@ extension on _StringsAr {
         return 'بحث في المكتبة';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'اكتشاف';
       case 'library_view_import':
@@ -450355,6 +451559,58 @@ extension on _StringsDe {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Buchtitel automatisch zu Tags hinzufügen';
       case 'auto_add_char_position_to_tags':
@@ -452092,6 +453348,8 @@ extension on _StringsDe {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -452118,9 +453376,11 @@ extension on _StringsDe {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -456482,6 +457742,8 @@ extension on _StringsDe {
         return 'Bibliothek durchsuchen';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Entdecken';
       case 'library_view_import':
@@ -471443,6 +472705,58 @@ extension on _StringsEs {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Añadir título del libro a las etiquetas automáticamente';
       case 'auto_add_char_position_to_tags':
@@ -473176,6 +474490,8 @@ extension on _StringsEs {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -473202,9 +474518,11 @@ extension on _StringsEs {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -477562,6 +478880,8 @@ extension on _StringsEs {
         return 'Buscar biblioteca';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Descubrir';
       case 'library_view_import':
@@ -492523,6 +493843,58 @@ extension on _StringsFr {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Ajouter automatiquement le titre du livre aux étiquettes';
       case 'auto_add_char_position_to_tags':
@@ -494261,6 +495633,8 @@ extension on _StringsFr {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -494287,9 +495661,11 @@ extension on _StringsFr {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -498652,6 +500028,8 @@ extension on _StringsFr {
         return 'Rechercher dans la bibliothèque';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Découvrir';
       case 'library_view_import':
@@ -513603,6 +514981,58 @@ extension on _StringsId {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Tambahkan judul buku ke tag secara otomatis';
       case 'auto_add_char_position_to_tags':
@@ -515334,6 +516764,8 @@ extension on _StringsId {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -515360,9 +516792,11 @@ extension on _StringsId {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -519717,6 +521151,8 @@ extension on _StringsId {
         return 'Cari pustaka';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Jelajahi';
       case 'library_view_import':
@@ -534645,6 +536081,58 @@ extension on _StringsIt {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Aggiungi automaticamente il titolo del libro alle etichette';
       case 'auto_add_char_position_to_tags':
@@ -536380,6 +537868,8 @@ extension on _StringsIt {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -536406,9 +537896,11 @@ extension on _StringsIt {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -540766,6 +542258,8 @@ extension on _StringsIt {
         return 'Cerca nella libreria';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Scopri';
       case 'library_view_import':
@@ -555695,6 +557189,58 @@ extension on _StringsJa {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'タグに作品名を自動追加';
       case 'auto_add_char_position_to_tags':
@@ -557416,6 +558962,8 @@ extension on _StringsJa {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -557442,9 +558990,11 @@ extension on _StringsJa {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -561780,6 +563330,8 @@ extension on _StringsJa {
         return 'ライブラリを検索';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return '見つける';
       case 'library_view_import':
@@ -576631,6 +578183,58 @@ extension on _StringsKo {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return '태그에 책 제목 자동 추가';
       case 'auto_add_char_position_to_tags':
@@ -578355,6 +579959,8 @@ extension on _StringsKo {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -578381,9 +579987,11 @@ extension on _StringsKo {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -582722,6 +584330,8 @@ extension on _StringsKo {
         return '라이브러리 검색';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return '발견';
       case 'library_view_import':
@@ -597608,6 +599218,58 @@ extension on _StringsNl {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Boektitel automatisch aan labels toevoegen';
       case 'auto_add_char_position_to_tags':
@@ -599345,6 +601007,8 @@ extension on _StringsNl {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -599371,9 +601035,11 @@ extension on _StringsNl {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -603730,6 +605396,8 @@ extension on _StringsNl {
         return 'Bibliotheek doorzoeken';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Ontdekken';
       case 'library_view_import':
@@ -618678,6 +620346,58 @@ extension on _StringsPtBr {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Adicionar título do livro às tags automaticamente';
       case 'auto_add_char_position_to_tags':
@@ -620412,6 +622132,8 @@ extension on _StringsPtBr {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -620438,9 +622160,11 @@ extension on _StringsPtBr {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -624795,6 +626519,8 @@ extension on _StringsPtBr {
         return 'Buscar na biblioteca';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Descobrir';
       case 'library_view_import':
@@ -639741,6 +641467,58 @@ extension on _StringsRu {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Автодобавление названия книги в теги';
       case 'auto_add_char_position_to_tags':
@@ -641477,6 +643255,8 @@ extension on _StringsRu {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -641503,9 +643283,11 @@ extension on _StringsRu {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -645862,6 +647644,8 @@ extension on _StringsRu {
         return 'Поиск в библиотеке';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Обзор';
       case 'library_view_import':
@@ -660791,6 +662575,58 @@ extension on _StringsTh {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'เพิ่มชื่อหนังสือในแท็กอัตโนมัติ';
       case 'auto_add_char_position_to_tags':
@@ -662519,6 +664355,8 @@ extension on _StringsTh {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -662545,9 +664383,11 @@ extension on _StringsTh {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -666902,6 +668742,8 @@ extension on _StringsTh {
         return 'ค้นหาคลัง';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'ค้นพบ';
       case 'library_view_import':
@@ -681824,6 +683666,58 @@ extension on _StringsTr {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Kitap başlığını otomatik olarak etiketlere ekle';
       case 'auto_add_char_position_to_tags':
@@ -683557,6 +685451,8 @@ extension on _StringsTr {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -683583,9 +685479,11 @@ extension on _StringsTr {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -687942,6 +689840,8 @@ extension on _StringsTr {
         return 'Kütüphanede ara';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Keşfet';
       case 'library_view_import':
@@ -702870,6 +704770,58 @@ extension on _StringsVi {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return 'Tự thêm tên sách vào tag';
       case 'auto_add_char_position_to_tags':
@@ -704601,6 +706553,8 @@ extension on _StringsVi {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -704627,9 +706581,11 @@ extension on _StringsVi {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -708984,6 +710940,8 @@ extension on _StringsVi {
         return 'Tìm kiếm thư viện';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return 'Khám phá';
       case 'library_view_import':
@@ -723855,6 +725813,56 @@ extension on _StringsZhCn {
         return '声音';
       case 'audiobook_tts_waiting':
         return '正在合成…';
+      case 'audiobookshelf_browse_choose_library':
+        return '选择媒体库';
+      case 'audiobookshelf_browse_continue':
+        return '继续收听';
+      case 'audiobookshelf_browse_empty':
+        return '这里还没有内容';
+      case 'audiobookshelf_browse_load_failed':
+        return '无法从服务器加载';
+      case 'audiobookshelf_browse_no_results':
+        return '没有匹配项';
+      case 'audiobookshelf_browse_search_hint':
+        return '在此库中搜索';
+      case 'audiobookshelf_item_download':
+        return '下载';
+      case 'audiobookshelf_item_episodes':
+        return '单集';
+      case 'audiobookshelf_item_no_audio':
+        return '此条目没有音频文件';
+      case 'audiobookshelf_item_stream':
+        return '流式播放';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) => '无法更新服务器：${reason}';
+      case 'audiobookshelf_mark_finished':
+        return '标记为已听完';
+      case 'audiobookshelf_mark_finished_through':
+        return '把这一集及更早的都标记为已听完';
+      case 'audiobookshelf_mark_unfinished':
+        return '标记为未听完';
+      case 'audiobookshelf_marked_finished':
+        return '已标记为已听完';
+      case 'audiobookshelf_marked_unfinished':
+        return '已标记为未听完';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) => '无法准备这本书：${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return '正在准备这本书…';
+      case 'audiobookshelf_subtitle_from_device':
+        return '从本机选择字幕文件';
+      case 'audiobookshelf_subtitle_message':
+        return '有字幕才能边听边查词、制卡。';
+      case 'audiobookshelf_subtitle_none':
+        return '不挂字幕，直接听';
+      case 'audiobookshelf_subtitle_none_hint':
+        return '和普通有声书 / 播客一样听，之后可以在打开时再补字幕。';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return '音频旁没有找到字幕文件';
+      case 'audiobookshelf_subtitle_on_server':
+        return '服务器上的字幕';
+      case 'audiobookshelf_subtitle_title':
+        return '选择字幕';
       case 'auto_add_book_name_to_tags':
         return '自动添加作品名到标签';
       case 'auto_add_char_position_to_tags':
@@ -725565,6 +727573,8 @@ extension on _StringsZhCn {
         return '留空则使用主机名';
       case 'discovery_audiobookshelf_name_label':
         return '显示名称';
+      case 'discovery_audiobookshelf_not_abs':
+        return '这个地址看起来不是 Audiobookshelf 服务器';
       case 'discovery_audiobookshelf_password_label':
         return '密码';
       case 'discovery_audiobookshelf_server_add':
@@ -725590,9 +727600,11 @@ extension on _StringsZhCn {
       case 'discovery_audiobookshelf_session_test':
         return '测试连接';
       case 'discovery_audiobookshelf_settings_hint':
-        return '浏览并下载自建 Audiobookshelf 服务器上的有声书；播客库不显示';
+        return '在书库的 Audiobookshelf 标签里流式收听自建服务器上的有声书和播客；「发现」页只列有声书库';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf 服务器';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return '这台服务器只允许单点登录，请改用 API 密钥登录';
       case 'discovery_audiobookshelf_url_hint':
         return '例如 http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -729902,6 +731914,8 @@ extension on _StringsZhCn {
         return '搜索库';
       case 'library_sort_filter':
         return '排序与筛选';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return '发现';
       case 'library_view_import':
@@ -744647,6 +746661,58 @@ extension on _StringsZhHk {
         return 'Voices';
       case 'audiobook_tts_waiting':
         return 'Synthesizing…';
+      case 'audiobookshelf_browse_choose_library':
+        return 'Choose library';
+      case 'audiobookshelf_browse_continue':
+        return 'Continue listening';
+      case 'audiobookshelf_browse_empty':
+        return 'Nothing here yet';
+      case 'audiobookshelf_browse_load_failed':
+        return 'Could not load from the server';
+      case 'audiobookshelf_browse_no_results':
+        return 'No matches';
+      case 'audiobookshelf_browse_search_hint':
+        return 'Search this library';
+      case 'audiobookshelf_item_download':
+        return 'Download';
+      case 'audiobookshelf_item_episodes':
+        return 'Episodes';
+      case 'audiobookshelf_item_no_audio':
+        return 'This item has no audio files';
+      case 'audiobookshelf_item_stream':
+        return 'Stream';
+      case 'audiobookshelf_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update the server: ${reason}';
+      case 'audiobookshelf_mark_finished':
+        return 'Mark as finished';
+      case 'audiobookshelf_mark_finished_through':
+        return 'Mark this and all older as finished';
+      case 'audiobookshelf_mark_unfinished':
+        return 'Mark as not finished';
+      case 'audiobookshelf_marked_finished':
+        return 'Marked as finished';
+      case 'audiobookshelf_marked_unfinished':
+        return 'Marked as not finished';
+      case 'audiobookshelf_stream_failed':
+        return ({required Object reason}) =>
+            'Could not prepare the book: ${reason}';
+      case 'audiobookshelf_stream_preparing':
+        return 'Preparing the book…';
+      case 'audiobookshelf_subtitle_from_device':
+        return 'Choose a file on this device';
+      case 'audiobookshelf_subtitle_message':
+        return 'Subtitles let you look up words and make cards while you listen.';
+      case 'audiobookshelf_subtitle_none':
+        return 'Listen without a subtitle';
+      case 'audiobookshelf_subtitle_none_hint':
+        return 'Works like a normal audiobook or podcast. You can add a subtitle later while it is open.';
+      case 'audiobookshelf_subtitle_none_on_server':
+        return 'No subtitle files were found next to the audio';
+      case 'audiobookshelf_subtitle_on_server':
+        return 'On the server';
+      case 'audiobookshelf_subtitle_title':
+        return 'Choose a subtitle';
       case 'auto_add_book_name_to_tags':
         return '自動將作品名加入標籤';
       case 'auto_add_char_position_to_tags':
@@ -746361,6 +748427,8 @@ extension on _StringsZhHk {
         return 'Leave empty to use the host name';
       case 'discovery_audiobookshelf_name_label':
         return 'Display name';
+      case 'discovery_audiobookshelf_not_abs':
+        return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
       case 'discovery_audiobookshelf_server_add':
@@ -746387,9 +748455,11 @@ extension on _StringsZhHk {
       case 'discovery_audiobookshelf_session_test':
         return 'Test connection';
       case 'discovery_audiobookshelf_settings_hint':
-        return 'Browse and download audiobooks from your own Audiobookshelf server. Podcast libraries are not shown';
+        return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -750713,6 +752783,8 @@ extension on _StringsZhHk {
         return '搜索庫';
       case 'library_sort_filter':
         return 'Sort and filter';
+      case 'library_view_audiobookshelf':
+        return 'Audiobookshelf';
       case 'library_view_discover':
         return '發現';
       case 'library_view_import':
