@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172720 (10160 per locale)
+/// Strings: 172771 (10163 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11833,11 +11833,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Syncing ${title}';
   String get sync_progress_books => 'Importing books';
   String get sync_progress_collections => 'Syncing collections';
+  String get sync_progress_deletions => 'Syncing deletions';
   String get sync_progress_dictionaries => 'Syncing dictionaries';
   String get sync_progress_fonts => 'Syncing fonts';
   String get sync_progress_local_audio => 'Syncing local audio';
+  String get sync_progress_pending_mines => 'Syncing pending cards';
   String get sync_progress_preparing => 'Preparing sync';
   String get sync_progress_reading => 'Syncing reading data';
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   String get sync_progress_videos => 'Syncing videos';
   String get sync_role_locked_by_client =>
       'Already connected to another device. Remove the connection before hosting as a server.';
@@ -34518,15 +34521,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_progress_collections => 'جارٍ مزامنة المجموعات';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'مزامنة القواميس';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'مزامنة الصوت المحلي';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'جارٍ التحضير للمزامنة';
   @override
   String get sync_progress_reading => 'مزامنة بيانات القراءة';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'جارٍ مزامنة الفيديوهات';
   @override
@@ -59446,15 +59455,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_progress_collections => 'Sammlungen werden synchronisiert';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Wörterbücher werden synchronisiert';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokales Audio wird synchronisiert';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Synchronisierung wird vorbereitet';
   @override
   String get sync_progress_reading => 'Lesedaten werden synchronisiert';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Videos synchronisieren';
   @override
@@ -84486,15 +84501,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_progress_collections => 'Sincronizando colecciones';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Sincronizando diccionarios';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando audio local';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Preparando sincronización';
   @override
   String get sync_progress_reading => 'Sincronizando datos de lectura';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Sincronizando vídeos';
   @override
@@ -109605,15 +109626,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_progress_collections => 'Synchronisation des collections';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Synchronisation des dictionnaires';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Synchronisation de l\'audio local';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Préparation de la synchronisation';
   @override
   String get sync_progress_reading => 'Synchronisation des données de lecture';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Synchronisation des vidéos';
   @override
@@ -134478,15 +134505,21 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_progress_collections => 'Menyinkronkan koleksi';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Menyinkronkan kamus';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Menyinkronkan audio lokal';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Menyiapkan sinkronisasi';
   @override
   String get sync_progress_reading => 'Menyinkronkan data baca';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Menyinkronkan video';
   @override
@@ -159412,15 +159445,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_progress_collections => 'Sincronizzazione raccolte';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Sincronizzazione dizionari';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizzazione audio locale';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Preparazione sincronizzazione';
   @override
   String get sync_progress_reading => 'Sincronizzazione dati di lettura';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Sincronizzazione video';
   @override
@@ -183571,15 +183610,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_progress_collections => 'コレクションを同期中';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => '辞書を同期中';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'ローカル音声を同期中';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => '同期を準備中';
   @override
   String get sync_progress_reading => '読書データを同期中';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => '動画を同期中';
   @override
@@ -207526,15 +207571,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_progress_collections => '컬렉션 동기화 중';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => '사전 동기화 중';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '로컬 오디오 동기화 중';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => '동기화 준비 중';
   @override
   String get sync_progress_reading => '독서 데이터 동기화 중';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => '동영상 동기화 중';
   @override
@@ -232247,15 +232298,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_progress_collections => 'Collecties synchroniseren';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Woordenboeken synchroniseren';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokale audio synchroniseren';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Synchronisatie voorbereiden';
   @override
   String get sync_progress_reading => 'Leesgegevens synchroniseren';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Video\'s synchroniseren';
   @override
@@ -257201,15 +257258,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_progress_collections => 'Sincronizando coleções';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Sincronizando dicionários';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando áudio local';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Preparando sincronização';
   @override
   String get sync_progress_reading => 'Sincronizando dados de leitura';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Sincronizando vídeos';
   @override
@@ -282138,15 +282201,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_progress_collections => 'Синхронизация коллекций';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Синхронизация словарей';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Синхронизация локального аудио';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Подготовка синхронизации';
   @override
   String get sync_progress_reading => 'Синхронизация данных чтения';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Синхронизация видео';
   @override
@@ -306818,15 +306887,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_progress_collections => 'กำลังซิงค์คอลเลกชัน';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'กำลังซิงค์พจนานุกรม';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'กำลังซิงค์เสียงในเครื่อง';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'กำลังเตรียมซิงค์';
   @override
   String get sync_progress_reading => 'กำลังซิงค์ข้อมูลการอ่าน';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'กำลังซิงค์วิดีโอ';
   @override
@@ -331579,15 +331654,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_progress_collections => 'Koleksiyonlar senkronize ediliyor';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Sözlükler eşitleniyor';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Yerel ses eşitleniyor';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Senkronizasyon hazırlanıyor';
   @override
   String get sync_progress_reading => 'Okuma verileri eşitleniyor';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Videolar senkronize ediliyor';
   @override
@@ -356324,15 +356405,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_progress_collections => 'Đang đồng bộ bộ sưu tập';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Đang đồng bộ từ điển';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Đang đồng bộ âm thanh cục bộ';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Đang chuẩn bị đồng bộ';
   @override
   String get sync_progress_reading => 'Đang đồng bộ dữ liệu đọc';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Đang đồng bộ video';
   @override
@@ -379394,15 +379481,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_progress_collections => '同步合集';
   @override
+  String get sync_progress_deletions => '同步删除记录';
+  @override
   String get sync_progress_dictionaries => '同步词典';
   @override
   String get sync_progress_fonts => '同步字体';
   @override
   String get sync_progress_local_audio => '同步本地音频';
   @override
+  String get sync_progress_pending_mines => '同步待发制卡';
+  @override
   String get sync_progress_preparing => '正在准备同步';
   @override
   String get sync_progress_reading => '同步阅读数据';
+  @override
+  String get sync_progress_statistics => '同步统计与收藏';
   @override
   String get sync_progress_videos => '同步视频';
   @override
@@ -402583,15 +402676,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_progress_collections => '同步合集';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => '正在同步詞典';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '正在同步本機音訊';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => '正在準備同步';
   @override
   String get sync_progress_reading => '正在同步閱讀資料';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => '同步影片';
   @override
@@ -424130,16 +424229,22 @@ extension on _StringsEn {
         return 'Importing books';
       case 'sync_progress_collections':
         return 'Syncing collections';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Syncing dictionaries';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Syncing local audio';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_reading':
         return 'Syncing reading data';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Syncing videos';
       case 'sync_role_locked_by_client':
@@ -445221,16 +445326,22 @@ extension on _StringsAr {
         return 'جارٍ استيراد الكتب';
       case 'sync_progress_collections':
         return 'جارٍ مزامنة المجموعات';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'مزامنة القواميس';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'مزامنة الصوت المحلي';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'جارٍ التحضير للمزامنة';
       case 'sync_progress_reading':
         return 'مزامنة بيانات القراءة';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'جارٍ مزامنة الفيديوهات';
       case 'sync_role_locked_by_client':
@@ -466380,16 +466491,22 @@ extension on _StringsDe {
         return 'Bücher werden importiert';
       case 'sync_progress_collections':
         return 'Sammlungen werden synchronisiert';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Wörterbücher werden synchronisiert';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Lokales Audio wird synchronisiert';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Synchronisierung wird vorbereitet';
       case 'sync_progress_reading':
         return 'Lesedaten werden synchronisiert';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Videos synchronisieren';
       case 'sync_role_locked_by_client':
@@ -487535,16 +487652,22 @@ extension on _StringsEs {
         return 'Importando libros';
       case 'sync_progress_collections':
         return 'Sincronizando colecciones';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando diccionarios';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Sincronizando audio local';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Preparando sincronización';
       case 'sync_progress_reading':
         return 'Sincronizando datos de lectura';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Sincronizando vídeos';
       case 'sync_role_locked_by_client':
@@ -508701,16 +508824,22 @@ extension on _StringsFr {
         return 'Importation des livres';
       case 'sync_progress_collections':
         return 'Synchronisation des collections';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Synchronisation des dictionnaires';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Synchronisation de l\'audio local';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Préparation de la synchronisation';
       case 'sync_progress_reading':
         return 'Synchronisation des données de lecture';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Synchronisation des vidéos';
       case 'sync_role_locked_by_client':
@@ -529828,16 +529957,22 @@ extension on _StringsId {
         return 'Mengimpor buku';
       case 'sync_progress_collections':
         return 'Menyinkronkan koleksi';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Menyinkronkan kamus';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Menyinkronkan audio lokal';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Menyiapkan sinkronisasi';
       case 'sync_progress_reading':
         return 'Menyinkronkan data baca';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Menyinkronkan video';
       case 'sync_role_locked_by_client':
@@ -550965,16 +551100,22 @@ extension on _StringsIt {
         return 'Importazione libri';
       case 'sync_progress_collections':
         return 'Sincronizzazione raccolte';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizzazione dizionari';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Sincronizzazione audio locale';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Preparazione sincronizzazione';
       case 'sync_progress_reading':
         return 'Sincronizzazione dati di lettura';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Sincronizzazione video';
       case 'sync_role_locked_by_client':
@@ -572024,16 +572165,22 @@ extension on _StringsJa {
         return '書籍をインポート中';
       case 'sync_progress_collections':
         return 'コレクションを同期中';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '辞書を同期中';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'ローカル音声を同期中';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return '同期を準備中';
       case 'sync_progress_reading':
         return '読書データを同期中';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return '動画を同期中';
       case 'sync_role_locked_by_client':
@@ -593044,16 +593191,22 @@ extension on _StringsKo {
         return '책 가져오는 중';
       case 'sync_progress_collections':
         return '컬렉션 동기화 중';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '사전 동기화 중';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return '로컬 오디오 동기화 중';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return '동기화 준비 중';
       case 'sync_progress_reading':
         return '독서 데이터 동기화 중';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return '동영상 동기화 중';
       case 'sync_role_locked_by_client':
@@ -614162,16 +614315,22 @@ extension on _StringsNl {
         return 'Boeken importeren';
       case 'sync_progress_collections':
         return 'Collecties synchroniseren';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Woordenboeken synchroniseren';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Lokale audio synchroniseren';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Synchronisatie voorbereiden';
       case 'sync_progress_reading':
         return 'Leesgegevens synchroniseren';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Video\'s synchroniseren';
       case 'sync_role_locked_by_client':
@@ -635301,16 +635460,22 @@ extension on _StringsPtBr {
         return 'Importando livros';
       case 'sync_progress_collections':
         return 'Sincronizando coleções';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando dicionários';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Sincronizando áudio local';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Preparando sincronização';
       case 'sync_progress_reading':
         return 'Sincronizando dados de leitura';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Sincronizando vídeos';
       case 'sync_role_locked_by_client':
@@ -656446,16 +656611,22 @@ extension on _StringsRu {
         return 'Импорт книг';
       case 'sync_progress_collections':
         return 'Синхронизация коллекций';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Синхронизация словарей';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Синхронизация локального аудио';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Подготовка синхронизации';
       case 'sync_progress_reading':
         return 'Синхронизация данных чтения';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Синхронизация видео';
       case 'sync_role_locked_by_client':
@@ -677548,16 +677719,22 @@ extension on _StringsTh {
         return 'กำลังนำเข้าหนังสือ';
       case 'sync_progress_collections':
         return 'กำลังซิงค์คอลเลกชัน';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'กำลังซิงค์พจนานุกรม';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'กำลังซิงค์เสียงในเครื่อง';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'กำลังเตรียมซิงค์';
       case 'sync_progress_reading':
         return 'กำลังซิงค์ข้อมูลการอ่าน';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'กำลังซิงค์วิดีโอ';
       case 'sync_role_locked_by_client':
@@ -698670,16 +698847,22 @@ extension on _StringsTr {
         return 'Kitaplar içe aktarılıyor';
       case 'sync_progress_collections':
         return 'Koleksiyonlar senkronize ediliyor';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sözlükler eşitleniyor';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Yerel ses eşitleniyor';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Senkronizasyon hazırlanıyor';
       case 'sync_progress_reading':
         return 'Okuma verileri eşitleniyor';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Videolar senkronize ediliyor';
       case 'sync_role_locked_by_client':
@@ -719788,16 +719971,22 @@ extension on _StringsVi {
         return 'Đang nhập sách';
       case 'sync_progress_collections':
         return 'Đang đồng bộ bộ sưu tập';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Đang đồng bộ từ điển';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Đang đồng bộ âm thanh cục bộ';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Đang chuẩn bị đồng bộ';
       case 'sync_progress_reading':
         return 'Đang đồng bộ dữ liệu đọc';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Đang đồng bộ video';
       case 'sync_role_locked_by_client':
@@ -740698,16 +740887,22 @@ extension on _StringsZhCn {
         return '导入书籍';
       case 'sync_progress_collections':
         return '同步合集';
+      case 'sync_progress_deletions':
+        return '同步删除记录';
       case 'sync_progress_dictionaries':
         return '同步词典';
       case 'sync_progress_fonts':
         return '同步字体';
       case 'sync_progress_local_audio':
         return '同步本地音频';
+      case 'sync_progress_pending_mines':
+        return '同步待发制卡';
       case 'sync_progress_preparing':
         return '正在准备同步';
       case 'sync_progress_reading':
         return '同步阅读数据';
+      case 'sync_progress_statistics':
+        return '同步统计与收藏';
       case 'sync_progress_videos':
         return '同步视频';
       case 'sync_role_locked_by_client':
@@ -761638,16 +761833,22 @@ extension on _StringsZhHk {
         return '正在匯入書籍';
       case 'sync_progress_collections':
         return '同步合集';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '正在同步詞典';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return '正在同步本機音訊';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return '正在準備同步';
       case 'sync_progress_reading':
         return '正在同步閱讀資料';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return '同步影片';
       case 'sync_role_locked_by_client':
