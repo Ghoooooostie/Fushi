@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172703 (10159 per locale)
+/// Strings: 172839 (10167 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11007,8 +11007,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_sync_now_busy({required Object progress}) =>
       'Already syncing: ${progress}';
   String get srs_sync_now_started => 'Review sync started';
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  String get srs_sync_profile_conflict_later => 'Later';
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   String get srs_sync_progress_downloading => 'Syncing review data';
   String srs_sync_progress_downloading_count({
     required Object done,
@@ -33061,8 +33074,29 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -57970,8 +58004,29 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -83002,8 +83057,29 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -108121,8 +108197,29 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -133004,8 +133101,29 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -157929,8 +158047,29 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -182144,8 +182283,29 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -206095,8 +206255,29 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -230752,8 +230933,29 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -255708,8 +255910,29 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -280641,8 +280864,29 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -305326,8 +305570,29 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -330076,8 +330341,29 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -354822,8 +355108,29 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -378019,8 +378326,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_now_started => '开始同步复习数据…';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+  String get srs_sync_profile_conflict_adopt_hint => '本机还没有笔记，将直接改用所选的那一份。';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      '同步位置里有其他设备的复习数据，没法自动确定本机该用哪一份。请选择：';
+  @override
+  String get srs_sync_profile_conflict_done => '已关联，正在同步复习数据…';
+  @override
+  String get srs_sync_profile_conflict_failed => '关联复习数据失败';
+  @override
+  String get srs_sync_profile_conflict_keep_separate => '保持本机独立';
+  @override
+  String get srs_sync_profile_conflict_later => '稍后';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      '本机已有的笔记和复习记录会并入所选的那一份，不会丢失。';
+  @override
+  String get srs_sync_profile_conflict_title => '复习同步冲突';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      '更新于 ${date}';
   @override
   String get srs_sync_progress_downloading => '同步复习数据';
   @override
@@ -401160,8 +401485,29 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -422802,9 +423148,24 @@ extension on _StringsEn {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -443895,9 +444256,24 @@ extension on _StringsAr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -465044,9 +465420,24 @@ extension on _StringsDe {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -486197,9 +486588,24 @@ extension on _StringsEs {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -507361,9 +507767,24 @@ extension on _StringsFr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -528485,9 +528906,24 @@ extension on _StringsId {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -549618,9 +550054,24 @@ extension on _StringsIt {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -570685,9 +571136,24 @@ extension on _StringsJa {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -591701,9 +592167,24 @@ extension on _StringsKo {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -612807,9 +613288,24 @@ extension on _StringsNl {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -633944,9 +634440,24 @@ extension on _StringsPtBr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -655085,9 +655596,24 @@ extension on _StringsRu {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -676186,9 +676712,24 @@ extension on _StringsTh {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -697305,9 +697846,24 @@ extension on _StringsTr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -718419,9 +718975,24 @@ extension on _StringsVi {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -739339,9 +739910,24 @@ extension on _StringsZhCn {
         return ({required Object progress}) => '正在同步：${progress}';
       case 'srs_sync_now_started':
         return '开始同步复习数据…';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return '本机还没有笔记，将直接改用所选的那一份。';
+      case 'srs_sync_profile_conflict_body':
+        return '同步位置里有其他设备的复习数据，没法自动确定本机该用哪一份。请选择：';
+      case 'srs_sync_profile_conflict_done':
+        return '已关联，正在同步复习数据…';
+      case 'srs_sync_profile_conflict_failed':
+        return '关联复习数据失败';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return '保持本机独立';
+      case 'srs_sync_profile_conflict_later':
+        return '稍后';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return '本机已有的笔记和复习记录会并入所选的那一份，不会丢失。';
+      case 'srs_sync_profile_conflict_title':
+        return '复习同步冲突';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => '更新于 ${date}';
       case 'srs_sync_progress_downloading':
         return '同步复习数据';
       case 'srs_sync_progress_downloading_count':
@@ -760274,9 +760860,24 @@ extension on _StringsZhHk {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
