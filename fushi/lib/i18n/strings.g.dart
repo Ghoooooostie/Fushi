@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172839 (10167 per locale)
+/// Strings: 173740 (10220 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -243,6 +243,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
   String get ai_agent_ask_action => 'Ask AI';
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
   String get ai_agent_attach_screen_text => 'Attach screen text';
   String get ai_agent_choice_cancel => 'None of these';
   String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
@@ -255,9 +257,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_agent_confirm_title => 'Confirm before running';
   String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   String get ai_agent_details => 'Details';
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   String get ai_agent_empty_title => 'What should I do?';
   String get ai_agent_expand => 'Open as full page';
   String get ai_agent_history_by_user => 'Confirmed by you';
@@ -268,6 +269,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Everything the AI assistant changed; undo any of it';
   String get ai_agent_history_title => 'AI action log';
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  String get ai_agent_message_image_attached => 'With screenshot';
   String get ai_agent_new_session => 'New conversation';
   String get ai_agent_no_provider =>
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
@@ -288,8 +290,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_agent_remote_unsupported({required Object device}) =>
       '${device} can\'t run the AI assistant. Update Fushi on that device.';
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  String get ai_agent_screen_image_chip => 'Screenshot';
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
   String get ai_agent_screen_text_unavailable =>
@@ -321,6 +327,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_agent_undo_failed({required Object reason}) =>
       'Undo failed: ${reason}';
   String get ai_agent_undone => 'Undone';
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   String get ai_assist_empty =>
       'AI did not return a usable result. Try describing it differently.';
   String ai_assist_failed({required Object reason}) =>
@@ -432,6 +445,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_media_acquire_started => 'Download started';
   String ai_media_acquire_title({required Object domain}) =>
       'AI download · ${domain}';
+  String get ai_provider_accepts_images => 'Model accepts images';
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   String get ai_provider_add => 'Add provider';
   String get ai_provider_allow_http => 'Allow plain HTTP';
   String get ai_provider_allow_http_summary =>
@@ -467,6 +483,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_provider_models_fetched({required Object count}) =>
       'Found ${count} models';
   String get ai_provider_name => 'Name';
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  String get ai_provider_pricing => 'Pricing';
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   String get ai_provider_protocol => 'Protocol';
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   String get ai_provider_rate_limit => 'Requests per minute';
@@ -1209,6 +1233,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_pending_mines_title => 'Pending cards';
   String get anki_pending_mines_unreachable =>
       'Anki can\'t be reached right now. The remaining cards stay in the queue.';
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
   String get anki_refresh_hint =>
       'After creating or renaming a deck or note type in Anki, tap here to refresh.';
   String get anki_reposition_aggregate => 'Combine multiple dictionaries';
@@ -1426,6 +1454,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Audio source request failed: ${detail}';
   String audio_source_timeout({required Object host}) =>
       'Audio source timeout: "${host}" — server not responding, try again later or change source';
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   String get audio_source_updated => 'Audio source updated';
   String get audio_source_url_invalid =>
       'Link must be http(s) and contain a term or reading placeholder';
@@ -1472,6 +1502,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String audiobook_import_error_disk_full({required Object size}) =>
       'Not enough disk space. Required: ${size}';
   String get audiobook_import_success => 'Audiobook imported';
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   String get audiobook_load_error => 'Failed to load audiobook.';
   String get audiobook_material_add_dir => 'Add folder';
   String get audiobook_material_library => 'Audiobook material library';
@@ -6004,6 +6039,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_book_remove_download => 'Remove download';
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   String get kavita_book_remove_download_kept =>
@@ -6544,6 +6581,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => '${sentences} sentences from ${documents} sources';
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   String get lookup_popup_close_after_mining_hint =>
@@ -7272,6 +7318,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_privacy_switch => 'Keep this private';
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
+  String get media_server_continue_menu_details => 'Open details';
+  String get media_server_continue_menu_resume => 'Resume';
   String get media_server_item_folder => 'Folder';
   String media_server_item_unplayed_episodes({required Object n}) =>
       '${n} unwatched';
@@ -7288,6 +7336,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_server_servers_title => 'Choose a server';
   String get media_server_sort_date_added => 'Date added';
   String get media_server_sort_name => 'Name';
+  String media_server_version_count({required Object n}) => '${n} versions';
+  String get media_server_version_pick_title => 'Choose a version';
   String get media_server_versions => 'Versions';
   String get media_source_add => 'Add source';
   String get media_source_add_local_folder => 'Local folder';
@@ -8494,6 +8544,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_permission_storage_desc =>
       'Scan local video, manga and book folders by their real paths.';
   String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   String get onboarding_reopen => 'Getting started guide';
   String get onboarding_review_anki_desc =>
       'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
@@ -8859,6 +8918,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get profile_copy_suffix => '(Copy)';
   String get profile_create => 'Create profile';
   String get profile_delete => 'Delete';
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   String get profile_export => 'Export';
   String get profile_export_failed => 'Export failed';
   String profile_follow_default_current({required Object name}) =>
@@ -9628,6 +9697,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Align next subtitle to now';
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Align previous subtitle to now';
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle secondary subtitle obscure';
   String get shortcut_action_video_cycle_subtitle_obscure =>
@@ -9674,6 +9746,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_video_toggle_fullscreen => 'Toggle fullscreen';
   String get shortcut_action_video_toggle_immersive_lock =>
       'Toggle immersive lock';
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
@@ -10353,6 +10427,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   String srs_import_report_presets_skipped({required Object n}) =>
@@ -10984,6 +11060,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_status_review_by_recall => 'In review (RWKV)';
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   String get srs_status_suspended => 'Suspended';
+  String get srs_sync_auto => 'Auto-sync review data';
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   String get srs_sync_backend_unsupported =>
@@ -11844,11 +11923,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Syncing ${title}';
   String get sync_progress_books => 'Importing books';
   String get sync_progress_collections => 'Syncing collections';
+  String get sync_progress_deletions => 'Syncing deletions';
   String get sync_progress_dictionaries => 'Syncing dictionaries';
   String get sync_progress_fonts => 'Syncing fonts';
   String get sync_progress_local_audio => 'Syncing local audio';
+  String get sync_progress_pending_mines => 'Syncing pending cards';
   String get sync_progress_preparing => 'Preparing sync';
   String get sync_progress_reading => 'Syncing reading data';
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   String get sync_progress_videos => 'Syncing videos';
   String get sync_role_locked_by_client =>
       'Already connected to another device. Remove the connection before hosting as a server.';
@@ -12825,6 +12907,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_loading_connecting => 'Connecting to stream…';
   String get video_loading_preparing => 'Preparing…';
   String get video_loading_subtitle => 'Downloading subtitles…';
+  String get video_loop_cue_badge_label => 'Looping line';
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   String get video_menu_fullscreen => 'Toggle fullscreen';
@@ -13215,6 +13299,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_search_ai_rank => 'Rank with AI';
   String get video_search_ai_ranked => 'Results reordered by AI';
   String get video_search_ai_recommended => 'AI pick';
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   String get video_secondary_subtitle_sources => 'Secondary subtitle';
   String get video_setting_auto_play_next => 'Auto-play next episode';
   String get video_setting_auto_scrape => 'Auto-fetch series info';
@@ -13494,10 +13580,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Skip intros and credits automatically';
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
@@ -13533,8 +13615,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
   String get video_setting_torrent_section_antileech => 'Anti-leech';
   String get video_setting_torrent_section_session => 'Session';
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
   String get video_setting_torrent_seed_time_hint =>
       'Stop uploading after seeding this long. 0 = unlimited.';
@@ -14291,10 +14373,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_youtube_empty => 'This caption track has no text';
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (translated)';
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  String get video_theme_song_skip_ending => 'Skip credits';
-  String get video_theme_song_skip_intro => 'Skip intro';
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   String get video_torznab_add => 'Add indexer';
   String get video_torznab_api_key => 'API key';
@@ -14436,13 +14514,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The site took too long to respond. Try again later.';
   String get web_browser_error_timeout_title => 'The connection timed out';
   String get web_browser_error_title => 'This page can\'t be reached';
+  String get web_browser_exit => 'Exit browser';
   String get web_browser_find_close => 'Close find bar';
   String get web_browser_find_hint => 'Find in page';
   String get web_browser_find_next => 'Next match';
   String get web_browser_find_none => 'No matches';
   String get web_browser_find_previous => 'Previous match';
   String get web_browser_forward => 'Forward';
-  String get web_browser_furigana => 'Furigana';
   String get web_browser_history_clear => 'Clear history';
   String get web_browser_history_clear_confirm =>
       'Delete history for this time range? This can\'t be undone.';
@@ -14454,7 +14532,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_image_ocr_lookup => 'Look up text in image';
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   String get web_browser_image_save => 'Save image';
-  String get web_browser_known_words => 'Highlight new words';
   String get web_browser_link_copy => 'Copy link address';
   String get web_browser_link_open_background_tab => 'Open in background tab';
   String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
@@ -14620,6 +14697,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_login_import => 'Import login from browser';
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   String get web_video_mine_queue_empty => 'No queued cards';
@@ -14637,11 +14731,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Queued for card creation (${count} pending)';
   String web_video_mine_switch_builtin({required Object count}) =>
       'Switch to built-in mode to create ${count} queued cards';
+  String get web_video_mode_page => 'Web page';
+  String get web_video_mode_player => 'Player';
   String get web_video_nav_close => 'Close';
   String get web_video_nav_forward => 'Forward';
   String get web_video_no_tracks => 'No subtitles captured yet';
   String get web_video_page_show => 'Back to web page';
-  String get web_video_player_open => 'Watch in player';
   String get web_video_player_unavailable =>
       'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
   String get web_video_track_failed =>
@@ -14779,6 +14874,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -14803,10 +14901,9 @@ class _StringsAr extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -14825,6 +14922,8 @@ class _StringsAr extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -14858,8 +14957,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -14914,6 +15020,14 @@ class _StringsAr extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
@@ -15102,6 +15216,11 @@ class _StringsAr extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'تنزيل بالذكاء الاصطناعي · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'إضافة مزود';
   @override
   String get ai_provider_allow_http => 'السماح بـ HTTP العادي';
@@ -15161,6 +15280,21 @@ class _StringsAr extends _StringsEn {
       'تم العثور على ${count} نموذج';
   @override
   String get ai_provider_name => 'الاسم';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'البروتوكول';
   @override
@@ -16372,6 +16506,12 @@ class _StringsAr extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'لا يمكن الوصول إلى Anki حاليًا. تبقى البطاقات المتبقية في قائمة الانتظار.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'بعد إنشاء أو إعادة تسمية مجموعة أو نوع ملاحظة في Anki، انقر هنا للتحديث.';
   @override
@@ -16723,6 +16863,9 @@ class _StringsAr extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'انتهت مهلة مصدر الصوت: "${host}" — الخادم لا يستجيب، حاول لاحقاً أو غيّر المصدر';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'تم تحديث مصدر الصوت';
   @override
   String get audio_source_url_invalid =>
@@ -16799,6 +16942,15 @@ class _StringsAr extends _StringsEn {
       'مساحة القرص غير كافية. المطلوب: ${size}';
   @override
   String get audiobook_import_success => 'تم استيراد الكتاب المسموع';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'فشل تحميل الكتاب المسموع.';
   @override
@@ -24451,6 +24603,9 @@ class _StringsAr extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -25355,6 +25510,20 @@ class _StringsAr extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -26624,6 +26793,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'مجلد';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -26653,6 +26826,10 @@ class _StringsAr extends _StringsEn {
   String get media_server_sort_date_added => 'تاريخ الإضافة';
   @override
   String get media_server_sort_name => 'الاسم';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -28700,6 +28877,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'الوصول إلى جميع الملفات';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'دليل البدء';
   @override
   String get onboarding_review_anki_desc =>
@@ -29339,6 +29531,20 @@ class _StringsAr extends _StringsEn {
   String get profile_create => 'إنشاء ملف شخصي';
   @override
   String get profile_delete => 'حذف';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'تصدير';
   @override
@@ -30708,6 +30914,11 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'محاذاة الترجمة السابقة إلى الآن';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -30784,6 +30995,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'تبديل قفل الانغماس';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'تبديل عناصر تحكم النافذة المصغّرة';
@@ -31961,6 +32175,9 @@ class _StringsAr extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -33035,6 +33252,11 @@ class _StringsAr extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -34547,15 +34769,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_progress_collections => 'جارٍ مزامنة المجموعات';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'مزامنة القواميس';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'مزامنة الصوت المحلي';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'جارٍ التحضير للمزامنة';
   @override
   String get sync_progress_reading => 'مزامنة بيانات القراءة';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'جارٍ مزامنة الفيديوهات';
   @override
@@ -36216,6 +36444,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_loading_subtitle => 'جارٍ تحميل الترجمات…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -36864,6 +37096,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'اختيار الذكاء الاصطناعي';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'ترجمة ثانوية';
   @override
   String get video_setting_auto_play_next => 'التشغيل التلقائي للحلقة التالية';
@@ -37342,12 +37577,6 @@ class _StringsAr extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'مفتاح TMDB API مخصص';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -37416,8 +37645,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'الجلسة';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'إيقاف الرفع عندما تصل نسبة المرفوع/المحمّل إلى هذه القيمة. 0 = بلا حدود.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'حد نسبة البذر';
   @override
@@ -38632,13 +38861,6 @@ class _StringsAr extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (مترجم)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'إضافة مفهرس';
@@ -38887,6 +39109,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -38898,8 +39122,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -38921,8 +39143,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -39220,6 +39440,27 @@ class _StringsAr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -39245,6 +39486,10 @@ class _StringsAr extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -39252,8 +39497,6 @@ class _StringsAr extends _StringsEn {
   String get web_video_no_tracks => 'لم يتم التقاط أي ترجمة بعد';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
@@ -39411,6 +39654,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -39435,10 +39681,9 @@ class _StringsDe extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -39457,6 +39702,8 @@ class _StringsDe extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -39490,8 +39737,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -39546,6 +39800,14 @@ class _StringsDe extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
@@ -39736,6 +39998,11 @@ class _StringsDe extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'KI-Download · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Anbieter hinzufügen';
   @override
   String get ai_provider_allow_http => 'Unverschlüsseltes HTTP erlauben';
@@ -39795,6 +40062,21 @@ class _StringsDe extends _StringsEn {
       '${count} Modelle gefunden';
   @override
   String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protokoll';
   @override
@@ -41029,6 +41311,12 @@ class _StringsDe extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Anki ist gerade nicht erreichbar. Die übrigen Karten bleiben in der Warteschlange.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Nach dem Erstellen oder Umbenennen eines Stapels oder Notiztyps in Anki hier tippen, um zu aktualisieren.';
   @override
@@ -41387,6 +41675,9 @@ class _StringsDe extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Audioquellen-Timeout: "${host}" — Server antwortet nicht, versuchen Sie es später oder ändern Sie die Quelle';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Audioquelle aktualisiert';
   @override
   String get audio_source_url_invalid =>
@@ -41464,6 +41755,15 @@ class _StringsDe extends _StringsEn {
       'Nicht genügend Speicherplatz. Benötigt: ${size}';
   @override
   String get audiobook_import_success => 'Hörbuch importiert';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Hörbuch konnte nicht geladen werden.';
   @override
@@ -49260,6 +49560,9 @@ class _StringsDe extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -50181,6 +50484,20 @@ class _StringsDe extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -51480,6 +51797,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Ordner';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -51511,6 +51832,10 @@ class _StringsDe extends _StringsEn {
   String get media_server_sort_date_added => 'Hinzugefügt am';
   @override
   String get media_server_sort_name => 'Name';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -53587,6 +53912,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Zugriff auf alle Dateien';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Erste-Schritte-Anleitung';
   @override
   String get onboarding_review_anki_desc =>
@@ -54239,6 +54579,20 @@ class _StringsDe extends _StringsEn {
   String get profile_create => 'Profil erstellen';
   @override
   String get profile_delete => 'Löschen';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Exportieren';
   @override
@@ -55634,6 +55988,11 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Vorherigen Untertitel auf jetzt ausrichten';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -55713,6 +56072,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Immersive Sperre umschalten';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Steuerelemente des Mini-Fensters umschalten';
@@ -56891,6 +57253,9 @@ class _StringsDe extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -57965,6 +58330,11 @@ class _StringsDe extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -59493,15 +59863,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_progress_collections => 'Sammlungen werden synchronisiert';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Wörterbücher werden synchronisiert';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokales Audio wird synchronisiert';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Synchronisierung wird vorbereitet';
   @override
   String get sync_progress_reading => 'Lesedaten werden synchronisiert';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Videos synchronisieren';
   @override
@@ -61190,6 +61566,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Untertitel werden heruntergeladen…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -61850,6 +62230,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'KI-Empfehlung';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Sekundärer Untertitel';
   @override
   String get video_setting_auto_play_next =>
@@ -62337,12 +62720,6 @@ class _StringsDe extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Eigener TMDB-API-Schlüssel';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -62410,8 +62787,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sitzung';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Upload stoppen, wenn Upload/Download diesen Wert erreicht. 0 = unbegrenzt.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Seed-Verhältnis-Limit';
   @override
@@ -63653,13 +64030,6 @@ class _StringsDe extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (übersetzt)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Indexer hinzufügen';
@@ -63910,6 +64280,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -63921,8 +64293,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -63944,8 +64314,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -64243,6 +64611,27 @@ class _StringsDe extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -64268,6 +64657,10 @@ class _StringsDe extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -64275,8 +64668,6 @@ class _StringsDe extends _StringsEn {
   String get web_video_no_tracks => 'Noch keine Untertitel erfasst';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
@@ -64434,6 +64825,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -64458,10 +64852,9 @@ class _StringsEs extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -64480,6 +64873,8 @@ class _StringsEs extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -64513,8 +64908,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -64569,6 +64971,14 @@ class _StringsEs extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
@@ -64761,6 +65171,11 @@ class _StringsEs extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'Descarga con IA · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Añadir proveedor';
   @override
   String get ai_provider_allow_http => 'Permitir HTTP sin cifrar';
@@ -64820,6 +65235,21 @@ class _StringsEs extends _StringsEn {
       'Se encontraron ${count} modelos';
   @override
   String get ai_provider_name => 'Nombre';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocolo';
   @override
@@ -66057,6 +66487,12 @@ class _StringsEs extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'No se puede acceder a Anki ahora mismo. Las tarjetas restantes permanecen en la cola.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Después de crear o renombrar un mazo o tipo de nota en Anki, toca aquí para actualizar.';
   @override
@@ -66419,6 +66855,9 @@ class _StringsEs extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Tiempo de espera de fuente de audio: "${host}" — servidor no responde, inténtalo más tarde o cambia la fuente';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Fuente de audio actualizada';
   @override
   String get audio_source_url_invalid =>
@@ -66496,6 +66935,15 @@ class _StringsEs extends _StringsEn {
       'Espacio en disco insuficiente. Requerido: ${size}';
   @override
   String get audiobook_import_success => 'Audiolibro importado';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Error al cargar el audiolibro.';
   @override
@@ -74301,6 +74749,9 @@ class _StringsEs extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -75226,6 +75677,20 @@ class _StringsEs extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -76530,6 +76995,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Carpeta';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -76561,6 +77030,10 @@ class _StringsEs extends _StringsEn {
   String get media_server_sort_date_added => 'Fecha de adición';
   @override
   String get media_server_sort_name => 'Nombre';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -78634,6 +79107,21 @@ class _StringsEs extends _StringsEn {
   String get onboarding_permission_storage_label =>
       'Acceso a todos los archivos';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Guía de primeros pasos';
   @override
   String get onboarding_review_anki_desc =>
@@ -79280,6 +79768,20 @@ class _StringsEs extends _StringsEn {
   String get profile_create => 'Crear perfil';
   @override
   String get profile_delete => 'Eliminar';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Exportar';
   @override
@@ -80686,6 +81188,11 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Alinear subtítulo anterior al ahora';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -80765,6 +81272,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alternar bloqueo inmersivo';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alternar controles de la ventana mini';
@@ -81944,6 +82454,9 @@ class _StringsEs extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -83018,6 +83531,11 @@ class _StringsEs extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -84551,15 +85069,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_progress_collections => 'Sincronizando colecciones';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Sincronizando diccionarios';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando audio local';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Preparando sincronización';
   @override
   String get sync_progress_reading => 'Sincronizando datos de lectura';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Sincronizando vídeos';
   @override
@@ -86256,6 +86780,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Descargando subtítulos…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -86917,6 +87445,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'Elección de la IA';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Subtítulo secundario';
   @override
   String get video_setting_auto_play_next =>
@@ -87406,12 +87937,6 @@ class _StringsEs extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Clave API de TMDB personalizada';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -87483,8 +88008,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sesión';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Dejar de subir cuando subido/descargado alcance esto. 0 = sin límite.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit =>
       'Límite de ratio de seeding';
@@ -88730,13 +89255,6 @@ class _StringsEs extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (traducido)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Añadir indexador';
@@ -88988,6 +89506,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -88999,8 +89519,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -89022,8 +89540,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -89321,6 +89837,27 @@ class _StringsEs extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -89346,6 +89883,10 @@ class _StringsEs extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Cambiar al modo integrado para crear ${count} tarjetas en cola';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -89353,8 +89894,6 @@ class _StringsEs extends _StringsEn {
   String get web_video_no_tracks => 'Aún no se han capturado subtítulos';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
@@ -89514,6 +90053,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -89538,10 +90080,9 @@ class _StringsFr extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -89560,6 +90101,8 @@ class _StringsFr extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -89593,8 +90136,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -89649,6 +90199,14 @@ class _StringsFr extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
@@ -89839,6 +90397,11 @@ class _StringsFr extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'Téléchargement par IA · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Ajouter un fournisseur';
   @override
   String get ai_provider_allow_http => 'Autoriser le HTTP simple';
@@ -89898,6 +90461,21 @@ class _StringsFr extends _StringsEn {
       '${count} modèles trouvés';
   @override
   String get ai_provider_name => 'Nom';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocole';
   @override
@@ -91138,6 +91716,12 @@ class _StringsFr extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Anki est injoignable pour le moment. Les cartes restantes restent dans la file.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Après avoir créé ou renommé un paquet ou un type de note dans Anki, touchez ici pour actualiser.';
   @override
@@ -91504,6 +92088,9 @@ class _StringsFr extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Délai d\'attente source audio : "${host}" — serveur ne répond pas, réessayez plus tard ou changez de source';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Source audio mise à jour';
   @override
   String get audio_source_url_invalid =>
@@ -91581,6 +92168,15 @@ class _StringsFr extends _StringsEn {
       'Espace disque insuffisant. Requis : ${size}';
   @override
   String get audiobook_import_success => 'Livre audio importé';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Échec du chargement du livre audio.';
   @override
@@ -99417,6 +100013,9 @@ class _StringsFr extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -100342,6 +100941,20 @@ class _StringsFr extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -101651,6 +102264,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Dossier';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -101682,6 +102299,10 @@ class _StringsFr extends _StringsEn {
   String get media_server_sort_date_added => 'Date d\'ajout';
   @override
   String get media_server_sort_name => 'Nom';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -103766,6 +104387,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Accès à tous les fichiers';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Guide de démarrage';
   @override
   String get onboarding_review_anki_desc =>
@@ -104415,6 +105051,20 @@ class _StringsFr extends _StringsEn {
   String get profile_create => 'Créer un profil';
   @override
   String get profile_delete => 'Supprimer';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Exporter';
   @override
@@ -105826,6 +106476,11 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Aligner le sous-titre précédent sur maintenant';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -105905,6 +106560,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Basculer le verrouillage immersif';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Basculer les commandes de la mini-fenêtre';
@@ -107084,6 +107742,9 @@ class _StringsFr extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -108158,6 +108819,11 @@ class _StringsFr extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -109688,15 +110354,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_progress_collections => 'Synchronisation des collections';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Synchronisation des dictionnaires';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Synchronisation de l\'audio local';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Préparation de la synchronisation';
   @override
   String get sync_progress_reading => 'Synchronisation des données de lecture';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Synchronisation des vidéos';
   @override
@@ -111398,6 +112070,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Téléchargement des sous-titres…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -112064,6 +112740,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'Choix de l\'IA';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Sous-titre secondaire';
   @override
   String get video_setting_auto_play_next =>
@@ -112554,12 +113233,6 @@ class _StringsFr extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Clé API TMDB personnalisée';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -112630,8 +113303,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Session';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Arrêter l\'envoi quand le ratio envoyé/téléchargé atteint cette valeur. 0 = illimité.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit =>
       'Limite de ratio de seed';
@@ -113886,13 +114559,6 @@ class _StringsFr extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (traduit)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Ajouter un indexeur';
@@ -114147,6 +114813,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -114158,8 +114826,6 @@ class _StringsFr extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -114181,8 +114847,6 @@ class _StringsFr extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -114481,6 +115145,27 @@ class _StringsFr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -114506,6 +115191,10 @@ class _StringsFr extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Passer en mode intégré pour créer ${count} cartes en attente';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -114513,8 +115202,6 @@ class _StringsFr extends _StringsEn {
   String get web_video_no_tracks => 'Aucun sous-titre capturé pour l’instant';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
@@ -114674,6 +115361,9 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -114698,10 +115388,9 @@ class _StringsId extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -114720,6 +115409,8 @@ class _StringsId extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -114753,8 +115444,15 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -114809,6 +115507,14 @@ class _StringsId extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
@@ -114998,6 +115704,11 @@ class _StringsId extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'Unduhan AI · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Tambah penyedia';
   @override
   String get ai_provider_allow_http => 'Izinkan HTTP biasa';
@@ -115057,6 +115768,21 @@ class _StringsId extends _StringsEn {
       'Ditemukan ${count} model';
   @override
   String get ai_provider_name => 'Nama';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protokol';
   @override
@@ -116282,6 +117008,12 @@ class _StringsId extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Anki tidak dapat dijangkau saat ini. Kartu yang tersisa tetap di antrean.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Setelah membuat atau mengganti nama dek atau tipe catatan di Anki, ketuk di sini untuk menyegarkan.';
   @override
@@ -116637,6 +117369,9 @@ class _StringsId extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Waktu habis sumber audio: "${host}" — server tidak merespons, coba lagi nanti atau ganti sumber';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Sumber audio diperbarui';
   @override
   String get audio_source_url_invalid =>
@@ -116714,6 +117449,15 @@ class _StringsId extends _StringsEn {
       'Ruang disk tidak cukup. Diperlukan: ${size}';
   @override
   String get audiobook_import_success => 'Buku audio diimpor';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Gagal memuat buku audio.';
   @override
@@ -124423,6 +125167,9 @@ class _StringsId extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -125339,6 +126086,20 @@ class _StringsId extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -126622,6 +127383,10 @@ class _StringsId extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Folder';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -126652,6 +127417,10 @@ class _StringsId extends _StringsEn {
   String get media_server_sort_date_added => 'Tanggal ditambahkan';
   @override
   String get media_server_sort_name => 'Nama';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -128710,6 +129479,21 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Akses semua file';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Panduan memulai';
   @override
   String get onboarding_review_anki_desc =>
@@ -129352,6 +130136,20 @@ class _StringsId extends _StringsEn {
   String get profile_create => 'Buat Profil';
   @override
   String get profile_delete => 'Hapus';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Ekspor';
   @override
@@ -130734,6 +131532,11 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Selaraskan subtitle sebelumnya ke sekarang';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -130812,6 +131615,9 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alihkan Kunci Imersif';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alihkan kontrol jendela mini';
@@ -131988,6 +132794,9 @@ class _StringsId extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -133062,6 +133871,11 @@ class _StringsId extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -134579,15 +135393,21 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_progress_collections => 'Menyinkronkan koleksi';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Menyinkronkan kamus';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Menyinkronkan audio lokal';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Menyiapkan sinkronisasi';
   @override
   String get sync_progress_reading => 'Menyinkronkan data baca';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Menyinkronkan video';
   @override
@@ -136267,6 +137087,10 @@ class _StringsId extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Mengunduh subtitle…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -136922,6 +137746,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'Pilihan AI';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Subtitle sekunder';
   @override
   String get video_setting_auto_play_next =>
@@ -137402,12 +138229,6 @@ class _StringsId extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Kunci API TMDB kustom';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -137475,8 +138296,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sesi';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Berhenti mengunggah saat rasio diunggah/diunduh mencapai ini. 0 = tidak terbatas.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Batas rasio seed';
   @override
@@ -138708,13 +139529,6 @@ class _StringsId extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (diterjemahkan)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Tambah indexer';
@@ -138965,6 +139779,8 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -138976,8 +139792,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -138999,8 +139813,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -139298,6 +140110,27 @@ class _StringsId extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -139323,6 +140156,10 @@ class _StringsId extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -139330,8 +140167,6 @@ class _StringsId extends _StringsEn {
   String get web_video_no_tracks => 'Belum ada subtitel yang ditangkap';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
@@ -139489,6 +140324,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -139513,10 +140351,9 @@ class _StringsIt extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -139535,6 +140372,8 @@ class _StringsIt extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -139568,8 +140407,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -139624,6 +140470,14 @@ class _StringsIt extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
@@ -139816,6 +140670,11 @@ class _StringsIt extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'Download con IA · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Aggiungi provider';
   @override
   String get ai_provider_allow_http => 'Consenti HTTP semplice';
@@ -139875,6 +140734,21 @@ class _StringsIt extends _StringsEn {
       'Trovati ${count} modelli';
   @override
   String get ai_provider_name => 'Nome';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocollo';
   @override
@@ -141105,6 +141979,12 @@ class _StringsIt extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Anki non è raggiungibile al momento. Le carte rimanenti restano in coda.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Dopo aver creato o rinominato un mazzo o un tipo di nota in Anki, tocca qui per aggiornare.';
   @override
@@ -141461,6 +142341,9 @@ class _StringsIt extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Timeout sorgente audio: "${host}" — server non risponde, riprova più tardi o cambia sorgente';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Sorgente audio aggiornata';
   @override
   String get audio_source_url_invalid =>
@@ -141538,6 +142421,15 @@ class _StringsIt extends _StringsEn {
       'Spazio su disco insufficiente. Richiesto: ${size}';
   @override
   String get audiobook_import_success => 'Audiolibro importato';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Impossibile caricare l\'audiolibro.';
   @override
@@ -149310,6 +150202,9 @@ class _StringsIt extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -150225,6 +151120,20 @@ class _StringsIt extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -151527,6 +152436,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Cartella';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -151558,6 +152471,10 @@ class _StringsIt extends _StringsEn {
   String get media_server_sort_date_added => 'Data di aggiunta';
   @override
   String get media_server_sort_name => 'Nome';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -153627,6 +154544,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Accesso a tutti i file';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Guida per iniziare';
   @override
   String get onboarding_review_anki_desc =>
@@ -154270,6 +155202,20 @@ class _StringsIt extends _StringsEn {
   String get profile_create => 'Crea profilo';
   @override
   String get profile_delete => 'Elimina';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Esporta';
   @override
@@ -155676,6 +156622,11 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Allinea sottotitolo precedente al momento attuale';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -155756,6 +156707,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Attiva/disattiva blocco immersivo';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Attiva/disattiva i controlli della mini finestra';
@@ -156934,6 +157888,9 @@ class _StringsIt extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -158008,6 +158965,11 @@ class _StringsIt extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -159531,15 +160493,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_progress_collections => 'Sincronizzazione raccolte';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Sincronizzazione dizionari';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizzazione audio locale';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Preparazione sincronizzazione';
   @override
   String get sync_progress_reading => 'Sincronizzazione dati di lettura';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Sincronizzazione video';
   @override
@@ -161224,6 +162192,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Download sottotitoli…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -161879,6 +162851,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'Scelta dell\'IA';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Sottotitolo secondario';
   @override
   String get video_setting_auto_play_next =>
@@ -162368,12 +163343,6 @@ class _StringsIt extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Chiave API TMDB personalizzata';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -162443,8 +163412,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sessione';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Smetti di caricare quando il rapporto upload/download raggiunge questo valore. 0 = illimitato.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Limite rapporto seed';
   @override
@@ -163684,13 +164653,6 @@ class _StringsIt extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (tradotto)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Aggiungi indexer';
@@ -163941,6 +164903,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -163952,8 +164916,6 @@ class _StringsIt extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -163975,8 +164937,6 @@ class _StringsIt extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -164275,6 +165235,27 @@ class _StringsIt extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -164300,6 +165281,10 @@ class _StringsIt extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Passa alla modalità integrata per creare ${count} carte in coda';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -164307,8 +165292,6 @@ class _StringsIt extends _StringsEn {
   String get web_video_no_tracks => 'Nessun sottotitolo acquisito ancora';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
@@ -164468,6 +165451,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -164492,10 +165478,9 @@ class _StringsJa extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -164514,6 +165499,8 @@ class _StringsJa extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -164547,8 +165534,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -164603,6 +165597,14 @@ class _StringsJa extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty => 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
   @override
@@ -164784,6 +165786,11 @@ class _StringsJa extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'AIダウンロード · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'プロバイダーを追加';
   @override
   String get ai_provider_allow_http => '平文の HTTP を許可';
@@ -164843,6 +165850,21 @@ class _StringsJa extends _StringsEn {
       '${count} 個のモデルが見つかりました';
   @override
   String get ai_provider_name => '名前';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'プロトコル';
   @override
@@ -166013,6 +167035,12 @@ class _StringsJa extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       '現在 Anki に接続できません。残りのカードはキューに残ります。';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Anki でデッキやノートタイプを作成・名前変更したら、ここをタップして更新してください。';
   @override
@@ -166355,6 +167383,9 @@ class _StringsJa extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       '音声ソースタイムアウト："${host}" — サーバーが応答しません。後で再試行するかソースを変更してください';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => '音声ソースを更新しました';
   @override
   String get audio_source_url_invalid =>
@@ -166430,6 +167461,15 @@ class _StringsJa extends _StringsEn {
       'ディスク容量が不足しています。必要容量：${size}';
   @override
   String get audiobook_import_success => 'オーディオブックをインポートしました';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'オーディオブックの読み込みに失敗しました。';
   @override
@@ -173841,6 +174881,9 @@ class _StringsJa extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -174724,6 +175767,20 @@ class _StringsJa extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -175963,6 +177020,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'フォルダー';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -175991,6 +177052,10 @@ class _StringsJa extends _StringsEn {
   String get media_server_sort_date_added => '追加日';
   @override
   String get media_server_sort_name => '名前';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -177978,6 +179043,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'すべてのファイルへのアクセス';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'はじめにガイド';
   @override
   String get onboarding_review_anki_desc =>
@@ -178607,6 +179687,20 @@ class _StringsJa extends _StringsEn {
   String get profile_create => 'プロファイルを作成';
   @override
   String get profile_delete => 'プロファイルを削除';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'エクスポート';
   @override
@@ -179933,6 +181027,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '前の字幕を現在位置に合わせる';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -180000,6 +181099,9 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_video_toggle_fullscreen => '全画面の切り替え';
   @override
   String get shortcut_action_video_toggle_immersive_lock => 'イマーシブロックの切り替え';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome => 'ミニウィンドウのコントロールを切り替え';
   @override
@@ -181170,6 +182272,9 @@ class _StringsJa extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -182244,6 +183349,11 @@ class _StringsJa extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -183708,15 +184818,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_progress_collections => 'コレクションを同期中';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => '辞書を同期中';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'ローカル音声を同期中';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => '同期を準備中';
   @override
   String get sync_progress_reading => '読書データを同期中';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => '動画を同期中';
   @override
@@ -185328,6 +186444,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_loading_subtitle => '字幕をダウンロード中…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -185954,6 +187074,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'AIのおすすめ';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '次のエピソードを自動再生';
@@ -186406,12 +187529,6 @@ class _StringsJa extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'カスタムTMDB APIキー';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -186477,8 +187594,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'セッション';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'アップロード/ダウンロード比がこの値に達したら停止します。0 = 無制限。';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'シード比率制限';
   @override
@@ -187635,13 +188752,6 @@ class _StringsJa extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang}（翻訳）';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'インデクサーを追加';
@@ -187888,6 +188998,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -187899,8 +189011,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -187922,8 +189032,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -188220,6 +189328,27 @@ class _StringsJa extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -188245,6 +189374,10 @@ class _StringsJa extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '内蔵モードに切り替えて ${count} 件のカードを作成';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -188252,8 +189385,6 @@ class _StringsJa extends _StringsEn {
   String get web_video_no_tracks => '字幕はまだ取得されていません';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
@@ -188410,6 +189541,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -188434,10 +189568,9 @@ class _StringsKo extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -188456,6 +189589,8 @@ class _StringsKo extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -188489,8 +189624,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -188545,6 +189687,14 @@ class _StringsKo extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty => 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
   @override
@@ -188727,6 +189877,11 @@ class _StringsKo extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'AI 다운로드 · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => '제공자 추가';
   @override
   String get ai_provider_allow_http => '일반 HTTP 허용';
@@ -188784,6 +189939,21 @@ class _StringsKo extends _StringsEn {
       '모델 ${count}개를 찾았습니다';
   @override
   String get ai_provider_name => '이름';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => '프로토콜';
   @override
@@ -189950,6 +191120,12 @@ class _StringsKo extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       '지금은 Anki에 연결할 수 없습니다. 남은 카드는 대기열에 유지됩니다.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Anki에서 덱이나 노트 유형을 만들거나 이름을 바꾼 뒤 여기를 눌러 새로고침하세요.';
   @override
@@ -190292,6 +191468,9 @@ class _StringsKo extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       '오디오 소스 시간 초과: "${host}" — 서버가 응답하지 않습니다. 나중에 다시 시도하거나 소스를 변경하세요';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => '오디오 소스 업데이트됨';
   @override
   String get audio_source_url_invalid =>
@@ -190366,6 +191545,15 @@ class _StringsKo extends _StringsEn {
       '디스크 공간이 부족합니다. 필요 용량: ${size}';
   @override
   String get audiobook_import_success => '오디오북 가져오기 완료';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => '오디오북을 불러오지 못했습니다.';
   @override
@@ -197794,6 +198982,9 @@ class _StringsKo extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -198676,6 +199867,20 @@ class _StringsKo extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -199925,6 +201130,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => '폴더';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -199953,6 +201162,10 @@ class _StringsKo extends _StringsEn {
   String get media_server_sort_date_added => '추가한 날짜';
   @override
   String get media_server_sort_name => '이름';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -201948,6 +203161,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => '모든 파일 액세스';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => '시작 가이드';
   @override
   String get onboarding_review_anki_desc =>
@@ -202577,6 +203805,20 @@ class _StringsKo extends _StringsEn {
   String get profile_create => '프로필 생성';
   @override
   String get profile_delete => '삭제';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => '내보내기';
   @override
@@ -203906,6 +205148,11 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       '이전 자막을 현재 시점에 맞추기';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -203973,6 +205220,9 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_video_toggle_fullscreen => '전체 화면 전환';
   @override
   String get shortcut_action_video_toggle_immersive_lock => '몰입 잠금 전환';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome => '미니 창 컨트롤 전환';
   @override
@@ -205142,6 +206392,9 @@ class _StringsKo extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -206216,6 +207469,11 @@ class _StringsKo extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -207681,15 +208939,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_progress_collections => '컬렉션 동기화 중';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => '사전 동기화 중';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '로컬 오디오 동기화 중';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => '동기화 준비 중';
   @override
   String get sync_progress_reading => '독서 데이터 동기화 중';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => '동영상 동기화 중';
   @override
@@ -209302,6 +210566,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_loading_subtitle => '자막 다운로드 중…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -209935,6 +211203,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'AI 추천';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => '보조 자막';
   @override
   String get video_setting_auto_play_next => '다음 에피소드 자동 재생';
@@ -210390,12 +211661,6 @@ class _StringsKo extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => '사용자 지정 TMDB API 키';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -210461,8 +211726,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => '세션';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      '업로드/다운로드 비율이 이 값에 도달하면 업로드를 중지합니다. 0 = 무제한.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => '시드 비율 제한';
   @override
@@ -211644,13 +212909,6 @@ class _StringsKo extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (번역됨)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => '인덱서 추가';
@@ -211897,6 +213155,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -211908,8 +213168,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -211931,8 +213189,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -212228,6 +213484,27 @@ class _StringsKo extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -212253,6 +213530,10 @@ class _StringsKo extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -212260,8 +213541,6 @@ class _StringsKo extends _StringsEn {
   String get web_video_no_tracks => '아직 수집된 자막이 없습니다';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
@@ -212419,6 +213698,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -212443,10 +213725,9 @@ class _StringsNl extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -212465,6 +213746,8 @@ class _StringsNl extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -212498,8 +213781,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -212554,6 +213844,14 @@ class _StringsNl extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
@@ -212744,6 +214042,11 @@ class _StringsNl extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'AI-download · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Provider toevoegen';
   @override
   String get ai_provider_allow_http => 'Gewone HTTP toestaan';
@@ -212803,6 +214106,21 @@ class _StringsNl extends _StringsEn {
       '${count} modellen gevonden';
   @override
   String get ai_provider_name => 'Naam';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocol';
   @override
@@ -214032,6 +215350,12 @@ class _StringsNl extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Anki is nu niet bereikbaar. De resterende kaarten blijven in de wachtrij.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Tik hier om te vernieuwen nadat je in Anki een deck of notitietype hebt gemaakt of hernoemd.';
   @override
@@ -214391,6 +215715,9 @@ class _StringsNl extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Audiobron time-out: "${host}" — server reageert niet, probeer later opnieuw of wijzig de bron';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Audiobron bijgewerkt';
   @override
   String get audio_source_url_invalid =>
@@ -214468,6 +215795,15 @@ class _StringsNl extends _StringsEn {
       'Onvoldoende schijfruimte. Vereist: ${size}';
   @override
   String get audiobook_import_success => 'Audioboek geïmporteerd';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Kan audioboek niet laden.';
   @override
@@ -222217,6 +223553,9 @@ class _StringsNl extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -223135,6 +224474,20 @@ class _StringsNl extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -224423,6 +225776,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Map';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -224454,6 +225811,10 @@ class _StringsNl extends _StringsEn {
   String get media_server_sort_date_added => 'Datum toegevoegd';
   @override
   String get media_server_sort_name => 'Naam';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -226524,6 +227885,21 @@ class _StringsNl extends _StringsEn {
   String get onboarding_permission_storage_label =>
       'Toegang tot alle bestanden';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Aan-de-slaggids';
   @override
   String get onboarding_review_anki_desc =>
@@ -227169,6 +228545,20 @@ class _StringsNl extends _StringsEn {
   String get profile_create => 'Profiel aanmaken';
   @override
   String get profile_delete => 'Verwijderen';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Exporteren';
   @override
@@ -228563,6 +229953,11 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Vorige ondertitel uitlijnen op nu';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -228642,6 +230037,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Immersieve vergrendeling in-/uitschakelen';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Bediening van minivenster in-/uitschakelen';
@@ -229820,6 +231218,9 @@ class _StringsNl extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -230894,6 +232295,11 @@ class _StringsNl extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -232420,15 +233826,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_progress_collections => 'Collecties synchroniseren';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Woordenboeken synchroniseren';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokale audio synchroniseren';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Synchronisatie voorbereiden';
   @override
   String get sync_progress_reading => 'Leesgegevens synchroniseren';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Video\'s synchroniseren';
   @override
@@ -234112,6 +235524,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Ondertitels downloaden…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -234769,6 +236185,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'AI-keuze';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Secundaire ondertitel';
   @override
   String get video_setting_auto_play_next =>
@@ -235253,12 +236672,6 @@ class _StringsNl extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Aangepaste TMDB API-sleutel';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -235327,8 +236740,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sessie';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Stop met uploaden wanneer geüpload/gedownload dit bereikt. 0 = onbeperkt.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Seedratiolimiet';
   @override
@@ -236564,13 +237977,6 @@ class _StringsNl extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (vertaald)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Indexer toevoegen';
@@ -236821,6 +238227,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -236832,8 +238240,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -236855,8 +238261,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -237155,6 +238559,27 @@ class _StringsNl extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -237180,6 +238605,10 @@ class _StringsNl extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -237187,8 +238616,6 @@ class _StringsNl extends _StringsEn {
   String get web_video_no_tracks => 'Nog geen ondertitels vastgelegd';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
@@ -237347,6 +238774,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -237371,10 +238801,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -237393,6 +238822,8 @@ class _StringsPtBr extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -237426,8 +238857,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -237482,6 +238920,14 @@ class _StringsPtBr extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
@@ -237674,6 +239120,11 @@ class _StringsPtBr extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'Download com IA · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Adicionar provedor';
   @override
   String get ai_provider_allow_http => 'Permitir HTTP simples';
@@ -237733,6 +239184,21 @@ class _StringsPtBr extends _StringsEn {
       '${count} modelos encontrados';
   @override
   String get ai_provider_name => 'Nome';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocolo';
   @override
@@ -238971,6 +240437,12 @@ class _StringsPtBr extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Não foi possível acessar o Anki agora. Os cartões restantes permanecem na fila.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Depois de criar ou renomear um baralho ou tipo de nota no Anki, toque aqui para atualizar.';
   @override
@@ -239330,6 +240802,9 @@ class _StringsPtBr extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Tempo limite da fonte de áudio: "${host}" — servidor não responde, tente novamente mais tarde ou mude a fonte';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Fonte de áudio atualizada';
   @override
   String get audio_source_url_invalid =>
@@ -239407,6 +240882,15 @@ class _StringsPtBr extends _StringsEn {
       'Espaço em disco insuficiente. Necessário: ${size}';
   @override
   String get audiobook_import_success => 'Audiolivro importado';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Falha ao carregar o audiolivro.';
   @override
@@ -247181,6 +248665,9 @@ class _StringsPtBr extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -248103,6 +249590,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -249397,6 +250898,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Pasta';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -249428,6 +250933,10 @@ class _StringsPtBr extends _StringsEn {
   String get media_server_sort_date_added => 'Data de adição';
   @override
   String get media_server_sort_name => 'Nome';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -251496,6 +253005,21 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_permission_storage_label =>
       'Acesso a todos os arquivos';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Guia de primeiros passos';
   @override
   String get onboarding_review_anki_desc =>
@@ -252144,6 +253668,20 @@ class _StringsPtBr extends _StringsEn {
   String get profile_create => 'Criar Perfil';
   @override
   String get profile_delete => 'Excluir';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Exportar';
   @override
@@ -253541,6 +255079,11 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Alinhar legenda anterior ao momento atual';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -253619,6 +255162,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alternar bloqueio imersivo';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alternar controles da minijanela';
@@ -254797,6 +256343,9 @@ class _StringsPtBr extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -255871,6 +257420,11 @@ class _StringsPtBr extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -257392,15 +258946,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_progress_collections => 'Sincronizando coleções';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Sincronizando dicionários';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando áudio local';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Preparando sincronização';
   @override
   String get sync_progress_reading => 'Sincronizando dados de leitura';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Sincronizando vídeos';
   @override
@@ -259093,6 +260653,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Baixando legendas…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -259753,6 +261317,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'Escolha da IA';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Legenda secundária';
   @override
   String get video_setting_auto_play_next =>
@@ -260242,12 +261809,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Chave de API TMDB personalizada';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -260316,8 +261877,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sessão';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Parar upload quando upload/download atingir isso. 0 = ilimitado.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit =>
       'Limite de ratio de seed';
@@ -261561,13 +263122,6 @@ class _StringsPtBr extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (traduzida)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Adicionar indexador';
@@ -261818,6 +263372,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -261829,8 +263385,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -261852,8 +263406,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -262151,6 +263703,27 @@ class _StringsPtBr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -262176,6 +263749,10 @@ class _StringsPtBr extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Mudar para o modo integrado para criar ${count} cartões na fila';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -262183,8 +263760,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_video_no_tracks => 'Nenhuma legenda capturada ainda';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
@@ -262343,6 +263918,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -262367,10 +263945,9 @@ class _StringsRu extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -262389,6 +263966,8 @@ class _StringsRu extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -262422,8 +264001,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -262478,6 +264064,14 @@ class _StringsRu extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
@@ -262667,6 +264261,11 @@ class _StringsRu extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'ИИ-загрузка · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Добавить провайдера';
   @override
   String get ai_provider_allow_http => 'Разрешить обычный HTTP';
@@ -262726,6 +264325,21 @@ class _StringsRu extends _StringsEn {
       'Найдено моделей: ${count}';
   @override
   String get ai_provider_name => 'Название';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Протокол';
   @override
@@ -263955,6 +265569,12 @@ class _StringsRu extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Сейчас не удаётся связаться с Anki. Оставшиеся карточки остаются в очереди.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'После создания или переименования колоды либо типа заметки в Anki нажмите здесь, чтобы обновить.';
   @override
@@ -264314,6 +265934,9 @@ class _StringsRu extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Тайм-аут источника аудио: "${host}" — сервер не отвечает, попробуйте позже или смените источник';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Источник аудио обновлён';
   @override
   String get audio_source_url_invalid =>
@@ -264392,6 +266015,15 @@ class _StringsRu extends _StringsEn {
       'Недостаточно места на диске. Требуется: ${size}';
   @override
   String get audiobook_import_success => 'Аудиокнига импортирована';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Не удалось загрузить аудиокнигу.';
   @override
@@ -272137,6 +273769,9 @@ class _StringsRu extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -273057,6 +274692,20 @@ class _StringsRu extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -274347,6 +275996,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Папка';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -274377,6 +276030,10 @@ class _StringsRu extends _StringsEn {
   String get media_server_sort_date_added => 'Дата добавления';
   @override
   String get media_server_sort_name => 'Название';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -276450,6 +278107,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Доступ ко всем файлам';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Руководство по началу работы';
   @override
   String get onboarding_review_anki_desc =>
@@ -277101,6 +278773,20 @@ class _StringsRu extends _StringsEn {
   String get profile_create => 'Создать профиль';
   @override
   String get profile_delete => 'Удалить';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Экспорт';
   @override
@@ -278496,6 +280182,11 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Совместить предыдущий субтитр с текущим моментом';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -278574,6 +280265,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Иммерсивная блокировка';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Переключить элементы управления мини-окна';
@@ -279751,6 +281445,9 @@ class _StringsRu extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -280825,6 +282522,11 @@ class _StringsRu extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -282347,15 +284049,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_progress_collections => 'Синхронизация коллекций';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Синхронизация словарей';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Синхронизация локального аудио';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Подготовка синхронизации';
   @override
   String get sync_progress_reading => 'Синхронизация данных чтения';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Синхронизация видео';
   @override
@@ -284036,6 +285744,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Загрузка субтитров…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -284695,6 +286407,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'Выбор ИИ';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Вторичные субтитры';
   @override
   String get video_setting_auto_play_next =>
@@ -285179,12 +286894,6 @@ class _StringsRu extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Пользовательский ключ API TMDB';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -285255,8 +286964,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Сессия';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Прекратить раздачу, когда соотношение отдано/загружено достигнет этого значения. 0 = без ограничений.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Лимит рейтинга раздачи';
   @override
@@ -286502,13 +288211,6 @@ class _StringsRu extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (перевод)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Добавить индексатор';
@@ -286760,6 +288462,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -286771,8 +288475,6 @@ class _StringsRu extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -286794,8 +288496,6 @@ class _StringsRu extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -287093,6 +288793,27 @@ class _StringsRu extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -287118,6 +288839,10 @@ class _StringsRu extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -287125,8 +288850,6 @@ class _StringsRu extends _StringsEn {
   String get web_video_no_tracks => 'Субтитры пока не получены';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
@@ -287284,6 +289007,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -287308,10 +289034,9 @@ class _StringsTh extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -287330,6 +289055,8 @@ class _StringsTh extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -287363,8 +289090,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -287419,6 +289153,14 @@ class _StringsTh extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
@@ -287606,6 +289348,11 @@ class _StringsTh extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'ดาวน์โหลดด้วย AI · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'เพิ่มผู้ให้บริการ';
   @override
   String get ai_provider_allow_http => 'อนุญาต HTTP แบบธรรมดา';
@@ -287665,6 +289412,21 @@ class _StringsTh extends _StringsEn {
       'พบ ${count} โมเดล';
   @override
   String get ai_provider_name => 'ชื่อ';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'โปรโตคอล';
   @override
@@ -288872,6 +290634,12 @@ class _StringsTh extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'เชื่อมต่อ Anki ไม่ได้ในขณะนี้ การ์ดที่เหลือยังอยู่ในคิว';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'หลังสร้างหรือเปลี่ยนชื่อเด็คหรือชนิดโน้ตใน Anki แล้ว ให้แตะที่นี่เพื่อรีเฟรช';
   @override
@@ -289221,6 +290989,9 @@ class _StringsTh extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'แหล่งเสียงหมดเวลา: "${host}" — เซิร์ฟเวอร์ไม่ตอบสนอง ลองอีกครั้งภายหลังหรือเปลี่ยนแหล่ง';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'อัปเดตแหล่งเสียงแล้ว';
   @override
   String get audio_source_url_invalid =>
@@ -289298,6 +291069,15 @@ class _StringsTh extends _StringsEn {
       'พื้นที่ดิสก์ไม่เพียงพอ ต้องการ: ${size}';
   @override
   String get audiobook_import_success => 'นำเข้าหนังสือเสียงสำเร็จ';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'โหลดหนังสือเสียงล้มเหลว';
   @override
@@ -296942,6 +298722,9 @@ class _StringsTh extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -297845,6 +299628,20 @@ class _StringsTh extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -299116,6 +300913,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'โฟลเดอร์';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -299145,6 +300946,10 @@ class _StringsTh extends _StringsEn {
   String get media_server_sort_date_added => 'วันที่เพิ่ม';
   @override
   String get media_server_sort_name => 'ชื่อ';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -301193,6 +302998,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'สิทธิ์เข้าถึงไฟล์ทั้งหมด';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'คู่มือเริ่มต้นใช้งาน';
   @override
   String get onboarding_review_anki_desc =>
@@ -301833,6 +303653,20 @@ class _StringsTh extends _StringsEn {
   String get profile_create => 'สร้างโปรไฟล์';
   @override
   String get profile_delete => 'ลบ';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'ส่งออก';
   @override
@@ -303204,6 +305038,11 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'จัดคำบรรยายก่อนหน้าให้ตรงกับตอนนี้';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -303282,6 +305121,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'สลับล็อกโหมดดื่มด่ำ';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'สลับตัวควบคุมหน้าต่างเล็ก';
@@ -304457,6 +306299,9 @@ class _StringsTh extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -305531,6 +307376,11 @@ class _StringsTh extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -307045,15 +308895,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_progress_collections => 'กำลังซิงค์คอลเลกชัน';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'กำลังซิงค์พจนานุกรม';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'กำลังซิงค์เสียงในเครื่อง';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'กำลังเตรียมซิงค์';
   @override
   String get sync_progress_reading => 'กำลังซิงค์ข้อมูลการอ่าน';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'กำลังซิงค์วิดีโอ';
   @override
@@ -308711,6 +310567,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_loading_subtitle => 'กำลังดาวน์โหลดคำบรรยาย…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -309358,6 +311218,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'AI แนะนำ';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'คำบรรยายรอง';
   @override
   String get video_setting_auto_play_next => 'เล่นตอนถัดไปอัตโนมัติ';
@@ -309827,12 +311690,6 @@ class _StringsTh extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'คีย์ API TMDB แบบกำหนดเอง';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -309902,8 +311759,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'เซสชัน';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'หยุดอัปโหลดเมื่ออัตราส่วนอัปโหลด/ดาวน์โหลดถึงค่านี้ 0 = ไม่จำกัด';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'จำกัดอัตราส่วนซีด';
   @override
@@ -311123,13 +312980,6 @@ class _StringsTh extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (แปลแล้ว)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'เพิ่มตัวจัดทำดัชนี';
@@ -311379,6 +313229,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -311390,8 +313242,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -311413,8 +313263,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -311712,6 +313560,27 @@ class _StringsTh extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -311737,6 +313606,10 @@ class _StringsTh extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -311744,8 +313617,6 @@ class _StringsTh extends _StringsEn {
   String get web_video_no_tracks => 'ยังไม่ได้เก็บคำบรรยาย';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
@@ -311903,6 +313774,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -311927,10 +313801,9 @@ class _StringsTr extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -311949,6 +313822,8 @@ class _StringsTr extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -311982,8 +313857,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -312038,6 +313920,14 @@ class _StringsTr extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
@@ -312229,6 +314119,11 @@ class _StringsTr extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'Yapay zeka ile indirme · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Sağlayıcı ekle';
   @override
   String get ai_provider_allow_http => 'Düz HTTP\'ye izin ver';
@@ -312288,6 +314183,21 @@ class _StringsTr extends _StringsEn {
       '${count} model bulundu';
   @override
   String get ai_provider_name => 'Ad';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protokol';
   @override
@@ -313510,6 +315420,12 @@ class _StringsTr extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Anki\'ye şu anda ulaşılamıyor. Kalan kartlar kuyrukta kalır.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Anki\'de bir deste ya da not türü oluşturduktan veya yeniden adlandırdıktan sonra yenilemek için buraya dokunun.';
   @override
@@ -313862,6 +315778,9 @@ class _StringsTr extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Ses kaynağı zaman aşımı: "${host}" — sunucu yanıt vermiyor, daha sonra tekrar deneyin veya kaynağı değiştirin';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Ses kaynağı güncellendi';
   @override
   String get audio_source_url_invalid =>
@@ -313938,6 +315857,15 @@ class _StringsTr extends _StringsEn {
       'Yeterli disk alanı yok. Gerekli: ${size}';
   @override
   String get audiobook_import_success => 'Sesli kitap içe aktarıldı';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Sesli kitap yüklenemedi.';
   @override
@@ -321665,6 +323593,9 @@ class _StringsTr extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -322577,6 +324508,20 @@ class _StringsTr extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -323859,6 +325804,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Klasör';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -323888,6 +325837,10 @@ class _StringsTr extends _StringsEn {
   String get media_server_sort_date_added => 'Eklenme tarihi';
   @override
   String get media_server_sort_name => 'Ad';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -325951,6 +327904,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Tüm dosyalara erişim';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Başlangıç rehberi';
   @override
   String get onboarding_review_anki_desc =>
@@ -326593,6 +328561,20 @@ class _StringsTr extends _StringsEn {
   String get profile_create => 'Profil Oluştur';
   @override
   String get profile_delete => 'Sil';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Dışa aktar';
   @override
@@ -327973,6 +329955,11 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Önceki altyazıyı şimdiye hizala';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -328049,6 +330036,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Sürükleyici Kilidi Aç/Kapat';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Mini pencere denetimlerini aç/kapat';
@@ -329228,6 +331218,9 @@ class _StringsTr extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -330302,6 +332295,11 @@ class _StringsTr extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -331824,15 +333822,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_progress_collections => 'Koleksiyonlar senkronize ediliyor';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Sözlükler eşitleniyor';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Yerel ses eşitleniyor';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Senkronizasyon hazırlanıyor';
   @override
   String get sync_progress_reading => 'Okuma verileri eşitleniyor';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Videolar senkronize ediliyor';
   @override
@@ -333502,6 +335506,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Altyazılar indiriliyor…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -334158,6 +336166,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'Yapay zeka seçimi';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'İkincil altyazı';
   @override
   String get video_setting_auto_play_next => 'Sonraki bölümü otomatik oynat';
@@ -334640,12 +336651,6 @@ class _StringsTr extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Özel TMDB API anahtarı';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -334713,8 +336718,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Oturum';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Yüklenen/indirilen bu orana ulaşınca yüklemeyi durdur. 0 = sınırsız.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Gönderim oranı limiti';
   @override
@@ -335945,13 +337950,6 @@ class _StringsTr extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (çevrilmiş)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Dizinleyici ekle';
@@ -336201,6 +338199,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -336212,8 +338212,6 @@ class _StringsTr extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -336235,8 +338233,6 @@ class _StringsTr extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -336534,6 +338530,27 @@ class _StringsTr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -336559,6 +338576,10 @@ class _StringsTr extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -336566,8 +338587,6 @@ class _StringsTr extends _StringsEn {
   String get web_video_no_tracks => 'Henüz altyazı yakalanmadı';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
@@ -336726,6 +338745,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -336750,10 +338772,9 @@ class _StringsVi extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -336772,6 +338793,8 @@ class _StringsVi extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -336805,8 +338828,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -336861,6 +338891,14 @@ class _StringsVi extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
@@ -337050,6 +339088,11 @@ class _StringsVi extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'Tải bằng AI · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => 'Thêm nhà cung cấp';
   @override
   String get ai_provider_allow_http => 'Cho phép HTTP thuần';
@@ -337109,6 +339152,21 @@ class _StringsVi extends _StringsEn {
       'Tìm thấy ${count} mô hình';
   @override
   String get ai_provider_name => 'Tên';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Giao thức';
   @override
@@ -338327,6 +340385,12 @@ class _StringsVi extends _StringsEn {
   String get anki_pending_mines_unreachable =>
       'Hiện không kết nối được Anki. Các thẻ còn lại vẫn ở trong hàng đợi.';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint =>
       'Sau khi tạo hoặc đổi tên bộ thẻ hay loại ghi chú trong Anki, nhấn vào đây để làm mới.';
   @override
@@ -338677,6 +340741,9 @@ class _StringsVi extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Hết thời gian nguồn âm thanh: "${host}" — máy chủ không phản hồi, thử lại sau hoặc thay đổi nguồn';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Đã cập nhật nguồn âm thanh';
   @override
   String get audio_source_url_invalid =>
@@ -338754,6 +340821,15 @@ class _StringsVi extends _StringsEn {
       'Không đủ dung lượng đĩa. Cần: ${size}';
   @override
   String get audiobook_import_success => 'Đã nhập sách nói';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Tải sách nói thất bại.';
   @override
@@ -346457,6 +348533,9 @@ class _StringsVi extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -347368,6 +349447,20 @@ class _StringsVi extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -348645,6 +350738,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Thư mục';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -348675,6 +350772,10 @@ class _StringsVi extends _StringsEn {
   String get media_server_sort_date_added => 'Ngày thêm';
   @override
   String get media_server_sort_name => 'Tên';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -350726,6 +352827,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Quyền truy cập mọi tệp';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Hướng dẫn bắt đầu';
   @override
   String get onboarding_review_anki_desc =>
@@ -351366,6 +353482,20 @@ class _StringsVi extends _StringsEn {
   String get profile_create => 'Tạo hồ sơ';
   @override
   String get profile_delete => 'Xóa';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Xuất';
   @override
@@ -352742,6 +354872,11 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Căn phụ đề trước đó về thời điểm hiện tại';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -352818,6 +354953,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Bật/tắt khóa đắm chìm';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Bật/tắt nút điều khiển cửa sổ thu nhỏ';
@@ -353995,6 +356133,9 @@ class _StringsVi extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -355069,6 +357210,11 @@ class _StringsVi extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -356587,15 +358733,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_progress_collections => 'Đang đồng bộ bộ sưu tập';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => 'Đang đồng bộ từ điển';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Đang đồng bộ âm thanh cục bộ';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => 'Đang chuẩn bị đồng bộ';
   @override
   String get sync_progress_reading => 'Đang đồng bộ dữ liệu đọc';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Đang đồng bộ video';
   @override
@@ -358262,6 +360414,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Đang tải phụ đề…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -358917,6 +361073,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'AI chọn';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => 'Phụ đề phụ';
   @override
   String get video_setting_auto_play_next => 'Tự phát tập tiếp theo';
@@ -359393,12 +361552,6 @@ class _StringsVi extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => 'Khóa API TMDB tùy chỉnh';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -359469,8 +361622,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Phiên';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Ngừng tải lên khi tỷ lệ tải lên/tải xuống đạt mức này. 0 = không giới hạn.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Giới hạn tỷ lệ seed';
   @override
@@ -360695,13 +362848,6 @@ class _StringsVi extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (đã dịch)';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => 'Thêm trình chỉ mục';
@@ -360951,6 +363097,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -360962,8 +363110,6 @@ class _StringsVi extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -360985,8 +363131,6 @@ class _StringsVi extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -361284,6 +363428,27 @@ class _StringsVi extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -361309,6 +363474,10 @@ class _StringsVi extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => 'Close';
   @override
   String get web_video_nav_forward => 'Forward';
@@ -361316,8 +363485,6 @@ class _StringsVi extends _StringsEn {
   String get web_video_no_tracks => 'Chưa bắt được phụ đề nào';
   @override
   String get web_video_page_show => 'Back to web page';
-  @override
-  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
@@ -361472,6 +363639,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_agent_ask_action => '问 AI';
   @override
+  String get ai_agent_attach_screen_image => '附上屏幕截图和文字';
+  @override
   String get ai_agent_attach_screen_text => '附上屏幕文字';
   @override
   String get ai_agent_choice_cancel => '都不是';
@@ -361496,9 +363665,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => '关于：${title}';
   @override
-  String get ai_agent_details => '详情';
+  String ai_agent_cost({required Object amount}) => '约 ${amount}';
   @override
-  String get ai_agent_empty_examples => '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
+  String get ai_agent_details => '详情';
   @override
   String get ai_agent_empty_title => '要我做什么？';
   @override
@@ -361515,6 +363684,8 @@ class _StringsZhCn extends _StringsEn {
   String get ai_agent_history_title => 'AI 操作记录';
   @override
   String get ai_agent_input_hint => '告诉 AI 要做什么…';
+  @override
+  String get ai_agent_message_image_attached => '附截图';
   @override
   String get ai_agent_new_session => '新对话';
   @override
@@ -361546,7 +363717,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => '不可撤销';
   @override
+  String get ai_agent_screen_image_chip => '屏幕截图';
+  @override
   String ai_agent_screen_text_chip({required Object n}) => '屏幕文字（${n} 字）';
+  @override
+  String get ai_agent_screen_text_edit_hint => '发送前可以改掉识别错的字；清空就不附文字';
+  @override
+  String get ai_agent_screen_text_edit_title => '修改屏幕文字';
   @override
   String get ai_agent_screen_text_empty => '屏幕上没有识别到文字';
   @override
@@ -361596,6 +363773,13 @@ class _StringsZhCn extends _StringsEn {
   String ai_agent_undo_failed({required Object reason}) => '撤销失败：${reason}';
   @override
   String get ai_agent_undone => '已撤销';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) => '输入 ${input} · 输出 ${output} · 缓存读取 ${cacheRead} · 缓存写入 ${cacheWrite}';
   @override
   String get ai_assist_empty => 'AI 没有给出可用结果，换个说法再试试。';
   @override
@@ -361763,6 +363947,11 @@ class _StringsZhCn extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'AI 下载 · ${domain}';
   @override
+  String get ai_provider_accepts_images => '模型支持图片输入';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      '视觉模型才开。开了之后 AI 助手附上屏幕时会连截图一起发给模型';
+  @override
   String get ai_provider_add => '添加提供商';
   @override
   String get ai_provider_allow_http => '允许明文 HTTP';
@@ -361819,6 +364008,21 @@ class _StringsZhCn extends _StringsEn {
       '找到 ${count} 个模型';
   @override
   String get ai_provider_name => '名称';
+  @override
+  String get ai_provider_price_cache_read => '缓存读取（每百万 token）';
+  @override
+  String get ai_provider_price_cache_write => '缓存写入（每百万 token）';
+  @override
+  String get ai_provider_price_currency => '币种（如 USD、CNY）';
+  @override
+  String get ai_provider_price_input => '输入（每百万 token）';
+  @override
+  String get ai_provider_price_output => '输出（每百万 token）';
+  @override
+  String get ai_provider_pricing => '价格';
+  @override
+  String get ai_provider_pricing_summary =>
+      '照着厂商价目表填上这个模型的单价，AI 助手就会显示每场对话花了多少钱。不填只显示 token 数；缓存单价不填按输入单价算。';
   @override
   String get ai_provider_protocol => '协议';
   @override
@@ -362934,6 +365138,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable => '现在连不上 Anki，剩下的卡片继续留在队列里';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      '连不上 Anki 时不报失败，而是把卡存进「待发卡片」稍后补发';
+  @override
+  String get anki_queue_undelivered_mines_title => '连不上 Anki 时暂存卡片';
+  @override
   String get anki_refresh_hint => '在 Anki 里新建或重命名牌组、笔记类型后，点此刷新。';
   @override
   String get anki_reposition_aggregate => '多本词典复合方式';
@@ -363257,6 +365466,9 @@ class _StringsZhCn extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       '音频源超时："${host}" — 服务器无响应，请稍后重试或更换音频源';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      '音频源「${host}」返回的既不是音频，也不是 Yomitan 音频源列表 JSON——请检查链接或服务类型';
+  @override
   String get audio_source_updated => '已更新音频来源';
   @override
   String get audio_source_url_invalid => '链接需为 http(s) 且含 term / reading 占位符';
@@ -363325,6 +365537,15 @@ class _StringsZhCn extends _StringsEn {
       '磁盘空间不足。所需空间：${size}';
   @override
   String get audiobook_import_success => '有声书导入成功';
+  @override
+  String get audiobook_jump_threshold => '返回原位置的跳转距离';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      '音频一次跳转至少这么远（拖进度、点句、跳章）才出现「返回原位置」胶囊';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} 分钟';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} 秒';
   @override
   String get audiobook_load_error => '加载有声书失败。';
   @override
@@ -370344,6 +372565,9 @@ class _StringsZhCn extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       '移除下载的副本？它会从本机书架移除，阅读进度保留在服务器上。';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      '移除下载的副本？这本书在本机的书签、自定义 CSS、有声书或字幕配对、标签与合集只存在本机，会一并删除；阅读进度保留在服务器上。';
+  @override
   String get kavita_book_remove_download_failed => '移除下载失败';
   @override
   String get kavita_book_remove_download_kept => '阅读进度没能同步到服务器，已保留为缓存副本';
@@ -371184,6 +373408,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       '我库里的例句 · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard => '进入查词页时自动聚焦搜索框';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      '打开查词页或清空查询后自动聚焦搜索框（手机上会弹出键盘）；关闭后点搜索框才开始输入';
+  @override
+  String get lookup_page_hide_keyboard => '收起键盘';
+  @override
+  String get lookup_page_pull_to_clear => '结果顶部下拉清空查询';
+  @override
+  String get lookup_page_pull_to_clear_hint => '结果滚到顶后继续下拉，会清空查询并回到搜索历史';
   @override
   String get lookup_popup_close_after_mining => '制卡后关闭查词弹窗';
   @override
@@ -372374,6 +374609,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_server_browse_by_title => '按作品浏览';
   @override
+  String get media_server_continue_menu_details => '打开详情';
+  @override
+  String get media_server_continue_menu_resume => '继续播放';
+  @override
   String get media_server_item_folder => '文件夹';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -372402,6 +374641,10 @@ class _StringsZhCn extends _StringsEn {
   String get media_server_sort_date_added => '添加时间';
   @override
   String get media_server_sort_name => '名称';
+  @override
+  String media_server_version_count({required Object n}) => '${n} 个版本';
+  @override
+  String get media_server_version_pick_title => '选择版本';
   @override
   String get media_server_versions => '版本';
   @override
@@ -374280,6 +376523,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => '所有文件访问';
   @override
+  String get onboarding_purpose_hint => '只用来预选下一步的功能，之后仍可逐项调整。';
+  @override
+  String get onboarding_purpose_learning_desc => '看书、看番时查词，制卡并复习。';
+  @override
+  String get onboarding_purpose_learning_title => '学外语';
+  @override
+  String get onboarding_purpose_media_desc => '隐藏词典、制卡和复习，之后可随时在设置里打开。';
+  @override
+  String get onboarding_purpose_media_title => '只看书、看番、听书';
+  @override
+  String get onboarding_purpose_title => '你打算用 Fushi 做什么？';
+  @override
   String get onboarding_reopen => '新手引导';
   @override
   String get onboarding_review_anki_desc =>
@@ -374868,6 +377123,18 @@ class _StringsZhCn extends _StringsEn {
   String get profile_create => '创建配置';
   @override
   String get profile_delete => '删除';
+  @override
+  String get profile_delete_failed => '删除配置没有完成';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      '配置已删除，复习数据已备份到 ${path}';
+  @override
+  String get profile_delete_srs_backup_failed => '复习数据备份失败，配置未删除。';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) => '它的复习数据也会一起删除：${cards} 张卡、${reviews} 条复习记录。删除前会先在本机自动备份。';
   @override
   String get profile_export => '导出';
   @override
@@ -376141,6 +378408,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕对齐到当前时间';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      '复制当前副字幕台词';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => '复制当前台词';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       '循环副字幕遮蔽';
   @override
@@ -376205,6 +378477,9 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_video_toggle_fullscreen => '切换全屏';
   @override
   String get shortcut_action_video_toggle_immersive_lock => '切换沉浸锁定';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      '循环当前句（开 / 关）';
   @override
   String get shortcut_action_video_toggle_mini_chrome => '切换小窗控件';
   @override
@@ -377298,6 +379573,9 @@ class _StringsZhCn extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       '笔记模板「${name}」与本机的不一致，已另存为一个新模板';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      '恢复之前删除的笔记模板「${name}」';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       '更新笔记模板：${n} 个';
   @override
@@ -378294,6 +380572,11 @@ class _StringsZhCn extends _StringsEn {
   String srs_status_review_in({required Object n}) => '复习中 · ${n}天后';
   @override
   String get srs_status_suspended => '已暂停';
+  @override
+  String get srs_sync_auto => '自动同步复习数据';
+  @override
+  String get srs_sync_auto_hint =>
+      '在每次常规同步之后、已配对设备有新的复习数据时、以及复习后不久，在后台同步复习数据。关掉后，复习数据只在牌组列表点「立即同步」或打开复习页时同步（每分钟最多一次）。书与视频进度的同步不受影响';
   @override
   String get srs_sync_awaiting_confirm => '在复习页确认后才会开始同步复习数据';
   @override
@@ -379672,15 +381955,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_progress_collections => '同步合集';
   @override
+  String get sync_progress_deletions => '同步删除记录';
+  @override
   String get sync_progress_dictionaries => '同步词典';
   @override
   String get sync_progress_fonts => '同步字体';
   @override
   String get sync_progress_local_audio => '同步本地音频';
   @override
+  String get sync_progress_pending_mines => '同步待发制卡';
+  @override
   String get sync_progress_preparing => '正在准备同步';
   @override
   String get sync_progress_reading => '同步阅读数据';
+  @override
+  String get sync_progress_statistics => '同步统计与收藏';
   @override
   String get sync_progress_videos => '同步视频';
   @override
@@ -381200,6 +383489,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_loading_subtitle => '正在下载字幕…';
   @override
+  String get video_loop_cue_badge_label => '循环当前句';
+  @override
+  String get video_loop_cue_badge_tooltip => '点击停止循环';
+  @override
   String get video_media_server_launch_unavailable =>
       '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
   @override
@@ -381770,6 +384063,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'AI 推荐';
   @override
+  String get video_secondary_subtitle_copy_empty => '当前没有可复制的副字幕';
+  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '自动连播下一集';
@@ -382203,11 +384498,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       '识别出的音乐库 OP / ED 一开始播放就跳到段尾';
   @override
-  String get video_setting_theme_song_now_playing => '显示主题曲曲名';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'OP / ED 期间在角落显示曲名，点击在音乐库打开';
-  @override
   String get video_setting_tmdb_key => '自定义 TMDB API Key';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -382272,8 +384562,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => '会话设置';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      '上传/下载比值达到此值后停止上传。0 = 不限。';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      '上传量/下载量达到此值即停止上传——按种子整个生命周期累计，含下载过程中的上传（下载照常继续）。0 = 不限。';
   @override
   String get video_setting_torrent_seed_ratio_limit => '做种分享率上限';
   @override
@@ -383373,13 +385663,6 @@ class _StringsZhCn extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang}（翻译）';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · 在音乐库打开';
-  @override
-  String get video_theme_song_skip_ending => '跳过片尾';
-  @override
-  String get video_theme_song_skip_intro => '跳过片头';
-  @override
   String get video_time_remaining_toggle => '切换已播 / 剩余时间';
   @override
   String get video_torznab_add => '添加索引器';
@@ -383609,6 +385892,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_error_title => '无法打开此网页';
   @override
+  String get web_browser_exit => '退出浏览器';
+  @override
   String get web_browser_find_close => '关闭查找';
   @override
   String get web_browser_find_hint => '在页面中查找';
@@ -383620,8 +385905,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_find_previous => '上一个';
   @override
   String get web_browser_forward => '前进';
-  @override
-  String get web_browser_furigana => '注音';
   @override
   String get web_browser_history_clear => '清除历史记录';
   @override
@@ -383642,8 +385925,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_image_open_new_tab => '在新标签页中打开图片';
   @override
   String get web_browser_image_save => '保存图片';
-  @override
-  String get web_browser_known_words => '生词高亮';
   @override
   String get web_browser_link_copy => '复制链接地址';
   @override
@@ -383919,6 +386200,25 @@ class _StringsZhCn extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条登录信息';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => '空闲时已自动制卡：成功 ${ok} 张，失败 ${failed} 张';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) => '你回来了，已暂停：成功 ${ok} 张，失败 ${failed} 张，队列还剩 ${count} 张';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) => '空闲自动制卡中 ${done}/${total} · 有任何操作即暂停';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      '无法静音录制卡片音频（需要 Windows 11，详见错误日志），本次运行不再空闲自动制卡';
+  @override
   String get web_video_mine_background => '正在后台制卡（直接从 YouTube 视频流截取）';
   @override
   String get web_video_mine_queue_empty => '制卡队列为空';
@@ -383943,6 +386243,10 @@ class _StringsZhCn extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '切到内置模式制作 ${count} 张排队卡片';
   @override
+  String get web_video_mode_page => '网页';
+  @override
+  String get web_video_mode_player => '播放器';
+  @override
   String get web_video_nav_close => '关闭';
   @override
   String get web_video_nav_forward => '前进';
@@ -383950,8 +386254,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_no_tracks => '尚未采集到字幕';
   @override
   String get web_video_page_show => '回到网页';
-  @override
-  String get web_video_player_open => '在播放器里看';
   @override
   String get web_video_player_unavailable => '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
   @override
@@ -384104,6 +386406,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -384128,10 +386433,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
-  String get ai_agent_details => 'Details';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -384150,6 +386454,8 @@ class _StringsZhHk extends _StringsEn {
   String get ai_agent_history_title => 'AI action log';
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_message_image_attached => 'With screenshot';
   @override
   String get ai_agent_new_session => 'New conversation';
   @override
@@ -384183,8 +386489,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -384239,6 +386552,14 @@ class _StringsZhHk extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty => 'AI 沒有給出可用結果，換個説法再試試。';
   @override
@@ -384412,6 +386733,11 @@ class _StringsZhHk extends _StringsEn {
   String ai_media_acquire_title({required Object domain}) =>
       'AI 下載 · ${domain}';
   @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
+  @override
   String get ai_provider_add => '新增提供商';
   @override
   String get ai_provider_allow_http => '允許明文 HTTP';
@@ -384469,6 +386795,21 @@ class _StringsZhHk extends _StringsEn {
       '找到 ${count} 個模型';
   @override
   String get ai_provider_name => '名稱';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => '協議';
   @override
@@ -385593,6 +387934,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_pending_mines_unreachable => '現在連不上 Anki，剩下的卡片繼續留在隊列裡';
   @override
+  String get anki_queue_undelivered_mines_hint =>
+      'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+  @override
+  String get anki_queue_undelivered_mines_title =>
+      'Hold cards when Anki is unreachable';
+  @override
   String get anki_refresh_hint => '在 Anki 中新建或重新命名牌組、筆記類型後，點此重新整理。';
   @override
   String get anki_reposition_aggregate => '多本詞典複合方式';
@@ -385921,6 +388268,9 @@ class _StringsZhHk extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       '音頻來源逾時："${host}" — 伺服器無回應，請稍後再試或更換來源';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => '已更新音頻來源';
   @override
   String get audio_source_url_invalid => '連結須為 http(s) 並含 term／reading 預留位置';
@@ -385991,6 +388341,15 @@ class _StringsZhHk extends _StringsEn {
       '磁碟空間不足。所需空間：${size}';
   @override
   String get audiobook_import_success => '有聲書匯入成功';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => '載入有聲書失敗。';
   @override
@@ -393202,6 +395561,9 @@ class _StringsZhHk extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -394056,6 +396418,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -395271,6 +397647,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => '資料夾';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -395299,6 +397679,10 @@ class _StringsZhHk extends _StringsEn {
   String get media_server_sort_date_added => '新增時間';
   @override
   String get media_server_sort_name => '名稱';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -397231,6 +399615,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => '所有檔案存取權';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => '新手引導';
   @override
   String get onboarding_review_anki_desc =>
@@ -397844,6 +400243,20 @@ class _StringsZhHk extends _StringsEn {
   String get profile_create => '建立設定檔';
   @override
   String get profile_delete => '刪除';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => '導出';
   @override
@@ -399138,6 +401551,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕對齊到當前時間';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -399204,6 +401622,9 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_video_toggle_fullscreen => '切換全螢幕';
   @override
   String get shortcut_action_video_toggle_immersive_lock => '切換沉浸鎖定';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome => '切換小窗控件';
   @override
@@ -400372,6 +402793,9 @@ class _StringsZhHk extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -401446,6 +403870,11 @@ class _StringsZhHk extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -402879,15 +405308,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_progress_collections => '同步合集';
   @override
+  String get sync_progress_deletions => 'Syncing deletions';
+  @override
   String get sync_progress_dictionaries => '正在同步詞典';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '正在同步本機音訊';
   @override
+  String get sync_progress_pending_mines => 'Syncing pending cards';
+  @override
   String get sync_progress_preparing => '正在準備同步';
   @override
   String get sync_progress_reading => '正在同步閱讀資料';
+  @override
+  String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => '同步影片';
   @override
@@ -404445,6 +406880,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_loading_subtitle => '正在下載字幕…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -405058,6 +407497,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_search_ai_recommended => 'AI 推薦';
   @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
+  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '自動連播下一集';
@@ -405498,12 +407940,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_theme_song_auto_skip_hint =>
       'When an OP or ED recognized from your music library starts, jump straight to its end';
   @override
-  String get video_setting_theme_song_now_playing =>
-      'Show the theme song title';
-  @override
-  String get video_setting_theme_song_now_playing_hint =>
-      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
-  @override
   String get video_setting_tmdb_key => '自定義 TMDB API Key';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -405568,8 +408004,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => '會話設定';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      '上傳/下載比值達到此值後停止上傳。0 = 不限。';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => '做種分享率上限';
   @override
@@ -406686,13 +409122,6 @@ class _StringsZhHk extends _StringsEn {
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang}（翻譯）';
   @override
-  String video_theme_song_now_playing({required Object title}) =>
-      '♪ ${title} · Open in music library';
-  @override
-  String get video_theme_song_skip_ending => 'Skip credits';
-  @override
-  String get video_theme_song_skip_intro => 'Skip intro';
-  @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
   String get video_torznab_add => '添加索引器';
@@ -406937,6 +409366,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -406948,8 +409379,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -406971,8 +409400,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -407266,6 +409693,27 @@ class _StringsZhHk extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       '已從瀏覽器匯入 ${count} 條登入資訊';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background => '正在背景製卡（直接從 YouTube 影片串流擷取）';
   @override
   String get web_video_mine_queue_empty => '佇列中沒有卡片';
@@ -407290,6 +409738,10 @@ class _StringsZhHk extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '切換到內建模式製作 ${count} 張排隊卡片';
   @override
+  String get web_video_mode_page => 'Web page';
+  @override
+  String get web_video_mode_player => 'Player';
+  @override
   String get web_video_nav_close => '關閉';
   @override
   String get web_video_nav_forward => '前進';
@@ -407297,8 +409749,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_video_no_tracks => '尚未擷取到字幕';
   @override
   String get web_video_page_show => '回到網頁';
-  @override
-  String get web_video_player_open => '在播放器裡看';
   @override
   String get web_video_player_unavailable => '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
   @override
@@ -407408,6 +409858,8 @@ extension on _StringsEn {
         return 'Add to collection';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -407432,10 +409884,10 @@ extension on _StringsEn {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -407452,6 +409904,8 @@ extension on _StringsEn {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -407480,8 +409934,14 @@ extension on _StringsEn {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -407530,6 +409990,14 @@ extension on _StringsEn {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI did not return a usable result. Try describing it differently.';
       case 'ai_assist_failed':
@@ -407683,6 +410151,10 @@ extension on _StringsEn {
         return 'Download started';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI download · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Add provider';
       case 'ai_provider_allow_http':
@@ -407737,6 +410209,20 @@ extension on _StringsEn {
         return ({required Object count}) => 'Found ${count} models';
       case 'ai_provider_name':
         return 'Name';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocol';
       case 'ai_provider_protocol_locked':
@@ -408756,6 +411242,10 @@ extension on _StringsEn {
         return 'Pending cards';
       case 'anki_pending_mines_unreachable':
         return 'Anki can\'t be reached right now. The remaining cards stay in the queue.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'After creating or renaming a deck or note type in Anki, tap here to refresh.';
       case 'anki_reposition_aggregate':
@@ -409042,6 +411532,9 @@ extension on _StringsEn {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Audio source timeout: "${host}" — server not responding, try again later or change source';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Audio source updated';
       case 'audio_source_url_invalid':
@@ -409107,6 +411600,14 @@ extension on _StringsEn {
             'Not enough disk space. Required: ${size}';
       case 'audiobook_import_success':
         return 'Audiobook imported';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Failed to load audiobook.';
       case 'audiobook_material_add_dir':
@@ -415622,6 +418123,8 @@ extension on _StringsEn {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -416388,6 +418891,16 @@ extension on _StringsEn {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -417511,6 +420024,10 @@ extension on _StringsEn {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Folder';
       case 'media_server_item_unplayed_episodes':
@@ -417539,6 +420056,10 @@ extension on _StringsEn {
         return 'Date added';
       case 'media_server_sort_name':
         return 'Name';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -419292,6 +421813,18 @@ extension on _StringsEn {
         return 'Scan local video, manga and book folders by their real paths.';
       case 'onboarding_permission_storage_label':
         return 'All files access';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Getting started guide';
       case 'onboarding_review_anki_desc':
@@ -419851,6 +422384,16 @@ extension on _StringsEn {
         return 'Create profile';
       case 'profile_delete':
         return 'Delete';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Export';
       case 'profile_export_failed':
@@ -421080,6 +423623,10 @@ extension on _StringsEn {
         return 'Align next subtitle to now';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Align previous subtitle to now';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle secondary subtitle obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -421144,6 +423691,8 @@ extension on _StringsEn {
         return 'Toggle fullscreen';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Toggle immersive lock';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
       case 'shortcut_action_video_toggle_mini_window':
@@ -422175,6 +424724,9 @@ extension on _StringsEn {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -423117,6 +425669,10 @@ extension on _StringsEn {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -424438,16 +426994,22 @@ extension on _StringsEn {
         return 'Importing books';
       case 'sync_progress_collections':
         return 'Syncing collections';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Syncing dictionaries';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Syncing local audio';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_reading':
         return 'Syncing reading data';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Syncing videos';
       case 'sync_role_locked_by_client':
@@ -425854,6 +428416,10 @@ extension on _StringsEn {
         return 'Preparing…';
       case 'video_loading_subtitle':
         return 'Downloading subtitles…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -426391,6 +428957,8 @@ extension on _StringsEn {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Secondary subtitle';
       case 'video_setting_auto_play_next':
@@ -426789,10 +429357,6 @@ extension on _StringsEn {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
@@ -426855,8 +429419,8 @@ extension on _StringsEn {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Session';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Seed ratio limit';
       case 'video_setting_torrent_seed_time_hint':
@@ -427854,13 +430418,6 @@ extension on _StringsEn {
         return 'This caption track has no text';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (translated)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -428080,6 +430637,8 @@ extension on _StringsEn {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -428092,8 +430651,6 @@ extension on _StringsEn {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -428114,8 +430671,6 @@ extension on _StringsEn {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -428382,6 +430937,21 @@ extension on _StringsEn {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -428402,6 +430972,10 @@ extension on _StringsEn {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Switch to built-in mode to create ${count} queued cards';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -428410,8 +430984,6 @@ extension on _StringsEn {
         return 'No subtitles captured yet';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
       case 'web_video_track_failed':
@@ -428520,6 +431092,8 @@ extension on _StringsAr {
         return 'إضافة إلى مجموعة';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -428544,10 +431118,10 @@ extension on _StringsAr {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -428564,6 +431138,8 @@ extension on _StringsAr {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -428592,8 +431168,14 @@ extension on _StringsAr {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -428642,6 +431224,14 @@ extension on _StringsAr {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
       case 'ai_assist_failed':
@@ -428796,6 +431386,10 @@ extension on _StringsAr {
       case 'ai_media_acquire_title':
         return ({required Object domain}) =>
             'تنزيل بالذكاء الاصطناعي · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'إضافة مزود';
       case 'ai_provider_allow_http':
@@ -428850,6 +431444,20 @@ extension on _StringsAr {
         return ({required Object count}) => 'تم العثور على ${count} نموذج';
       case 'ai_provider_name':
         return 'الاسم';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'البروتوكول';
       case 'ai_provider_protocol_locked':
@@ -429867,6 +432475,10 @@ extension on _StringsAr {
         return 'البطاقات المعلّقة';
       case 'anki_pending_mines_unreachable':
         return 'لا يمكن الوصول إلى Anki حاليًا. تبقى البطاقات المتبقية في قائمة الانتظار.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'بعد إنشاء أو إعادة تسمية مجموعة أو نوع ملاحظة في Anki، انقر هنا للتحديث.';
       case 'anki_reposition_aggregate':
@@ -430154,6 +432766,9 @@ extension on _StringsAr {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'انتهت مهلة مصدر الصوت: "${host}" — الخادم لا يستجيب، حاول لاحقاً أو غيّر المصدر';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'تم تحديث مصدر الصوت';
       case 'audio_source_url_invalid':
@@ -430219,6 +432834,14 @@ extension on _StringsAr {
             'مساحة القرص غير كافية. المطلوب: ${size}';
       case 'audiobook_import_success':
         return 'تم استيراد الكتاب المسموع';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'فشل تحميل الكتاب المسموع.';
       case 'audiobook_material_add_dir':
@@ -436730,6 +439353,8 @@ extension on _StringsAr {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -437495,6 +440120,16 @@ extension on _StringsAr {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -438618,6 +441253,10 @@ extension on _StringsAr {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'مجلد';
       case 'media_server_item_unplayed_episodes':
@@ -438646,6 +441285,10 @@ extension on _StringsAr {
         return 'تاريخ الإضافة';
       case 'media_server_sort_name':
         return 'الاسم';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -440400,6 +443043,18 @@ extension on _StringsAr {
         return 'يفحص مجلدات الفيديو والمانغا والكتب المحلية بمساراتها الحقيقية.';
       case 'onboarding_permission_storage_label':
         return 'الوصول إلى جميع الملفات';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'دليل البدء';
       case 'onboarding_review_anki_desc':
@@ -440959,6 +443614,16 @@ extension on _StringsAr {
         return 'إنشاء ملف شخصي';
       case 'profile_delete':
         return 'حذف';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'تصدير';
       case 'profile_export_failed':
@@ -442188,6 +444853,10 @@ extension on _StringsAr {
         return 'محاذاة الترجمة التالية إلى الآن';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'محاذاة الترجمة السابقة إلى الآن';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -442252,6 +444921,8 @@ extension on _StringsAr {
         return 'تبديل ملء الشاشة';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'تبديل قفل الانغماس';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'تبديل عناصر تحكم النافذة المصغّرة';
       case 'shortcut_action_video_toggle_mini_window':
@@ -443283,6 +445954,9 @@ extension on _StringsAr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -444225,6 +446899,10 @@ extension on _StringsAr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -445541,16 +448219,22 @@ extension on _StringsAr {
         return 'جارٍ استيراد الكتب';
       case 'sync_progress_collections':
         return 'جارٍ مزامنة المجموعات';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'مزامنة القواميس';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'مزامنة الصوت المحلي';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'جارٍ التحضير للمزامنة';
       case 'sync_progress_reading':
         return 'مزامنة بيانات القراءة';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'جارٍ مزامنة الفيديوهات';
       case 'sync_role_locked_by_client':
@@ -446959,6 +449643,10 @@ extension on _StringsAr {
         return 'جارٍ التحضير…';
       case 'video_loading_subtitle':
         return 'جارٍ تحميل الترجمات…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -447496,6 +450184,8 @@ extension on _StringsAr {
         return 'أُعيد ترتيب النتائج بواسطة الذكاء الاصطناعي';
       case 'video_search_ai_recommended':
         return 'اختيار الذكاء الاصطناعي';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'ترجمة ثانوية';
       case 'video_setting_auto_play_next':
@@ -447894,10 +450584,6 @@ extension on _StringsAr {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'مفتاح TMDB API مخصص';
       case 'video_setting_tmdb_key_hint':
@@ -447960,8 +450646,8 @@ extension on _StringsAr {
         return 'مكافحة الاستغلال';
       case 'video_setting_torrent_section_session':
         return 'الجلسة';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'إيقاف الرفع عندما تصل نسبة المرفوع/المحمّل إلى هذه القيمة. 0 = بلا حدود.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'حد نسبة البذر';
       case 'video_setting_torrent_seed_time_hint':
@@ -448960,13 +451646,6 @@ extension on _StringsAr {
         return 'مسار الترجمة هذا لا يحتوي على نص';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (مترجم)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -449186,6 +451865,8 @@ extension on _StringsAr {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -449198,8 +451879,6 @@ extension on _StringsAr {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -449220,8 +451899,6 @@ extension on _StringsAr {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -449488,6 +452165,21 @@ extension on _StringsAr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -449508,6 +452200,10 @@ extension on _StringsAr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -449516,8 +452212,6 @@ extension on _StringsAr {
         return 'لم يتم التقاط أي ترجمة بعد';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
       case 'web_video_track_failed':
@@ -449626,6 +452320,8 @@ extension on _StringsDe {
         return 'Zur Sammlung hinzufügen';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -449650,10 +452346,10 @@ extension on _StringsDe {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -449670,6 +452366,8 @@ extension on _StringsDe {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -449698,8 +452396,14 @@ extension on _StringsDe {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -449748,6 +452452,14 @@ extension on _StringsDe {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
       case 'ai_assist_failed':
@@ -449902,6 +452614,10 @@ extension on _StringsDe {
         return 'Download gestartet';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'KI-Download · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Anbieter hinzufügen';
       case 'ai_provider_allow_http':
@@ -449956,6 +452672,20 @@ extension on _StringsDe {
         return ({required Object count}) => '${count} Modelle gefunden';
       case 'ai_provider_name':
         return 'Name';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protokoll';
       case 'ai_provider_protocol_locked':
@@ -450982,6 +453712,10 @@ extension on _StringsDe {
         return 'Ausstehende Karten';
       case 'anki_pending_mines_unreachable':
         return 'Anki ist gerade nicht erreichbar. Die übrigen Karten bleiben in der Warteschlange.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Nach dem Erstellen oder Umbenennen eines Stapels oder Notiztyps in Anki hier tippen, um zu aktualisieren.';
       case 'anki_reposition_aggregate':
@@ -451275,6 +454009,9 @@ extension on _StringsDe {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Audioquellen-Timeout: "${host}" — Server antwortet nicht, versuchen Sie es später oder ändern Sie die Quelle';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Audioquelle aktualisiert';
       case 'audio_source_url_invalid':
@@ -451341,6 +454078,14 @@ extension on _StringsDe {
             'Nicht genügend Speicherplatz. Benötigt: ${size}';
       case 'audiobook_import_success':
         return 'Hörbuch importiert';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Hörbuch konnte nicht geladen werden.';
       case 'audiobook_material_add_dir':
@@ -457876,6 +460621,8 @@ extension on _StringsDe {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -458643,6 +461390,16 @@ extension on _StringsDe {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -459772,6 +462529,10 @@ extension on _StringsDe {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Ordner';
       case 'media_server_item_unplayed_episodes':
@@ -459800,6 +462561,10 @@ extension on _StringsDe {
         return 'Hinzugefügt am';
       case 'media_server_sort_name':
         return 'Name';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -461562,6 +464327,18 @@ extension on _StringsDe {
         return 'Durchsucht lokale Video-, Manga- und Buchordner über ihren echten Pfad.';
       case 'onboarding_permission_storage_label':
         return 'Zugriff auf alle Dateien';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Erste-Schritte-Anleitung';
       case 'onboarding_review_anki_desc':
@@ -462121,6 +464898,16 @@ extension on _StringsDe {
         return 'Profil erstellen';
       case 'profile_delete':
         return 'Löschen';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exportieren';
       case 'profile_export_failed':
@@ -463352,6 +466139,10 @@ extension on _StringsDe {
         return 'Nächsten Untertitel auf jetzt ausrichten';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Vorherigen Untertitel auf jetzt ausrichten';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -463416,6 +466207,8 @@ extension on _StringsDe {
         return 'Vollbild umschalten';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Immersive Sperre umschalten';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Steuerelemente des Mini-Fensters umschalten';
       case 'shortcut_action_video_toggle_mini_window':
@@ -464447,6 +467240,9 @@ extension on _StringsDe {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -465389,6 +468185,10 @@ extension on _StringsDe {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -466712,16 +469512,22 @@ extension on _StringsDe {
         return 'Bücher werden importiert';
       case 'sync_progress_collections':
         return 'Sammlungen werden synchronisiert';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Wörterbücher werden synchronisiert';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Lokales Audio wird synchronisiert';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Synchronisierung wird vorbereitet';
       case 'sync_progress_reading':
         return 'Lesedaten werden synchronisiert';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Videos synchronisieren';
       case 'sync_role_locked_by_client':
@@ -468137,6 +470943,10 @@ extension on _StringsDe {
         return 'Wird vorbereitet…';
       case 'video_loading_subtitle':
         return 'Untertitel werden heruntergeladen…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -468676,6 +471486,8 @@ extension on _StringsDe {
         return 'Ergebnisse von der KI neu geordnet';
       case 'video_search_ai_recommended':
         return 'KI-Empfehlung';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sekundärer Untertitel';
       case 'video_setting_auto_play_next':
@@ -469074,10 +471886,6 @@ extension on _StringsDe {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Eigener TMDB-API-Schlüssel';
       case 'video_setting_tmdb_key_hint':
@@ -469140,8 +471948,8 @@ extension on _StringsDe {
         return 'Anti-Leech';
       case 'video_setting_torrent_section_session':
         return 'Sitzung';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Upload stoppen, wenn Upload/Download diesen Wert erreicht. 0 = unbegrenzt.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Seed-Verhältnis-Limit';
       case 'video_setting_torrent_seed_time_hint':
@@ -470142,13 +472950,6 @@ extension on _StringsDe {
         return 'Diese Untertitelspur enthält keinen Text';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (übersetzt)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -470368,6 +473169,8 @@ extension on _StringsDe {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -470380,8 +473183,6 @@ extension on _StringsDe {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -470402,8 +473203,6 @@ extension on _StringsDe {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -470670,6 +473469,21 @@ extension on _StringsDe {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -470690,6 +473504,10 @@ extension on _StringsDe {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -470698,8 +473516,6 @@ extension on _StringsDe {
         return 'Noch keine Untertitel erfasst';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
       case 'web_video_track_failed':
@@ -470808,6 +473624,8 @@ extension on _StringsEs {
         return 'Añadir a colección';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -470832,10 +473650,10 @@ extension on _StringsEs {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -470852,6 +473670,8 @@ extension on _StringsEs {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -470880,8 +473700,14 @@ extension on _StringsEs {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -470930,6 +473756,14 @@ extension on _StringsEs {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
       case 'ai_assist_failed':
@@ -471084,6 +473918,10 @@ extension on _StringsEs {
         return 'Descarga iniciada';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Descarga con IA · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Añadir proveedor';
       case 'ai_provider_allow_http':
@@ -471138,6 +473976,20 @@ extension on _StringsEs {
         return ({required Object count}) => 'Se encontraron ${count} modelos';
       case 'ai_provider_name':
         return 'Nombre';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocolo';
       case 'ai_provider_protocol_locked':
@@ -472159,6 +475011,10 @@ extension on _StringsEs {
         return 'Tarjetas pendientes';
       case 'anki_pending_mines_unreachable':
         return 'No se puede acceder a Anki ahora mismo. Las tarjetas restantes permanecen en la cola.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Después de crear o renombrar un mazo o tipo de nota en Anki, toca aquí para actualizar.';
       case 'anki_reposition_aggregate':
@@ -472450,6 +475306,9 @@ extension on _StringsEs {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Tiempo de espera de fuente de audio: "${host}" — servidor no responde, inténtalo más tarde o cambia la fuente';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Fuente de audio actualizada';
       case 'audio_source_url_invalid':
@@ -472516,6 +475375,14 @@ extension on _StringsEs {
             'Espacio en disco insuficiente. Requerido: ${size}';
       case 'audiobook_import_success':
         return 'Audiolibro importado';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Error al cargar el audiolibro.';
       case 'audiobook_material_add_dir':
@@ -479046,6 +481913,8 @@ extension on _StringsEs {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -479812,6 +482681,16 @@ extension on _StringsEs {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -480940,6 +483819,10 @@ extension on _StringsEs {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Carpeta';
       case 'media_server_item_unplayed_episodes':
@@ -480968,6 +483851,10 @@ extension on _StringsEs {
         return 'Fecha de adición';
       case 'media_server_sort_name':
         return 'Nombre';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -482728,6 +485615,18 @@ extension on _StringsEs {
         return 'Analiza carpetas locales de vídeo, manga y libros por su ruta real.';
       case 'onboarding_permission_storage_label':
         return 'Acceso a todos los archivos';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Guía de primeros pasos';
       case 'onboarding_review_anki_desc':
@@ -483288,6 +486187,16 @@ extension on _StringsEs {
         return 'Crear perfil';
       case 'profile_delete':
         return 'Eliminar';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exportar';
       case 'profile_export_failed':
@@ -484520,6 +487429,10 @@ extension on _StringsEs {
         return 'Alinear siguiente subtítulo al ahora';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Alinear subtítulo anterior al ahora';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -484584,6 +487497,8 @@ extension on _StringsEs {
         return 'Alternar pantalla completa';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alternar bloqueo inmersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alternar controles de la ventana mini';
       case 'shortcut_action_video_toggle_mini_window':
@@ -485615,6 +488530,9 @@ extension on _StringsEs {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -486557,6 +489475,10 @@ extension on _StringsEs {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -487879,16 +490801,22 @@ extension on _StringsEs {
         return 'Importando libros';
       case 'sync_progress_collections':
         return 'Sincronizando colecciones';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando diccionarios';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Sincronizando audio local';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Preparando sincronización';
       case 'sync_progress_reading':
         return 'Sincronizando datos de lectura';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Sincronizando vídeos';
       case 'sync_role_locked_by_client':
@@ -489303,6 +492231,10 @@ extension on _StringsEs {
         return 'Preparando…';
       case 'video_loading_subtitle':
         return 'Descargando subtítulos…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -489841,6 +492773,8 @@ extension on _StringsEs {
         return 'Resultados reordenados por la IA';
       case 'video_search_ai_recommended':
         return 'Elección de la IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Subtítulo secundario';
       case 'video_setting_auto_play_next':
@@ -490239,10 +493173,6 @@ extension on _StringsEs {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Clave API de TMDB personalizada';
       case 'video_setting_tmdb_key_hint':
@@ -490305,8 +493235,8 @@ extension on _StringsEs {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sesión';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Dejar de subir cuando subido/descargado alcance esto. 0 = sin límite.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Límite de ratio de seeding';
       case 'video_setting_torrent_seed_time_hint':
@@ -491306,13 +494236,6 @@ extension on _StringsEs {
         return 'Esta pista de subtítulos no tiene texto';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (traducido)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -491532,6 +494455,8 @@ extension on _StringsEs {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -491544,8 +494469,6 @@ extension on _StringsEs {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -491566,8 +494489,6 @@ extension on _StringsEs {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -491834,6 +494755,21 @@ extension on _StringsEs {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -491854,6 +494790,10 @@ extension on _StringsEs {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Cambiar al modo integrado para crear ${count} tarjetas en cola';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -491862,8 +494802,6 @@ extension on _StringsEs {
         return 'Aún no se han capturado subtítulos';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
       case 'web_video_track_failed':
@@ -491972,6 +494910,8 @@ extension on _StringsFr {
         return 'Ajouter à la collection';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -491996,10 +494936,10 @@ extension on _StringsFr {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -492016,6 +494956,8 @@ extension on _StringsFr {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -492044,8 +494986,14 @@ extension on _StringsFr {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -492094,6 +495042,14 @@ extension on _StringsFr {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
       case 'ai_assist_failed':
@@ -492250,6 +495206,10 @@ extension on _StringsFr {
       case 'ai_media_acquire_title':
         return ({required Object domain}) =>
             'Téléchargement par IA · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Ajouter un fournisseur';
       case 'ai_provider_allow_http':
@@ -492304,6 +495264,20 @@ extension on _StringsFr {
         return ({required Object count}) => '${count} modèles trouvés';
       case 'ai_provider_name':
         return 'Nom';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocole';
       case 'ai_provider_protocol_locked':
@@ -493326,6 +496300,10 @@ extension on _StringsFr {
         return 'Cartes en attente';
       case 'anki_pending_mines_unreachable':
         return 'Anki est injoignable pour le moment. Les cartes restantes restent dans la file.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Après avoir créé ou renommé un paquet ou un type de note dans Anki, touchez ici pour actualiser.';
       case 'anki_reposition_aggregate':
@@ -493620,6 +496598,9 @@ extension on _StringsFr {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Délai d\'attente source audio : "${host}" — serveur ne répond pas, réessayez plus tard ou changez de source';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Source audio mise à jour';
       case 'audio_source_url_invalid':
@@ -493686,6 +496667,14 @@ extension on _StringsFr {
             'Espace disque insuffisant. Requis : ${size}';
       case 'audiobook_import_success':
         return 'Livre audio importé';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Échec du chargement du livre audio.';
       case 'audiobook_material_add_dir':
@@ -500225,6 +503214,8 @@ extension on _StringsFr {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -500991,6 +503982,16 @@ extension on _StringsFr {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -502118,6 +505119,10 @@ extension on _StringsFr {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Dossier';
       case 'media_server_item_unplayed_episodes':
@@ -502146,6 +505151,10 @@ extension on _StringsFr {
         return 'Date d\'ajout';
       case 'media_server_sort_name':
         return 'Nom';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -503908,6 +506917,18 @@ extension on _StringsFr {
         return 'Analyse les dossiers locaux de vidéos, mangas et livres par leur chemin réel.';
       case 'onboarding_permission_storage_label':
         return 'Accès à tous les fichiers';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Guide de démarrage';
       case 'onboarding_review_anki_desc':
@@ -504467,6 +507488,16 @@ extension on _StringsFr {
         return 'Créer un profil';
       case 'profile_delete':
         return 'Supprimer';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exporter';
       case 'profile_export_failed':
@@ -505699,6 +508730,10 @@ extension on _StringsFr {
         return 'Aligner le sous-titre suivant sur maintenant';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Aligner le sous-titre précédent sur maintenant';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -505763,6 +508798,8 @@ extension on _StringsFr {
         return 'Basculer en plein écran';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Basculer le verrouillage immersif';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Basculer les commandes de la mini-fenêtre';
       case 'shortcut_action_video_toggle_mini_window':
@@ -506794,6 +509831,9 @@ extension on _StringsFr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -507736,6 +510776,10 @@ extension on _StringsFr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -509057,16 +512101,22 @@ extension on _StringsFr {
         return 'Importation des livres';
       case 'sync_progress_collections':
         return 'Synchronisation des collections';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Synchronisation des dictionnaires';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Synchronisation de l\'audio local';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Préparation de la synchronisation';
       case 'sync_progress_reading':
         return 'Synchronisation des données de lecture';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Synchronisation des vidéos';
       case 'sync_role_locked_by_client':
@@ -510484,6 +513534,10 @@ extension on _StringsFr {
         return 'Préparation…';
       case 'video_loading_subtitle':
         return 'Téléchargement des sous-titres…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -511023,6 +514077,8 @@ extension on _StringsFr {
         return 'Résultats réordonnés par l\'IA';
       case 'video_search_ai_recommended':
         return 'Choix de l\'IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sous-titre secondaire';
       case 'video_setting_auto_play_next':
@@ -511421,10 +514477,6 @@ extension on _StringsFr {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Clé API TMDB personnalisée';
       case 'video_setting_tmdb_key_hint':
@@ -511487,8 +514539,8 @@ extension on _StringsFr {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Session';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Arrêter l\'envoi quand le ratio envoyé/téléchargé atteint cette valeur. 0 = illimité.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Limite de ratio de seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -512488,13 +515540,6 @@ extension on _StringsFr {
         return 'Cette piste de sous-titres n\'a pas de texte';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (traduit)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -512714,6 +515759,8 @@ extension on _StringsFr {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -512726,8 +515773,6 @@ extension on _StringsFr {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -512748,8 +515793,6 @@ extension on _StringsFr {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -513016,6 +516059,21 @@ extension on _StringsFr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -513036,6 +516094,10 @@ extension on _StringsFr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Passer en mode intégré pour créer ${count} cartes en attente';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -513044,8 +516106,6 @@ extension on _StringsFr {
         return 'Aucun sous-titre capturé pour l’instant';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
       case 'web_video_track_failed':
@@ -513154,6 +516214,8 @@ extension on _StringsId {
         return 'Tambah ke koleksi';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -513178,10 +516240,10 @@ extension on _StringsId {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -513198,6 +516260,8 @@ extension on _StringsId {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -513226,8 +516290,14 @@ extension on _StringsId {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -513276,6 +516346,14 @@ extension on _StringsId {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
       case 'ai_assist_failed':
@@ -513429,6 +516507,10 @@ extension on _StringsId {
         return 'Unduhan dimulai';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Unduhan AI · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Tambah penyedia';
       case 'ai_provider_allow_http':
@@ -513483,6 +516565,20 @@ extension on _StringsId {
         return ({required Object count}) => 'Ditemukan ${count} model';
       case 'ai_provider_name':
         return 'Nama';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protokol';
       case 'ai_provider_protocol_locked':
@@ -514504,6 +517600,10 @@ extension on _StringsId {
         return 'Kartu tertunda';
       case 'anki_pending_mines_unreachable':
         return 'Anki tidak dapat dijangkau saat ini. Kartu yang tersisa tetap di antrean.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Setelah membuat atau mengganti nama dek atau tipe catatan di Anki, ketuk di sini untuk menyegarkan.';
       case 'anki_reposition_aggregate':
@@ -514794,6 +517894,9 @@ extension on _StringsId {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Waktu habis sumber audio: "${host}" — server tidak merespons, coba lagi nanti atau ganti sumber';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Sumber audio diperbarui';
       case 'audio_source_url_invalid':
@@ -514859,6 +517962,14 @@ extension on _StringsId {
             'Ruang disk tidak cukup. Diperlukan: ${size}';
       case 'audiobook_import_success':
         return 'Buku audio diimpor';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Gagal memuat buku audio.';
       case 'audiobook_material_add_dir':
@@ -521379,6 +524490,8 @@ extension on _StringsId {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -522145,6 +525258,16 @@ extension on _StringsId {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -523269,6 +526392,10 @@ extension on _StringsId {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Folder';
       case 'media_server_item_unplayed_episodes':
@@ -523297,6 +526424,10 @@ extension on _StringsId {
         return 'Tanggal ditambahkan';
       case 'media_server_sort_name':
         return 'Nama';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -525050,6 +528181,18 @@ extension on _StringsId {
         return 'Memindai folder video, manga, dan buku lokal berdasarkan jalur aslinya.';
       case 'onboarding_permission_storage_label':
         return 'Akses semua file';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Panduan memulai';
       case 'onboarding_review_anki_desc':
@@ -525609,6 +528752,16 @@ extension on _StringsId {
         return 'Buat Profil';
       case 'profile_delete':
         return 'Hapus';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Ekspor';
       case 'profile_export_failed':
@@ -526838,6 +529991,10 @@ extension on _StringsId {
         return 'Selaraskan subtitle berikutnya ke sekarang';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Selaraskan subtitle sebelumnya ke sekarang';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -526902,6 +530059,8 @@ extension on _StringsId {
         return 'Alihkan Layar Penuh';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alihkan Kunci Imersif';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alihkan kontrol jendela mini';
       case 'shortcut_action_video_toggle_mini_window':
@@ -527933,6 +531092,9 @@ extension on _StringsId {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -528875,6 +532037,10 @@ extension on _StringsId {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -530196,16 +533362,22 @@ extension on _StringsId {
         return 'Mengimpor buku';
       case 'sync_progress_collections':
         return 'Menyinkronkan koleksi';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Menyinkronkan kamus';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Menyinkronkan audio lokal';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Menyiapkan sinkronisasi';
       case 'sync_progress_reading':
         return 'Menyinkronkan data baca';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Menyinkronkan video';
       case 'sync_role_locked_by_client':
@@ -531613,6 +534785,10 @@ extension on _StringsId {
         return 'Mempersiapkan…';
       case 'video_loading_subtitle':
         return 'Mengunduh subtitle…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -532150,6 +535326,8 @@ extension on _StringsId {
         return 'Hasil diurutkan ulang oleh AI';
       case 'video_search_ai_recommended':
         return 'Pilihan AI';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Subtitle sekunder';
       case 'video_setting_auto_play_next':
@@ -532548,10 +535726,6 @@ extension on _StringsId {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Kunci API TMDB kustom';
       case 'video_setting_tmdb_key_hint':
@@ -532614,8 +535788,8 @@ extension on _StringsId {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sesi';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Berhenti mengunggah saat rasio diunggah/diunduh mencapai ini. 0 = tidak terbatas.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Batas rasio seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -533614,13 +536788,6 @@ extension on _StringsId {
         return 'Trek teks ini tidak memiliki teks';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (diterjemahkan)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -533840,6 +537007,8 @@ extension on _StringsId {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -533852,8 +537021,6 @@ extension on _StringsId {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -533874,8 +537041,6 @@ extension on _StringsId {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -534142,6 +537307,21 @@ extension on _StringsId {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -534162,6 +537342,10 @@ extension on _StringsId {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -534170,8 +537354,6 @@ extension on _StringsId {
         return 'Belum ada subtitel yang ditangkap';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
       case 'web_video_track_failed':
@@ -534280,6 +537462,8 @@ extension on _StringsIt {
         return 'Aggiungi alla raccolta';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -534304,10 +537488,10 @@ extension on _StringsIt {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -534324,6 +537508,8 @@ extension on _StringsIt {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -534352,8 +537538,14 @@ extension on _StringsIt {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -534402,6 +537594,14 @@ extension on _StringsIt {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
       case 'ai_assist_failed':
@@ -534556,6 +537756,10 @@ extension on _StringsIt {
         return 'Download avviato';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Download con IA · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Aggiungi provider';
       case 'ai_provider_allow_http':
@@ -534610,6 +537814,20 @@ extension on _StringsIt {
         return ({required Object count}) => 'Trovati ${count} modelli';
       case 'ai_provider_name':
         return 'Nome';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocollo';
       case 'ai_provider_protocol_locked':
@@ -535632,6 +538850,10 @@ extension on _StringsIt {
         return 'Carte in sospeso';
       case 'anki_pending_mines_unreachable':
         return 'Anki non è raggiungibile al momento. Le carte rimanenti restano in coda.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Dopo aver creato o rinominato un mazzo o un tipo di nota in Anki, tocca qui per aggiornare.';
       case 'anki_reposition_aggregate':
@@ -535922,6 +539144,9 @@ extension on _StringsIt {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Timeout sorgente audio: "${host}" — server non risponde, riprova più tardi o cambia sorgente';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Sorgente audio aggiornata';
       case 'audio_source_url_invalid':
@@ -535988,6 +539213,14 @@ extension on _StringsIt {
             'Spazio su disco insufficiente. Richiesto: ${size}';
       case 'audiobook_import_success':
         return 'Audiolibro importato';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Impossibile caricare l\'audiolibro.';
       case 'audiobook_material_add_dir':
@@ -542517,6 +545750,8 @@ extension on _StringsIt {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -543283,6 +546518,16 @@ extension on _StringsIt {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -544409,6 +547654,10 @@ extension on _StringsIt {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Cartella';
       case 'media_server_item_unplayed_episodes':
@@ -544437,6 +547686,10 @@ extension on _StringsIt {
         return 'Data di aggiunta';
       case 'media_server_sort_name':
         return 'Nome';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -546196,6 +549449,18 @@ extension on _StringsIt {
         return 'Analizza le cartelle locali di video, manga e libri tramite il loro percorso reale.';
       case 'onboarding_permission_storage_label':
         return 'Accesso a tutti i file';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Guida per iniziare';
       case 'onboarding_review_anki_desc':
@@ -546755,6 +550020,16 @@ extension on _StringsIt {
         return 'Crea profilo';
       case 'profile_delete':
         return 'Elimina';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Esporta';
       case 'profile_export_failed':
@@ -547986,6 +551261,10 @@ extension on _StringsIt {
         return 'Allinea sottotitolo successivo al momento attuale';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Allinea sottotitolo precedente al momento attuale';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -548050,6 +551329,8 @@ extension on _StringsIt {
         return 'Attiva/disattiva schermo intero';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Attiva/disattiva blocco immersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Attiva/disattiva i controlli della mini finestra';
       case 'shortcut_action_video_toggle_mini_window':
@@ -549081,6 +552362,9 @@ extension on _StringsIt {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -550023,6 +553307,10 @@ extension on _StringsIt {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -551345,16 +554633,22 @@ extension on _StringsIt {
         return 'Importazione libri';
       case 'sync_progress_collections':
         return 'Sincronizzazione raccolte';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizzazione dizionari';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Sincronizzazione audio locale';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Preparazione sincronizzazione';
       case 'sync_progress_reading':
         return 'Sincronizzazione dati di lettura';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Sincronizzazione video';
       case 'sync_role_locked_by_client':
@@ -552773,6 +556067,10 @@ extension on _StringsIt {
         return 'Preparazione…';
       case 'video_loading_subtitle':
         return 'Download sottotitoli…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -553310,6 +556608,8 @@ extension on _StringsIt {
         return 'Risultati riordinati dall\'IA';
       case 'video_search_ai_recommended':
         return 'Scelta dell\'IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sottotitolo secondario';
       case 'video_setting_auto_play_next':
@@ -553708,10 +557008,6 @@ extension on _StringsIt {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Chiave API TMDB personalizzata';
       case 'video_setting_tmdb_key_hint':
@@ -553774,8 +557070,8 @@ extension on _StringsIt {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sessione';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Smetti di caricare quando il rapporto upload/download raggiunge questo valore. 0 = illimitato.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Limite rapporto seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -554776,13 +558072,6 @@ extension on _StringsIt {
         return 'Questa traccia di sottotitoli non ha testo';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (tradotto)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -555002,6 +558291,8 @@ extension on _StringsIt {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -555014,8 +558305,6 @@ extension on _StringsIt {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -555036,8 +558325,6 @@ extension on _StringsIt {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -555304,6 +558591,21 @@ extension on _StringsIt {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -555324,6 +558626,10 @@ extension on _StringsIt {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Passa alla modalità integrata per creare ${count} carte in coda';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -555332,8 +558638,6 @@ extension on _StringsIt {
         return 'Nessun sottotitolo acquisito ancora';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
       case 'web_video_track_failed':
@@ -555442,6 +558746,8 @@ extension on _StringsJa {
         return 'コレクションに追加';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -555466,10 +558772,10 @@ extension on _StringsJa {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -555486,6 +558792,8 @@ extension on _StringsJa {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -555514,8 +558822,14 @@ extension on _StringsJa {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -555564,6 +558878,14 @@ extension on _StringsJa {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
       case 'ai_assist_failed':
@@ -555716,6 +559038,10 @@ extension on _StringsJa {
         return 'ダウンロードを開始しました';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AIダウンロード · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'プロバイダーを追加';
       case 'ai_provider_allow_http':
@@ -555770,6 +559096,20 @@ extension on _StringsJa {
         return ({required Object count}) => '${count} 個のモデルが見つかりました';
       case 'ai_provider_name':
         return '名前';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'プロトコル';
       case 'ai_provider_protocol_locked':
@@ -556783,6 +560123,10 @@ extension on _StringsJa {
         return '保留カード';
       case 'anki_pending_mines_unreachable':
         return '現在 Anki に接続できません。残りのカードはキューに残ります。';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Anki でデッキやノートタイプを作成・名前変更したら、ここをタップして更新してください。';
       case 'anki_reposition_aggregate':
@@ -557068,6 +560412,9 @@ extension on _StringsJa {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             '音声ソースタイムアウト："${host}" — サーバーが応答しません。後で再試行するかソースを変更してください';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return '音声ソースを更新しました';
       case 'audio_source_url_invalid':
@@ -557132,6 +560479,14 @@ extension on _StringsJa {
         return ({required Object size}) => 'ディスク容量が不足しています。必要容量：${size}';
       case 'audiobook_import_success':
         return 'オーディオブックをインポートしました';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'オーディオブックの読み込みに失敗しました。';
       case 'audiobook_material_add_dir':
@@ -563623,6 +566978,8 @@ extension on _StringsJa {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -564385,6 +567742,16 @@ extension on _StringsJa {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -565507,6 +568874,10 @@ extension on _StringsJa {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'フォルダー';
       case 'media_server_item_unplayed_episodes':
@@ -565535,6 +568906,10 @@ extension on _StringsJa {
         return '追加日';
       case 'media_server_sort_name':
         return '名前';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -567282,6 +570657,18 @@ extension on _StringsJa {
         return 'ローカルの動画・漫画・本のフォルダを実際のパスでスキャンします。';
       case 'onboarding_permission_storage_label':
         return 'すべてのファイルへのアクセス';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'はじめにガイド';
       case 'onboarding_review_anki_desc':
@@ -567841,6 +571228,16 @@ extension on _StringsJa {
         return 'プロファイルを作成';
       case 'profile_delete':
         return 'プロファイルを削除';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'エクスポート';
       case 'profile_export_failed':
@@ -569068,6 +572465,10 @@ extension on _StringsJa {
         return '次の字幕を現在位置に合わせる';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '前の字幕を現在位置に合わせる';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -569132,6 +572533,8 @@ extension on _StringsJa {
         return '全画面の切り替え';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'イマーシブロックの切り替え';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'ミニウィンドウのコントロールを切り替え';
       case 'shortcut_action_video_toggle_mini_window':
@@ -570163,6 +573566,9 @@ extension on _StringsJa {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -571105,6 +574511,10 @@ extension on _StringsJa {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -572416,16 +575826,22 @@ extension on _StringsJa {
         return '書籍をインポート中';
       case 'sync_progress_collections':
         return 'コレクションを同期中';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '辞書を同期中';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'ローカル音声を同期中';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return '同期を準備中';
       case 'sync_progress_reading':
         return '読書データを同期中';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return '動画を同期中';
       case 'sync_role_locked_by_client':
@@ -573821,6 +577237,10 @@ extension on _StringsJa {
         return '準備中…';
       case 'video_loading_subtitle':
         return '字幕をダウンロード中…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -574352,6 +577772,8 @@ extension on _StringsJa {
         return 'AIが結果を並べ替えました';
       case 'video_search_ai_recommended':
         return 'AIのおすすめ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -574750,10 +578172,6 @@ extension on _StringsJa {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'カスタムTMDB APIキー';
       case 'video_setting_tmdb_key_hint':
@@ -574816,8 +578234,8 @@ extension on _StringsJa {
         return 'アンチリーチ';
       case 'video_setting_torrent_section_session':
         return 'セッション';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'アップロード/ダウンロード比がこの値に達したら停止します。0 = 無制限。';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'シード比率制限';
       case 'video_setting_torrent_seed_time_hint':
@@ -575806,13 +579224,6 @@ extension on _StringsJa {
         return 'このキャプショントラックにはテキストがありません';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang}（翻訳）';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -576032,6 +579443,8 @@ extension on _StringsJa {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -576044,8 +579457,6 @@ extension on _StringsJa {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -576066,8 +579477,6 @@ extension on _StringsJa {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -576334,6 +579743,21 @@ extension on _StringsJa {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -576352,6 +579776,10 @@ extension on _StringsJa {
         return ({required Object count}) => 'カード作成のキューに追加しました（残り ${count} 件）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -576360,8 +579788,6 @@ extension on _StringsJa {
         return '字幕はまだ取得されていません';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
       case 'web_video_track_failed':
@@ -576469,6 +579895,8 @@ extension on _StringsKo {
         return '컬렉션에 추가';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -576493,10 +579921,10 @@ extension on _StringsKo {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -576513,6 +579941,8 @@ extension on _StringsKo {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -576541,8 +579971,14 @@ extension on _StringsKo {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -576591,6 +580027,14 @@ extension on _StringsKo {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
       case 'ai_assist_failed':
@@ -576743,6 +580187,10 @@ extension on _StringsKo {
         return '다운로드를 시작했습니다';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI 다운로드 · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return '제공자 추가';
       case 'ai_provider_allow_http':
@@ -576797,6 +580245,20 @@ extension on _StringsKo {
         return ({required Object count}) => '모델 ${count}개를 찾았습니다';
       case 'ai_provider_name':
         return '이름';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return '프로토콜';
       case 'ai_provider_protocol_locked':
@@ -577809,6 +581271,10 @@ extension on _StringsKo {
         return '보류 카드';
       case 'anki_pending_mines_unreachable':
         return '지금은 Anki에 연결할 수 없습니다. 남은 카드는 대기열에 유지됩니다.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Anki에서 덱이나 노트 유형을 만들거나 이름을 바꾼 뒤 여기를 눌러 새로고침하세요.';
       case 'anki_reposition_aggregate':
@@ -578094,6 +581560,9 @@ extension on _StringsKo {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             '오디오 소스 시간 초과: "${host}" — 서버가 응답하지 않습니다. 나중에 다시 시도하거나 소스를 변경하세요';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return '오디오 소스 업데이트됨';
       case 'audio_source_url_invalid':
@@ -578158,6 +581627,14 @@ extension on _StringsKo {
         return ({required Object size}) => '디스크 공간이 부족합니다. 필요 용량: ${size}';
       case 'audiobook_import_success':
         return '오디오북 가져오기 완료';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return '오디오북을 불러오지 못했습니다.';
       case 'audiobook_material_add_dir':
@@ -584654,6 +588131,8 @@ extension on _StringsKo {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -585416,6 +588895,16 @@ extension on _StringsKo {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -586537,6 +590026,10 @@ extension on _StringsKo {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return '폴더';
       case 'media_server_item_unplayed_episodes':
@@ -586565,6 +590058,10 @@ extension on _StringsKo {
         return '추가한 날짜';
       case 'media_server_sort_name':
         return '이름';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -588312,6 +591809,18 @@ extension on _StringsKo {
         return '로컬 동영상·만화·책 폴더를 실제 경로로 검색합니다.';
       case 'onboarding_permission_storage_label':
         return '모든 파일 액세스';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return '시작 가이드';
       case 'onboarding_review_anki_desc':
@@ -588871,6 +592380,16 @@ extension on _StringsKo {
         return '프로필 생성';
       case 'profile_delete':
         return '삭제';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return '내보내기';
       case 'profile_export_failed':
@@ -590099,6 +593618,10 @@ extension on _StringsKo {
         return '다음 자막을 현재 시점에 맞추기';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '이전 자막을 현재 시점에 맞추기';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -590163,6 +593686,8 @@ extension on _StringsKo {
         return '전체 화면 전환';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '몰입 잠금 전환';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '미니 창 컨트롤 전환';
       case 'shortcut_action_video_toggle_mini_window':
@@ -591194,6 +594719,9 @@ extension on _StringsKo {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -592136,6 +595664,10 @@ extension on _StringsKo {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -593448,16 +596980,22 @@ extension on _StringsKo {
         return '책 가져오는 중';
       case 'sync_progress_collections':
         return '컬렉션 동기화 중';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '사전 동기화 중';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return '로컬 오디오 동기화 중';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return '동기화 준비 중';
       case 'sync_progress_reading':
         return '독서 데이터 동기화 중';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return '동영상 동기화 중';
       case 'sync_role_locked_by_client':
@@ -594856,6 +598394,10 @@ extension on _StringsKo {
         return '준비 중…';
       case 'video_loading_subtitle':
         return '자막 다운로드 중…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -595389,6 +598931,8 @@ extension on _StringsKo {
         return 'AI가 결과 순서를 재정렬했습니다';
       case 'video_search_ai_recommended':
         return 'AI 추천';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '보조 자막';
       case 'video_setting_auto_play_next':
@@ -595787,10 +599331,6 @@ extension on _StringsKo {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return '사용자 지정 TMDB API 키';
       case 'video_setting_tmdb_key_hint':
@@ -595853,8 +599393,8 @@ extension on _StringsKo {
         return '안티리치';
       case 'video_setting_torrent_section_session':
         return '세션';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return '업로드/다운로드 비율이 이 값에 도달하면 업로드를 중지합니다. 0 = 무제한.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return '시드 비율 제한';
       case 'video_setting_torrent_seed_time_hint':
@@ -596849,13 +600389,6 @@ extension on _StringsKo {
         return '이 자막 트랙에 텍스트가 없습니다';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (번역됨)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -597075,6 +600608,8 @@ extension on _StringsKo {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -597087,8 +600622,6 @@ extension on _StringsKo {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -597109,8 +600642,6 @@ extension on _StringsKo {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -597377,6 +600908,21 @@ extension on _StringsKo {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -597396,6 +600942,10 @@ extension on _StringsKo {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -597404,8 +600954,6 @@ extension on _StringsKo {
         return '아직 수집된 자막이 없습니다';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
       case 'web_video_track_failed':
@@ -597512,6 +601060,8 @@ extension on _StringsNl {
         return 'Aan collectie toevoegen';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -597536,10 +601086,10 @@ extension on _StringsNl {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -597556,6 +601106,8 @@ extension on _StringsNl {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -597584,8 +601136,14 @@ extension on _StringsNl {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -597634,6 +601192,14 @@ extension on _StringsNl {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
       case 'ai_assist_failed':
@@ -597787,6 +601353,10 @@ extension on _StringsNl {
         return 'Download gestart';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI-download · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Provider toevoegen';
       case 'ai_provider_allow_http':
@@ -597841,6 +601411,20 @@ extension on _StringsNl {
         return ({required Object count}) => '${count} modellen gevonden';
       case 'ai_provider_name':
         return 'Naam';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocol';
       case 'ai_provider_protocol_locked':
@@ -598865,6 +602449,10 @@ extension on _StringsNl {
         return 'Openstaande kaarten';
       case 'anki_pending_mines_unreachable':
         return 'Anki is nu niet bereikbaar. De resterende kaarten blijven in de wachtrij.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Tik hier om te vernieuwen nadat je in Anki een deck of notitietype hebt gemaakt of hernoemd.';
       case 'anki_reposition_aggregate':
@@ -599155,6 +602743,9 @@ extension on _StringsNl {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Audiobron time-out: "${host}" — server reageert niet, probeer later opnieuw of wijzig de bron';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Audiobron bijgewerkt';
       case 'audio_source_url_invalid':
@@ -599220,6 +602811,14 @@ extension on _StringsNl {
             'Onvoldoende schijfruimte. Vereist: ${size}';
       case 'audiobook_import_success':
         return 'Audioboek geïmporteerd';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Kan audioboek niet laden.';
       case 'audiobook_material_add_dir':
@@ -605747,6 +609346,8 @@ extension on _StringsNl {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -606514,6 +610115,16 @@ extension on _StringsNl {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -607643,6 +611254,10 @@ extension on _StringsNl {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Map';
       case 'media_server_item_unplayed_episodes':
@@ -607671,6 +611286,10 @@ extension on _StringsNl {
         return 'Datum toegevoegd';
       case 'media_server_sort_name':
         return 'Naam';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -609430,6 +613049,18 @@ extension on _StringsNl {
         return 'Scant lokale video-, manga- en boekmappen via hun echte pad.';
       case 'onboarding_permission_storage_label':
         return 'Toegang tot alle bestanden';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Aan-de-slaggids';
       case 'onboarding_review_anki_desc':
@@ -609989,6 +613620,16 @@ extension on _StringsNl {
         return 'Profiel aanmaken';
       case 'profile_delete':
         return 'Verwijderen';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exporteren';
       case 'profile_export_failed':
@@ -611220,6 +614861,10 @@ extension on _StringsNl {
         return 'Volgende ondertitel uitlijnen op nu';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Vorige ondertitel uitlijnen op nu';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -611284,6 +614929,8 @@ extension on _StringsNl {
         return 'Volledig scherm in-/uitschakelen';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Immersieve vergrendeling in-/uitschakelen';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Bediening van minivenster in-/uitschakelen';
       case 'shortcut_action_video_toggle_mini_window':
@@ -612315,6 +615962,9 @@ extension on _StringsNl {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -613257,6 +616907,10 @@ extension on _StringsNl {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -614578,16 +618232,22 @@ extension on _StringsNl {
         return 'Boeken importeren';
       case 'sync_progress_collections':
         return 'Collecties synchroniseren';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Woordenboeken synchroniseren';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Lokale audio synchroniseren';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Synchronisatie voorbereiden';
       case 'sync_progress_reading':
         return 'Leesgegevens synchroniseren';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Video\'s synchroniseren';
       case 'sync_role_locked_by_client':
@@ -615998,6 +619658,10 @@ extension on _StringsNl {
         return 'Voorbereiden…';
       case 'video_loading_subtitle':
         return 'Ondertitels downloaden…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -616537,6 +620201,8 @@ extension on _StringsNl {
         return 'Resultaten herordend door AI';
       case 'video_search_ai_recommended':
         return 'AI-keuze';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Secundaire ondertitel';
       case 'video_setting_auto_play_next':
@@ -616935,10 +620601,6 @@ extension on _StringsNl {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Aangepaste TMDB API-sleutel';
       case 'video_setting_tmdb_key_hint':
@@ -617001,8 +620663,8 @@ extension on _StringsNl {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sessie';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Stop met uploaden wanneer geüpload/gedownload dit bereikt. 0 = onbeperkt.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Seedratiolimiet';
       case 'video_setting_torrent_seed_time_hint':
@@ -618003,13 +621665,6 @@ extension on _StringsNl {
         return 'Deze ondertiteltrack bevat geen tekst';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (vertaald)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -618229,6 +621884,8 @@ extension on _StringsNl {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -618241,8 +621898,6 @@ extension on _StringsNl {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -618263,8 +621918,6 @@ extension on _StringsNl {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -618531,6 +622184,21 @@ extension on _StringsNl {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -618551,6 +622219,10 @@ extension on _StringsNl {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -618559,8 +622231,6 @@ extension on _StringsNl {
         return 'Nog geen ondertitels vastgelegd';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
       case 'web_video_track_failed':
@@ -618669,6 +622339,8 @@ extension on _StringsPtBr {
         return 'Adicionar à coleção';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -618693,10 +622365,10 @@ extension on _StringsPtBr {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -618713,6 +622385,8 @@ extension on _StringsPtBr {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -618741,8 +622415,14 @@ extension on _StringsPtBr {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -618791,6 +622471,14 @@ extension on _StringsPtBr {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
       case 'ai_assist_failed':
@@ -618945,6 +622633,10 @@ extension on _StringsPtBr {
         return 'Download iniciado';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Download com IA · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Adicionar provedor';
       case 'ai_provider_allow_http':
@@ -618999,6 +622691,20 @@ extension on _StringsPtBr {
         return ({required Object count}) => '${count} modelos encontrados';
       case 'ai_provider_name':
         return 'Nome';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocolo';
       case 'ai_provider_protocol_locked':
@@ -620021,6 +623727,10 @@ extension on _StringsPtBr {
         return 'Cartões pendentes';
       case 'anki_pending_mines_unreachable':
         return 'Não foi possível acessar o Anki agora. Os cartões restantes permanecem na fila.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Depois de criar ou renomear um baralho ou tipo de nota no Anki, toque aqui para atualizar.';
       case 'anki_reposition_aggregate':
@@ -620312,6 +624022,9 @@ extension on _StringsPtBr {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Tempo limite da fonte de áudio: "${host}" — servidor não responde, tente novamente mais tarde ou mude a fonte';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Fonte de áudio atualizada';
       case 'audio_source_url_invalid':
@@ -620377,6 +624090,14 @@ extension on _StringsPtBr {
             'Espaço em disco insuficiente. Necessário: ${size}';
       case 'audiobook_import_success':
         return 'Audiolivro importado';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Falha ao carregar o audiolivro.';
       case 'audiobook_material_add_dir':
@@ -626902,6 +630623,8 @@ extension on _StringsPtBr {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -627668,6 +631391,16 @@ extension on _StringsPtBr {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -628795,6 +632528,10 @@ extension on _StringsPtBr {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Pasta';
       case 'media_server_item_unplayed_episodes':
@@ -628823,6 +632560,10 @@ extension on _StringsPtBr {
         return 'Data de adição';
       case 'media_server_sort_name':
         return 'Nome';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -630582,6 +634323,18 @@ extension on _StringsPtBr {
         return 'Verifica pastas locais de vídeo, mangá e livros pelo caminho real.';
       case 'onboarding_permission_storage_label':
         return 'Acesso a todos os arquivos';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Guia de primeiros passos';
       case 'onboarding_review_anki_desc':
@@ -631141,6 +634894,16 @@ extension on _StringsPtBr {
         return 'Criar Perfil';
       case 'profile_delete':
         return 'Excluir';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exportar';
       case 'profile_export_failed':
@@ -632372,6 +636135,10 @@ extension on _StringsPtBr {
         return 'Alinhar próxima legenda ao momento atual';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Alinhar legenda anterior ao momento atual';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -632436,6 +636203,8 @@ extension on _StringsPtBr {
         return 'Alternar tela cheia';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alternar bloqueio imersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alternar controles da minijanela';
       case 'shortcut_action_video_toggle_mini_window':
@@ -633467,6 +637236,9 @@ extension on _StringsPtBr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -634409,6 +638181,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -635729,16 +639505,22 @@ extension on _StringsPtBr {
         return 'Importando livros';
       case 'sync_progress_collections':
         return 'Sincronizando coleções';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando dicionários';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Sincronizando áudio local';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Preparando sincronização';
       case 'sync_progress_reading':
         return 'Sincronizando dados de leitura';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Sincronizando vídeos';
       case 'sync_role_locked_by_client':
@@ -637149,6 +640931,10 @@ extension on _StringsPtBr {
         return 'Preparando…';
       case 'video_loading_subtitle':
         return 'Baixando legendas…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -637687,6 +641473,8 @@ extension on _StringsPtBr {
         return 'Resultados reordenados pela IA';
       case 'video_search_ai_recommended':
         return 'Escolha da IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Legenda secundária';
       case 'video_setting_auto_play_next':
@@ -638085,10 +641873,6 @@ extension on _StringsPtBr {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Chave de API TMDB personalizada';
       case 'video_setting_tmdb_key_hint':
@@ -638151,8 +641935,8 @@ extension on _StringsPtBr {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sessão';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Parar upload quando upload/download atingir isso. 0 = ilimitado.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Limite de ratio de seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -639152,13 +642936,6 @@ extension on _StringsPtBr {
         return 'Esta faixa de legendas não tem texto';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (traduzida)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -639378,6 +643155,8 @@ extension on _StringsPtBr {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -639390,8 +643169,6 @@ extension on _StringsPtBr {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -639412,8 +643189,6 @@ extension on _StringsPtBr {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -639680,6 +643455,21 @@ extension on _StringsPtBr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -639700,6 +643490,10 @@ extension on _StringsPtBr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Mudar para o modo integrado para criar ${count} cartões na fila';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -639708,8 +643502,6 @@ extension on _StringsPtBr {
         return 'Nenhuma legenda capturada ainda';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
       case 'web_video_track_failed':
@@ -639818,6 +643610,8 @@ extension on _StringsRu {
         return 'Добавить в коллекцию';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -639842,10 +643636,10 @@ extension on _StringsRu {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -639862,6 +643656,8 @@ extension on _StringsRu {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -639890,8 +643686,14 @@ extension on _StringsRu {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -639940,6 +643742,14 @@ extension on _StringsRu {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
       case 'ai_assist_failed':
@@ -640092,6 +643902,10 @@ extension on _StringsRu {
         return 'Загрузка начата';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'ИИ-загрузка · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Добавить провайдера';
       case 'ai_provider_allow_http':
@@ -640146,6 +643960,20 @@ extension on _StringsRu {
         return ({required Object count}) => 'Найдено моделей: ${count}';
       case 'ai_provider_name':
         return 'Название';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Протокол';
       case 'ai_provider_protocol_locked':
@@ -641170,6 +644998,10 @@ extension on _StringsRu {
         return 'Ожидающие карточки';
       case 'anki_pending_mines_unreachable':
         return 'Сейчас не удаётся связаться с Anki. Оставшиеся карточки остаются в очереди.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'После создания или переименования колоды либо типа заметки в Anki нажмите здесь, чтобы обновить.';
       case 'anki_reposition_aggregate':
@@ -641462,6 +645294,9 @@ extension on _StringsRu {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Тайм-аут источника аудио: "${host}" — сервер не отвечает, попробуйте позже или смените источник';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Источник аудио обновлён';
       case 'audio_source_url_invalid':
@@ -641528,6 +645363,14 @@ extension on _StringsRu {
             'Недостаточно места на диске. Требуется: ${size}';
       case 'audiobook_import_success':
         return 'Аудиокнига импортирована';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Не удалось загрузить аудиокнигу.';
       case 'audiobook_material_add_dir':
@@ -648058,6 +651901,8 @@ extension on _StringsRu {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -648824,6 +652669,16 @@ extension on _StringsRu {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -649951,6 +653806,10 @@ extension on _StringsRu {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Папка';
       case 'media_server_item_unplayed_episodes':
@@ -649979,6 +653838,10 @@ extension on _StringsRu {
         return 'Дата добавления';
       case 'media_server_sort_name':
         return 'Название';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -651738,6 +655601,18 @@ extension on _StringsRu {
         return 'Сканирование локальных папок с видео, мангой и книгами по реальному пути.';
       case 'onboarding_permission_storage_label':
         return 'Доступ ко всем файлам';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Руководство по началу работы';
       case 'onboarding_review_anki_desc':
@@ -652297,6 +656172,16 @@ extension on _StringsRu {
         return 'Создать профиль';
       case 'profile_delete':
         return 'Удалить';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Экспорт';
       case 'profile_export_failed':
@@ -653528,6 +657413,10 @@ extension on _StringsRu {
         return 'Совместить следующий субтитр с текущим моментом';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Совместить предыдущий субтитр с текущим моментом';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -653592,6 +657481,8 @@ extension on _StringsRu {
         return 'Полноэкранный режим';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Иммерсивная блокировка';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Переключить элементы управления мини-окна';
       case 'shortcut_action_video_toggle_mini_window':
@@ -654623,6 +658514,9 @@ extension on _StringsRu {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -655565,6 +659459,10 @@ extension on _StringsRu {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -656886,16 +660784,22 @@ extension on _StringsRu {
         return 'Импорт книг';
       case 'sync_progress_collections':
         return 'Синхронизация коллекций';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Синхронизация словарей';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Синхронизация локального аудио';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Подготовка синхронизации';
       case 'sync_progress_reading':
         return 'Синхронизация данных чтения';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Синхронизация видео';
       case 'sync_role_locked_by_client':
@@ -658305,6 +662209,10 @@ extension on _StringsRu {
         return 'Подготовка…';
       case 'video_loading_subtitle':
         return 'Загрузка субтитров…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -658842,6 +662750,8 @@ extension on _StringsRu {
         return 'Результаты переупорядочены ИИ';
       case 'video_search_ai_recommended':
         return 'Выбор ИИ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Вторичные субтитры';
       case 'video_setting_auto_play_next':
@@ -659240,10 +663150,6 @@ extension on _StringsRu {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Пользовательский ключ API TMDB';
       case 'video_setting_tmdb_key_hint':
@@ -659306,8 +663212,8 @@ extension on _StringsRu {
         return 'Анти-лич';
       case 'video_setting_torrent_section_session':
         return 'Сессия';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Прекратить раздачу, когда соотношение отдано/загружено достигнет этого значения. 0 = без ограничений.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Лимит рейтинга раздачи';
       case 'video_setting_torrent_seed_time_hint':
@@ -660306,13 +664212,6 @@ extension on _StringsRu {
         return 'В этой дорожке субтитров нет текста';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (перевод)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -660532,6 +664431,8 @@ extension on _StringsRu {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -660544,8 +664445,6 @@ extension on _StringsRu {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -660566,8 +664465,6 @@ extension on _StringsRu {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -660834,6 +664731,21 @@ extension on _StringsRu {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -660854,6 +664766,10 @@ extension on _StringsRu {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -660862,8 +664778,6 @@ extension on _StringsRu {
         return 'Субтитры пока не получены';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
       case 'web_video_track_failed':
@@ -660972,6 +664886,8 @@ extension on _StringsTh {
         return 'เพิ่มในคอลเลกชัน';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -660996,10 +664912,10 @@ extension on _StringsTh {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -661016,6 +664932,8 @@ extension on _StringsTh {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -661044,8 +664962,14 @@ extension on _StringsTh {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -661094,6 +665018,14 @@ extension on _StringsTh {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
       case 'ai_assist_failed':
@@ -661247,6 +665179,10 @@ extension on _StringsTh {
         return 'เริ่มดาวน์โหลดแล้ว';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'ดาวน์โหลดด้วย AI · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'เพิ่มผู้ให้บริการ';
       case 'ai_provider_allow_http':
@@ -661301,6 +665237,20 @@ extension on _StringsTh {
         return ({required Object count}) => 'พบ ${count} โมเดล';
       case 'ai_provider_name':
         return 'ชื่อ';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'โปรโตคอล';
       case 'ai_provider_protocol_locked':
@@ -662318,6 +666268,10 @@ extension on _StringsTh {
         return 'การ์ดที่รอส่ง';
       case 'anki_pending_mines_unreachable':
         return 'เชื่อมต่อ Anki ไม่ได้ในขณะนี้ การ์ดที่เหลือยังอยู่ในคิว';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'หลังสร้างหรือเปลี่ยนชื่อเด็คหรือชนิดโน้ตใน Anki แล้ว ให้แตะที่นี่เพื่อรีเฟรช';
       case 'anki_reposition_aggregate':
@@ -662605,6 +666559,9 @@ extension on _StringsTh {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'แหล่งเสียงหมดเวลา: "${host}" — เซิร์ฟเวอร์ไม่ตอบสนอง ลองอีกครั้งภายหลังหรือเปลี่ยนแหล่ง';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'อัปเดตแหล่งเสียงแล้ว';
       case 'audio_source_url_invalid':
@@ -662670,6 +666627,14 @@ extension on _StringsTh {
             'พื้นที่ดิสก์ไม่เพียงพอ ต้องการ: ${size}';
       case 'audiobook_import_success':
         return 'นำเข้าหนังสือเสียงสำเร็จ';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'โหลดหนังสือเสียงล้มเหลว';
       case 'audiobook_material_add_dir':
@@ -669186,6 +673151,8 @@ extension on _StringsTh {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -669953,6 +673920,16 @@ extension on _StringsTh {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -671076,6 +675053,10 @@ extension on _StringsTh {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'โฟลเดอร์';
       case 'media_server_item_unplayed_episodes':
@@ -671104,6 +675085,10 @@ extension on _StringsTh {
         return 'วันที่เพิ่ม';
       case 'media_server_sort_name':
         return 'ชื่อ';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -672856,6 +676841,18 @@ extension on _StringsTh {
         return 'สแกนโฟลเดอร์วิดีโอ มังงะ และหนังสือในเครื่องตามพาธจริง';
       case 'onboarding_permission_storage_label':
         return 'สิทธิ์เข้าถึงไฟล์ทั้งหมด';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'คู่มือเริ่มต้นใช้งาน';
       case 'onboarding_review_anki_desc':
@@ -673415,6 +677412,16 @@ extension on _StringsTh {
         return 'สร้างโปรไฟล์';
       case 'profile_delete':
         return 'ลบ';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'ส่งออก';
       case 'profile_export_failed':
@@ -674644,6 +678651,10 @@ extension on _StringsTh {
         return 'จัดคำบรรยายถัดไปให้ตรงกับตอนนี้';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'จัดคำบรรยายก่อนหน้าให้ตรงกับตอนนี้';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -674708,6 +678719,8 @@ extension on _StringsTh {
         return 'สลับเต็มจอ';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'สลับล็อกโหมดดื่มด่ำ';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'สลับตัวควบคุมหน้าต่างเล็ก';
       case 'shortcut_action_video_toggle_mini_window':
@@ -675739,6 +679752,9 @@ extension on _StringsTh {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -676681,6 +680697,10 @@ extension on _StringsTh {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -678000,16 +682020,22 @@ extension on _StringsTh {
         return 'กำลังนำเข้าหนังสือ';
       case 'sync_progress_collections':
         return 'กำลังซิงค์คอลเลกชัน';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'กำลังซิงค์พจนานุกรม';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'กำลังซิงค์เสียงในเครื่อง';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'กำลังเตรียมซิงค์';
       case 'sync_progress_reading':
         return 'กำลังซิงค์ข้อมูลการอ่าน';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'กำลังซิงค์วิดีโอ';
       case 'sync_role_locked_by_client':
@@ -679418,6 +683444,10 @@ extension on _StringsTh {
         return 'กำลังเตรียม…';
       case 'video_loading_subtitle':
         return 'กำลังดาวน์โหลดคำบรรยาย…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -679953,6 +683983,8 @@ extension on _StringsTh {
         return 'AI เรียงผลลัพธ์ใหม่แล้ว';
       case 'video_search_ai_recommended':
         return 'AI แนะนำ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'คำบรรยายรอง';
       case 'video_setting_auto_play_next':
@@ -680351,10 +684383,6 @@ extension on _StringsTh {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'คีย์ API TMDB แบบกำหนดเอง';
       case 'video_setting_tmdb_key_hint':
@@ -680417,8 +684445,8 @@ extension on _StringsTh {
         return 'ป้องกัน Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'เซสชัน';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'หยุดอัปโหลดเมื่ออัตราส่วนอัปโหลด/ดาวน์โหลดถึงค่านี้ 0 = ไม่จำกัด';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'จำกัดอัตราส่วนซีด';
       case 'video_setting_torrent_seed_time_hint':
@@ -681416,13 +685444,6 @@ extension on _StringsTh {
         return 'แทร็กคำบรรยายนี้ไม่มีข้อความ';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (แปลแล้ว)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -681642,6 +685663,8 @@ extension on _StringsTh {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -681654,8 +685677,6 @@ extension on _StringsTh {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -681676,8 +685697,6 @@ extension on _StringsTh {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -681944,6 +685963,21 @@ extension on _StringsTh {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -681964,6 +685998,10 @@ extension on _StringsTh {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -681972,8 +686010,6 @@ extension on _StringsTh {
         return 'ยังไม่ได้เก็บคำบรรยาย';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
       case 'web_video_track_failed':
@@ -682082,6 +686118,8 @@ extension on _StringsTr {
         return 'Koleksiyona ekle';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -682106,10 +686144,10 @@ extension on _StringsTr {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -682126,6 +686164,8 @@ extension on _StringsTr {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -682154,8 +686194,14 @@ extension on _StringsTr {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -682204,6 +686250,14 @@ extension on _StringsTr {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
       case 'ai_assist_failed':
@@ -682358,6 +686412,10 @@ extension on _StringsTr {
       case 'ai_media_acquire_title':
         return ({required Object domain}) =>
             'Yapay zeka ile indirme · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Sağlayıcı ekle';
       case 'ai_provider_allow_http':
@@ -682412,6 +686470,20 @@ extension on _StringsTr {
         return ({required Object count}) => '${count} model bulundu';
       case 'ai_provider_name':
         return 'Ad';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protokol';
       case 'ai_provider_protocol_locked':
@@ -683433,6 +687505,10 @@ extension on _StringsTr {
         return 'Bekleyen kartlar';
       case 'anki_pending_mines_unreachable':
         return 'Anki\'ye şu anda ulaşılamıyor. Kalan kartlar kuyrukta kalır.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Anki\'de bir deste ya da not türü oluşturduktan veya yeniden adlandırdıktan sonra yenilemek için buraya dokunun.';
       case 'anki_reposition_aggregate':
@@ -683724,6 +687800,9 @@ extension on _StringsTr {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Ses kaynağı zaman aşımı: "${host}" — sunucu yanıt vermiyor, daha sonra tekrar deneyin veya kaynağı değiştirin';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Ses kaynağı güncellendi';
       case 'audio_source_url_invalid':
@@ -683789,6 +687868,14 @@ extension on _StringsTr {
             'Yeterli disk alanı yok. Gerekli: ${size}';
       case 'audiobook_import_success':
         return 'Sesli kitap içe aktarıldı';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Sesli kitap yüklenemedi.';
       case 'audiobook_material_add_dir':
@@ -690315,6 +694402,8 @@ extension on _StringsTr {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -691082,6 +695171,16 @@ extension on _StringsTr {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -692207,6 +696306,10 @@ extension on _StringsTr {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Klasör';
       case 'media_server_item_unplayed_episodes':
@@ -692235,6 +696338,10 @@ extension on _StringsTr {
         return 'Eklenme tarihi';
       case 'media_server_sort_name':
         return 'Ad';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -693990,6 +698097,18 @@ extension on _StringsTr {
         return 'Yerel video, manga ve kitap klasörlerini gerçek yollarıyla tarar.';
       case 'onboarding_permission_storage_label':
         return 'Tüm dosyalara erişim';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Başlangıç rehberi';
       case 'onboarding_review_anki_desc':
@@ -694549,6 +698668,16 @@ extension on _StringsTr {
         return 'Profil Oluştur';
       case 'profile_delete':
         return 'Sil';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Dışa aktar';
       case 'profile_export_failed':
@@ -695778,6 +699907,10 @@ extension on _StringsTr {
         return 'Sonraki altyazıyı şimdiye hizala';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Önceki altyazıyı şimdiye hizala';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -695842,6 +699975,8 @@ extension on _StringsTr {
         return 'Tam Ekranı Aç/Kapat';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Sürükleyici Kilidi Aç/Kapat';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Mini pencere denetimlerini aç/kapat';
       case 'shortcut_action_video_toggle_mini_window':
@@ -696873,6 +701008,9 @@ extension on _StringsTr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -697815,6 +701953,10 @@ extension on _StringsTr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -699134,16 +703276,22 @@ extension on _StringsTr {
         return 'Kitaplar içe aktarılıyor';
       case 'sync_progress_collections':
         return 'Koleksiyonlar senkronize ediliyor';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sözlükler eşitleniyor';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Yerel ses eşitleniyor';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Senkronizasyon hazırlanıyor';
       case 'sync_progress_reading':
         return 'Okuma verileri eşitleniyor';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Videolar senkronize ediliyor';
       case 'sync_role_locked_by_client':
@@ -700555,6 +704703,10 @@ extension on _StringsTr {
         return 'Hazırlanıyor…';
       case 'video_loading_subtitle':
         return 'Altyazılar indiriliyor…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -701093,6 +705245,8 @@ extension on _StringsTr {
         return 'Sonuçlar yapay zeka tarafından yeniden sıralandı';
       case 'video_search_ai_recommended':
         return 'Yapay zeka seçimi';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'İkincil altyazı';
       case 'video_setting_auto_play_next':
@@ -701491,10 +705645,6 @@ extension on _StringsTr {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Özel TMDB API anahtarı';
       case 'video_setting_tmdb_key_hint':
@@ -701557,8 +705707,8 @@ extension on _StringsTr {
         return 'Sülük önleme';
       case 'video_setting_torrent_section_session':
         return 'Oturum';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Yüklenen/indirilen bu orana ulaşınca yüklemeyi durdur. 0 = sınırsız.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Gönderim oranı limiti';
       case 'video_setting_torrent_seed_time_hint':
@@ -702557,13 +706707,6 @@ extension on _StringsTr {
         return 'Bu altyazı parçasında metin yok';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (çevrilmiş)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -702783,6 +706926,8 @@ extension on _StringsTr {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -702795,8 +706940,6 @@ extension on _StringsTr {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -702817,8 +706960,6 @@ extension on _StringsTr {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -703085,6 +707226,21 @@ extension on _StringsTr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -703105,6 +707261,10 @@ extension on _StringsTr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -703113,8 +707273,6 @@ extension on _StringsTr {
         return 'Henüz altyazı yakalanmadı';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
       case 'web_video_track_failed':
@@ -703223,6 +707381,8 @@ extension on _StringsVi {
         return 'Thêm vào bộ sưu tập';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -703247,10 +707407,10 @@ extension on _StringsVi {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -703267,6 +707427,8 @@ extension on _StringsVi {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -703295,8 +707457,14 @@ extension on _StringsVi {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -703345,6 +707513,14 @@ extension on _StringsVi {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
       case 'ai_assist_failed':
@@ -703497,6 +707673,10 @@ extension on _StringsVi {
         return 'Đã bắt đầu tải';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Tải bằng AI · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Thêm nhà cung cấp';
       case 'ai_provider_allow_http':
@@ -703551,6 +707731,20 @@ extension on _StringsVi {
         return ({required Object count}) => 'Tìm thấy ${count} mô hình';
       case 'ai_provider_name':
         return 'Tên';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Giao thức';
       case 'ai_provider_protocol_locked':
@@ -704572,6 +708766,10 @@ extension on _StringsVi {
         return 'Thẻ chờ';
       case 'anki_pending_mines_unreachable':
         return 'Hiện không kết nối được Anki. Các thẻ còn lại vẫn ở trong hàng đợi.';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return 'Sau khi tạo hoặc đổi tên bộ thẻ hay loại ghi chú trong Anki, nhấn vào đây để làm mới.';
       case 'anki_reposition_aggregate':
@@ -704861,6 +709059,9 @@ extension on _StringsVi {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Hết thời gian nguồn âm thanh: "${host}" — máy chủ không phản hồi, thử lại sau hoặc thay đổi nguồn';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Đã cập nhật nguồn âm thanh';
       case 'audio_source_url_invalid':
@@ -704926,6 +709127,14 @@ extension on _StringsVi {
             'Không đủ dung lượng đĩa. Cần: ${size}';
       case 'audiobook_import_success':
         return 'Đã nhập sách nói';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Tải sách nói thất bại.';
       case 'audiobook_material_add_dir':
@@ -711447,6 +715656,8 @@ extension on _StringsVi {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -712213,6 +716424,16 @@ extension on _StringsVi {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -713336,6 +717557,10 @@ extension on _StringsVi {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Thư mục';
       case 'media_server_item_unplayed_episodes':
@@ -713364,6 +717589,10 @@ extension on _StringsVi {
         return 'Ngày thêm';
       case 'media_server_sort_name':
         return 'Tên';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -715117,6 +719346,18 @@ extension on _StringsVi {
         return 'Quét các thư mục video, manga và sách trên máy theo đường dẫn thật.';
       case 'onboarding_permission_storage_label':
         return 'Quyền truy cập mọi tệp';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Hướng dẫn bắt đầu';
       case 'onboarding_review_anki_desc':
@@ -715676,6 +719917,16 @@ extension on _StringsVi {
         return 'Tạo hồ sơ';
       case 'profile_delete':
         return 'Xóa';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Xuất';
       case 'profile_export_failed':
@@ -716907,6 +721158,10 @@ extension on _StringsVi {
         return 'Căn phụ đề tiếp theo về thời điểm hiện tại';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Căn phụ đề trước đó về thời điểm hiện tại';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -716971,6 +721226,8 @@ extension on _StringsVi {
         return 'Bật/tắt toàn màn hình';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Bật/tắt khóa đắm chìm';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Bật/tắt nút điều khiển cửa sổ thu nhỏ';
       case 'shortcut_action_video_toggle_mini_window':
@@ -718002,6 +722259,9 @@ extension on _StringsVi {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -718944,6 +723204,10 @@ extension on _StringsVi {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -720264,16 +724528,22 @@ extension on _StringsVi {
         return 'Đang nhập sách';
       case 'sync_progress_collections':
         return 'Đang đồng bộ bộ sưu tập';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Đang đồng bộ từ điển';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return 'Đang đồng bộ âm thanh cục bộ';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return 'Đang chuẩn bị đồng bộ';
       case 'sync_progress_reading':
         return 'Đang đồng bộ dữ liệu đọc';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return 'Đang đồng bộ video';
       case 'sync_role_locked_by_client':
@@ -721683,6 +725953,10 @@ extension on _StringsVi {
         return 'Đang chuẩn bị…';
       case 'video_loading_subtitle':
         return 'Đang tải phụ đề…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -722219,6 +726493,8 @@ extension on _StringsVi {
         return 'Kết quả đã được AI sắp xếp lại';
       case 'video_search_ai_recommended':
         return 'AI chọn';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Phụ đề phụ';
       case 'video_setting_auto_play_next':
@@ -722617,10 +726893,6 @@ extension on _StringsVi {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Khóa API TMDB tùy chỉnh';
       case 'video_setting_tmdb_key_hint':
@@ -722683,8 +726955,8 @@ extension on _StringsVi {
         return 'Chống leech';
       case 'video_setting_torrent_section_session':
         return 'Phiên';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Ngừng tải lên khi tỷ lệ tải lên/tải xuống đạt mức này. 0 = không giới hạn.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Giới hạn tỷ lệ seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -723681,13 +727953,6 @@ extension on _StringsVi {
         return 'Bản phụ đề này không có nội dung';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (đã dịch)';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -723907,6 +728172,8 @@ extension on _StringsVi {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -723919,8 +728186,6 @@ extension on _StringsVi {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -723941,8 +728206,6 @@ extension on _StringsVi {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -724209,6 +728472,21 @@ extension on _StringsVi {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -724229,6 +728507,10 @@ extension on _StringsVi {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return 'Close';
       case 'web_video_nav_forward':
@@ -724237,8 +728519,6 @@ extension on _StringsVi {
         return 'Chưa bắt được phụ đề nào';
       case 'web_video_page_show':
         return 'Back to web page';
-      case 'web_video_player_open':
-        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
       case 'web_video_track_failed':
@@ -724346,6 +728626,8 @@ extension on _StringsZhCn {
         return '加入合集';
       case 'ai_agent_ask_action':
         return '问 AI';
+      case 'ai_agent_attach_screen_image':
+        return '附上屏幕截图和文字';
       case 'ai_agent_attach_screen_text':
         return '附上屏幕文字';
       case 'ai_agent_choice_cancel':
@@ -724370,10 +728652,10 @@ extension on _StringsZhCn {
         return '执行后可以撤销。';
       case 'ai_agent_context_chip':
         return ({required Object title}) => '关于：${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '约 ${amount}';
       case 'ai_agent_details':
         return '详情';
-      case 'ai_agent_empty_examples':
-        return '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
       case 'ai_agent_empty_title':
         return '要我做什么？';
       case 'ai_agent_expand':
@@ -724390,6 +728672,8 @@ extension on _StringsZhCn {
         return 'AI 操作记录';
       case 'ai_agent_input_hint':
         return '告诉 AI 要做什么…';
+      case 'ai_agent_message_image_attached':
+        return '附截图';
       case 'ai_agent_new_session':
         return '新对话';
       case 'ai_agent_no_provider':
@@ -724416,8 +728700,14 @@ extension on _StringsZhCn {
             '${device} 不支持 AI 助手，请更新那台设备上的 Fushi。';
       case 'ai_agent_risk_irreversible':
         return '不可撤销';
+      case 'ai_agent_screen_image_chip':
+        return '屏幕截图';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => '屏幕文字（${n} 字）';
+      case 'ai_agent_screen_text_edit_hint':
+        return '发送前可以改掉识别错的字；清空就不附文字';
+      case 'ai_agent_screen_text_edit_title':
+        return '修改屏幕文字';
       case 'ai_agent_screen_text_empty':
         return '屏幕上没有识别到文字';
       case 'ai_agent_screen_text_failed':
@@ -724466,6 +728756,14 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '撤销失败：${reason}';
       case 'ai_agent_undone':
         return '已撤销';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            '输入 ${input} · 输出 ${output} · 缓存读取 ${cacheRead} · 缓存写入 ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI 没有给出可用结果，换个说法再试试。';
       case 'ai_assist_failed':
@@ -724618,6 +728916,10 @@ extension on _StringsZhCn {
         return '已开始下载';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI 下载 · ${domain}';
+      case 'ai_provider_accepts_images':
+        return '模型支持图片输入';
+      case 'ai_provider_accepts_images_summary':
+        return '视觉模型才开。开了之后 AI 助手附上屏幕时会连截图一起发给模型';
       case 'ai_provider_add':
         return '添加提供商';
       case 'ai_provider_allow_http':
@@ -724672,6 +728974,20 @@ extension on _StringsZhCn {
         return ({required Object count}) => '找到 ${count} 个模型';
       case 'ai_provider_name':
         return '名称';
+      case 'ai_provider_price_cache_read':
+        return '缓存读取（每百万 token）';
+      case 'ai_provider_price_cache_write':
+        return '缓存写入（每百万 token）';
+      case 'ai_provider_price_currency':
+        return '币种（如 USD、CNY）';
+      case 'ai_provider_price_input':
+        return '输入（每百万 token）';
+      case 'ai_provider_price_output':
+        return '输出（每百万 token）';
+      case 'ai_provider_pricing':
+        return '价格';
+      case 'ai_provider_pricing_summary':
+        return '照着厂商价目表填上这个模型的单价，AI 助手就会显示每场对话花了多少钱。不填只显示 token 数；缓存单价不填按输入单价算。';
       case 'ai_provider_protocol':
         return '协议';
       case 'ai_provider_protocol_locked':
@@ -725667,6 +729983,10 @@ extension on _StringsZhCn {
         return '待发卡片';
       case 'anki_pending_mines_unreachable':
         return '现在连不上 Anki，剩下的卡片继续留在队列里';
+      case 'anki_queue_undelivered_mines_hint':
+        return '连不上 Anki 时不报失败，而是把卡存进「待发卡片」稍后补发';
+      case 'anki_queue_undelivered_mines_title':
+        return '连不上 Anki 时暂存卡片';
       case 'anki_refresh_hint':
         return '在 Anki 里新建或重命名牌组、笔记类型后，点此刷新。';
       case 'anki_reposition_aggregate':
@@ -725951,6 +730271,9 @@ extension on _StringsZhCn {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             '音频源超时："${host}" — 服务器无响应，请稍后重试或更换音频源';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            '音频源「${host}」返回的既不是音频，也不是 Yomitan 音频源列表 JSON——请检查链接或服务类型';
       case 'audio_source_updated':
         return '已更新音频来源';
       case 'audio_source_url_invalid':
@@ -726015,6 +730338,14 @@ extension on _StringsZhCn {
         return ({required Object size}) => '磁盘空间不足。所需空间：${size}';
       case 'audiobook_import_success':
         return '有声书导入成功';
+      case 'audiobook_jump_threshold':
+        return '返回原位置的跳转距离';
+      case 'audiobook_jump_threshold_hint':
+        return '音频一次跳转至少这么远（拖进度、点句、跳章）才出现「返回原位置」胶囊';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} 分钟';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} 秒';
       case 'audiobook_load_error':
         return '加载有声书失败。';
       case 'audiobook_material_add_dir':
@@ -732456,6 +736787,8 @@ extension on _StringsZhCn {
         return '移除下载';
       case 'kavita_book_remove_download_confirm':
         return '移除下载的副本？它会从本机书架移除，阅读进度保留在服务器上。';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return '移除下载的副本？这本书在本机的书签、自定义 CSS、有声书或字幕配对、标签与合集只存在本机，会一并删除；阅读进度保留在服务器上。';
       case 'kavita_book_remove_download_failed':
         return '移除下载失败';
       case 'kavita_book_remove_download_kept':
@@ -733216,6 +737549,16 @@ extension on _StringsZhCn {
             '已索引 ${documents} 份来源、${sentences} 句';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => '我库里的例句 · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return '进入查词页时自动聚焦搜索框';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return '打开查词页或清空查询后自动聚焦搜索框（手机上会弹出键盘）；关闭后点搜索框才开始输入';
+      case 'lookup_page_hide_keyboard':
+        return '收起键盘';
+      case 'lookup_page_pull_to_clear':
+        return '结果顶部下拉清空查询';
+      case 'lookup_page_pull_to_clear_hint':
+        return '结果滚到顶后继续下拉，会清空查询并回到搜索历史';
       case 'lookup_popup_close_after_mining':
         return '制卡后关闭查词弹窗';
       case 'lookup_popup_close_after_mining_hint':
@@ -734331,6 +738674,10 @@ extension on _StringsZhCn {
         return '按文件夹浏览';
       case 'media_server_browse_by_title':
         return '按作品浏览';
+      case 'media_server_continue_menu_details':
+        return '打开详情';
+      case 'media_server_continue_menu_resume':
+        return '继续播放';
       case 'media_server_item_folder':
         return '文件夹';
       case 'media_server_item_unplayed_episodes':
@@ -734359,6 +738706,10 @@ extension on _StringsZhCn {
         return '添加时间';
       case 'media_server_sort_name':
         return '名称';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} 个版本';
+      case 'media_server_version_pick_title':
+        return '选择版本';
       case 'media_server_versions':
         return '版本';
       case 'media_source_add':
@@ -736091,6 +740442,18 @@ extension on _StringsZhCn {
         return '按真实路径扫描本地的视频、漫画和书籍文件夹。';
       case 'onboarding_permission_storage_label':
         return '所有文件访问';
+      case 'onboarding_purpose_hint':
+        return '只用来预选下一步的功能，之后仍可逐项调整。';
+      case 'onboarding_purpose_learning_desc':
+        return '看书、看番时查词，制卡并复习。';
+      case 'onboarding_purpose_learning_title':
+        return '学外语';
+      case 'onboarding_purpose_media_desc':
+        return '隐藏词典、制卡和复习，之后可随时在设置里打开。';
+      case 'onboarding_purpose_media_title':
+        return '只看书、看番、听书';
+      case 'onboarding_purpose_title':
+        return '你打算用 Fushi 做什么？';
       case 'onboarding_reopen':
         return '新手引导';
       case 'onboarding_review_anki_desc':
@@ -736647,6 +741010,15 @@ extension on _StringsZhCn {
         return '创建配置';
       case 'profile_delete':
         return '删除';
+      case 'profile_delete_failed':
+        return '删除配置没有完成';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) => '配置已删除，复习数据已备份到 ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return '复习数据备份失败，配置未删除。';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            '它的复习数据也会一起删除：${cards} 张卡、${reviews} 条复习记录。删除前会先在本机自动备份。';
       case 'profile_export':
         return '导出';
       case 'profile_export_failed':
@@ -737873,6 +742245,10 @@ extension on _StringsZhCn {
         return '下一句字幕对齐到当前时间';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '上一句字幕对齐到当前时间';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return '复制当前副字幕台词';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return '复制当前台词';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return '循环副字幕遮蔽';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -737937,6 +742313,8 @@ extension on _StringsZhCn {
         return '切换全屏';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '切换沉浸锁定';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return '循环当前句（开 / 关）';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '切换小窗控件';
       case 'shortcut_action_video_toggle_mini_window':
@@ -738949,6 +743327,8 @@ extension on _StringsZhCn {
         }) => '笔记：新增 ${added}，更新 ${updated}，未改动 ${skipped}';
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) => '笔记模板「${name}」与本机的不一致，已另存为一个新模板';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) => '恢复之前删除的笔记模板「${name}」';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => '更新笔记模板：${n} 个';
       case 'srs_import_report_presets_skipped':
@@ -739880,6 +744260,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '复习中 · ${n}天后';
       case 'srs_status_suspended':
         return '已暂停';
+      case 'srs_sync_auto':
+        return '自动同步复习数据';
+      case 'srs_sync_auto_hint':
+        return '在每次常规同步之后、已配对设备有新的复习数据时、以及复习后不久，在后台同步复习数据。关掉后，复习数据只在牌组列表点「立即同步」或打开复习页时同步（每分钟最多一次）。书与视频进度的同步不受影响';
       case 'srs_sync_awaiting_confirm':
         return '在复习页确认后才会开始同步复习数据';
       case 'srs_sync_backend_unsupported':
@@ -741186,16 +745570,22 @@ extension on _StringsZhCn {
         return '导入书籍';
       case 'sync_progress_collections':
         return '同步合集';
+      case 'sync_progress_deletions':
+        return '同步删除记录';
       case 'sync_progress_dictionaries':
         return '同步词典';
       case 'sync_progress_fonts':
         return '同步字体';
       case 'sync_progress_local_audio':
         return '同步本地音频';
+      case 'sync_progress_pending_mines':
+        return '同步待发制卡';
       case 'sync_progress_preparing':
         return '正在准备同步';
       case 'sync_progress_reading':
         return '同步阅读数据';
+      case 'sync_progress_statistics':
+        return '同步统计与收藏';
       case 'sync_progress_videos':
         return '同步视频';
       case 'sync_role_locked_by_client':
@@ -742587,6 +746977,10 @@ extension on _StringsZhCn {
         return '正在准备…';
       case 'video_loading_subtitle':
         return '正在下载字幕…';
+      case 'video_loop_cue_badge_label':
+        return '循环当前句';
+      case 'video_loop_cue_badge_tooltip':
+        return '点击停止循环';
       case 'video_media_server_launch_unavailable':
         return '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
       case 'video_menu_fullscreen':
@@ -743115,6 +747509,8 @@ extension on _StringsZhCn {
         return '结果已由 AI 重新排序';
       case 'video_search_ai_recommended':
         return 'AI 推荐';
+      case 'video_secondary_subtitle_copy_empty':
+        return '当前没有可复制的副字幕';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -743513,10 +747909,6 @@ extension on _StringsZhCn {
         return '自动跳过片头片尾';
       case 'video_setting_theme_song_auto_skip_hint':
         return '识别出的音乐库 OP / ED 一开始播放就跳到段尾';
-      case 'video_setting_theme_song_now_playing':
-        return '显示主题曲曲名';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'OP / ED 期间在角落显示曲名，点击在音乐库打开';
       case 'video_setting_tmdb_key':
         return '自定义 TMDB API Key';
       case 'video_setting_tmdb_key_hint':
@@ -743579,8 +747971,8 @@ extension on _StringsZhCn {
         return '反吸血';
       case 'video_setting_torrent_section_session':
         return '会话设置';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return '上传/下载比值达到此值后停止上传。0 = 不限。';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return '上传量/下载量达到此值即停止上传——按种子整个生命周期累计，含下载过程中的上传（下载照常继续）。0 = 不限。';
       case 'video_setting_torrent_seed_ratio_limit':
         return '做种分享率上限';
       case 'video_setting_torrent_seed_time_hint':
@@ -744556,12 +748948,6 @@ extension on _StringsZhCn {
         return '该字幕轨没有文字';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang}（翻译）';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) => '♪ ${title} · 在音乐库打开';
-      case 'video_theme_song_skip_ending':
-        return '跳过片尾';
-      case 'video_theme_song_skip_intro':
-        return '跳过片头';
       case 'video_time_remaining_toggle':
         return '切换已播 / 剩余时间';
       case 'video_torznab_add':
@@ -744779,6 +749165,8 @@ extension on _StringsZhCn {
         return '连接超时';
       case 'web_browser_error_title':
         return '无法打开此网页';
+      case 'web_browser_exit':
+        return '退出浏览器';
       case 'web_browser_find_close':
         return '关闭查找';
       case 'web_browser_find_hint':
@@ -744791,8 +749179,6 @@ extension on _StringsZhCn {
         return '上一个';
       case 'web_browser_forward':
         return '前进';
-      case 'web_browser_furigana':
-        return '注音';
       case 'web_browser_history_clear':
         return '清除历史记录';
       case 'web_browser_history_clear_confirm':
@@ -744813,8 +749199,6 @@ extension on _StringsZhCn {
         return '在新标签页中打开图片';
       case 'web_browser_image_save':
         return '保存图片';
-      case 'web_browser_known_words':
-        return '生词高亮';
       case 'web_browser_link_copy':
         return '复制链接地址';
       case 'web_browser_link_open_background_tab':
@@ -745078,6 +749462,20 @@ extension on _StringsZhCn {
         return '从浏览器导入登录';
       case 'web_video_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            '空闲时已自动制卡：成功 ${ok} 张，失败 ${failed} 张';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) => '你回来了，已暂停：成功 ${ok} 张，失败 ${failed} 张，队列还剩 ${count} 张';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            '空闲自动制卡中 ${done}/${total} · 有任何操作即暂停';
+      case 'web_video_mine_auto_unavailable':
+        return '无法静音录制卡片音频（需要 Windows 11，详见错误日志），本次运行不再空闲自动制卡';
       case 'web_video_mine_background':
         return '正在后台制卡（直接从 YouTube 视频流截取）';
       case 'web_video_mine_queue_empty':
@@ -745096,6 +749494,10 @@ extension on _StringsZhCn {
         return ({required Object count}) => '已加入制卡队列（待制 ${count} 张）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
+      case 'web_video_mode_page':
+        return '网页';
+      case 'web_video_mode_player':
+        return '播放器';
       case 'web_video_nav_close':
         return '关闭';
       case 'web_video_nav_forward':
@@ -745104,8 +749506,6 @@ extension on _StringsZhCn {
         return '尚未采集到字幕';
       case 'web_video_page_show':
         return '回到网页';
-      case 'web_video_player_open':
-        return '在播放器里看';
       case 'web_video_player_unavailable':
         return '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
       case 'web_video_track_failed':
@@ -745211,6 +749611,8 @@ extension on _StringsZhHk {
         return '加入合集';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -745235,10 +749637,10 @@ extension on _StringsZhHk {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -745255,6 +749657,8 @@ extension on _StringsZhHk {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -745283,8 +749687,14 @@ extension on _StringsZhHk {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -745333,6 +749743,14 @@ extension on _StringsZhHk {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI 沒有給出可用結果，換個説法再試試。';
       case 'ai_assist_failed':
@@ -745485,6 +749903,10 @@ extension on _StringsZhHk {
         return '已開始下載';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI 下載 · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return '新增提供商';
       case 'ai_provider_allow_http':
@@ -745539,6 +749961,20 @@ extension on _StringsZhHk {
         return ({required Object count}) => '找到 ${count} 個模型';
       case 'ai_provider_name':
         return '名稱';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return '協議';
       case 'ai_provider_protocol_locked':
@@ -746536,6 +750972,10 @@ extension on _StringsZhHk {
         return '待發卡片';
       case 'anki_pending_mines_unreachable':
         return '現在連不上 Anki，剩下的卡片繼續留在隊列裡';
+      case 'anki_queue_undelivered_mines_hint':
+        return 'When Anki can\'t be reached, save the card to Pending cards and send it later instead of reporting a failure';
+      case 'anki_queue_undelivered_mines_title':
+        return 'Hold cards when Anki is unreachable';
       case 'anki_refresh_hint':
         return '在 Anki 中新建或重新命名牌組、筆記類型後，點此重新整理。';
       case 'anki_reposition_aggregate':
@@ -746820,6 +751260,9 @@ extension on _StringsZhHk {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             '音頻來源逾時："${host}" — 伺服器無回應，請稍後再試或更換來源';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return '已更新音頻來源';
       case 'audio_source_url_invalid':
@@ -746884,6 +751327,14 @@ extension on _StringsZhHk {
         return ({required Object size}) => '磁碟空間不足。所需空間：${size}';
       case 'audiobook_import_success':
         return '有聲書匯入成功';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return '載入有聲書失敗。';
       case 'audiobook_material_add_dir':
@@ -753356,6 +757807,8 @@ extension on _StringsZhHk {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -754116,6 +758569,16 @@ extension on _StringsZhHk {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -755236,6 +759699,10 @@ extension on _StringsZhHk {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return '資料夾';
       case 'media_server_item_unplayed_episodes':
@@ -755264,6 +759731,10 @@ extension on _StringsZhHk {
         return '新增時間';
       case 'media_server_sort_name':
         return '名稱';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -757008,6 +761479,18 @@ extension on _StringsZhHk {
         return '按真實路徑掃描本機的影片、漫畫和書籍資料夾。';
       case 'onboarding_permission_storage_label':
         return '所有檔案存取權';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return '新手引導';
       case 'onboarding_review_anki_desc':
@@ -757567,6 +762050,16 @@ extension on _StringsZhHk {
         return '建立設定檔';
       case 'profile_delete':
         return '刪除';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return '導出';
       case 'profile_export_failed':
@@ -758794,6 +763287,10 @@ extension on _StringsZhHk {
         return '下一句字幕對齊到當前時間';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '上一句字幕對齊到當前時間';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -758858,6 +763355,8 @@ extension on _StringsZhHk {
         return '切換全螢幕';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '切換沉浸鎖定';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '切換小窗控件';
       case 'shortcut_action_video_toggle_mini_window':
@@ -759887,6 +764386,9 @@ extension on _StringsZhHk {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -760829,6 +765331,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -762138,16 +766644,22 @@ extension on _StringsZhHk {
         return '正在匯入書籍';
       case 'sync_progress_collections':
         return '同步合集';
+      case 'sync_progress_deletions':
+        return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '正在同步詞典';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
         return '正在同步本機音訊';
+      case 'sync_progress_pending_mines':
+        return 'Syncing pending cards';
       case 'sync_progress_preparing':
         return '正在準備同步';
       case 'sync_progress_reading':
         return '正在同步閱讀資料';
+      case 'sync_progress_statistics':
+        return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
         return '同步影片';
       case 'sync_role_locked_by_client':
@@ -763539,6 +768051,10 @@ extension on _StringsZhHk {
         return '正在準備…';
       case 'video_loading_subtitle':
         return '正在下載字幕…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -764068,6 +768584,8 @@ extension on _StringsZhHk {
         return '結果已由 AI 重新排序';
       case 'video_search_ai_recommended':
         return 'AI 推薦';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -764466,10 +768984,6 @@ extension on _StringsZhHk {
         return 'Skip intros and credits automatically';
       case 'video_setting_theme_song_auto_skip_hint':
         return 'When an OP or ED recognized from your music library starts, jump straight to its end';
-      case 'video_setting_theme_song_now_playing':
-        return 'Show the theme song title';
-      case 'video_setting_theme_song_now_playing_hint':
-        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return '自定義 TMDB API Key';
       case 'video_setting_tmdb_key_hint':
@@ -764532,8 +769046,8 @@ extension on _StringsZhHk {
         return '反吸血';
       case 'video_setting_torrent_section_session':
         return '會話設定';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return '上傳/下載比值達到此值後停止上傳。0 = 不限。';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return '做種分享率上限';
       case 'video_setting_torrent_seed_time_hint':
@@ -765513,13 +770027,6 @@ extension on _StringsZhHk {
         return '該字幕軌沒有文字';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang}（翻譯）';
-      case 'video_theme_song_now_playing':
-        return ({required Object title}) =>
-            '♪ ${title} · Open in music library';
-      case 'video_theme_song_skip_ending':
-        return 'Skip credits';
-      case 'video_theme_song_skip_intro':
-        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -765739,6 +770246,8 @@ extension on _StringsZhHk {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -765751,8 +770260,6 @@ extension on _StringsZhHk {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -765773,8 +770280,6 @@ extension on _StringsZhHk {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -766040,6 +770545,21 @@ extension on _StringsZhHk {
         return '從瀏覽器匯入登入';
       case 'web_video_login_import_received':
         return ({required Object count}) => '已從瀏覽器匯入 ${count} 條登入資訊';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return '正在背景製卡（直接從 YouTube 影片串流擷取）';
       case 'web_video_mine_queue_empty':
@@ -766058,6 +770578,10 @@ extension on _StringsZhHk {
         return ({required Object count}) => '已加入製卡佇列（待製 ${count} 張）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
+      case 'web_video_mode_page':
+        return 'Web page';
+      case 'web_video_mode_player':
+        return 'Player';
       case 'web_video_nav_close':
         return '關閉';
       case 'web_video_nav_forward':
@@ -766066,8 +770590,6 @@ extension on _StringsZhHk {
         return '尚未擷取到字幕';
       case 'web_video_page_show':
         return '回到網頁';
-      case 'web_video_player_open':
-        return '在播放器裡看';
       case 'web_video_player_unavailable':
         return '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
       case 'web_video_track_failed':
