@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172703 (10159 per locale)
+/// Strings: 172737 (10161 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10035,6 +10035,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_text_size => 'Text size';
   String get srs_card_appearance_title => 'Fushi Card appearance';
   String get srs_card_bury => 'Bury until tomorrow';
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  String get srs_card_defs_expand_all => 'Expand all';
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   String get srs_card_flag => 'Flag';
@@ -31415,6 +31417,10 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -56324,6 +56330,10 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -81356,6 +81366,10 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -106476,6 +106490,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_bury => 'Bury until tomorrow';
   @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
+  @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   @override
@@ -131358,6 +131376,10 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -156284,6 +156306,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_bury => 'Bury until tomorrow';
   @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
+  @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   @override
@@ -180499,6 +180525,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_bury => 'Bury until tomorrow';
   @override
+  String get srs_card_defs_collapse_all => 'すべて折りたたむ';
+  @override
+  String get srs_card_defs_expand_all => 'すべて展開';
+  @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   @override
@@ -204449,6 +204479,10 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -229106,6 +229140,10 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -254063,6 +254101,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_bury => 'Bury until tomorrow';
   @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
+  @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   @override
@@ -278996,6 +279038,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_bury => 'Bury until tomorrow';
   @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
+  @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   @override
@@ -303680,6 +303726,10 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -328431,6 +328481,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_bury => 'Bury until tomorrow';
   @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
+  @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   @override
@@ -353177,6 +353231,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_bury => 'Bury until tomorrow';
   @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
+  @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   @override
@@ -376508,6 +376566,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_bury => '埋到明天';
   @override
+  String get srs_card_defs_collapse_all => '全部收起';
+  @override
+  String get srs_card_defs_expand_all => '全部展开';
+  @override
   String srs_card_edit_template({required Object name}) => '编辑 ${name} 模板';
   @override
   String get srs_card_flag => '旗标';
@@ -399515,6 +399577,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_bury => 'Bury until tomorrow';
   @override
+  String get srs_card_defs_collapse_all => '全部收起';
+  @override
+  String get srs_card_defs_expand_all => '全部展開';
+  @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   @override
@@ -421375,6 +421441,10 @@ extension on _StringsEn {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -442468,6 +442538,10 @@ extension on _StringsAr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -463617,6 +463691,10 @@ extension on _StringsDe {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -484770,6 +484848,10 @@ extension on _StringsEs {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -505934,6 +506016,10 @@ extension on _StringsFr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -527058,6 +527144,10 @@ extension on _StringsId {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -548191,6 +548281,10 @@ extension on _StringsIt {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -569258,6 +569352,10 @@ extension on _StringsJa {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'すべて折りたたむ';
+      case 'srs_card_defs_expand_all':
+        return 'すべて展開';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -590274,6 +590372,10 @@ extension on _StringsKo {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -611380,6 +611482,10 @@ extension on _StringsNl {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -632517,6 +632623,10 @@ extension on _StringsPtBr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -653658,6 +653768,10 @@ extension on _StringsRu {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -674759,6 +674873,10 @@ extension on _StringsTh {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -695878,6 +695996,10 @@ extension on _StringsTr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -716992,6 +717114,10 @@ extension on _StringsVi {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -737938,6 +738064,10 @@ extension on _StringsZhCn {
         return 'Fushi 卡片外观';
       case 'srs_card_bury':
         return '埋到明天';
+      case 'srs_card_defs_collapse_all':
+        return '全部收起';
+      case 'srs_card_defs_expand_all':
+        return '全部展开';
       case 'srs_card_edit_template':
         return ({required Object name}) => '编辑 ${name} 模板';
       case 'srs_card_flag':
@@ -758848,6 +758978,10 @@ extension on _StringsZhHk {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return '全部收起';
+      case 'srs_card_defs_expand_all':
+        return '全部展開';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
