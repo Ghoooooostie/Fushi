@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172720 (10160 per locale)
+/// Strings: 172839 (10167 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5998,6 +5998,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get jump_to_char_hint => 'Enter character position…';
   String get kavita_api_key_hint => 'Kavita: User settings > Account > API key';
   String get kavita_api_key_label => 'API key';
+  String get kavita_book_cache_clear => 'Clear cached books';
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
   String get kavita_book_cached => 'Cached';
   String get kavita_book_cancel => 'Cancel';
   String get kavita_book_download => 'Download';
@@ -6009,6 +6016,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_book_no_chapters => 'This book has no readable file';
   String get kavita_book_open => 'Read';
   String get kavita_book_remove_download => 'Remove download';
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   String get kavita_books_empty => 'No EPUB books found on this server';
   String get kavita_books_search_hint => 'Search books';
   String get kavita_books_servers_label => 'Server';
@@ -24427,6 +24440,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -24446,6 +24470,15 @@ class _StringsAr extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -49217,6 +49250,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -49236,6 +49280,15 @@ class _StringsDe extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -74239,6 +74292,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -74258,6 +74322,15 @@ class _StringsEs extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -99336,6 +99409,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -99355,6 +99439,15 @@ class _StringsFr extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -124323,6 +124416,17 @@ class _StringsId extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -124342,6 +124446,15 @@ class _StringsId extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -149191,6 +149304,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -149210,6 +149334,15 @@ class _StringsIt extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -173703,6 +173836,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -173722,6 +173866,15 @@ class _StringsJa extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -197637,6 +197790,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -197656,6 +197820,15 @@ class _StringsKo extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -222041,6 +222214,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -222060,6 +222244,15 @@ class _StringsNl extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -246986,6 +247179,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -247005,6 +247209,15 @@ class _StringsPtBr extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -271923,6 +272136,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -271942,6 +272166,15 @@ class _StringsRu extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -296709,6 +296942,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -296728,6 +296972,15 @@ class _StringsTh extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -321413,6 +321666,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -321432,6 +321696,15 @@ class _StringsTr extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -346186,6 +346459,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -346205,6 +346489,15 @@ class _StringsVi extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -370054,6 +370347,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API 密钥';
   @override
+  String get kavita_book_cache_clear => '清理缓存的书';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      '已清理 ${count} 本缓存书';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      '用「阅读」打开的书会缓存（最多 ${limit} 本，超出时先移除最久没读的）；下载的书一直保留，直到移除下载。';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} 本未清理：阅读进度还没能同步到服务器';
+  @override
   String get kavita_book_cached => '已缓存';
   @override
   String get kavita_book_cancel => '取消';
@@ -370073,6 +370377,13 @@ class _StringsZhCn extends _StringsEn {
   String get kavita_book_open => '阅读';
   @override
   String get kavita_book_remove_download => '移除下载';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      '移除下载的副本？它会从本机书架移除，阅读进度保留在服务器上。';
+  @override
+  String get kavita_book_remove_download_failed => '移除下载失败';
+  @override
+  String get kavita_book_remove_download_kept => '阅读进度没能同步到服务器，已保留为缓存副本';
   @override
   String get kavita_books_empty => '此服务器上没有 EPUB 书籍';
   @override
@@ -392898,6 +393209,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get kavita_api_key_label => 'API key';
   @override
+  String get kavita_book_cache_clear => 'Clear cached books';
+  @override
+  String kavita_book_cache_cleared({required Object count}) =>
+      'Removed ${count} cached books';
+  @override
+  String kavita_book_cache_hint({required Object limit}) =>
+      'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+  @override
+  String kavita_book_cache_kept_unsynced({required Object count}) =>
+      '${count} kept: reading progress could not be synced to the server';
+  @override
   String get kavita_book_cached => 'Cached';
   @override
   String get kavita_book_cancel => 'Cancel';
@@ -392917,6 +393239,15 @@ class _StringsZhHk extends _StringsEn {
   String get kavita_book_open => 'Read';
   @override
   String get kavita_book_remove_download => 'Remove download';
+  @override
+  String get kavita_book_remove_download_confirm =>
+      'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_failed =>
+      'Could not remove the download';
+  @override
+  String get kavita_book_remove_download_kept =>
+      'Reading progress could not be synced to the server, so the book was kept as a cached copy';
   @override
   String get kavita_books_empty => 'No EPUB books found on this server';
   @override
@@ -415303,6 +415634,16 @@ extension on _StringsEn {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -415321,6 +415662,12 @@ extension on _StringsEn {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -436402,6 +436749,16 @@ extension on _StringsAr {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -436420,6 +436777,12 @@ extension on _StringsAr {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -457539,6 +457902,16 @@ extension on _StringsDe {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -457557,6 +457930,12 @@ extension on _StringsDe {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -478700,6 +479079,16 @@ extension on _StringsEs {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -478718,6 +479107,12 @@ extension on _StringsEs {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -499870,6 +500265,16 @@ extension on _StringsFr {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -499888,6 +500293,12 @@ extension on _StringsFr {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -521015,6 +521426,16 @@ extension on _StringsId {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -521033,6 +521454,12 @@ extension on _StringsId {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -542144,6 +542571,16 @@ extension on _StringsIt {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -542162,6 +542599,12 @@ extension on _StringsIt {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -563241,6 +563684,16 @@ extension on _StringsJa {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -563259,6 +563712,12 @@ extension on _StringsJa {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -584263,6 +584722,16 @@ extension on _StringsKo {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -584281,6 +584750,12 @@ extension on _StringsKo {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -605347,6 +605822,16 @@ extension on _StringsNl {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -605365,6 +605850,12 @@ extension on _StringsNl {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -626493,6 +626984,16 @@ extension on _StringsPtBr {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -626511,6 +627012,12 @@ extension on _StringsPtBr {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -647640,6 +648147,16 @@ extension on _StringsRu {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -647658,6 +648175,12 @@ extension on _StringsRu {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -668759,6 +669282,16 @@ extension on _StringsTh {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -668777,6 +669310,12 @@ extension on _StringsTh {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -689879,6 +690418,16 @@ extension on _StringsTr {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -689897,6 +690446,12 @@ extension on _StringsTr {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -711002,6 +711557,16 @@ extension on _StringsVi {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -711020,6 +711585,12 @@ extension on _StringsVi {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
@@ -732003,6 +732574,15 @@ extension on _StringsZhCn {
         return 'Kavita：用户设置 > 账户 > API 密钥';
       case 'kavita_api_key_label':
         return 'API 密钥';
+      case 'kavita_book_cache_clear':
+        return '清理缓存的书';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => '已清理 ${count} 本缓存书';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            '用「阅读」打开的书会缓存（最多 ${limit} 本，超出时先移除最久没读的）；下载的书一直保留，直到移除下载。';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) => '${count} 本未清理：阅读进度还没能同步到服务器';
       case 'kavita_book_cached':
         return '已缓存';
       case 'kavita_book_cancel':
@@ -732021,6 +732601,12 @@ extension on _StringsZhCn {
         return '阅读';
       case 'kavita_book_remove_download':
         return '移除下载';
+      case 'kavita_book_remove_download_confirm':
+        return '移除下载的副本？它会从本机书架移除，阅读进度保留在服务器上。';
+      case 'kavita_book_remove_download_failed':
+        return '移除下载失败';
+      case 'kavita_book_remove_download_kept':
+        return '阅读进度没能同步到服务器，已保留为缓存副本';
       case 'kavita_books_empty':
         return '此服务器上没有 EPUB 书籍';
       case 'kavita_books_search_hint':
@@ -752894,6 +753480,16 @@ extension on _StringsZhHk {
         return 'Kavita: User settings > Account > API key';
       case 'kavita_api_key_label':
         return 'API key';
+      case 'kavita_book_cache_clear':
+        return 'Clear cached books';
+      case 'kavita_book_cache_cleared':
+        return ({required Object count}) => 'Removed ${count} cached books';
+      case 'kavita_book_cache_hint':
+        return ({required Object limit}) =>
+            'Books opened with Read are cached (up to ${limit}; the least recently read are removed first). Downloaded books stay until you remove the download.';
+      case 'kavita_book_cache_kept_unsynced':
+        return ({required Object count}) =>
+            '${count} kept: reading progress could not be synced to the server';
       case 'kavita_book_cached':
         return 'Cached';
       case 'kavita_book_cancel':
@@ -752912,6 +753508,12 @@ extension on _StringsZhHk {
         return 'Read';
       case 'kavita_book_remove_download':
         return 'Remove download';
+      case 'kavita_book_remove_download_confirm':
+        return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_failed':
+        return 'Could not remove the download';
+      case 'kavita_book_remove_download_kept':
+        return 'Reading progress could not be synced to the server, so the book was kept as a cached copy';
       case 'kavita_books_empty':
         return 'No EPUB books found on this server';
       case 'kavita_books_search_hint':
