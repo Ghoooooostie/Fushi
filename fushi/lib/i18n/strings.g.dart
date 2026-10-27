@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168861 (9933 per locale)
+/// Strings: 171190 (10070 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -242,6 +242,82 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'vol. ${number}';
   String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
+  String get ai_agent_ask_action => 'Ask AI';
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  String get ai_agent_choice_cancel => 'None of these';
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  String get ai_agent_confirm_approve => 'Run';
+  String get ai_agent_confirm_approved => 'Confirmed';
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  String get ai_agent_confirm_declined => 'Declined';
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  String get ai_agent_confirm_title => 'Confirm before running';
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  String get ai_agent_details => 'Details';
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_empty_title => 'What should I do?';
+  String get ai_agent_expand => 'Open as full page';
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  String get ai_agent_history_resume => 'Continue conversation';
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  String get ai_agent_history_title => 'AI action log';
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  String get ai_agent_new_session => 'New conversation';
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  String get ai_agent_open_settings => 'Open settings';
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  String get ai_agent_send => 'Send';
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  String get ai_agent_stop => 'Stop';
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  String get ai_agent_title => 'AI assistant';
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  String get ai_agent_tool_declined => 'Not run';
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  String get ai_agent_tool_running => 'Running…';
+  String get ai_agent_undo => 'Undo';
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  String get ai_agent_undone => 'Undone';
   String get ai_assist_empty =>
       'AI did not return a usable result. Try describing it differently.';
   String ai_assist_failed({required Object reason}) =>
@@ -265,6 +341,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_feature_acquire => 'AI download';
   String get ai_feature_acquire_summary =>
       'Tell AI what you want — videos, or books, manga and games in Browse › Discover. It parses the request and picks matching works and versions; videos are then downloaded or subscribed, other media need your confirmation for each download.';
+  String get ai_feature_agent => 'AI assistant';
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   String get ai_feature_assigned_unavailable =>
       'Selected provider unavailable (incomplete or disabled)';
   String get ai_feature_audiobook_cast => 'Audiobook casting';
@@ -397,6 +476,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_provider_test_failed({required Object reason}) =>
       'Test failed: ${reason}';
   String get ai_provider_test_ok => 'Connected';
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  String get ai_provider_tool_calling_auto => 'Auto';
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  String get ai_provider_tool_calling_on => 'On';
   String get ai_providers_section => 'Provider configuration';
   String get ai_providers_section_summary =>
       'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
@@ -661,7 +744,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
   String get anime_download_no_subs => 'No subs';
   String get anime_download_no_tasks => 'No download tasks yet';
-  String get anime_download_nyaa_query => 'Nyaa search terms';
+  String get anime_download_nyaa_query => 'BT search terms';
   String get anime_download_play_now => 'Play while downloading';
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
@@ -1066,9 +1149,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_action_overwrite => 'Overwrite this card';
   String get anki_mined_action_view => 'View / open in Anki';
+  String get anki_mined_action_view_only => 'View card';
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
   String get anki_mined_card_subtitle =>
       'Choose what to do with the matching card.';
   String get anki_mined_card_title => 'Card already in Anki';
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   String get anki_mined_forget_done => 'Mining record cleared';
   String anki_mined_multiple_matches({required Object count}) =>
       '${count} matching cards';
@@ -1078,9 +1164,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_not_configured =>
       'Tap Refresh to load your Anki decks and note types.';
   String get anki_note_open_failed => 'Could not open the card in Anki.';
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
   String get anki_note_type => 'Note type';
   String get anki_note_viewer_empty => 'This card has no readable fields.';
   String get anki_note_viewer_open_in_anki => 'Open in Anki';
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   String get anki_note_viewer_title => 'Existing card';
   String get anki_open_no_card => 'No card found for this word in Anki.';
   String get anki_overwrite_scope => 'Overwrite range';
@@ -2430,6 +2519,47 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Fushi API server again.';
+  String get bt_site_add_action => 'Add BT site';
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  String get bt_site_detecting_status => 'Recognizing site…';
+  String get bt_site_domain_anime => 'Anime';
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  String get bt_site_domain_game => 'Games';
+  String get bt_site_domain_manga => 'Manga';
+  String get bt_site_domain_movie => 'Movies';
+  String get bt_site_domain_novel => 'Novels';
+  String get bt_site_domain_tv => 'TV shows';
+  String get bt_site_domains_label => 'Use for';
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  String get bt_site_edit_title => 'Edit BT site';
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  String get bt_site_enabled_label => 'Enabled';
+  String get bt_site_missing_status => 'Add a BT site first';
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  String get bt_site_name_label => 'Name (optional)';
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  String get bt_site_redetect_action => 'Recognize again';
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  String get bt_site_section_title => 'BT sites';
+  String get bt_site_test_search_action => 'Test search';
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  String get bt_site_url_hint => 'https://example.com';
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  String get bt_site_url_label => 'Site address';
   String get cancel => 'Cancel';
   String card_cover_degraded_to_static({required Object reason}) =>
       'Card cover fell back to a still frame (animated clip unavailable): ${reason}';
@@ -4042,6 +4172,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object secondField,
   }) => 'The ${field} field used ${secondField} as its fallback search term.';
   String file_count({required Object count}) => '${count} files';
+  String get floating_ball_action_ai => 'AI';
   String get floating_ball_action_camera_ocr => 'Photo lookup';
   String get floating_ball_action_clipboard => 'Look up clipboard';
   String get floating_ball_action_close => 'Close floating ball';
@@ -5455,6 +5586,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Set up dictionaries, import your first book and make your first card in a few minutes.';
   String get home_onboarding_card_dismiss => 'Don\'t show again';
   String get home_onboarding_card_start => 'Continue setup';
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   String get home_panel_mode_auto => 'Auto';
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_mode_shown => 'Show';
@@ -9328,6 +9461,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Bring to front and open lookup page';
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
   String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
   String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
   String get shortcut_action_global_scroll_page_down =>
@@ -10372,7 +10506,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A note type needs at least one field';
   String get srs_note_types_field_name => 'Field name';
   String get srs_note_types_field_rename => 'Rename field';
+  String get srs_note_types_field_term_tag => 'Lookup';
+  String get srs_note_types_field_unused => 'Not on any card';
   String get srs_note_types_fields => 'Fields';
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   String get srs_note_types_front => 'Front template';
   String get srs_note_types_insert_field => 'Insert field';
   String get srs_note_types_kind => 'Kind';
@@ -10386,6 +10529,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Field names can\'t contain : { } " or start with # / ';
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
   String get srs_note_types_preview => 'Preview';
   String get srs_note_types_preview_empty =>
       'The front is empty for this note, so this card won\'t be shown.';
@@ -10397,6 +10544,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_types_saved => 'Saved';
   String get srs_note_types_side_back => 'Back';
   String get srs_note_types_side_front => 'Front';
+  String get srs_note_types_side_none => '(no fields)';
   String get srs_note_types_stock_basic => 'Basic';
   String get srs_note_types_stock_cloze => 'Cloze';
   String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
@@ -10409,6 +10557,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object cards,
   }) => '${notes} notes · ${fields} fields · ${cards} card types';
   String get srs_note_types_template_add => 'Add card type';
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   String get srs_note_types_template_delete => 'Delete card type';
@@ -10420,11 +10570,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_types_template_edit => 'Edit card type';
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   String get srs_note_types_template_name => 'Card type name';
   String get srs_note_types_template_rename => 'Rename card type';
   String get srs_note_types_templates => 'Card types';
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   String get srs_note_types_term_field => 'Word field';
   String get srs_note_types_term_field_hint =>
       'Review marks in the lookup popup match words against this field';
@@ -10878,10 +11034,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_align_center => 'Center';
   String get srs_visual_align_end => 'Right';
   String get srs_visual_align_start => 'Left';
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   String get srs_visual_convert_title => 'This template is written in code';
   String get srs_visual_delete => 'Remove block';
   String get srs_visual_edited_warning =>
@@ -11985,6 +12147,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get usage_stats_enabled => 'Share usage statistics';
   String get usage_stats_enabled_hint =>
       'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform, update channel, app language, CPU architecture, OS major version and install source (e.g. app store or installer) to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored — only the country or region it resolves to is kept. When you attach device info to feedback, the install ID is sent with it.';
+  String get video_acquisition_channel_library => 'Media library';
+  String get video_acquisition_channel_media_server => 'Media servers';
+  String get video_acquisition_channel_online_source => 'Online sources';
+  String get video_acquisition_channel_torrent => 'BT search';
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  String get video_acquisition_media_server_configure => 'Add server';
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  String get video_acquisition_results_empty => 'No matches found';
+  String get video_acquisition_section_title => 'Where to get it';
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
   String get video_air_season_autumn => 'Fall';
   String get video_air_season_spring => 'Spring';
   String get video_air_season_summer => 'Summer';
@@ -12075,15 +12258,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_bottom_seek_back_label => '−10s';
   String get video_bottom_seek_forward => 'Forward 10s';
   String get video_bottom_seek_forward_label => '+10s';
-  String get video_builtin_apibay_hint =>
-      'Movies and TV shows. Public index, no account needed.';
-  String get video_builtin_knaben_hint =>
-      'Movies and TV shows. Aggregates several public indexers.';
-  String get video_builtin_nyaa_hint =>
-      'Anime only. Movies and TV shows are covered by the two public indexers below.';
-  String get video_builtin_sources_hint =>
-      'Ship with the app: no account, no API key. Turn one off to keep it out of resource searches.';
-  String get video_builtin_sources_title => 'Built-in sources';
   String video_chapter_n({required Object n}) => 'Chapter ${n}';
   String get video_chapters => 'Chapters';
   String get video_chapters_empty => 'No chapters';
@@ -12124,6 +12298,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_episode_list => 'Episode list';
   String get video_control_favorite_sentence => 'Favorite current sentence';
   String get video_control_fullscreen => 'Fullscreen';
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
   String get video_control_next_cue => 'Next subtitle';
   String get video_control_ocr_frame => 'Recognize on-screen text';
   String get video_control_palette_hint =>
@@ -12131,6 +12308,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_palette_title => 'All buttons';
   String get video_control_play_pause => 'Play/Pause';
   String get video_control_previous_cue => 'Previous subtitle';
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
   String get video_control_reject_required =>
       'Required controls must stay on the player.';
   String get video_control_reject_unavailable =>
@@ -12138,6 +12317,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_reject_volume_bottom =>
       'Volume can only sit on the bottom bar.';
   String get video_control_remove_from_slot => 'Move out';
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   String get video_control_reset_layout => 'Reset player button layout';
   String get video_control_screenshot => 'Screenshot';
   String get video_control_seek_backward => 'Back 10s';
@@ -12801,8 +12982,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The file for 『${title}』 could not be found. Its location may have changed, or the drive may not be connected. You can re-import it, or remove this entry.';
   String get video_resource_missing_reimport => 'Re-import';
   String get video_resource_missing_title => 'Video unavailable';
-  String get video_resource_no_provider_hint =>
-      'This search had no provider to query. Re-enable a built-in source, or add a Torznab indexer, under Settings, Downloads, External resource and subtitle providers.';
   String get video_resource_no_provider_title =>
       'No resource indexer configured';
   String video_resource_query_failed({required Object query}) =>
@@ -12990,6 +13169,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_immersive_mode => 'Immersive mode';
   String get video_setting_immersive_mode_hint =>
       'Controls what remains available after pressing the side lock button';
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   String get video_setting_jimaku_default_language =>
       'Default subtitle language';
   String get video_setting_jimaku_default_language_hint =>
@@ -14138,6 +14321,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
   String get web_browser_link_open_new_tab => 'Open in new tab';
   String get web_browser_link_share => 'Share link';
+  String get web_browser_login_import => 'Import sign-in from browser';
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
   String get web_browser_menu_bookmarks => 'Bookmarks';
@@ -14157,6 +14345,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_permission_microphone => 'Microphone';
   String get web_browser_permission_notifications => 'Notifications';
   String get web_browser_permission_popups => 'Pop-ups and redirects';
+  String get web_browser_permission_protected_content => 'Protected content';
   String get web_browser_permission_request_allow => 'Allow';
   String get web_browser_permission_request_block => 'Block';
   String get web_browser_permission_request_camera => 'your camera';
@@ -14166,6 +14355,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_permission_request_geolocation => 'your location';
   String get web_browser_permission_request_microphone => 'your microphone';
   String get web_browser_permission_request_notifications => 'notifications';
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   String get web_browser_permission_request_remember =>
       'Remember for this site';
   String web_browser_permission_request_title({
@@ -14223,6 +14414,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_site_name => 'Name';
   String get web_browser_site_name_hint => 'Leave empty to use the host name';
   String get web_browser_site_new => 'Add site';
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  String get web_browser_site_opens_in_player => 'Opens in the player';
   String get web_browser_site_remove => 'Remove from sites';
   String get web_browser_site_settings_clear_all => 'Reset all sites';
   String get web_browser_site_settings_clear_all_confirm =>
@@ -14263,7 +14460,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_youtube_subtitles_track_live => 'Live capture';
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String get web_hub_browse => 'Web';
-  String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
   String web_video_blocked_error({required Object code}) =>
@@ -14313,14 +14509,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_player_open => 'Watch in player';
   String get web_video_player_unavailable =>
       'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
-  String get web_video_site_add => 'Add site';
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  String get web_video_site_address_invalid => 'Not a web address';
-  String get web_video_site_name_hint => 'Name (optional)';
-  String get web_video_site_open => 'Open';
-  String get web_video_site_remove => 'Remove';
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
   String get web_video_track_image =>
@@ -14454,6 +14642,139 @@ class _StringsAr extends _StringsEn {
   @override
   String get add_to_collection => 'إضافة إلى مجموعة';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
   @override
@@ -14492,6 +14813,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'أخبر الذكاء الاصطناعي بما تريد — فيديو، أو كتب ومانجا وألعاب في تصفح › اكتشاف. يحلّل الطلب ويختار الأعمال والنسخ المطابقة؛ ثم يُنزَّل الفيديو أو يُشترك فيه، أما الوسائط الأخرى فتحتاج إلى تأكيدك لكل تنزيل.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'المزود المحدد غير متاح (غير مكتمل أو معطّل)';
@@ -14717,6 +15043,14 @@ class _StringsAr extends _StringsEn {
       'فشل الاختبار: ${reason}';
   @override
   String get ai_provider_test_ok => 'متصل';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'إعداد المزودين';
   @override
@@ -15133,7 +15467,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'لا توجد مهام تحميل بعد';
   @override
-  String get anime_download_nyaa_query => 'عبارات بحث Nyaa';
+  String get anime_download_nyaa_query => 'عبارات بحث BT';
   @override
   String get anime_download_play_now => 'تشغيل أثناء التحميل';
   @override
@@ -15802,9 +16136,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'عرض / فتح في Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'اختر ما تريد فعله بالبطاقة المطابقة.';
   @override
   String get anki_mined_card_title => 'البطاقة موجودة في Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'تم مسح سجل الاستخراج';
   @override
@@ -15821,12 +16161,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_note_open_failed => 'تعذر فتح البطاقة في Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'نوع الملاحظة';
   @override
   String get anki_note_viewer_empty =>
       'هذه البطاقة لا تحتوي على حقول قابلة للقراءة.';
   @override
   String get anki_note_viewer_open_in_anki => 'فتح في Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'بطاقة موجودة';
   @override
@@ -18034,6 +18379,81 @@ class _StringsAr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Fushi API مجدداً.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'إلغاء';
   @override
@@ -20794,6 +21214,8 @@ class _StringsAr extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} ملفات';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'البحث بالتصوير';
   @override
   String get floating_ball_action_clipboard => 'بحث في الحافظة';
@@ -23208,6 +23630,9 @@ class _StringsAr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'عدم الإظهار مجددًا';
   @override
   String get home_onboarding_card_start => 'متابعة الإعداد';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'تلقائي';
   @override
@@ -29852,6 +30277,8 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'التمرير لأسفل خطوة واحدة';
   @override
@@ -31656,7 +32083,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -31682,6 +32124,11 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -31700,6 +32147,8 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -31720,6 +32169,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -31736,6 +32188,9 @@ class _StringsAr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -31744,6 +32199,12 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -32522,11 +32983,20 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -34458,6 +34928,43 @@ class _StringsAr extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث ولغة التطبيق وبنية المعالج والإصدار الرئيسي لنظام التشغيل ومصدر التثبيت (مثل متجر التطبيقات أو المثبّت) إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك، بل يُحفَظ فقط البلد أو المنطقة المستنتجة منه. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'خريف';
   @override
   String get video_air_season_spring => 'ربيع';
@@ -34604,20 +35111,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10 ث';
   @override
-  String get video_builtin_apibay_hint =>
-      'أفلام ومسلسلات تلفزيونية. فهرس عام، لا يحتاج حساب.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'أفلام ومسلسلات تلفزيونية. يجمع عدة مُفهرسات عامة.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'أنمي فقط. الأفلام والمسلسلات يغطيها المُفهرسان العامان أدناه.';
-  @override
-  String get video_builtin_sources_hint =>
-      'مضمّنة مع التطبيق: لا حساب ولا مفتاح API. أوقف أحدها لاستبعاده من بحث الموارد.';
-  @override
-  String get video_builtin_sources_title => 'المصادر المدمجة';
-  @override
   String video_chapter_n({required Object n}) => 'الفصل ${n}';
   @override
   String get video_chapters => 'الفصول';
@@ -34689,6 +35182,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'ملء الشاشة';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'الترجمة التالية';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -34702,6 +35200,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'الترجمة السابقة';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'يجب أن تبقى عناصر التحكم المطلوبة على المشغّل.';
   @override
@@ -34711,6 +35212,9 @@ class _StringsAr extends _StringsEn {
       'لا يمكن وضع الصوت إلا في الشريط السفلي.';
   @override
   String get video_control_remove_from_slot => 'نقل للخارج';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'إعادة تعيين تخطيط أزرار المشغّل';
   @override
@@ -35834,9 +36338,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_resource_missing_title => 'الفيديو غير متوفر';
   @override
-  String get video_resource_no_provider_hint =>
-      'لم يكن لهذا البحث مزوّد للاستعلام. أعد تفعيل مصدر مدمج أو أضف مُفهرس Torznab من الإعدادات، التحميلات، مزوّدو الموارد والترجمات الخارجية.';
-  @override
   String get video_resource_no_provider_title => 'لم يتم تكوين مُفهرس موارد';
   @override
   String video_resource_query_failed({required Object query}) => 'فشل ${query}';
@@ -36146,6 +36647,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'يتحكم في ما يبقى متاحًا بعد الضغط على زر القفل الجانبي';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'لغة الترجمة الافتراضية';
   @override
@@ -38054,6 +38561,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -38091,6 +38606,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -38107,6 +38624,9 @@ class _StringsAr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -38206,6 +38726,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -38280,8 +38810,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -38362,21 +38890,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -38529,6 +39042,139 @@ class _StringsDe extends _StringsEn {
   @override
   String get add_to_collection => 'Zur Sammlung hinzufügen';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
   @override
@@ -38570,6 +39216,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Sag der KI, was du möchtest – Videos oder Bücher, Manga und Spiele unter Durchsuchen › Entdecken. Sie wertet die Anfrage aus und wählt passende Werke und Versionen; Videos werden dann heruntergeladen oder abonniert, bei anderen Medien musst du jeden Download bestätigen.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Gewählter Anbieter nicht verfügbar (unvollständig oder deaktiviert)';
@@ -38795,6 +39446,14 @@ class _StringsDe extends _StringsEn {
       'Test fehlgeschlagen: ${reason}';
   @override
   String get ai_provider_test_ok => 'Verbunden';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Anbieterkonfiguration';
   @override
@@ -39216,7 +39875,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Noch keine Download-Aufgaben';
   @override
-  String get anime_download_nyaa_query => 'Nyaa-Suchbegriffe';
+  String get anime_download_nyaa_query => 'BT-Suchbegriffe';
   @override
   String get anime_download_play_now => 'Während des Downloads abspielen';
   @override
@@ -39901,10 +40560,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_mined_action_view => 'In Anki anzeigen / öffnen';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Wähle, was mit der übereinstimmenden Karte geschehen soll.';
   @override
   String get anki_mined_card_title => 'Karte bereits in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Mining-Eintrag gelöscht';
   @override
@@ -39921,11 +40586,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Konnte die Karte nicht in Anki öffnen.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Notiztyp';
   @override
   String get anki_note_viewer_empty => 'Diese Karte hat keine lesbaren Felder.';
   @override
   String get anki_note_viewer_open_in_anki => 'In Anki öffnen';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Vorhandene Karte';
   @override
@@ -42164,6 +42834,81 @@ class _StringsDe extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Fushi-API-Server erneut.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Abbrechen';
   @override
@@ -44971,6 +45716,8 @@ class _StringsDe extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} Dateien';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Foto nachschlagen';
   @override
   String get floating_ball_action_clipboard => 'Zwischenablage nachschlagen';
@@ -47453,6 +48200,9 @@ class _StringsDe extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Nicht mehr anzeigen';
   @override
   String get home_onboarding_card_start => 'Einrichtung fortsetzen';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
@@ -54215,6 +54965,8 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Einen Schritt nach unten scrollen';
   @override
@@ -56029,7 +56781,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -56055,6 +56822,11 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -56073,6 +56845,8 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -56093,6 +56867,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -56109,6 +56886,9 @@ class _StringsDe extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -56117,6 +56897,12 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -56895,11 +57681,20 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -58861,6 +59656,43 @@ class _StringsDe extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform, den Update-Kanal, die App-Sprache, die CPU-Architektur, die Hauptversion des Betriebssystems und die Installationsquelle (z. B. App-Store oder Installer) an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert – nur das daraus ermittelte Land bzw. die Region. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Herbst';
   @override
   String get video_air_season_spring => 'Frühling';
@@ -59006,20 +59838,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Filme und Serien. Öffentlicher Index, kein Konto erforderlich.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Filme und Serien. Bündelt mehrere öffentliche Indexer.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Nur Anime. Filme und Serien werden von den beiden öffentlichen Indexern unten abgedeckt.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Mit der App mitgeliefert: kein Konto, kein API-Schlüssel. Deaktivieren, um sie aus Ressourcensuchen auszuschließen.';
-  @override
-  String get video_builtin_sources_title => 'Integrierte Quellen';
-  @override
   String video_chapter_n({required Object n}) => 'Kapitel ${n}';
   @override
   String get video_chapters => 'Kapitel';
@@ -59094,6 +59912,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Vollbild';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Nächster Untertitel';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -59107,6 +59930,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Voriger Untertitel';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Erforderliche Bedienelemente müssen auf dem Player bleiben.';
   @override
@@ -59117,6 +59943,9 @@ class _StringsDe extends _StringsEn {
       'Die Lautstärke kann nur auf der unteren Leiste sitzen.';
   @override
   String get video_control_remove_from_slot => 'Entfernen';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Player-Tastenlayout zurücksetzen';
   @override
@@ -60256,9 +61085,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Video nicht verfügbar';
   @override
-  String get video_resource_no_provider_hint =>
-      'Diese Suche hatte keinen Anbieter zum Abfragen. Aktivieren Sie eine integrierte Quelle erneut oder fügen Sie einen Torznab-Indexer unter Einstellungen, Downloads, Externe Ressourcen- und Untertitelanbieter hinzu.';
-  @override
   String get video_resource_no_provider_title =>
       'Kein Ressourcen-Indexer konfiguriert';
   @override
@@ -60578,6 +61404,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Steuert, was nach Drücken der seitlichen Sperrtaste verfügbar bleibt';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Standard-Untertitelsprache';
@@ -62520,6 +63352,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -62557,6 +63397,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -62573,6 +63415,9 @@ class _StringsDe extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -62672,6 +63517,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -62746,8 +63601,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -62828,21 +63681,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -62995,6 +63833,139 @@ class _StringsEs extends _StringsEn {
   @override
   String get add_to_collection => 'Añadir a colección';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
   @override
@@ -63036,6 +64007,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dile a la IA lo que quieres: vídeos, o libros, manga y juegos en Explorar › Descubrir. Interpreta la solicitud y elige obras y versiones coincidentes; los vídeos se descargan o se suscriben, y los demás medios necesitan tu confirmación en cada descarga.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'El proveedor seleccionado no está disponible (incompleto o desactivado)';
@@ -63262,6 +64238,14 @@ class _StringsEs extends _StringsEn {
       'La prueba falló: ${reason}';
   @override
   String get ai_provider_test_ok => 'Conectado';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuración de proveedores';
   @override
@@ -63684,7 +64668,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Aún no hay tareas de descarga';
   @override
-  String get anime_download_nyaa_query => 'Términos de búsqueda en Nyaa';
+  String get anime_download_nyaa_query => 'Términos de búsqueda en BT';
   @override
   String get anime_download_play_now => 'Reproducir mientras descarga';
   @override
@@ -64373,10 +65357,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Ver / abrir en Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Elija qué hacer con la tarjeta coincidente.';
   @override
   String get anki_mined_card_title => 'Tarjeta ya existente en Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro de creación borrado';
   @override
@@ -64393,11 +65383,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_note_open_failed => 'No se pudo abrir la tarjeta en Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo de nota';
   @override
   String get anki_note_viewer_empty => 'Esta tarjeta no tiene campos legibles.';
   @override
   String get anki_note_viewer_open_in_anki => 'Abrir en Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Tarjeta existente';
   @override
@@ -66640,6 +67635,81 @@ class _StringsEs extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Cancelar';
   @override
@@ -69455,6 +70525,8 @@ class _StringsEs extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} archivos';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Consulta por foto';
   @override
   String get floating_ball_action_clipboard => 'Consultar portapapeles';
@@ -71934,6 +73006,9 @@ class _StringsEs extends _StringsEn {
   String get home_onboarding_card_dismiss => 'No volver a mostrar';
   @override
   String get home_onboarding_card_start => 'Continuar la configuración';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automático';
   @override
@@ -78706,6 +79781,8 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Desplazar un paso hacia abajo';
   @override
@@ -80525,7 +81602,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -80551,6 +81643,11 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -80569,6 +81666,8 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -80589,6 +81688,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -80605,6 +81707,9 @@ class _StringsEs extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -80613,6 +81718,12 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -81391,11 +82502,20 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -83368,6 +84488,43 @@ class _StringsEs extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma, el canal de actualizaciones, el idioma de la app, la arquitectura de CPU, la versión principal del sistema y el origen de instalación (p. ej. tienda o instalador) para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda: solo se conserva el país o región que se deduce de ella. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Otoño';
   @override
   String get video_air_season_spring => 'Primavera';
@@ -83513,20 +84670,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Películas y series de TV. Índice público, sin cuenta necesaria.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Películas y series de TV. Agrega varios indexadores públicos.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Solo anime. Películas y series de TV están cubiertas por los dos indexadores públicos de abajo.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Incluidas con la app: sin cuenta, sin clave API. Desactive una para mantenerla fuera de las búsquedas de recursos.';
-  @override
-  String get video_builtin_sources_title => 'Fuentes integradas';
-  @override
   String video_chapter_n({required Object n}) => 'Capítulo ${n}';
   @override
   String get video_chapters => 'Capítulos';
@@ -83603,6 +84746,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Pantalla completa';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Subtítulo siguiente';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -83616,6 +84764,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Subtítulo anterior';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Los controles obligatorios deben permanecer en el reproductor.';
   @override
@@ -83626,6 +84777,9 @@ class _StringsEs extends _StringsEn {
       'El volumen solo puede ir en la barra inferior.';
   @override
   String get video_control_remove_from_slot => 'Quitar';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Restablecer la disposición de los botones del reproductor';
@@ -84768,9 +85922,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Vídeo no disponible';
   @override
-  String get video_resource_no_provider_hint =>
-      'Esta búsqueda no tuvo proveedor para consultar. Reactive una fuente integrada, o añada un indexador Torznab, en Ajustes, Descargas, Proveedores externos de recursos y subtítulos.';
-  @override
   String get video_resource_no_provider_title =>
       'Sin indexador de recursos configurado';
   @override
@@ -85089,6 +86240,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controla qué sigue disponible tras pulsar el botón de bloqueo lateral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Idioma de subtítulos predeterminado';
@@ -87041,6 +88198,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -87078,6 +88243,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -87094,6 +88261,9 @@ class _StringsEs extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -87193,6 +88363,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -87267,8 +88447,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -87349,21 +88527,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -87518,6 +88681,139 @@ class _StringsFr extends _StringsEn {
   @override
   String get add_to_collection => 'Ajouter à la collection';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
   @override
@@ -87558,6 +88854,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dites à l\'IA ce que vous voulez — des vidéos, ou des livres, manga et jeux dans Parcourir › Découvrir. Elle analyse la demande et choisit les œuvres et versions correspondantes ; les vidéos sont ensuite téléchargées ou suivies par abonnement, les autres médias demandent votre confirmation pour chaque téléchargement.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Fournisseur sélectionné indisponible (incomplet ou désactivé)';
@@ -87783,6 +89084,14 @@ class _StringsFr extends _StringsEn {
       'Échec du test : ${reason}';
   @override
   String get ai_provider_test_ok => 'Connecté';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuration des fournisseurs';
   @override
@@ -88206,7 +89515,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Aucune tâche de téléchargement';
   @override
-  String get anime_download_nyaa_query => 'Termes de recherche Nyaa';
+  String get anime_download_nyaa_query => 'Termes de recherche BT';
   @override
   String get anime_download_play_now => 'Lire pendant le téléchargement';
   @override
@@ -88896,10 +90205,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Voir / ouvrir dans Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Choisissez quoi faire avec la carte correspondante.';
   @override
   String get anki_mined_card_title => 'Carte déjà dans Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Enregistrement de création effacé';
   @override
@@ -88917,12 +90232,17 @@ class _StringsFr extends _StringsEn {
   String get anki_note_open_failed =>
       'Impossible d\'ouvrir la carte dans Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Type de note';
   @override
   String get anki_note_viewer_empty =>
       'Cette carte n\'a pas de champs lisibles.';
   @override
   String get anki_note_viewer_open_in_anki => 'Ouvrir dans Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Carte existante';
   @override
@@ -91178,6 +92498,81 @@ class _StringsFr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Annuler';
   @override
@@ -94003,6 +95398,8 @@ class _StringsFr extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} fichiers';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Recherche par photo';
   @override
   String get floating_ball_action_clipboard => 'Rechercher le presse-papiers';
@@ -96490,6 +97887,9 @@ class _StringsFr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Ne plus afficher';
   @override
   String get home_onboarding_card_start => 'Reprendre la configuration';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatique';
   @override
@@ -103289,6 +104689,8 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Défiler d\'un cran vers le bas';
   @override
@@ -105108,7 +106510,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -105134,6 +106551,11 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -105152,6 +106574,8 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -105172,6 +106596,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -105188,6 +106615,9 @@ class _StringsFr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -105196,6 +106626,12 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -105974,11 +107410,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -107949,6 +109394,43 @@ class _StringsFr extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme, le canal de mise à jour, la langue de l’app, l’architecture du processeur, la version majeure du système et la source d’installation (boutique ou installateur, par ex.) afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée : seul le pays ou la région qui en découle est gardé. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Automne';
   @override
   String get video_air_season_spring => 'Printemps';
@@ -108094,20 +109576,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Films et séries TV. Index public, pas de compte nécessaire.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Films et séries TV. Agrège plusieurs indexeurs publics.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Anime uniquement. Les films et séries TV sont couverts par les deux indexeurs publics ci-dessous.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Fournies avec l\'application : pas de compte, pas de clé API. Désactivez-en une pour l\'exclure des recherches de ressources.';
-  @override
-  String get video_builtin_sources_title => 'Sources intégrées';
-  @override
   String video_chapter_n({required Object n}) => 'Chapitre ${n}';
   @override
   String get video_chapters => 'Chapitres';
@@ -108183,6 +109651,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Plein écran';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sous-titre suivant';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -108196,6 +109669,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Sous-titre précédent';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Les contrôles obligatoires doivent rester sur le lecteur.';
   @override
@@ -108206,6 +109682,9 @@ class _StringsFr extends _StringsEn {
       'Le volume ne peut être placé que sur la barre du bas.';
   @override
   String get video_control_remove_from_slot => 'Retirer';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Rétablir la disposition des boutons du lecteur';
@@ -109355,9 +110834,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Vidéo indisponible';
   @override
-  String get video_resource_no_provider_hint =>
-      'Cette recherche n\'avait aucun fournisseur. Réactivez une source intégrée, ou ajoutez un indexeur Torznab, sous Paramètres, Téléchargements, Fournisseurs de ressources et sous-titres externes.';
-  @override
   String get video_resource_no_provider_title =>
       'Aucun indexeur de ressources configuré';
   @override
@@ -109678,6 +111154,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Détermine ce qui reste disponible après l\'appui sur le bouton de verrouillage latéral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Langue de sous-titres par défaut';
@@ -111643,6 +113125,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -111680,6 +113170,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -111696,6 +113188,9 @@ class _StringsFr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -111795,6 +113290,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -111869,8 +113374,6 @@ class _StringsFr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -111952,21 +113455,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -112121,6 +113609,139 @@ class _StringsId extends _StringsEn {
   @override
   String get add_to_collection => 'Tambah ke koleksi';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
   @override
@@ -112161,6 +113782,11 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Beri tahu AI apa yang Anda inginkan — video, atau buku, manga, dan game di Jelajahi › Temukan. AI mengurai permintaan dan memilih karya dan versi yang cocok; video lalu diunduh atau dilanggan, media lain memerlukan konfirmasi Anda untuk setiap unduhan.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Penyedia terpilih tidak tersedia (tidak lengkap atau dinonaktifkan)';
@@ -112385,6 +114011,14 @@ class _StringsId extends _StringsEn {
       'Pengujian gagal: ${reason}';
   @override
   String get ai_provider_test_ok => 'Terhubung';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Konfigurasi penyedia';
   @override
@@ -112805,7 +114439,7 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Belum ada tugas unduhan';
   @override
-  String get anime_download_nyaa_query => 'Kata kunci pencarian Nyaa';
+  String get anime_download_nyaa_query => 'Kata kunci pencarian BT';
   @override
   String get anime_download_play_now => 'Putar sambil mengunduh';
   @override
@@ -113484,10 +115118,16 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Lihat / buka di Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Pilih apa yang dilakukan dengan kartu yang cocok.';
   @override
   String get anki_mined_card_title => 'Kartu sudah ada di Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Catatan mining dihapus';
   @override
@@ -113504,12 +115144,17 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Tidak dapat membuka kartu di Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipe Catatan';
   @override
   String get anki_note_viewer_empty =>
       'Kartu ini tidak memiliki bidang yang bisa dibaca.';
   @override
   String get anki_note_viewer_open_in_anki => 'Buka di Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Kartu yang sudah ada';
   @override
@@ -115728,6 +117373,81 @@ class _StringsId extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Batal';
   @override
@@ -118505,6 +120225,8 @@ class _StringsId extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} file';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Pencarian foto';
   @override
   String get floating_ball_action_clipboard => 'Cari papan klip';
@@ -120951,6 +122673,9 @@ class _StringsId extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Jangan tampilkan lagi';
   @override
   String get home_onboarding_card_start => 'Lanjutkan penyiapan';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Otomatis';
   @override
@@ -127651,6 +129376,8 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Gulir turun satu langkah';
   @override
@@ -129455,7 +131182,22 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -129481,6 +131223,11 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -129499,6 +131246,8 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -129519,6 +131268,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -129535,6 +131287,9 @@ class _StringsId extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -129543,6 +131298,12 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -130321,11 +132082,20 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -132270,6 +134040,43 @@ class _StringsId extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, kanal pembaruan, bahasa aplikasi, arsitektur CPU, versi utama sistem operasi, dan sumber instalasi (misalnya toko aplikasi atau penginstal) ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan — hanya negara atau wilayah yang ditentukan darinya. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Musim gugur';
   @override
   String get video_air_season_spring => 'Musim semi';
@@ -132417,20 +134224,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10d';
   @override
-  String get video_builtin_apibay_hint =>
-      'Film dan acara TV. Indeks publik, tidak perlu akun.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Film dan acara TV. Mengagregasi beberapa indexer publik.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Hanya anime. Film dan acara TV dicakup oleh dua indexer publik di bawah.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Dikirimkan bersama aplikasi: tanpa akun, tanpa kunci API. Nonaktifkan satu untuk mengecualikannya dari pencarian sumber daya.';
-  @override
-  String get video_builtin_sources_title => 'Sumber bawaan';
-  @override
   String video_chapter_n({required Object n}) => 'Bab ${n}';
   @override
   String get video_chapters => 'Bab';
@@ -132504,6 +134297,11 @@ class _StringsId extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Layar penuh';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Subtitle berikutnya';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -132517,6 +134315,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Subtitle sebelumnya';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Kontrol wajib harus tetap di pemutar.';
   @override
@@ -132527,6 +134328,9 @@ class _StringsId extends _StringsEn {
       'Volume hanya bisa berada di bilah bawah.';
   @override
   String get video_control_remove_from_slot => 'Pindahkan keluar';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Setel ulang tata letak tombol pemutar';
@@ -133662,9 +135466,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Video tidak tersedia';
   @override
-  String get video_resource_no_provider_hint =>
-      'Pencarian ini tidak memiliki penyedia untuk dikueri. Aktifkan kembali sumber bawaan, atau tambahkan indexer Torznab, di Pengaturan, Unduhan, Penyedia sumber daya dan subtitle eksternal.';
-  @override
   String get video_resource_no_provider_title =>
       'Tidak ada indexer sumber daya yang dikonfigurasi';
   @override
@@ -133978,6 +135779,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Mengatur apa yang tetap tersedia setelah menekan tombol kunci samping';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'Bahasa subtitle default';
   @override
@@ -135904,6 +137711,14 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -135941,6 +137756,8 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -135957,6 +137774,9 @@ class _StringsId extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -136056,6 +137876,16 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -136130,8 +137960,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -136212,21 +138040,6 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -136379,6 +138192,139 @@ class _StringsIt extends _StringsEn {
   @override
   String get add_to_collection => 'Aggiungi alla raccolta';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
   @override
@@ -136420,6 +138366,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dì all\'IA cosa vuoi — video, oppure libri, manga e giochi in Sfoglia › Scopri. Analizza la richiesta e sceglie opere e versioni corrispondenti; i video vengono poi scaricati o seguiti con un\'iscrizione, mentre per gli altri media serve la tua conferma a ogni download.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Il provider selezionato non è disponibile (incompleto o disattivato)';
@@ -136646,6 +138597,14 @@ class _StringsIt extends _StringsEn {
       'Prova non riuscita: ${reason}';
   @override
   String get ai_provider_test_ok => 'Connesso';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configurazione dei provider';
   @override
@@ -137067,7 +139026,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Nessun download in corso';
   @override
-  String get anime_download_nyaa_query => 'Termini di ricerca Nyaa';
+  String get anime_download_nyaa_query => 'Termini di ricerca BT';
   @override
   String get anime_download_play_now => 'Riproduci durante il download';
   @override
@@ -137750,10 +139709,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Visualizza / apri in Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Scegli cosa fare con la carta corrispondente.';
   @override
   String get anki_mined_card_title => 'Carta già in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro del mining cancellato';
   @override
@@ -137770,11 +139735,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Impossibile aprire la carta in Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo di nota';
   @override
   String get anki_note_viewer_empty => 'Questa carta non ha campi leggibili.';
   @override
   String get anki_note_viewer_open_in_anki => 'Apri in Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Carta esistente';
   @override
@@ -140009,6 +141979,81 @@ class _StringsIt extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Annulla';
   @override
@@ -142807,6 +144852,8 @@ class _StringsIt extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} file';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Ricerca da foto';
   @override
   String get floating_ball_action_clipboard => 'Cerca negli appunti';
@@ -145274,6 +147321,9 @@ class _StringsIt extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Non mostrare più';
   @override
   String get home_onboarding_card_start => 'Continua la configurazione';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatico';
   @override
@@ -152026,6 +154076,8 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Scorri in basso di un passo';
   @override
@@ -153844,7 +155896,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -153870,6 +155937,11 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -153888,6 +155960,8 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -153908,6 +155982,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -153924,6 +156001,9 @@ class _StringsIt extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -153932,6 +156012,12 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -154710,11 +156796,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -156671,6 +158766,43 @@ class _StringsIt extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma, il canale di aggiornamento, la lingua dell\'app, l\'architettura della CPU, la versione principale del sistema e l\'origine dell\'installazione (es. store o programma di installazione), così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato: si conserva solo il paese o la regione che ne deriva. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Autunno';
   @override
   String get video_air_season_spring => 'Primavera';
@@ -156815,20 +158947,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Film e serie TV. Indice pubblico, nessun account necessario.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Film e serie TV. Aggrega diversi indexer pubblici.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Solo anime. Film e serie TV sono coperti dai due indexer pubblici sotto.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Incluse nell\'app: nessun account, nessuna chiave API. Disattivane una per escluderla dalle ricerche di risorse.';
-  @override
-  String get video_builtin_sources_title => 'Fonti integrate';
-  @override
   String video_chapter_n({required Object n}) => 'Capitolo ${n}';
   @override
   String get video_chapters => 'Capitoli';
@@ -156904,6 +159022,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Schermo intero';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sottotitolo successivo';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -156917,6 +159040,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Sottotitolo precedente';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'I controlli obbligatori devono restare sul lettore.';
   @override
@@ -156927,6 +159053,9 @@ class _StringsIt extends _StringsEn {
       'Il volume può stare solo sulla barra inferiore.';
   @override
   String get video_control_remove_from_slot => 'Rimuovi';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Ripristina il layout dei pulsanti del lettore';
@@ -158061,9 +160190,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Video non disponibile';
   @override
-  String get video_resource_no_provider_hint =>
-      'Questa ricerca non aveva un provider da interrogare. Riabilita una fonte integrata, o aggiungi un indexer Torznab, in Impostazioni, Download, Provider di risorse e sottotitoli esterni.';
-  @override
   String get video_resource_no_provider_title =>
       'Nessun indexer di risorse configurato';
   @override
@@ -158379,6 +160505,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controlla cosa resta disponibile dopo aver premuto il pulsante di blocco laterale';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Lingua sottotitoli predefinita';
@@ -160323,6 +162455,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -160360,6 +162500,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -160376,6 +162518,9 @@ class _StringsIt extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -160475,6 +162620,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -160549,8 +162704,6 @@ class _StringsIt extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -160632,21 +162785,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -160801,6 +162939,139 @@ class _StringsJa extends _StringsEn {
   @override
   String get add_to_collection => 'コレクションに追加';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty => 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
   @override
   String ai_assist_failed({required Object reason}) =>
@@ -160838,6 +163109,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '欲しいものを AI に伝えます：動画、または「ブラウズ › 発見」の小説・漫画・ゲーム。要望を解析し、一致する作品とバージョンから選びます。動画はそのままダウンロードまたは購読し、それ以外は毎回ダウンロード前に確認します。';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       '選択したプロバイダーを利用できません（設定が不完全、または無効）';
@@ -161057,6 +163333,14 @@ class _StringsJa extends _StringsEn {
       'テストに失敗しました：${reason}';
   @override
   String get ai_provider_test_ok => '接続しました';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'プロバイダー設定';
   @override
@@ -161460,7 +163744,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'ダウンロードタスクはまだありません';
   @override
-  String get anime_download_nyaa_query => 'Nyaa 検索語';
+  String get anime_download_nyaa_query => 'BT 検索語';
   @override
   String get anime_download_play_now => 'ダウンロード中に再生';
   @override
@@ -162108,9 +164392,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_mined_action_view => '表示 / Anki で開く';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '一致するカードの処理方法を選択してください。';
   @override
   String get anki_mined_card_title => 'Anki にカードが既にあります';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'カード作成の記録を消去しました';
   @override
@@ -162126,11 +164416,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Anki でカードを開けませんでした。';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'ノートタイプ';
   @override
   String get anki_note_viewer_empty => 'このカードには読み取り可能なフィールドがありません。';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki で開く';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '既存のカード';
   @override
@@ -164289,6 +166584,81 @@ class _StringsJa extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi API サーバーを再度有効にしてください。';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'キャンセル';
   @override
@@ -166955,6 +169325,8 @@ class _StringsJa extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} ファイル';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => '撮影して検索';
   @override
   String get floating_ball_action_clipboard => 'クリップボードを検索';
@@ -169283,6 +171655,9 @@ class _StringsJa extends _StringsEn {
   String get home_onboarding_card_dismiss => '今後表示しない';
   @override
   String get home_onboarding_card_start => 'セットアップを続ける';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => '自動';
   @override
@@ -175742,6 +178117,8 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => '1行下にスクロール';
   @override
   String get shortcut_action_global_scroll_line_up => '1行上にスクロール';
@@ -177522,7 +179899,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -177548,6 +179940,11 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -177566,6 +179963,8 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -177586,6 +179985,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -177602,6 +180004,9 @@ class _StringsJa extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -177610,6 +180015,12 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -178388,11 +180799,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -180257,6 +182677,43 @@ class _StringsJa extends _StringsEn {
   String get usage_stats_enabled_hint =>
       '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネル・アプリの表示言語・CPU アーキテクチャ・OS のメジャーバージョン・インストール元（ストアやインストーラーなど）を fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません（そこから判定した国・地域のみ記録します）。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => '秋';
   @override
   String get video_air_season_spring => '春';
@@ -180398,17 +182855,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10秒';
   @override
-  String get video_builtin_apibay_hint => '映画とテレビ番組。公開インデックス、アカウント不要。';
-  @override
-  String get video_builtin_knaben_hint => '映画とテレビ番組。複数の公開インデクサーを集約。';
-  @override
-  String get video_builtin_nyaa_hint => 'アニメのみ。映画とテレビ番組は下の2つの公開インデクサーでカバーされます。';
-  @override
-  String get video_builtin_sources_hint =>
-      'アプリに同梱：アカウントもAPIキーも不要。オフにするとリソース検索から除外されます。';
-  @override
-  String get video_builtin_sources_title => '組み込みソース';
-  @override
   String video_chapter_n({required Object n}) => 'チャプター ${n}';
   @override
   String get video_chapters => 'チャプター';
@@ -180477,6 +182923,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_control_fullscreen => '全画面';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '次の字幕';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -180490,6 +182941,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_control_previous_cue => '前の字幕';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '必須の操作ボタンはプレーヤー上に残す必要があります。';
   @override
   String get video_control_reject_unavailable => 'この操作ボタンはそこに配置できません。';
@@ -180497,6 +182951,9 @@ class _StringsJa extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量は下部バーにのみ配置できます。';
   @override
   String get video_control_remove_from_slot => '外す';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'プレーヤーのボタン配置を初期化';
   @override
@@ -181581,9 +184038,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_resource_missing_title => '動画が利用できません';
   @override
-  String get video_resource_no_provider_hint =>
-      'この検索にはクエリ先のプロバイダーがありませんでした。組み込みソースを再有効化するか、設定 → ダウンロード → 外部リソース・字幕プロバイダーでTorznabインデクサーを追加してください。';
-  @override
   String get video_resource_no_provider_title => 'リソースインデクサーが未設定';
   @override
   String video_resource_query_failed({required Object query}) =>
@@ -181881,6 +184335,12 @@ class _StringsJa extends _StringsEn {
   String get video_setting_immersive_mode => 'イマーシブモード';
   @override
   String get video_setting_immersive_mode_hint => 'サイドのロックボタンを押した後も使える操作を制御します';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'デフォルト字幕言語';
   @override
@@ -183709,6 +186169,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -183746,6 +186214,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => '保護されたコンテンツ';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -183762,6 +186232,9 @@ class _StringsJa extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      '保護されたコンテンツの再生';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -183861,6 +186334,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -183935,8 +186418,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -184016,21 +186497,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -184182,6 +186648,139 @@ class _StringsKo extends _StringsEn {
   @override
   String get add_to_collection => '컬렉션에 추가';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty => 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 요청 실패: ${reason}';
@@ -184217,6 +186816,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '원하는 것을 AI에게 알려 주세요. 비디오, 또는 찾아보기 › 발견의 책, 만화, 게임이 해당됩니다. 요청을 분석해 알맞은 작품과 버전을 고르며, 비디오는 다운로드하거나 구독하고 다른 미디어는 다운로드마다 확인이 필요합니다.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       '선택한 제공자를 사용할 수 없음(설정 미완료 또는 비활성화됨)';
@@ -184437,6 +187041,14 @@ class _StringsKo extends _StringsEn {
       '테스트 실패: ${reason}';
   @override
   String get ai_provider_test_ok => '연결됨';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => '제공자 설정';
   @override
@@ -184839,7 +187451,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_no_tasks => '다운로드 작업이 없습니다';
   @override
-  String get anime_download_nyaa_query => 'Nyaa 검색어';
+  String get anime_download_nyaa_query => 'BT 검색어';
   @override
   String get anime_download_play_now => '다운로드하면서 재생';
   @override
@@ -185483,9 +188095,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Anki에서 보기 / 열기';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '일치하는 카드의 처리 방법을 선택하세요.';
   @override
   String get anki_mined_card_title => 'Anki에 이미 있는 카드';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => '마이닝 기록을 지웠습니다';
   @override
@@ -185501,11 +188119,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Anki에서 카드를 열 수 없습니다.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => '노트 유형';
   @override
   String get anki_note_viewer_empty => '이 카드에 읽을 수 있는 필드가 없습니다.';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki에서 열기';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '기존 카드';
   @override
@@ -187667,6 +190290,81 @@ class _StringsKo extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi API 서버를 다시 활성화하세요.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => '취소';
   @override
@@ -190347,6 +193045,8 @@ class _StringsKo extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count}개 파일';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => '사진으로 검색';
   @override
   String get floating_ball_action_clipboard => '클립보드 검색';
@@ -192674,6 +195374,9 @@ class _StringsKo extends _StringsEn {
   String get home_onboarding_card_dismiss => '다시 표시 안 함';
   @override
   String get home_onboarding_card_start => '설정 계속하기';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => '자동';
   @override
@@ -199152,6 +201855,8 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => '한 단계 아래로 스크롤';
   @override
   String get shortcut_action_global_scroll_line_up => '한 단계 위로 스크롤';
@@ -200933,7 +203638,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -200959,6 +203679,11 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -200977,6 +203702,8 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -200997,6 +203724,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -201013,6 +203743,9 @@ class _StringsKo extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -201021,6 +203754,12 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -201799,11 +204538,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -203670,6 +206418,43 @@ class _StringsKo extends _StringsEn {
   String get usage_stats_enabled_hint =>
       '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널, 앱 언어, CPU 아키텍처, OS 주 버전, 설치 경로(앱 스토어·설치 프로그램 등)를 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않으며, 이를 통해 판별한 국가/지역만 기록합니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => '가을';
   @override
   String get video_air_season_spring => '봄';
@@ -203811,18 +206596,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10초';
   @override
-  String get video_builtin_apibay_hint => '영화 및 TV 프로그램. 공개 인덱스, 계정 불필요.';
-  @override
-  String get video_builtin_knaben_hint => '영화 및 TV 프로그램. 여러 공개 인덱서를 통합합니다.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      '애니메이션 전용. 영화 및 TV 프로그램은 아래 두 공개 인덱서에서 다룹니다.';
-  @override
-  String get video_builtin_sources_hint =>
-      '앱에 내장: 계정이나 API 키 불필요. 하나를 끄면 리소스 검색에서 제외됩니다.';
-  @override
-  String get video_builtin_sources_title => '내장 소스';
-  @override
   String video_chapter_n({required Object n}) => '챕터 ${n}';
   @override
   String get video_chapters => '챕터';
@@ -203891,6 +206664,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_control_fullscreen => '전체 화면';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '다음 자막';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -203904,6 +206682,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_control_previous_cue => '이전 자막';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '필수 조작은 플레이어에 남아 있어야 합니다.';
   @override
   String get video_control_reject_unavailable => '이 조작은 여기에 둘 수 없습니다.';
@@ -203911,6 +206692,9 @@ class _StringsKo extends _StringsEn {
   String get video_control_reject_volume_bottom => '음량은 하단 바에만 둘 수 있습니다.';
   @override
   String get video_control_remove_from_slot => '빼내기';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => '플레이어 버튼 배치 초기화';
   @override
@@ -205004,9 +207788,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_resource_missing_title => '동영상을 사용할 수 없음';
   @override
-  String get video_resource_no_provider_hint =>
-      '이 검색에 쿼리할 제공자가 없습니다. 설정 > 다운로드 > 외부 리소스 및 자막 제공자에서 내장 소스를 다시 활성화하거나 Torznab 인덱서를 추가하세요.';
-  @override
   String get video_resource_no_provider_title => '리소스 인덱서가 설정되지 않았습니다';
   @override
   String video_resource_query_failed({required Object query}) => '${query} 실패';
@@ -205305,6 +208086,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       '측면 잠금 버튼을 누른 뒤에도 어떤 조작이 가능한지 제어합니다';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => '기본 자막 언어';
   @override
@@ -207158,6 +209945,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -207195,6 +209990,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -207211,6 +210008,9 @@ class _StringsKo extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -207310,6 +210110,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -207384,8 +210194,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -207464,21 +210272,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -207631,6 +210424,139 @@ class _StringsNl extends _StringsEn {
   @override
   String get add_to_collection => 'Aan collectie toevoegen';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
   @override
@@ -207672,6 +210598,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Vertel de AI wat je wilt — video\'s, of boeken, manga en games in Bladeren › Ontdekken. Het verzoek wordt geanalyseerd en passende werken en versies worden gekozen; video\'s worden daarna gedownload of geabonneerd, bij andere media is voor elke download jouw bevestiging nodig.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Geselecteerde provider niet beschikbaar (onvolledig of uitgeschakeld)';
@@ -207897,6 +210828,14 @@ class _StringsNl extends _StringsEn {
       'Test mislukt: ${reason}';
   @override
   String get ai_provider_test_ok => 'Verbonden';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Providerconfiguratie';
   @override
@@ -208320,7 +211259,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Nog geen downloadtaken';
   @override
-  String get anime_download_nyaa_query => 'Nyaa zoektermen';
+  String get anime_download_nyaa_query => 'BT zoektermen';
   @override
   String get anime_download_play_now => 'Afspelen tijdens downloaden';
   @override
@@ -209000,10 +211939,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Bekijken / openen in Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Kies wat je wilt doen met de overeenkomende kaart.';
   @override
   String get anki_mined_card_title => 'Kaart al in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Miningrecord gewist';
   @override
@@ -209020,11 +211965,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Kon de kaart niet openen in Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Notitietype';
   @override
   String get anki_note_viewer_empty => 'Deze kaart heeft geen leesbare velden.';
   @override
   String get anki_note_viewer_open_in_anki => 'Openen in Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Bestaande kaart';
   @override
@@ -211257,6 +214207,81 @@ class _StringsNl extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Fushi API-server opnieuw in.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Annuleren';
   @override
@@ -214052,6 +217077,8 @@ class _StringsNl extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} bestanden';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Opzoeken via foto';
   @override
   String get floating_ball_action_clipboard => 'Klembord opzoeken';
@@ -216505,6 +219532,9 @@ class _StringsNl extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Niet meer tonen';
   @override
   String get home_onboarding_card_start => 'Instellen hervatten';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
@@ -223239,6 +226269,8 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Één stap omlaag scrollen';
   @override
@@ -225052,7 +228084,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -225078,6 +228125,11 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -225096,6 +228148,8 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -225116,6 +228170,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -225132,6 +228189,9 @@ class _StringsNl extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -225140,6 +228200,12 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -225918,11 +228984,20 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -227883,6 +230958,43 @@ class _StringsNl extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform, het updatekanaal, de app-taal, de CPU-architectuur, de hoofdversie van het besturingssysteem en de installatiebron (bijv. app-winkel of installatieprogramma) naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen; alleen het daaruit afgeleide land of de regio wordt bewaard. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Herfst';
   @override
   String get video_air_season_spring => 'Lente';
@@ -228028,20 +231140,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Films en tv-series. Openbare index, geen account nodig.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Films en tv-series. Aggregeert meerdere openbare indexers.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Alleen anime. Films en tv-series worden gedekt door de twee onderstaande openbare indexers.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Meegeleverd met de app: geen account, geen API-sleutel. Schakel er een uit om deze buiten resource-zoekopdrachten te houden.';
-  @override
-  String get video_builtin_sources_title => 'Ingebouwde bronnen';
-  @override
   String video_chapter_n({required Object n}) => 'Hoofdstuk ${n}';
   @override
   String get video_chapters => 'Hoofdstukken';
@@ -228116,6 +231214,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Volledig scherm';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Volgende ondertitel';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -228129,6 +231232,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Vorige ondertitel';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Vereiste bedieningselementen moeten op de speler blijven.';
   @override
@@ -228139,6 +231245,9 @@ class _StringsNl extends _StringsEn {
       'Het volume kan alleen op de onderbalk staan.';
   @override
   String get video_control_remove_from_slot => 'Verwijderen';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Spelerknopindeling herstellen';
   @override
@@ -229272,9 +232381,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Video niet beschikbaar';
   @override
-  String get video_resource_no_provider_hint =>
-      'Deze zoekopdracht had geen provider om te bevragen. Schakel een ingebouwde bron opnieuw in, of voeg een Torznab-indexer toe, via Instellingen, Downloads, Externe resource- en ondertitelproviders.';
-  @override
   String get video_resource_no_provider_title =>
       'Geen resource-indexer geconfigureerd';
   @override
@@ -229590,6 +232696,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Bepaalt wat beschikbaar blijft na het indrukken van de vergrendelknop aan de zijkant';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Standaard ondertiteltaal';
@@ -231525,6 +234637,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -231562,6 +234682,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -231578,6 +234700,9 @@ class _StringsNl extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -231677,6 +234802,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -231751,8 +234886,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -231834,21 +234967,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -232002,6 +235120,139 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get add_to_collection => 'Adicionar à coleção';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
   @override
@@ -232043,6 +235294,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Diga à IA o que você quer — vídeos, ou livros, mangás e jogos em Navegar › Descobrir. Ela interpreta o pedido e escolhe obras e versões correspondentes; os vídeos são então baixados ou assinados, e as outras mídias precisam da sua confirmação a cada download.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Provedor selecionado indisponível (incompleto ou desativado)';
@@ -232270,6 +235526,14 @@ class _StringsPtBr extends _StringsEn {
       'Falha no teste: ${reason}';
   @override
   String get ai_provider_test_ok => 'Conectado';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuração de provedores';
   @override
@@ -232690,7 +235954,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Nenhuma tarefa de download ainda';
   @override
-  String get anime_download_nyaa_query => 'Termos de busca no Nyaa';
+  String get anime_download_nyaa_query => 'Termos de busca no BT';
   @override
   String get anime_download_play_now => 'Assistir durante o download';
   @override
@@ -233380,10 +236644,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Ver / abrir no Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Escolha o que fazer com o cartão correspondente.';
   @override
   String get anki_mined_card_title => 'Cartão já existe no Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro de mineração apagado';
   @override
@@ -233401,11 +236671,16 @@ class _StringsPtBr extends _StringsEn {
   String get anki_note_open_failed =>
       'Não foi possível abrir o cartão no Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo de nota';
   @override
   String get anki_note_viewer_empty => 'Este cartão não tem campos legíveis.';
   @override
   String get anki_note_viewer_open_in_anki => 'Abrir no Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Cartão existente';
   @override
@@ -235640,6 +238915,81 @@ class _StringsPtBr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor da Fushi API novamente.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Cancelar';
   @override
@@ -238440,6 +241790,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} arquivos';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Consulta por foto';
   @override
   String get floating_ball_action_clipboard =>
@@ -240912,6 +244264,9 @@ class _StringsPtBr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Não mostrar novamente';
   @override
   String get home_onboarding_card_start => 'Continuar a configuração';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automático';
   @override
@@ -247659,6 +251014,8 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Rolar uma etapa para baixo';
   @override
@@ -249472,7 +252829,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -249498,6 +252870,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -249516,6 +252893,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -249536,6 +252915,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -249552,6 +252934,9 @@ class _StringsPtBr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -249560,6 +252945,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -250338,11 +253729,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -252300,6 +255700,43 @@ class _StringsPtBr extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma, o canal de atualização, o idioma do app, a arquitetura da CPU, a versão principal do sistema e a origem da instalação (ex.: loja ou instalador) para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado — só o país ou região deduzido dele é guardado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Outono';
   @override
   String get video_air_season_spring => 'Primavera';
@@ -252445,20 +255882,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Filmes e séries de TV. Índice público, sem necessidade de conta.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Filmes e séries de TV. Agrega vários indexadores públicos.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Apenas anime. Filmes e séries de TV são cobertos pelos dois indexadores públicos abaixo.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Vêm com o app: sem conta, sem chave de API. Desative uma para mantê-la fora das buscas de recursos.';
-  @override
-  String get video_builtin_sources_title => 'Fontes integradas';
-  @override
   String video_chapter_n({required Object n}) => 'Capítulo ${n}';
   @override
   String get video_chapters => 'Capítulos';
@@ -252534,6 +255957,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Tela cheia';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Próxima legenda';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -252547,6 +255975,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Legenda anterior';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Os controles obrigatórios devem permanecer no player.';
   @override
@@ -252557,6 +255988,9 @@ class _StringsPtBr extends _StringsEn {
       'O volume só pode ficar na barra inferior.';
   @override
   String get video_control_remove_from_slot => 'Remover';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Restaurar layout dos botões do player';
@@ -253699,9 +257133,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Vídeo indisponível';
   @override
-  String get video_resource_no_provider_hint =>
-      'Esta busca não tinha provedor para consultar. Reative uma fonte integrada ou adicione um indexador Torznab em Configurações, Downloads, Provedores externos de recursos e legendas.';
-  @override
   String get video_resource_no_provider_title =>
       'Nenhum indexador de recursos configurado';
   @override
@@ -254019,6 +257450,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controla o que permanece disponível após pressionar o botão de bloqueio lateral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Idioma padrão de legenda';
@@ -255965,6 +259402,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -256002,6 +259447,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -256018,6 +259465,9 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -256117,6 +259567,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -256191,8 +259651,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -256273,21 +259731,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -256441,6 +259884,139 @@ class _StringsRu extends _StringsEn {
   @override
   String get add_to_collection => 'Добавить в коллекцию';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
   @override
@@ -256481,6 +260057,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Скажите ИИ, что вам нужно — видео либо книги, мангу и игры в разделе «Обзор › Поиск». Он разбирает запрос и подбирает подходящие произведения и версии; видео затем скачиваются или оформляется подписка, для остальных медиа каждая загрузка требует вашего подтверждения.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Выбранный провайдер недоступен (не настроен полностью или отключён)';
@@ -256705,6 +260286,14 @@ class _StringsRu extends _StringsEn {
       'Проверка не удалась: ${reason}';
   @override
   String get ai_provider_test_ok => 'Подключено';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Настройка провайдеров';
   @override
@@ -257127,7 +260716,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Загрузок пока нет';
   @override
-  String get anime_download_nyaa_query => 'Поисковый запрос Nyaa';
+  String get anime_download_nyaa_query => 'Поисковый запрос BT';
   @override
   String get anime_download_play_now => 'Воспроизвести во время загрузки';
   @override
@@ -257808,10 +261397,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Просмотреть / открыть в Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Выберите действие с найденной карточкой.';
   @override
   String get anki_mined_card_title => 'Карточка уже в Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Запись о создании очищена';
   @override
@@ -257828,11 +261423,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Не удалось открыть карточку в Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Тип заметки';
   @override
   String get anki_note_viewer_empty => 'У этой карточки нет читаемых полей.';
   @override
   String get anki_note_viewer_open_in_anki => 'Открыть в Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Существующая карточка';
   @override
@@ -260065,6 +263665,81 @@ class _StringsRu extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Отмена';
   @override
@@ -262853,6 +266528,8 @@ class _StringsRu extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} файлов';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Поиск по фото';
   @override
   String get floating_ball_action_clipboard => 'Искать из буфера обмена';
@@ -265313,6 +268990,9 @@ class _StringsRu extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Больше не показывать';
   @override
   String get home_onboarding_card_start => 'Продолжить настройку';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Авто';
   @override
@@ -272055,6 +275735,8 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Прокрутить вниз на один шаг';
   @override
@@ -273869,7 +277551,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -273895,6 +277592,11 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -273913,6 +277615,8 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -273933,6 +277637,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -273949,6 +277656,9 @@ class _StringsRu extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -273957,6 +277667,12 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -274735,11 +278451,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -276690,6 +280415,43 @@ class _StringsRu extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу, канал обновлений, язык приложения, архитектуру процессора, основную версию ОС и источник установки (например, магазин приложений или установщик), чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется — сохраняется только определённая по нему страна или регион. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Осень';
   @override
   String get video_air_season_spring => 'Весна';
@@ -276834,20 +280596,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10с';
   @override
-  String get video_builtin_apibay_hint =>
-      'Фильмы и сериалы. Публичный индекс, аккаунт не нужен.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Фильмы и сериалы. Агрегирует несколько публичных индексаторов.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Только аниме. Фильмы и сериалы покрываются двумя публичными индексаторами ниже.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Встроены в приложение: без аккаунта, без API-ключа. Отключите источник, чтобы исключить его из поиска ресурсов.';
-  @override
-  String get video_builtin_sources_title => 'Встроенные источники';
-  @override
   String video_chapter_n({required Object n}) => 'Глава ${n}';
   @override
   String get video_chapters => 'Главы';
@@ -276921,6 +280669,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Полный экран';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Следующий субтитр';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -276934,6 +280687,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Предыдущий субтитр';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Обязательные элементы управления должны оставаться на плеере.';
   @override
@@ -276944,6 +280700,9 @@ class _StringsRu extends _StringsEn {
       'Громкость можно разместить только на нижней панели.';
   @override
   String get video_control_remove_from_slot => 'Убрать';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Сбросить расположение кнопок плеера';
@@ -278084,9 +281843,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Видео недоступно';
   @override
-  String get video_resource_no_provider_hint =>
-      'Для этого поиска не нашлось провайдера. Включите встроенный источник или добавьте Torznab-индексатор в разделе Настройки, Загрузки, Внешние провайдеры ресурсов и субтитров.';
-  @override
   String get video_resource_no_provider_title =>
       'Индексатор ресурсов не настроен';
   @override
@@ -278403,6 +282159,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Определяет, что остаётся доступным после нажатия боковой кнопки блокировки';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Язык субтитров по умолчанию';
@@ -280350,6 +284112,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -280387,6 +284157,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -280403,6 +284175,9 @@ class _StringsRu extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -280502,6 +284277,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -280576,8 +284361,6 @@ class _StringsRu extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -280658,21 +284441,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -280825,6 +284593,139 @@ class _StringsTh extends _StringsEn {
   @override
   String get add_to_collection => 'เพิ่มในคอลเลกชัน';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
   @override
@@ -280864,6 +284765,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'บอก AI ว่าคุณต้องการอะไร — วิดีโอ หรือหนังสือ มังงะ และเกมใน เรียกดู › ค้นพบ AI จะแยกคำขอและเลือกผลงานและเวอร์ชันที่ตรงกัน จากนั้นวิดีโอจะถูกดาวน์โหลดหรือสมัครรับ ส่วนสื่ออื่นต้องให้คุณยืนยันทุกการดาวน์โหลด';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'ผู้ให้บริการที่เลือกไม่พร้อมใช้งาน (ตั้งค่าไม่ครบหรือปิดอยู่)';
@@ -281088,6 +284994,14 @@ class _StringsTh extends _StringsEn {
       'ทดสอบไม่สำเร็จ: ${reason}';
   @override
   String get ai_provider_test_ok => 'เชื่อมต่อแล้ว';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'การตั้งค่าผู้ให้บริการ';
   @override
@@ -281506,7 +285420,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'ยังไม่มีงานดาวน์โหลด';
   @override
-  String get anime_download_nyaa_query => 'คำค้นหา Nyaa';
+  String get anime_download_nyaa_query => 'คำค้นหา BT';
   @override
   String get anime_download_play_now => 'เล่นระหว่างดาวน์โหลด';
   @override
@@ -282171,9 +286085,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_mined_action_view => 'ดู / เปิดใน Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'เลือกสิ่งที่จะทำกับบัตรที่ตรงกัน';
   @override
   String get anki_mined_card_title => 'บัตรมีอยู่ใน Anki แล้ว';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'ล้างบันทึกการสร้างการ์ดแล้ว';
   @override
@@ -282190,11 +286110,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_note_open_failed => 'ไม่สามารถเปิดบัตรใน Anki ได้';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'ประเภทโน้ต';
   @override
   String get anki_note_viewer_empty => 'บัตรนี้ไม่มีฟิลด์ที่อ่านได้';
   @override
   String get anki_note_viewer_open_in_anki => 'เปิดใน Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'บัตรที่มีอยู่';
   @override
@@ -284398,6 +288323,81 @@ class _StringsTh extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Fushi API อีกครั้ง';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'ยกเลิก';
   @override
@@ -287157,6 +291157,8 @@ class _StringsTh extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} ไฟล์';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'ค้นหาจากภาพถ่าย';
   @override
   String get floating_ball_action_clipboard => 'ค้นหาจากคลิปบอร์ด';
@@ -289566,6 +293568,9 @@ class _StringsTh extends _StringsEn {
   String get home_onboarding_card_dismiss => 'ไม่ต้องแสดงอีก';
   @override
   String get home_onboarding_card_start => 'ตั้งค่าต่อ';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'อัตโนมัติ';
   @override
@@ -296217,6 +300222,8 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => 'เลื่อนลงหนึ่งขั้น';
   @override
   String get shortcut_action_global_scroll_line_up => 'เลื่อนขึ้นหนึ่งขั้น';
@@ -298018,7 +302025,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -298044,6 +302066,11 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -298062,6 +302089,8 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -298082,6 +302111,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -298098,6 +302130,9 @@ class _StringsTh extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -298106,6 +302141,12 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -298884,11 +302925,20 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -300821,6 +304871,43 @@ class _StringsTh extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม ช่องทางอัปเดต ภาษาของแอป สถาปัตยกรรม CPU เวอร์ชันหลักของระบบปฏิบัติการ และแหล่งที่ติดตั้ง (เช่น สโตร์หรือตัวติดตั้ง)ไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ (เก็บเพียงประเทศหรือภูมิภาคที่ระบุได้จากที่อยู่นั้น) เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'ฤดูใบไม้ร่วง';
   @override
   String get video_air_season_spring => 'ฤดูใบไม้ผลิ';
@@ -300965,20 +305052,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10 วิ';
   @override
-  String get video_builtin_apibay_hint =>
-      'ภาพยนตร์และรายการทีวี ดัชนีสาธารณะ ไม่ต้องมีบัญชี';
-  @override
-  String get video_builtin_knaben_hint =>
-      'ภาพยนตร์และรายการทีวี รวบรวมจากตัวจัดทำดัชนีสาธารณะหลายแห่ง';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'อนิเมะเท่านั้น ภาพยนตร์และรายการทีวีรองรับโดยตัวจัดทำดัชนีสาธารณะด้านล่าง';
-  @override
-  String get video_builtin_sources_hint =>
-      'มาพร้อมกับแอป: ไม่ต้องมีบัญชี ไม่ต้องมีคีย์ API ปิดเพื่อไม่ให้ปรากฏในการค้นหาทรัพยากร';
-  @override
-  String get video_builtin_sources_title => 'แหล่งข้อมูลในตัว';
-  @override
   String video_chapter_n({required Object n}) => 'บทที่ ${n}';
   @override
   String get video_chapters => 'บท';
@@ -301051,6 +305124,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_control_fullscreen => 'เต็มจอ';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'คำบรรยายถัดไป';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -301064,6 +305142,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_control_previous_cue => 'คำบรรยายก่อนหน้า';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'ปุ่มควบคุมที่จำเป็นต้องคงไว้บนโปรแกรมเล่น';
   @override
@@ -301074,6 +305155,9 @@ class _StringsTh extends _StringsEn {
       'ปุ่มเสียงวางได้เฉพาะบนแถบล่าง';
   @override
   String get video_control_remove_from_slot => 'นำออก';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'คืนค่าเลย์เอาต์ปุ่มเริ่มต้นของโปรแกรมเล่น';
@@ -302193,9 +306277,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_resource_missing_title => 'วิดีโอไม่พร้อมใช้งาน';
   @override
-  String get video_resource_no_provider_hint =>
-      'การค้นหานี้ไม่มีผู้ให้บริการที่จะสอบถาม เปิดใช้แหล่งในตัวอีกครั้ง หรือเพิ่มตัวจัดทำดัชนี Torznab ในการตั้งค่า > ดาวน์โหลด > ผู้ให้บริการทรัพยากรและคำบรรยายภายนอก';
-  @override
   String get video_resource_no_provider_title =>
       'ยังไม่ได้ตั้งค่าตัวจัดทำดัชนีทรัพยากร';
   @override
@@ -302504,6 +306585,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'ควบคุมว่าหลังกดปุ่มล็อกด้านข้างแล้วยังใช้อะไรได้บ้าง';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'ภาษาคำบรรยายเริ่มต้น';
   @override
@@ -304412,6 +308499,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -304449,6 +308544,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -304465,6 +308562,9 @@ class _StringsTh extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -304564,6 +308664,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -304638,8 +308748,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -304720,21 +308828,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -304887,6 +308980,139 @@ class _StringsTr extends _StringsEn {
   @override
   String get add_to_collection => 'Koleksiyona ekle';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
   @override
@@ -304928,6 +309154,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Yapay zekaya ne istediğinizi söyleyin — videolar veya Gözat › Keşfet\'teki kitaplar, manga ve oyunlar. İsteği ayrıştırır ve eşleşen eserleri ile sürümleri seçer; videolar ardından indirilir veya abone olunur, diğer medyalar her indirme için onayınızı ister.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Seçilen sağlayıcı kullanılamıyor (eksik veya devre dışı)';
@@ -305154,6 +309385,14 @@ class _StringsTr extends _StringsEn {
       'Test başarısız oldu: ${reason}';
   @override
   String get ai_provider_test_ok => 'Bağlandı';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Sağlayıcı yapılandırması';
   @override
@@ -305572,7 +309811,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Henüz indirme görevi yok';
   @override
-  String get anime_download_nyaa_query => 'Nyaa arama terimleri';
+  String get anime_download_nyaa_query => 'BT arama terimleri';
   @override
   String get anime_download_play_now => 'İndirirken oynat';
   @override
@@ -306249,10 +310488,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Anki\'de görüntüle / aç';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Eşleşen kartla ne yapılacağını seçin.';
   @override
   String get anki_mined_card_title => 'Kart zaten Anki\'de mevcut';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Kart oluşturma kaydı temizlendi';
   @override
@@ -306270,11 +310515,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Kart Anki\'de açılamadı.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Not Türü';
   @override
   String get anki_note_viewer_empty => 'Bu kartın okunabilir alanı yok.';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki\'de aç';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Mevcut kart';
   @override
@@ -308494,6 +312744,81 @@ class _StringsTr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi API sunucusunu tekrar etkinleştirin.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'İptal';
   @override
@@ -311279,6 +315604,8 @@ class _StringsTr extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} dosya';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Fotoğrafla arama';
   @override
   String get floating_ball_action_clipboard => 'Panoyu ara';
@@ -313729,6 +318056,9 @@ class _StringsTr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Bir daha gösterme';
   @override
   String get home_onboarding_card_start => 'Kuruluma devam et';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Otomatik';
   @override
@@ -320426,6 +324756,8 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => 'Bir adım aşağı kaydır';
   @override
   String get shortcut_action_global_scroll_line_up => 'Bir adım yukarı kaydır';
@@ -322232,7 +326564,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -322258,6 +326605,11 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -322276,6 +326628,8 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -322296,6 +326650,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -322312,6 +326669,9 @@ class _StringsTr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -322320,6 +326680,12 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -323098,11 +327464,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -325052,6 +329427,43 @@ class _StringsTr extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu, güncelleme kanalını, uygulama dilini, CPU mimarisini, işletim sisteminin ana sürümünü ve kurulum kaynağını (ör. uygulama mağazası veya yükleyici) fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz; yalnızca ondan belirlenen ülke veya bölge tutulur. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Sonbahar';
   @override
   String get video_air_season_spring => 'İlkbahar';
@@ -325194,20 +329606,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10sn';
   @override
-  String get video_builtin_apibay_hint =>
-      'Filmler ve TV dizileri. Herkese açık dizin, hesap gerekmez.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Filmler ve TV dizileri. Birden fazla herkese açık dizinleyiciyi toplar.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Yalnızca anime. Filmler ve TV dizileri aşağıdaki iki herkese açık dizinleyici tarafından kapsanır.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Uygulamayla birlikte gelir: hesap veya API anahtarı gerekmez. Kaynak aramalarından çıkarmak için birini kapatın.';
-  @override
-  String get video_builtin_sources_title => 'Yerleşik kaynaklar';
-  @override
   String video_chapter_n({required Object n}) => 'Bölüm ${n}';
   @override
   String get video_chapters => 'Bölümler';
@@ -325280,6 +329678,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Tam ekran';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sonraki altyazı';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -325293,6 +329696,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Önceki altyazı';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Zorunlu denetimler oynatıcıda kalmalıdır.';
   @override
@@ -325303,6 +329709,9 @@ class _StringsTr extends _StringsEn {
       'Ses yalnızca alt çubukta bulunabilir.';
   @override
   String get video_control_remove_from_slot => 'Dışarı taşı';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Oynatıcı düğme düzenini sıfırla';
   @override
@@ -326431,9 +330840,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Video kullanılamıyor';
   @override
-  String get video_resource_no_provider_hint =>
-      'Bu aramanın sorgu yapacak bir sağlayıcısı yoktu. Ayarlar, İndirmeler, Harici kaynak ve altyazı sağlayıcıları bölümünden yerleşik bir kaynağı yeniden etkinleştirin veya bir Torznab dizinleyicisi ekleyin.';
-  @override
   String get video_resource_no_provider_title =>
       'Kaynak dizinleyici yapılandırılmadı';
   @override
@@ -326750,6 +331156,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Yan kilit düğmesine basıldıktan sonra hangi işlevlerin kullanılabilir kalacağını denetler';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'Varsayılan altyazı dili';
   @override
@@ -328677,6 +333089,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -328714,6 +333134,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -328730,6 +333152,9 @@ class _StringsTr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -328829,6 +333254,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -328903,8 +333338,6 @@ class _StringsTr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -328985,21 +333418,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -329153,6 +333571,139 @@ class _StringsVi extends _StringsEn {
   @override
   String get add_to_collection => 'Thêm vào bộ sưu tập';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
   @override
@@ -329193,6 +333744,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Hãy nói với AI điều bạn muốn — video, hoặc sách, manga và game trong Duyệt › Khám phá. Nó phân tích yêu cầu và chọn tác phẩm cùng phiên bản phù hợp; video sau đó được tải hoặc đăng ký, còn các loại phương tiện khác cần bạn xác nhận cho từng lượt tải.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Nhà cung cấp đã chọn không khả dụng (chưa đầy đủ hoặc bị tắt)';
@@ -329417,6 +333973,14 @@ class _StringsVi extends _StringsEn {
       'Kiểm tra thất bại: ${reason}';
   @override
   String get ai_provider_test_ok => 'Đã kết nối';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Cấu hình nhà cung cấp';
   @override
@@ -329837,7 +334401,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Chưa có tác vụ tải xuống';
   @override
-  String get anime_download_nyaa_query => 'Từ khóa tìm kiếm Nyaa';
+  String get anime_download_nyaa_query => 'Từ khóa tìm kiếm BT';
   @override
   String get anime_download_play_now => 'Phát trong khi tải';
   @override
@@ -330512,9 +335076,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Xem / mở trong Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'Chọn thao tác với thẻ trùng khớp.';
   @override
   String get anki_mined_card_title => 'Thẻ đã có trong Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Đã xóa bản ghi tạo thẻ';
   @override
@@ -330531,11 +335101,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Không thể mở thẻ trong Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Loại ghi chú';
   @override
   String get anki_note_viewer_empty => 'Thẻ này không có trường có thể đọc.';
   @override
   String get anki_note_viewer_open_in_anki => 'Mở trong Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Thẻ hiện có';
   @override
@@ -332750,6 +337325,81 @@ class _StringsVi extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Hủy';
   @override
@@ -335528,6 +340178,8 @@ class _StringsVi extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} tệp';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => 'Tra từ bằng ảnh chụp';
   @override
   String get floating_ball_action_clipboard => 'Tra từ trong bộ nhớ tạm';
@@ -337968,6 +342620,9 @@ class _StringsVi extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Không hiển thị lại';
   @override
   String get home_onboarding_card_start => 'Tiếp tục thiết lập';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Tự động';
   @override
@@ -344638,6 +349293,8 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => 'Cuộn xuống một bước';
   @override
   String get shortcut_action_global_scroll_line_up => 'Cuộn lên một bước';
@@ -346442,7 +351099,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -346468,6 +351140,11 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -346486,6 +351163,8 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -346506,6 +351185,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -346522,6 +351204,9 @@ class _StringsVi extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -346530,6 +351215,12 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -347308,11 +351999,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -349253,6 +353953,43 @@ class _StringsVi extends _StringsEn {
   String get usage_stats_enabled_hint =>
       'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng, kênh cập nhật, ngôn ngữ ứng dụng, kiến trúc CPU, phiên bản chính của hệ điều hành và nguồn cài đặt (ví dụ cửa hàng ứng dụng hoặc trình cài đặt) đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu — chỉ giữ quốc gia hoặc khu vực suy ra từ nó. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => 'Thu';
   @override
   String get video_air_season_spring => 'Xuân';
@@ -349398,20 +354135,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Phim và chương trình truyền hình. Chỉ mục công khai, không cần tài khoản.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Phim và chương trình truyền hình. Tổng hợp nhiều trình lập chỉ mục công khai.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Chỉ dành cho anime. Phim và chương trình truyền hình được phục vụ bởi hai trình lập chỉ mục công khai bên dưới.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Đi kèm ứng dụng: không cần tài khoản, không cần khóa API. Tắt một nguồn để loại khỏi tìm kiếm tài nguyên.';
-  @override
-  String get video_builtin_sources_title => 'Nguồn tích hợp';
-  @override
   String video_chapter_n({required Object n}) => 'Chương ${n}';
   @override
   String get video_chapters => 'Chương';
@@ -349483,6 +354206,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Toàn màn hình';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Câu phụ đề sau';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -349496,6 +354224,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Câu phụ đề trước';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Các nút điều khiển bắt buộc phải ở lại trình phát.';
   @override
@@ -349506,6 +354237,9 @@ class _StringsVi extends _StringsEn {
       'Âm lượng chỉ có thể đặt ở thanh dưới.';
   @override
   String get video_control_remove_from_slot => 'Gỡ ra';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Khôi phục bố cục nút trình phát mặc định';
@@ -350636,9 +355370,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_resource_missing_title => 'Video không khả dụng';
   @override
-  String get video_resource_no_provider_hint =>
-      'Tìm kiếm này không có nhà cung cấp để truy vấn. Bật lại nguồn tích hợp hoặc thêm trình lập chỉ mục Torznab trong Cài đặt, Tải xuống, Nhà cung cấp tài nguyên và phụ đề bên ngoài.';
-  @override
   String get video_resource_no_provider_title =>
       'Chưa cấu hình trình lập chỉ mục tài nguyên';
   @override
@@ -350951,6 +355682,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Quyết định những gì vẫn khả dụng sau khi nhấn nút khóa bên cạnh';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Ngôn ngữ phụ đề mặc định';
@@ -352870,6 +357607,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -352907,6 +357652,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -352923,6 +357670,9 @@ class _StringsVi extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -353022,6 +357772,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -353096,8 +357856,6 @@ class _StringsVi extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -353178,21 +357936,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -353342,6 +358085,128 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
+  String get ai_agent_ask_action => '问 AI';
+  @override
+  String get ai_agent_attach_screen_text => '附上屏幕文字';
+  @override
+  String get ai_agent_choice_cancel => '都不是';
+  @override
+  String ai_agent_choice_picked({required Object label}) => '已选：${label}';
+  @override
+  String get ai_agent_confirm_approve => '执行';
+  @override
+  String get ai_agent_confirm_approved => '已确认';
+  @override
+  String get ai_agent_confirm_decline => '不执行';
+  @override
+  String get ai_agent_confirm_declined => '已拒绝';
+  @override
+  String get ai_agent_confirm_install_title => '要安装这个扩展吗？';
+  @override
+  String get ai_agent_confirm_irreversible => '这一步无法撤销。';
+  @override
+  String get ai_agent_confirm_title => '执行前请确认';
+  @override
+  String get ai_agent_confirm_undoable => '执行后可以撤销。';
+  @override
+  String ai_agent_context_chip({required Object title}) => '关于：${title}';
+  @override
+  String get ai_agent_details => '详情';
+  @override
+  String get ai_agent_empty_examples => '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
+  @override
+  String get ai_agent_empty_title => '要我做什么？';
+  @override
+  String get ai_agent_expand => '展开成整页';
+  @override
+  String get ai_agent_history_by_user => '经你确认';
+  @override
+  String get ai_agent_history_empty => 'AI 助手还没做过改动。';
+  @override
+  String get ai_agent_history_resume => '继续这场对话';
+  @override
+  String get ai_agent_history_summary => 'AI 助手做过的所有改动，可逐条撤销';
+  @override
+  String get ai_agent_history_title => 'AI 操作记录';
+  @override
+  String get ai_agent_input_hint => '告诉 AI 要做什么…';
+  @override
+  String get ai_agent_new_session => '新对话';
+  @override
+  String get ai_agent_no_provider => 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
+  @override
+  String get ai_agent_open_settings => '去设置';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      '${device} 上关闭了 AI 功能。';
+  @override
+  String get ai_agent_remote_lost => '与执行这场对话的设备断开了连接。';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} 还没有给「AI 助手」指派 AI 提供商，请在那台设备的「设置 › 模型 › LLM」里指派。';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} 还没准备好，请稍后再试。';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      '连不上下载执行设备 ${device}。';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} 不支持 AI 助手，请更新那台设备上的 Fushi。';
+  @override
+  String get ai_agent_risk_irreversible => '不可撤销';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) => '屏幕文字（${n} 字）';
+  @override
+  String get ai_agent_screen_text_empty => '屏幕上没有识别到文字';
+  @override
+  String get ai_agent_screen_text_failed => '读取屏幕文字失败';
+  @override
+  String get ai_agent_screen_text_unavailable => '本机的文字识别不可用';
+  @override
+  String get ai_agent_send => '发送';
+  @override
+  String ai_agent_session_summary({required Object n}) => '本次对话做了 ${n} 处改动';
+  @override
+  String get ai_agent_stop => '停止';
+  @override
+  String get ai_agent_stop_cancelled => '已停止。';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'AI 请求失败：${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure => '已停止：同一步连续失败两次。';
+  @override
+  String get ai_agent_stop_token_budget => '已停止：本次对话的 token 预算已用完。';
+  @override
+  String get ai_agent_stop_tool_limit => '已停止：这一轮步骤太多。';
+  @override
+  String get ai_agent_superseded => '之后又被改过，保留现状';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      '已完成：${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      '未完成：${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI 助手';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => '未执行';
+  @override
+  String ai_agent_tool_failed({required Object code}) => '失败：${code}';
+  @override
+  String get ai_agent_tool_running => '执行中…';
+  @override
+  String get ai_agent_undo => '撤销';
+  @override
+  String ai_agent_undo_all({required Object n}) => '全部撤销（${n}）';
+  @override
+  String ai_agent_undo_failed({required Object reason}) => '撤销失败：${reason}';
+  @override
+  String get ai_agent_undone => '已撤销';
+  @override
   String get ai_assist_empty => 'AI 没有给出可用结果，换个说法再试试。';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 请求失败：${reason}';
@@ -353377,6 +358242,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '跟 AI 说想要什么：视频，或在「浏览 › 发现」里的小说、漫画、游戏。它解析你的要求、在匹配的作品与版本里选择；视频随后下载或订阅，其它媒体每次下载由你确认。';
+  @override
+  String get ai_feature_agent => 'AI 助手';
+  @override
+  String get ai_feature_agent_summary => '一句话让 AI 代办 app 里的操作；每个改动都能撤销';
   @override
   String get ai_feature_assigned_unavailable => '所选提供商不可用（未配置完整或已停用）';
   @override
@@ -353580,6 +358449,14 @@ class _StringsZhCn extends _StringsEn {
   String ai_provider_test_failed({required Object reason}) => '测试失败：${reason}';
   @override
   String get ai_provider_test_ok => '连接正常';
+  @override
+  String get ai_provider_tool_calling => '工具调用（AI 助手）';
+  @override
+  String get ai_provider_tool_calling_auto => '自动';
+  @override
+  String get ai_provider_tool_calling_off => '关（JSON 降级）';
+  @override
+  String get ai_provider_tool_calling_on => '开';
   @override
   String get ai_providers_section => '提供商配置';
   @override
@@ -353965,7 +358842,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anime_download_no_tasks => '暂无下载任务';
   @override
-  String get anime_download_nyaa_query => 'Nyaa 查询词';
+  String get anime_download_nyaa_query => 'BT 查询词';
   @override
   String get anime_download_play_now => '边下边播';
   @override
@@ -354581,9 +359458,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_mined_action_view => '查看 / 在 Anki 中打开';
   @override
+  String get anki_mined_action_view_only => '查看卡片';
+  @override
+  String get anki_mined_action_view_review => '查看 / 在 Fushi 复习中打开';
+  @override
   String get anki_mined_card_subtitle => '选择对这张已存在的卡片做什么。';
   @override
   String get anki_mined_card_title => '卡片已在 Anki 中';
+  @override
+  String get anki_mined_card_title_review => '卡片已在 Fushi 复习中';
   @override
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
@@ -354599,11 +359482,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_note_open_failed => '无法在 Anki 中打开这张卡片。';
   @override
+  String get anki_note_open_failed_review => '无法在 Fushi 复习中打开这张卡片。';
+  @override
   String get anki_note_type => '笔记类型';
   @override
   String get anki_note_viewer_empty => '这张卡片没有可读取的字段。';
   @override
   String get anki_note_viewer_open_in_anki => '在 Anki 中打开';
+  @override
+  String get anki_note_viewer_open_in_review => '在 Fushi 复习中打开';
   @override
   String get anki_note_viewer_title => '已存在的卡片';
   @override
@@ -356606,6 +361493,75 @@ class _StringsZhCn extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi API 服务器。';
+  @override
+  String get bt_site_add_action => '添加 BT 站';
+  @override
+  String get bt_site_allow_http_label => '允许明文 HTTP（局域网）';
+  @override
+  String get bt_site_delete_confirm_title => '删除这个 BT 站？';
+  @override
+  String get bt_site_detect_failed_error => '无法识别这个站点。';
+  @override
+  String get bt_site_detect_timeout_error => '站点响应超时。';
+  @override
+  String get bt_site_detecting_status => '正在识别站点…';
+  @override
+  String get bt_site_domain_anime => '动画';
+  @override
+  String get bt_site_domain_audiobook => '有声书';
+  @override
+  String get bt_site_domain_game => '游戏';
+  @override
+  String get bt_site_domain_manga => '漫画';
+  @override
+  String get bt_site_domain_movie => '电影';
+  @override
+  String get bt_site_domain_novel => '小说';
+  @override
+  String get bt_site_domain_tv => '剧集';
+  @override
+  String get bt_site_domains_label => '用于';
+  @override
+  String get bt_site_domains_required_error => '至少选择一种媒体类型。';
+  @override
+  String get bt_site_domains_unmatched_status => '该站点没有与所选媒体类型对应的分类。';
+  @override
+  String get bt_site_edit_title => '编辑 BT 站';
+  @override
+  String get bt_site_empty_hint => '还没有 BT 来源。添加一个 BT 站地址，或接入 Torznab 索引器。';
+  @override
+  String get bt_site_enabled_label => '启用';
+  @override
+  String get bt_site_missing_status => '请先添加 BT 站';
+  @override
+  String get bt_site_name_hint => '默认使用站点主机名';
+  @override
+  String get bt_site_name_label => '名称（可选）';
+  @override
+  String get bt_site_open_settings_action => '前往 BT 站设置';
+  @override
+  String get bt_site_redetect_action => '重新检测';
+  @override
+  String get bt_site_redetect_done_status => '已重新识别站点。';
+  @override
+  String get bt_site_section_hint => '添加你常用的 BT 站地址，Fushi 会在添加时自动识别如何搜索它。';
+  @override
+  String get bt_site_section_title => 'BT 站';
+  @override
+  String get bt_site_test_search_action => '测试搜索';
+  @override
+  String get bt_site_test_search_failed_error => '搜索失败。';
+  @override
+  String bt_site_test_search_result({required Object n}) => '找到 ${n} 条结果';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      '明文 HTTP 仅允许用于局域网站点；如需继续，请打开「允许明文 HTTP」。';
+  @override
+  String get bt_site_url_invalid_error => '请输入有效的网址。';
+  @override
+  String get bt_site_url_label => '站点地址';
   @override
   String get cancel => '取消';
   @override
@@ -359169,6 +364125,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} 个文件';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => '拍照查词';
   @override
   String get floating_ball_action_clipboard => '剪贴板查词';
@@ -361378,6 +366336,8 @@ class _StringsZhCn extends _StringsEn {
   String get home_onboarding_card_dismiss => '不再显示';
   @override
   String get home_onboarding_card_start => '继续新手引导';
+  @override
+  String get home_panel_ai_agent_hint => '自动：给 AI 助手指派了提供商后显示';
   @override
   String get home_panel_mode_auto => '自动';
   @override
@@ -367521,6 +372481,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_global_external_screen_ocr => '截屏识字（全局）';
   @override
+  String get shortcut_action_global_open_ai_assistant => '打开 AI 助手';
+  @override
   String get shortcut_action_global_scroll_line_down => '向下滚动一行';
   @override
   String get shortcut_action_global_scroll_line_up => '向上滚动一行';
@@ -369189,7 +374151,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_field_rename => '重命名字段';
   @override
+  String get srs_note_types_field_term_tag => '查词用';
+  @override
+  String get srs_note_types_field_unused => '没上卡面';
+  @override
   String get srs_note_types_fields => '字段';
+  @override
+  String srs_note_types_fields_count({required Object n}) => '字段（${n}）';
+  @override
+  String get srs_note_types_fields_hint => '每条笔记要填的内容；点开字段能看到它在卡面的位置';
+  @override
+  String srs_note_types_flag_fields({required Object n}) => '开关字段（${n}）';
+  @override
+  String get srs_note_types_flag_fields_hint => '填任意字符即开启对应的卡面样式';
   @override
   String get srs_note_types_front => '正面模板';
   @override
@@ -369214,6 +374188,11 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_name_reserved =>
       '这是 Anki 的保留字段名（FrontSide、Tags、Deck 等）';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} 个字段 · ${cards} 种卡片';
+  @override
   String get srs_note_types_preview => '预览';
   @override
   String get srs_note_types_preview_empty => '这条笔记的正面为空，这张卡不会出现。';
@@ -369230,6 +374209,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_side_back => '背面';
   @override
   String get srs_note_types_side_front => '正面';
+  @override
+  String get srs_note_types_side_none => '（没有字段）';
   @override
   String get srs_note_types_stock_basic => '问答';
   @override
@@ -369249,6 +374230,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_template_add => '添加卡片模板';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      '背面：${fields}';
+  @override
   String get srs_note_types_template_cloze_single => '填空类型只有一个卡片模板';
   @override
   String get srs_note_types_template_delete => '删除卡片模板';
@@ -369263,6 +374247,9 @@ class _StringsZhCn extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       '模板有错误：${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      '正面：${fields}';
+  @override
   String get srs_note_types_template_last => '笔记类型至少要有一个卡片模板';
   @override
   String get srs_note_types_template_name => '模板名称';
@@ -369270,6 +374257,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_template_rename => '重命名卡片模板';
   @override
   String get srs_note_types_templates => '卡片模板';
+  @override
+  String get srs_note_types_templates_hint => '每个模板生成一张卡；点进去改它的版面';
+  @override
+  String srs_note_types_term_chip({required Object name}) => '查词按：${name}';
   @override
   String get srs_note_types_term_field => '词条字段';
   @override
@@ -369983,11 +374974,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_visual_align_start => '靠左';
   @override
+  String get srs_visual_builtin_body =>
+      '它用到了卡型开关（单词卡 / 句子卡 / 点击卡 / 听音卡）和脚本，可视化编辑器画不出来，所以这里显示的是代码。没改过的内置模板会随 Fushi 一起更新。';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用更新，复习时也不再使用 Fushi 原生卡面。';
+  @override
+  String get srs_visual_builtin_other_note =>
+      '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用和上游模板更新。';
+  @override
+  String get srs_visual_builtin_title => '这是内置模板，用代码写成';
+  @override
   String get srs_visual_convert_body =>
       '多半来自 Anki 或旧版本。可以按字段自动生成一个可视化布局，之后用拖块的方式改；点保存之前随时可以放弃。';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      '这是内置笔记类型：模板一旦改动，复习时就按模板渲染，不再使用 Fushi 原生卡面。';
   @override
   String get srs_visual_convert_title => '这个模板是用代码写的';
   @override
@@ -371762,6 +376761,43 @@ class _StringsZhCn extends _StringsEn {
   String get usage_stats_enabled_hint =>
       '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台、更新通道、界面语言、CPU 架构、系统大版本和安装来源（如应用商店或安装包），用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址，只记录据此判断的国家或地区。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
   @override
+  String get video_acquisition_channel_library => '媒体库';
+  @override
+  String get video_acquisition_channel_media_server => '媒体服务器';
+  @override
+  String get video_acquisition_channel_online_source => '在线源';
+  @override
+  String get video_acquisition_channel_torrent => 'BT 搜索';
+  @override
+  String get video_acquisition_library_empty => '媒体库里还没有这部作品';
+  @override
+  String get video_acquisition_load_failed => '这个渠道加载失败';
+  @override
+  String get video_acquisition_media_server_configure => '添加服务器';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      '还没有配置媒体服务器，可在设置里添加 Jellyfin / Emby / Plex';
+  @override
+  String get video_acquisition_online_source_configure => '管理扩展';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      '还没有启用的 Aniyomi 在线源，安装扩展后即可在这里搜索';
+  @override
+  String get video_acquisition_results_empty => '没有找到匹配的结果';
+  @override
+  String get video_acquisition_section_title => '获取途径';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} 个来源查询失败';
+  @override
+  String get video_acquisition_torrent_add_site => '添加 BT 来源';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '找到 ${count} 条资源';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      '还没有适用于这部作品的 BT 来源，添加 BT 来源后即可搜索资源';
+  @override
   String get video_air_season_autumn => '秋';
   @override
   String get video_air_season_spring => '春';
@@ -371894,17 +376930,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint => '电影与剧集。公共索引，无需账号。';
-  @override
-  String get video_builtin_knaben_hint => '电影与剧集。聚合多家公共索引器。';
-  @override
-  String get video_builtin_nyaa_hint => '仅动漫。电影与剧集由下面两个公共索引器覆盖。';
-  @override
-  String get video_builtin_sources_hint =>
-      '随应用内置：无需账号，无需 API key。关闭后该来源不再参与资源搜索。';
-  @override
-  String get video_builtin_sources_title => '内置来源';
-  @override
   String video_chapter_n({required Object n}) => '章节 ${n}';
   @override
   String get video_chapters => '章节';
@@ -371970,6 +376995,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_control_fullscreen => '全屏';
   @override
+  String get video_control_immersive_layout_hint =>
+      '锁定后屏幕上只剩这里的按钮：点画面时出现，在任何沉浸档位都能点。';
+  @override
+  String get video_control_immersive_layout_title => '沉浸模式按钮';
+  @override
   String get video_control_next_cue => '下一句字幕';
   @override
   String get video_control_ocr_frame => '识别画面文字';
@@ -371982,6 +377012,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_control_previous_cue => '上一句字幕';
   @override
+  String get video_control_reject_immersive_lock => '锁按钮是退出沉浸模式的唯一入口，必须保留。';
+  @override
   String get video_control_reject_required => '必选控制必须保留在播放器上。';
   @override
   String get video_control_reject_unavailable => '此控制不能放在这里。';
@@ -371989,6 +377021,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量只能放在底栏。';
   @override
   String get video_control_remove_from_slot => '移出';
+  @override
+  String get video_control_reset_immersive_layout => '恢复默认沉浸模式按钮';
   @override
   String get video_control_reset_layout => '恢复默认播放器按钮布局';
   @override
@@ -372992,9 +378026,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_resource_missing_title => '视频无法访问';
   @override
-  String get video_resource_no_provider_hint =>
-      '本次搜索没有可用的来源。请到 设置 → 下载 → 外部资源与字幕来源 重新启用内置来源，或添加 Torznab 索引器。';
-  @override
   String get video_resource_no_provider_title => '未配置资源索引器';
   @override
   String video_resource_query_failed({required Object query}) => '${query} 失败';
@@ -373274,6 +378305,11 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_immersive_mode => '沉浸模式';
   @override
   String get video_setting_immersive_mode_hint => '控制按下侧边锁后仍允许哪些操作';
+  @override
+  String get video_setting_immersive_tap_reveal => '沉浸时点画面显示字幕';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      '沉浸锁定且字幕模糊或隐藏时，点画面任意处显示当前这一句，换句后自动遮回';
   @override
   String get video_setting_jimaku_default_language => '默认字幕语言';
   @override
@@ -375014,6 +380050,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_link_share => '分享链接';
   @override
+  String get web_browser_login_import => '从浏览器导入登录';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      '已从浏览器导入 ${count} 条登录信息';
+  @override
+  String get web_browser_login_import_waiting =>
+      '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
+  @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
   String get web_browser_lookup_on => '点词查词：开';
@@ -375050,6 +380094,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_permission_popups => '弹出式窗口和重定向';
   @override
+  String get web_browser_permission_protected_content => '受保护内容';
+  @override
   String get web_browser_permission_request_allow => '允许';
   @override
   String get web_browser_permission_request_block => '阻止';
@@ -375065,6 +380111,8 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_permission_request_microphone => '麦克风';
   @override
   String get web_browser_permission_request_notifications => '通知';
+  @override
+  String get web_browser_permission_request_protected_content => '受保护内容播放';
   @override
   String get web_browser_permission_request_remember => '记住对此网站的选择';
   @override
@@ -375154,6 +380202,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_site_new => '添加站点';
   @override
+  String get web_browser_site_open_in_browser => '改回用浏览器打开';
+  @override
+  String get web_browser_site_open_in_player => '默认用播放页打开';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi 字幕、查词与观看进度；Netflix 高画质需要它';
+  @override
+  String get web_browser_site_opens_in_player => '点开进播放页';
+  @override
   String get web_browser_site_remove => '从站点移除';
   @override
   String get web_browser_site_settings_clear_all => '重置所有网站';
@@ -375224,8 +380281,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => '选中加载';
   @override
   String get web_hub_browse => '网页';
-  @override
-  String get web_hub_video_sites => '视频站点';
   @override
   String get web_video_ad_skipping => '正在跳过广告…';
   @override
@@ -375300,21 +380355,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_player_open => '在播放器里看';
   @override
   String get web_video_player_unavailable => '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
-  @override
-  String get web_video_site_add => '添加网站';
-  @override
-  String get web_video_site_address_hint => '网址，比如 netflix.com';
-  @override
-  String get web_video_site_address_invalid => '不是有效的网址';
-  @override
-  String get web_video_site_name_hint => '名称（可选）';
-  @override
-  String get web_video_site_open => '打开';
-  @override
-  String get web_video_site_remove => '移除';
-  @override
-  String get web_video_sites_hint =>
-      '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
   @override
   String get web_video_track_failed => '未能截获这条字幕，点选重试';
   @override
@@ -375463,6 +380503,139 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty => 'AI 沒有給出可用結果，換個説法再試試。';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 請求失敗：${reason}';
@@ -375498,6 +380671,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '跟 AI 說想要甚麼：影片，或在「瀏覽 › 發現」裡的小說、漫畫、遊戲。它解析你的要求、在相符的作品與版本裡選擇；影片隨後下載或訂閱，其他媒體每次下載由你確認。';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable => '所選提供商不可用（未配置完整或已停用）';
   @override
@@ -375707,6 +380885,14 @@ class _StringsZhHk extends _StringsEn {
   String ai_provider_test_failed({required Object reason}) => '測試失敗：${reason}';
   @override
   String get ai_provider_test_ok => '連接正常';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => '提供商配置';
   @override
@@ -376095,7 +381281,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_no_tasks => '暫無下載任務';
   @override
-  String get anime_download_nyaa_query => 'Nyaa 查詢詞';
+  String get anime_download_nyaa_query => 'BT 查詢詞';
   @override
   String get anime_download_play_now => '邊下邊播';
   @override
@@ -376716,9 +381902,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_mined_action_view => '查看 / 在 Anki 中打開';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '選擇對這張已存在的卡片做什麼。';
   @override
   String get anki_mined_card_title => '卡片已在 Anki 中';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => '已清除制卡記錄';
   @override
@@ -376734,11 +381926,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_note_open_failed => '無法在 Anki 中打開這張卡片。';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => '筆記類型';
   @override
   String get anki_note_viewer_empty => '這張卡片沒有可讀取的字段。';
   @override
   String get anki_note_viewer_open_in_anki => '在 Anki 中打開';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '已存在的卡片';
   @override
@@ -378849,6 +384046,81 @@ class _StringsZhHk extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi API 伺服器。';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => '取消';
   @override
@@ -381452,6 +386724,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} 個檔案';
   @override
+  String get floating_ball_action_ai => 'AI';
+  @override
   String get floating_ball_action_camera_ocr => '拍照查詞';
   @override
   String get floating_ball_action_clipboard => '剪貼簿查詞';
@@ -383682,6 +388956,9 @@ class _StringsZhHk extends _StringsEn {
   String get home_onboarding_card_dismiss => '不再顯示';
   @override
   String get home_onboarding_card_start => '繼續新手引導';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => '自動';
   @override
@@ -389973,6 +395250,8 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => '向下滾動一行';
   @override
   String get shortcut_action_global_scroll_line_up => '向上滾動一行';
@@ -391750,7 +397029,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -391776,6 +397070,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -391794,6 +397093,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -391814,6 +397115,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -391830,6 +397134,9 @@ class _StringsZhHk extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -391838,6 +397145,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -392615,11 +397928,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -394430,6 +399752,43 @@ class _StringsZhHk extends _StringsEn {
   String get usage_stats_enabled_hint =>
       '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台、更新通道、介面語言、CPU 架構、系統主要版本和安裝來源（如應用程式商店或安裝程式），用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址，只記錄據此判斷的國家或地區。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
   @override
+  String get video_acquisition_channel_library => 'Media library';
+  @override
+  String get video_acquisition_channel_media_server => 'Media servers';
+  @override
+  String get video_acquisition_channel_online_source => 'Online sources';
+  @override
+  String get video_acquisition_channel_torrent => 'BT search';
+  @override
+  String get video_acquisition_library_empty => 'Not in your library yet';
+  @override
+  String get video_acquisition_load_failed => 'Couldn\'t load this channel';
+  @override
+  String get video_acquisition_media_server_configure => 'Add server';
+  @override
+  String get video_acquisition_media_server_unconfigured =>
+      'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+  @override
+  String get video_acquisition_online_source_configure => 'Manage extensions';
+  @override
+  String get video_acquisition_online_source_unconfigured =>
+      'No Aniyomi sources enabled. Install an extension to search online sources.';
+  @override
+  String get video_acquisition_results_empty => 'No matches found';
+  @override
+  String get video_acquisition_section_title => 'Where to get it';
+  @override
+  String video_acquisition_sources_partial_failed({required Object count}) =>
+      '${count} sources failed';
+  @override
+  String get video_acquisition_torrent_add_site => 'Add BT source';
+  @override
+  String video_acquisition_torrent_found({required Object count}) =>
+      '${count} resources found';
+  @override
+  String get video_acquisition_torrent_unconfigured =>
+      'No BT sources for this title yet. Add a BT source to search for resources.';
+  @override
   String get video_air_season_autumn => '秋';
   @override
   String get video_air_season_spring => '春';
@@ -394567,17 +399926,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint => '電影與劇集。公共索引，無需賬號。';
-  @override
-  String get video_builtin_knaben_hint => '電影與劇集。聚合多家公共索引器。';
-  @override
-  String get video_builtin_nyaa_hint => '僅動漫。電影與劇集由下面兩個公共索引器覆蓋。';
-  @override
-  String get video_builtin_sources_hint =>
-      '隨應用內置：無需賬號，無需 API key。關閉後該來源不再參與資源搜索。';
-  @override
-  String get video_builtin_sources_title => '內置來源';
-  @override
   String video_chapter_n({required Object n}) => '章節 ${n}';
   @override
   String get video_chapters => '章節';
@@ -394643,6 +399991,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_control_fullscreen => '全螢幕';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '下一句字幕';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -394655,6 +400008,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_control_previous_cue => '上一句字幕';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '必選控制必須保留在播放器上。';
   @override
   String get video_control_reject_unavailable => '此控制不能放在這裡。';
@@ -394662,6 +400018,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量只能放在底欄。';
   @override
   String get video_control_remove_from_slot => '移出';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => '還原預設播放器按鈕版面';
   @override
@@ -395715,9 +401074,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_resource_missing_title => '影片無法訪問';
   @override
-  String get video_resource_no_provider_hint =>
-      '本次搜索沒有可用的來源。請到 設定 → 下載 → 外部資源與字幕來源 重新啟用內置來源，或添加 Torznab 索引器。';
-  @override
   String get video_resource_no_provider_title => '未配置資源索引器';
   @override
   String video_resource_query_failed({required Object query}) => '${query} 失敗';
@@ -396008,6 +401364,12 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_immersive_mode => '沉浸模式';
   @override
   String get video_setting_immersive_mode_hint => '控制按下側邊鎖後仍可使用哪些操作';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => '預設字幕語言';
   @override
@@ -397784,6 +403146,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -397821,6 +403191,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => '受保護內容';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -397837,6 +403209,8 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content => '受保護內容播放';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -397936,6 +403310,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -398011,8 +403395,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_hub_browse => 'Web';
   @override
-  String get web_hub_video_sites => 'Video sites';
-  @override
   String get web_video_ad_skipping => '正在略過廣告…';
   @override
   String get web_video_address_hint => '搜尋或輸入網址';
@@ -398087,21 +403469,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_video_player_open => '在播放器裡看';
   @override
   String get web_video_player_unavailable => '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
-  @override
-  String get web_video_site_add => '新增網站';
-  @override
-  String get web_video_site_address_hint => '網址，例如 netflix.com';
-  @override
-  String get web_video_site_address_invalid => '不是有效的網址';
-  @override
-  String get web_video_site_name_hint => '名稱（可選）';
-  @override
-  String get web_video_site_open => '開啟';
-  @override
-  String get web_video_site_remove => '移除';
-  @override
-  String get web_video_sites_hint =>
-      '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -398207,6 +403574,126 @@ extension on _StringsEn {
         return 'Volume';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI did not return a usable result. Try describing it differently.';
       case 'ai_assist_failed':
@@ -398242,6 +403729,10 @@ extension on _StringsEn {
         return 'AI download';
       case 'ai_feature_acquire_summary':
         return 'Tell AI what you want — videos, or books, manga and games in Browse › Discover. It parses the request and picks matching works and versions; videos are then downloaded or subscribed, other media need your confirmation for each download.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Selected provider unavailable (incomplete or disabled)';
       case 'ai_feature_audiobook_cast':
@@ -398430,6 +403921,14 @@ extension on _StringsEn {
         return ({required Object reason}) => 'Test failed: ${reason}';
       case 'ai_provider_test_ok':
         return 'Connected';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Provider configuration';
       case 'ai_providers_section_summary':
@@ -398780,7 +404279,7 @@ extension on _StringsEn {
       case 'anime_download_no_tasks':
         return 'No download tasks yet';
       case 'anime_download_nyaa_query':
-        return 'Nyaa search terms';
+        return 'BT search terms';
       case 'anime_download_play_now':
         return 'Play while downloading';
       case 'anime_download_play_now_fail':
@@ -399341,10 +404840,16 @@ extension on _StringsEn {
         return 'Overwrite this card';
       case 'anki_mined_action_view':
         return 'View / open in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Choose what to do with the matching card.';
       case 'anki_mined_card_title':
         return 'Card already in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Mining record cleared';
       case 'anki_mined_multiple_matches':
@@ -399357,12 +404862,16 @@ extension on _StringsEn {
         return 'Tap Refresh to load your Anki decks and note types.';
       case 'anki_note_open_failed':
         return 'Could not open the card in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Note type';
       case 'anki_note_viewer_empty':
         return 'This card has no readable fields.';
       case 'anki_note_viewer_open_in_anki':
         return 'Open in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Existing card';
       case 'anki_open_no_card':
@@ -401185,6 +406694,74 @@ extension on _StringsEn {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Fushi API server again.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Cancel';
       case 'card_cover_degraded_to_static':
@@ -403584,6 +409161,8 @@ extension on _StringsEn {
             'The ${field} field used ${secondField} as its fallback search term.';
       case 'file_count':
         return ({required Object count}) => '${count} files';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Photo lookup';
       case 'floating_ball_action_clipboard':
@@ -405638,6 +411217,8 @@ extension on _StringsEn {
         return 'Don\'t show again';
       case 'home_onboarding_card_start':
         return 'Continue setup';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Auto';
       case 'home_panel_mode_hidden':
@@ -411403,6 +416984,8 @@ extension on _StringsEn {
         return 'Bring to front and open lookup page';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scroll down one step';
       case 'shortcut_action_global_scroll_line_up':
@@ -412989,8 +418572,20 @@ extension on _StringsEn {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -413013,6 +418608,9 @@ extension on _StringsEn {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -413029,6 +418627,8 @@ extension on _StringsEn {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -413047,6 +418647,8 @@ extension on _StringsEn {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -413058,6 +418660,8 @@ extension on _StringsEn {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -413066,6 +418670,10 @@ extension on _StringsEn {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -413739,10 +419347,16 @@ extension on _StringsEn {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -415438,6 +421052,38 @@ extension on _StringsEn {
         return 'Share usage statistics';
       case 'usage_stats_enabled_hint':
         return 'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform, update channel, app language, CPU architecture, OS major version and install source (e.g. app store or installer) to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored — only the country or region it resolves to is kept. When you attach device info to feedback, the install ID is sent with it.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Fall';
       case 'video_air_season_spring':
@@ -415547,16 +421193,6 @@ extension on _StringsEn {
         return 'Forward 10s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Movies and TV shows. Public index, no account needed.';
-      case 'video_builtin_knaben_hint':
-        return 'Movies and TV shows. Aggregates several public indexers.';
-      case 'video_builtin_nyaa_hint':
-        return 'Anime only. Movies and TV shows are covered by the two public indexers below.';
-      case 'video_builtin_sources_hint':
-        return 'Ship with the app: no account, no API key. Turn one off to keep it out of resource searches.';
-      case 'video_builtin_sources_title':
-        return 'Built-in sources';
       case 'video_chapter_n':
         return ({required Object n}) => 'Chapter ${n}';
       case 'video_chapters':
@@ -415621,6 +421257,10 @@ extension on _StringsEn {
         return 'Favorite current sentence';
       case 'video_control_fullscreen':
         return 'Fullscreen';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Next subtitle';
       case 'video_control_ocr_frame':
@@ -415633,6 +421273,8 @@ extension on _StringsEn {
         return 'Play/Pause';
       case 'video_control_previous_cue':
         return 'Previous subtitle';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Required controls must stay on the player.';
       case 'video_control_reject_unavailable':
@@ -415641,6 +421283,8 @@ extension on _StringsEn {
         return 'Volume can only sit on the bottom bar.';
       case 'video_control_remove_from_slot':
         return 'Move out';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Reset player button layout';
       case 'video_control_screenshot':
@@ -416582,8 +422226,6 @@ extension on _StringsEn {
         return 'Re-import';
       case 'video_resource_missing_title':
         return 'Video unavailable';
-      case 'video_resource_no_provider_hint':
-        return 'This search had no provider to query. Re-enable a built-in source, or add a Torznab indexer, under Settings, Downloads, External resource and subtitle providers.';
       case 'video_resource_no_provider_title':
         return 'No resource indexer configured';
       case 'video_resource_query_failed':
@@ -416841,6 +422483,10 @@ extension on _StringsEn {
         return 'Immersive mode';
       case 'video_setting_immersive_mode_hint':
         return 'Controls what remains available after pressing the side lock button';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
@@ -418444,6 +424090,13 @@ extension on _StringsEn {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -418480,6 +424133,8 @@ extension on _StringsEn {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -418496,6 +424151,8 @@ extension on _StringsEn {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -418579,6 +424236,14 @@ extension on _StringsEn {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -418649,8 +424314,6 @@ extension on _StringsEn {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -418719,20 +424382,6 @@ extension on _StringsEn {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -418837,6 +424486,126 @@ extension on _StringsAr {
         return 'Volume';
       case 'add_to_collection':
         return 'إضافة إلى مجموعة';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
       case 'ai_assist_failed':
@@ -418872,6 +424641,10 @@ extension on _StringsAr {
         return 'تنزيل بالذكاء الاصطناعي';
       case 'ai_feature_acquire_summary':
         return 'أخبر الذكاء الاصطناعي بما تريد — فيديو، أو كتب ومانجا وألعاب في تصفح › اكتشاف. يحلّل الطلب ويختار الأعمال والنسخ المطابقة؛ ثم يُنزَّل الفيديو أو يُشترك فيه، أما الوسائط الأخرى فتحتاج إلى تأكيدك لكل تنزيل.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'المزود المحدد غير متاح (غير مكتمل أو معطّل)';
       case 'ai_feature_audiobook_cast':
@@ -419061,6 +424834,14 @@ extension on _StringsAr {
         return ({required Object reason}) => 'فشل الاختبار: ${reason}';
       case 'ai_provider_test_ok':
         return 'متصل';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'إعداد المزودين';
       case 'ai_providers_section_summary':
@@ -419410,7 +425191,7 @@ extension on _StringsAr {
       case 'anime_download_no_tasks':
         return 'لا توجد مهام تحميل بعد';
       case 'anime_download_nyaa_query':
-        return 'عبارات بحث Nyaa';
+        return 'عبارات بحث BT';
       case 'anime_download_play_now':
         return 'تشغيل أثناء التحميل';
       case 'anime_download_play_now_fail':
@@ -419970,10 +425751,16 @@ extension on _StringsAr {
         return 'الكتابة فوق هذه البطاقة';
       case 'anki_mined_action_view':
         return 'عرض / فتح في Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'اختر ما تريد فعله بالبطاقة المطابقة.';
       case 'anki_mined_card_title':
         return 'البطاقة موجودة في Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'تم مسح سجل الاستخراج';
       case 'anki_mined_multiple_matches':
@@ -419986,12 +425773,16 @@ extension on _StringsAr {
         return 'انقر «تحديث» لتحميل مجموعات Anki وأنواع الملاحظات.';
       case 'anki_note_open_failed':
         return 'تعذر فتح البطاقة في Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'نوع الملاحظة';
       case 'anki_note_viewer_empty':
         return 'هذه البطاقة لا تحتوي على حقول قابلة للقراءة.';
       case 'anki_note_viewer_open_in_anki':
         return 'فتح في Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'بطاقة موجودة';
       case 'anki_open_no_card':
@@ -421815,6 +427606,74 @@ extension on _StringsAr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Fushi API مجدداً.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'إلغاء';
       case 'card_cover_degraded_to_static':
@@ -424214,6 +430073,8 @@ extension on _StringsAr {
             'استخدم حقل ${field} حقل ${secondField} كمصطلح بحث بديل.';
       case 'file_count':
         return ({required Object count}) => '${count} ملفات';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'البحث بالتصوير';
       case 'floating_ball_action_clipboard':
@@ -426267,6 +432128,8 @@ extension on _StringsAr {
         return 'عدم الإظهار مجددًا';
       case 'home_onboarding_card_start':
         return 'متابعة الإعداد';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'تلقائي';
       case 'home_panel_mode_hidden':
@@ -432029,6 +437892,8 @@ extension on _StringsAr {
         return 'إحضار إلى الواجهة وفتح صفحة البحث';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'التمرير لأسفل خطوة واحدة';
       case 'shortcut_action_global_scroll_line_up':
@@ -433615,8 +439480,20 @@ extension on _StringsAr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -433639,6 +439516,9 @@ extension on _StringsAr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -433655,6 +439535,8 @@ extension on _StringsAr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -433673,6 +439555,8 @@ extension on _StringsAr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -433684,6 +439568,8 @@ extension on _StringsAr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -433692,6 +439578,10 @@ extension on _StringsAr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -434365,10 +440255,16 @@ extension on _StringsAr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -436060,6 +441956,38 @@ extension on _StringsAr {
         return 'مشاركة إحصاءات الاستخدام';
       case 'usage_stats_enabled_hint':
         return 'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث ولغة التطبيق وبنية المعالج والإصدار الرئيسي لنظام التشغيل ومصدر التثبيت (مثل متجر التطبيقات أو المثبّت) إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك، بل يُحفَظ فقط البلد أو المنطقة المستنتجة منه. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'خريف';
       case 'video_air_season_spring':
@@ -436170,16 +442098,6 @@ extension on _StringsAr {
         return 'تقديم 10 ثوانٍ';
       case 'video_bottom_seek_forward_label':
         return '+10 ث';
-      case 'video_builtin_apibay_hint':
-        return 'أفلام ومسلسلات تلفزيونية. فهرس عام، لا يحتاج حساب.';
-      case 'video_builtin_knaben_hint':
-        return 'أفلام ومسلسلات تلفزيونية. يجمع عدة مُفهرسات عامة.';
-      case 'video_builtin_nyaa_hint':
-        return 'أنمي فقط. الأفلام والمسلسلات يغطيها المُفهرسان العامان أدناه.';
-      case 'video_builtin_sources_hint':
-        return 'مضمّنة مع التطبيق: لا حساب ولا مفتاح API. أوقف أحدها لاستبعاده من بحث الموارد.';
-      case 'video_builtin_sources_title':
-        return 'المصادر المدمجة';
       case 'video_chapter_n':
         return ({required Object n}) => 'الفصل ${n}';
       case 'video_chapters':
@@ -436244,6 +442162,10 @@ extension on _StringsAr {
         return 'تفضيل الجملة الحالية';
       case 'video_control_fullscreen':
         return 'ملء الشاشة';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'الترجمة التالية';
       case 'video_control_ocr_frame':
@@ -436256,6 +442178,8 @@ extension on _StringsAr {
         return 'تشغيل/إيقاف مؤقت';
       case 'video_control_previous_cue':
         return 'الترجمة السابقة';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'يجب أن تبقى عناصر التحكم المطلوبة على المشغّل.';
       case 'video_control_reject_unavailable':
@@ -436264,6 +442188,8 @@ extension on _StringsAr {
         return 'لا يمكن وضع الصوت إلا في الشريط السفلي.';
       case 'video_control_remove_from_slot':
         return 'نقل للخارج';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'إعادة تعيين تخطيط أزرار المشغّل';
       case 'video_control_screenshot':
@@ -437204,8 +443130,6 @@ extension on _StringsAr {
         return 'إعادة استيراد';
       case 'video_resource_missing_title':
         return 'الفيديو غير متوفر';
-      case 'video_resource_no_provider_hint':
-        return 'لم يكن لهذا البحث مزوّد للاستعلام. أعد تفعيل مصدر مدمج أو أضف مُفهرس Torznab من الإعدادات، التحميلات، مزوّدو الموارد والترجمات الخارجية.';
       case 'video_resource_no_provider_title':
         return 'لم يتم تكوين مُفهرس موارد';
       case 'video_resource_query_failed':
@@ -437464,6 +443388,10 @@ extension on _StringsAr {
         return 'وضع الانغماس';
       case 'video_setting_immersive_mode_hint':
         return 'يتحكم في ما يبقى متاحًا بعد الضغط على زر القفل الجانبي';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'لغة الترجمة الافتراضية';
       case 'video_setting_jimaku_default_language_hint':
@@ -439068,6 +444996,13 @@ extension on _StringsAr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -439104,6 +445039,8 @@ extension on _StringsAr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -439120,6 +445057,8 @@ extension on _StringsAr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -439203,6 +445142,14 @@ extension on _StringsAr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -439273,8 +445220,6 @@ extension on _StringsAr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -439343,20 +445288,6 @@ extension on _StringsAr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -439461,6 +445392,126 @@ extension on _StringsDe {
         return 'Volume';
       case 'add_to_collection':
         return 'Zur Sammlung hinzufügen';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
       case 'ai_assist_failed':
@@ -439497,6 +445548,10 @@ extension on _StringsDe {
         return 'KI-Download';
       case 'ai_feature_acquire_summary':
         return 'Sag der KI, was du möchtest – Videos oder Bücher, Manga und Spiele unter Durchsuchen › Entdecken. Sie wertet die Anfrage aus und wählt passende Werke und Versionen; Videos werden dann heruntergeladen oder abonniert, bei anderen Medien musst du jeden Download bestätigen.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Gewählter Anbieter nicht verfügbar (unvollständig oder deaktiviert)';
       case 'ai_feature_audiobook_cast':
@@ -439685,6 +445740,14 @@ extension on _StringsDe {
         return ({required Object reason}) => 'Test fehlgeschlagen: ${reason}';
       case 'ai_provider_test_ok':
         return 'Verbunden';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Anbieterkonfiguration';
       case 'ai_providers_section_summary':
@@ -440036,7 +446099,7 @@ extension on _StringsDe {
       case 'anime_download_no_tasks':
         return 'Noch keine Download-Aufgaben';
       case 'anime_download_nyaa_query':
-        return 'Nyaa-Suchbegriffe';
+        return 'BT-Suchbegriffe';
       case 'anime_download_play_now':
         return 'Während des Downloads abspielen';
       case 'anime_download_play_now_fail':
@@ -440602,10 +446665,16 @@ extension on _StringsDe {
         return 'Diese Karte überschreiben';
       case 'anki_mined_action_view':
         return 'In Anki anzeigen / öffnen';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Wähle, was mit der übereinstimmenden Karte geschehen soll.';
       case 'anki_mined_card_title':
         return 'Karte bereits in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Mining-Eintrag gelöscht';
       case 'anki_mined_multiple_matches':
@@ -440618,12 +446687,16 @@ extension on _StringsDe {
         return 'Tippe auf Aktualisieren, um deine Anki-Stapel und Notiztypen zu laden.';
       case 'anki_note_open_failed':
         return 'Konnte die Karte nicht in Anki öffnen.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Notiztyp';
       case 'anki_note_viewer_empty':
         return 'Diese Karte hat keine lesbaren Felder.';
       case 'anki_note_viewer_open_in_anki':
         return 'In Anki öffnen';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Vorhandene Karte';
       case 'anki_open_no_card':
@@ -442460,6 +448533,74 @@ extension on _StringsDe {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Fushi-API-Server erneut.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Abbrechen';
       case 'card_cover_degraded_to_static':
@@ -444870,6 +451011,8 @@ extension on _StringsDe {
             'Das Feld ${field} hat ${secondField} als Ersatz-Suchbegriff verwendet.';
       case 'file_count':
         return ({required Object count}) => '${count} Dateien';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Foto nachschlagen';
       case 'floating_ball_action_clipboard':
@@ -446925,6 +453068,8 @@ extension on _StringsDe {
         return 'Nicht mehr anzeigen';
       case 'home_onboarding_card_start':
         return 'Einrichtung fortsetzen';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -452711,6 +458856,8 @@ extension on _StringsDe {
         return 'In den Vordergrund holen und Nachschlageseite öffnen';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Einen Schritt nach unten scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -454297,8 +460444,20 @@ extension on _StringsDe {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -454321,6 +460480,9 @@ extension on _StringsDe {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -454337,6 +460499,8 @@ extension on _StringsDe {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -454355,6 +460519,8 @@ extension on _StringsDe {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -454366,6 +460532,8 @@ extension on _StringsDe {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -454374,6 +460542,10 @@ extension on _StringsDe {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -455047,10 +461219,16 @@ extension on _StringsDe {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -456753,6 +462931,38 @@ extension on _StringsDe {
         return 'Nutzungsstatistiken teilen';
       case 'usage_stats_enabled_hint':
         return 'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform, den Update-Kanal, die App-Sprache, die CPU-Architektur, die Hauptversion des Betriebssystems und die Installationsquelle (z. B. App-Store oder Installer) an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert – nur das daraus ermittelte Land bzw. die Region. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Herbst';
       case 'video_air_season_spring':
@@ -456863,16 +463073,6 @@ extension on _StringsDe {
         return '10 s vor';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Filme und Serien. Öffentlicher Index, kein Konto erforderlich.';
-      case 'video_builtin_knaben_hint':
-        return 'Filme und Serien. Bündelt mehrere öffentliche Indexer.';
-      case 'video_builtin_nyaa_hint':
-        return 'Nur Anime. Filme und Serien werden von den beiden öffentlichen Indexern unten abgedeckt.';
-      case 'video_builtin_sources_hint':
-        return 'Mit der App mitgeliefert: kein Konto, kein API-Schlüssel. Deaktivieren, um sie aus Ressourcensuchen auszuschließen.';
-      case 'video_builtin_sources_title':
-        return 'Integrierte Quellen';
       case 'video_chapter_n':
         return ({required Object n}) => 'Kapitel ${n}';
       case 'video_chapters':
@@ -456938,6 +463138,10 @@ extension on _StringsDe {
         return 'Aktuellen Satz favorisieren';
       case 'video_control_fullscreen':
         return 'Vollbild';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Nächster Untertitel';
       case 'video_control_ocr_frame':
@@ -456950,6 +463154,8 @@ extension on _StringsDe {
         return 'Wiedergabe/Pause';
       case 'video_control_previous_cue':
         return 'Voriger Untertitel';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Erforderliche Bedienelemente müssen auf dem Player bleiben.';
       case 'video_control_reject_unavailable':
@@ -456958,6 +463164,8 @@ extension on _StringsDe {
         return 'Die Lautstärke kann nur auf der unteren Leiste sitzen.';
       case 'video_control_remove_from_slot':
         return 'Entfernen';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Player-Tastenlayout zurücksetzen';
       case 'video_control_screenshot':
@@ -457902,8 +464110,6 @@ extension on _StringsDe {
         return 'Erneut importieren';
       case 'video_resource_missing_title':
         return 'Video nicht verfügbar';
-      case 'video_resource_no_provider_hint':
-        return 'Diese Suche hatte keinen Anbieter zum Abfragen. Aktivieren Sie eine integrierte Quelle erneut oder fügen Sie einen Torznab-Indexer unter Einstellungen, Downloads, Externe Ressourcen- und Untertitelanbieter hinzu.';
       case 'video_resource_no_provider_title':
         return 'Kein Ressourcen-Indexer konfiguriert';
       case 'video_resource_query_failed':
@@ -458162,6 +464368,10 @@ extension on _StringsDe {
         return 'Immersiver Modus';
       case 'video_setting_immersive_mode_hint':
         return 'Steuert, was nach Drücken der seitlichen Sperrtaste verfügbar bleibt';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Standard-Untertitelsprache';
       case 'video_setting_jimaku_default_language_hint':
@@ -459768,6 +465978,13 @@ extension on _StringsDe {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -459804,6 +466021,8 @@ extension on _StringsDe {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -459820,6 +466039,8 @@ extension on _StringsDe {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -459903,6 +466124,14 @@ extension on _StringsDe {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -459973,8 +466202,6 @@ extension on _StringsDe {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -460043,20 +466270,6 @@ extension on _StringsDe {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -460161,6 +466374,126 @@ extension on _StringsEs {
         return 'Volume';
       case 'add_to_collection':
         return 'Añadir a colección';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
       case 'ai_assist_failed':
@@ -460197,6 +466530,10 @@ extension on _StringsEs {
         return 'Descarga con IA';
       case 'ai_feature_acquire_summary':
         return 'Dile a la IA lo que quieres: vídeos, o libros, manga y juegos en Explorar › Descubrir. Interpreta la solicitud y elige obras y versiones coincidentes; los vídeos se descargan o se suscriben, y los demás medios necesitan tu confirmación en cada descarga.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'El proveedor seleccionado no está disponible (incompleto o desactivado)';
       case 'ai_feature_audiobook_cast':
@@ -460385,6 +466722,14 @@ extension on _StringsEs {
         return ({required Object reason}) => 'La prueba falló: ${reason}';
       case 'ai_provider_test_ok':
         return 'Conectado';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Configuración de proveedores';
       case 'ai_providers_section_summary':
@@ -460736,7 +467081,7 @@ extension on _StringsEs {
       case 'anime_download_no_tasks':
         return 'Aún no hay tareas de descarga';
       case 'anime_download_nyaa_query':
-        return 'Términos de búsqueda en Nyaa';
+        return 'Términos de búsqueda en BT';
       case 'anime_download_play_now':
         return 'Reproducir mientras descarga';
       case 'anime_download_play_now_fail':
@@ -461297,10 +467642,16 @@ extension on _StringsEs {
         return 'Sobrescribir esta tarjeta';
       case 'anki_mined_action_view':
         return 'Ver / abrir en Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Elija qué hacer con la tarjeta coincidente.';
       case 'anki_mined_card_title':
         return 'Tarjeta ya existente en Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro de creación borrado';
       case 'anki_mined_multiple_matches':
@@ -461313,12 +467664,16 @@ extension on _StringsEs {
         return 'Toca Actualizar para cargar tus mazos y tipos de nota de Anki.';
       case 'anki_note_open_failed':
         return 'No se pudo abrir la tarjeta en Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo de nota';
       case 'anki_note_viewer_empty':
         return 'Esta tarjeta no tiene campos legibles.';
       case 'anki_note_viewer_open_in_anki':
         return 'Abrir en Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Tarjeta existente';
       case 'anki_open_no_card':
@@ -463155,6 +469510,74 @@ extension on _StringsEs {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Cancelar';
       case 'card_cover_degraded_to_static':
@@ -465560,6 +471983,8 @@ extension on _StringsEs {
             'El campo ${field} usó ${secondField} como término de búsqueda alternativo.';
       case 'file_count':
         return ({required Object count}) => '${count} archivos';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Consulta por foto';
       case 'floating_ball_action_clipboard':
@@ -467615,6 +474040,8 @@ extension on _StringsEs {
         return 'No volver a mostrar';
       case 'home_onboarding_card_start':
         return 'Continuar la configuración';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -473397,6 +479824,8 @@ extension on _StringsEs {
         return 'Traer al frente y abrir la página de consulta';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Desplazar un paso hacia abajo';
       case 'shortcut_action_global_scroll_line_up':
@@ -474983,8 +481412,20 @@ extension on _StringsEs {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -475007,6 +481448,9 @@ extension on _StringsEs {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -475023,6 +481467,8 @@ extension on _StringsEs {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -475041,6 +481487,8 @@ extension on _StringsEs {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -475052,6 +481500,8 @@ extension on _StringsEs {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -475060,6 +481510,10 @@ extension on _StringsEs {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -475733,10 +482187,16 @@ extension on _StringsEs {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -477437,6 +483897,38 @@ extension on _StringsEs {
         return 'Compartir estadísticas de uso';
       case 'usage_stats_enabled_hint':
         return 'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma, el canal de actualizaciones, el idioma de la app, la arquitectura de CPU, la versión principal del sistema y el origen de instalación (p. ej. tienda o instalador) para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda: solo se conserva el país o región que se deduce de ella. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Otoño';
       case 'video_air_season_spring':
@@ -477548,16 +484040,6 @@ extension on _StringsEs {
         return 'Adelante 10 s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Películas y series de TV. Índice público, sin cuenta necesaria.';
-      case 'video_builtin_knaben_hint':
-        return 'Películas y series de TV. Agrega varios indexadores públicos.';
-      case 'video_builtin_nyaa_hint':
-        return 'Solo anime. Películas y series de TV están cubiertas por los dos indexadores públicos de abajo.';
-      case 'video_builtin_sources_hint':
-        return 'Incluidas con la app: sin cuenta, sin clave API. Desactive una para mantenerla fuera de las búsquedas de recursos.';
-      case 'video_builtin_sources_title':
-        return 'Fuentes integradas';
       case 'video_chapter_n':
         return ({required Object n}) => 'Capítulo ${n}';
       case 'video_chapters':
@@ -477623,6 +484105,10 @@ extension on _StringsEs {
         return 'Añadir la frase actual a favoritos';
       case 'video_control_fullscreen':
         return 'Pantalla completa';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Subtítulo siguiente';
       case 'video_control_ocr_frame':
@@ -477635,6 +484121,8 @@ extension on _StringsEs {
         return 'Reproducir/Pausar';
       case 'video_control_previous_cue':
         return 'Subtítulo anterior';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Los controles obligatorios deben permanecer en el reproductor.';
       case 'video_control_reject_unavailable':
@@ -477643,6 +484131,8 @@ extension on _StringsEs {
         return 'El volumen solo puede ir en la barra inferior.';
       case 'video_control_remove_from_slot':
         return 'Quitar';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Restablecer la disposición de los botones del reproductor';
       case 'video_control_screenshot':
@@ -478585,8 +485075,6 @@ extension on _StringsEs {
         return 'Reimportar';
       case 'video_resource_missing_title':
         return 'Vídeo no disponible';
-      case 'video_resource_no_provider_hint':
-        return 'Esta búsqueda no tuvo proveedor para consultar. Reactive una fuente integrada, o añada un indexador Torznab, en Ajustes, Descargas, Proveedores externos de recursos y subtítulos.';
       case 'video_resource_no_provider_title':
         return 'Sin indexador de recursos configurado';
       case 'video_resource_query_failed':
@@ -478845,6 +485333,10 @@ extension on _StringsEs {
         return 'Modo inmersivo';
       case 'video_setting_immersive_mode_hint':
         return 'Controla qué sigue disponible tras pulsar el botón de bloqueo lateral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Idioma de subtítulos predeterminado';
       case 'video_setting_jimaku_default_language_hint':
@@ -480450,6 +486942,13 @@ extension on _StringsEs {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -480486,6 +486985,8 @@ extension on _StringsEs {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -480502,6 +487003,8 @@ extension on _StringsEs {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -480585,6 +487088,14 @@ extension on _StringsEs {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -480655,8 +487166,6 @@ extension on _StringsEs {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -480725,20 +487234,6 @@ extension on _StringsEs {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -480843,6 +487338,126 @@ extension on _StringsFr {
         return 'Volume';
       case 'add_to_collection':
         return 'Ajouter à la collection';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
       case 'ai_assist_failed':
@@ -480879,6 +487494,10 @@ extension on _StringsFr {
         return 'Téléchargement par IA';
       case 'ai_feature_acquire_summary':
         return 'Dites à l\'IA ce que vous voulez — des vidéos, ou des livres, manga et jeux dans Parcourir › Découvrir. Elle analyse la demande et choisit les œuvres et versions correspondantes ; les vidéos sont ensuite téléchargées ou suivies par abonnement, les autres médias demandent votre confirmation pour chaque téléchargement.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Fournisseur sélectionné indisponible (incomplet ou désactivé)';
       case 'ai_feature_audiobook_cast':
@@ -481069,6 +487688,14 @@ extension on _StringsFr {
         return ({required Object reason}) => 'Échec du test : ${reason}';
       case 'ai_provider_test_ok':
         return 'Connecté';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Configuration des fournisseurs';
       case 'ai_providers_section_summary':
@@ -481420,7 +488047,7 @@ extension on _StringsFr {
       case 'anime_download_no_tasks':
         return 'Aucune tâche de téléchargement';
       case 'anime_download_nyaa_query':
-        return 'Termes de recherche Nyaa';
+        return 'Termes de recherche BT';
       case 'anime_download_play_now':
         return 'Lire pendant le téléchargement';
       case 'anime_download_play_now_fail':
@@ -481982,10 +488609,16 @@ extension on _StringsFr {
         return 'Écraser cette carte';
       case 'anki_mined_action_view':
         return 'Voir / ouvrir dans Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Choisissez quoi faire avec la carte correspondante.';
       case 'anki_mined_card_title':
         return 'Carte déjà dans Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Enregistrement de création effacé';
       case 'anki_mined_multiple_matches':
@@ -481998,12 +488631,16 @@ extension on _StringsFr {
         return 'Touchez « Actualiser » pour charger vos paquets et types de notes Anki.';
       case 'anki_note_open_failed':
         return 'Impossible d\'ouvrir la carte dans Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Type de note';
       case 'anki_note_viewer_empty':
         return 'Cette carte n\'a pas de champs lisibles.';
       case 'anki_note_viewer_open_in_anki':
         return 'Ouvrir dans Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Carte existante';
       case 'anki_open_no_card':
@@ -483842,6 +490479,74 @@ extension on _StringsFr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Annuler';
       case 'card_cover_degraded_to_static':
@@ -486255,6 +492960,8 @@ extension on _StringsFr {
             'Le champ ${field} a utilisé ${secondField} comme terme de recherche de secours.';
       case 'file_count':
         return ({required Object count}) => '${count} fichiers';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Recherche par photo';
       case 'floating_ball_action_clipboard':
@@ -488311,6 +495018,8 @@ extension on _StringsFr {
         return 'Ne plus afficher';
       case 'home_onboarding_card_start':
         return 'Reprendre la configuration';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatique';
       case 'home_panel_mode_hidden':
@@ -494094,6 +500803,8 @@ extension on _StringsFr {
         return 'Mettre au premier plan et ouvrir la page de recherche';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Défiler d\'un cran vers le bas';
       case 'shortcut_action_global_scroll_line_up':
@@ -495680,8 +502391,20 @@ extension on _StringsFr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -495704,6 +502427,9 @@ extension on _StringsFr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -495720,6 +502446,8 @@ extension on _StringsFr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -495738,6 +502466,8 @@ extension on _StringsFr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -495749,6 +502479,8 @@ extension on _StringsFr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -495757,6 +502489,10 @@ extension on _StringsFr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -496430,10 +503166,16 @@ extension on _StringsFr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -498135,6 +504877,38 @@ extension on _StringsFr {
         return 'Partager les statistiques d’utilisation';
       case 'usage_stats_enabled_hint':
         return 'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme, le canal de mise à jour, la langue de l’app, l’architecture du processeur, la version majeure du système et la source d’installation (boutique ou installateur, par ex.) afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée : seul le pays ou la région qui en découle est gardé. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Automne';
       case 'video_air_season_spring':
@@ -498246,16 +505020,6 @@ extension on _StringsFr {
         return 'Avancer de 10 s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Films et séries TV. Index public, pas de compte nécessaire.';
-      case 'video_builtin_knaben_hint':
-        return 'Films et séries TV. Agrège plusieurs indexeurs publics.';
-      case 'video_builtin_nyaa_hint':
-        return 'Anime uniquement. Les films et séries TV sont couverts par les deux indexeurs publics ci-dessous.';
-      case 'video_builtin_sources_hint':
-        return 'Fournies avec l\'application : pas de compte, pas de clé API. Désactivez-en une pour l\'exclure des recherches de ressources.';
-      case 'video_builtin_sources_title':
-        return 'Sources intégrées';
       case 'video_chapter_n':
         return ({required Object n}) => 'Chapitre ${n}';
       case 'video_chapters':
@@ -498321,6 +505085,10 @@ extension on _StringsFr {
         return 'Mettre la phrase actuelle en favori';
       case 'video_control_fullscreen':
         return 'Plein écran';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sous-titre suivant';
       case 'video_control_ocr_frame':
@@ -498333,6 +505101,8 @@ extension on _StringsFr {
         return 'Lecture/Pause';
       case 'video_control_previous_cue':
         return 'Sous-titre précédent';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Les contrôles obligatoires doivent rester sur le lecteur.';
       case 'video_control_reject_unavailable':
@@ -498341,6 +505111,8 @@ extension on _StringsFr {
         return 'Le volume ne peut être placé que sur la barre du bas.';
       case 'video_control_remove_from_slot':
         return 'Retirer';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Rétablir la disposition des boutons du lecteur';
       case 'video_control_screenshot':
@@ -499284,8 +506056,6 @@ extension on _StringsFr {
         return 'Réimporter';
       case 'video_resource_missing_title':
         return 'Vidéo indisponible';
-      case 'video_resource_no_provider_hint':
-        return 'Cette recherche n\'avait aucun fournisseur. Réactivez une source intégrée, ou ajoutez un indexeur Torznab, sous Paramètres, Téléchargements, Fournisseurs de ressources et sous-titres externes.';
       case 'video_resource_no_provider_title':
         return 'Aucun indexeur de ressources configuré';
       case 'video_resource_query_failed':
@@ -499545,6 +506315,10 @@ extension on _StringsFr {
         return 'Mode immersif';
       case 'video_setting_immersive_mode_hint':
         return 'Détermine ce qui reste disponible après l\'appui sur le bouton de verrouillage latéral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Langue de sous-titres par défaut';
       case 'video_setting_jimaku_default_language_hint':
@@ -501150,6 +507924,13 @@ extension on _StringsFr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -501186,6 +507967,8 @@ extension on _StringsFr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -501202,6 +507985,8 @@ extension on _StringsFr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -501285,6 +508070,14 @@ extension on _StringsFr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -501355,8 +508148,6 @@ extension on _StringsFr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -501425,20 +508216,6 @@ extension on _StringsFr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -501543,6 +508320,126 @@ extension on _StringsId {
         return 'Volume';
       case 'add_to_collection':
         return 'Tambah ke koleksi';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
       case 'ai_assist_failed':
@@ -501578,6 +508475,10 @@ extension on _StringsId {
         return 'Unduhan AI';
       case 'ai_feature_acquire_summary':
         return 'Beri tahu AI apa yang Anda inginkan — video, atau buku, manga, dan game di Jelajahi › Temukan. AI mengurai permintaan dan memilih karya dan versi yang cocok; video lalu diunduh atau dilanggan, media lain memerlukan konfirmasi Anda untuk setiap unduhan.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Penyedia terpilih tidak tersedia (tidak lengkap atau dinonaktifkan)';
       case 'ai_feature_audiobook_cast':
@@ -501766,6 +508667,14 @@ extension on _StringsId {
         return ({required Object reason}) => 'Pengujian gagal: ${reason}';
       case 'ai_provider_test_ok':
         return 'Terhubung';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Konfigurasi penyedia';
       case 'ai_providers_section_summary':
@@ -502117,7 +509026,7 @@ extension on _StringsId {
       case 'anime_download_no_tasks':
         return 'Belum ada tugas unduhan';
       case 'anime_download_nyaa_query':
-        return 'Kata kunci pencarian Nyaa';
+        return 'Kata kunci pencarian BT';
       case 'anime_download_play_now':
         return 'Putar sambil mengunduh';
       case 'anime_download_play_now_fail':
@@ -502679,10 +509588,16 @@ extension on _StringsId {
         return 'Timpa kartu ini';
       case 'anki_mined_action_view':
         return 'Lihat / buka di Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Pilih apa yang dilakukan dengan kartu yang cocok.';
       case 'anki_mined_card_title':
         return 'Kartu sudah ada di Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Catatan mining dihapus';
       case 'anki_mined_multiple_matches':
@@ -502695,12 +509610,16 @@ extension on _StringsId {
         return 'Ketuk Segarkan untuk memuat dek dan tipe catatan Anki kamu.';
       case 'anki_note_open_failed':
         return 'Tidak dapat membuka kartu di Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipe Catatan';
       case 'anki_note_viewer_empty':
         return 'Kartu ini tidak memiliki bidang yang bisa dibaca.';
       case 'anki_note_viewer_open_in_anki':
         return 'Buka di Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Kartu yang sudah ada';
       case 'anki_open_no_card':
@@ -504528,6 +511447,74 @@ extension on _StringsId {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Batal';
       case 'card_cover_degraded_to_static':
@@ -506931,6 +513918,8 @@ extension on _StringsId {
             'Field ${field} menggunakan ${secondField} sebagai kata pencarian cadangan.';
       case 'file_count':
         return ({required Object count}) => '${count} file';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Pencarian foto';
       case 'floating_ball_action_clipboard':
@@ -508985,6 +515974,8 @@ extension on _StringsId {
         return 'Jangan tampilkan lagi';
       case 'home_onboarding_card_start':
         return 'Lanjutkan penyiapan';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Otomatis';
       case 'home_panel_mode_hidden':
@@ -514751,6 +521742,8 @@ extension on _StringsId {
         return 'Bawa ke depan dan buka halaman pencarian';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Gulir turun satu langkah';
       case 'shortcut_action_global_scroll_line_up':
@@ -516337,8 +523330,20 @@ extension on _StringsId {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -516361,6 +523366,9 @@ extension on _StringsId {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -516377,6 +523385,8 @@ extension on _StringsId {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -516395,6 +523405,8 @@ extension on _StringsId {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -516406,6 +523418,8 @@ extension on _StringsId {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -516414,6 +523428,10 @@ extension on _StringsId {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -517087,10 +524105,16 @@ extension on _StringsId {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -518786,6 +525810,38 @@ extension on _StringsId {
         return 'Bagikan statistik penggunaan';
       case 'usage_stats_enabled_hint':
         return 'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, kanal pembaruan, bahasa aplikasi, arsitektur CPU, versi utama sistem operasi, dan sumber instalasi (misalnya toko aplikasi atau penginstal) ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan — hanya negara atau wilayah yang ditentukan darinya. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Musim gugur';
       case 'video_air_season_spring':
@@ -518896,16 +525952,6 @@ extension on _StringsId {
         return 'Maju 10d';
       case 'video_bottom_seek_forward_label':
         return '+10d';
-      case 'video_builtin_apibay_hint':
-        return 'Film dan acara TV. Indeks publik, tidak perlu akun.';
-      case 'video_builtin_knaben_hint':
-        return 'Film dan acara TV. Mengagregasi beberapa indexer publik.';
-      case 'video_builtin_nyaa_hint':
-        return 'Hanya anime. Film dan acara TV dicakup oleh dua indexer publik di bawah.';
-      case 'video_builtin_sources_hint':
-        return 'Dikirimkan bersama aplikasi: tanpa akun, tanpa kunci API. Nonaktifkan satu untuk mengecualikannya dari pencarian sumber daya.';
-      case 'video_builtin_sources_title':
-        return 'Sumber bawaan';
       case 'video_chapter_n':
         return ({required Object n}) => 'Bab ${n}';
       case 'video_chapters':
@@ -518970,6 +526016,10 @@ extension on _StringsId {
         return 'Favoritkan kalimat saat ini';
       case 'video_control_fullscreen':
         return 'Layar penuh';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Subtitle berikutnya';
       case 'video_control_ocr_frame':
@@ -518982,6 +526032,8 @@ extension on _StringsId {
         return 'Putar/Jeda';
       case 'video_control_previous_cue':
         return 'Subtitle sebelumnya';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Kontrol wajib harus tetap di pemutar.';
       case 'video_control_reject_unavailable':
@@ -518990,6 +526042,8 @@ extension on _StringsId {
         return 'Volume hanya bisa berada di bilah bawah.';
       case 'video_control_remove_from_slot':
         return 'Pindahkan keluar';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Setel ulang tata letak tombol pemutar';
       case 'video_control_screenshot':
@@ -519931,8 +526985,6 @@ extension on _StringsId {
         return 'Impor ulang';
       case 'video_resource_missing_title':
         return 'Video tidak tersedia';
-      case 'video_resource_no_provider_hint':
-        return 'Pencarian ini tidak memiliki penyedia untuk dikueri. Aktifkan kembali sumber bawaan, atau tambahkan indexer Torznab, di Pengaturan, Unduhan, Penyedia sumber daya dan subtitle eksternal.';
       case 'video_resource_no_provider_title':
         return 'Tidak ada indexer sumber daya yang dikonfigurasi';
       case 'video_resource_query_failed':
@@ -520190,6 +527242,10 @@ extension on _StringsId {
         return 'Mode imersif';
       case 'video_setting_immersive_mode_hint':
         return 'Mengatur apa yang tetap tersedia setelah menekan tombol kunci samping';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Bahasa subtitle default';
       case 'video_setting_jimaku_default_language_hint':
@@ -521794,6 +528850,13 @@ extension on _StringsId {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -521830,6 +528893,8 @@ extension on _StringsId {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -521846,6 +528911,8 @@ extension on _StringsId {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -521929,6 +528996,14 @@ extension on _StringsId {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -521999,8 +529074,6 @@ extension on _StringsId {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -522069,20 +529142,6 @@ extension on _StringsId {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -522187,6 +529246,126 @@ extension on _StringsIt {
         return 'Volume';
       case 'add_to_collection':
         return 'Aggiungi alla raccolta';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
       case 'ai_assist_failed':
@@ -522223,6 +529402,10 @@ extension on _StringsIt {
         return 'Download con IA';
       case 'ai_feature_acquire_summary':
         return 'Dì all\'IA cosa vuoi — video, oppure libri, manga e giochi in Sfoglia › Scopri. Analizza la richiesta e sceglie opere e versioni corrispondenti; i video vengono poi scaricati o seguiti con un\'iscrizione, mentre per gli altri media serve la tua conferma a ogni download.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Il provider selezionato non è disponibile (incompleto o disattivato)';
       case 'ai_feature_audiobook_cast':
@@ -522411,6 +529594,14 @@ extension on _StringsIt {
         return ({required Object reason}) => 'Prova non riuscita: ${reason}';
       case 'ai_provider_test_ok':
         return 'Connesso';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Configurazione dei provider';
       case 'ai_providers_section_summary':
@@ -522762,7 +529953,7 @@ extension on _StringsIt {
       case 'anime_download_no_tasks':
         return 'Nessun download in corso';
       case 'anime_download_nyaa_query':
-        return 'Termini di ricerca Nyaa';
+        return 'Termini di ricerca BT';
       case 'anime_download_play_now':
         return 'Riproduci durante il download';
       case 'anime_download_play_now_fail':
@@ -523324,10 +530515,16 @@ extension on _StringsIt {
         return 'Sovrascrivi questa carta';
       case 'anki_mined_action_view':
         return 'Visualizza / apri in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Scegli cosa fare con la carta corrispondente.';
       case 'anki_mined_card_title':
         return 'Carta già in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro del mining cancellato';
       case 'anki_mined_multiple_matches':
@@ -523340,12 +530537,16 @@ extension on _StringsIt {
         return 'Tocca Aggiorna per caricare i tuoi mazzi e tipi di nota di Anki.';
       case 'anki_note_open_failed':
         return 'Impossibile aprire la carta in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo di nota';
       case 'anki_note_viewer_empty':
         return 'Questa carta non ha campi leggibili.';
       case 'anki_note_viewer_open_in_anki':
         return 'Apri in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Carta esistente';
       case 'anki_open_no_card':
@@ -525178,6 +532379,74 @@ extension on _StringsIt {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Annulla';
       case 'card_cover_degraded_to_static':
@@ -527585,6 +534854,8 @@ extension on _StringsIt {
             'Il campo ${field} ha usato ${secondField} come termine di ricerca di riserva.';
       case 'file_count':
         return ({required Object count}) => '${count} file';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Ricerca da foto';
       case 'floating_ball_action_clipboard':
@@ -529640,6 +536911,8 @@ extension on _StringsIt {
         return 'Non mostrare più';
       case 'home_onboarding_card_start':
         return 'Continua la configurazione';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatico';
       case 'home_panel_mode_hidden':
@@ -535417,6 +542690,8 @@ extension on _StringsIt {
         return 'Porta in primo piano e apri la pagina di ricerca';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scorri in basso di un passo';
       case 'shortcut_action_global_scroll_line_up':
@@ -537003,8 +544278,20 @@ extension on _StringsIt {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -537027,6 +544314,9 @@ extension on _StringsIt {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -537043,6 +544333,8 @@ extension on _StringsIt {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -537061,6 +544353,8 @@ extension on _StringsIt {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -537072,6 +544366,8 @@ extension on _StringsIt {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -537080,6 +544376,10 @@ extension on _StringsIt {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -537753,10 +545053,16 @@ extension on _StringsIt {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -539461,6 +546767,38 @@ extension on _StringsIt {
         return 'Condividi statistiche di utilizzo';
       case 'usage_stats_enabled_hint':
         return 'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma, il canale di aggiornamento, la lingua dell\'app, l\'architettura della CPU, la versione principale del sistema e l\'origine dell\'installazione (es. store o programma di installazione), così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato: si conserva solo il paese o la regione che ne deriva. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Autunno';
       case 'video_air_season_spring':
@@ -539572,16 +546910,6 @@ extension on _StringsIt {
         return 'Avanti 10s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Film e serie TV. Indice pubblico, nessun account necessario.';
-      case 'video_builtin_knaben_hint':
-        return 'Film e serie TV. Aggrega diversi indexer pubblici.';
-      case 'video_builtin_nyaa_hint':
-        return 'Solo anime. Film e serie TV sono coperti dai due indexer pubblici sotto.';
-      case 'video_builtin_sources_hint':
-        return 'Incluse nell\'app: nessun account, nessuna chiave API. Disattivane una per escluderla dalle ricerche di risorse.';
-      case 'video_builtin_sources_title':
-        return 'Fonti integrate';
       case 'video_chapter_n':
         return ({required Object n}) => 'Capitolo ${n}';
       case 'video_chapters':
@@ -539647,6 +546975,10 @@ extension on _StringsIt {
         return 'Aggiungi la frase corrente ai preferiti';
       case 'video_control_fullscreen':
         return 'Schermo intero';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sottotitolo successivo';
       case 'video_control_ocr_frame':
@@ -539659,6 +546991,8 @@ extension on _StringsIt {
         return 'Riproduci/Pausa';
       case 'video_control_previous_cue':
         return 'Sottotitolo precedente';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'I controlli obbligatori devono restare sul lettore.';
       case 'video_control_reject_unavailable':
@@ -539667,6 +547001,8 @@ extension on _StringsIt {
         return 'Il volume può stare solo sulla barra inferiore.';
       case 'video_control_remove_from_slot':
         return 'Rimuovi';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Ripristina il layout dei pulsanti del lettore';
       case 'video_control_screenshot':
@@ -540608,8 +547944,6 @@ extension on _StringsIt {
         return 'Reimporta';
       case 'video_resource_missing_title':
         return 'Video non disponibile';
-      case 'video_resource_no_provider_hint':
-        return 'Questa ricerca non aveva un provider da interrogare. Riabilita una fonte integrata, o aggiungi un indexer Torznab, in Impostazioni, Download, Provider di risorse e sottotitoli esterni.';
       case 'video_resource_no_provider_title':
         return 'Nessun indexer di risorse configurato';
       case 'video_resource_query_failed':
@@ -540868,6 +548202,10 @@ extension on _StringsIt {
         return 'Modalità immersiva';
       case 'video_setting_immersive_mode_hint':
         return 'Controlla cosa resta disponibile dopo aver premuto il pulsante di blocco laterale';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Lingua sottotitoli predefinita';
       case 'video_setting_jimaku_default_language_hint':
@@ -542474,6 +549812,13 @@ extension on _StringsIt {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -542510,6 +549855,8 @@ extension on _StringsIt {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -542526,6 +549873,8 @@ extension on _StringsIt {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -542609,6 +549958,14 @@ extension on _StringsIt {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -542679,8 +550036,6 @@ extension on _StringsIt {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -542749,20 +550104,6 @@ extension on _StringsIt {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -542867,6 +550208,126 @@ extension on _StringsJa {
         return 'Volume';
       case 'add_to_collection':
         return 'コレクションに追加';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
       case 'ai_assist_failed':
@@ -542901,6 +550362,10 @@ extension on _StringsJa {
         return 'AI ダウンロード';
       case 'ai_feature_acquire_summary':
         return '欲しいものを AI に伝えます：動画、または「ブラウズ › 発見」の小説・漫画・ゲーム。要望を解析し、一致する作品とバージョンから選びます。動画はそのままダウンロードまたは購読し、それ以外は毎回ダウンロード前に確認します。';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '選択したプロバイダーを利用できません（設定が不完全、または無効）';
       case 'ai_feature_audiobook_cast':
@@ -543089,6 +550554,14 @@ extension on _StringsJa {
         return ({required Object reason}) => 'テストに失敗しました：${reason}';
       case 'ai_provider_test_ok':
         return '接続しました';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'プロバイダー設定';
       case 'ai_providers_section_summary':
@@ -543437,7 +550910,7 @@ extension on _StringsJa {
       case 'anime_download_no_tasks':
         return 'ダウンロードタスクはまだありません';
       case 'anime_download_nyaa_query':
-        return 'Nyaa 検索語';
+        return 'BT 検索語';
       case 'anime_download_play_now':
         return 'ダウンロード中に再生';
       case 'anime_download_play_now_fail':
@@ -543994,10 +551467,16 @@ extension on _StringsJa {
         return 'このカードを上書き';
       case 'anki_mined_action_view':
         return '表示 / Anki で開く';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '一致するカードの処理方法を選択してください。';
       case 'anki_mined_card_title':
         return 'Anki にカードが既にあります';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'カード作成の記録を消去しました';
       case 'anki_mined_multiple_matches':
@@ -544010,12 +551489,16 @@ extension on _StringsJa {
         return '「更新」をタップして Anki のデッキとノートタイプを読み込んでください。';
       case 'anki_note_open_failed':
         return 'Anki でカードを開けませんでした。';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'ノートタイプ';
       case 'anki_note_viewer_empty':
         return 'このカードには読み取り可能なフィールドがありません。';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki で開く';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '既存のカード';
       case 'anki_open_no_card':
@@ -545829,6 +553312,74 @@ extension on _StringsJa {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi API サーバーを再度有効にしてください。';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'キャンセル';
       case 'card_cover_degraded_to_static':
@@ -548220,6 +555771,8 @@ extension on _StringsJa {
             '${field} フィールドは ${secondField} をフォールバック検索語として使用しました。';
       case 'file_count':
         return ({required Object count}) => '${count} ファイル';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '撮影して検索';
       case 'floating_ball_action_clipboard':
@@ -550274,6 +557827,8 @@ extension on _StringsJa {
         return '今後表示しない';
       case 'home_onboarding_card_start':
         return 'セットアップを続ける';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -556017,6 +563572,8 @@ extension on _StringsJa {
         return '前面に出して辞書検索ページを開く';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '1行下にスクロール';
       case 'shortcut_action_global_scroll_line_up':
@@ -557603,8 +565160,20 @@ extension on _StringsJa {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -557627,6 +565196,9 @@ extension on _StringsJa {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -557643,6 +565215,8 @@ extension on _StringsJa {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -557661,6 +565235,8 @@ extension on _StringsJa {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -557672,6 +565248,8 @@ extension on _StringsJa {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -557680,6 +565258,10 @@ extension on _StringsJa {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -558353,10 +565935,16 @@ extension on _StringsJa {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -560036,6 +567624,38 @@ extension on _StringsJa {
         return '利用統計を送信';
       case 'usage_stats_enabled_hint':
         return '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネル・アプリの表示言語・CPU アーキテクチャ・OS のメジャーバージョン・インストール元（ストアやインストーラーなど）を fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません（そこから判定した国・地域のみ記録します）。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -560145,16 +567765,6 @@ extension on _StringsJa {
         return '10 秒進む';
       case 'video_bottom_seek_forward_label':
         return '+10秒';
-      case 'video_builtin_apibay_hint':
-        return '映画とテレビ番組。公開インデックス、アカウント不要。';
-      case 'video_builtin_knaben_hint':
-        return '映画とテレビ番組。複数の公開インデクサーを集約。';
-      case 'video_builtin_nyaa_hint':
-        return 'アニメのみ。映画とテレビ番組は下の2つの公開インデクサーでカバーされます。';
-      case 'video_builtin_sources_hint':
-        return 'アプリに同梱：アカウントもAPIキーも不要。オフにするとリソース検索から除外されます。';
-      case 'video_builtin_sources_title':
-        return '組み込みソース';
       case 'video_chapter_n':
         return ({required Object n}) => 'チャプター ${n}';
       case 'video_chapters':
@@ -560218,6 +567828,10 @@ extension on _StringsJa {
         return '現在の文をお気に入りに登録';
       case 'video_control_fullscreen':
         return '全画面';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '次の字幕';
       case 'video_control_ocr_frame':
@@ -560230,6 +567844,8 @@ extension on _StringsJa {
         return '再生／一時停止';
       case 'video_control_previous_cue':
         return '前の字幕';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '必須の操作ボタンはプレーヤー上に残す必要があります。';
       case 'video_control_reject_unavailable':
@@ -560238,6 +567854,8 @@ extension on _StringsJa {
         return '音量は下部バーにのみ配置できます。';
       case 'video_control_remove_from_slot':
         return '外す';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'プレーヤーのボタン配置を初期化';
       case 'video_control_screenshot':
@@ -561170,8 +568788,6 @@ extension on _StringsJa {
         return '再インポート';
       case 'video_resource_missing_title':
         return '動画が利用できません';
-      case 'video_resource_no_provider_hint':
-        return 'この検索にはクエリ先のプロバイダーがありませんでした。組み込みソースを再有効化するか、設定 → ダウンロード → 外部リソース・字幕プロバイダーでTorznabインデクサーを追加してください。';
       case 'video_resource_no_provider_title':
         return 'リソースインデクサーが未設定';
       case 'video_resource_query_failed':
@@ -561428,6 +569044,10 @@ extension on _StringsJa {
         return 'イマーシブモード';
       case 'video_setting_immersive_mode_hint':
         return 'サイドのロックボタンを押した後も使える操作を制御します';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'デフォルト字幕言語';
       case 'video_setting_jimaku_default_language_hint':
@@ -563022,6 +570642,13 @@ extension on _StringsJa {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -563058,6 +570685,8 @@ extension on _StringsJa {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return '保護されたコンテンツ';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -563074,6 +570703,8 @@ extension on _StringsJa {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return '保護されたコンテンツの再生';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -563157,6 +570788,14 @@ extension on _StringsJa {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -563227,8 +570866,6 @@ extension on _StringsJa {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -563295,20 +570932,6 @@ extension on _StringsJa {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -563412,6 +571035,126 @@ extension on _StringsKo {
         return 'Volume';
       case 'add_to_collection':
         return '컬렉션에 추가';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
       case 'ai_assist_failed':
@@ -563446,6 +571189,10 @@ extension on _StringsKo {
         return 'AI 다운로드';
       case 'ai_feature_acquire_summary':
         return '원하는 것을 AI에게 알려 주세요. 비디오, 또는 찾아보기 › 발견의 책, 만화, 게임이 해당됩니다. 요청을 분석해 알맞은 작품과 버전을 고르며, 비디오는 다운로드하거나 구독하고 다른 미디어는 다운로드마다 확인이 필요합니다.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '선택한 제공자를 사용할 수 없음(설정 미완료 또는 비활성화됨)';
       case 'ai_feature_audiobook_cast':
@@ -563634,6 +571381,14 @@ extension on _StringsKo {
         return ({required Object reason}) => '테스트 실패: ${reason}';
       case 'ai_provider_test_ok':
         return '연결됨';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return '제공자 설정';
       case 'ai_providers_section_summary':
@@ -563983,7 +571738,7 @@ extension on _StringsKo {
       case 'anime_download_no_tasks':
         return '다운로드 작업이 없습니다';
       case 'anime_download_nyaa_query':
-        return 'Nyaa 검색어';
+        return 'BT 검색어';
       case 'anime_download_play_now':
         return '다운로드하면서 재생';
       case 'anime_download_play_now_fail':
@@ -564538,10 +572293,16 @@ extension on _StringsKo {
         return '이 카드 덮어쓰기';
       case 'anki_mined_action_view':
         return 'Anki에서 보기 / 열기';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '일치하는 카드의 처리 방법을 선택하세요.';
       case 'anki_mined_card_title':
         return 'Anki에 이미 있는 카드';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return '마이닝 기록을 지웠습니다';
       case 'anki_mined_multiple_matches':
@@ -564554,12 +572315,16 @@ extension on _StringsKo {
         return '「새로고침」을 눌러 Anki 덱과 노트 유형을 불러오세요.';
       case 'anki_note_open_failed':
         return 'Anki에서 카드를 열 수 없습니다.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return '노트 유형';
       case 'anki_note_viewer_empty':
         return '이 카드에 읽을 수 있는 필드가 없습니다.';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki에서 열기';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '기존 카드';
       case 'anki_open_no_card':
@@ -566374,6 +574139,74 @@ extension on _StringsKo {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi API 서버를 다시 활성화하세요.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return '취소';
       case 'card_cover_degraded_to_static':
@@ -568769,6 +576602,8 @@ extension on _StringsKo {
             '${field} 필드가 ${secondField}을(를) 대체 검색어로 사용했습니다.';
       case 'file_count':
         return ({required Object count}) => '${count}개 파일';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '사진으로 검색';
       case 'floating_ball_action_clipboard':
@@ -570822,6 +578657,8 @@ extension on _StringsKo {
         return '다시 표시 안 함';
       case 'home_onboarding_card_start':
         return '설정 계속하기';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '자동';
       case 'home_panel_mode_hidden':
@@ -576566,6 +584403,8 @@ extension on _StringsKo {
         return '앞으로 가져와 검색 페이지 열기';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '한 단계 아래로 스크롤';
       case 'shortcut_action_global_scroll_line_up':
@@ -578152,8 +585991,20 @@ extension on _StringsKo {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -578176,6 +586027,9 @@ extension on _StringsKo {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -578192,6 +586046,8 @@ extension on _StringsKo {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -578210,6 +586066,8 @@ extension on _StringsKo {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -578221,6 +586079,8 @@ extension on _StringsKo {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -578229,6 +586089,10 @@ extension on _StringsKo {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -578902,10 +586766,16 @@ extension on _StringsKo {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -580587,6 +588457,38 @@ extension on _StringsKo {
         return '사용 통계 보내기';
       case 'usage_stats_enabled_hint':
         return '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널, 앱 언어, CPU 아키텍처, OS 주 버전, 설치 경로(앱 스토어·설치 프로그램 등)를 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않으며, 이를 통해 판별한 국가/지역만 기록합니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return '가을';
       case 'video_air_season_spring':
@@ -580696,16 +588598,6 @@ extension on _StringsKo {
         return '10초 앞으로';
       case 'video_bottom_seek_forward_label':
         return '+10초';
-      case 'video_builtin_apibay_hint':
-        return '영화 및 TV 프로그램. 공개 인덱스, 계정 불필요.';
-      case 'video_builtin_knaben_hint':
-        return '영화 및 TV 프로그램. 여러 공개 인덱서를 통합합니다.';
-      case 'video_builtin_nyaa_hint':
-        return '애니메이션 전용. 영화 및 TV 프로그램은 아래 두 공개 인덱서에서 다룹니다.';
-      case 'video_builtin_sources_hint':
-        return '앱에 내장: 계정이나 API 키 불필요. 하나를 끄면 리소스 검색에서 제외됩니다.';
-      case 'video_builtin_sources_title':
-        return '내장 소스';
       case 'video_chapter_n':
         return ({required Object n}) => '챕터 ${n}';
       case 'video_chapters':
@@ -580769,6 +588661,10 @@ extension on _StringsKo {
         return '현재 문장 즐겨찾기';
       case 'video_control_fullscreen':
         return '전체 화면';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '다음 자막';
       case 'video_control_ocr_frame':
@@ -580781,6 +588677,8 @@ extension on _StringsKo {
         return '재생/일시정지';
       case 'video_control_previous_cue':
         return '이전 자막';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '필수 조작은 플레이어에 남아 있어야 합니다.';
       case 'video_control_reject_unavailable':
@@ -580789,6 +588687,8 @@ extension on _StringsKo {
         return '음량은 하단 바에만 둘 수 있습니다.';
       case 'video_control_remove_from_slot':
         return '빼내기';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return '플레이어 버튼 배치 초기화';
       case 'video_control_screenshot':
@@ -581726,8 +589626,6 @@ extension on _StringsKo {
         return '다시 가져오기';
       case 'video_resource_missing_title':
         return '동영상을 사용할 수 없음';
-      case 'video_resource_no_provider_hint':
-        return '이 검색에 쿼리할 제공자가 없습니다. 설정 > 다운로드 > 외부 리소스 및 자막 제공자에서 내장 소스를 다시 활성화하거나 Torznab 인덱서를 추가하세요.';
       case 'video_resource_no_provider_title':
         return '리소스 인덱서가 설정되지 않았습니다';
       case 'video_resource_query_failed':
@@ -581983,6 +589881,10 @@ extension on _StringsKo {
         return '몰입 모드';
       case 'video_setting_immersive_mode_hint':
         return '측면 잠금 버튼을 누른 뒤에도 어떤 조작이 가능한지 제어합니다';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return '기본 자막 언어';
       case 'video_setting_jimaku_default_language_hint':
@@ -583583,6 +591485,13 @@ extension on _StringsKo {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -583619,6 +591528,8 @@ extension on _StringsKo {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -583635,6 +591546,8 @@ extension on _StringsKo {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -583718,6 +591631,14 @@ extension on _StringsKo {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -583788,8 +591709,6 @@ extension on _StringsKo {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -583857,20 +591776,6 @@ extension on _StringsKo {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -583973,6 +591878,126 @@ extension on _StringsNl {
         return 'Volume';
       case 'add_to_collection':
         return 'Aan collectie toevoegen';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
       case 'ai_assist_failed':
@@ -584008,6 +592033,10 @@ extension on _StringsNl {
         return 'AI-download';
       case 'ai_feature_acquire_summary':
         return 'Vertel de AI wat je wilt — video\'s, of boeken, manga en games in Bladeren › Ontdekken. Het verzoek wordt geanalyseerd en passende werken en versies worden gekozen; video\'s worden daarna gedownload of geabonneerd, bij andere media is voor elke download jouw bevestiging nodig.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Geselecteerde provider niet beschikbaar (onvolledig of uitgeschakeld)';
       case 'ai_feature_audiobook_cast':
@@ -584196,6 +592225,14 @@ extension on _StringsNl {
         return ({required Object reason}) => 'Test mislukt: ${reason}';
       case 'ai_provider_test_ok':
         return 'Verbonden';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Providerconfiguratie';
       case 'ai_providers_section_summary':
@@ -584549,7 +592586,7 @@ extension on _StringsNl {
       case 'anime_download_no_tasks':
         return 'Nog geen downloadtaken';
       case 'anime_download_nyaa_query':
-        return 'Nyaa zoektermen';
+        return 'BT zoektermen';
       case 'anime_download_play_now':
         return 'Afspelen tijdens downloaden';
       case 'anime_download_play_now_fail':
@@ -585111,10 +593148,16 @@ extension on _StringsNl {
         return 'Deze kaart overschrijven';
       case 'anki_mined_action_view':
         return 'Bekijken / openen in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Kies wat je wilt doen met de overeenkomende kaart.';
       case 'anki_mined_card_title':
         return 'Kaart al in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Miningrecord gewist';
       case 'anki_mined_multiple_matches':
@@ -585127,12 +593170,16 @@ extension on _StringsNl {
         return 'Tik op Vernieuwen om je Anki-decks en notitietypen te laden.';
       case 'anki_note_open_failed':
         return 'Kon de kaart niet openen in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Notitietype';
       case 'anki_note_viewer_empty':
         return 'Deze kaart heeft geen leesbare velden.';
       case 'anki_note_viewer_open_in_anki':
         return 'Openen in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Bestaande kaart';
       case 'anki_open_no_card':
@@ -586962,6 +595009,74 @@ extension on _StringsNl {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Fushi API-server opnieuw in.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Annuleren';
       case 'card_cover_degraded_to_static':
@@ -589369,6 +597484,8 @@ extension on _StringsNl {
             'Het veld ${field} gebruikte ${secondField} als terugvalzoekterm.';
       case 'file_count':
         return ({required Object count}) => '${count} bestanden';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Opzoeken via foto';
       case 'floating_ball_action_clipboard':
@@ -591423,6 +599540,8 @@ extension on _StringsNl {
         return 'Niet meer tonen';
       case 'home_onboarding_card_start':
         return 'Instellen hervatten';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -597205,6 +605324,8 @@ extension on _StringsNl {
         return 'Naar voren halen en opzoekpagina openen';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Één stap omlaag scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -598791,8 +606912,20 @@ extension on _StringsNl {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -598815,6 +606948,9 @@ extension on _StringsNl {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -598831,6 +606967,8 @@ extension on _StringsNl {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -598849,6 +606987,8 @@ extension on _StringsNl {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -598860,6 +607000,8 @@ extension on _StringsNl {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -598868,6 +607010,10 @@ extension on _StringsNl {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -599541,10 +607687,16 @@ extension on _StringsNl {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -601241,6 +609393,38 @@ extension on _StringsNl {
         return 'Gebruiksstatistieken delen';
       case 'usage_stats_enabled_hint':
         return 'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform, het updatekanaal, de app-taal, de CPU-architectuur, de hoofdversie van het besturingssysteem en de installatiebron (bijv. app-winkel of installatieprogramma) naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen; alleen het daaruit afgeleide land of de regio wordt bewaard. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Herfst';
       case 'video_air_season_spring':
@@ -601351,16 +609535,6 @@ extension on _StringsNl {
         return '10s vooruit';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Films en tv-series. Openbare index, geen account nodig.';
-      case 'video_builtin_knaben_hint':
-        return 'Films en tv-series. Aggregeert meerdere openbare indexers.';
-      case 'video_builtin_nyaa_hint':
-        return 'Alleen anime. Films en tv-series worden gedekt door de twee onderstaande openbare indexers.';
-      case 'video_builtin_sources_hint':
-        return 'Meegeleverd met de app: geen account, geen API-sleutel. Schakel er een uit om deze buiten resource-zoekopdrachten te houden.';
-      case 'video_builtin_sources_title':
-        return 'Ingebouwde bronnen';
       case 'video_chapter_n':
         return ({required Object n}) => 'Hoofdstuk ${n}';
       case 'video_chapters':
@@ -601426,6 +609600,10 @@ extension on _StringsNl {
         return 'Huidige zin toevoegen aan favorieten';
       case 'video_control_fullscreen':
         return 'Volledig scherm';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Volgende ondertitel';
       case 'video_control_ocr_frame':
@@ -601438,6 +609616,8 @@ extension on _StringsNl {
         return 'Afspelen/Pauzeren';
       case 'video_control_previous_cue':
         return 'Vorige ondertitel';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Vereiste bedieningselementen moeten op de speler blijven.';
       case 'video_control_reject_unavailable':
@@ -601446,6 +609626,8 @@ extension on _StringsNl {
         return 'Het volume kan alleen op de onderbalk staan.';
       case 'video_control_remove_from_slot':
         return 'Verwijderen';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Spelerknopindeling herstellen';
       case 'video_control_screenshot':
@@ -602388,8 +610570,6 @@ extension on _StringsNl {
         return 'Opnieuw importeren';
       case 'video_resource_missing_title':
         return 'Video niet beschikbaar';
-      case 'video_resource_no_provider_hint':
-        return 'Deze zoekopdracht had geen provider om te bevragen. Schakel een ingebouwde bron opnieuw in, of voeg een Torznab-indexer toe, via Instellingen, Downloads, Externe resource- en ondertitelproviders.';
       case 'video_resource_no_provider_title':
         return 'Geen resource-indexer geconfigureerd';
       case 'video_resource_query_failed':
@@ -602649,6 +610829,10 @@ extension on _StringsNl {
         return 'Immersieve modus';
       case 'video_setting_immersive_mode_hint':
         return 'Bepaalt wat beschikbaar blijft na het indrukken van de vergrendelknop aan de zijkant';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Standaard ondertiteltaal';
       case 'video_setting_jimaku_default_language_hint':
@@ -604255,6 +612439,13 @@ extension on _StringsNl {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -604291,6 +612482,8 @@ extension on _StringsNl {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -604307,6 +612500,8 @@ extension on _StringsNl {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -604390,6 +612585,14 @@ extension on _StringsNl {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -604460,8 +612663,6 @@ extension on _StringsNl {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -604530,20 +612731,6 @@ extension on _StringsNl {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -604648,6 +612835,126 @@ extension on _StringsPtBr {
         return 'Volume';
       case 'add_to_collection':
         return 'Adicionar à coleção';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
       case 'ai_assist_failed':
@@ -604684,6 +612991,10 @@ extension on _StringsPtBr {
         return 'Download com IA';
       case 'ai_feature_acquire_summary':
         return 'Diga à IA o que você quer — vídeos, ou livros, mangás e jogos em Navegar › Descobrir. Ela interpreta o pedido e escolhe obras e versões correspondentes; os vídeos são então baixados ou assinados, e as outras mídias precisam da sua confirmação a cada download.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Provedor selecionado indisponível (incompleto ou desativado)';
       case 'ai_feature_audiobook_cast':
@@ -604872,6 +613183,14 @@ extension on _StringsPtBr {
         return ({required Object reason}) => 'Falha no teste: ${reason}';
       case 'ai_provider_test_ok':
         return 'Conectado';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Configuração de provedores';
       case 'ai_providers_section_summary':
@@ -605223,7 +613542,7 @@ extension on _StringsPtBr {
       case 'anime_download_no_tasks':
         return 'Nenhuma tarefa de download ainda';
       case 'anime_download_nyaa_query':
-        return 'Termos de busca no Nyaa';
+        return 'Termos de busca no BT';
       case 'anime_download_play_now':
         return 'Assistir durante o download';
       case 'anime_download_play_now_fail':
@@ -605785,10 +614104,16 @@ extension on _StringsPtBr {
         return 'Sobrescrever este cartão';
       case 'anki_mined_action_view':
         return 'Ver / abrir no Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Escolha o que fazer com o cartão correspondente.';
       case 'anki_mined_card_title':
         return 'Cartão já existe no Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro de mineração apagado';
       case 'anki_mined_multiple_matches':
@@ -605801,12 +614126,16 @@ extension on _StringsPtBr {
         return 'Toque em Atualizar para carregar seus baralhos e tipos de nota do Anki.';
       case 'anki_note_open_failed':
         return 'Não foi possível abrir o cartão no Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo de nota';
       case 'anki_note_viewer_empty':
         return 'Este cartão não tem campos legíveis.';
       case 'anki_note_viewer_open_in_anki':
         return 'Abrir no Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Cartão existente';
       case 'anki_open_no_card':
@@ -607639,6 +615968,74 @@ extension on _StringsPtBr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor da Fushi API novamente.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Cancelar';
       case 'card_cover_degraded_to_static':
@@ -610043,6 +618440,8 @@ extension on _StringsPtBr {
             'O campo ${field} usou ${secondField} como termo de busca alternativo.';
       case 'file_count':
         return ({required Object count}) => '${count} arquivos';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Consulta por foto';
       case 'floating_ball_action_clipboard':
@@ -612097,6 +620496,8 @@ extension on _StringsPtBr {
         return 'Não mostrar novamente';
       case 'home_onboarding_card_start':
         return 'Continuar a configuração';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -617875,6 +626276,8 @@ extension on _StringsPtBr {
         return 'Trazer para frente e abrir a página de consulta';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Rolar uma etapa para baixo';
       case 'shortcut_action_global_scroll_line_up':
@@ -619461,8 +627864,20 @@ extension on _StringsPtBr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -619485,6 +627900,9 @@ extension on _StringsPtBr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -619501,6 +627919,8 @@ extension on _StringsPtBr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -619519,6 +627939,8 @@ extension on _StringsPtBr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -619530,6 +627952,8 @@ extension on _StringsPtBr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -619538,6 +627962,10 @@ extension on _StringsPtBr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -620211,10 +628639,16 @@ extension on _StringsPtBr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -621909,6 +630343,38 @@ extension on _StringsPtBr {
         return 'Compartilhar estatísticas de uso';
       case 'usage_stats_enabled_hint':
         return 'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma, o canal de atualização, o idioma do app, a arquitetura da CPU, a versão principal do sistema e a origem da instalação (ex.: loja ou instalador) para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado — só o país ou região deduzido dele é guardado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Outono';
       case 'video_air_season_spring':
@@ -622019,16 +630485,6 @@ extension on _StringsPtBr {
         return 'Avançar 10s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Filmes e séries de TV. Índice público, sem necessidade de conta.';
-      case 'video_builtin_knaben_hint':
-        return 'Filmes e séries de TV. Agrega vários indexadores públicos.';
-      case 'video_builtin_nyaa_hint':
-        return 'Apenas anime. Filmes e séries de TV são cobertos pelos dois indexadores públicos abaixo.';
-      case 'video_builtin_sources_hint':
-        return 'Vêm com o app: sem conta, sem chave de API. Desative uma para mantê-la fora das buscas de recursos.';
-      case 'video_builtin_sources_title':
-        return 'Fontes integradas';
       case 'video_chapter_n':
         return ({required Object n}) => 'Capítulo ${n}';
       case 'video_chapters':
@@ -622094,6 +630550,10 @@ extension on _StringsPtBr {
         return 'Favoritar frase atual';
       case 'video_control_fullscreen':
         return 'Tela cheia';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Próxima legenda';
       case 'video_control_ocr_frame':
@@ -622106,6 +630566,8 @@ extension on _StringsPtBr {
         return 'Reproduzir/Pausar';
       case 'video_control_previous_cue':
         return 'Legenda anterior';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Os controles obrigatórios devem permanecer no player.';
       case 'video_control_reject_unavailable':
@@ -622114,6 +630576,8 @@ extension on _StringsPtBr {
         return 'O volume só pode ficar na barra inferior.';
       case 'video_control_remove_from_slot':
         return 'Remover';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Restaurar layout dos botões do player';
       case 'video_control_screenshot':
@@ -623057,8 +631521,6 @@ extension on _StringsPtBr {
         return 'Reimportar';
       case 'video_resource_missing_title':
         return 'Vídeo indisponível';
-      case 'video_resource_no_provider_hint':
-        return 'Esta busca não tinha provedor para consultar. Reative uma fonte integrada ou adicione um indexador Torznab em Configurações, Downloads, Provedores externos de recursos e legendas.';
       case 'video_resource_no_provider_title':
         return 'Nenhum indexador de recursos configurado';
       case 'video_resource_query_failed':
@@ -623317,6 +631779,10 @@ extension on _StringsPtBr {
         return 'Modo imersivo';
       case 'video_setting_immersive_mode_hint':
         return 'Controla o que permanece disponível após pressionar o botão de bloqueio lateral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Idioma padrão de legenda';
       case 'video_setting_jimaku_default_language_hint':
@@ -624922,6 +633388,13 @@ extension on _StringsPtBr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -624958,6 +633431,8 @@ extension on _StringsPtBr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -624974,6 +633449,8 @@ extension on _StringsPtBr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -625057,6 +633534,14 @@ extension on _StringsPtBr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -625127,8 +633612,6 @@ extension on _StringsPtBr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -625197,20 +633680,6 @@ extension on _StringsPtBr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -625315,6 +633784,126 @@ extension on _StringsRu {
         return 'Volume';
       case 'add_to_collection':
         return 'Добавить в коллекцию';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
       case 'ai_assist_failed':
@@ -625349,6 +633938,10 @@ extension on _StringsRu {
         return 'ИИ-загрузка';
       case 'ai_feature_acquire_summary':
         return 'Скажите ИИ, что вам нужно — видео либо книги, мангу и игры в разделе «Обзор › Поиск». Он разбирает запрос и подбирает подходящие произведения и версии; видео затем скачиваются или оформляется подписка, для остальных медиа каждая загрузка требует вашего подтверждения.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Выбранный провайдер недоступен (не настроен полностью или отключён)';
       case 'ai_feature_audiobook_cast':
@@ -625537,6 +634130,14 @@ extension on _StringsRu {
         return ({required Object reason}) => 'Проверка не удалась: ${reason}';
       case 'ai_provider_test_ok':
         return 'Подключено';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Настройка провайдеров';
       case 'ai_providers_section_summary':
@@ -625888,7 +634489,7 @@ extension on _StringsRu {
       case 'anime_download_no_tasks':
         return 'Загрузок пока нет';
       case 'anime_download_nyaa_query':
-        return 'Поисковый запрос Nyaa';
+        return 'Поисковый запрос BT';
       case 'anime_download_play_now':
         return 'Воспроизвести во время загрузки';
       case 'anime_download_play_now_fail':
@@ -626452,10 +635053,16 @@ extension on _StringsRu {
         return 'Перезаписать эту карточку';
       case 'anki_mined_action_view':
         return 'Просмотреть / открыть в Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Выберите действие с найденной карточкой.';
       case 'anki_mined_card_title':
         return 'Карточка уже в Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Запись о создании очищена';
       case 'anki_mined_multiple_matches':
@@ -626468,12 +635075,16 @@ extension on _StringsRu {
         return 'Нажмите «Обновить», чтобы загрузить ваши колоды и типы заметок Anki.';
       case 'anki_note_open_failed':
         return 'Не удалось открыть карточку в Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Тип заметки';
       case 'anki_note_viewer_empty':
         return 'У этой карточки нет читаемых полей.';
       case 'anki_note_viewer_open_in_anki':
         return 'Открыть в Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Существующая карточка';
       case 'anki_open_no_card':
@@ -628309,6 +636920,74 @@ extension on _StringsRu {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Отмена';
       case 'card_cover_degraded_to_static':
@@ -630717,6 +639396,8 @@ extension on _StringsRu {
             'Поле ${field} использовало ${secondField} в качестве резервного запроса.';
       case 'file_count':
         return ({required Object count}) => '${count} файлов';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Поиск по фото';
       case 'floating_ball_action_clipboard':
@@ -632771,6 +641452,8 @@ extension on _StringsRu {
         return 'Больше не показывать';
       case 'home_onboarding_card_start':
         return 'Продолжить настройку';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Авто';
       case 'home_panel_mode_hidden':
@@ -638549,6 +647232,8 @@ extension on _StringsRu {
         return 'Вывести на передний план и открыть страницу поиска';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Прокрутить вниз на один шаг';
       case 'shortcut_action_global_scroll_line_up':
@@ -640135,8 +648820,20 @@ extension on _StringsRu {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -640159,6 +648856,9 @@ extension on _StringsRu {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -640175,6 +648875,8 @@ extension on _StringsRu {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -640193,6 +648895,8 @@ extension on _StringsRu {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -640204,6 +648908,8 @@ extension on _StringsRu {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -640212,6 +648918,10 @@ extension on _StringsRu {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -640885,10 +649595,16 @@ extension on _StringsRu {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -642584,6 +651300,38 @@ extension on _StringsRu {
         return 'Отправлять статистику использования';
       case 'usage_stats_enabled_hint':
         return 'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу, канал обновлений, язык приложения, архитектуру процессора, основную версию ОС и источник установки (например, магазин приложений или установщик), чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется — сохраняется только определённая по нему страна или регион. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Осень';
       case 'video_air_season_spring':
@@ -642695,16 +651443,6 @@ extension on _StringsRu {
         return 'Вперёд на 10 с';
       case 'video_bottom_seek_forward_label':
         return '+10с';
-      case 'video_builtin_apibay_hint':
-        return 'Фильмы и сериалы. Публичный индекс, аккаунт не нужен.';
-      case 'video_builtin_knaben_hint':
-        return 'Фильмы и сериалы. Агрегирует несколько публичных индексаторов.';
-      case 'video_builtin_nyaa_hint':
-        return 'Только аниме. Фильмы и сериалы покрываются двумя публичными индексаторами ниже.';
-      case 'video_builtin_sources_hint':
-        return 'Встроены в приложение: без аккаунта, без API-ключа. Отключите источник, чтобы исключить его из поиска ресурсов.';
-      case 'video_builtin_sources_title':
-        return 'Встроенные источники';
       case 'video_chapter_n':
         return ({required Object n}) => 'Глава ${n}';
       case 'video_chapters':
@@ -642770,6 +651508,10 @@ extension on _StringsRu {
         return 'В избранное текущее предложение';
       case 'video_control_fullscreen':
         return 'Полный экран';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Следующий субтитр';
       case 'video_control_ocr_frame':
@@ -642782,6 +651524,8 @@ extension on _StringsRu {
         return 'Воспроизведение/Пауза';
       case 'video_control_previous_cue':
         return 'Предыдущий субтитр';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Обязательные элементы управления должны оставаться на плеере.';
       case 'video_control_reject_unavailable':
@@ -642790,6 +651534,8 @@ extension on _StringsRu {
         return 'Громкость можно разместить только на нижней панели.';
       case 'video_control_remove_from_slot':
         return 'Убрать';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Сбросить расположение кнопок плеера';
       case 'video_control_screenshot':
@@ -643730,8 +652476,6 @@ extension on _StringsRu {
         return 'Импортировать заново';
       case 'video_resource_missing_title':
         return 'Видео недоступно';
-      case 'video_resource_no_provider_hint':
-        return 'Для этого поиска не нашлось провайдера. Включите встроенный источник или добавьте Torznab-индексатор в разделе Настройки, Загрузки, Внешние провайдеры ресурсов и субтитров.';
       case 'video_resource_no_provider_title':
         return 'Индексатор ресурсов не настроен';
       case 'video_resource_query_failed':
@@ -643990,6 +652734,10 @@ extension on _StringsRu {
         return 'Иммерсивный режим';
       case 'video_setting_immersive_mode_hint':
         return 'Определяет, что остаётся доступным после нажатия боковой кнопки блокировки';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Язык субтитров по умолчанию';
       case 'video_setting_jimaku_default_language_hint':
@@ -645594,6 +654342,13 @@ extension on _StringsRu {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -645630,6 +654385,8 @@ extension on _StringsRu {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -645646,6 +654403,8 @@ extension on _StringsRu {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -645729,6 +654488,14 @@ extension on _StringsRu {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -645799,8 +654566,6 @@ extension on _StringsRu {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -645869,20 +654634,6 @@ extension on _StringsRu {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -645987,6 +654738,126 @@ extension on _StringsTh {
         return 'Volume';
       case 'add_to_collection':
         return 'เพิ่มในคอลเลกชัน';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
       case 'ai_assist_failed':
@@ -646022,6 +654893,10 @@ extension on _StringsTh {
         return 'ดาวน์โหลดด้วย AI';
       case 'ai_feature_acquire_summary':
         return 'บอก AI ว่าคุณต้องการอะไร — วิดีโอ หรือหนังสือ มังงะ และเกมใน เรียกดู › ค้นพบ AI จะแยกคำขอและเลือกผลงานและเวอร์ชันที่ตรงกัน จากนั้นวิดีโอจะถูกดาวน์โหลดหรือสมัครรับ ส่วนสื่ออื่นต้องให้คุณยืนยันทุกการดาวน์โหลด';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'ผู้ให้บริการที่เลือกไม่พร้อมใช้งาน (ตั้งค่าไม่ครบหรือปิดอยู่)';
       case 'ai_feature_audiobook_cast':
@@ -646210,6 +655085,14 @@ extension on _StringsTh {
         return ({required Object reason}) => 'ทดสอบไม่สำเร็จ: ${reason}';
       case 'ai_provider_test_ok':
         return 'เชื่อมต่อแล้ว';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'การตั้งค่าผู้ให้บริการ';
       case 'ai_providers_section_summary':
@@ -646559,7 +655442,7 @@ extension on _StringsTh {
       case 'anime_download_no_tasks':
         return 'ยังไม่มีงานดาวน์โหลด';
       case 'anime_download_nyaa_query':
-        return 'คำค้นหา Nyaa';
+        return 'คำค้นหา BT';
       case 'anime_download_play_now':
         return 'เล่นระหว่างดาวน์โหลด';
       case 'anime_download_play_now_fail':
@@ -647119,10 +656002,16 @@ extension on _StringsTh {
         return 'เขียนทับบัตรนี้';
       case 'anki_mined_action_view':
         return 'ดู / เปิดใน Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'เลือกสิ่งที่จะทำกับบัตรที่ตรงกัน';
       case 'anki_mined_card_title':
         return 'บัตรมีอยู่ใน Anki แล้ว';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'ล้างบันทึกการสร้างการ์ดแล้ว';
       case 'anki_mined_multiple_matches':
@@ -647135,12 +656024,16 @@ extension on _StringsTh {
         return 'แตะรีเฟรชเพื่อโหลดเด็คและชนิดโน้ต Anki ของคุณ';
       case 'anki_note_open_failed':
         return 'ไม่สามารถเปิดบัตรใน Anki ได้';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'ประเภทโน้ต';
       case 'anki_note_viewer_empty':
         return 'บัตรนี้ไม่มีฟิลด์ที่อ่านได้';
       case 'anki_note_viewer_open_in_anki':
         return 'เปิดใน Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'บัตรที่มีอยู่';
       case 'anki_open_no_card':
@@ -648965,6 +657858,74 @@ extension on _StringsTh {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Fushi API อีกครั้ง';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'ยกเลิก';
       case 'card_cover_degraded_to_static':
@@ -651365,6 +660326,8 @@ extension on _StringsTh {
             'ฟิลด์ ${field} ใช้ ${secondField} เป็นคำค้นสำรอง';
       case 'file_count':
         return ({required Object count}) => '${count} ไฟล์';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'ค้นหาจากภาพถ่าย';
       case 'floating_ball_action_clipboard':
@@ -653419,6 +662382,8 @@ extension on _StringsTh {
         return 'ไม่ต้องแสดงอีก';
       case 'home_onboarding_card_start':
         return 'ตั้งค่าต่อ';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'อัตโนมัติ';
       case 'home_panel_mode_hidden':
@@ -659183,6 +668148,8 @@ extension on _StringsTh {
         return 'นำมาไว้ด้านหน้าและเปิดหน้าค้นหา';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'เลื่อนลงหนึ่งขั้น';
       case 'shortcut_action_global_scroll_line_up':
@@ -660769,8 +669736,20 @@ extension on _StringsTh {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -660793,6 +669772,9 @@ extension on _StringsTh {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -660809,6 +669791,8 @@ extension on _StringsTh {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -660827,6 +669811,8 @@ extension on _StringsTh {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -660838,6 +669824,8 @@ extension on _StringsTh {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -660846,6 +669834,10 @@ extension on _StringsTh {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -661519,10 +670511,16 @@ extension on _StringsTh {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -663216,6 +672214,38 @@ extension on _StringsTh {
         return 'ส่งสถิติการใช้งาน';
       case 'usage_stats_enabled_hint':
         return 'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม ช่องทางอัปเดต ภาษาของแอป สถาปัตยกรรม CPU เวอร์ชันหลักของระบบปฏิบัติการ และแหล่งที่ติดตั้ง (เช่น สโตร์หรือตัวติดตั้ง)ไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ (เก็บเพียงประเทศหรือภูมิภาคที่ระบุได้จากที่อยู่นั้น) เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'ฤดูใบไม้ร่วง';
       case 'video_air_season_spring':
@@ -663327,16 +672357,6 @@ extension on _StringsTh {
         return 'เดินหน้า 10 วินาที';
       case 'video_bottom_seek_forward_label':
         return '+10 วิ';
-      case 'video_builtin_apibay_hint':
-        return 'ภาพยนตร์และรายการทีวี ดัชนีสาธารณะ ไม่ต้องมีบัญชี';
-      case 'video_builtin_knaben_hint':
-        return 'ภาพยนตร์และรายการทีวี รวบรวมจากตัวจัดทำดัชนีสาธารณะหลายแห่ง';
-      case 'video_builtin_nyaa_hint':
-        return 'อนิเมะเท่านั้น ภาพยนตร์และรายการทีวีรองรับโดยตัวจัดทำดัชนีสาธารณะด้านล่าง';
-      case 'video_builtin_sources_hint':
-        return 'มาพร้อมกับแอป: ไม่ต้องมีบัญชี ไม่ต้องมีคีย์ API ปิดเพื่อไม่ให้ปรากฏในการค้นหาทรัพยากร';
-      case 'video_builtin_sources_title':
-        return 'แหล่งข้อมูลในตัว';
       case 'video_chapter_n':
         return ({required Object n}) => 'บทที่ ${n}';
       case 'video_chapters':
@@ -663401,6 +672421,10 @@ extension on _StringsTh {
         return 'เพิ่มประโยคปัจจุบันในรายการโปรด';
       case 'video_control_fullscreen':
         return 'เต็มจอ';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'คำบรรยายถัดไป';
       case 'video_control_ocr_frame':
@@ -663413,6 +672437,8 @@ extension on _StringsTh {
         return 'เล่น/หยุดชั่วคราว';
       case 'video_control_previous_cue':
         return 'คำบรรยายก่อนหน้า';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'ปุ่มควบคุมที่จำเป็นต้องคงไว้บนโปรแกรมเล่น';
       case 'video_control_reject_unavailable':
@@ -663421,6 +672447,8 @@ extension on _StringsTh {
         return 'ปุ่มเสียงวางได้เฉพาะบนแถบล่าง';
       case 'video_control_remove_from_slot':
         return 'นำออก';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'คืนค่าเลย์เอาต์ปุ่มเริ่มต้นของโปรแกรมเล่น';
       case 'video_control_screenshot':
@@ -664360,8 +673388,6 @@ extension on _StringsTh {
         return 'นำเข้าใหม่';
       case 'video_resource_missing_title':
         return 'วิดีโอไม่พร้อมใช้งาน';
-      case 'video_resource_no_provider_hint':
-        return 'การค้นหานี้ไม่มีผู้ให้บริการที่จะสอบถาม เปิดใช้แหล่งในตัวอีกครั้ง หรือเพิ่มตัวจัดทำดัชนี Torznab ในการตั้งค่า > ดาวน์โหลด > ผู้ให้บริการทรัพยากรและคำบรรยายภายนอก';
       case 'video_resource_no_provider_title':
         return 'ยังไม่ได้ตั้งค่าตัวจัดทำดัชนีทรัพยากร';
       case 'video_resource_query_failed':
@@ -664619,6 +673645,10 @@ extension on _StringsTh {
         return 'โหมดดื่มด่ำ';
       case 'video_setting_immersive_mode_hint':
         return 'ควบคุมว่าหลังกดปุ่มล็อกด้านข้างแล้วยังใช้อะไรได้บ้าง';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'ภาษาคำบรรยายเริ่มต้น';
       case 'video_setting_jimaku_default_language_hint':
@@ -666222,6 +675252,13 @@ extension on _StringsTh {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -666258,6 +675295,8 @@ extension on _StringsTh {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -666274,6 +675313,8 @@ extension on _StringsTh {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -666357,6 +675398,14 @@ extension on _StringsTh {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -666427,8 +675476,6 @@ extension on _StringsTh {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -666497,20 +675544,6 @@ extension on _StringsTh {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -666615,6 +675648,126 @@ extension on _StringsTr {
         return 'Volume';
       case 'add_to_collection':
         return 'Koleksiyona ekle';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
       case 'ai_assist_failed':
@@ -666650,6 +675803,10 @@ extension on _StringsTr {
         return 'Yapay zeka ile indirme';
       case 'ai_feature_acquire_summary':
         return 'Yapay zekaya ne istediğinizi söyleyin — videolar veya Gözat › Keşfet\'teki kitaplar, manga ve oyunlar. İsteği ayrıştırır ve eşleşen eserleri ile sürümleri seçer; videolar ardından indirilir veya abone olunur, diğer medyalar her indirme için onayınızı ister.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Seçilen sağlayıcı kullanılamıyor (eksik veya devre dışı)';
       case 'ai_feature_audiobook_cast':
@@ -666839,6 +675996,14 @@ extension on _StringsTr {
         return ({required Object reason}) => 'Test başarısız oldu: ${reason}';
       case 'ai_provider_test_ok':
         return 'Bağlandı';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Sağlayıcı yapılandırması';
       case 'ai_providers_section_summary':
@@ -667188,7 +676353,7 @@ extension on _StringsTr {
       case 'anime_download_no_tasks':
         return 'Henüz indirme görevi yok';
       case 'anime_download_nyaa_query':
-        return 'Nyaa arama terimleri';
+        return 'BT arama terimleri';
       case 'anime_download_play_now':
         return 'İndirirken oynat';
       case 'anime_download_play_now_fail':
@@ -667751,10 +676916,16 @@ extension on _StringsTr {
         return 'Bu kartın üzerine yaz';
       case 'anki_mined_action_view':
         return 'Anki\'de görüntüle / aç';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Eşleşen kartla ne yapılacağını seçin.';
       case 'anki_mined_card_title':
         return 'Kart zaten Anki\'de mevcut';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Kart oluşturma kaydı temizlendi';
       case 'anki_mined_multiple_matches':
@@ -667767,12 +676938,16 @@ extension on _StringsTr {
         return 'Anki destelerinizi ve not türlerinizi yüklemek için Yenile\'ye dokunun.';
       case 'anki_note_open_failed':
         return 'Kart Anki\'de açılamadı.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Not Türü';
       case 'anki_note_viewer_empty':
         return 'Bu kartın okunabilir alanı yok.';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki\'de aç';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Mevcut kart';
       case 'anki_open_no_card':
@@ -669605,6 +678780,74 @@ extension on _StringsTr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi API sunucusunu tekrar etkinleştirin.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'İptal';
       case 'card_cover_degraded_to_static':
@@ -672010,6 +681253,8 @@ extension on _StringsTr {
             '${field} alanı yedek arama terimi olarak ${secondField} kullandı.';
       case 'file_count':
         return ({required Object count}) => '${count} dosya';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Fotoğrafla arama';
       case 'floating_ball_action_clipboard':
@@ -674065,6 +683310,8 @@ extension on _StringsTr {
         return 'Bir daha gösterme';
       case 'home_onboarding_card_start':
         return 'Kuruluma devam et';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Otomatik';
       case 'home_panel_mode_hidden':
@@ -679835,6 +689082,8 @@ extension on _StringsTr {
         return 'Öne getir ve arama sayfasını aç';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Bir adım aşağı kaydır';
       case 'shortcut_action_global_scroll_line_up':
@@ -681421,8 +690670,20 @@ extension on _StringsTr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -681445,6 +690706,9 @@ extension on _StringsTr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -681461,6 +690725,8 @@ extension on _StringsTr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -681479,6 +690745,8 @@ extension on _StringsTr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -681490,6 +690758,8 @@ extension on _StringsTr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -681498,6 +690768,10 @@ extension on _StringsTr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -682171,10 +691445,16 @@ extension on _StringsTr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -683870,6 +693150,38 @@ extension on _StringsTr {
         return 'Kullanım istatistiklerini paylaş';
       case 'usage_stats_enabled_hint':
         return 'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu, güncelleme kanalını, uygulama dilini, CPU mimarisini, işletim sisteminin ana sürümünü ve kurulum kaynağını (ör. uygulama mağazası veya yükleyici) fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz; yalnızca ondan belirlenen ülke veya bölge tutulur. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Sonbahar';
       case 'video_air_season_spring':
@@ -683981,16 +693293,6 @@ extension on _StringsTr {
         return '10 sn ileri';
       case 'video_bottom_seek_forward_label':
         return '+10sn';
-      case 'video_builtin_apibay_hint':
-        return 'Filmler ve TV dizileri. Herkese açık dizin, hesap gerekmez.';
-      case 'video_builtin_knaben_hint':
-        return 'Filmler ve TV dizileri. Birden fazla herkese açık dizinleyiciyi toplar.';
-      case 'video_builtin_nyaa_hint':
-        return 'Yalnızca anime. Filmler ve TV dizileri aşağıdaki iki herkese açık dizinleyici tarafından kapsanır.';
-      case 'video_builtin_sources_hint':
-        return 'Uygulamayla birlikte gelir: hesap veya API anahtarı gerekmez. Kaynak aramalarından çıkarmak için birini kapatın.';
-      case 'video_builtin_sources_title':
-        return 'Yerleşik kaynaklar';
       case 'video_chapter_n':
         return ({required Object n}) => 'Bölüm ${n}';
       case 'video_chapters':
@@ -684056,6 +693358,10 @@ extension on _StringsTr {
         return 'Geçerli cümleyi sık kullanılanlara ekle';
       case 'video_control_fullscreen':
         return 'Tam ekran';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sonraki altyazı';
       case 'video_control_ocr_frame':
@@ -684068,6 +693374,8 @@ extension on _StringsTr {
         return 'Oynat/Duraklat';
       case 'video_control_previous_cue':
         return 'Önceki altyazı';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Zorunlu denetimler oynatıcıda kalmalıdır.';
       case 'video_control_reject_unavailable':
@@ -684076,6 +693384,8 @@ extension on _StringsTr {
         return 'Ses yalnızca alt çubukta bulunabilir.';
       case 'video_control_remove_from_slot':
         return 'Dışarı taşı';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Oynatıcı düğme düzenini sıfırla';
       case 'video_control_screenshot':
@@ -685016,8 +694326,6 @@ extension on _StringsTr {
         return 'Yeniden içe aktar';
       case 'video_resource_missing_title':
         return 'Video kullanılamıyor';
-      case 'video_resource_no_provider_hint':
-        return 'Bu aramanın sorgu yapacak bir sağlayıcısı yoktu. Ayarlar, İndirmeler, Harici kaynak ve altyazı sağlayıcıları bölümünden yerleşik bir kaynağı yeniden etkinleştirin veya bir Torznab dizinleyicisi ekleyin.';
       case 'video_resource_no_provider_title':
         return 'Kaynak dizinleyici yapılandırılmadı';
       case 'video_resource_query_failed':
@@ -685277,6 +694585,10 @@ extension on _StringsTr {
         return 'Sürükleyici mod';
       case 'video_setting_immersive_mode_hint':
         return 'Yan kilit düğmesine basıldıktan sonra hangi işlevlerin kullanılabilir kalacağını denetler';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Varsayılan altyazı dili';
       case 'video_setting_jimaku_default_language_hint':
@@ -686881,6 +696193,13 @@ extension on _StringsTr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -686917,6 +696236,8 @@ extension on _StringsTr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -686933,6 +696254,8 @@ extension on _StringsTr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -687016,6 +696339,14 @@ extension on _StringsTr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -687086,8 +696417,6 @@ extension on _StringsTr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -687156,20 +696485,6 @@ extension on _StringsTr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -687274,6 +696589,126 @@ extension on _StringsVi {
         return 'Volume';
       case 'add_to_collection':
         return 'Thêm vào bộ sưu tập';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
       case 'ai_assist_failed':
@@ -687308,6 +696743,10 @@ extension on _StringsVi {
         return 'Tải bằng AI';
       case 'ai_feature_acquire_summary':
         return 'Hãy nói với AI điều bạn muốn — video, hoặc sách, manga và game trong Duyệt › Khám phá. Nó phân tích yêu cầu và chọn tác phẩm cùng phiên bản phù hợp; video sau đó được tải hoặc đăng ký, còn các loại phương tiện khác cần bạn xác nhận cho từng lượt tải.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Nhà cung cấp đã chọn không khả dụng (chưa đầy đủ hoặc bị tắt)';
       case 'ai_feature_audiobook_cast':
@@ -687496,6 +696935,14 @@ extension on _StringsVi {
         return ({required Object reason}) => 'Kiểm tra thất bại: ${reason}';
       case 'ai_provider_test_ok':
         return 'Đã kết nối';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Cấu hình nhà cung cấp';
       case 'ai_providers_section_summary':
@@ -687847,7 +697294,7 @@ extension on _StringsVi {
       case 'anime_download_no_tasks':
         return 'Chưa có tác vụ tải xuống';
       case 'anime_download_nyaa_query':
-        return 'Từ khóa tìm kiếm Nyaa';
+        return 'Từ khóa tìm kiếm BT';
       case 'anime_download_play_now':
         return 'Phát trong khi tải';
       case 'anime_download_play_now_fail':
@@ -688409,10 +697856,16 @@ extension on _StringsVi {
         return 'Ghi đè thẻ này';
       case 'anki_mined_action_view':
         return 'Xem / mở trong Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Chọn thao tác với thẻ trùng khớp.';
       case 'anki_mined_card_title':
         return 'Thẻ đã có trong Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Đã xóa bản ghi tạo thẻ';
       case 'anki_mined_multiple_matches':
@@ -688425,12 +697878,16 @@ extension on _StringsVi {
         return 'Nhấn Làm mới để tải các bộ thẻ và loại ghi chú Anki của bạn.';
       case 'anki_note_open_failed':
         return 'Không thể mở thẻ trong Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Loại ghi chú';
       case 'anki_note_viewer_empty':
         return 'Thẻ này không có trường có thể đọc.';
       case 'anki_note_viewer_open_in_anki':
         return 'Mở trong Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Thẻ hiện có';
       case 'anki_open_no_card':
@@ -690258,6 +699715,74 @@ extension on _StringsVi {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Hủy';
       case 'card_cover_degraded_to_static':
@@ -692662,6 +702187,8 @@ extension on _StringsVi {
             'Trường ${field} đã sử dụng ${secondField} làm từ tìm kiếm dự phòng.';
       case 'file_count':
         return ({required Object count}) => '${count} tệp';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Tra từ bằng ảnh chụp';
       case 'floating_ball_action_clipboard':
@@ -694716,6 +704243,8 @@ extension on _StringsVi {
         return 'Không hiển thị lại';
       case 'home_onboarding_card_start':
         return 'Tiếp tục thiết lập';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Tự động';
       case 'home_panel_mode_hidden':
@@ -700482,6 +710011,8 @@ extension on _StringsVi {
         return 'Đưa lên trước và mở trang tra từ';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Cuộn xuống một bước';
       case 'shortcut_action_global_scroll_line_up':
@@ -702068,8 +711599,20 @@ extension on _StringsVi {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -702092,6 +711635,9 @@ extension on _StringsVi {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -702108,6 +711654,8 @@ extension on _StringsVi {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -702126,6 +711674,8 @@ extension on _StringsVi {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -702137,6 +711687,8 @@ extension on _StringsVi {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -702145,6 +711697,10 @@ extension on _StringsVi {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -702818,10 +712374,16 @@ extension on _StringsVi {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -704518,6 +714080,38 @@ extension on _StringsVi {
         return 'Chia sẻ thống kê sử dụng';
       case 'usage_stats_enabled_hint':
         return 'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng, kênh cập nhật, ngôn ngữ ứng dụng, kiến trúc CPU, phiên bản chính của hệ điều hành và nguồn cài đặt (ví dụ cửa hàng ứng dụng hoặc trình cài đặt) đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu — chỉ giữ quốc gia hoặc khu vực suy ra từ nó. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return 'Thu';
       case 'video_air_season_spring':
@@ -704629,16 +714223,6 @@ extension on _StringsVi {
         return 'Tới 10 giây';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Phim và chương trình truyền hình. Chỉ mục công khai, không cần tài khoản.';
-      case 'video_builtin_knaben_hint':
-        return 'Phim và chương trình truyền hình. Tổng hợp nhiều trình lập chỉ mục công khai.';
-      case 'video_builtin_nyaa_hint':
-        return 'Chỉ dành cho anime. Phim và chương trình truyền hình được phục vụ bởi hai trình lập chỉ mục công khai bên dưới.';
-      case 'video_builtin_sources_hint':
-        return 'Đi kèm ứng dụng: không cần tài khoản, không cần khóa API. Tắt một nguồn để loại khỏi tìm kiếm tài nguyên.';
-      case 'video_builtin_sources_title':
-        return 'Nguồn tích hợp';
       case 'video_chapter_n':
         return ({required Object n}) => 'Chương ${n}';
       case 'video_chapters':
@@ -704702,6 +714286,10 @@ extension on _StringsVi {
         return 'Yêu thích câu hiện tại';
       case 'video_control_fullscreen':
         return 'Toàn màn hình';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Câu phụ đề sau';
       case 'video_control_ocr_frame':
@@ -704714,6 +714302,8 @@ extension on _StringsVi {
         return 'Phát/Tạm dừng';
       case 'video_control_previous_cue':
         return 'Câu phụ đề trước';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Các nút điều khiển bắt buộc phải ở lại trình phát.';
       case 'video_control_reject_unavailable':
@@ -704722,6 +714312,8 @@ extension on _StringsVi {
         return 'Âm lượng chỉ có thể đặt ở thanh dưới.';
       case 'video_control_remove_from_slot':
         return 'Gỡ ra';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Khôi phục bố cục nút trình phát mặc định';
       case 'video_control_screenshot':
@@ -705661,8 +715253,6 @@ extension on _StringsVi {
         return 'Nhập lại';
       case 'video_resource_missing_title':
         return 'Video không khả dụng';
-      case 'video_resource_no_provider_hint':
-        return 'Tìm kiếm này không có nhà cung cấp để truy vấn. Bật lại nguồn tích hợp hoặc thêm trình lập chỉ mục Torznab trong Cài đặt, Tải xuống, Nhà cung cấp tài nguyên và phụ đề bên ngoài.';
       case 'video_resource_no_provider_title':
         return 'Chưa cấu hình trình lập chỉ mục tài nguyên';
       case 'video_resource_query_failed':
@@ -705921,6 +715511,10 @@ extension on _StringsVi {
         return 'Chế độ đắm chìm';
       case 'video_setting_immersive_mode_hint':
         return 'Quyết định những gì vẫn khả dụng sau khi nhấn nút khóa bên cạnh';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Ngôn ngữ phụ đề mặc định';
       case 'video_setting_jimaku_default_language_hint':
@@ -707523,6 +717117,13 @@ extension on _StringsVi {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -707559,6 +717160,8 @@ extension on _StringsVi {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -707575,6 +717178,8 @@ extension on _StringsVi {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -707658,6 +717263,14 @@ extension on _StringsVi {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -707728,8 +717341,6 @@ extension on _StringsVi {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -707798,20 +717409,6 @@ extension on _StringsVi {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -707915,6 +717512,124 @@ extension on _StringsZhCn {
         return '卷';
       case 'add_to_collection':
         return '加入合集';
+      case 'ai_agent_ask_action':
+        return '问 AI';
+      case 'ai_agent_attach_screen_text':
+        return '附上屏幕文字';
+      case 'ai_agent_choice_cancel':
+        return '都不是';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => '已选：${label}';
+      case 'ai_agent_confirm_approve':
+        return '执行';
+      case 'ai_agent_confirm_approved':
+        return '已确认';
+      case 'ai_agent_confirm_decline':
+        return '不执行';
+      case 'ai_agent_confirm_declined':
+        return '已拒绝';
+      case 'ai_agent_confirm_install_title':
+        return '要安装这个扩展吗？';
+      case 'ai_agent_confirm_irreversible':
+        return '这一步无法撤销。';
+      case 'ai_agent_confirm_title':
+        return '执行前请确认';
+      case 'ai_agent_confirm_undoable':
+        return '执行后可以撤销。';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => '关于：${title}';
+      case 'ai_agent_details':
+        return '详情';
+      case 'ai_agent_empty_examples':
+        return '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
+      case 'ai_agent_empty_title':
+        return '要我做什么？';
+      case 'ai_agent_expand':
+        return '展开成整页';
+      case 'ai_agent_history_by_user':
+        return '经你确认';
+      case 'ai_agent_history_empty':
+        return 'AI 助手还没做过改动。';
+      case 'ai_agent_history_resume':
+        return '继续这场对话';
+      case 'ai_agent_history_summary':
+        return 'AI 助手做过的所有改动，可逐条撤销';
+      case 'ai_agent_history_title':
+        return 'AI 操作记录';
+      case 'ai_agent_input_hint':
+        return '告诉 AI 要做什么…';
+      case 'ai_agent_new_session':
+        return '新对话';
+      case 'ai_agent_no_provider':
+        return 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
+      case 'ai_agent_open_settings':
+        return '去设置';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => '${device} 上关闭了 AI 功能。';
+      case 'ai_agent_remote_lost':
+        return '与执行这场对话的设备断开了连接。';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} 还没有给「AI 助手」指派 AI 提供商，请在那台设备的「设置 › 模型 › LLM」里指派。';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) => '${device} 还没准备好，请稍后再试。';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) => '连不上下载执行设备 ${device}。';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} 不支持 AI 助手，请更新那台设备上的 Fushi。';
+      case 'ai_agent_risk_irreversible':
+        return '不可撤销';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => '屏幕文字（${n} 字）';
+      case 'ai_agent_screen_text_empty':
+        return '屏幕上没有识别到文字';
+      case 'ai_agent_screen_text_failed':
+        return '读取屏幕文字失败';
+      case 'ai_agent_screen_text_unavailable':
+        return '本机的文字识别不可用';
+      case 'ai_agent_send':
+        return '发送';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '本次对话做了 ${n} 处改动';
+      case 'ai_agent_stop':
+        return '停止';
+      case 'ai_agent_stop_cancelled':
+        return '已停止。';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'AI 请求失败：${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return '已停止：同一步连续失败两次。';
+      case 'ai_agent_stop_token_budget':
+        return '已停止：本次对话的 token 预算已用完。';
+      case 'ai_agent_stop_tool_limit':
+        return '已停止：这一轮步骤太多。';
+      case 'ai_agent_superseded':
+        return '之后又被改过，保留现状';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            '已完成：${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            '未完成：${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI 助手';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return '未执行';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => '失败：${code}';
+      case 'ai_agent_tool_running':
+        return '执行中…';
+      case 'ai_agent_undo':
+        return '撤销';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => '全部撤销（${n}）';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => '撤销失败：${reason}';
+      case 'ai_agent_undone':
+        return '已撤销';
       case 'ai_assist_empty':
         return 'AI 没有给出可用结果，换个说法再试试。';
       case 'ai_assist_failed':
@@ -707949,6 +717664,10 @@ extension on _StringsZhCn {
         return 'AI 下载';
       case 'ai_feature_acquire_summary':
         return '跟 AI 说想要什么：视频，或在「浏览 › 发现」里的小说、漫画、游戏。它解析你的要求、在匹配的作品与版本里选择；视频随后下载或订阅，其它媒体每次下载由你确认。';
+      case 'ai_feature_agent':
+        return 'AI 助手';
+      case 'ai_feature_agent_summary':
+        return '一句话让 AI 代办 app 里的操作；每个改动都能撤销';
       case 'ai_feature_assigned_unavailable':
         return '所选提供商不可用（未配置完整或已停用）';
       case 'ai_feature_audiobook_cast':
@@ -708137,6 +717856,14 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '测试失败：${reason}';
       case 'ai_provider_test_ok':
         return '连接正常';
+      case 'ai_provider_tool_calling':
+        return '工具调用（AI 助手）';
+      case 'ai_provider_tool_calling_auto':
+        return '自动';
+      case 'ai_provider_tool_calling_off':
+        return '关（JSON 降级）';
+      case 'ai_provider_tool_calling_on':
+        return '开';
       case 'ai_providers_section':
         return '提供商配置';
       case 'ai_providers_section_summary':
@@ -708471,7 +718198,7 @@ extension on _StringsZhCn {
       case 'anime_download_no_tasks':
         return '暂无下载任务';
       case 'anime_download_nyaa_query':
-        return 'Nyaa 查询词';
+        return 'BT 查询词';
       case 'anime_download_play_now':
         return '边下边播';
       case 'anime_download_play_now_fail':
@@ -709024,10 +718751,16 @@ extension on _StringsZhCn {
         return '覆写这张卡';
       case 'anki_mined_action_view':
         return '查看 / 在 Anki 中打开';
+      case 'anki_mined_action_view_only':
+        return '查看卡片';
+      case 'anki_mined_action_view_review':
+        return '查看 / 在 Fushi 复习中打开';
       case 'anki_mined_card_subtitle':
         return '选择对这张已存在的卡片做什么。';
       case 'anki_mined_card_title':
         return '卡片已在 Anki 中';
+      case 'anki_mined_card_title_review':
+        return '卡片已在 Fushi 复习中';
       case 'anki_mined_forget_done':
         return '已清除制卡记录';
       case 'anki_mined_multiple_matches':
@@ -709040,12 +718773,16 @@ extension on _StringsZhCn {
         return '点击「刷新」加载你的 Anki 牌组与笔记类型。';
       case 'anki_note_open_failed':
         return '无法在 Anki 中打开这张卡片。';
+      case 'anki_note_open_failed_review':
+        return '无法在 Fushi 复习中打开这张卡片。';
       case 'anki_note_type':
         return '笔记类型';
       case 'anki_note_viewer_empty':
         return '这张卡片没有可读取的字段。';
       case 'anki_note_viewer_open_in_anki':
         return '在 Anki 中打开';
+      case 'anki_note_viewer_open_in_review':
+        return '在 Fushi 复习中打开';
       case 'anki_note_viewer_title':
         return '已存在的卡片';
       case 'anki_open_no_card':
@@ -710845,6 +720582,74 @@ extension on _StringsZhCn {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi API 服务器。';
+      case 'bt_site_add_action':
+        return '添加 BT 站';
+      case 'bt_site_allow_http_label':
+        return '允许明文 HTTP（局域网）';
+      case 'bt_site_delete_confirm_title':
+        return '删除这个 BT 站？';
+      case 'bt_site_detect_failed_error':
+        return '无法识别这个站点。';
+      case 'bt_site_detect_timeout_error':
+        return '站点响应超时。';
+      case 'bt_site_detecting_status':
+        return '正在识别站点…';
+      case 'bt_site_domain_anime':
+        return '动画';
+      case 'bt_site_domain_audiobook':
+        return '有声书';
+      case 'bt_site_domain_game':
+        return '游戏';
+      case 'bt_site_domain_manga':
+        return '漫画';
+      case 'bt_site_domain_movie':
+        return '电影';
+      case 'bt_site_domain_novel':
+        return '小说';
+      case 'bt_site_domain_tv':
+        return '剧集';
+      case 'bt_site_domains_label':
+        return '用于';
+      case 'bt_site_domains_required_error':
+        return '至少选择一种媒体类型。';
+      case 'bt_site_domains_unmatched_status':
+        return '该站点没有与所选媒体类型对应的分类。';
+      case 'bt_site_edit_title':
+        return '编辑 BT 站';
+      case 'bt_site_empty_hint':
+        return '还没有 BT 来源。添加一个 BT 站地址，或接入 Torznab 索引器。';
+      case 'bt_site_enabled_label':
+        return '启用';
+      case 'bt_site_missing_status':
+        return '请先添加 BT 站';
+      case 'bt_site_name_hint':
+        return '默认使用站点主机名';
+      case 'bt_site_name_label':
+        return '名称（可选）';
+      case 'bt_site_open_settings_action':
+        return '前往 BT 站设置';
+      case 'bt_site_redetect_action':
+        return '重新检测';
+      case 'bt_site_redetect_done_status':
+        return '已重新识别站点。';
+      case 'bt_site_section_hint':
+        return '添加你常用的 BT 站地址，Fushi 会在添加时自动识别如何搜索它。';
+      case 'bt_site_section_title':
+        return 'BT 站';
+      case 'bt_site_test_search_action':
+        return '测试搜索';
+      case 'bt_site_test_search_failed_error':
+        return '搜索失败。';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => '找到 ${n} 条结果';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return '明文 HTTP 仅允许用于局域网站点；如需继续，请打开「允许明文 HTTP」。';
+      case 'bt_site_url_invalid_error':
+        return '请输入有效的网址。';
+      case 'bt_site_url_label':
+        return '站点地址';
       case 'cancel':
         return '取消';
       case 'card_cover_degraded_to_static':
@@ -713207,6 +723012,8 @@ extension on _StringsZhCn {
             '${field} 字段使用 ${secondField} 作为备选搜索词。';
       case 'file_count':
         return ({required Object count}) => '${count} 个文件';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '拍照查词';
       case 'floating_ball_action_clipboard':
@@ -715258,6 +725065,8 @@ extension on _StringsZhCn {
         return '不再显示';
       case 'home_onboarding_card_start':
         return '继续新手引导';
+      case 'home_panel_ai_agent_hint':
+        return '自动：给 AI 助手指派了提供商后显示';
       case 'home_panel_mode_auto':
         return '自动';
       case 'home_panel_mode_hidden':
@@ -720971,6 +730780,8 @@ extension on _StringsZhCn {
         return '唤起主窗并打开查词页';
       case 'shortcut_action_global_external_screen_ocr':
         return '截屏识字（全局）';
+      case 'shortcut_action_global_open_ai_assistant':
+        return '打开 AI 助手';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滚动一行';
       case 'shortcut_action_global_scroll_line_up':
@@ -722529,8 +732340,20 @@ extension on _StringsZhCn {
         return '字段名';
       case 'srs_note_types_field_rename':
         return '重命名字段';
+      case 'srs_note_types_field_term_tag':
+        return '查词用';
+      case 'srs_note_types_field_unused':
+        return '没上卡面';
       case 'srs_note_types_fields':
         return '字段';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => '字段（${n}）';
+      case 'srs_note_types_fields_hint':
+        return '每条笔记要填的内容；点开字段能看到它在卡面的位置';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => '开关字段（${n}）';
+      case 'srs_note_types_flag_fields_hint':
+        return '填任意字符即开启对应的卡面样式';
       case 'srs_note_types_front':
         return '正面模板';
       case 'srs_note_types_insert_field':
@@ -722553,6 +732376,9 @@ extension on _StringsZhCn {
         return '字段名不能包含 : { } "，也不能以 # /  开头';
       case 'srs_note_types_name_reserved':
         return '这是 Anki 的保留字段名（FrontSide、Tags、Deck 等）';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} 个字段 · ${cards} 种卡片';
       case 'srs_note_types_preview':
         return '预览';
       case 'srs_note_types_preview_empty':
@@ -722569,6 +732395,8 @@ extension on _StringsZhCn {
         return '背面';
       case 'srs_note_types_side_front':
         return '正面';
+      case 'srs_note_types_side_none':
+        return '（没有字段）';
       case 'srs_note_types_stock_basic':
         return '问答';
       case 'srs_note_types_stock_cloze':
@@ -722587,6 +732415,8 @@ extension on _StringsZhCn {
         }) => '${notes} 条笔记 · ${fields} 个字段 · ${cards} 种卡片';
       case 'srs_note_types_template_add':
         return '添加卡片模板';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => '背面：${fields}';
       case 'srs_note_types_template_cloze_single':
         return '填空类型只有一个卡片模板';
       case 'srs_note_types_template_delete':
@@ -722598,6 +732428,8 @@ extension on _StringsZhCn {
         return '编辑卡片模板';
       case 'srs_note_types_template_error':
         return ({required Object error}) => '模板有错误：${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => '正面：${fields}';
       case 'srs_note_types_template_last':
         return '笔记类型至少要有一个卡片模板';
       case 'srs_note_types_template_name':
@@ -722606,6 +732438,10 @@ extension on _StringsZhCn {
         return '重命名卡片模板';
       case 'srs_note_types_templates':
         return '卡片模板';
+      case 'srs_note_types_templates_hint':
+        return '每个模板生成一张卡；点进去改它的版面';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => '查词按：${name}';
       case 'srs_note_types_term_field':
         return '词条字段';
       case 'srs_note_types_term_field_hint':
@@ -723275,10 +733111,16 @@ extension on _StringsZhCn {
         return '靠右';
       case 'srs_visual_align_start':
         return '靠左';
+      case 'srs_visual_builtin_body':
+        return '它用到了卡型开关（单词卡 / 句子卡 / 点击卡 / 听音卡）和脚本，可视化编辑器画不出来，所以这里显示的是代码。没改过的内置模板会随 Fushi 一起更新。';
+      case 'srs_visual_builtin_fushi_note':
+        return '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用更新，复习时也不再使用 Fushi 原生卡面。';
+      case 'srs_visual_builtin_other_note':
+        return '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用和上游模板更新。';
+      case 'srs_visual_builtin_title':
+        return '这是内置模板，用代码写成';
       case 'srs_visual_convert_body':
         return '多半来自 Anki 或旧版本。可以按字段自动生成一个可视化布局，之后用拖块的方式改；点保存之前随时可以放弃。';
-      case 'srs_visual_convert_builtin_note':
-        return '这是内置笔记类型：模板一旦改动，复习时就按模板渲染，不再使用 Fushi 原生卡面。';
       case 'srs_visual_convert_title':
         return '这个模板是用代码写的';
       case 'srs_visual_delete':
@@ -724952,6 +734794,38 @@ extension on _StringsZhCn {
         return '发送使用统计';
       case 'usage_stats_enabled_hint':
         return '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台、更新通道、界面语言、CPU 架构、系统大版本和安装来源（如应用商店或安装包），用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址，只记录据此判断的国家或地区。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
+      case 'video_acquisition_channel_library':
+        return '媒体库';
+      case 'video_acquisition_channel_media_server':
+        return '媒体服务器';
+      case 'video_acquisition_channel_online_source':
+        return '在线源';
+      case 'video_acquisition_channel_torrent':
+        return 'BT 搜索';
+      case 'video_acquisition_library_empty':
+        return '媒体库里还没有这部作品';
+      case 'video_acquisition_load_failed':
+        return '这个渠道加载失败';
+      case 'video_acquisition_media_server_configure':
+        return '添加服务器';
+      case 'video_acquisition_media_server_unconfigured':
+        return '还没有配置媒体服务器，可在设置里添加 Jellyfin / Emby / Plex';
+      case 'video_acquisition_online_source_configure':
+        return '管理扩展';
+      case 'video_acquisition_online_source_unconfigured':
+        return '还没有启用的 Aniyomi 在线源，安装扩展后即可在这里搜索';
+      case 'video_acquisition_results_empty':
+        return '没有找到匹配的结果';
+      case 'video_acquisition_section_title':
+        return '获取途径';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} 个来源查询失败';
+      case 'video_acquisition_torrent_add_site':
+        return '添加 BT 来源';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '找到 ${count} 条资源';
+      case 'video_acquisition_torrent_unconfigured':
+        return '还没有适用于这部作品的 BT 来源，添加 BT 来源后即可搜索资源';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -725061,16 +734935,6 @@ extension on _StringsZhCn {
         return '前进 10 秒';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return '电影与剧集。公共索引，无需账号。';
-      case 'video_builtin_knaben_hint':
-        return '电影与剧集。聚合多家公共索引器。';
-      case 'video_builtin_nyaa_hint':
-        return '仅动漫。电影与剧集由下面两个公共索引器覆盖。';
-      case 'video_builtin_sources_hint':
-        return '随应用内置：无需账号，无需 API key。关闭后该来源不再参与资源搜索。';
-      case 'video_builtin_sources_title':
-        return '内置来源';
       case 'video_chapter_n':
         return ({required Object n}) => '章节 ${n}';
       case 'video_chapters':
@@ -725133,6 +734997,10 @@ extension on _StringsZhCn {
         return '收藏当前句';
       case 'video_control_fullscreen':
         return '全屏';
+      case 'video_control_immersive_layout_hint':
+        return '锁定后屏幕上只剩这里的按钮：点画面时出现，在任何沉浸档位都能点。';
+      case 'video_control_immersive_layout_title':
+        return '沉浸模式按钮';
       case 'video_control_next_cue':
         return '下一句字幕';
       case 'video_control_ocr_frame':
@@ -725145,6 +735013,8 @@ extension on _StringsZhCn {
         return '播放/暂停';
       case 'video_control_previous_cue':
         return '上一句字幕';
+      case 'video_control_reject_immersive_lock':
+        return '锁按钮是退出沉浸模式的唯一入口，必须保留。';
       case 'video_control_reject_required':
         return '必选控制必须保留在播放器上。';
       case 'video_control_reject_unavailable':
@@ -725153,6 +735023,8 @@ extension on _StringsZhCn {
         return '音量只能放在底栏。';
       case 'video_control_remove_from_slot':
         return '移出';
+      case 'video_control_reset_immersive_layout':
+        return '恢复默认沉浸模式按钮';
       case 'video_control_reset_layout':
         return '恢复默认播放器按钮布局';
       case 'video_control_screenshot':
@@ -726085,8 +735957,6 @@ extension on _StringsZhCn {
         return '重新导入';
       case 'video_resource_missing_title':
         return '视频无法访问';
-      case 'video_resource_no_provider_hint':
-        return '本次搜索没有可用的来源。请到 设置 → 下载 → 外部资源与字幕来源 重新启用内置来源，或添加 Torznab 索引器。';
       case 'video_resource_no_provider_title':
         return '未配置资源索引器';
       case 'video_resource_query_failed':
@@ -726340,6 +736210,10 @@ extension on _StringsZhCn {
         return '沉浸模式';
       case 'video_setting_immersive_mode_hint':
         return '控制按下侧边锁后仍允许哪些操作';
+      case 'video_setting_immersive_tap_reveal':
+        return '沉浸时点画面显示字幕';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return '沉浸锁定且字幕模糊或隐藏时，点画面任意处显示当前这一句，换句后自动遮回';
       case 'video_setting_jimaku_default_language':
         return '默认字幕语言';
       case 'video_setting_jimaku_default_language_hint':
@@ -727918,6 +737792,12 @@ extension on _StringsZhCn {
         return '在新标签页中打开';
       case 'web_browser_link_share':
         return '分享链接';
+      case 'web_browser_login_import':
+        return '从浏览器导入登录';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
+      case 'web_browser_login_import_waiting':
+        return '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
@@ -727954,6 +737834,8 @@ extension on _StringsZhCn {
         return '通知';
       case 'web_browser_permission_popups':
         return '弹出式窗口和重定向';
+      case 'web_browser_permission_protected_content':
+        return '受保护内容';
       case 'web_browser_permission_request_allow':
         return '允许';
       case 'web_browser_permission_request_block':
@@ -727970,6 +737852,8 @@ extension on _StringsZhCn {
         return '麦克风';
       case 'web_browser_permission_request_notifications':
         return '通知';
+      case 'web_browser_permission_request_protected_content':
+        return '受保护内容播放';
       case 'web_browser_permission_request_remember':
         return '记住对此网站的选择';
       case 'web_browser_permission_request_title':
@@ -728053,6 +737937,14 @@ extension on _StringsZhCn {
         return '留空则使用域名';
       case 'web_browser_site_new':
         return '添加站点';
+      case 'web_browser_site_open_in_browser':
+        return '改回用浏览器打开';
+      case 'web_browser_site_open_in_player':
+        return '默认用播放页打开';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi 字幕、查词与观看进度；Netflix 高画质需要它';
+      case 'web_browser_site_opens_in_player':
+        return '点开进播放页';
       case 'web_browser_site_remove':
         return '从站点移除';
       case 'web_browser_site_settings_clear_all':
@@ -728123,8 +738015,6 @@ extension on _StringsZhCn {
         return '选中加载';
       case 'web_hub_browse':
         return '网页';
-      case 'web_hub_video_sites':
-        return '视频站点';
       case 'web_video_ad_skipping':
         return '正在跳过广告…';
       case 'web_video_address_hint':
@@ -728189,20 +738079,6 @@ extension on _StringsZhCn {
         return '在播放器里看';
       case 'web_video_player_unavailable':
         return '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
-      case 'web_video_site_add':
-        return '添加网站';
-      case 'web_video_site_address_hint':
-        return '网址，比如 netflix.com';
-      case 'web_video_site_address_invalid':
-        return '不是有效的网址';
-      case 'web_video_site_name_hint':
-        return '名称（可选）';
-      case 'web_video_site_open':
-        return '打开';
-      case 'web_video_site_remove':
-        return '移除';
-      case 'web_video_sites_hint':
-        return '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
       case 'web_video_track_failed':
         return '未能截获这条字幕，点选重试';
       case 'web_video_track_image':
@@ -728304,6 +738180,126 @@ extension on _StringsZhHk {
         return 'Volume';
       case 'add_to_collection':
         return '加入合集';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI 沒有給出可用結果，換個説法再試試。';
       case 'ai_assist_failed':
@@ -728338,6 +738334,10 @@ extension on _StringsZhHk {
         return 'AI 下載';
       case 'ai_feature_acquire_summary':
         return '跟 AI 說想要甚麼：影片，或在「瀏覽 › 發現」裡的小說、漫畫、遊戲。它解析你的要求、在相符的作品與版本裡選擇；影片隨後下載或訂閱，其他媒體每次下載由你確認。';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '所選提供商不可用（未配置完整或已停用）';
       case 'ai_feature_audiobook_cast':
@@ -728526,6 +738526,14 @@ extension on _StringsZhHk {
         return ({required Object reason}) => '測試失敗：${reason}';
       case 'ai_provider_test_ok':
         return '連接正常';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return '提供商配置';
       case 'ai_providers_section_summary':
@@ -728862,7 +738870,7 @@ extension on _StringsZhHk {
       case 'anime_download_no_tasks':
         return '暫無下載任務';
       case 'anime_download_nyaa_query':
-        return 'Nyaa 查詢詞';
+        return 'BT 查詢詞';
       case 'anime_download_play_now':
         return '邊下邊播';
       case 'anime_download_play_now_fail':
@@ -729415,10 +739423,16 @@ extension on _StringsZhHk {
         return '覆寫這張卡';
       case 'anki_mined_action_view':
         return '查看 / 在 Anki 中打開';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '選擇對這張已存在的卡片做什麼。';
       case 'anki_mined_card_title':
         return '卡片已在 Anki 中';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return '已清除制卡記錄';
       case 'anki_mined_multiple_matches':
@@ -729431,12 +739445,16 @@ extension on _StringsZhHk {
         return '點按「重新整理」載入你的 Anki 牌組與筆記類型。';
       case 'anki_note_open_failed':
         return '無法在 Anki 中打開這張卡片。';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return '筆記類型';
       case 'anki_note_viewer_empty':
         return '這張卡片沒有可讀取的字段。';
       case 'anki_note_viewer_open_in_anki':
         return '在 Anki 中打開';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '已存在的卡片';
       case 'anki_open_no_card':
@@ -731245,6 +741263,74 @@ extension on _StringsZhHk {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi API 伺服器。';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return '取消';
       case 'card_cover_degraded_to_static':
@@ -733623,6 +743709,8 @@ extension on _StringsZhHk {
             '${field} 欄位使用 ${secondField} 作為備選搜尋詞。';
       case 'file_count':
         return ({required Object count}) => '${count} 個檔案';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '拍照查詞';
       case 'floating_ball_action_clipboard':
@@ -735676,6 +745764,8 @@ extension on _StringsZhHk {
         return '不再顯示';
       case 'home_onboarding_card_start':
         return '繼續新手引導';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -741411,6 +751501,8 @@ extension on _StringsZhHk {
         return '喚起主視窗並開啟查詞頁';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滾動一行';
       case 'shortcut_action_global_scroll_line_up':
@@ -742995,8 +753087,20 @@ extension on _StringsZhHk {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -743019,6 +753123,9 @@ extension on _StringsZhHk {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -743035,6 +753142,8 @@ extension on _StringsZhHk {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -743053,6 +753162,8 @@ extension on _StringsZhHk {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -743064,6 +753175,8 @@ extension on _StringsZhHk {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -743072,6 +753185,10 @@ extension on _StringsZhHk {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -743745,10 +753862,16 @@ extension on _StringsZhHk {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -745423,6 +755546,38 @@ extension on _StringsZhHk {
         return '傳送使用統計';
       case 'usage_stats_enabled_hint':
         return '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台、更新通道、介面語言、CPU 架構、系統主要版本和安裝來源（如應用程式商店或安裝程式），用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址，只記錄據此判斷的國家或地區。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
+      case 'video_acquisition_channel_library':
+        return 'Media library';
+      case 'video_acquisition_channel_media_server':
+        return 'Media servers';
+      case 'video_acquisition_channel_online_source':
+        return 'Online sources';
+      case 'video_acquisition_channel_torrent':
+        return 'BT search';
+      case 'video_acquisition_library_empty':
+        return 'Not in your library yet';
+      case 'video_acquisition_load_failed':
+        return 'Couldn\'t load this channel';
+      case 'video_acquisition_media_server_configure':
+        return 'Add server';
+      case 'video_acquisition_media_server_unconfigured':
+        return 'No media servers yet. Add Jellyfin, Emby or Plex in settings.';
+      case 'video_acquisition_online_source_configure':
+        return 'Manage extensions';
+      case 'video_acquisition_online_source_unconfigured':
+        return 'No Aniyomi sources enabled. Install an extension to search online sources.';
+      case 'video_acquisition_results_empty':
+        return 'No matches found';
+      case 'video_acquisition_section_title':
+        return 'Where to get it';
+      case 'video_acquisition_sources_partial_failed':
+        return ({required Object count}) => '${count} sources failed';
+      case 'video_acquisition_torrent_add_site':
+        return 'Add BT source';
+      case 'video_acquisition_torrent_found':
+        return ({required Object count}) => '${count} resources found';
+      case 'video_acquisition_torrent_unconfigured':
+        return 'No BT sources for this title yet. Add a BT source to search for resources.';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -745532,16 +755687,6 @@ extension on _StringsZhHk {
         return '前進 10 秒';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return '電影與劇集。公共索引，無需賬號。';
-      case 'video_builtin_knaben_hint':
-        return '電影與劇集。聚合多家公共索引器。';
-      case 'video_builtin_nyaa_hint':
-        return '僅動漫。電影與劇集由下面兩個公共索引器覆蓋。';
-      case 'video_builtin_sources_hint':
-        return '隨應用內置：無需賬號，無需 API key。關閉後該來源不再參與資源搜索。';
-      case 'video_builtin_sources_title':
-        return '內置來源';
       case 'video_chapter_n':
         return ({required Object n}) => '章節 ${n}';
       case 'video_chapters':
@@ -745604,6 +755749,10 @@ extension on _StringsZhHk {
         return '收藏目前句子';
       case 'video_control_fullscreen':
         return '全螢幕';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '下一句字幕';
       case 'video_control_ocr_frame':
@@ -745616,6 +755765,8 @@ extension on _StringsZhHk {
         return '播放／暫停';
       case 'video_control_previous_cue':
         return '上一句字幕';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '必選控制必須保留在播放器上。';
       case 'video_control_reject_unavailable':
@@ -745624,6 +755775,8 @@ extension on _StringsZhHk {
         return '音量只能放在底欄。';
       case 'video_control_remove_from_slot':
         return '移出';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return '還原預設播放器按鈕版面';
       case 'video_control_screenshot':
@@ -746556,8 +756709,6 @@ extension on _StringsZhHk {
         return '重新導入';
       case 'video_resource_missing_title':
         return '影片無法訪問';
-      case 'video_resource_no_provider_hint':
-        return '本次搜索沒有可用的來源。請到 設定 → 下載 → 外部資源與字幕來源 重新啟用內置來源，或添加 Torznab 索引器。';
       case 'video_resource_no_provider_title':
         return '未配置資源索引器';
       case 'video_resource_query_failed':
@@ -746812,6 +756963,10 @@ extension on _StringsZhHk {
         return '沉浸模式';
       case 'video_setting_immersive_mode_hint':
         return '控制按下側邊鎖後仍可使用哪些操作';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return '預設字幕語言';
       case 'video_setting_jimaku_default_language_hint':
@@ -748397,6 +758552,13 @@ extension on _StringsZhHk {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -748433,6 +758595,8 @@ extension on _StringsZhHk {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return '受保護內容';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -748449,6 +758613,8 @@ extension on _StringsZhHk {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return '受保護內容播放';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -748532,6 +758698,14 @@ extension on _StringsZhHk {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -748602,8 +758776,6 @@ extension on _StringsZhHk {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return '正在略過廣告…';
       case 'web_video_address_hint':
@@ -748669,20 +758841,6 @@ extension on _StringsZhHk {
         return '在播放器裡看';
       case 'web_video_player_unavailable':
         return '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
-      case 'web_video_site_add':
-        return '新增網站';
-      case 'web_video_site_address_hint':
-        return '網址，例如 netflix.com';
-      case 'web_video_site_address_invalid':
-        return '不是有效的網址';
-      case 'web_video_site_name_hint':
-        return '名稱（可選）';
-      case 'web_video_site_open':
-        return '開啟';
-      case 'web_video_site_remove':
-        return '移除';
-      case 'web_video_sites_hint':
-        return '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
