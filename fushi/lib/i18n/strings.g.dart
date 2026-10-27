@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172703 (10159 per locale)
+/// Strings: 172686 (10158 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14441,7 +14441,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_image_ocr_lookup => 'Look up text in image';
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   String get web_browser_image_save => 'Save image';
-  String get web_browser_known_words => 'Highlight new words';
   String get web_browser_link_copy => 'Copy link address';
   String get web_browser_link_open_background_tab => 'Open in background tab';
   String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
@@ -38887,8 +38886,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -63889,8 +63886,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -88946,8 +88941,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -114085,8 +114078,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_image_save => 'Save image';
   @override
-  String get web_browser_known_words => 'Highlight new words';
-  @override
   String get web_browser_link_copy => 'Copy link address';
   @override
   String get web_browser_link_open_background_tab => 'Open in background tab';
@@ -138881,8 +138872,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -163837,8 +163826,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_image_save => 'Save image';
   @override
-  String get web_browser_known_words => 'Highlight new words';
-  @override
   String get web_browser_link_copy => 'Copy link address';
   @override
   String get web_browser_link_open_background_tab => 'Open in background tab';
@@ -187762,8 +187749,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -211750,8 +211735,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -236653,8 +236636,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -261630,8 +261611,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_image_save => 'Save image';
   @override
-  String get web_browser_known_words => 'Highlight new words';
-  @override
   String get web_browser_link_copy => 'Copy link address';
   @override
   String get web_browser_link_open_background_tab => 'Open in background tab';
@@ -286551,8 +286530,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_image_save => 'Save image';
   @override
-  String get web_browser_known_words => 'Highlight new words';
-  @override
   String get web_browser_link_copy => 'Copy link address';
   @override
   String get web_browser_link_open_background_tab => 'Open in background tab';
@@ -311148,8 +311125,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_image_open_new_tab => 'Open image in new tab';
   @override
   String get web_browser_image_save => 'Save image';
-  @override
-  String get web_browser_known_words => 'Highlight new words';
   @override
   String get web_browser_link_copy => 'Copy link address';
   @override
@@ -335950,8 +335925,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_image_save => 'Save image';
   @override
-  String get web_browser_known_words => 'Highlight new words';
-  @override
   String get web_browser_link_copy => 'Copy link address';
   @override
   String get web_browser_link_open_background_tab => 'Open in background tab';
@@ -360679,8 +360652,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_image_save => 'Save image';
   @override
-  String get web_browser_known_words => 'Highlight new words';
-  @override
   String get web_browser_link_copy => 'Copy link address';
   @override
   String get web_browser_link_open_background_tab => 'Open in background tab';
@@ -383317,8 +383288,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_image_open_new_tab => '在新标签页中打开图片';
   @override
   String get web_browser_image_save => '保存图片';
-  @override
-  String get web_browser_known_words => '生词高亮';
   @override
   String get web_browser_link_copy => '复制链接地址';
   @override
@@ -406626,8 +406595,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_image_save => 'Save image';
   @override
-  String get web_browser_known_words => 'Highlight new words';
-  @override
   String get web_browser_link_copy => 'Copy link address';
   @override
   String get web_browser_link_open_background_tab => 'Open in background tab';
@@ -427753,8 +427720,6 @@ extension on _StringsEn {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -448844,8 +448809,6 @@ extension on _StringsAr {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -470011,8 +469974,6 @@ extension on _StringsDe {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -491160,8 +491121,6 @@ extension on _StringsEs {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -512327,8 +512286,6 @@ extension on _StringsFr {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -533438,8 +533395,6 @@ extension on _StringsId {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -554585,8 +554540,6 @@ extension on _StringsIt {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -575600,8 +575553,6 @@ extension on _StringsJa {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -596628,8 +596579,6 @@ extension on _StringsKo {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -617767,8 +617716,6 @@ extension on _StringsNl {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -638901,8 +638848,6 @@ extension on _StringsPtBr {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -660040,8 +659985,6 @@ extension on _StringsRu {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -681135,8 +681078,6 @@ extension on _StringsTh {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -702261,8 +702202,6 @@ extension on _StringsTr {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -723370,8 +723309,6 @@ extension on _StringsVi {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
@@ -744227,8 +744164,6 @@ extension on _StringsZhCn {
         return '在新标签页中打开图片';
       case 'web_browser_image_save':
         return '保存图片';
-      case 'web_browser_known_words':
-        return '生词高亮';
       case 'web_browser_link_copy':
         return '复制链接地址';
       case 'web_browser_link_open_background_tab':
@@ -765172,8 +765107,6 @@ extension on _StringsZhHk {
         return 'Open image in new tab';
       case 'web_browser_image_save':
         return 'Save image';
-      case 'web_browser_known_words':
-        return 'Highlight new words';
       case 'web_browser_link_copy':
         return 'Copy link address';
       case 'web_browser_link_open_background_tab':
