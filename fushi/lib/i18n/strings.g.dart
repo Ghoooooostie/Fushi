@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172703 (10159 per locale)
+/// Strings: 172720 (10160 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6004,6 +6004,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_book_remove_download => 'Remove download';
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   String get kavita_book_remove_download_kept =>
@@ -24437,6 +24439,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
   @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
@@ -49225,6 +49230,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
   @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
@@ -74245,6 +74253,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
   @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
@@ -99341,6 +99352,9 @@ class _StringsFr extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -124326,6 +124340,9 @@ class _StringsId extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -149192,6 +149209,9 @@ class _StringsIt extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -173702,6 +173722,9 @@ class _StringsJa extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -197633,6 +197656,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
   @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
@@ -222035,6 +222061,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
   @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
@@ -246979,6 +247008,9 @@ class _StringsPtBr extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -271914,6 +271946,9 @@ class _StringsRu extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -296698,6 +296733,9 @@ class _StringsTh extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -321399,6 +321437,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+  @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
   @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
@@ -346171,6 +346212,9 @@ class _StringsVi extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -370037,6 +370081,9 @@ class _StringsZhCn extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       '移除下载的副本？它会从本机书架移除，阅读进度保留在服务器上。';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      '移除下载的副本？这本书在本机的书签、自定义 CSS、有声书或字幕配对、标签与合集只存在本机，会一并删除；阅读进度保留在服务器上。';
+  @override
   String get kavita_book_remove_download_failed => '移除下载失败';
   @override
   String get kavita_book_remove_download_kept => '阅读进度没能同步到服务器，已保留为缓存副本';
@@ -392877,6 +392924,9 @@ class _StringsZhHk extends _StringsEn {
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
   @override
+  String get kavita_book_remove_download_confirm_user_data =>
+      'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
+  @override
   String get kavita_book_remove_download_failed =>
       'Could not remove the download';
   @override
@@ -415276,6 +415326,8 @@ extension on _StringsEn {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -436369,6 +436421,8 @@ extension on _StringsAr {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -457500,6 +457554,8 @@ extension on _StringsDe {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -478655,6 +478711,8 @@ extension on _StringsEs {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -499819,6 +499877,8 @@ extension on _StringsFr {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -520958,6 +521018,8 @@ extension on _StringsId {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -542081,6 +542143,8 @@ extension on _StringsIt {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -563172,6 +563236,8 @@ extension on _StringsJa {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -584188,6 +584254,8 @@ extension on _StringsKo {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -605266,6 +605334,8 @@ extension on _StringsNl {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -626406,6 +626476,8 @@ extension on _StringsPtBr {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -647547,6 +647619,8 @@ extension on _StringsRu {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -668660,6 +668734,8 @@ extension on _StringsTh {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -689774,6 +689850,8 @@ extension on _StringsTr {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -710891,6 +710969,8 @@ extension on _StringsVi {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
@@ -731885,6 +731965,8 @@ extension on _StringsZhCn {
         return '移除下载';
       case 'kavita_book_remove_download_confirm':
         return '移除下载的副本？它会从本机书架移除，阅读进度保留在服务器上。';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return '移除下载的副本？这本书在本机的书签、自定义 CSS、有声书或字幕配对、标签与合集只存在本机，会一并删除；阅读进度保留在服务器上。';
       case 'kavita_book_remove_download_failed':
         return '移除下载失败';
       case 'kavita_book_remove_download_kept':
@@ -752770,6 +752852,8 @@ extension on _StringsZhHk {
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
         return 'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
+      case 'kavita_book_remove_download_confirm_user_data':
+        return 'Remove the downloaded copy? Bookmarks, custom CSS, audiobook or subtitle pairing, tags and collections for this book exist only on this device and will be deleted too; reading progress stays on the server.';
       case 'kavita_book_remove_download_failed':
         return 'Could not remove the download';
       case 'kavita_book_remove_download_kept':
