@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 171292 (10076 per locale)
+/// Strings: 171122 (10066 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -272,6 +272,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_agent_no_provider =>
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   String get ai_agent_open_settings => 'Open settings';
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
   String get ai_agent_remote_lost =>
@@ -6377,6 +6380,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get log_upload_success => 'Log uploaded';
   String get log_upload_too_large => 'Log too large to upload';
   String get login => 'Login';
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   String get lookup_accessibility_permission_granted =>
       'Accessibility permission granted';
   String get lookup_accessibility_permission_hint =>
@@ -7468,8 +7475,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_login_import_browser => 'Import from browser';
   String get mihon_source_login_import_hint =>
       'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
-  String get mihon_source_login_import_none =>
-      'No session received from the browser yet';
   String mihon_source_login_import_received({required Object count}) =>
       'Imported ${count} cookies from the browser';
   String get mihon_source_login_saved => 'Signed in to this source';
@@ -9927,8 +9932,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_label_other_dictionaries => 'Other dictionaries';
   String get srs_card_label_show_more => 'Show more';
   String get srs_card_label_source => 'Source';
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  String get srs_card_media_missing_video => 'Video not synced yet';
   String get srs_card_move => 'Move to deck';
   String get srs_card_reset => 'Reset to new';
   String get srs_card_reset_confirm =>
@@ -10887,19 +10890,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The location\'s settings file can\'t be read right now; it will be retried next time.';
   String get srs_sync_no_backend => 'No sync service is set up';
   String get srs_sync_now => 'Sync now';
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  String get srs_sync_now_started => 'Review sync started';
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  String get srs_sync_progress_media => 'Syncing card media';
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   String get srs_sync_store_unavailable =>
@@ -11001,8 +10993,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_reason_merge_notes => 'Before merging notes';
   String get srs_timeline_reason_note_type => 'Before changing note type';
   String get srs_timeline_reason_restore => 'Before a restore';
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
   String get srs_timeline_restore => 'Restore';
   String srs_timeline_restore_body({required Object time}) =>
       'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
@@ -11021,7 +11011,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_section => 'Timeline';
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   String get srs_timeline_status => 'Sync status';
-  String get srs_timeline_syncing => 'Syncing review data';
   String get srs_timeline_this_device => 'This device';
   String get srs_timeline_title => 'Sync & history';
   String srs_timeline_unpublished({required Object n}) =>
@@ -14333,8 +14322,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_login_import => 'Import sign-in from browser';
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
   String get web_browser_menu_bookmarks => 'Bookmarks';
@@ -14492,8 +14479,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_login_import => 'Import login from browser';
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   String get web_video_mine_queue_empty => 'No queued cards';
@@ -14706,6 +14691,11 @@ class _StringsAr extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -24949,6 +24939,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get login => 'تسجيل الدخول';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'تم منح إذن إمكانية الوصول';
   @override
@@ -26817,9 +26813,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'تم فتح الموقع في متصفحك. ستُرسل إضافة Fushi جلسته إلى هنا؛ سجّل الدخول هناك إن لزم ثم اضغط «تم».';
-  @override
-  String get mihon_source_login_import_none =>
-      'لم تُستلم أي جلسة من المتصفح بعد';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'تم استيراد ${count} ملف تعريف ارتباط من المتصفح';
@@ -31118,10 +31111,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -32741,26 +32730,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -32935,9 +32906,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -32968,8 +32936,6 @@ class _StringsAr extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -38590,9 +38556,6 @@ class _StringsAr extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -38874,9 +38837,6 @@ class _StringsAr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -39121,6 +39081,11 @@ class _StringsDe extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -49557,6 +49522,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get login => 'Anmelden';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Bedienungshilfen-Berechtigung erteilt';
   @override
@@ -51471,9 +51442,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Die Website wurde in deinem Browser geöffnet. Die Fushi-Erweiterung sendet ihre Sitzung hierher; melde dich dort bei Bedarf an und tippe dann auf „Fertig“.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Noch keine Sitzung vom Browser empfangen';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} Cookies aus dem Browser importiert';
@@ -55831,10 +55799,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -57454,26 +57418,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -57648,9 +57594,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -57681,8 +57624,6 @@ class _StringsDe extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -63396,9 +63337,6 @@ class _StringsDe extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -63680,9 +63618,6 @@ class _StringsDe extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -63927,6 +63862,11 @@ class _StringsEs extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -74386,6 +74326,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get login => 'Iniciar sesión';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Permiso de Accesibilidad concedido';
   @override
@@ -76301,9 +76247,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'El sitio se abrió en tu navegador. La extensión de Fushi enviará su sesión aquí; inicia sesión allí si hace falta y toca Listo.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Aún no se ha recibido ninguna sesión del navegador';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Se importaron ${count} cookies del navegador';
@@ -80667,10 +80610,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -82290,26 +82229,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -82484,9 +82405,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -82517,8 +82435,6 @@ class _StringsEs extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -88257,9 +88173,6 @@ class _StringsEs extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -88541,9 +88454,6 @@ class _StringsEs extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -88790,6 +88700,11 @@ class _StringsFr extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -99285,6 +99200,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get login => 'Connexion';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Autorisation d\'accessibilité accordée';
   @override
@@ -101209,9 +101130,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Le site a été ouvert dans votre navigateur. L\'extension Fushi y enverra sa session ; connectez-vous là-bas si nécessaire, puis appuyez sur Terminé.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Aucune session reçue du navigateur pour l\'instant';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} cookies importés depuis le navigateur';
@@ -105590,10 +105508,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -107213,26 +107127,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -107407,9 +107303,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -107440,8 +107333,6 @@ class _StringsFr extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -113199,9 +113090,6 @@ class _StringsFr extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -113484,9 +113372,6 @@ class _StringsFr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -113733,6 +113618,11 @@ class _StringsId extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -124064,6 +123954,12 @@ class _StringsId extends _StringsEn {
   @override
   String get login => 'Masuk';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Izin Aksesibilitas diberikan';
   @override
@@ -125953,9 +125849,6 @@ class _StringsId extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Situs dibuka di browser Anda. Ekstensi Fushi akan mengirim sesinya ke sini; masuk di sana jika perlu, lalu ketuk Selesai.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Belum ada sesi yang diterima dari browser';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} cookie diimpor dari browser';
@@ -130277,10 +130170,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -131900,26 +131789,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -132094,9 +131965,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -132127,8 +131995,6 @@ class _StringsId extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -137800,9 +137666,6 @@ class _StringsId extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -138084,9 +137947,6 @@ class _StringsId extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -138331,6 +138191,11 @@ class _StringsIt extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -148734,6 +148599,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get login => 'Accedi';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Permesso di Accessibilità concesso';
   @override
@@ -150649,9 +150520,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Il sito è stato aperto nel browser. L\'estensione di Fushi invierà qui la sua sessione; accedi lì se necessario, poi tocca Fatto.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Nessuna sessione ancora ricevuta dal browser';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Importati ${count} cookie dal browser';
@@ -155006,10 +154874,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -156629,26 +156493,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -156823,9 +156669,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -156856,8 +156699,6 @@ class _StringsIt extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -162559,9 +162400,6 @@ class _StringsIt extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -162844,9 +162682,6 @@ class _StringsIt extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -163093,6 +162928,11 @@ class _StringsJa extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -173018,6 +172858,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get login => 'ログイン';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted => 'アクセシビリティの権限を許可しました';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -174832,8 +174678,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'サイトをブラウザで開きました。Fushi の拡張機能がセッションをここに送ります。必要ならブラウザでログインしてから「完了」をタップしてください。';
-  @override
-  String get mihon_source_login_import_none => 'ブラウザからセッションをまだ受信していません';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'ブラウザから Cookie を ${count} 件インポートしました';
@@ -179024,10 +178868,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => '画像は未同期です';
-  @override
-  String get srs_card_media_missing_video => '動画は未同期です';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -180647,26 +180487,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -180841,9 +180663,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -180874,8 +180693,6 @@ class _StringsJa extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -186288,9 +186105,6 @@ class _StringsJa extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -186571,9 +186385,6 @@ class _StringsJa extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -186817,6 +186628,11 @@ class _StringsKo extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -196752,6 +196568,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get login => '로그인';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted => '손쉬운 사용 권한이 허용되었습니다';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -198577,8 +198399,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       '브라우저에서 사이트를 열었습니다. Fushi 확장 프로그램이 세션을 여기로 보냅니다. 필요하면 그곳에서 로그인한 다음 완료를 누르세요.';
-  @override
-  String get mihon_source_login_import_none => '아직 브라우저에서 받은 세션이 없습니다';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '브라우저에서 쿠키 ${count}개를 가져왔습니다';
@@ -202778,10 +202598,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -204401,26 +204217,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -204595,9 +204393,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -204628,8 +204423,6 @@ class _StringsKo extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -210079,9 +209872,6 @@ class _StringsKo extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -210361,9 +210151,6 @@ class _StringsKo extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -210608,6 +210395,11 @@ class _StringsNl extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -220991,6 +220783,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get login => 'Inloggen';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Toegankelijkheidstoestemming verleend';
   @override
@@ -222888,9 +222686,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'De site is in je browser geopend. De Fushi-extensie stuurt de sessie hierheen; log daar zo nodig in en tik dan op Klaar.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Nog geen sessie van de browser ontvangen';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} cookies uit de browser geïmporteerd';
@@ -227239,10 +227034,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -228862,26 +228653,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -229056,9 +228829,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -229089,8 +228859,6 @@ class _StringsNl extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -234786,9 +234554,6 @@ class _StringsNl extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -235071,9 +234836,6 @@ class _StringsNl extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -235319,6 +235081,11 @@ class _StringsPtBr extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -245742,6 +245509,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get login => 'Entrar';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Permissão de Acessibilidade concedida';
   @override
@@ -247647,9 +247420,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'O site foi aberto no seu navegador. A extensão do Fushi enviará a sessão para cá; entre lá se necessário e toque em Concluído.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Nenhuma sessão recebida do navegador ainda';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} cookies importados do navegador';
@@ -251999,10 +251769,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -253622,26 +253388,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -253816,9 +253564,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -253849,8 +253594,6 @@ class _StringsPtBr extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -259566,9 +259309,6 @@ class _StringsPtBr extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -259850,9 +259590,6 @@ class _StringsPtBr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -260098,6 +259835,11 @@ class _StringsRu extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -270479,6 +270221,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get login => 'Войти';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Разрешение «Универсальный доступ» выдано';
   @override
@@ -272380,9 +272128,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Сайт открыт в вашем браузере. Расширение Fushi отправит сюда его сеанс; при необходимости войдите там, затем нажмите «Готово».';
-  @override
-  String get mihon_source_login_import_none =>
-      'Сеанс из браузера ещё не получен';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Импортировано куки из браузера: ${count}';
@@ -276736,10 +276481,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -278359,26 +278100,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -278553,9 +278276,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -278586,8 +278306,6 @@ class _StringsRu extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -284291,9 +284009,6 @@ class _StringsRu extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -284575,9 +284290,6 @@ class _StringsRu extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -284822,6 +284534,11 @@ class _StringsTh extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -295050,6 +294767,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get login => 'เข้าสู่ระบบ';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'ให้สิทธิ์การเข้าถึงแล้ว';
   @override
@@ -296924,9 +296647,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'เว็บไซต์ถูกเปิดในเบราว์เซอร์ของคุณแล้ว ส่วนขยาย Fushi จะส่งเซสชันมาที่นี่ ลงชื่อเข้าใช้ที่นั่นหากจำเป็น แล้วแตะ เสร็จสิ้น';
-  @override
-  String get mihon_source_login_import_none =>
-      'ยังไม่ได้รับเซสชันจากเบราว์เซอร์';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'นำเข้าคุกกี้ ${count} รายการจากเบราว์เซอร์แล้ว';
@@ -301225,10 +300945,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -302848,26 +302564,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -303042,9 +302740,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -303075,8 +302770,6 @@ class _StringsTh extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -308693,9 +308386,6 @@ class _StringsTh extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -308977,9 +308667,6 @@ class _StringsTh extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -309224,6 +308911,11 @@ class _StringsTr extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -319565,6 +319257,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get login => 'Giriş yap';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Erişilebilirlik izni verildi';
   @override
@@ -321454,9 +321152,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Site tarayıcınızda açıldı. Fushi uzantısı oturumunu buraya gönderecek; gerekirse orada oturum açın, ardından Bitti\'ye dokunun.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Tarayıcıdan henüz oturum alınmadı';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Tarayıcıdan ${count} çerez içe aktarıldı';
@@ -325779,10 +325474,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -327402,26 +327093,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -327596,9 +327269,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -327629,8 +327299,6 @@ class _StringsTr extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -333298,9 +332966,6 @@ class _StringsTr extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -333582,9 +333247,6 @@ class _StringsTr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -333830,6 +333492,11 @@ class _StringsVi extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -344140,6 +343807,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get login => 'Đăng nhập';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted => 'Đã cấp quyền Trợ năng';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -346019,9 +345692,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Trang web đã được mở trong trình duyệt của bạn. Tiện ích Fushi sẽ gửi phiên của nó về đây; hãy đăng nhập ở đó nếu cần, rồi nhấn Xong.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Chưa nhận được phiên nào từ trình duyệt';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Đã nhập ${count} cookie từ trình duyệt';
@@ -350329,10 +349999,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -351952,26 +351618,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -352146,9 +351794,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -352179,8 +351824,6 @@ class _StringsVi extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -357831,9 +357474,6 @@ class _StringsVi extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -358115,9 +357755,6 @@ class _StringsVi extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
-  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -358355,6 +357992,11 @@ class _StringsZhCn extends _StringsEn {
   String get ai_agent_no_provider => 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
   @override
   String get ai_agent_open_settings => '去设置';
+  @override
+  String get ai_agent_peer_access => '允许已配对设备使用 AI 助手';
+  @override
+  String get ai_agent_peer_access_hint =>
+      '本机当互联主机时，已配对设备可以在这台设备上开 AI 助手会话：用的是本机的 AI 提供商，能改本机的库和设置（每条改动都能在「AI 操作记录」里撤销）。默认关闭。';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       '${device} 上关闭了 AI 功能。';
@@ -367760,6 +367402,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get login => '登录';
   @override
+  String login_import_pending({required Object host}) =>
+      '正在等系统浏览器送回 ${host} 的登录。装了 Fushi 浏览器扩展会自动送来；还没登录就先在浏览器里登录，再点一次导入。';
+  @override
+  String get login_import_write_failed => '没能写入浏览器送来的登录信息';
+  @override
   String get lookup_accessibility_permission_granted => '已授权辅助功能';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -369498,8 +369145,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       '已在系统浏览器打开源站，Fushi 扩展会把会话送过来；还没登录就在浏览器里登录，然后点「完成」。';
-  @override
-  String get mihon_source_login_import_none => '还没收到浏览器送来的会话';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条 cookie';
@@ -373478,10 +373123,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_label_source => '来源';
   @override
-  String get srs_card_media_missing_image => '图片未同步';
-  @override
-  String get srs_card_media_missing_video => '视频未同步';
-  @override
   String get srs_card_move => '移到牌组';
   @override
   String get srs_card_reset => '重置为新卡';
@@ -374969,25 +374610,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_now => '立即同步';
   @override
-  String srs_sync_now_busy({required Object progress}) => '正在同步：${progress}';
-  @override
-  String get srs_sync_now_started => '开始同步复习数据…';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
-  @override
-  String get srs_sync_progress_downloading => '同步复习数据';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => '同步复习数据 (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => '同步卡片媒体';
-  @override
-  String get srs_sync_progress_preparing => '正在准备同步复习数据';
-  @override
-  String get srs_sync_progress_uploading => '上传复习改动';
   @override
   String get srs_sync_setup_body =>
       '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
@@ -375143,8 +374767,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => '恢复之前';
   @override
-  String srs_timeline_receiving({required Object n}) => '正在接收 ${n} 条改动';
-  @override
   String get srs_timeline_restore => '恢复';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -375173,8 +374795,6 @@ class _StringsZhCn extends _StringsEn {
   String srs_timeline_seen({required Object time}) => '最后同步 ${time}';
   @override
   String get srs_timeline_status => '同步状态';
-  @override
-  String get srs_timeline_syncing => '正在同步复习数据';
   @override
   String get srs_timeline_this_device => '本机';
   @override
@@ -380289,9 +379909,6 @@ class _StringsZhCn extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条登录信息';
   @override
-  String get web_browser_login_import_waiting =>
-      '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
-  @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
   String get web_browser_lookup_on => '点词查词：开';
@@ -380551,9 +380168,6 @@ class _StringsZhCn extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条登录信息';
   @override
-  String get web_video_login_import_waiting =>
-      '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
-  @override
   String get web_video_mine_background => '正在后台制卡（直接从 YouTube 视频流截取）';
   @override
   String get web_video_mine_queue_empty => '制卡队列为空';
@@ -380792,6 +380406,11 @@ class _StringsZhHk extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -390414,6 +390033,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get login => '登入';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted => '已授權輔助功能';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -392183,8 +391808,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       '已在系統瀏覽器開啟源站，Fushi 擴展會把會話送過來；還沒登入就在瀏覽器裡登入，然後點「完成」。';
-  @override
-  String get mihon_source_login_import_none => '還沒收到瀏覽器送來的會話';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '已從瀏覽器匯入 ${count} 條 cookie';
@@ -396289,10 +395912,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_media_missing_image => '圖片未同步';
-  @override
-  String get srs_card_media_missing_video => '影片未同步';
-  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -397912,26 +397531,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
-  String srs_sync_now_busy({required Object progress}) =>
-      'Already syncing: ${progress}';
-  @override
-  String get srs_sync_now_started => 'Review sync started';
-  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-  @override
-  String get srs_sync_progress_downloading => 'Syncing review data';
-  @override
-  String srs_sync_progress_downloading_count({
-    required Object done,
-    required Object total,
-  }) => 'Syncing review data (${done}/${total})';
-  @override
-  String get srs_sync_progress_media => 'Syncing card media';
-  @override
-  String get srs_sync_progress_preparing => 'Preparing review sync';
-  @override
-  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -398105,9 +397706,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
-  String srs_timeline_receiving({required Object n}) =>
-      'Receiving ${n} changes';
-  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -398138,8 +397736,6 @@ class _StringsZhHk extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
-  @override
-  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -403400,9 +402996,6 @@ class _StringsZhHk extends _StringsEn {
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -403680,9 +403273,6 @@ class _StringsZhHk extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       '已從瀏覽器匯入 ${count} 條登入資訊';
   @override
-  String get web_video_login_import_waiting =>
-      '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
-  @override
   String get web_video_mine_background => '正在背景製卡（直接從 YouTube 影片串流擷取）';
   @override
   String get web_video_mine_queue_empty => '佇列中沒有卡片';
@@ -403875,6 +403465,10 @@ extension on _StringsEn {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -412569,6 +412163,11 @@ extension on _StringsEn {
         return 'Log too large to upload';
       case 'login':
         return 'Login';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Accessibility permission granted';
       case 'lookup_accessibility_permission_hint':
@@ -414210,8 +413809,6 @@ extension on _StringsEn {
         return 'Import from browser';
       case 'mihon_source_login_import_hint':
         return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
-      case 'mihon_source_login_import_none':
-        return 'No session received from the browser yet';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} cookies from the browser';
@@ -417978,10 +417575,6 @@ extension on _StringsEn {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -419385,24 +418978,9 @@ extension on _StringsEn {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -419547,8 +419125,6 @@ extension on _StringsEn {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -419576,8 +419152,6 @@ extension on _StringsEn {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -424357,8 +423931,6 @@ extension on _StringsEn {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -424610,8 +424182,6 @@ extension on _StringsEn {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -424800,6 +424370,10 @@ extension on _StringsAr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -433489,6 +433063,11 @@ extension on _StringsAr {
         return 'السجل كبير جدًا على الرفع';
       case 'login':
         return 'تسجيل الدخول';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'تم منح إذن إمكانية الوصول';
       case 'lookup_accessibility_permission_hint':
@@ -435130,8 +434709,6 @@ extension on _StringsAr {
         return 'استيراد من المتصفح';
       case 'mihon_source_login_import_hint':
         return 'تم فتح الموقع في متصفحك. ستُرسل إضافة Fushi جلسته إلى هنا؛ سجّل الدخول هناك إن لزم ثم اضغط «تم».';
-      case 'mihon_source_login_import_none':
-        return 'لم تُستلم أي جلسة من المتصفح بعد';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'تم استيراد ${count} ملف تعريف ارتباط من المتصفح';
@@ -438899,10 +438476,6 @@ extension on _StringsAr {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -440306,24 +439879,9 @@ extension on _StringsAr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -440468,8 +440026,6 @@ extension on _StringsAr {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -440497,8 +440053,6 @@ extension on _StringsAr {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -445276,8 +444830,6 @@ extension on _StringsAr {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -445529,8 +445081,6 @@ extension on _StringsAr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -445719,6 +445269,10 @@ extension on _StringsDe {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -454450,6 +454004,11 @@ extension on _StringsDe {
         return 'Log zu groß zum Hochladen';
       case 'login':
         return 'Anmelden';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Bedienungshilfen-Berechtigung erteilt';
       case 'lookup_accessibility_permission_hint':
@@ -456101,8 +455660,6 @@ extension on _StringsDe {
         return 'Aus Browser importieren';
       case 'mihon_source_login_import_hint':
         return 'Die Website wurde in deinem Browser geöffnet. Die Fushi-Erweiterung sendet ihre Sitzung hierher; melde dich dort bei Bedarf an und tippe dann auf „Fertig“.';
-      case 'mihon_source_login_import_none':
-        return 'Noch keine Sitzung vom Browser empfangen';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} Cookies aus dem Browser importiert';
@@ -459876,10 +459433,6 @@ extension on _StringsDe {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -461283,24 +460836,9 @@ extension on _StringsDe {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -461445,8 +460983,6 @@ extension on _StringsDe {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -461474,8 +461010,6 @@ extension on _StringsDe {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -466271,8 +465805,6 @@ extension on _StringsDe {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -466524,8 +466056,6 @@ extension on _StringsDe {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -466714,6 +466244,10 @@ extension on _StringsEs {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -475432,6 +474966,11 @@ extension on _StringsEs {
         return 'El registro es demasiado grande para subirlo';
       case 'login':
         return 'Iniciar sesión';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Permiso de Accesibilidad concedido';
       case 'lookup_accessibility_permission_hint':
@@ -477082,8 +476621,6 @@ extension on _StringsEs {
         return 'Importar desde el navegador';
       case 'mihon_source_login_import_hint':
         return 'El sitio se abrió en tu navegador. La extensión de Fushi enviará su sesión aquí; inicia sesión allí si hace falta y toca Listo.';
-      case 'mihon_source_login_import_none':
-        return 'Aún no se ha recibido ninguna sesión del navegador';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Se importaron ${count} cookies del navegador';
@@ -480857,10 +480394,6 @@ extension on _StringsEs {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -482264,24 +481797,9 @@ extension on _StringsEs {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -482426,8 +481944,6 @@ extension on _StringsEs {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -482455,8 +481971,6 @@ extension on _StringsEs {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -487248,8 +486762,6 @@ extension on _StringsEs {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -487501,8 +487013,6 @@ extension on _StringsEs {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -487691,6 +487201,10 @@ extension on _StringsFr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -496424,6 +495938,11 @@ extension on _StringsFr {
         return 'Journal trop volumineux pour être envoyé';
       case 'login':
         return 'Connexion';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Autorisation d\'accessibilité accordée';
       case 'lookup_accessibility_permission_hint':
@@ -498073,8 +497592,6 @@ extension on _StringsFr {
         return 'Importer depuis le navigateur';
       case 'mihon_source_login_import_hint':
         return 'Le site a été ouvert dans votre navigateur. L\'extension Fushi y enverra sa session ; connectez-vous là-bas si nécessaire, puis appuyez sur Terminé.';
-      case 'mihon_source_login_import_none':
-        return 'Aucune session reçue du navigateur pour l\'instant';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} cookies importés depuis le navigateur';
@@ -501849,10 +501366,6 @@ extension on _StringsFr {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -503256,24 +502769,9 @@ extension on _StringsFr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -503418,8 +502916,6 @@ extension on _StringsFr {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -503447,8 +502943,6 @@ extension on _StringsFr {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -508243,8 +507737,6 @@ extension on _StringsFr {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -508496,8 +507988,6 @@ extension on _StringsFr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -508686,6 +508176,10 @@ extension on _StringsId {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -517391,6 +516885,11 @@ extension on _StringsId {
         return 'Log terlalu besar untuk diunggah';
       case 'login':
         return 'Masuk';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Izin Aksesibilitas diberikan';
       case 'lookup_accessibility_permission_hint':
@@ -519033,8 +518532,6 @@ extension on _StringsId {
         return 'Impor dari browser';
       case 'mihon_source_login_import_hint':
         return 'Situs dibuka di browser Anda. Ekstensi Fushi akan mengirim sesinya ke sini; masuk di sana jika perlu, lalu ketuk Selesai.';
-      case 'mihon_source_login_import_none':
-        return 'Belum ada sesi yang diterima dari browser';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} cookie diimpor dari browser';
@@ -522801,10 +522298,6 @@ extension on _StringsId {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -524208,24 +523701,9 @@ extension on _StringsId {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -524370,8 +523848,6 @@ extension on _StringsId {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -524399,8 +523875,6 @@ extension on _StringsId {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -529182,8 +528656,6 @@ extension on _StringsId {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -529435,8 +528907,6 @@ extension on _StringsId {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -529625,6 +529095,10 @@ extension on _StringsIt {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -538342,6 +537816,11 @@ extension on _StringsIt {
         return 'Log troppo grande per il caricamento';
       case 'login':
         return 'Accedi';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Permesso di Accessibilità concesso';
       case 'lookup_accessibility_permission_hint':
@@ -539990,8 +539469,6 @@ extension on _StringsIt {
         return 'Importa dal browser';
       case 'mihon_source_login_import_hint':
         return 'Il sito è stato aperto nel browser. L\'estensione di Fushi invierà qui la sua sessione; accedi lì se necessario, poi tocca Fatto.';
-      case 'mihon_source_login_import_none':
-        return 'Nessuna sessione ancora ricevuta dal browser';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Importati ${count} cookie dal browser';
@@ -543762,10 +543239,6 @@ extension on _StringsIt {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -545169,24 +544642,9 @@ extension on _StringsIt {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -545331,8 +544789,6 @@ extension on _StringsIt {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -545360,8 +544816,6 @@ extension on _StringsIt {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -550157,8 +549611,6 @@ extension on _StringsIt {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -550410,8 +549862,6 @@ extension on _StringsIt {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -550600,6 +550050,10 @@ extension on _StringsJa {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -559257,6 +558711,11 @@ extension on _StringsJa {
         return 'ログが大きすぎてアップロードできません';
       case 'login':
         return 'ログイン';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'アクセシビリティの権限を許可しました';
       case 'lookup_accessibility_permission_hint':
@@ -560895,8 +560354,6 @@ extension on _StringsJa {
         return 'ブラウザからインポート';
       case 'mihon_source_login_import_hint':
         return 'サイトをブラウザで開きました。Fushi の拡張機能がセッションをここに送ります。必要ならブラウザでログインしてから「完了」をタップしてください。';
-      case 'mihon_source_login_import_none':
-        return 'ブラウザからセッションをまだ受信していません';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'ブラウザから Cookie を ${count} 件インポートしました';
@@ -564657,10 +564114,6 @@ extension on _StringsJa {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return '画像は未同期です';
-      case 'srs_card_media_missing_video':
-        return '動画は未同期です';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -566064,24 +565517,9 @@ extension on _StringsJa {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -566226,8 +565664,6 @@ extension on _StringsJa {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -566255,8 +565691,6 @@ extension on _StringsJa {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -571000,8 +570434,6 @@ extension on _StringsJa {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -571253,8 +570685,6 @@ extension on _StringsJa {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -571440,6 +570870,10 @@ extension on _StringsKo {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -580101,6 +579535,11 @@ extension on _StringsKo {
         return '로그가 너무 커서 업로드할 수 없습니다';
       case 'login':
         return '로그인';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return '손쉬운 사용 권한이 허용되었습니다';
       case 'lookup_accessibility_permission_hint':
@@ -581738,8 +581177,6 @@ extension on _StringsKo {
         return '브라우저에서 가져오기';
       case 'mihon_source_login_import_hint':
         return '브라우저에서 사이트를 열었습니다. Fushi 확장 프로그램이 세션을 여기로 보냅니다. 필요하면 그곳에서 로그인한 다음 완료를 누르세요.';
-      case 'mihon_source_login_import_none':
-        return '아직 브라우저에서 받은 세션이 없습니다';
       case 'mihon_source_login_import_received':
         return ({required Object count}) => '브라우저에서 쿠키 ${count}개를 가져왔습니다';
       case 'mihon_source_login_saved':
@@ -585501,10 +584938,6 @@ extension on _StringsKo {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -586908,24 +586341,9 @@ extension on _StringsKo {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -587070,8 +586488,6 @@ extension on _StringsKo {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -587099,8 +586515,6 @@ extension on _StringsKo {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -591856,8 +591270,6 @@ extension on _StringsKo {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -592109,8 +591521,6 @@ extension on _StringsKo {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -592296,6 +591706,10 @@ extension on _StringsNl {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -601012,6 +600426,11 @@ extension on _StringsNl {
         return 'Logboek te groot om te uploaden';
       case 'login':
         return 'Inloggen';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Toegankelijkheidstoestemming verleend';
       case 'lookup_accessibility_permission_hint':
@@ -602663,8 +602082,6 @@ extension on _StringsNl {
         return 'Importeren uit browser';
       case 'mihon_source_login_import_hint':
         return 'De site is in je browser geopend. De Fushi-extensie stuurt de sessie hierheen; log daar zo nodig in en tik dan op Klaar.';
-      case 'mihon_source_login_import_none':
-        return 'Nog geen sessie van de browser ontvangen';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} cookies uit de browser geïmporteerd';
@@ -606435,10 +605852,6 @@ extension on _StringsNl {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -607842,24 +607255,9 @@ extension on _StringsNl {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -608004,8 +607402,6 @@ extension on _StringsNl {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -608033,8 +607429,6 @@ extension on _StringsNl {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -612823,8 +612217,6 @@ extension on _StringsNl {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -613076,8 +612468,6 @@ extension on _StringsNl {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -613266,6 +612656,10 @@ extension on _StringsPtBr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -621979,6 +621373,11 @@ extension on _StringsPtBr {
         return 'Log grande demais para enviar';
       case 'login':
         return 'Entrar';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Permissão de Acessibilidade concedida';
       case 'lookup_accessibility_permission_hint':
@@ -623628,8 +623027,6 @@ extension on _StringsPtBr {
         return 'Importar do navegador';
       case 'mihon_source_login_import_hint':
         return 'O site foi aberto no seu navegador. A extensão do Fushi enviará a sessão para cá; entre lá se necessário e toque em Concluído.';
-      case 'mihon_source_login_import_none':
-        return 'Nenhuma sessão recebida do navegador ainda';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} cookies importados do navegador';
@@ -627400,10 +626797,6 @@ extension on _StringsPtBr {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -628807,24 +628200,9 @@ extension on _StringsPtBr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -628969,8 +628347,6 @@ extension on _StringsPtBr {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -628998,8 +628374,6 @@ extension on _StringsPtBr {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -633785,8 +633159,6 @@ extension on _StringsPtBr {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -634038,8 +633410,6 @@ extension on _StringsPtBr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -634228,6 +633598,10 @@ extension on _StringsRu {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -642948,6 +642322,11 @@ extension on _StringsRu {
         return 'Журнал слишком большой для загрузки';
       case 'login':
         return 'Войти';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Разрешение «Универсальный доступ» выдано';
       case 'lookup_accessibility_permission_hint':
@@ -644597,8 +643976,6 @@ extension on _StringsRu {
         return 'Импортировать из браузера';
       case 'mihon_source_login_import_hint':
         return 'Сайт открыт в вашем браузере. Расширение Fushi отправит сюда его сеанс; при необходимости войдите там, затем нажмите «Готово».';
-      case 'mihon_source_login_import_none':
-        return 'Сеанс из браузера ещё не получен';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Импортировано куки из браузера: ${count}';
@@ -648369,10 +647746,6 @@ extension on _StringsRu {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -649776,24 +649149,9 @@ extension on _StringsRu {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -649938,8 +649296,6 @@ extension on _StringsRu {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -649967,8 +649323,6 @@ extension on _StringsRu {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -654752,8 +654106,6 @@ extension on _StringsRu {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -655005,8 +654357,6 @@ extension on _StringsRu {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -655195,6 +654545,10 @@ extension on _StringsTh {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -663890,6 +663244,11 @@ extension on _StringsTh {
         return 'ล็อกใหญ่เกินไป อัปโหลดไม่ได้';
       case 'login':
         return 'เข้าสู่ระบบ';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'ให้สิทธิ์การเข้าถึงแล้ว';
       case 'lookup_accessibility_permission_hint':
@@ -665531,8 +664890,6 @@ extension on _StringsTh {
         return 'นำเข้าจากเบราว์เซอร์';
       case 'mihon_source_login_import_hint':
         return 'เว็บไซต์ถูกเปิดในเบราว์เซอร์ของคุณแล้ว ส่วนขยาย Fushi จะส่งเซสชันมาที่นี่ ลงชื่อเข้าใช้ที่นั่นหากจำเป็น แล้วแตะ เสร็จสิ้น';
-      case 'mihon_source_login_import_none':
-        return 'ยังไม่ได้รับเซสชันจากเบราว์เซอร์';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'นำเข้าคุกกี้ ${count} รายการจากเบราว์เซอร์แล้ว';
@@ -669298,10 +668655,6 @@ extension on _StringsTh {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -670705,24 +670058,9 @@ extension on _StringsTh {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -670867,8 +670205,6 @@ extension on _StringsTh {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -670896,8 +670232,6 @@ extension on _StringsTh {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -675675,8 +675009,6 @@ extension on _StringsTh {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -675928,8 +675260,6 @@ extension on _StringsTh {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -676118,6 +675448,10 @@ extension on _StringsTr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -684832,6 +684166,11 @@ extension on _StringsTr {
         return 'Günlük yüklemek için çok büyük';
       case 'login':
         return 'Giriş yap';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Erişilebilirlik izni verildi';
       case 'lookup_accessibility_permission_hint':
@@ -686478,8 +685817,6 @@ extension on _StringsTr {
         return 'Tarayıcıdan içe aktar';
       case 'mihon_source_login_import_hint':
         return 'Site tarayıcınızda açıldı. Fushi uzantısı oturumunu buraya gönderecek; gerekirse orada oturum açın, ardından Bitti\'ye dokunun.';
-      case 'mihon_source_login_import_none':
-        return 'Tarayıcıdan henüz oturum alınmadı';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Tarayıcıdan ${count} çerez içe aktarıldı';
@@ -690245,10 +689582,6 @@ extension on _StringsTr {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -691652,24 +690985,9 @@ extension on _StringsTr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -691814,8 +691132,6 @@ extension on _StringsTr {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -691843,8 +691159,6 @@ extension on _StringsTr {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -696629,8 +695943,6 @@ extension on _StringsTr {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -696882,8 +696194,6 @@ extension on _StringsTr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -697072,6 +696382,10 @@ extension on _StringsVi {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -705776,6 +705090,11 @@ extension on _StringsVi {
         return 'Nhật ký quá lớn, không tải lên được';
       case 'login':
         return 'Đăng nhập';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Đã cấp quyền Trợ năng';
       case 'lookup_accessibility_permission_hint':
@@ -707417,8 +706736,6 @@ extension on _StringsVi {
         return 'Nhập từ trình duyệt';
       case 'mihon_source_login_import_hint':
         return 'Trang web đã được mở trong trình duyệt của bạn. Tiện ích Fushi sẽ gửi phiên của nó về đây; hãy đăng nhập ở đó nếu cần, rồi nhấn Xong.';
-      case 'mihon_source_login_import_none':
-        return 'Chưa nhận được phiên nào từ trình duyệt';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Đã nhập ${count} cookie từ trình duyệt';
@@ -711187,10 +710504,6 @@ extension on _StringsVi {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -712594,24 +711907,9 @@ extension on _StringsVi {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -712756,8 +712054,6 @@ extension on _StringsVi {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -712785,8 +712081,6 @@ extension on _StringsVi {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -717566,8 +716860,6 @@ extension on _StringsVi {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -717819,8 +717111,6 @@ extension on _StringsVi {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -718008,6 +717298,10 @@ extension on _StringsZhCn {
         return 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
       case 'ai_agent_open_settings':
         return '去设置';
+      case 'ai_agent_peer_access':
+        return '允许已配对设备使用 AI 助手';
+      case 'ai_agent_peer_access_hint':
+        return '本机当互联主机时，已配对设备可以在这台设备上开 AI 助手会话：用的是本机的 AI 提供商，能改本机的库和设置（每条改动都能在「AI 操作记录」里撤销）。默认关闭。';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => '${device} 上关闭了 AI 功能。';
       case 'ai_agent_remote_lost':
@@ -726595,6 +725889,11 @@ extension on _StringsZhCn {
         return '日志过大，无法上传';
       case 'login':
         return '登录';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            '正在等系统浏览器送回 ${host} 的登录。装了 Fushi 浏览器扩展会自动送来；还没登录就先在浏览器里登录，再点一次导入。';
+      case 'login_import_write_failed':
+        return '没能写入浏览器送来的登录信息';
       case 'lookup_accessibility_permission_granted':
         return '已授权辅助功能';
       case 'lookup_accessibility_permission_hint':
@@ -728221,8 +727520,6 @@ extension on _StringsZhCn {
         return '从浏览器导入';
       case 'mihon_source_login_import_hint':
         return '已在系统浏览器打开源站，Fushi 扩展会把会话送过来；还没登录就在浏览器里登录，然后点「完成」。';
-      case 'mihon_source_login_import_none':
-        return '还没收到浏览器送来的会话';
       case 'mihon_source_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条 cookie';
       case 'mihon_source_login_saved':
@@ -731964,10 +731261,6 @@ extension on _StringsZhCn {
         return '展开全文';
       case 'srs_card_label_source':
         return '来源';
-      case 'srs_card_media_missing_image':
-        return '图片未同步';
-      case 'srs_card_media_missing_video':
-        return '视频未同步';
       case 'srs_card_move':
         return '移到牌组';
       case 'srs_card_reset':
@@ -733345,24 +732638,9 @@ extension on _StringsZhCn {
         return '还没有配置同步服务';
       case 'srs_sync_now':
         return '立即同步';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => '正在同步：${progress}';
-      case 'srs_sync_now_started':
-        return '开始同步复习数据…';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
-      case 'srs_sync_progress_downloading':
-        return '同步复习数据';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            '同步复习数据 (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return '同步卡片媒体';
-      case 'srs_sync_progress_preparing':
-        return '正在准备同步复习数据';
-      case 'srs_sync_progress_uploading':
-        return '上传复习改动';
       case 'srs_sync_setup_body':
         return '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
       case 'srs_sync_store_unavailable':
@@ -733507,8 +732785,6 @@ extension on _StringsZhCn {
         return '更改笔记类型之前';
       case 'srs_timeline_reason_restore':
         return '恢复之前';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => '正在接收 ${n} 条改动';
       case 'srs_timeline_restore':
         return '恢复';
       case 'srs_timeline_restore_body':
@@ -733536,8 +732812,6 @@ extension on _StringsZhCn {
         return ({required Object time}) => '最后同步 ${time}';
       case 'srs_timeline_status':
         return '同步状态';
-      case 'srs_timeline_syncing':
-        return '正在同步复习数据';
       case 'srs_timeline_this_device':
         return '本机';
       case 'srs_timeline_title':
@@ -738253,8 +737527,6 @@ extension on _StringsZhCn {
         return '从浏览器导入登录';
       case 'web_browser_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
-      case 'web_browser_login_import_waiting':
-        return '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
@@ -738504,8 +737776,6 @@ extension on _StringsZhCn {
         return '从浏览器导入登录';
       case 'web_video_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
-      case 'web_video_login_import_waiting':
-        return '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
       case 'web_video_mine_background':
         return '正在后台制卡（直接从 YouTube 视频流截取）';
       case 'web_video_mine_queue_empty':
@@ -738689,6 +737959,10 @@ extension on _StringsZhHk {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -747308,6 +746582,11 @@ extension on _StringsZhHk {
         return '記錄過大，無法上載';
       case 'login':
         return '登入';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return '已授權輔助功能';
       case 'lookup_accessibility_permission_hint':
@@ -748942,8 +748221,6 @@ extension on _StringsZhHk {
         return '從瀏覽器匯入';
       case 'mihon_source_login_import_hint':
         return '已在系統瀏覽器開啟源站，Fushi 擴展會把會話送過來；還沒登入就在瀏覽器裡登入，然後點「完成」。';
-      case 'mihon_source_login_import_none':
-        return '還沒收到瀏覽器送來的會話';
       case 'mihon_source_login_import_received':
         return ({required Object count}) => '已從瀏覽器匯入 ${count} 條 cookie';
       case 'mihon_source_login_saved':
@@ -752702,10 +751979,6 @@ extension on _StringsZhHk {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_media_missing_image':
-        return '圖片未同步';
-      case 'srs_card_media_missing_video':
-        return '影片未同步';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -754108,24 +753381,9 @@ extension on _StringsZhHk {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
-      case 'srs_sync_now_busy':
-        return ({required Object progress}) => 'Already syncing: ${progress}';
-      case 'srs_sync_now_started':
-        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
-      case 'srs_sync_progress_downloading':
-        return 'Syncing review data';
-      case 'srs_sync_progress_downloading_count':
-        return ({required Object done, required Object total}) =>
-            'Syncing review data (${done}/${total})';
-      case 'srs_sync_progress_media':
-        return 'Syncing card media';
-      case 'srs_sync_progress_preparing':
-        return 'Preparing review sync';
-      case 'srs_sync_progress_uploading':
-        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -754270,8 +753528,6 @@ extension on _StringsZhHk {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
-      case 'srs_timeline_receiving':
-        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -754299,8 +753555,6 @@ extension on _StringsZhHk {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
-      case 'srs_timeline_syncing':
-        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -759027,8 +758281,6 @@ extension on _StringsZhHk {
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -759279,8 +758531,6 @@ extension on _StringsZhHk {
         return '從瀏覽器匯入登入';
       case 'web_video_login_import_received':
         return ({required Object count}) => '已從瀏覽器匯入 ${count} 條登入資訊';
-      case 'web_video_login_import_waiting':
-        return '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
       case 'web_video_mine_background':
         return '正在背景製卡（直接從 YouTube 影片串流擷取）';
       case 'web_video_mine_queue_empty':
