@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172771 (10163 per locale)
+/// Strings: 172805 (10165 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10986,6 +10986,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_status_review_by_recall => 'In review (RWKV)';
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   String get srs_status_suspended => 'Suspended';
+  String get srs_sync_auto => 'Auto-sync review data';
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   String get srs_sync_backend_unsupported =>
@@ -33030,6 +33033,11 @@ class _StringsAr extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -57948,6 +57956,11 @@ class _StringsDe extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -82989,6 +83002,11 @@ class _StringsEs extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -108118,6 +108136,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
+  @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   @override
@@ -133009,6 +133032,11 @@ class _StringsId extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -157944,6 +157972,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
+  @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   @override
@@ -182168,6 +182201,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
+  @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   @override
@@ -206127,6 +206165,11 @@ class _StringsKo extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -230793,6 +230836,11 @@ class _StringsNl extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -255759,6 +255807,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
+  @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   @override
@@ -280701,6 +280754,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
+  @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   @override
@@ -305394,6 +305452,11 @@ class _StringsTh extends _StringsEn {
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
   String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
   @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
@@ -330154,6 +330217,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
+  @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   @override
@@ -354909,6 +354977,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
+  @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   @override
@@ -378122,6 +378195,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_status_suspended => '已暂停';
   @override
+  String get srs_sync_auto => '自动同步复习数据';
+  @override
+  String get srs_sync_auto_hint =>
+      '在每次常规同步之后、已配对设备有新的复习数据时、以及复习后不久，在后台同步复习数据。关掉后，复习数据只在牌组列表点「立即同步」或打开复习页时同步（每分钟最多一次）。书与视频进度的同步不受影响';
+  @override
   String get srs_sync_awaiting_confirm => '在复习页确认后才会开始同步复习数据';
   @override
   String get srs_sync_backend_unsupported => '当前同步后端不支持复习数据同步';
@@ -401265,6 +401343,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_auto => 'Auto-sync review data';
+  @override
+  String get srs_sync_auto_hint =>
+      'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
+  @override
   String get srs_sync_awaiting_confirm =>
       'Review data will sync after you confirm on the review page';
   @override
@@ -422923,6 +423006,10 @@ extension on _StringsEn {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -444025,6 +444112,10 @@ extension on _StringsAr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -465183,6 +465274,10 @@ extension on _StringsDe {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -486345,6 +486440,10 @@ extension on _StringsEs {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -507518,6 +507617,10 @@ extension on _StringsFr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -528651,6 +528754,10 @@ extension on _StringsId {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -549793,6 +549900,10 @@ extension on _StringsIt {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -570869,6 +570980,10 @@ extension on _StringsJa {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -591894,6 +592009,10 @@ extension on _StringsKo {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -613009,6 +613128,10 @@ extension on _StringsNl {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -634155,6 +634278,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -655305,6 +655432,10 @@ extension on _StringsRu {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -676415,6 +676546,10 @@ extension on _StringsTh {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -697543,6 +697678,10 @@ extension on _StringsTr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -718666,6 +718805,10 @@ extension on _StringsVi {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
@@ -739596,6 +739739,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '复习中 · ${n}天后';
       case 'srs_status_suspended':
         return '已暂停';
+      case 'srs_sync_auto':
+        return '自动同步复习数据';
+      case 'srs_sync_auto_hint':
+        return '在每次常规同步之后、已配对设备有新的复习数据时、以及复习后不久，在后台同步复习数据。关掉后，复习数据只在牌组列表点「立即同步」或打开复习页时同步（每分钟最多一次）。书与视频进度的同步不受影响';
       case 'srs_sync_awaiting_confirm':
         return '在复习页确认后才会开始同步复习数据';
       case 'srs_sync_backend_unsupported':
@@ -760539,6 +760686,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_auto':
+        return 'Auto-sync review data';
+      case 'srs_sync_auto_hint':
+        return 'Sync review data in the background after each regular sync, when a paired device has new review data, and shortly after you review. When off, review data only syncs when you tap Sync now in the deck list or open the Review tab (at most once a minute). Book and video progress sync is not affected';
       case 'srs_sync_awaiting_confirm':
         return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
