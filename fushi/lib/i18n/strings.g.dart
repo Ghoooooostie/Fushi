@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172686 (10158 per locale)
+/// Strings: 172669 (10157 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14429,7 +14429,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_find_none => 'No matches';
   String get web_browser_find_previous => 'Previous match';
   String get web_browser_forward => 'Forward';
-  String get web_browser_furigana => 'Furigana';
   String get web_browser_history_clear => 'Clear history';
   String get web_browser_history_clear_confirm =>
       'Delete history for this time range? This can\'t be undone.';
@@ -38863,8 +38862,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -63863,8 +63860,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -88918,8 +88913,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -114055,8 +114048,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_forward => 'Forward';
   @override
-  String get web_browser_furigana => 'Furigana';
-  @override
   String get web_browser_history_clear => 'Clear history';
   @override
   String get web_browser_history_clear_confirm =>
@@ -138849,8 +138840,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -163803,8 +163792,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_forward => 'Forward';
   @override
-  String get web_browser_furigana => 'Furigana';
-  @override
   String get web_browser_history_clear => 'Clear history';
   @override
   String get web_browser_history_clear_confirm =>
@@ -187726,8 +187713,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -211712,8 +211697,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -236613,8 +236596,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -261588,8 +261569,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_forward => 'Forward';
   @override
-  String get web_browser_furigana => 'Furigana';
-  @override
   String get web_browser_history_clear => 'Clear history';
   @override
   String get web_browser_history_clear_confirm =>
@@ -286507,8 +286486,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_forward => 'Forward';
   @override
-  String get web_browser_furigana => 'Furigana';
-  @override
   String get web_browser_history_clear => 'Clear history';
   @override
   String get web_browser_history_clear_confirm =>
@@ -311102,8 +311079,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_find_previous => 'Previous match';
   @override
   String get web_browser_forward => 'Forward';
-  @override
-  String get web_browser_furigana => 'Furigana';
   @override
   String get web_browser_history_clear => 'Clear history';
   @override
@@ -335902,8 +335877,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_forward => 'Forward';
   @override
-  String get web_browser_furigana => 'Furigana';
-  @override
   String get web_browser_history_clear => 'Clear history';
   @override
   String get web_browser_history_clear_confirm =>
@@ -360629,8 +360602,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_forward => 'Forward';
   @override
-  String get web_browser_furigana => 'Furigana';
-  @override
   String get web_browser_history_clear => 'Clear history';
   @override
   String get web_browser_history_clear_confirm =>
@@ -383266,8 +383237,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_find_previous => '上一个';
   @override
   String get web_browser_forward => '前进';
-  @override
-  String get web_browser_furigana => '注音';
   @override
   String get web_browser_history_clear => '清除历史记录';
   @override
@@ -406572,8 +406541,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_forward => 'Forward';
   @override
-  String get web_browser_furigana => 'Furigana';
-  @override
   String get web_browser_history_clear => 'Clear history';
   @override
   String get web_browser_history_clear_confirm =>
@@ -427698,8 +427665,6 @@ extension on _StringsEn {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -448787,8 +448752,6 @@ extension on _StringsAr {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -469952,8 +469915,6 @@ extension on _StringsDe {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -491099,8 +491060,6 @@ extension on _StringsEs {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -512264,8 +512223,6 @@ extension on _StringsFr {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -533373,8 +533330,6 @@ extension on _StringsId {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -554518,8 +554473,6 @@ extension on _StringsIt {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -575531,8 +575484,6 @@ extension on _StringsJa {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -596557,8 +596508,6 @@ extension on _StringsKo {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -617694,8 +617643,6 @@ extension on _StringsNl {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -638826,8 +638773,6 @@ extension on _StringsPtBr {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -659963,8 +659908,6 @@ extension on _StringsRu {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -681056,8 +680999,6 @@ extension on _StringsTh {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -702180,8 +702121,6 @@ extension on _StringsTr {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -723287,8 +723226,6 @@ extension on _StringsVi {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
@@ -744142,8 +744079,6 @@ extension on _StringsZhCn {
         return '上一个';
       case 'web_browser_forward':
         return '前进';
-      case 'web_browser_furigana':
-        return '注音';
       case 'web_browser_history_clear':
         return '清除历史记录';
       case 'web_browser_history_clear_confirm':
@@ -765085,8 +765020,6 @@ extension on _StringsZhHk {
         return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
-      case 'web_browser_furigana':
-        return 'Furigana';
       case 'web_browser_history_clear':
         return 'Clear history';
       case 'web_browser_history_clear_confirm':
