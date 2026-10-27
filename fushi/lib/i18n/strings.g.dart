@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172703 (10159 per locale)
+/// Strings: 172720 (10160 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1426,6 +1426,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Audio source request failed: ${detail}';
   String audio_source_timeout({required Object host}) =>
       'Audio source timeout: "${host}" — server not responding, try again later or change source';
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   String get audio_source_updated => 'Audio source updated';
   String get audio_source_url_invalid =>
       'Link must be http(s) and contain a term or reading placeholder';
@@ -16709,6 +16711,9 @@ class _StringsAr extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       'انتهت مهلة مصدر الصوت: "${host}" — الخادم لا يستجيب، حاول لاحقاً أو غيّر المصدر';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => 'تم تحديث مصدر الصوت';
   @override
@@ -41352,6 +41357,9 @@ class _StringsDe extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       'Audioquellen-Timeout: "${host}" — Server antwortet nicht, versuchen Sie es später oder ändern Sie die Quelle';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => 'Audioquelle aktualisiert';
   @override
@@ -66363,6 +66371,9 @@ class _StringsEs extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       'Tiempo de espera de fuente de audio: "${host}" — servidor no responde, inténtalo más tarde o cambia la fuente';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => 'Fuente de audio actualizada';
   @override
@@ -91427,6 +91438,9 @@ class _StringsFr extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       'Délai d\'attente source audio : "${host}" — serveur ne répond pas, réessayez plus tard ou changez de source';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => 'Source audio mise à jour';
   @override
@@ -116540,6 +116554,9 @@ class _StringsId extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Waktu habis sumber audio: "${host}" — server tidak merespons, coba lagi nanti atau ganti sumber';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Sumber audio diperbarui';
   @override
   String get audio_source_url_invalid =>
@@ -141342,6 +141359,9 @@ class _StringsIt extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       'Timeout sorgente audio: "${host}" — server non risponde, riprova più tardi o cambia sorgente';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => 'Sorgente audio aggiornata';
   @override
@@ -166216,6 +166236,9 @@ class _StringsJa extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       '音声ソースタイムアウト："${host}" — サーバーが応答しません。後で再試行するかソースを変更してください';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => '音声ソースを更新しました';
   @override
   String get audio_source_url_invalid =>
@@ -190131,6 +190154,9 @@ class _StringsKo extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       '오디오 소스 시간 초과: "${host}" — 서버가 응답하지 않습니다. 나중에 다시 시도하거나 소스를 변경하세요';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => '오디오 소스 업데이트됨';
   @override
@@ -214209,6 +214235,9 @@ class _StringsNl extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       'Audiobron time-out: "${host}" — server reageert niet, probeer later opnieuw of wijzig de bron';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => 'Audiobron bijgewerkt';
   @override
@@ -239127,6 +239156,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       'Tempo limite da fonte de áudio: "${host}" — servidor não responde, tente novamente mais tarde ou mude a fonte';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => 'Fonte de áudio atualizada';
   @override
@@ -264091,6 +264123,9 @@ class _StringsRu extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Тайм-аут источника аудио: "${host}" — сервер не отвечает, попробуйте позже или смените источник';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Источник аудио обновлён';
   @override
   String get audio_source_url_invalid =>
@@ -288977,6 +289012,9 @@ class _StringsTh extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'แหล่งเสียงหมดเวลา: "${host}" — เซิร์ฟเวอร์ไม่ตอบสนอง ลองอีกครั้งภายหลังหรือเปลี่ยนแหล่ง';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'อัปเดตแหล่งเสียงแล้ว';
   @override
   String get audio_source_url_invalid =>
@@ -313596,6 +313634,9 @@ class _StringsTr extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       'Ses kaynağı zaman aşımı: "${host}" — sunucu yanıt vermiyor, daha sonra tekrar deneyin veya kaynağı değiştirin';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => 'Ses kaynağı güncellendi';
   @override
@@ -338391,6 +338432,9 @@ class _StringsVi extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       'Hết thời gian nguồn âm thanh: "${host}" — máy chủ không phản hồi, thử lại sau hoặc thay đổi nguồn';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
+  @override
   String get audio_source_updated => 'Đã cập nhật nguồn âm thanh';
   @override
   String get audio_source_url_invalid =>
@@ -362950,6 +362994,9 @@ class _StringsZhCn extends _StringsEn {
   String audio_source_timeout({required Object host}) =>
       '音频源超时："${host}" — 服务器无响应，请稍后重试或更换音频源';
   @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      '音频源「${host}」返回的既不是音频，也不是 Yomitan 音频源列表 JSON——请检查链接或服务类型';
+  @override
   String get audio_source_updated => '已更新音频来源';
   @override
   String get audio_source_url_invalid => '链接需为 http(s) 且含 term / reading 占位符';
@@ -385595,6 +385642,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audio_source_timeout({required Object host}) =>
       '音頻來源逾時："${host}" — 伺服器無回應，請稍後再試或更換來源';
+  @override
+  String audio_source_unrecognized_response({required Object host}) =>
+      'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
   @override
   String get audio_source_updated => '已更新音頻來源';
   @override
@@ -408696,6 +408746,9 @@ extension on _StringsEn {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Audio source timeout: "${host}" — server not responding, try again later or change source';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Audio source updated';
       case 'audio_source_url_invalid':
@@ -429793,6 +429846,9 @@ extension on _StringsAr {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'انتهت مهلة مصدر الصوت: "${host}" — الخادم لا يستجيب، حاول لاحقاً أو غيّر المصدر';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'تم تحديث مصدر الصوت';
       case 'audio_source_url_invalid':
@@ -450899,6 +450955,9 @@ extension on _StringsDe {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Audioquellen-Timeout: "${host}" — Server antwortet nicht, versuchen Sie es später oder ändern Sie die Quelle';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Audioquelle aktualisiert';
       case 'audio_source_url_invalid':
@@ -472059,6 +472118,9 @@ extension on _StringsEs {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Tiempo de espera de fuente de audio: "${host}" — servidor no responde, inténtalo más tarde o cambia la fuente';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Fuente de audio actualizada';
       case 'audio_source_url_invalid':
@@ -493214,6 +493276,9 @@ extension on _StringsFr {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Délai d\'attente source audio : "${host}" — serveur ne répond pas, réessayez plus tard ou changez de source';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Source audio mise à jour';
       case 'audio_source_url_invalid':
@@ -514373,6 +514438,9 @@ extension on _StringsId {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Waktu habis sumber audio: "${host}" — server tidak merespons, coba lagi nanti atau ganti sumber';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Sumber audio diperbarui';
       case 'audio_source_url_invalid':
@@ -535486,6 +535554,9 @@ extension on _StringsIt {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Timeout sorgente audio: "${host}" — server non risponde, riprova più tardi o cambia sorgente';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Sorgente audio aggiornata';
       case 'audio_source_url_invalid':
@@ -556617,6 +556688,9 @@ extension on _StringsJa {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             '音声ソースタイムアウト："${host}" — サーバーが応答しません。後で再試行するかソースを変更してください';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return '音声ソースを更新しました';
       case 'audio_source_url_invalid':
@@ -577628,6 +577702,9 @@ extension on _StringsKo {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             '오디오 소스 시간 초과: "${host}" — 서버가 응답하지 않습니다. 나중에 다시 시도하거나 소스를 변경하세요';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return '오디오 소스 업데이트됨';
       case 'audio_source_url_invalid':
@@ -598674,6 +598751,9 @@ extension on _StringsNl {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Audiobron time-out: "${host}" — server reageert niet, probeer later opnieuw of wijzig de bron';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Audiobron bijgewerkt';
       case 'audio_source_url_invalid':
@@ -619816,6 +619896,9 @@ extension on _StringsPtBr {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Tempo limite da fonte de áudio: "${host}" — servidor não responde, tente novamente mais tarde ou mude a fonte';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Fonte de áudio atualizada';
       case 'audio_source_url_invalid':
@@ -640951,6 +641034,9 @@ extension on _StringsRu {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Тайм-аут источника аудио: "${host}" — сервер не отвечает, попробуйте позже или смените источник';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Источник аудио обновлён';
       case 'audio_source_url_invalid':
@@ -662079,6 +662165,9 @@ extension on _StringsTh {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'แหล่งเสียงหมดเวลา: "${host}" — เซิร์ฟเวอร์ไม่ตอบสนอง ลองอีกครั้งภายหลังหรือเปลี่ยนแหล่ง';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'อัปเดตแหล่งเสียงแล้ว';
       case 'audio_source_url_invalid':
@@ -683183,6 +683272,9 @@ extension on _StringsTr {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Ses kaynağı zaman aşımı: "${host}" — sunucu yanıt vermiyor, daha sonra tekrar deneyin veya kaynağı değiştirin';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Ses kaynağı güncellendi';
       case 'audio_source_url_invalid':
@@ -704305,6 +704397,9 @@ extension on _StringsVi {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             'Hết thời gian nguồn âm thanh: "${host}" — máy chủ không phản hồi, thử lại sau hoặc thay đổi nguồn';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return 'Đã cập nhật nguồn âm thanh';
       case 'audio_source_url_invalid':
@@ -725380,6 +725475,9 @@ extension on _StringsZhCn {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             '音频源超时："${host}" — 服务器无响应，请稍后重试或更换音频源';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            '音频源「${host}」返回的既不是音频，也不是 Yomitan 音频源列表 JSON——请检查链接或服务类型';
       case 'audio_source_updated':
         return '已更新音频来源';
       case 'audio_source_url_invalid':
@@ -746234,6 +746332,9 @@ extension on _StringsZhHk {
       case 'audio_source_timeout':
         return ({required Object host}) =>
             '音頻來源逾時："${host}" — 伺服器無回應，請稍後再試或更換來源';
+      case 'audio_source_unrecognized_response':
+        return ({required Object host}) =>
+            'Audio source "${host}" returned neither audio nor a Yomitan audio source list — check the link, or whether the service is the right type';
       case 'audio_source_updated':
         return '已更新音頻來源';
       case 'audio_source_url_invalid':
