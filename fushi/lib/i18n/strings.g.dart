@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 171122 (10066 per locale)
+/// Strings: 171207 (10071 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2759,6 +2759,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${count} episodes';
   String get collection_loading_hint =>
       'Loading collections and matching audio files…';
+  String collection_manage_count({required Object n}) => '${n} collections';
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  String get collection_manage_search_hint => 'Search collections';
+  String get collection_manage_title => 'Manage collections';
   String get collection_member_removed => 'Removed from collection';
   String get collection_merge_title => 'Merge collections';
   String get collection_merged => 'Collections merged.';
@@ -18786,6 +18793,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_loading_hint =>
       'جارٍ تحميل المجموعات ومطابقة ملفات الصوت…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => 'تمت الإزالة من المجموعة';
   @override
@@ -43233,6 +43252,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_loading_hint =>
       'Sammlungen werden geladen und Audiodateien zugeordnet…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => 'Aus Sammlung entfernt';
   @override
@@ -68026,6 +68057,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_loading_hint =>
       'Cargando colecciones y emparejando archivos de audio…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => 'Eliminado de la colección';
   @override
@@ -92882,6 +92925,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_loading_hint =>
       'Chargement des collections et recherche des fichiers audio…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => 'Retiré de la collection';
   @override
@@ -117740,6 +117795,18 @@ class _StringsId extends _StringsEn {
   String get collection_loading_hint =>
       'Memuat koleksi dan mencocokkan file audio…';
   @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
+  @override
   String get collection_member_removed => 'Dihapus dari koleksi';
   @override
   String get collection_merge_title => 'Gabung koleksi';
@@ -142340,6 +142407,18 @@ class _StringsIt extends _StringsEn {
   String get collection_loading_hint =>
       'Caricamento raccolte e abbinamento file audio…';
   @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
+  @override
   String get collection_member_removed => 'Rimosso dalla raccolta';
   @override
   String get collection_merge_title => 'Unisci raccolte';
@@ -166915,6 +166994,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_loading_hint => 'コレクションを読み込み中、音声ファイルをマッチング中…';
   @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
+  @override
   String get collection_member_removed => 'コレクションから削除しました';
   @override
   String get collection_merge_title => 'コレクションをマージ';
@@ -190614,6 +190705,18 @@ class _StringsKo extends _StringsEn {
       '${count} 에피소드';
   @override
   String get collection_loading_hint => '컬렉션 및 오디오 파일 매칭 중…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => '컬렉션에서 제거됨';
   @override
@@ -214538,6 +214641,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_loading_hint =>
       'Collecties en bijpassende audiobestanden laden…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => 'Verwijderd uit collectie';
   @override
@@ -239234,6 +239349,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_loading_hint =>
       'Carregando coleções e combinando arquivos de áudio…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => 'Removido da coleção';
   @override
@@ -263975,6 +264102,18 @@ class _StringsRu extends _StringsEn {
   String get collection_loading_hint =>
       'Загрузка коллекций и сопоставление аудиофайлов…';
   @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
+  @override
   String get collection_member_removed => 'Удалено из коллекции';
   @override
   String get collection_merge_title => 'Объединить коллекции';
@@ -288620,6 +288759,18 @@ class _StringsTh extends _StringsEn {
   String get collection_loading_hint =>
       'กำลังโหลดคอลเลกชันและจับคู่ไฟล์เสียง...';
   @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
+  @override
   String get collection_member_removed => 'ลบออกจากคอลเลกชันแล้ว';
   @override
   String get collection_merge_title => 'รวมคอลเลกชัน';
@@ -313031,6 +313182,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_loading_hint =>
       'Koleksiyonlar yükleniyor ve ses dosyaları eşleştiriliyor…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => 'Koleksiyondan kaldırıldı';
   @override
@@ -337602,6 +337765,18 @@ class _StringsVi extends _StringsEn {
   String get collection_loading_hint =>
       'Đang tải bộ sưu tập và khớp tệp âm thanh…';
   @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
+  @override
   String get collection_member_removed => 'Đã xóa khỏi bộ sưu tập';
   @override
   String get collection_merge_title => 'Hợp nhất bộ sưu tập';
@@ -361726,6 +361901,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_loading_hint => '正在加载收藏并匹配音频文件…';
   @override
+  String collection_manage_count({required Object n}) => '${n} 个合集';
+  @override
+  String get collection_manage_empty_hint => '这里还没有合集。在库页选中条目后即可加入合集。';
+  @override
+  String get collection_manage_menu_hint => '点按打开 · 长按或右键可重命名、打标签、排序、删除';
+  @override
+  String get collection_manage_search_hint => '搜索合集';
+  @override
+  String get collection_manage_title => '管理合集';
+  @override
   String get collection_member_removed => '已移出合集';
   @override
   String get collection_merge_title => '合并合集';
@@ -384279,6 +384464,18 @@ class _StringsZhHk extends _StringsEn {
       '全 ${count} 話';
   @override
   String get collection_loading_hint => '正在加載收藏並匹配音頻檔案…';
+  @override
+  String collection_manage_count({required Object n}) => '${n} collections';
+  @override
+  String get collection_manage_empty_hint =>
+      'No collections here yet. Select items in the library and add them to a collection.';
+  @override
+  String get collection_manage_menu_hint =>
+      'Tap to open · long-press or right-click for rename, tags, sort and delete';
+  @override
+  String get collection_manage_search_hint => 'Search collections';
+  @override
+  String get collection_manage_title => 'Manage collections';
   @override
   String get collection_member_removed => '已移出合集';
   @override
@@ -406887,6 +407084,16 @@ extension on _StringsEn {
         return ({required Object count}) => '${count} episodes';
       case 'collection_loading_hint':
         return 'Loading collections and matching audio files…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Removed from collection';
       case 'collection_merge_title':
@@ -427792,6 +427999,16 @@ extension on _StringsAr {
         return ({required Object count}) => '${count} حلقة';
       case 'collection_loading_hint':
         return 'جارٍ تحميل المجموعات ومطابقة ملفات الصوت…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'تمت الإزالة من المجموعة';
       case 'collection_merge_title':
@@ -448711,6 +448928,16 @@ extension on _StringsDe {
         return ({required Object count}) => '${count} Episoden';
       case 'collection_loading_hint':
         return 'Sammlungen werden geladen und Audiodateien zugeordnet…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Aus Sammlung entfernt';
       case 'collection_merge_title':
@@ -469680,6 +469907,16 @@ extension on _StringsEs {
         return ({required Object count}) => '${count} episodios';
       case 'collection_loading_hint':
         return 'Cargando colecciones y emparejando archivos de audio…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Eliminado de la colección';
       case 'collection_merge_title':
@@ -490641,6 +490878,16 @@ extension on _StringsFr {
         return ({required Object count}) => '${count} épisodes';
       case 'collection_loading_hint':
         return 'Chargement des collections et recherche des fichiers audio…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Retiré de la collection';
       case 'collection_merge_title':
@@ -511601,6 +511848,16 @@ extension on _StringsId {
         return ({required Object count}) => '${count} episode';
       case 'collection_loading_hint':
         return 'Memuat koleksi dan mencocokkan file audio…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Dihapus dari koleksi';
       case 'collection_merge_title':
@@ -532525,6 +532782,16 @@ extension on _StringsIt {
         return ({required Object count}) => '${count} episodi';
       case 'collection_loading_hint':
         return 'Caricamento raccolte e abbinamento file audio…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Rimosso dalla raccolta';
       case 'collection_merge_title':
@@ -553449,6 +553716,16 @@ extension on _StringsJa {
         return ({required Object count}) => '${count}話';
       case 'collection_loading_hint':
         return 'コレクションを読み込み中、音声ファイルをマッチング中…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'コレクションから削除しました';
       case 'collection_merge_title':
@@ -574268,6 +574545,16 @@ extension on _StringsKo {
         return ({required Object count}) => '${count} 에피소드';
       case 'collection_loading_hint':
         return '컬렉션 및 오디오 파일 매칭 중…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return '컬렉션에서 제거됨';
       case 'collection_merge_title':
@@ -595131,6 +595418,16 @@ extension on _StringsNl {
         return ({required Object count}) => '${count} afleveringen';
       case 'collection_loading_hint':
         return 'Collecties en bijpassende audiobestanden laden…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Verwijderd uit collectie';
       case 'collection_merge_title':
@@ -616082,6 +616379,16 @@ extension on _StringsPtBr {
         return ({required Object count}) => '${count} episódios';
       case 'collection_loading_hint':
         return 'Carregando coleções e combinando arquivos de áudio…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Removido da coleção';
       case 'collection_merge_title':
@@ -637027,6 +637334,16 @@ extension on _StringsRu {
         return ({required Object count}) => '${count} эпизодов';
       case 'collection_loading_hint':
         return 'Загрузка коллекций и сопоставление аудиофайлов…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Удалено из коллекции';
       case 'collection_merge_title':
@@ -657955,6 +658272,16 @@ extension on _StringsTh {
         return ({required Object count}) => '${count} ตอน';
       case 'collection_loading_hint':
         return 'กำลังโหลดคอลเลกชันและจับคู่ไฟล์เสียง...';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'ลบออกจากคอลเลกชันแล้ว';
       case 'collection_merge_title':
@@ -678873,6 +679200,16 @@ extension on _StringsTr {
         return ({required Object count}) => '${count} bölüm';
       case 'collection_loading_hint':
         return 'Koleksiyonlar yükleniyor ve ses dosyaları eşleştiriliyor…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Koleksiyondan kaldırıldı';
       case 'collection_merge_title':
@@ -699796,6 +700133,16 @@ extension on _StringsVi {
         return ({required Object count}) => '${count} tập';
       case 'collection_loading_hint':
         return 'Đang tải bộ sưu tập và khớp tệp âm thanh…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return 'Đã xóa khỏi bộ sưu tập';
       case 'collection_merge_title':
@@ -720652,6 +720999,16 @@ extension on _StringsZhCn {
         return ({required Object count}) => '全 ${count} 话';
       case 'collection_loading_hint':
         return '正在加载收藏并匹配音频文件…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} 个合集';
+      case 'collection_manage_empty_hint':
+        return '这里还没有合集。在库页选中条目后即可加入合集。';
+      case 'collection_manage_menu_hint':
+        return '点按打开 · 长按或右键可重命名、打标签、排序、删除';
+      case 'collection_manage_search_hint':
+        return '搜索合集';
+      case 'collection_manage_title':
+        return '管理合集';
       case 'collection_member_removed':
         return '已移出合集';
       case 'collection_merge_title':
@@ -741326,6 +741683,16 @@ extension on _StringsZhHk {
         return ({required Object count}) => '全 ${count} 話';
       case 'collection_loading_hint':
         return '正在加載收藏並匹配音頻檔案…';
+      case 'collection_manage_count':
+        return ({required Object n}) => '${n} collections';
+      case 'collection_manage_empty_hint':
+        return 'No collections here yet. Select items in the library and add them to a collection.';
+      case 'collection_manage_menu_hint':
+        return 'Tap to open · long-press or right-click for rename, tags, sort and delete';
+      case 'collection_manage_search_hint':
+        return 'Search collections';
+      case 'collection_manage_title':
+        return 'Manage collections';
       case 'collection_member_removed':
         return '已移出合集';
       case 'collection_merge_title':
