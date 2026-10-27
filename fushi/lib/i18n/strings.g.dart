@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173604 (10212 per locale)
+/// Strings: 173672 (10216 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6477,6 +6477,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+  String get library_reorder_action => 'Reorder';
+  String get library_reorder_done => 'Done';
+  String get library_reorder_hint => 'Drag cards to reorder';
   String get library_search => 'Search library';
   String get library_sort_filter => 'Sort and filter';
   String get library_view_audiobookshelf => 'Audiobookshelf';
@@ -9879,6 +9882,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get skip_action_sentence => '1 sentence';
   String get sort_by => 'Sort';
   String get sort_imported => 'Import date';
+  String get sort_manual => 'Manual';
   String get sort_recent_read => 'Recently read';
   String get sort_recent_watched => 'Recently watched';
   String get sort_title => 'Name';
@@ -25320,6 +25324,12 @@ class _StringsAr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'بحث في المكتبة';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -31225,6 +31235,8 @@ class _StringsAr extends _StringsEn {
   String get sort_by => 'الترتيب';
   @override
   String get sort_imported => 'تاريخ الاستيراد';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'آخر قراءة';
   @override
@@ -50272,6 +50284,12 @@ class _StringsDe extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Bibliothek durchsuchen';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -56282,6 +56300,8 @@ class _StringsDe extends _StringsEn {
   String get sort_by => 'Sortieren';
   @override
   String get sort_imported => 'Importdatum';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Zuletzt gelesen';
   @override
@@ -75443,6 +75463,12 @@ class _StringsEs extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Buscar biblioteca';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -81461,6 +81487,8 @@ class _StringsEs extends _StringsEn {
   String get sort_by => 'Ordenar';
   @override
   String get sort_imported => 'Fecha de importación';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Leído recientemente';
   @override
@@ -100686,6 +100714,12 @@ class _StringsFr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Rechercher dans la bibliothèque';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -106728,6 +106762,8 @@ class _StringsFr extends _StringsEn {
   String get sort_by => 'Trier';
   @override
   String get sort_imported => 'Date d\'importation';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Lu récemment';
   @override
@@ -125811,6 +125847,12 @@ class _StringsId extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Cari pustaka';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -131760,6 +131802,8 @@ class _StringsId extends _StringsEn {
   String get sort_by => 'Urutkan';
   @override
   String get sort_imported => 'Tanggal impor';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Baru dibaca';
   @override
@@ -150824,6 +150868,12 @@ class _StringsIt extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Cerca nella libreria';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -156833,6 +156883,8 @@ class _StringsIt extends _StringsEn {
   String get sort_by => 'Ordina';
   @override
   String get sort_imported => 'Data importazione';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Letti di recente';
   @override
@@ -175455,6 +175507,12 @@ class _StringsJa extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'ライブラリを検索';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -181196,6 +181254,8 @@ class _StringsJa extends _StringsEn {
   String get sort_by => '並べ替え';
   @override
   String get sort_imported => 'インポート日';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => '最近読んだ';
   @override
@@ -199534,6 +199594,12 @@ class _StringsKo extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => '라이브러리 검색';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -205295,6 +205361,8 @@ class _StringsKo extends _StringsEn {
   String get sort_by => '정렬';
   @override
   String get sort_imported => '가져온 날짜';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => '최근 읽은 순';
   @override
@@ -224117,6 +224185,12 @@ class _StringsNl extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Bibliotheek doorzoeken';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -230100,6 +230174,8 @@ class _StringsNl extends _StringsEn {
   String get sort_by => 'Sorteren';
   @override
   String get sort_imported => 'Importdatum';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Recent gelezen';
   @override
@@ -249210,6 +249286,12 @@ class _StringsPtBr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Buscar na biblioteca';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -255203,6 +255285,8 @@ class _StringsPtBr extends _StringsEn {
   String get sort_by => 'Ordenar';
   @override
   String get sort_imported => 'Data de importação';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Lidos recentemente';
   @override
@@ -274292,6 +274376,12 @@ class _StringsRu extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Поиск в библиотеке';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -280285,6 +280375,8 @@ class _StringsRu extends _StringsEn {
   String get sort_by => 'Сортировка';
   @override
   String get sort_imported => 'Дата импорта';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Недавно прочитанные';
   @override
@@ -299209,6 +299301,12 @@ class _StringsTh extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'ค้นหาคลัง';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -305118,6 +305216,8 @@ class _StringsTh extends _StringsEn {
   String get sort_by => 'เรียงตาม';
   @override
   String get sort_imported => 'วันที่นำเข้า';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'อ่านล่าสุด';
   @override
@@ -324067,6 +324167,12 @@ class _StringsTr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Kütüphanede ara';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -330016,6 +330122,8 @@ class _StringsTr extends _StringsEn {
   String get sort_by => 'Sırala';
   @override
   String get sort_imported => 'İçe aktarma tarihi';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Son okunan';
   @override
@@ -348984,6 +349092,12 @@ class _StringsVi extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Tìm kiếm thư viện';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -354910,6 +355024,8 @@ class _StringsVi extends _StringsEn {
   String get sort_by => 'Sắp xếp';
   @override
   String get sort_imported => 'Ngày nhập';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => 'Đọc gần đây';
   @override
@@ -372936,6 +373052,12 @@ class _StringsZhCn extends _StringsEn {
   String get library_progress_reset_video_message =>
       '观看位置归零、状态改为未看，并从「继续观看」中移除。';
   @override
+  String get library_reorder_action => '排序';
+  @override
+  String get library_reorder_done => '完成';
+  @override
+  String get library_reorder_hint => '拖动卡片调整顺序';
+  @override
   String get library_search => '搜索库';
   @override
   String get library_sort_filter => '排序与筛选';
@@ -378397,6 +378519,8 @@ class _StringsZhCn extends _StringsEn {
   String get sort_by => '排序方式';
   @override
   String get sort_imported => '导入时间';
+  @override
+  String get sort_manual => '手动';
   @override
   String get sort_recent_read => '最近阅读';
   @override
@@ -395924,6 +396048,12 @@ class _StringsZhHk extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => '搜索庫';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -401531,6 +401661,8 @@ class _StringsZhHk extends _StringsEn {
   String get sort_by => '排序方式';
   @override
   String get sort_imported => '導入時間';
+  @override
+  String get sort_manual => 'Manual';
   @override
   String get sort_recent_read => '最近閱讀';
   @override
@@ -418395,6 +418527,12 @@ extension on _StringsEn {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Search library';
       case 'library_sort_filter':
@@ -423564,6 +423702,8 @@ extension on _StringsEn {
         return 'Sort';
       case 'sort_imported':
         return 'Import date';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Recently read';
       case 'sort_recent_watched':
@@ -439609,6 +439749,12 @@ extension on _StringsAr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'بحث في المكتبة';
       case 'library_sort_filter':
@@ -444779,6 +444925,8 @@ extension on _StringsAr {
         return 'الترتيب';
       case 'sort_imported':
         return 'تاريخ الاستيراد';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'آخر قراءة';
       case 'sort_recent_watched':
@@ -460864,6 +461012,12 @@ extension on _StringsDe {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Bibliothek durchsuchen';
       case 'library_sort_filter':
@@ -466050,6 +466204,8 @@ extension on _StringsDe {
         return 'Sortieren';
       case 'sort_imported':
         return 'Importdatum';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Zuletzt gelesen';
       case 'sort_recent_watched':
@@ -482140,6 +482296,12 @@ extension on _StringsEs {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Buscar biblioteca';
       case 'library_sort_filter':
@@ -487325,6 +487487,8 @@ extension on _StringsEs {
         return 'Ordenar';
       case 'sort_imported':
         return 'Fecha de importación';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Leído recientemente';
       case 'sort_recent_watched':
@@ -503426,6 +503590,12 @@ extension on _StringsFr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Rechercher dans la bibliothèque';
       case 'library_sort_filter':
@@ -508611,6 +508781,8 @@ extension on _StringsFr {
         return 'Trier';
       case 'sort_imported':
         return 'Date d\'importation';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Lu récemment';
       case 'sort_recent_watched':
@@ -524687,6 +524859,12 @@ extension on _StringsId {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Cari pustaka';
       case 'library_sort_filter':
@@ -529857,6 +530035,8 @@ extension on _StringsId {
         return 'Urutkan';
       case 'sort_imported':
         return 'Tanggal impor';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Baru dibaca';
       case 'sort_recent_watched':
@@ -545932,6 +546112,12 @@ extension on _StringsIt {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Cerca nella libreria';
       case 'library_sort_filter':
@@ -551112,6 +551298,8 @@ extension on _StringsIt {
         return 'Ordina';
       case 'sort_imported':
         return 'Data importazione';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Letti di recente';
       case 'sort_recent_watched':
@@ -567142,6 +567330,12 @@ extension on _StringsJa {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'ライブラリを検索';
       case 'library_sort_filter':
@@ -572301,6 +572495,8 @@ extension on _StringsJa {
         return '並べ替え';
       case 'sort_imported':
         return 'インポート日';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '最近読んだ';
       case 'sort_recent_watched':
@@ -588280,6 +588476,12 @@ extension on _StringsKo {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return '라이브러리 검색';
       case 'library_sort_filter':
@@ -593439,6 +593641,8 @@ extension on _StringsKo {
         return '정렬';
       case 'sort_imported':
         return '가져온 날짜';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '최근 읽은 순';
       case 'sort_recent_watched':
@@ -609484,6 +609688,12 @@ extension on _StringsNl {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Bibliotheek doorzoeken';
       case 'library_sort_filter':
@@ -614667,6 +614877,8 @@ extension on _StringsNl {
         return 'Sorteren';
       case 'sort_imported':
         return 'Importdatum';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Recent gelezen';
       case 'sort_recent_watched':
@@ -630745,6 +630957,12 @@ extension on _StringsPtBr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Buscar na biblioteca';
       case 'library_sort_filter':
@@ -635926,6 +636144,8 @@ extension on _StringsPtBr {
         return 'Ordenar';
       case 'sort_imported':
         return 'Data de importação';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Lidos recentemente';
       case 'sort_recent_watched':
@@ -652008,6 +652228,12 @@ extension on _StringsRu {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Поиск в библиотеке';
       case 'library_sort_filter':
@@ -657189,6 +657415,8 @@ extension on _StringsRu {
         return 'Сортировка';
       case 'sort_imported':
         return 'Дата импорта';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Недавно прочитанные';
       case 'sort_recent_watched':
@@ -673244,6 +673472,12 @@ extension on _StringsTh {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'ค้นหาคลัง';
       case 'library_sort_filter':
@@ -678412,6 +678646,8 @@ extension on _StringsTh {
         return 'เรียงตาม';
       case 'sort_imported':
         return 'วันที่นำเข้า';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'อ่านล่าสุด';
       case 'sort_recent_watched':
@@ -694480,6 +694716,12 @@ extension on _StringsTr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Kütüphanede ara';
       case 'library_sort_filter':
@@ -699653,6 +699895,8 @@ extension on _StringsTr {
         return 'Sırala';
       case 'sort_imported':
         return 'İçe aktarma tarihi';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Son okunan';
       case 'sort_recent_watched':
@@ -715718,6 +715962,12 @@ extension on _StringsVi {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Tìm kiếm thư viện';
       case 'library_sort_filter':
@@ -720889,6 +721139,8 @@ extension on _StringsVi {
         return 'Sắp xếp';
       case 'sort_imported':
         return 'Ngày nhập';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Đọc gần đây';
       case 'sort_recent_watched':
@@ -736829,6 +737081,12 @@ extension on _StringsZhCn {
         return '只删除最近一次会话记下的时长与字数，适合误点打开的情况。';
       case 'library_progress_reset_video_message':
         return '观看位置归零、状态改为未看，并从「继续观看」中移除。';
+      case 'library_reorder_action':
+        return '排序';
+      case 'library_reorder_done':
+        return '完成';
+      case 'library_reorder_hint':
+        return '拖动卡片调整顺序';
       case 'library_search':
         return '搜索库';
       case 'library_sort_filter':
@@ -741960,6 +742218,8 @@ extension on _StringsZhCn {
         return '排序方式';
       case 'sort_imported':
         return '导入时间';
+      case 'sort_manual':
+        return '手动';
       case 'sort_recent_read':
         return '最近阅读';
       case 'sort_recent_watched':
@@ -757834,6 +758094,12 @@ extension on _StringsZhHk {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return '搜索庫';
       case 'library_sort_filter':
@@ -762987,6 +763253,8 @@ extension on _StringsZhHk {
         return '排序方式';
       case 'sort_imported':
         return '導入時間';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '最近閱讀';
       case 'sort_recent_watched':
