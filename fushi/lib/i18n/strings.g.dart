@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173553 (10209 per locale)
+/// Strings: 173570 (10210 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14503,6 +14503,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The site took too long to respond. Try again later.';
   String get web_browser_error_timeout_title => 'The connection timed out';
   String get web_browser_error_title => 'This page can\'t be reached';
+  String get web_browser_exit => 'Exit browser';
   String get web_browser_find_close => 'Close find bar';
   String get web_browser_find_hint => 'Find in page';
   String get web_browser_find_next => 'Next match';
@@ -39062,6 +39063,8 @@ class _StringsAr extends _StringsEn {
   String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_exit => 'Exit browser';
   @override
   String get web_browser_find_close => 'Close find bar';
   @override
@@ -64193,6 +64196,8 @@ class _StringsDe extends _StringsEn {
   String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_exit => 'Exit browser';
   @override
   String get web_browser_find_close => 'Close find bar';
   @override
@@ -89379,6 +89384,8 @@ class _StringsEs extends _StringsEn {
   String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_exit => 'Exit browser';
   @override
   String get web_browser_find_close => 'Close find bar';
   @override
@@ -114647,6 +114654,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -139572,6 +139581,8 @@ class _StringsId extends _StringsEn {
   String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_exit => 'Exit browser';
   @override
   String get web_browser_find_close => 'Close find bar';
   @override
@@ -164657,6 +164668,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -188711,6 +188724,8 @@ class _StringsJa extends _StringsEn {
   String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_exit => 'Exit browser';
   @override
   String get web_browser_find_close => 'Close find bar';
   @override
@@ -212828,6 +212843,8 @@ class _StringsKo extends _StringsEn {
   String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_exit => 'Exit browser';
   @override
   String get web_browser_find_close => 'Close find bar';
   @override
@@ -237860,6 +237877,8 @@ class _StringsNl extends _StringsEn {
   String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_exit => 'Exit browser';
   @override
   String get web_browser_find_close => 'Close find bar';
   @override
@@ -262966,6 +262985,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -288016,6 +288037,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -312742,6 +312765,8 @@ class _StringsTh extends _StringsEn {
   String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_exit => 'Exit browser';
   @override
   String get web_browser_find_close => 'Close find bar';
   @override
@@ -337673,6 +337698,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -362531,6 +362558,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -385288,6 +385317,8 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_error_timeout_title => '连接超时';
   @override
   String get web_browser_error_title => '无法打开此网页';
+  @override
+  String get web_browser_exit => '退出浏览器';
   @override
   String get web_browser_find_close => '关闭查找';
   @override
@@ -408725,6 +408756,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
+  String get web_browser_exit => 'Exit browser';
+  @override
   String get web_browser_find_close => 'Close find bar';
   @override
   String get web_browser_find_hint => 'Find in page';
@@ -429963,6 +429996,8 @@ extension on _StringsEn {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -451164,6 +451199,8 @@ extension on _StringsAr {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -472441,6 +472478,8 @@ extension on _StringsDe {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -493700,6 +493739,8 @@ extension on _StringsEs {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -514977,6 +515018,8 @@ extension on _StringsFr {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -536198,6 +536241,8 @@ extension on _StringsId {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -557455,6 +557500,8 @@ extension on _StringsIt {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -578580,6 +578627,8 @@ extension on _StringsJa {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -599718,6 +599767,8 @@ extension on _StringsKo {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -620967,6 +621018,8 @@ extension on _StringsNl {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -642211,6 +642264,8 @@ extension on _StringsPtBr {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -663460,6 +663515,8 @@ extension on _StringsRu {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -684665,6 +684722,8 @@ extension on _StringsTh {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -705901,6 +705960,8 @@ extension on _StringsTr {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -727120,6 +727181,8 @@ extension on _StringsVi {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
@@ -748085,6 +748148,8 @@ extension on _StringsZhCn {
         return '连接超时';
       case 'web_browser_error_title':
         return '无法打开此网页';
+      case 'web_browser_exit':
+        return '退出浏览器';
       case 'web_browser_find_close':
         return '关闭查找';
       case 'web_browser_find_hint':
@@ -769140,6 +769205,8 @@ extension on _StringsZhHk {
         return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
+      case 'web_browser_exit':
+        return 'Exit browser';
       case 'web_browser_find_close':
         return 'Close find bar';
       case 'web_browser_find_hint':
