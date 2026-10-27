@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 171156 (10068 per locale)
+/// Strings: 171122 (10066 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6380,6 +6380,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get log_upload_success => 'Log uploaded';
   String get log_upload_too_large => 'Log too large to upload';
   String get login => 'Login';
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   String get lookup_accessibility_permission_granted =>
       'Accessibility permission granted';
   String get lookup_accessibility_permission_hint =>
@@ -7471,8 +7475,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_login_import_browser => 'Import from browser';
   String get mihon_source_login_import_hint =>
       'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
-  String get mihon_source_login_import_none =>
-      'No session received from the browser yet';
   String mihon_source_login_import_received({required Object count}) =>
       'Imported ${count} cookies from the browser';
   String get mihon_source_login_saved => 'Signed in to this source';
@@ -14318,12 +14320,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   String get web_browser_link_share => 'Share link';
   String get web_browser_login_import => 'Import sign-in from browser';
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
   String get web_browser_menu_bookmarks => 'Bookmarks';
@@ -14481,8 +14479,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_login_import => 'Import login from browser';
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   String get web_video_mine_queue_empty => 'No queued cards';
@@ -24943,6 +24939,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get login => 'تسجيل الدخول';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'تم منح إذن إمكانية الوصول';
   @override
@@ -26811,9 +26813,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'تم فتح الموقع في متصفحك. ستُرسل إضافة Fushi جلسته إلى هنا؛ سجّل الدخول هناك إن لزم ثم اضغط «تم».';
-  @override
-  String get mihon_source_login_import_none =>
-      'لم تُستلم أي جلسة من المتصفح بعد';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'تم استيراد ${count} ملف تعريف ارتباط من المتصفح';
@@ -38554,14 +38553,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -38843,9 +38836,6 @@ class _StringsAr extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -49532,6 +49522,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get login => 'Anmelden';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Bedienungshilfen-Berechtigung erteilt';
   @override
@@ -51446,9 +51442,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Die Website wurde in deinem Browser geöffnet. Die Fushi-Erweiterung sendet ihre Sitzung hierher; melde dich dort bei Bedarf an und tippe dann auf „Fertig“.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Noch keine Sitzung vom Browser empfangen';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} Cookies aus dem Browser importiert';
@@ -63341,14 +63334,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -63630,9 +63617,6 @@ class _StringsDe extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -74342,6 +74326,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get login => 'Iniciar sesión';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Permiso de Accesibilidad concedido';
   @override
@@ -76257,9 +76247,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'El sitio se abrió en tu navegador. La extensión de Fushi enviará su sesión aquí; inicia sesión allí si hace falta y toca Listo.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Aún no se ha recibido ninguna sesión del navegador';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Se importaron ${count} cookies del navegador';
@@ -88183,14 +88170,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -88472,9 +88453,6 @@ class _StringsEs extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -99222,6 +99200,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get login => 'Connexion';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Autorisation d\'accessibilité accordée';
   @override
@@ -101146,9 +101130,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Le site a été ouvert dans votre navigateur. L\'extension Fushi y enverra sa session ; connectez-vous là-bas si nécessaire, puis appuyez sur Terminé.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Aucune session reçue du navigateur pour l\'instant';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} cookies importés depuis le navigateur';
@@ -113106,14 +113087,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -113396,9 +113371,6 @@ class _StringsFr extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -123982,6 +123954,12 @@ class _StringsId extends _StringsEn {
   @override
   String get login => 'Masuk';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Izin Aksesibilitas diberikan';
   @override
@@ -125871,9 +125849,6 @@ class _StringsId extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Situs dibuka di browser Anda. Ekstensi Fushi akan mengirim sesinya ke sini; masuk di sana jika perlu, lalu ketuk Selesai.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Belum ada sesi yang diterima dari browser';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} cookie diimpor dari browser';
@@ -137688,14 +137663,8 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -137977,9 +137946,6 @@ class _StringsId extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -148633,6 +148599,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get login => 'Accedi';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Permesso di Accessibilità concesso';
   @override
@@ -150548,9 +150520,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Il sito è stato aperto nel browser. L\'estensione di Fushi invierà qui la sua sessione; accedi lì se necessario, poi tocca Fatto.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Nessuna sessione ancora ricevuta dal browser';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Importati ${count} cookie dal browser';
@@ -162428,14 +162397,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -162718,9 +162681,6 @@ class _StringsIt extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -172898,6 +172858,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get login => 'ログイン';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted => 'アクセシビリティの権限を許可しました';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -174712,8 +174678,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'サイトをブラウザで開きました。Fushi の拡張機能がセッションをここに送ります。必要ならブラウザでログインしてから「完了」をタップしてください。';
-  @override
-  String get mihon_source_login_import_none => 'ブラウザからセッションをまだ受信していません';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'ブラウザから Cookie を ${count} 件インポートしました';
@@ -186138,14 +186102,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -186426,9 +186384,6 @@ class _StringsJa extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -196613,6 +196568,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get login => '로그인';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted => '손쉬운 사용 권한이 허용되었습니다';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -198438,8 +198399,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       '브라우저에서 사이트를 열었습니다. Fushi 확장 프로그램이 세션을 여기로 보냅니다. 필요하면 그곳에서 로그인한 다음 완료를 누르세요.';
-  @override
-  String get mihon_source_login_import_none => '아직 브라우저에서 받은 세션이 없습니다';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '브라우저에서 쿠키 ${count}개를 가져왔습니다';
@@ -209910,14 +209869,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -210197,9 +210150,6 @@ class _StringsKo extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -220833,6 +220783,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get login => 'Inloggen';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Toegankelijkheidstoestemming verleend';
   @override
@@ -222730,9 +222686,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'De site is in je browser geopend. De Fushi-extensie stuurt de sessie hierheen; log daar zo nodig in en tik dan op Klaar.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Nog geen sessie van de browser ontvangen';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} cookies uit de browser geïmporteerd';
@@ -234598,14 +234551,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -234888,9 +234835,6 @@ class _StringsNl extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -245565,6 +245509,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get login => 'Entrar';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Permissão de Acessibilidade concedida';
   @override
@@ -247470,9 +247420,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'O site foi aberto no seu navegador. A extensão do Fushi enviará a sessão para cá; entre lá se necessário e toque em Concluído.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Nenhuma sessão recebida do navegador ainda';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '${count} cookies importados do navegador';
@@ -259359,14 +259306,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -259648,9 +259589,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -270283,6 +270221,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get login => 'Войти';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Разрешение «Универсальный доступ» выдано';
   @override
@@ -272184,9 +272128,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Сайт открыт в вашем браузере. Расширение Fushi отправит сюда его сеанс; при необходимости войдите там, затем нажмите «Готово».';
-  @override
-  String get mihon_source_login_import_none =>
-      'Сеанс из браузера ещё не получен';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Импортировано куки из браузера: ${count}';
@@ -284065,14 +284006,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -284354,9 +284289,6 @@ class _StringsRu extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -294835,6 +294767,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get login => 'เข้าสู่ระบบ';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'ให้สิทธิ์การเข้าถึงแล้ว';
   @override
@@ -296709,9 +296647,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'เว็บไซต์ถูกเปิดในเบราว์เซอร์ของคุณแล้ว ส่วนขยาย Fushi จะส่งเซสชันมาที่นี่ ลงชื่อเข้าใช้ที่นั่นหากจำเป็น แล้วแตะ เสร็จสิ้น';
-  @override
-  String get mihon_source_login_import_none =>
-      'ยังไม่ได้รับเซสชันจากเบราว์เซอร์';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'นำเข้าคุกกี้ ${count} รายการจากเบราว์เซอร์แล้ว';
@@ -308448,14 +308383,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -308737,9 +308666,6 @@ class _StringsTh extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -319331,6 +319257,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get login => 'Giriş yap';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted =>
       'Erişilebilirlik izni verildi';
   @override
@@ -321220,9 +321152,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Site tarayıcınızda açıldı. Fushi uzantısı oturumunu buraya gönderecek; gerekirse orada oturum açın, ardından Bitti\'ye dokunun.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Tarayıcıdan henüz oturum alınmadı';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Tarayıcıdan ${count} çerez içe aktarıldı';
@@ -333034,14 +332963,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -333323,9 +333246,6 @@ class _StringsTr extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -343887,6 +343807,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get login => 'Đăng nhập';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted => 'Đã cấp quyền Trợ năng';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -345766,9 +345692,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       'Trang web đã được mở trong trình duyệt của bạn. Tiện ích Fushi sẽ gửi phiên của nó về đây; hãy đăng nhập ở đó nếu cần, rồi nhấn Xong.';
-  @override
-  String get mihon_source_login_import_none =>
-      'Chưa nhận được phiên nào từ trình duyệt';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       'Đã nhập ${count} cookie từ trình duyệt';
@@ -357548,14 +357471,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -357837,9 +357754,6 @@ class _StringsVi extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
-  @override
-  String get web_video_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -367488,6 +367402,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get login => '登录';
   @override
+  String login_import_pending({required Object host}) =>
+      '正在等系统浏览器送回 ${host} 的登录。装了 Fushi 浏览器扩展会自动送来；还没登录就先在浏览器里登录，再点一次导入。';
+  @override
+  String get login_import_write_failed => '没能写入浏览器送来的登录信息';
+  @override
   String get lookup_accessibility_permission_granted => '已授权辅助功能';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -369226,8 +369145,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       '已在系统浏览器打开源站，Fushi 扩展会把会话送过来；还没登录就在浏览器里登录，然后点「完成」。';
-  @override
-  String get mihon_source_login_import_none => '还没收到浏览器送来的会话';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条 cookie';
@@ -379989,13 +379906,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_login_import => '从浏览器导入登录';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      '正在等系统浏览器送回 ${host} 的登录。装了 Fushi 浏览器扩展会自动送来；还没登录就先在浏览器里登录，再点一次导入。';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条登录信息';
-  @override
-  String get web_browser_login_import_write_failed => '没能写入浏览器送来的登录信息';
   @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
@@ -380255,9 +380167,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条登录信息';
-  @override
-  String get web_video_login_import_waiting =>
-      '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
   @override
   String get web_video_mine_background => '正在后台制卡（直接从 YouTube 视频流截取）';
   @override
@@ -390124,6 +390033,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get login => '登入';
   @override
+  String login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
+  String get login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
+  @override
   String get lookup_accessibility_permission_granted => '已授權輔助功能';
   @override
   String get lookup_accessibility_permission_hint =>
@@ -391893,8 +391808,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_source_login_import_hint =>
       '已在系統瀏覽器開啟源站，Fushi 擴展會把會話送過來；還沒登入就在瀏覽器裡登入，然後點「完成」。';
-  @override
-  String get mihon_source_login_import_none => '還沒收到瀏覽器送來的會話';
   @override
   String mihon_source_login_import_received({required Object count}) =>
       '已從瀏覽器匯入 ${count} 條 cookie';
@@ -403080,14 +402993,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
-  String web_browser_login_import_pending({required Object host}) =>
-      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
-  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_write_failed =>
-      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -403365,9 +403272,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       '已從瀏覽器匯入 ${count} 條登入資訊';
-  @override
-  String get web_video_login_import_waiting =>
-      '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
   @override
   String get web_video_mine_background => '正在背景製卡（直接從 YouTube 影片串流擷取）';
   @override
@@ -412259,6 +412163,11 @@ extension on _StringsEn {
         return 'Log too large to upload';
       case 'login':
         return 'Login';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Accessibility permission granted';
       case 'lookup_accessibility_permission_hint':
@@ -413900,8 +413809,6 @@ extension on _StringsEn {
         return 'Import from browser';
       case 'mihon_source_login_import_hint':
         return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
-      case 'mihon_source_login_import_none':
-        return 'No session received from the browser yet';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} cookies from the browser';
@@ -424021,14 +423928,9 @@ extension on _StringsEn {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -424280,8 +424182,6 @@ extension on _StringsEn {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -433163,6 +433063,11 @@ extension on _StringsAr {
         return 'السجل كبير جدًا على الرفع';
       case 'login':
         return 'تسجيل الدخول';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'تم منح إذن إمكانية الوصول';
       case 'lookup_accessibility_permission_hint':
@@ -434804,8 +434709,6 @@ extension on _StringsAr {
         return 'استيراد من المتصفح';
       case 'mihon_source_login_import_hint':
         return 'تم فتح الموقع في متصفحك. ستُرسل إضافة Fushi جلسته إلى هنا؛ سجّل الدخول هناك إن لزم ثم اضغط «تم».';
-      case 'mihon_source_login_import_none':
-        return 'لم تُستلم أي جلسة من المتصفح بعد';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'تم استيراد ${count} ملف تعريف ارتباط من المتصفح';
@@ -444924,14 +444827,9 @@ extension on _StringsAr {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -445183,8 +445081,6 @@ extension on _StringsAr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -454108,6 +454004,11 @@ extension on _StringsDe {
         return 'Log zu groß zum Hochladen';
       case 'login':
         return 'Anmelden';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Bedienungshilfen-Berechtigung erteilt';
       case 'lookup_accessibility_permission_hint':
@@ -455759,8 +455660,6 @@ extension on _StringsDe {
         return 'Aus Browser importieren';
       case 'mihon_source_login_import_hint':
         return 'Die Website wurde in deinem Browser geöffnet. Die Fushi-Erweiterung sendet ihre Sitzung hierher; melde dich dort bei Bedarf an und tippe dann auf „Fertig“.';
-      case 'mihon_source_login_import_none':
-        return 'Noch keine Sitzung vom Browser empfangen';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} Cookies aus dem Browser importiert';
@@ -465903,14 +465802,9 @@ extension on _StringsDe {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -466162,8 +466056,6 @@ extension on _StringsDe {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -475074,6 +474966,11 @@ extension on _StringsEs {
         return 'El registro es demasiado grande para subirlo';
       case 'login':
         return 'Iniciar sesión';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Permiso de Accesibilidad concedido';
       case 'lookup_accessibility_permission_hint':
@@ -476724,8 +476621,6 @@ extension on _StringsEs {
         return 'Importar desde el navegador';
       case 'mihon_source_login_import_hint':
         return 'El sitio se abrió en tu navegador. La extensión de Fushi enviará su sesión aquí; inicia sesión allí si hace falta y toca Listo.';
-      case 'mihon_source_login_import_none':
-        return 'Aún no se ha recibido ninguna sesión del navegador';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Se importaron ${count} cookies del navegador';
@@ -486864,14 +486759,9 @@ extension on _StringsEs {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -487123,8 +487013,6 @@ extension on _StringsEs {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -496050,6 +495938,11 @@ extension on _StringsFr {
         return 'Journal trop volumineux pour être envoyé';
       case 'login':
         return 'Connexion';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Autorisation d\'accessibilité accordée';
       case 'lookup_accessibility_permission_hint':
@@ -497699,8 +497592,6 @@ extension on _StringsFr {
         return 'Importer depuis le navigateur';
       case 'mihon_source_login_import_hint':
         return 'Le site a été ouvert dans votre navigateur. L\'extension Fushi y enverra sa session ; connectez-vous là-bas si nécessaire, puis appuyez sur Terminé.';
-      case 'mihon_source_login_import_none':
-        return 'Aucune session reçue du navigateur pour l\'instant';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} cookies importés depuis le navigateur';
@@ -507843,14 +507734,9 @@ extension on _StringsFr {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -508102,8 +507988,6 @@ extension on _StringsFr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -517001,6 +516885,11 @@ extension on _StringsId {
         return 'Log terlalu besar untuk diunggah';
       case 'login':
         return 'Masuk';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Izin Aksesibilitas diberikan';
       case 'lookup_accessibility_permission_hint':
@@ -518643,8 +518532,6 @@ extension on _StringsId {
         return 'Impor dari browser';
       case 'mihon_source_login_import_hint':
         return 'Situs dibuka di browser Anda. Ekstensi Fushi akan mengirim sesinya ke sini; masuk di sana jika perlu, lalu ketuk Selesai.';
-      case 'mihon_source_login_import_none':
-        return 'Belum ada sesi yang diterima dari browser';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} cookie diimpor dari browser';
@@ -528766,14 +528653,9 @@ extension on _StringsId {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -529025,8 +528907,6 @@ extension on _StringsId {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -537936,6 +537816,11 @@ extension on _StringsIt {
         return 'Log troppo grande per il caricamento';
       case 'login':
         return 'Accedi';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Permesso di Accessibilità concesso';
       case 'lookup_accessibility_permission_hint':
@@ -539584,8 +539469,6 @@ extension on _StringsIt {
         return 'Importa dal browser';
       case 'mihon_source_login_import_hint':
         return 'Il sito è stato aperto nel browser. L\'estensione di Fushi invierà qui la sua sessione; accedi lì se necessario, poi tocca Fatto.';
-      case 'mihon_source_login_import_none':
-        return 'Nessuna sessione ancora ricevuta dal browser';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Importati ${count} cookie dal browser';
@@ -549725,14 +549608,9 @@ extension on _StringsIt {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -549984,8 +549862,6 @@ extension on _StringsIt {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -558835,6 +558711,11 @@ extension on _StringsJa {
         return 'ログが大きすぎてアップロードできません';
       case 'login':
         return 'ログイン';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'アクセシビリティの権限を許可しました';
       case 'lookup_accessibility_permission_hint':
@@ -560473,8 +560354,6 @@ extension on _StringsJa {
         return 'ブラウザからインポート';
       case 'mihon_source_login_import_hint':
         return 'サイトをブラウザで開きました。Fushi の拡張機能がセッションをここに送ります。必要ならブラウザでログインしてから「完了」をタップしてください。';
-      case 'mihon_source_login_import_none':
-        return 'ブラウザからセッションをまだ受信していません';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'ブラウザから Cookie を ${count} 件インポートしました';
@@ -570552,14 +570431,9 @@ extension on _StringsJa {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -570811,8 +570685,6 @@ extension on _StringsJa {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -579663,6 +579535,11 @@ extension on _StringsKo {
         return '로그가 너무 커서 업로드할 수 없습니다';
       case 'login':
         return '로그인';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return '손쉬운 사용 권한이 허용되었습니다';
       case 'lookup_accessibility_permission_hint':
@@ -581300,8 +581177,6 @@ extension on _StringsKo {
         return '브라우저에서 가져오기';
       case 'mihon_source_login_import_hint':
         return '브라우저에서 사이트를 열었습니다. Fushi 확장 프로그램이 세션을 여기로 보냅니다. 필요하면 그곳에서 로그인한 다음 완료를 누르세요.';
-      case 'mihon_source_login_import_none':
-        return '아직 브라우저에서 받은 세션이 없습니다';
       case 'mihon_source_login_import_received':
         return ({required Object count}) => '브라우저에서 쿠키 ${count}개를 가져왔습니다';
       case 'mihon_source_login_saved':
@@ -591392,14 +591267,9 @@ extension on _StringsKo {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -591651,8 +591521,6 @@ extension on _StringsKo {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -600558,6 +600426,11 @@ extension on _StringsNl {
         return 'Logboek te groot om te uploaden';
       case 'login':
         return 'Inloggen';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Toegankelijkheidstoestemming verleend';
       case 'lookup_accessibility_permission_hint':
@@ -602209,8 +602082,6 @@ extension on _StringsNl {
         return 'Importeren uit browser';
       case 'mihon_source_login_import_hint':
         return 'De site is in je browser geopend. De Fushi-extensie stuurt de sessie hierheen; log daar zo nodig in en tik dan op Klaar.';
-      case 'mihon_source_login_import_none':
-        return 'Nog geen sessie van de browser ontvangen';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} cookies uit de browser geïmporteerd';
@@ -612343,14 +612214,9 @@ extension on _StringsNl {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -612602,8 +612468,6 @@ extension on _StringsNl {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -621509,6 +621373,11 @@ extension on _StringsPtBr {
         return 'Log grande demais para enviar';
       case 'login':
         return 'Entrar';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Permissão de Acessibilidade concedida';
       case 'lookup_accessibility_permission_hint':
@@ -623158,8 +623027,6 @@ extension on _StringsPtBr {
         return 'Importar do navegador';
       case 'mihon_source_login_import_hint':
         return 'O site foi aberto no seu navegador. A extensão do Fushi enviará a sessão para cá; entre lá se necessário e toque em Concluído.';
-      case 'mihon_source_login_import_none':
-        return 'Nenhuma sessão recebida do navegador ainda';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             '${count} cookies importados do navegador';
@@ -633289,14 +633156,9 @@ extension on _StringsPtBr {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -633548,8 +633410,6 @@ extension on _StringsPtBr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -642462,6 +642322,11 @@ extension on _StringsRu {
         return 'Журнал слишком большой для загрузки';
       case 'login':
         return 'Войти';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Разрешение «Универсальный доступ» выдано';
       case 'lookup_accessibility_permission_hint':
@@ -644111,8 +643976,6 @@ extension on _StringsRu {
         return 'Импортировать из браузера';
       case 'mihon_source_login_import_hint':
         return 'Сайт открыт в вашем браузере. Расширение Fushi отправит сюда его сеанс; при необходимости войдите там, затем нажмите «Готово».';
-      case 'mihon_source_login_import_none':
-        return 'Сеанс из браузера ещё не получен';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Импортировано куки из браузера: ${count}';
@@ -654240,14 +654103,9 @@ extension on _StringsRu {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -654499,8 +654357,6 @@ extension on _StringsRu {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -663388,6 +663244,11 @@ extension on _StringsTh {
         return 'ล็อกใหญ่เกินไป อัปโหลดไม่ได้';
       case 'login':
         return 'เข้าสู่ระบบ';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'ให้สิทธิ์การเข้าถึงแล้ว';
       case 'lookup_accessibility_permission_hint':
@@ -665029,8 +664890,6 @@ extension on _StringsTh {
         return 'นำเข้าจากเบราว์เซอร์';
       case 'mihon_source_login_import_hint':
         return 'เว็บไซต์ถูกเปิดในเบราว์เซอร์ของคุณแล้ว ส่วนขยาย Fushi จะส่งเซสชันมาที่นี่ ลงชื่อเข้าใช้ที่นั่นหากจำเป็น แล้วแตะ เสร็จสิ้น';
-      case 'mihon_source_login_import_none':
-        return 'ยังไม่ได้รับเซสชันจากเบราว์เซอร์';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'นำเข้าคุกกี้ ${count} รายการจากเบราว์เซอร์แล้ว';
@@ -675147,14 +675006,9 @@ extension on _StringsTh {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -675406,8 +675260,6 @@ extension on _StringsTh {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -684314,6 +684166,11 @@ extension on _StringsTr {
         return 'Günlük yüklemek için çok büyük';
       case 'login':
         return 'Giriş yap';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Erişilebilirlik izni verildi';
       case 'lookup_accessibility_permission_hint':
@@ -685960,8 +685817,6 @@ extension on _StringsTr {
         return 'Tarayıcıdan içe aktar';
       case 'mihon_source_login_import_hint':
         return 'Site tarayıcınızda açıldı. Fushi uzantısı oturumunu buraya gönderecek; gerekirse orada oturum açın, ardından Bitti\'ye dokunun.';
-      case 'mihon_source_login_import_none':
-        return 'Tarayıcıdan henüz oturum alınmadı';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Tarayıcıdan ${count} çerez içe aktarıldı';
@@ -696085,14 +695940,9 @@ extension on _StringsTr {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -696344,8 +696194,6 @@ extension on _StringsTr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -705242,6 +705090,11 @@ extension on _StringsVi {
         return 'Nhật ký quá lớn, không tải lên được';
       case 'login':
         return 'Đăng nhập';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return 'Đã cấp quyền Trợ năng';
       case 'lookup_accessibility_permission_hint':
@@ -706883,8 +706736,6 @@ extension on _StringsVi {
         return 'Nhập từ trình duyệt';
       case 'mihon_source_login_import_hint':
         return 'Trang web đã được mở trong trình duyệt của bạn. Tiện ích Fushi sẽ gửi phiên của nó về đây; hãy đăng nhập ở đó nếu cần, rồi nhấn Xong.';
-      case 'mihon_source_login_import_none':
-        return 'Chưa nhận được phiên nào từ trình duyệt';
       case 'mihon_source_login_import_received':
         return ({required Object count}) =>
             'Đã nhập ${count} cookie từ trình duyệt';
@@ -717006,14 +716857,9 @@ extension on _StringsVi {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -717265,8 +717111,6 @@ extension on _StringsVi {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
-      case 'web_video_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -726045,6 +725889,11 @@ extension on _StringsZhCn {
         return '日志过大，无法上传';
       case 'login':
         return '登录';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            '正在等系统浏览器送回 ${host} 的登录。装了 Fushi 浏览器扩展会自动送来；还没登录就先在浏览器里登录，再点一次导入。';
+      case 'login_import_write_failed':
+        return '没能写入浏览器送来的登录信息';
       case 'lookup_accessibility_permission_granted':
         return '已授权辅助功能';
       case 'lookup_accessibility_permission_hint':
@@ -727671,8 +727520,6 @@ extension on _StringsZhCn {
         return '从浏览器导入';
       case 'mihon_source_login_import_hint':
         return '已在系统浏览器打开源站，Fushi 扩展会把会话送过来；还没登录就在浏览器里登录，然后点「完成」。';
-      case 'mihon_source_login_import_none':
-        return '还没收到浏览器送来的会话';
       case 'mihon_source_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条 cookie';
       case 'mihon_source_login_saved':
@@ -737678,13 +737525,8 @@ extension on _StringsZhCn {
         return '分享链接';
       case 'web_browser_login_import':
         return '从浏览器导入登录';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            '正在等系统浏览器送回 ${host} 的登录。装了 Fushi 浏览器扩展会自动送来；还没登录就先在浏览器里登录，再点一次导入。';
       case 'web_browser_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
-      case 'web_browser_login_import_write_failed':
-        return '没能写入浏览器送来的登录信息';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
@@ -737934,8 +737776,6 @@ extension on _StringsZhCn {
         return '从浏览器导入登录';
       case 'web_video_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
-      case 'web_video_login_import_waiting':
-        return '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
       case 'web_video_mine_background':
         return '正在后台制卡（直接从 YouTube 视频流截取）';
       case 'web_video_mine_queue_empty':
@@ -746742,6 +746582,11 @@ extension on _StringsZhHk {
         return '記錄過大，無法上載';
       case 'login':
         return '登入';
+      case 'login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+      case 'login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'lookup_accessibility_permission_granted':
         return '已授權輔助功能';
       case 'lookup_accessibility_permission_hint':
@@ -748376,8 +748221,6 @@ extension on _StringsZhHk {
         return '從瀏覽器匯入';
       case 'mihon_source_login_import_hint':
         return '已在系統瀏覽器開啟源站，Fushi 擴展會把會話送過來；還沒登入就在瀏覽器裡登入，然後點「完成」。';
-      case 'mihon_source_login_import_none':
-        return '還沒收到瀏覽器送來的會話';
       case 'mihon_source_login_import_received':
         return ({required Object count}) => '已從瀏覽器匯入 ${count} 條 cookie';
       case 'mihon_source_login_saved':
@@ -758435,14 +758278,9 @@ extension on _StringsZhHk {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
-      case 'web_browser_login_import_pending':
-        return ({required Object host}) =>
-            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_write_failed':
-        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -758693,8 +758531,6 @@ extension on _StringsZhHk {
         return '從瀏覽器匯入登入';
       case 'web_video_login_import_received':
         return ({required Object count}) => '已從瀏覽器匯入 ${count} 條登入資訊';
-      case 'web_video_login_import_waiting':
-        return '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
       case 'web_video_mine_background':
         return '正在背景製卡（直接從 YouTube 影片串流擷取）';
       case 'web_video_mine_queue_empty':
