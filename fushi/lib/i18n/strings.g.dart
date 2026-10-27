@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173485 (10205 per locale)
+/// Strings: 173587 (10211 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8538,6 +8538,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_permission_storage_desc =>
       'Scan local video, manga and book folders by their real paths.';
   String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   String get onboarding_reopen => 'Getting started guide';
   String get onboarding_review_anki_desc =>
       'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
@@ -28831,6 +28840,21 @@ class _StringsAr extends _StringsEn {
       'يفحص مجلدات الفيديو والمانغا والكتب المحلية بمساراتها الحقيقية.';
   @override
   String get onboarding_permission_storage_label => 'الوصول إلى جميع الملفات';
+  @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   @override
   String get onboarding_reopen => 'دليل البدء';
   @override
@@ -53815,6 +53839,21 @@ class _StringsDe extends _StringsEn {
       'Durchsucht lokale Video-, Manga- und Buchordner über ihren echten Pfad.';
   @override
   String get onboarding_permission_storage_label => 'Zugriff auf alle Dateien';
+  @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   @override
   String get onboarding_reopen => 'Erste-Schritte-Anleitung';
   @override
@@ -78959,6 +78998,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_permission_storage_label =>
       'Acceso a todos los archivos';
+  @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   @override
   String get onboarding_reopen => 'Guía de primeros pasos';
   @override
@@ -104189,6 +104243,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Accès à tous les fichiers';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Guide de démarrage';
   @override
   String get onboarding_review_anki_desc =>
@@ -129230,6 +129299,21 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Akses semua file';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Panduan memulai';
   @override
   String get onboarding_review_anki_desc =>
@@ -154244,6 +154328,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Accesso a tutti i file';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Guida per iniziare';
   @override
   String get onboarding_review_anki_desc =>
@@ -178692,6 +178791,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'すべてのファイルへのアクセス';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'はじめにガイド';
   @override
   String get onboarding_review_anki_desc =>
@@ -202758,6 +202872,21 @@ class _StringsKo extends _StringsEn {
       '로컬 동영상·만화·책 폴더를 실제 경로로 검색합니다.';
   @override
   String get onboarding_permission_storage_label => '모든 파일 액세스';
+  @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   @override
   String get onboarding_reopen => '시작 가이드';
   @override
@@ -227431,6 +227560,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_permission_storage_label =>
       'Toegang tot alle bestanden';
+  @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   @override
   String get onboarding_reopen => 'Aan-de-slaggids';
   @override
@@ -252501,6 +252645,21 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_permission_storage_label =>
       'Acesso a todos os arquivos';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Guia de primeiros passos';
   @override
   String get onboarding_review_anki_desc =>
@@ -277552,6 +277711,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Доступ ко всем файлам';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Руководство по началу работы';
   @override
   String get onboarding_review_anki_desc =>
@@ -302391,6 +302565,21 @@ class _StringsTh extends _StringsEn {
       'สแกนโฟลเดอร์วิดีโอ มังงะ และหนังสือในเครื่องตามพาธจริง';
   @override
   String get onboarding_permission_storage_label => 'สิทธิ์เข้าถึงไฟล์ทั้งหมด';
+  @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   @override
   String get onboarding_reopen => 'คู่มือเริ่มต้นใช้งาน';
   @override
@@ -327246,6 +327435,21 @@ class _StringsTr extends _StringsEn {
       'Yerel video, manga ve kitap klasörlerini gerçek yollarıyla tarar.';
   @override
   String get onboarding_permission_storage_label => 'Tüm dosyalara erişim';
+  @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
   @override
   String get onboarding_reopen => 'Başlangıç rehberi';
   @override
@@ -352119,6 +352323,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => 'Quyền truy cập mọi tệp';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => 'Hướng dẫn bắt đầu';
   @override
   String get onboarding_review_anki_desc =>
@@ -375765,6 +375984,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => '所有文件访问';
   @override
+  String get onboarding_purpose_hint => '只用来预选下一步的功能，之后仍可逐项调整。';
+  @override
+  String get onboarding_purpose_learning_desc => '看书、看番时查词，制卡并复习。';
+  @override
+  String get onboarding_purpose_learning_title => '学外语';
+  @override
+  String get onboarding_purpose_media_desc => '隐藏词典、制卡和复习，之后可随时在设置里打开。';
+  @override
+  String get onboarding_purpose_media_title => '只看书、看番、听书';
+  @override
+  String get onboarding_purpose_title => '你打算用 Fushi 做什么？';
+  @override
   String get onboarding_reopen => '新手引导';
   @override
   String get onboarding_review_anki_desc =>
@@ -398813,6 +399044,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_permission_storage_label => '所有檔案存取權';
   @override
+  String get onboarding_purpose_hint =>
+      'Only presets the next step. You can still pick features one by one.';
+  @override
+  String get onboarding_purpose_learning_desc =>
+      'Look up words while reading and watching, then make cards and review them.';
+  @override
+  String get onboarding_purpose_learning_title => 'Learn a language';
+  @override
+  String get onboarding_purpose_media_desc =>
+      'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+  @override
+  String get onboarding_purpose_media_title => 'Just read, watch and listen';
+  @override
+  String get onboarding_purpose_title => 'What will you use Fushi for?';
+  @override
   String get onboarding_reopen => '新手引導';
   @override
   String get onboarding_review_anki_desc =>
@@ -420963,6 +421209,18 @@ extension on _StringsEn {
         return 'Scan local video, manga and book folders by their real paths.';
       case 'onboarding_permission_storage_label':
         return 'All files access';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Getting started guide';
       case 'onboarding_review_anki_desc':
@@ -442158,6 +442416,18 @@ extension on _StringsAr {
         return 'يفحص مجلدات الفيديو والمانغا والكتب المحلية بمساراتها الحقيقية.';
       case 'onboarding_permission_storage_label':
         return 'الوصول إلى جميع الملفات';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'دليل البدء';
       case 'onboarding_review_anki_desc':
@@ -463407,6 +463677,18 @@ extension on _StringsDe {
         return 'Durchsucht lokale Video-, Manga- und Buchordner über ihren echten Pfad.';
       case 'onboarding_permission_storage_label':
         return 'Zugriff auf alle Dateien';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Erste-Schritte-Anleitung';
       case 'onboarding_review_anki_desc':
@@ -484660,6 +484942,18 @@ extension on _StringsEs {
         return 'Analiza carpetas locales de vídeo, manga y libros por su ruta real.';
       case 'onboarding_permission_storage_label':
         return 'Acceso a todos los archivos';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Guía de primeros pasos';
       case 'onboarding_review_anki_desc':
@@ -505927,6 +506221,18 @@ extension on _StringsFr {
         return 'Analyse les dossiers locaux de vidéos, mangas et livres par leur chemin réel.';
       case 'onboarding_permission_storage_label':
         return 'Accès à tous les fichiers';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Guide de démarrage';
       case 'onboarding_review_anki_desc':
@@ -527156,6 +527462,18 @@ extension on _StringsId {
         return 'Memindai folder video, manga, dan buku lokal berdasarkan jalur aslinya.';
       case 'onboarding_permission_storage_label':
         return 'Akses semua file';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Panduan memulai';
       case 'onboarding_review_anki_desc':
@@ -548389,6 +548707,18 @@ extension on _StringsIt {
         return 'Analizza le cartelle locali di video, manga e libri tramite il loro percorso reale.';
       case 'onboarding_permission_storage_label':
         return 'Accesso a tutti i file';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Guida per iniziare';
       case 'onboarding_review_anki_desc':
@@ -569562,6 +569892,18 @@ extension on _StringsJa {
         return 'ローカルの動画・漫画・本のフォルダを実際のパスでスキャンします。';
       case 'onboarding_permission_storage_label':
         return 'すべてのファイルへのアクセス';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'はじめにガイド';
       case 'onboarding_review_anki_desc':
@@ -590679,6 +591021,18 @@ extension on _StringsKo {
         return '로컬 동영상·만화·책 폴더를 실제 경로로 검색합니다.';
       case 'onboarding_permission_storage_label':
         return '모든 파일 액세스';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return '시작 가이드';
       case 'onboarding_review_anki_desc':
@@ -611884,6 +612238,18 @@ extension on _StringsNl {
         return 'Scant lokale video-, manga- en boekmappen via hun echte pad.';
       case 'onboarding_permission_storage_label':
         return 'Toegang tot alle bestanden';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Aan-de-slaggids';
       case 'onboarding_review_anki_desc':
@@ -633123,6 +633489,18 @@ extension on _StringsPtBr {
         return 'Verifica pastas locais de vídeo, mangá e livros pelo caminho real.';
       case 'onboarding_permission_storage_label':
         return 'Acesso a todos os arquivos';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Guia de primeiros passos';
       case 'onboarding_review_anki_desc':
@@ -654366,6 +654744,18 @@ extension on _StringsRu {
         return 'Сканирование локальных папок с видео, мангой и книгами по реальному пути.';
       case 'onboarding_permission_storage_label':
         return 'Доступ ко всем файлам';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Руководство по началу работы';
       case 'onboarding_review_anki_desc':
@@ -675571,6 +675961,18 @@ extension on _StringsTh {
         return 'สแกนโฟลเดอร์วิดีโอ มังงะ และหนังสือในเครื่องตามพาธจริง';
       case 'onboarding_permission_storage_label':
         return 'สิทธิ์เข้าถึงไฟล์ทั้งหมด';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'คู่มือเริ่มต้นใช้งาน';
       case 'onboarding_review_anki_desc':
@@ -696792,6 +697194,18 @@ extension on _StringsTr {
         return 'Yerel video, manga ve kitap klasörlerini gerçek yollarıyla tarar.';
       case 'onboarding_permission_storage_label':
         return 'Tüm dosyalara erişim';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Başlangıç rehberi';
       case 'onboarding_review_anki_desc':
@@ -718006,6 +718420,18 @@ extension on _StringsVi {
         return 'Quét các thư mục video, manga và sách trên máy theo đường dẫn thật.';
       case 'onboarding_permission_storage_label':
         return 'Quyền truy cập mọi tệp';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return 'Hướng dẫn bắt đầu';
       case 'onboarding_review_anki_desc':
@@ -739067,6 +739493,18 @@ extension on _StringsZhCn {
         return '按真实路径扫描本地的视频、漫画和书籍文件夹。';
       case 'onboarding_permission_storage_label':
         return '所有文件访问';
+      case 'onboarding_purpose_hint':
+        return '只用来预选下一步的功能，之后仍可逐项调整。';
+      case 'onboarding_purpose_learning_desc':
+        return '看书、看番时查词，制卡并复习。';
+      case 'onboarding_purpose_learning_title':
+        return '学外语';
+      case 'onboarding_purpose_media_desc':
+        return '隐藏词典、制卡和复习，之后可随时在设置里打开。';
+      case 'onboarding_purpose_media_title':
+        return '只看书、看番、听书';
+      case 'onboarding_purpose_title':
+        return '你打算用 Fushi 做什么？';
       case 'onboarding_reopen':
         return '新手引导';
       case 'onboarding_review_anki_desc':
@@ -760069,6 +760507,18 @@ extension on _StringsZhHk {
         return '按真實路徑掃描本機的影片、漫畫和書籍資料夾。';
       case 'onboarding_permission_storage_label':
         return '所有檔案存取權';
+      case 'onboarding_purpose_hint':
+        return 'Only presets the next step. You can still pick features one by one.';
+      case 'onboarding_purpose_learning_desc':
+        return 'Look up words while reading and watching, then make cards and review them.';
+      case 'onboarding_purpose_learning_title':
+        return 'Learn a language';
+      case 'onboarding_purpose_media_desc':
+        return 'Dictionary, card creation and review are hidden. Turn them back on in Settings anytime.';
+      case 'onboarding_purpose_media_title':
+        return 'Just read, watch and listen';
+      case 'onboarding_purpose_title':
+        return 'What will you use Fushi for?';
       case 'onboarding_reopen':
         return '新手引導';
       case 'onboarding_review_anki_desc':
