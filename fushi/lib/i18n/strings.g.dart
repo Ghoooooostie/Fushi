@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173094 (10182 per locale)
+/// Strings: 173111 (10183 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10383,6 +10383,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   String srs_import_report_presets_skipped({required Object n}) =>
@@ -32031,6 +32033,9 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
@@ -56999,6 +57004,9 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
@@ -82090,6 +82098,9 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
@@ -107269,6 +107280,9 @@ class _StringsFr extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -132210,6 +132224,9 @@ class _StringsId extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
@@ -157195,6 +157212,9 @@ class _StringsIt extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -181469,6 +181489,9 @@ class _StringsJa extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -205478,6 +205501,9 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
@@ -230194,6 +230220,9 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
@@ -255210,6 +255239,9 @@ class _StringsPtBr extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -280202,6 +280234,9 @@ class _StringsRu extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -304945,6 +304980,9 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
   @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
@@ -329755,6 +329793,9 @@ class _StringsTr extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -354560,6 +354601,9 @@ class _StringsVi extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -377896,6 +377940,9 @@ class _StringsZhCn extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       '笔记模板「${name}」与本机的不一致，已另存为一个新模板';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      '恢复之前删除的笔记模板「${name}」';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       '更新笔记模板：${n} 个';
   @override
@@ -401011,6 +401058,9 @@ class _StringsZhHk extends _StringsEn {
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
   @override
+  String srs_import_report_notetypes_restored({required Object name}) =>
+      'Restored previously deleted note type “${name}”';
+  @override
   String srs_import_report_notetypes_updated({required Object n}) =>
       'Note types updated: ${n}';
   @override
@@ -422843,6 +422893,9 @@ extension on _StringsEn {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -443985,6 +444038,9 @@ extension on _StringsAr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -465183,6 +465239,9 @@ extension on _StringsDe {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -486385,6 +486444,9 @@ extension on _StringsEs {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -507598,6 +507660,9 @@ extension on _StringsFr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -528771,6 +528836,9 @@ extension on _StringsId {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -549953,6 +550021,9 @@ extension on _StringsIt {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -571069,6 +571140,9 @@ extension on _StringsJa {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -592134,6 +592208,9 @@ extension on _StringsKo {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -613289,6 +613366,9 @@ extension on _StringsNl {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -634475,6 +634555,9 @@ extension on _StringsPtBr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -655665,6 +655748,9 @@ extension on _StringsRu {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -676815,6 +676901,9 @@ extension on _StringsTh {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -697983,6 +698072,9 @@ extension on _StringsTr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -719146,6 +719238,9 @@ extension on _StringsVi {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
@@ -740126,6 +740221,8 @@ extension on _StringsZhCn {
         }) => '笔记：新增 ${added}，更新 ${updated}，未改动 ${skipped}';
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) => '笔记模板「${name}」与本机的不一致，已另存为一个新模板';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) => '恢复之前删除的笔记模板「${name}」';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => '更新笔记模板：${n} 个';
       case 'srs_import_report_presets_skipped':
@@ -761098,6 +761195,9 @@ extension on _StringsZhHk {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_import_report_notetypes_restored':
+        return ({required Object name}) =>
+            'Restored previously deleted note type “${name}”';
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
