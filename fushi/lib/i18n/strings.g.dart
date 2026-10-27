@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172839 (10167 per locale)
+/// Strings: 172958 (10174 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -243,6 +243,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
   String get ai_agent_ask_action => 'Ask AI';
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
   String get ai_agent_attach_screen_text => 'Attach screen text';
   String get ai_agent_choice_cancel => 'None of these';
   String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
@@ -267,6 +269,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Everything the AI assistant changed; undo any of it';
   String get ai_agent_history_title => 'AI action log';
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  String get ai_agent_message_image_attached => 'With screenshot';
   String get ai_agent_new_session => 'New conversation';
   String get ai_agent_no_provider =>
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
@@ -287,8 +290,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_agent_remote_unsupported({required Object device}) =>
       '${device} can\'t run the AI assistant. Update Fushi on that device.';
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  String get ai_agent_screen_image_chip => 'Screenshot';
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
   String get ai_agent_screen_text_unavailable =>
@@ -438,6 +445,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_media_acquire_started => 'Download started';
   String ai_media_acquire_title({required Object domain}) =>
       'AI download · ${domain}';
+  String get ai_provider_accepts_images => 'Model accepts images';
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   String get ai_provider_add => 'Add provider';
   String get ai_provider_allow_http => 'Allow plain HTTP';
   String get ai_provider_allow_http_summary =>
@@ -14780,6 +14790,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -14826,6 +14839,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -14858,8 +14873,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -15109,6 +15131,11 @@ class _StringsAr extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'تنزيل بالذكاء الاصطناعي · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'إضافة مزود';
   @override
@@ -39413,6 +39440,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -39459,6 +39489,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -39491,8 +39523,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -39744,6 +39783,11 @@ class _StringsDe extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'KI-Download · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Anbieter hinzufügen';
   @override
@@ -64437,6 +64481,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -64483,6 +64530,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -64515,8 +64564,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -64770,6 +64826,11 @@ class _StringsEs extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'Descarga con IA · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Añadir proveedor';
   @override
@@ -89518,6 +89579,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -89564,6 +89628,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -89596,8 +89662,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -89849,6 +89922,11 @@ class _StringsFr extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'Téléchargement par IA · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Ajouter un fournisseur';
   @override
@@ -114679,6 +114757,9 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -114725,6 +114806,8 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -114757,8 +114840,15 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -115009,6 +115099,11 @@ class _StringsId extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'Unduhan AI · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Tambah penyedia';
   @override
@@ -139495,6 +139590,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -139541,6 +139639,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -139573,8 +139673,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -139828,6 +139935,11 @@ class _StringsIt extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'Download con IA · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Aggiungi provider';
   @override
@@ -164475,6 +164587,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -164521,6 +164636,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -164553,8 +164670,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -164797,6 +164921,11 @@ class _StringsJa extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'AIダウンロード · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'プロバイダーを追加';
   @override
@@ -188418,6 +188547,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -188464,6 +188596,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -188496,8 +188630,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -188741,6 +188882,11 @@ class _StringsKo extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'AI 다운로드 · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => '제공자 추가';
   @override
@@ -212428,6 +212574,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -212474,6 +212623,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -212506,8 +212657,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -212759,6 +212917,11 @@ class _StringsNl extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'AI-download · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Provider toevoegen';
   @override
@@ -237357,6 +237520,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -237403,6 +237569,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -237435,8 +237603,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -237690,6 +237865,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'Download com IA · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Adicionar provedor';
   @override
@@ -262354,6 +262534,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -262400,6 +262583,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -262432,8 +262617,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -262684,6 +262876,11 @@ class _StringsRu extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'ИИ-загрузка · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Добавить провайдера';
   @override
@@ -287296,6 +287493,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -287342,6 +287542,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -287374,8 +287576,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -287624,6 +287833,11 @@ class _StringsTh extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'ดาวน์โหลดด้วย AI · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'เพิ่มผู้ให้บริการ';
   @override
@@ -311916,6 +312130,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -311962,6 +312179,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -311994,8 +312213,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -312248,6 +312474,11 @@ class _StringsTr extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'Yapay zeka ile indirme · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Sağlayıcı ekle';
   @override
@@ -336740,6 +336971,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -336786,6 +337020,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -336818,8 +337054,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -337070,6 +337313,11 @@ class _StringsVi extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'Tải bằng AI · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => 'Thêm nhà cung cấp';
   @override
@@ -361487,6 +361735,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_agent_ask_action => '问 AI';
   @override
+  String get ai_agent_attach_screen_image => '附上屏幕截图和文字';
+  @override
   String get ai_agent_attach_screen_text => '附上屏幕文字';
   @override
   String get ai_agent_choice_cancel => '都不是';
@@ -361531,6 +361781,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_agent_input_hint => '告诉 AI 要做什么…';
   @override
+  String get ai_agent_message_image_attached => '附截图';
+  @override
   String get ai_agent_new_session => '新对话';
   @override
   String get ai_agent_no_provider => 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
@@ -361561,7 +361813,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => '不可撤销';
   @override
+  String get ai_agent_screen_image_chip => '屏幕截图';
+  @override
   String ai_agent_screen_text_chip({required Object n}) => '屏幕文字（${n} 字）';
+  @override
+  String get ai_agent_screen_text_edit_hint => '发送前可以改掉识别错的字；清空就不附文字';
+  @override
+  String get ai_agent_screen_text_edit_title => '修改屏幕文字';
   @override
   String get ai_agent_screen_text_empty => '屏幕上没有识别到文字';
   @override
@@ -361784,6 +362042,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'AI 下载 · ${domain}';
+  @override
+  String get ai_provider_accepts_images => '模型支持图片输入';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      '视觉模型才开。开了之后 AI 助手附上屏幕时会连截图一起发给模型';
   @override
   String get ai_provider_add => '添加提供商';
   @override
@@ -384123,6 +384386,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_agent_ask_action => 'Ask AI';
   @override
+  String get ai_agent_attach_screen_image =>
+      'Attach a screenshot and screen text';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -384169,6 +384435,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_agent_input_hint => 'Tell the assistant what to do…';
   @override
+  String get ai_agent_message_image_attached => 'With screenshot';
+  @override
   String get ai_agent_new_session => 'New conversation';
   @override
   String get ai_agent_no_provider =>
@@ -384201,8 +384469,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
   @override
+  String get ai_agent_screen_image_chip => 'Screenshot';
+  @override
   String ai_agent_screen_text_chip({required Object n}) =>
       'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_edit_hint =>
+      'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+  @override
+  String get ai_agent_screen_text_edit_title => 'Edit screen text';
   @override
   String get ai_agent_screen_text_empty => 'No text found on the screen';
   @override
@@ -384437,6 +384712,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String ai_media_acquire_title({required Object domain}) =>
       'AI 下載 · ${domain}';
+  @override
+  String get ai_provider_accepts_images => 'Model accepts images';
+  @override
+  String get ai_provider_accepts_images_summary =>
+      'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
   @override
   String get ai_provider_add => '新增提供商';
   @override
@@ -407428,6 +407708,8 @@ extension on _StringsEn {
         return 'Add to collection';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -407472,6 +407754,8 @@ extension on _StringsEn {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -407500,8 +407784,14 @@ extension on _StringsEn {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -407711,6 +408001,10 @@ extension on _StringsEn {
         return 'Download started';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI download · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Add provider';
       case 'ai_provider_allow_http':
@@ -428547,6 +428841,8 @@ extension on _StringsAr {
         return 'إضافة إلى مجموعة';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -428591,6 +428887,8 @@ extension on _StringsAr {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -428619,8 +428917,14 @@ extension on _StringsAr {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -428831,6 +429135,10 @@ extension on _StringsAr {
       case 'ai_media_acquire_title':
         return ({required Object domain}) =>
             'تنزيل بالذكاء الاصطناعي · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'إضافة مزود';
       case 'ai_provider_allow_http':
@@ -449660,6 +449968,8 @@ extension on _StringsDe {
         return 'Zur Sammlung hinzufügen';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -449704,6 +450014,8 @@ extension on _StringsDe {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -449732,8 +450044,14 @@ extension on _StringsDe {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -449944,6 +450262,10 @@ extension on _StringsDe {
         return 'Download gestartet';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'KI-Download · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Anbieter hinzufügen';
       case 'ai_provider_allow_http':
@@ -470849,6 +471171,8 @@ extension on _StringsEs {
         return 'Añadir a colección';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -470893,6 +471217,8 @@ extension on _StringsEs {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -470921,8 +471247,14 @@ extension on _StringsEs {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -471133,6 +471465,10 @@ extension on _StringsEs {
         return 'Descarga iniciada';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Descarga con IA · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Añadir proveedor';
       case 'ai_provider_allow_http':
@@ -492020,6 +492356,8 @@ extension on _StringsFr {
         return 'Ajouter à la collection';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -492064,6 +492402,8 @@ extension on _StringsFr {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -492092,8 +492432,14 @@ extension on _StringsFr {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -492306,6 +492652,10 @@ extension on _StringsFr {
       case 'ai_media_acquire_title':
         return ({required Object domain}) =>
             'Téléchargement par IA · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Ajouter un fournisseur';
       case 'ai_provider_allow_http':
@@ -513209,6 +513559,8 @@ extension on _StringsId {
         return 'Tambah ke koleksi';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -513253,6 +513605,8 @@ extension on _StringsId {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -513281,8 +513635,14 @@ extension on _StringsId {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -513492,6 +513852,10 @@ extension on _StringsId {
         return 'Unduhan dimulai';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Unduhan AI · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Tambah penyedia';
       case 'ai_provider_allow_http':
@@ -534342,6 +534706,8 @@ extension on _StringsIt {
         return 'Aggiungi alla raccolta';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -534386,6 +534752,8 @@ extension on _StringsIt {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -534414,8 +534782,14 @@ extension on _StringsIt {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -534626,6 +535000,10 @@ extension on _StringsIt {
         return 'Download avviato';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Download con IA · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Aggiungi provider';
       case 'ai_provider_allow_http':
@@ -555511,6 +555889,8 @@ extension on _StringsJa {
         return 'コレクションに追加';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -555555,6 +555935,8 @@ extension on _StringsJa {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -555583,8 +555965,14 @@ extension on _StringsJa {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -555793,6 +556181,10 @@ extension on _StringsJa {
         return 'ダウンロードを開始しました';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AIダウンロード · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'プロバイダーを追加';
       case 'ai_provider_allow_http':
@@ -576545,6 +576937,8 @@ extension on _StringsKo {
         return '컬렉션에 추가';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -576589,6 +576983,8 @@ extension on _StringsKo {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -576617,8 +577013,14 @@ extension on _StringsKo {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -576827,6 +577229,10 @@ extension on _StringsKo {
         return '다운로드를 시작했습니다';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI 다운로드 · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return '제공자 추가';
       case 'ai_provider_allow_http':
@@ -597595,6 +598001,8 @@ extension on _StringsNl {
         return 'Aan collectie toevoegen';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -597639,6 +598047,8 @@ extension on _StringsNl {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -597667,8 +598077,14 @@ extension on _StringsNl {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -597878,6 +598294,10 @@ extension on _StringsNl {
         return 'Download gestart';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI-download · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Provider toevoegen';
       case 'ai_provider_allow_http':
@@ -618759,6 +619179,8 @@ extension on _StringsPtBr {
         return 'Adicionar à coleção';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -618803,6 +619225,8 @@ extension on _StringsPtBr {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -618831,8 +619255,14 @@ extension on _StringsPtBr {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -619043,6 +619473,10 @@ extension on _StringsPtBr {
         return 'Download iniciado';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Download com IA · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Adicionar provedor';
       case 'ai_provider_allow_http':
@@ -639915,6 +640349,8 @@ extension on _StringsRu {
         return 'Добавить в коллекцию';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -639959,6 +640395,8 @@ extension on _StringsRu {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -639987,8 +640425,14 @@ extension on _StringsRu {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -640197,6 +640641,10 @@ extension on _StringsRu {
         return 'Загрузка начата';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'ИИ-загрузка · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Добавить провайдера';
       case 'ai_provider_allow_http':
@@ -661076,6 +661524,8 @@ extension on _StringsTh {
         return 'เพิ่มในคอลเลกชัน';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -661120,6 +661570,8 @@ extension on _StringsTh {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -661148,8 +661600,14 @@ extension on _StringsTh {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -661359,6 +661817,10 @@ extension on _StringsTh {
         return 'เริ่มดาวน์โหลดแล้ว';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'ดาวน์โหลดด้วย AI · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'เพิ่มผู้ให้บริการ';
       case 'ai_provider_allow_http':
@@ -682193,6 +682655,8 @@ extension on _StringsTr {
         return 'Koleksiyona ekle';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -682237,6 +682701,8 @@ extension on _StringsTr {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -682265,8 +682731,14 @@ extension on _StringsTr {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -682477,6 +682949,10 @@ extension on _StringsTr {
       case 'ai_media_acquire_title':
         return ({required Object domain}) =>
             'Yapay zeka ile indirme · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Sağlayıcı ekle';
       case 'ai_provider_allow_http':
@@ -703341,6 +703817,8 @@ extension on _StringsVi {
         return 'Thêm vào bộ sưu tập';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -703385,6 +703863,8 @@ extension on _StringsVi {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -703413,8 +703893,14 @@ extension on _StringsVi {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -703623,6 +704109,10 @@ extension on _StringsVi {
         return 'Đã bắt đầu tải';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'Tải bằng AI · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return 'Thêm nhà cung cấp';
       case 'ai_provider_allow_http':
@@ -724471,6 +724961,8 @@ extension on _StringsZhCn {
         return '加入合集';
       case 'ai_agent_ask_action':
         return '问 AI';
+      case 'ai_agent_attach_screen_image':
+        return '附上屏幕截图和文字';
       case 'ai_agent_attach_screen_text':
         return '附上屏幕文字';
       case 'ai_agent_choice_cancel':
@@ -724515,6 +725007,8 @@ extension on _StringsZhCn {
         return 'AI 操作记录';
       case 'ai_agent_input_hint':
         return '告诉 AI 要做什么…';
+      case 'ai_agent_message_image_attached':
+        return '附截图';
       case 'ai_agent_new_session':
         return '新对话';
       case 'ai_agent_no_provider':
@@ -724541,8 +725035,14 @@ extension on _StringsZhCn {
             '${device} 不支持 AI 助手，请更新那台设备上的 Fushi。';
       case 'ai_agent_risk_irreversible':
         return '不可撤销';
+      case 'ai_agent_screen_image_chip':
+        return '屏幕截图';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => '屏幕文字（${n} 字）';
+      case 'ai_agent_screen_text_edit_hint':
+        return '发送前可以改掉识别错的字；清空就不附文字';
+      case 'ai_agent_screen_text_edit_title':
+        return '修改屏幕文字';
       case 'ai_agent_screen_text_empty':
         return '屏幕上没有识别到文字';
       case 'ai_agent_screen_text_failed':
@@ -724751,6 +725251,10 @@ extension on _StringsZhCn {
         return '已开始下载';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI 下载 · ${domain}';
+      case 'ai_provider_accepts_images':
+        return '模型支持图片输入';
+      case 'ai_provider_accepts_images_summary':
+        return '视觉模型才开。开了之后 AI 助手附上屏幕时会连截图一起发给模型';
       case 'ai_provider_add':
         return '添加提供商';
       case 'ai_provider_allow_http':
@@ -745343,6 +745847,8 @@ extension on _StringsZhHk {
         return '加入合集';
       case 'ai_agent_ask_action':
         return 'Ask AI';
+      case 'ai_agent_attach_screen_image':
+        return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -745387,6 +745893,8 @@ extension on _StringsZhHk {
         return 'AI action log';
       case 'ai_agent_input_hint':
         return 'Tell the assistant what to do…';
+      case 'ai_agent_message_image_attached':
+        return 'With screenshot';
       case 'ai_agent_new_session':
         return 'New conversation';
       case 'ai_agent_no_provider':
@@ -745415,8 +745923,14 @@ extension on _StringsZhHk {
             '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_image_chip':
+        return 'Screenshot';
       case 'ai_agent_screen_text_chip':
         return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_edit_hint':
+        return 'Fix any misrecognized characters before sending. Clear it to leave the text out.';
+      case 'ai_agent_screen_text_edit_title':
+        return 'Edit screen text';
       case 'ai_agent_screen_text_empty':
         return 'No text found on the screen';
       case 'ai_agent_screen_text_failed':
@@ -745625,6 +746139,10 @@ extension on _StringsZhHk {
         return '已開始下載';
       case 'ai_media_acquire_title':
         return ({required Object domain}) => 'AI 下載 · ${domain}';
+      case 'ai_provider_accepts_images':
+        return 'Model accepts images';
+      case 'ai_provider_accepts_images_summary':
+        return 'Turn on for vision models. The AI assistant then sends a screenshot along with the screen text.';
       case 'ai_provider_add':
         return '新增提供商';
       case 'ai_provider_allow_http':
