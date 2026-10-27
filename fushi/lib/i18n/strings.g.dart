@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173094 (10182 per locale)
+/// Strings: 173196 (10188 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9658,6 +9658,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Align next subtitle to now';
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Align previous subtitle to now';
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle secondary subtitle obscure';
   String get shortcut_action_video_cycle_subtitle_obscure =>
@@ -9704,6 +9707,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_video_toggle_fullscreen => 'Toggle fullscreen';
   String get shortcut_action_video_toggle_immersive_lock =>
       'Toggle immersive lock';
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
@@ -12848,6 +12853,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_loading_connecting => 'Connecting to stream…';
   String get video_loading_preparing => 'Preparing…';
   String get video_loading_subtitle => 'Downloading subtitles…';
+  String get video_loop_cue_badge_label => 'Looping line';
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   String get video_menu_fullscreen => 'Toggle fullscreen';
@@ -13238,6 +13245,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_search_ai_rank => 'Rank with AI';
   String get video_search_ai_ranked => 'Results reordered by AI';
   String get video_search_ai_recommended => 'AI pick';
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   String get video_secondary_subtitle_sources => 'Secondary subtitle';
   String get video_setting_auto_play_next => 'Auto-play next episode';
   String get video_setting_auto_scrape => 'Auto-fetch series info';
@@ -30779,6 +30788,11 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'محاذاة الترجمة السابقة إلى الآن';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -30855,6 +30869,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'تبديل قفل الانغماس';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'تبديل عناصر تحكم النافذة المصغّرة';
@@ -36277,6 +36294,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_loading_subtitle => 'جارٍ تحميل الترجمات…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -36924,6 +36945,9 @@ class _StringsAr extends _StringsEn {
       'أُعيد ترتيب النتائج بواسطة الذكاء الاصطناعي';
   @override
   String get video_search_ai_recommended => 'اختيار الذكاء الاصطناعي';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'ترجمة ثانوية';
   @override
@@ -55743,6 +55767,11 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Vorherigen Untertitel auf jetzt ausrichten';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -55822,6 +55851,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Immersive Sperre umschalten';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Steuerelemente des Mini-Fensters umschalten';
@@ -61289,6 +61321,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Untertitel werden heruntergeladen…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -61948,6 +61984,9 @@ class _StringsDe extends _StringsEn {
   String get video_search_ai_ranked => 'Ergebnisse von der KI neu geordnet';
   @override
   String get video_search_ai_recommended => 'KI-Empfehlung';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Sekundärer Untertitel';
   @override
@@ -80833,6 +80872,11 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Alinear subtítulo anterior al ahora';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -80912,6 +80956,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alternar bloqueo inmersivo';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alternar controles de la ventana mini';
@@ -86393,6 +86440,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Descargando subtítulos…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -87053,6 +87104,9 @@ class _StringsEs extends _StringsEn {
   String get video_search_ai_ranked => 'Resultados reordenados por la IA';
   @override
   String get video_search_ai_recommended => 'Elección de la IA';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Subtítulo secundario';
   @override
@@ -106011,6 +106065,11 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Aligner le sous-titre précédent sur maintenant';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -106090,6 +106149,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Basculer le verrouillage immersif';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Basculer les commandes de la mini-fenêtre';
@@ -111573,6 +111635,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Téléchargement des sous-titres…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -112238,6 +112304,9 @@ class _StringsFr extends _StringsEn {
   String get video_search_ai_ranked => 'Résultats réordonnés par l\'IA';
   @override
   String get video_search_ai_recommended => 'Choix de l\'IA';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Sous-titre secondaire';
   @override
@@ -130957,6 +131026,11 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Selaraskan subtitle sebelumnya ke sekarang';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -131035,6 +131109,9 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alihkan Kunci Imersif';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alihkan kontrol jendela mini';
@@ -136480,6 +136557,10 @@ class _StringsId extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Mengunduh subtitle…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -137134,6 +137215,9 @@ class _StringsId extends _StringsEn {
   String get video_search_ai_ranked => 'Hasil diurutkan ulang oleh AI';
   @override
   String get video_search_ai_recommended => 'Pilihan AI';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Subtitle sekunder';
   @override
@@ -155937,6 +156021,11 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Allinea sottotitolo precedente al momento attuale';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -156017,6 +156106,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Attiva/disattiva blocco immersivo';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Attiva/disattiva i controlli della mini finestra';
@@ -161475,6 +161567,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Download sottotitoli…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -162129,6 +162225,9 @@ class _StringsIt extends _StringsEn {
   String get video_search_ai_ranked => 'Risultati riordinati dall\'IA';
   @override
   String get video_search_ai_recommended => 'Scelta dell\'IA';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Sottotitolo secondario';
   @override
@@ -180232,6 +180331,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '前の字幕を現在位置に合わせる';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -180299,6 +180403,9 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_video_toggle_fullscreen => '全画面の切り替え';
   @override
   String get shortcut_action_video_toggle_immersive_lock => 'イマーシブロックの切り替え';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome => 'ミニウィンドウのコントロールを切り替え';
   @override
@@ -185617,6 +185724,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_loading_subtitle => '字幕をダウンロード中…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -186242,6 +186353,9 @@ class _StringsJa extends _StringsEn {
   String get video_search_ai_ranked => 'AIが結果を並べ替えました';
   @override
   String get video_search_ai_recommended => 'AIのおすすめ';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
@@ -204243,6 +204357,11 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       '이전 자막을 현재 시점에 맞추기';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -204310,6 +204429,9 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_video_toggle_fullscreen => '전체 화면 전환';
   @override
   String get shortcut_action_video_toggle_immersive_lock => '몰입 잠금 전환';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome => '미니 창 컨트롤 전환';
   @override
@@ -209629,6 +209751,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_loading_subtitle => '자막 다운로드 중…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -210261,6 +210387,9 @@ class _StringsKo extends _StringsEn {
   String get video_search_ai_ranked => 'AI가 결과 순서를 재정렬했습니다';
   @override
   String get video_search_ai_recommended => 'AI 추천';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => '보조 자막';
   @override
@@ -228938,6 +229067,11 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Vorige ondertitel uitlijnen op nu';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -229017,6 +229151,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Immersieve vergrendeling in-/uitschakelen';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Bediening van minivenster in-/uitschakelen';
@@ -234477,6 +234614,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Ondertitels downloaden…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -235133,6 +235274,9 @@ class _StringsNl extends _StringsEn {
   String get video_search_ai_ranked => 'Resultaten herordend door AI';
   @override
   String get video_search_ai_recommended => 'AI-keuze';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Secundaire ondertitel';
   @override
@@ -253954,6 +254098,11 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Alinhar legenda anterior ao momento atual';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -254032,6 +254181,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alternar bloqueio imersivo';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alternar controles da minijanela';
@@ -259496,6 +259648,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Baixando legendas…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -260155,6 +260311,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_search_ai_ranked => 'Resultados reordenados pela IA';
   @override
   String get video_search_ai_recommended => 'Escolha da IA';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Legenda secundária';
   @override
@@ -278947,6 +279106,11 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Совместить предыдущий субтитр с текущим моментом';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -279025,6 +279189,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Иммерсивная блокировка';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Переключить элементы управления мини-окна';
@@ -284477,6 +284644,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Загрузка субтитров…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -285135,6 +285306,9 @@ class _StringsRu extends _StringsEn {
   String get video_search_ai_ranked => 'Результаты переупорядочены ИИ';
   @override
   String get video_search_ai_recommended => 'Выбор ИИ';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Вторичные субтитры';
   @override
@@ -303693,6 +303867,11 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'จัดคำบรรยายก่อนหน้าให้ตรงกับตอนนี้';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -303771,6 +303950,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'สลับล็อกโหมดดื่มด่ำ';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'สลับตัวควบคุมหน้าต่างเล็ก';
@@ -309190,6 +309372,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_loading_subtitle => 'กำลังดาวน์โหลดคำบรรยาย…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -309836,6 +310022,9 @@ class _StringsTh extends _StringsEn {
   String get video_search_ai_ranked => 'AI เรียงผลลัพธ์ใหม่แล้ว';
   @override
   String get video_search_ai_recommended => 'AI แนะนำ';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'คำบรรยายรอง';
   @override
@@ -328500,6 +328689,11 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Önceki altyazıyı şimdiye hizala';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -328576,6 +328770,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Sürükleyici Kilidi Aç/Kapat';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Mini pencere denetimlerini aç/kapat';
@@ -334019,6 +334216,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Altyazılar indiriliyor…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -334674,6 +334875,9 @@ class _StringsTr extends _StringsEn {
       'Sonuçlar yapay zeka tarafından yeniden sıralandı';
   @override
   String get video_search_ai_recommended => 'Yapay zeka seçimi';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'İkincil altyazı';
   @override
@@ -353307,6 +353511,11 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_video_align_subtitle_to_prev =>
       'Căn phụ đề trước đó về thời điểm hiện tại';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -353383,6 +353592,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock =>
       'Bật/tắt khóa đắm chìm';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Bật/tắt nút điều khiển cửa sổ thu nhỏ';
@@ -358817,6 +359029,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_loading_subtitle => 'Đang tải phụ đề…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -359471,6 +359687,9 @@ class _StringsVi extends _StringsEn {
   String get video_search_ai_ranked => 'Kết quả đã được AI sắp xếp lại';
   @override
   String get video_search_ai_recommended => 'AI chọn';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => 'Phụ đề phụ';
   @override
@@ -376739,6 +376958,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕对齐到当前时间';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      '复制当前副字幕台词';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => '复制当前台词';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       '循环副字幕遮蔽';
   @override
@@ -376803,6 +377027,9 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_video_toggle_fullscreen => '切换全屏';
   @override
   String get shortcut_action_video_toggle_immersive_lock => '切换沉浸锁定';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      '循环当前句（开 / 关）';
   @override
   String get shortcut_action_video_toggle_mini_chrome => '切换小窗控件';
   @override
@@ -381791,6 +382018,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_loading_subtitle => '正在下载字幕…';
   @override
+  String get video_loop_cue_badge_label => '循环当前句';
+  @override
+  String get video_loop_cue_badge_tooltip => '点击停止循环';
+  @override
   String get video_media_server_launch_unavailable =>
       '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
   @override
@@ -382360,6 +382591,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_search_ai_ranked => '结果已由 AI 重新排序';
   @override
   String get video_search_ai_recommended => 'AI 推荐';
+  @override
+  String get video_secondary_subtitle_copy_empty => '当前没有可复制的副字幕';
   @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
@@ -399777,6 +400010,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_align_subtitle_to_prev => '上一句字幕對齊到當前時間';
   @override
+  String get shortcut_action_video_copy_current_secondary_subtitle =>
+      'Copy current secondary line';
+  @override
+  String get shortcut_action_video_copy_current_subtitle => 'Copy current line';
+  @override
   String get shortcut_action_video_cycle_secondary_subtitle_obscure =>
       'Cycle Secondary Subtitle Obscure';
   @override
@@ -399843,6 +400081,9 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_video_toggle_fullscreen => '切換全螢幕';
   @override
   String get shortcut_action_video_toggle_immersive_lock => '切換沉浸鎖定';
+  @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   @override
   String get shortcut_action_video_toggle_mini_chrome => '切換小窗控件';
   @override
@@ -405074,6 +405315,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_loading_subtitle => '正在下載字幕…';
   @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -405686,6 +405931,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_search_ai_ranked => '結果已由 AI 重新排序';
   @override
   String get video_search_ai_recommended => 'AI 推薦';
+  @override
+  String get video_secondary_subtitle_copy_empty =>
+      'No secondary subtitle line to copy';
   @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
@@ -421748,6 +421996,10 @@ extension on _StringsEn {
         return 'Align next subtitle to now';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Align previous subtitle to now';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle secondary subtitle obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -421812,6 +422064,8 @@ extension on _StringsEn {
         return 'Toggle fullscreen';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Toggle immersive lock';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
       case 'shortcut_action_video_toggle_mini_window':
@@ -426517,6 +426771,10 @@ extension on _StringsEn {
         return 'Preparing…';
       case 'video_loading_subtitle':
         return 'Downloading subtitles…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -427054,6 +427312,8 @@ extension on _StringsEn {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Secondary subtitle';
       case 'video_setting_auto_play_next':
@@ -442890,6 +443150,10 @@ extension on _StringsAr {
         return 'محاذاة الترجمة التالية إلى الآن';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'محاذاة الترجمة السابقة إلى الآن';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -442954,6 +443218,8 @@ extension on _StringsAr {
         return 'تبديل ملء الشاشة';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'تبديل قفل الانغماس';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'تبديل عناصر تحكم النافذة المصغّرة';
       case 'shortcut_action_video_toggle_mini_window':
@@ -447656,6 +447922,10 @@ extension on _StringsAr {
         return 'جارٍ التحضير…';
       case 'video_loading_subtitle':
         return 'جارٍ تحميل الترجمات…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -448193,6 +448463,8 @@ extension on _StringsAr {
         return 'أُعيد ترتيب النتائج بواسطة الذكاء الاصطناعي';
       case 'video_search_ai_recommended':
         return 'اختيار الذكاء الاصطناعي';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'ترجمة ثانوية';
       case 'video_setting_auto_play_next':
@@ -464088,6 +464360,10 @@ extension on _StringsDe {
         return 'Nächsten Untertitel auf jetzt ausrichten';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Vorherigen Untertitel auf jetzt ausrichten';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -464152,6 +464428,8 @@ extension on _StringsDe {
         return 'Vollbild umschalten';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Immersive Sperre umschalten';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Steuerelemente des Mini-Fensters umschalten';
       case 'shortcut_action_video_toggle_mini_window':
@@ -468868,6 +469146,10 @@ extension on _StringsDe {
         return 'Wird vorbereitet…';
       case 'video_loading_subtitle':
         return 'Untertitel werden heruntergeladen…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -469407,6 +469689,8 @@ extension on _StringsDe {
         return 'Ergebnisse von der KI neu geordnet';
       case 'video_search_ai_recommended':
         return 'KI-Empfehlung';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sekundärer Untertitel';
       case 'video_setting_auto_play_next':
@@ -485290,6 +485574,10 @@ extension on _StringsEs {
         return 'Alinear siguiente subtítulo al ahora';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Alinear subtítulo anterior al ahora';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -485354,6 +485642,8 @@ extension on _StringsEs {
         return 'Alternar pantalla completa';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alternar bloqueo inmersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alternar controles de la ventana mini';
       case 'shortcut_action_video_toggle_mini_window':
@@ -490068,6 +490358,10 @@ extension on _StringsEs {
         return 'Preparando…';
       case 'video_loading_subtitle':
         return 'Descargando subtítulos…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -490606,6 +490900,8 @@ extension on _StringsEs {
         return 'Resultados reordenados por la IA';
       case 'video_search_ai_recommended':
         return 'Elección de la IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Subtítulo secundario';
       case 'video_setting_auto_play_next':
@@ -506503,6 +506799,10 @@ extension on _StringsFr {
         return 'Aligner le sous-titre suivant sur maintenant';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Aligner le sous-titre précédent sur maintenant';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -506567,6 +506867,8 @@ extension on _StringsFr {
         return 'Basculer en plein écran';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Basculer le verrouillage immersif';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Basculer les commandes de la mini-fenêtre';
       case 'shortcut_action_video_toggle_mini_window':
@@ -511283,6 +511585,10 @@ extension on _StringsFr {
         return 'Préparation…';
       case 'video_loading_subtitle':
         return 'Téléchargement des sous-titres…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -511822,6 +512128,8 @@ extension on _StringsFr {
         return 'Résultats réordonnés par l\'IA';
       case 'video_search_ai_recommended':
         return 'Choix de l\'IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sous-titre secondaire';
       case 'video_setting_auto_play_next':
@@ -527676,6 +527984,10 @@ extension on _StringsId {
         return 'Selaraskan subtitle berikutnya ke sekarang';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Selaraskan subtitle sebelumnya ke sekarang';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -527740,6 +528052,8 @@ extension on _StringsId {
         return 'Alihkan Layar Penuh';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alihkan Kunci Imersif';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alihkan kontrol jendela mini';
       case 'shortcut_action_video_toggle_mini_window':
@@ -532446,6 +532760,10 @@ extension on _StringsId {
         return 'Mempersiapkan…';
       case 'video_loading_subtitle':
         return 'Mengunduh subtitle…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -532983,6 +533301,8 @@ extension on _StringsId {
         return 'Hasil diurutkan ulang oleh AI';
       case 'video_search_ai_recommended':
         return 'Pilihan AI';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Subtitle sekunder';
       case 'video_setting_auto_play_next':
@@ -548858,6 +549178,10 @@ extension on _StringsIt {
         return 'Allinea sottotitolo successivo al momento attuale';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Allinea sottotitolo precedente al momento attuale';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -548922,6 +549246,8 @@ extension on _StringsIt {
         return 'Attiva/disattiva schermo intero';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Attiva/disattiva blocco immersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Attiva/disattiva i controlli della mini finestra';
       case 'shortcut_action_video_toggle_mini_window':
@@ -553640,6 +553966,10 @@ extension on _StringsIt {
         return 'Preparazione…';
       case 'video_loading_subtitle':
         return 'Download sottotitoli…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -554177,6 +554507,8 @@ extension on _StringsIt {
         return 'Risultati riordinati dall\'IA';
       case 'video_search_ai_recommended':
         return 'Scelta dell\'IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Sottotitolo secondario';
       case 'video_setting_auto_play_next':
@@ -569974,6 +570306,10 @@ extension on _StringsJa {
         return '次の字幕を現在位置に合わせる';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '前の字幕を現在位置に合わせる';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -570038,6 +570374,8 @@ extension on _StringsJa {
         return '全画面の切り替え';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'イマーシブロックの切り替え';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'ミニウィンドウのコントロールを切り替え';
       case 'shortcut_action_video_toggle_mini_window':
@@ -574722,6 +575060,10 @@ extension on _StringsJa {
         return '準備中…';
       case 'video_loading_subtitle':
         return '字幕をダウンロード中…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -575253,6 +575595,8 @@ extension on _StringsJa {
         return 'AIが結果を並べ替えました';
       case 'video_search_ai_recommended':
         return 'AIのおすすめ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -591039,6 +591383,10 @@ extension on _StringsKo {
         return '다음 자막을 현재 시점에 맞추기';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '이전 자막을 현재 시점에 맞추기';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -591103,6 +591451,8 @@ extension on _StringsKo {
         return '전체 화면 전환';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '몰입 잠금 전환';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '미니 창 컨트롤 전환';
       case 'shortcut_action_video_toggle_mini_window':
@@ -595791,6 +596141,10 @@ extension on _StringsKo {
         return '준비 중…';
       case 'video_loading_subtitle':
         return '자막 다운로드 중…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -596324,6 +596678,8 @@ extension on _StringsKo {
         return 'AI가 결과 순서를 재정렬했습니다';
       case 'video_search_ai_recommended':
         return 'AI 추천';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '보조 자막';
       case 'video_setting_auto_play_next':
@@ -612194,6 +612550,10 @@ extension on _StringsNl {
         return 'Volgende ondertitel uitlijnen op nu';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Vorige ondertitel uitlijnen op nu';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -612258,6 +612618,8 @@ extension on _StringsNl {
         return 'Volledig scherm in-/uitschakelen';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Immersieve vergrendeling in-/uitschakelen';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Bediening van minivenster in-/uitschakelen';
       case 'shortcut_action_video_toggle_mini_window':
@@ -616967,6 +617329,10 @@ extension on _StringsNl {
         return 'Voorbereiden…';
       case 'video_loading_subtitle':
         return 'Ondertitels downloaden…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -617506,6 +617872,8 @@ extension on _StringsNl {
         return 'Resultaten herordend door AI';
       case 'video_search_ai_recommended':
         return 'AI-keuze';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Secundaire ondertitel';
       case 'video_setting_auto_play_next':
@@ -633380,6 +633748,10 @@ extension on _StringsPtBr {
         return 'Alinhar próxima legenda ao momento atual';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Alinhar legenda anterior ao momento atual';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -633444,6 +633816,8 @@ extension on _StringsPtBr {
         return 'Alternar tela cheia';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alternar bloqueio imersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alternar controles da minijanela';
       case 'shortcut_action_video_toggle_mini_window':
@@ -638152,6 +638526,10 @@ extension on _StringsPtBr {
         return 'Preparando…';
       case 'video_loading_subtitle':
         return 'Baixando legendas…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -638690,6 +639068,8 @@ extension on _StringsPtBr {
         return 'Resultados reordenados pela IA';
       case 'video_search_ai_recommended':
         return 'Escolha da IA';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Legenda secundária';
       case 'video_setting_auto_play_next':
@@ -654570,6 +654950,10 @@ extension on _StringsRu {
         return 'Совместить следующий субтитр с текущим моментом';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Совместить предыдущий субтитр с текущим моментом';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -654634,6 +655018,8 @@ extension on _StringsRu {
         return 'Полноэкранный режим';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Иммерсивная блокировка';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Переключить элементы управления мини-окна';
       case 'shortcut_action_video_toggle_mini_window':
@@ -659342,6 +659728,10 @@ extension on _StringsRu {
         return 'Подготовка…';
       case 'video_loading_subtitle':
         return 'Загрузка субтитров…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -659879,6 +660269,8 @@ extension on _StringsRu {
         return 'Результаты переупорядочены ИИ';
       case 'video_search_ai_recommended':
         return 'Выбор ИИ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Вторичные субтитры';
       case 'video_setting_auto_play_next':
@@ -675720,6 +676112,10 @@ extension on _StringsTh {
         return 'จัดคำบรรยายถัดไปให้ตรงกับตอนนี้';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'จัดคำบรรยายก่อนหน้าให้ตรงกับตอนนี้';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -675784,6 +676180,8 @@ extension on _StringsTh {
         return 'สลับเต็มจอ';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'สลับล็อกโหมดดื่มด่ำ';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'สลับตัวควบคุมหน้าต่างเล็ก';
       case 'shortcut_action_video_toggle_mini_window':
@@ -680489,6 +680887,10 @@ extension on _StringsTh {
         return 'กำลังเตรียม…';
       case 'video_loading_subtitle':
         return 'กำลังดาวน์โหลดคำบรรยาย…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -681024,6 +681426,8 @@ extension on _StringsTh {
         return 'AI เรียงผลลัพธ์ใหม่แล้ว';
       case 'video_search_ai_recommended':
         return 'AI แนะนำ';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'คำบรรยายรอง';
       case 'video_setting_auto_play_next':
@@ -696888,6 +697292,10 @@ extension on _StringsTr {
         return 'Sonraki altyazıyı şimdiye hizala';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Önceki altyazıyı şimdiye hizala';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -696952,6 +697360,8 @@ extension on _StringsTr {
         return 'Tam Ekranı Aç/Kapat';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Sürükleyici Kilidi Aç/Kapat';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Mini pencere denetimlerini aç/kapat';
       case 'shortcut_action_video_toggle_mini_window':
@@ -701660,6 +702070,10 @@ extension on _StringsTr {
         return 'Hazırlanıyor…';
       case 'video_loading_subtitle':
         return 'Altyazılar indiriliyor…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -702198,6 +702612,8 @@ extension on _StringsTr {
         return 'Sonuçlar yapay zeka tarafından yeniden sıralandı';
       case 'video_search_ai_recommended':
         return 'Yapay zeka seçimi';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'İkincil altyazı';
       case 'video_setting_auto_play_next':
@@ -718051,6 +718467,10 @@ extension on _StringsVi {
         return 'Căn phụ đề tiếp theo về thời điểm hiện tại';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return 'Căn phụ đề trước đó về thời điểm hiện tại';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -718115,6 +718535,8 @@ extension on _StringsVi {
         return 'Bật/tắt toàn màn hình';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Bật/tắt khóa đắm chìm';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Bật/tắt nút điều khiển cửa sổ thu nhỏ';
       case 'shortcut_action_video_toggle_mini_window':
@@ -722822,6 +723244,10 @@ extension on _StringsVi {
         return 'Đang chuẩn bị…';
       case 'video_loading_subtitle':
         return 'Đang tải phụ đề…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -723358,6 +723784,8 @@ extension on _StringsVi {
         return 'Kết quả đã được AI sắp xếp lại';
       case 'video_search_ai_recommended':
         return 'AI chọn';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return 'Phụ đề phụ';
       case 'video_setting_auto_play_next':
@@ -739050,6 +739478,10 @@ extension on _StringsZhCn {
         return '下一句字幕对齐到当前时间';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '上一句字幕对齐到当前时间';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return '复制当前副字幕台词';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return '复制当前台词';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return '循环副字幕遮蔽';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -739114,6 +739546,8 @@ extension on _StringsZhCn {
         return '切换全屏';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '切换沉浸锁定';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return '循环当前句（开 / 关）';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '切换小窗控件';
       case 'shortcut_action_video_toggle_mini_window':
@@ -743759,6 +744193,10 @@ extension on _StringsZhCn {
         return '正在准备…';
       case 'video_loading_subtitle':
         return '正在下载字幕…';
+      case 'video_loop_cue_badge_label':
+        return '循环当前句';
+      case 'video_loop_cue_badge_tooltip':
+        return '点击停止循环';
       case 'video_media_server_launch_unavailable':
         return '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
       case 'video_menu_fullscreen':
@@ -744287,6 +744725,8 @@ extension on _StringsZhCn {
         return '结果已由 AI 重新排序';
       case 'video_search_ai_recommended':
         return 'AI 推荐';
+      case 'video_secondary_subtitle_copy_empty':
+        return '当前没有可复制的副字幕';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -760005,6 +760445,10 @@ extension on _StringsZhHk {
         return '下一句字幕對齊到當前時間';
       case 'shortcut_action_video_align_subtitle_to_prev':
         return '上一句字幕對齊到當前時間';
+      case 'shortcut_action_video_copy_current_secondary_subtitle':
+        return 'Copy current secondary line';
+      case 'shortcut_action_video_copy_current_subtitle':
+        return 'Copy current line';
       case 'shortcut_action_video_cycle_secondary_subtitle_obscure':
         return 'Cycle Secondary Subtitle Obscure';
       case 'shortcut_action_video_cycle_subtitle_obscure':
@@ -760069,6 +760513,8 @@ extension on _StringsZhHk {
         return '切換全螢幕';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '切換沉浸鎖定';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '切換小窗控件';
       case 'shortcut_action_video_toggle_mini_window':
@@ -764745,6 +765191,10 @@ extension on _StringsZhHk {
         return '正在準備…';
       case 'video_loading_subtitle':
         return '正在下載字幕…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -765274,6 +765724,8 @@ extension on _StringsZhHk {
         return '結果已由 AI 重新排序';
       case 'video_search_ai_recommended':
         return 'AI 推薦';
+      case 'video_secondary_subtitle_copy_empty':
+        return 'No secondary subtitle line to copy';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
