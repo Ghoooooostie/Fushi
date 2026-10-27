@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172771 (10163 per locale)
+/// Strings: 172839 (10167 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8861,6 +8861,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get profile_copy_suffix => '(Copy)';
   String get profile_create => 'Create profile';
   String get profile_delete => 'Delete';
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   String get profile_export => 'Export';
   String get profile_export_failed => 'Export failed';
   String profile_follow_default_current({required Object name}) =>
@@ -29334,6 +29344,20 @@ class _StringsAr extends _StringsEn {
   String get profile_create => 'إنشاء ملف شخصي';
   @override
   String get profile_delete => 'حذف';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'تصدير';
   @override
@@ -54222,6 +54246,20 @@ class _StringsDe extends _StringsEn {
   String get profile_create => 'Profil erstellen';
   @override
   String get profile_delete => 'Löschen';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Exportieren';
   @override
@@ -79251,6 +79289,20 @@ class _StringsEs extends _StringsEn {
   String get profile_create => 'Crear perfil';
   @override
   String get profile_delete => 'Eliminar';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Exportar';
   @override
@@ -104375,6 +104427,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get profile_delete => 'Supprimer';
   @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
+  @override
   String get profile_export => 'Exporter';
   @override
   String get profile_export_failed => 'Exportation échouée';
@@ -129300,6 +129366,20 @@ class _StringsId extends _StringsEn {
   @override
   String get profile_delete => 'Hapus';
   @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
+  @override
   String get profile_export => 'Ekspor';
   @override
   String get profile_export_failed => 'Ekspor gagal';
@@ -154206,6 +154286,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get profile_delete => 'Elimina';
   @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
+  @override
   String get profile_export => 'Esporta';
   @override
   String get profile_export_failed => 'Esportazione fallita';
@@ -178531,6 +178625,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get profile_delete => 'プロファイルを削除';
   @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
+  @override
   String get profile_export => 'エクスポート';
   @override
   String get profile_export_failed => 'エクスポートに失敗しました';
@@ -202488,6 +202596,20 @@ class _StringsKo extends _StringsEn {
   String get profile_create => '프로필 생성';
   @override
   String get profile_delete => '삭제';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => '내보내기';
   @override
@@ -227068,6 +227190,20 @@ class _StringsNl extends _StringsEn {
   String get profile_create => 'Profiel aanmaken';
   @override
   String get profile_delete => 'Verwijderen';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Exporteren';
   @override
@@ -252032,6 +252168,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get profile_delete => 'Excluir';
   @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
+  @override
   String get profile_export => 'Exportar';
   @override
   String get profile_export_failed => 'Exportação falhou';
@@ -276977,6 +277127,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get profile_delete => 'Удалить';
   @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
+  @override
   String get profile_export => 'Экспорт';
   @override
   String get profile_export_failed => 'Ошибка экспорта';
@@ -301696,6 +301860,20 @@ class _StringsTh extends _StringsEn {
   String get profile_create => 'สร้างโปรไฟล์';
   @override
   String get profile_delete => 'ลบ';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'ส่งออก';
   @override
@@ -326444,6 +326622,20 @@ class _StringsTr extends _StringsEn {
   String get profile_create => 'Profil Oluştur';
   @override
   String get profile_delete => 'Sil';
+  @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
   @override
   String get profile_export => 'Dışa aktar';
   @override
@@ -351206,6 +351398,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get profile_delete => 'Xóa';
   @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
+  @override
   String get profile_export => 'Xuất';
   @override
   String get profile_export_failed => 'Xuất thất bại';
@@ -374696,6 +374902,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get profile_delete => '删除';
   @override
+  String get profile_delete_failed => '删除配置没有完成';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      '配置已删除，复习数据已备份到 ${path}';
+  @override
+  String get profile_delete_srs_backup_failed => '复习数据备份失败，配置未删除。';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) => '它的复习数据也会一起删除：${cards} 张卡、${reviews} 条复习记录。删除前会先在本机自动备份。';
+  @override
   String get profile_export => '导出';
   @override
   String get profile_export_failed => '导出失败';
@@ -397663,6 +397881,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get profile_delete => '刪除';
   @override
+  String get profile_delete_failed => 'Couldn\'t finish deleting the profile';
+  @override
+  String profile_delete_srs_backed_up({required Object path}) =>
+      'Profile deleted. Its review data was backed up to ${path}';
+  @override
+  String get profile_delete_srs_backup_failed =>
+      'Couldn\'t back up the review data, so the profile was not deleted.';
+  @override
+  String profile_delete_srs_impact({
+    required Object cards,
+    required Object reviews,
+  }) =>
+      'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
+  @override
   String get profile_export => '導出';
   @override
   String get profile_export_failed => '導出失敗';
@@ -419657,6 +419889,16 @@ extension on _StringsEn {
         return 'Create profile';
       case 'profile_delete':
         return 'Delete';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Export';
       case 'profile_export_failed':
@@ -440759,6 +441001,16 @@ extension on _StringsAr {
         return 'إنشاء ملف شخصي';
       case 'profile_delete':
         return 'حذف';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'تصدير';
       case 'profile_export_failed':
@@ -461915,6 +462167,16 @@ extension on _StringsDe {
         return 'Profil erstellen';
       case 'profile_delete':
         return 'Löschen';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exportieren';
       case 'profile_export_failed':
@@ -483076,6 +483338,16 @@ extension on _StringsEs {
         return 'Crear perfil';
       case 'profile_delete':
         return 'Eliminar';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exportar';
       case 'profile_export_failed':
@@ -504249,6 +504521,16 @@ extension on _StringsFr {
         return 'Créer un profil';
       case 'profile_delete':
         return 'Supprimer';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exporter';
       case 'profile_export_failed':
@@ -525385,6 +525667,16 @@ extension on _StringsId {
         return 'Buat Profil';
       case 'profile_delete':
         return 'Hapus';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Ekspor';
       case 'profile_export_failed':
@@ -546525,6 +546817,16 @@ extension on _StringsIt {
         return 'Crea profilo';
       case 'profile_delete':
         return 'Elimina';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Esporta';
       case 'profile_export_failed':
@@ -567605,6 +567907,16 @@ extension on _StringsJa {
         return 'プロファイルを作成';
       case 'profile_delete':
         return 'プロファイルを削除';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'エクスポート';
       case 'profile_export_failed':
@@ -588629,6 +588941,16 @@ extension on _StringsKo {
         return '프로필 생성';
       case 'profile_delete':
         return '삭제';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return '내보내기';
       case 'profile_export_failed':
@@ -609741,6 +610063,16 @@ extension on _StringsNl {
         return 'Profiel aanmaken';
       case 'profile_delete':
         return 'Verwijderen';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exporteren';
       case 'profile_export_failed':
@@ -630887,6 +631219,16 @@ extension on _StringsPtBr {
         return 'Criar Perfil';
       case 'profile_delete':
         return 'Excluir';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Exportar';
       case 'profile_export_failed':
@@ -652037,6 +652379,16 @@ extension on _StringsRu {
         return 'Создать профиль';
       case 'profile_delete':
         return 'Удалить';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Экспорт';
       case 'profile_export_failed':
@@ -673149,6 +673501,16 @@ extension on _StringsTh {
         return 'สร้างโปรไฟล์';
       case 'profile_delete':
         return 'ลบ';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'ส่งออก';
       case 'profile_export_failed':
@@ -694277,6 +694639,16 @@ extension on _StringsTr {
         return 'Profil Oluştur';
       case 'profile_delete':
         return 'Sil';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Dışa aktar';
       case 'profile_export_failed':
@@ -715398,6 +715770,16 @@ extension on _StringsVi {
         return 'Tạo hồ sơ';
       case 'profile_delete':
         return 'Xóa';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return 'Xuất';
       case 'profile_export_failed':
@@ -736363,6 +736745,15 @@ extension on _StringsZhCn {
         return '创建配置';
       case 'profile_delete':
         return '删除';
+      case 'profile_delete_failed':
+        return '删除配置没有完成';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) => '配置已删除，复习数据已备份到 ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return '复习数据备份失败，配置未删除。';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            '它的复习数据也会一起删除：${cards} 张卡、${reviews} 条复习记录。删除前会先在本机自动备份。';
       case 'profile_export':
         return '导出';
       case 'profile_export_failed':
@@ -757277,6 +757668,16 @@ extension on _StringsZhHk {
         return '建立設定檔';
       case 'profile_delete':
         return '刪除';
+      case 'profile_delete_failed':
+        return 'Couldn\'t finish deleting the profile';
+      case 'profile_delete_srs_backed_up':
+        return ({required Object path}) =>
+            'Profile deleted. Its review data was backed up to ${path}';
+      case 'profile_delete_srs_backup_failed':
+        return 'Couldn\'t back up the review data, so the profile was not deleted.';
+      case 'profile_delete_srs_impact':
+        return ({required Object cards, required Object reviews}) =>
+            'Its review data will be deleted too: ${cards} cards and ${reviews} review records. A backup is saved on this device first.';
       case 'profile_export':
         return '導出';
       case 'profile_export_failed':
