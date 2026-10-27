@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 171411 (10083 per locale)
+/// Strings: 171394 (10082 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -256,8 +256,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   String get ai_agent_details => 'Details';
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   String get ai_agent_empty_title => 'What should I do?';
   String get ai_agent_expand => 'Open as full page';
   String get ai_agent_history_by_user => 'Confirmed by you';
@@ -14687,9 +14685,6 @@ class _StringsAr extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -39118,9 +39113,6 @@ class _StringsDe extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -63940,9 +63932,6 @@ class _StringsEs extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -88819,9 +88808,6 @@ class _StringsFr extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -113779,9 +113765,6 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_agent_details => 'Details';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
   String get ai_agent_expand => 'Open as full page';
@@ -138392,9 +138375,6 @@ class _StringsIt extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -163171,9 +163151,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_agent_details => 'Details';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
   String get ai_agent_expand => 'Open as full page';
@@ -186911,9 +186888,6 @@ class _StringsKo extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -210719,9 +210693,6 @@ class _StringsNl extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -235446,9 +235417,6 @@ class _StringsPtBr extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -260242,9 +260210,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_agent_details => 'Details';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
   String get ai_agent_expand => 'Open as full page';
@@ -284982,9 +284947,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_agent_details => 'Details';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
   String get ai_agent_expand => 'Open as full page';
@@ -309399,9 +309361,6 @@ class _StringsTr extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -334022,9 +333981,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_agent_details => 'Details';
   @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
   String get ai_agent_expand => 'Open as full page';
@@ -358567,8 +358523,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_agent_details => '详情';
   @override
-  String get ai_agent_empty_examples => '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
-  @override
   String get ai_agent_empty_title => '要我做什么？';
   @override
   String get ai_agent_expand => '展开成整页';
@@ -381013,9 +380967,6 @@ class _StringsZhHk extends _StringsEn {
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
   String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
   @override
   String get ai_agent_empty_title => 'What should I do?';
   @override
@@ -404117,8 +404068,6 @@ extension on _StringsEn {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -425057,8 +425006,6 @@ extension on _StringsAr {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -445991,8 +445938,6 @@ extension on _StringsDe {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -467001,8 +466946,6 @@ extension on _StringsEs {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -487993,8 +487936,6 @@ extension on _StringsFr {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -509003,8 +508944,6 @@ extension on _StringsId {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -529957,8 +529896,6 @@ extension on _StringsIt {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -550947,8 +550884,6 @@ extension on _StringsJa {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -571802,8 +571737,6 @@ extension on _StringsKo {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -592673,8 +592606,6 @@ extension on _StringsNl {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -613658,8 +613589,6 @@ extension on _StringsPtBr {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -634635,8 +634564,6 @@ extension on _StringsRu {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -655617,8 +655544,6 @@ extension on _StringsTh {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -676555,8 +676480,6 @@ extension on _StringsTr {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -697524,8 +697447,6 @@ extension on _StringsVi {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
@@ -718475,8 +718396,6 @@ extension on _StringsZhCn {
         return ({required Object title}) => '关于：${title}';
       case 'ai_agent_details':
         return '详情';
-      case 'ai_agent_empty_examples':
-        return '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
       case 'ai_agent_empty_title':
         return '要我做什么？';
       case 'ai_agent_expand':
@@ -739171,8 +739090,6 @@ extension on _StringsZhHk {
         return ({required Object title}) => 'About: ${title}';
       case 'ai_agent_details':
         return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
       case 'ai_agent_empty_title':
         return 'What should I do?';
       case 'ai_agent_expand':
