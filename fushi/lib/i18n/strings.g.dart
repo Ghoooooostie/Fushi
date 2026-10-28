@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173621 (10213 per locale)
+/// Strings: 174080 (10240 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6477,6 +6477,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+  String get library_reorder_action => 'Reorder';
+  String get library_reorder_done => 'Done';
+  String get library_reorder_hint => 'Drag cards to reorder';
   String get library_search => 'Search library';
   String get library_sort_filter => 'Sort and filter';
   String get library_view_audiobookshelf => 'Audiobookshelf';
@@ -7849,6 +7852,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_library_empty_hint =>
       'Add a folder that holds your music files.';
   String get music_library_rescan => 'Rescan library';
+  String get music_library_search_empty => 'No matches';
+  String get music_library_search_hint => 'Search music';
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   String get music_listening_study_title => 'Count listening as study time';
@@ -8559,8 +8564,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
   String get onboarding_review_anki_title => 'Anki';
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   String get onboarding_review_fushi_title => 'Fushi review';
@@ -9880,6 +9883,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get skip_action_sentence => '1 sentence';
   String get sort_by => 'Sort';
   String get sort_imported => 'Import date';
+  String get sort_manual => 'Manual';
   String get sort_recent_read => 'Recently read';
   String get sort_recent_watched => 'Recently watched';
   String get sort_title => 'Name';
@@ -10100,8 +10104,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_section_layout => 'Layout';
   String get srs_card_appearance_section_other => 'Other card types';
   String get srs_card_appearance_section_text => 'Text';
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   String get srs_card_appearance_show_frequency => 'Frequency';
   String get srs_card_appearance_show_picture => 'Picture';
   String get srs_card_appearance_show_source => 'Source';
@@ -10110,6 +10112,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_text_size => 'Text size';
   String get srs_card_appearance_title => 'Fushi Card appearance';
   String get srs_card_bury => 'Bury until tomorrow';
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  String get srs_card_defs_expand_all => 'Expand all';
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   String get srs_card_flag => 'Flag';
@@ -10705,6 +10709,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Switch fields (${n})';
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
   String get srs_note_types_front => 'Front template';
   String get srs_note_types_insert_field => 'Insert field';
   String get srs_note_types_kind => 'Kind';
@@ -10852,6 +10862,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_max_interval => 'Maximum interval (days)';
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  String get srs_settings_new_order => 'New card order';
+  String get srs_settings_new_order_frequency => 'By frequency';
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  String get srs_settings_new_order_position => 'By position';
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   String get srs_settings_new_per_day => 'New cards per day';
   String get srs_settings_new_per_day_hint =>
       'When many reviews are due, Fushi automatically shows fewer new cards';
@@ -11087,8 +11104,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_sync_now_busy({required Object progress}) =>
       'Already syncing: ${progress}';
   String get srs_sync_now_started => 'Review sync started';
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  String get srs_sync_profile_conflict_later => 'Later';
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   String get srs_sync_progress_downloading => 'Syncing review data';
   String srs_sync_progress_downloading_count({
     required Object done,
@@ -11913,11 +11943,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_progress_collections => 'Syncing collections';
   String get sync_progress_deletions => 'Syncing deletions';
   String get sync_progress_dictionaries => 'Syncing dictionaries';
+  String get sync_progress_finishing => 'Finishing up';
   String get sync_progress_fonts => 'Syncing fonts';
   String get sync_progress_local_audio => 'Syncing local audio';
   String get sync_progress_pending_mines => 'Syncing pending cards';
   String get sync_progress_preparing => 'Preparing sync';
   String get sync_progress_reading => 'Syncing reading data';
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   String get sync_progress_videos => 'Syncing videos';
   String get sync_role_locked_by_client =>
@@ -13390,6 +13422,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Default subtitle language';
   String get video_setting_jimaku_default_language_hint =>
       'Defaults to the video\'s own language (audio track / scraped metadata). Pick one to always prefer that language instead.';
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   String get video_setting_lock_window_aspect => 'Lock window to video aspect';
   String get video_setting_long_press_speed => 'Long-press speed';
   String get video_setting_long_press_speed_hint =>
@@ -13936,6 +13974,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Skipped: almost no dialogue (song or clip)';
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   String video_subtitle_ai_estimate({
@@ -14473,6 +14513,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_download_state_failed => 'Failed';
   String get web_browser_downloads_empty => 'No downloads yet';
   String get web_browser_downloads_title => 'Downloads';
+  String get web_browser_enter => 'Open browser';
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   String get web_browser_error_certificate_title => 'Connection isn\'t secure';
@@ -14656,11 +14697,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_text_size_reset => 'Reset text size';
   String get web_browser_title => 'Browser';
   String get web_browser_toolbar_expand => 'Show toolbar';
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String get web_hub_browse => 'Web';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
@@ -25321,6 +25357,12 @@ class _StringsAr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'بحث في المكتبة';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -27677,6 +27719,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -28890,9 +28936,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -31229,6 +31272,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get sort_imported => 'تاريخ الاستيراد';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'آخر قراءة';
   @override
   String get sort_recent_watched => 'آخر مشاهدة';
@@ -31614,9 +31659,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -31632,6 +31674,10 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -32636,6 +32682,16 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -32881,6 +32937,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -33286,8 +33354,29 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -34742,6 +34831,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'مزامنة القواميس';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'مزامنة الصوت المحلي';
@@ -34751,6 +34842,8 @@ class _StringsAr extends _StringsEn {
   String get sync_progress_preparing => 'جارٍ التحضير للمزامنة';
   @override
   String get sync_progress_reading => 'مزامنة بيانات القراءة';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -37236,6 +37329,16 @@ class _StringsAr extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'يتبع لغة الفيديو افتراضياً (مسار الصوت / البيانات الوصفية المكشوطة). اختر لغة لتفضيلها دائماً بدلاً من ذلك.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => 'قفل النافذة على نسبة الفيديو';
   @override
   String get video_setting_long_press_speed => 'سرعة الضغط المطوّل';
@@ -38161,6 +38264,9 @@ class _StringsAr extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -39030,6 +39136,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -39358,15 +39466,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -50275,6 +50374,12 @@ class _StringsDe extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Bibliothek durchsuchen';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -52677,6 +52782,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -53906,9 +54015,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -56288,6 +56394,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get sort_imported => 'Importdatum';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Zuletzt gelesen';
   @override
   String get sort_recent_watched => 'Zuletzt angesehen';
@@ -56673,9 +56781,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -56691,6 +56796,10 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -57695,6 +57804,16 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -57940,6 +58059,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -58345,8 +58476,29 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -59817,6 +59969,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Wörterbücher werden synchronisiert';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokales Audio wird synchronisiert';
@@ -59826,6 +59980,8 @@ class _StringsDe extends _StringsEn {
   String get sync_progress_preparing => 'Synchronisierung wird vorbereitet';
   @override
   String get sync_progress_reading => 'Lesedaten werden synchronisiert';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -62355,6 +62511,16 @@ class _StringsDe extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Standardmäßig wird die eigene Sprache des Videos verwendet (Audiospur / gescrapte Metadaten). Wählen Sie eine aus, um stattdessen immer diese Sprache zu bevorzugen.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Fenster auf Videoverhältnis sperren';
   @override
@@ -63298,6 +63464,9 @@ class _StringsDe extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -64182,6 +64351,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -64510,15 +64681,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -75448,6 +75610,12 @@ class _StringsEs extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Buscar biblioteca';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -77853,6 +78021,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -79082,9 +79254,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -81469,6 +81638,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get sort_imported => 'Fecha de importación';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Leído recientemente';
   @override
   String get sort_recent_watched => 'Visto recientemente';
@@ -81855,9 +82026,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -81873,6 +82041,10 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -82877,6 +83049,16 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -83122,6 +83304,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -83527,8 +83721,29 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -85004,6 +85219,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizando diccionarios';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando audio local';
@@ -85013,6 +85230,8 @@ class _StringsEs extends _StringsEn {
   String get sync_progress_preparing => 'Preparando sincronización';
   @override
   String get sync_progress_reading => 'Sincronizando datos de lectura';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -87552,6 +87771,16 @@ class _StringsEs extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Por defecto usa el idioma propio del vídeo (pista de audio / metadatos obtenidos). Elija uno para siempre preferir ese idioma.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Bloquear la ventana a la proporción del vídeo';
   @override
@@ -88505,6 +88734,9 @@ class _StringsEs extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -89389,6 +89621,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -89717,15 +89951,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -100693,6 +100918,12 @@ class _StringsFr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Rechercher dans la bibliothèque';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -103107,6 +103338,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -104343,9 +104578,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -106738,6 +106970,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get sort_imported => 'Date d\'importation';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Lu récemment';
   @override
   String get sort_recent_watched => 'Regardé récemment';
@@ -107124,9 +107358,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -107142,6 +107373,10 @@ class _StringsFr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -108146,6 +108381,16 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -108391,6 +108636,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -108796,8 +109053,29 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -110270,6 +110548,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Synchronisation des dictionnaires';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Synchronisation de l\'audio local';
@@ -110279,6 +110559,8 @@ class _StringsFr extends _StringsEn {
   String get sync_progress_preparing => 'Préparation de la synchronisation';
   @override
   String get sync_progress_reading => 'Synchronisation des données de lecture';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -112827,6 +113109,16 @@ class _StringsFr extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Par défaut la langue propre de la vidéo (piste audio / métadonnées récupérées). Choisissez-en une pour toujours préférer cette langue.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Verrouiller la fenêtre au format de la vidéo';
   @override
@@ -113786,6 +114078,9 @@ class _StringsFr extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -114677,6 +114972,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -115005,15 +115302,6 @@ class _StringsFr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -125820,6 +126108,12 @@ class _StringsId extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Cari pustaka';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -128197,6 +128491,10 @@ class _StringsId extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -129416,9 +129714,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -131772,6 +132067,8 @@ class _StringsId extends _StringsEn {
   @override
   String get sort_imported => 'Tanggal impor';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Baru dibaca';
   @override
   String get sort_recent_watched => 'Baru ditonton';
@@ -132157,9 +132454,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -132175,6 +132469,10 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -133179,6 +133477,16 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -133424,6 +133732,18 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -133829,8 +134149,29 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -135290,6 +135631,8 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Menyinkronkan kamus';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Menyinkronkan audio lokal';
@@ -135299,6 +135642,8 @@ class _StringsId extends _StringsEn {
   String get sync_progress_preparing => 'Menyiapkan sinkronisasi';
   @override
   String get sync_progress_reading => 'Menyinkronkan data baca';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -137812,6 +138157,16 @@ class _StringsId extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Default ke bahasa video itu sendiri (trek audio / metadata scrape). Pilih satu untuk selalu mengutamakan bahasa tersebut.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => 'Kunci jendela ke rasio video';
   @override
   String get video_setting_long_press_speed => 'Kecepatan tekan lama';
@@ -138744,6 +139099,9 @@ class _StringsId extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -139624,6 +139982,8 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -139952,15 +140312,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -150835,6 +151186,12 @@ class _StringsIt extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Cerca nella libreria';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -153239,6 +153596,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -154462,9 +154823,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -156847,6 +157205,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get sort_imported => 'Data importazione';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Letti di recente';
   @override
   String get sort_recent_watched => 'Visti di recente';
@@ -157232,9 +157592,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -157250,6 +157607,10 @@ class _StringsIt extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -158254,6 +158615,16 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -158499,6 +158870,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -158904,8 +159287,29 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -160371,6 +160775,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizzazione dizionari';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizzazione audio locale';
@@ -160380,6 +160786,8 @@ class _StringsIt extends _StringsEn {
   String get sync_progress_preparing => 'Preparazione sincronizzazione';
   @override
   String get sync_progress_reading => 'Sincronizzazione dati di lettura';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -162900,6 +163308,16 @@ class _StringsIt extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Predefinito sulla lingua propria del video (traccia audio / metadati ottenuti). Scegline una per preferire sempre quella lingua.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Blocca la finestra sulle proporzioni del video';
   @override
@@ -163844,6 +164262,9 @@ class _StringsIt extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -164729,6 +165150,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -165057,15 +165480,6 @@ class _StringsIt extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -175468,6 +175882,12 @@ class _StringsJa extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'ライブラリを検索';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -177761,6 +178181,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -178942,9 +179366,6 @@ class _StringsJa extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -181212,6 +181633,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get sort_imported => 'インポート日';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => '最近読んだ';
   @override
   String get sort_recent_watched => '最近視聴した';
@@ -181597,9 +182020,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -181615,6 +182035,10 @@ class _StringsJa extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'すべて折りたたむ';
+  @override
+  String get srs_card_defs_expand_all => 'すべて展開';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -182619,6 +183043,16 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -182864,6 +183298,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -183269,8 +183715,29 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -184677,6 +185144,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '辞書を同期中';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'ローカル音声を同期中';
@@ -184686,6 +185155,8 @@ class _StringsJa extends _StringsEn {
   String get sync_progress_preparing => '同期を準備中';
   @override
   String get sync_progress_reading => '読書データを同期中';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -187091,6 +187562,16 @@ class _StringsJa extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'デフォルトでは動画自体の言語（音声トラック/スクレイプされたメタデータ）を使用します。特定の言語を選択すると、常にその言語が優先されます。';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => 'ウィンドウを動画の比率に固定';
   @override
   String get video_setting_long_press_speed => '長押し倍速';
@@ -187975,6 +188456,9 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'スキップ：歌（OP/ED、MV）と判定されました';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'AIの返答が何度か再試行しても不完全でした';
   @override
@@ -188805,6 +189289,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -189133,15 +189619,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -199549,6 +200026,12 @@ class _StringsKo extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => '라이브러리 검색';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -201854,6 +202337,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -203041,9 +203528,6 @@ class _StringsKo extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -205313,6 +205797,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get sort_imported => '가져온 날짜';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => '최근 읽은 순';
   @override
   String get sort_recent_watched => '최근 시청 순';
@@ -205698,9 +206184,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -205716,6 +206199,10 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -206720,6 +207207,16 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -206965,6 +207462,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -207370,8 +207879,29 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -208779,6 +209309,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '사전 동기화 중';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '로컬 오디오 동기화 중';
@@ -208788,6 +209320,8 @@ class _StringsKo extends _StringsEn {
   String get sync_progress_preparing => '동기화 준비 중';
   @override
   String get sync_progress_reading => '독서 데이터 동기화 중';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -211204,6 +211738,16 @@ class _StringsKo extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       '기본적으로 동영상 자체 언어(오디오 트랙 / 스크랩된 메타데이터)를 사용합니다. 항상 특정 언어를 선호하려면 선택하세요.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => '창을 비디오 비율로 고정';
   @override
   String get video_setting_long_press_speed => '길게 눌러 배속';
@@ -212096,6 +212640,9 @@ class _StringsKo extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -212943,6 +213490,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -213271,15 +213820,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -224134,6 +224674,12 @@ class _StringsNl extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Bibliotheek doorzoeken';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -226518,6 +227064,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -227746,9 +228296,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -230120,6 +230667,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get sort_imported => 'Importdatum';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Recent gelezen';
   @override
   String get sort_recent_watched => 'Recent bekeken';
@@ -230505,9 +231054,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -230523,6 +231069,10 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -231527,6 +232077,16 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -231772,6 +232332,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -232177,8 +232749,29 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -233647,6 +234240,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Woordenboeken synchroniseren';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokale audio synchroniseren';
@@ -233656,6 +234251,8 @@ class _StringsNl extends _StringsEn {
   String get sync_progress_preparing => 'Synchronisatie voorbereiden';
   @override
   String get sync_progress_reading => 'Leesgegevens synchroniseren';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -236176,6 +236773,16 @@ class _StringsNl extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Standaard de eigen taal van de video (audiotrack / gescrapete metadata). Kies er een om die taal altijd te prefereren.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Venster vergrendelen op videoverhouding';
   @override
@@ -237116,6 +237723,9 @@ class _StringsNl extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -237996,6 +238606,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -238324,15 +238936,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -249229,6 +249832,12 @@ class _StringsPtBr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Buscar na biblioteca';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -251623,6 +252232,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -252847,9 +253460,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -255225,6 +255835,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sort_imported => 'Data de importação';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Lidos recentemente';
   @override
   String get sort_recent_watched => 'Assistidos recentemente';
@@ -255611,9 +256223,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -255629,6 +256238,10 @@ class _StringsPtBr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -256633,6 +257246,16 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -256878,6 +257501,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -257283,8 +257918,29 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -258748,6 +259404,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizando dicionários';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando áudio local';
@@ -258757,6 +259415,8 @@ class _StringsPtBr extends _StringsEn {
   String get sync_progress_preparing => 'Preparando sincronização';
   @override
   String get sync_progress_reading => 'Sincronizando dados de leitura';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -261291,6 +261951,16 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Padrão é o idioma do próprio vídeo (faixa de áudio / metadados buscados). Escolha um para sempre preferir esse idioma.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Travar janela na proporção do vídeo';
   @override
@@ -262239,6 +262909,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -263122,6 +263795,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -263450,15 +264125,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -274313,6 +274979,12 @@ class _StringsRu extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Поиск в библиотеке';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -276702,6 +277374,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -277930,9 +278606,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -280309,6 +280982,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get sort_imported => 'Дата импорта';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Недавно прочитанные';
   @override
   String get sort_recent_watched => 'Недавно просмотренные';
@@ -280694,9 +281369,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -280712,6 +281384,10 @@ class _StringsRu extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -281716,6 +282392,16 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -281961,6 +282647,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -282366,8 +283064,29 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -283832,6 +284551,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Синхронизация словарей';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Синхронизация локального аудио';
@@ -283841,6 +284562,8 @@ class _StringsRu extends _StringsEn {
   String get sync_progress_preparing => 'Подготовка синхронизации';
   @override
   String get sync_progress_reading => 'Синхронизация данных чтения';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -286361,6 +287084,16 @@ class _StringsRu extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'По умолчанию используется язык видео (аудиодорожка / метаданные скрейпинга). Выберите конкретный язык, чтобы всегда предпочитать его.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Окно по соотношению сторон видео';
   @override
@@ -287305,6 +288038,9 @@ class _StringsRu extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -288193,6 +288929,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -288521,15 +289259,6 @@ class _StringsRu extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -299232,6 +299961,12 @@ class _StringsTh extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'ค้นหาคลัง';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -301591,6 +302326,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -302802,9 +303541,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -305144,6 +305880,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get sort_imported => 'วันที่นำเข้า';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'อ่านล่าสุด';
   @override
   String get sort_recent_watched => 'ดูล่าสุด';
@@ -305529,9 +306267,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -305547,6 +306282,10 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -306551,6 +307290,16 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -306796,6 +307545,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -307201,8 +307962,29 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -308659,6 +309441,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'กำลังซิงค์พจนานุกรม';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'กำลังซิงค์เสียงในเครื่อง';
@@ -308668,6 +309452,8 @@ class _StringsTh extends _StringsEn {
   String get sync_progress_preparing => 'กำลังเตรียมซิงค์';
   @override
   String get sync_progress_reading => 'กำลังซิงค์ข้อมูลการอ่าน';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -311147,6 +311933,16 @@ class _StringsTh extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'ค่าเริ่มต้นจะใช้ภาษาของวิดีโอ (แทร็กเสียง / ข้อมูลที่สแกนได้) เลือกภาษาเพื่อให้ใช้ภาษานั้นเสมอแทน';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'ล็อกหน้าต่างตามอัตราส่วนวิดีโอ';
   @override
@@ -312068,6 +312864,9 @@ class _StringsTh extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -312941,6 +313740,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -313269,15 +314070,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -324092,6 +324884,12 @@ class _StringsTr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Kütüphanede ara';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -326468,6 +327266,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -327689,9 +328491,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -330044,6 +330843,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get sort_imported => 'İçe aktarma tarihi';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Son okunan';
   @override
   String get sort_recent_watched => 'Son izlenen';
@@ -330429,9 +331230,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -330447,6 +331245,10 @@ class _StringsTr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -331451,6 +332253,16 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -331696,6 +332508,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -332101,8 +332925,29 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -333567,6 +334412,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sözlükler eşitleniyor';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Yerel ses eşitleniyor';
@@ -333576,6 +334423,8 @@ class _StringsTr extends _StringsEn {
   String get sync_progress_preparing => 'Senkronizasyon hazırlanıyor';
   @override
   String get sync_progress_reading => 'Okuma verileri eşitleniyor';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -336079,6 +336928,16 @@ class _StringsTr extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Varsayılan olarak videonun kendi dilini (ses parçası / taranan meta veriler) kullanır. Her zaman o dili tercih etmek için birini seçin.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Pencereyi video oranına kilitle';
   @override
@@ -337013,6 +337872,9 @@ class _StringsTr extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -337892,6 +338754,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -338220,15 +339084,6 @@ class _StringsTr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -349011,6 +349866,12 @@ class _StringsVi extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Tìm kiếm thư viện';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -351379,6 +352240,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -352593,9 +353458,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -354940,6 +355802,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get sort_imported => 'Ngày nhập';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Đọc gần đây';
   @override
   String get sort_recent_watched => 'Xem gần đây';
@@ -355325,9 +356189,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -355343,6 +356204,10 @@ class _StringsVi extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -356347,6 +357212,16 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -356592,6 +357467,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -356997,8 +357884,29 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -358459,6 +359367,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Đang đồng bộ từ điển';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Đang đồng bộ âm thanh cục bộ';
@@ -358468,6 +359378,8 @@ class _StringsVi extends _StringsEn {
   String get sync_progress_preparing => 'Đang chuẩn bị đồng bộ';
   @override
   String get sync_progress_reading => 'Đang đồng bộ dữ liệu đọc';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -360967,6 +361879,16 @@ class _StringsVi extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Mặc định theo ngôn ngữ của video (bản âm thanh / siêu dữ liệu quét). Chọn một ngôn ngữ để luôn ưu tiên ngôn ngữ đó thay thế.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => 'Khóa cửa sổ theo tỷ lệ video';
   @override
   String get video_setting_long_press_speed => 'Tốc độ khi nhấn giữ';
@@ -361895,6 +362817,9 @@ class _StringsVi extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -362771,6 +363696,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -363099,15 +364026,6 @@ class _StringsVi extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -372965,6 +373883,12 @@ class _StringsZhCn extends _StringsEn {
   String get library_progress_reset_video_message =>
       '观看位置归零、状态改为未看，并从「继续观看」中移除。';
   @override
+  String get library_reorder_action => '排序';
+  @override
+  String get library_reorder_done => '完成';
+  @override
+  String get library_reorder_hint => '拖动卡片调整顺序';
+  @override
   String get library_search => '搜索库';
   @override
   String get library_sort_filter => '排序与筛选';
@@ -375148,6 +376072,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_library_rescan => '重新扫描曲库';
   @override
+  String get music_library_search_empty => '没有匹配项';
+  @override
+  String get music_library_search_hint => '搜索音乐';
+  @override
   String get music_listening_study_hint => '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
   @override
   String get music_listening_study_title => '听歌计入学习';
@@ -376267,9 +377195,6 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => '改用 Anki…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
   @override
   String get onboarding_review_fushi_desc =>
       '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
@@ -378429,6 +379354,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sort_imported => '导入时间';
   @override
+  String get sort_manual => '手动';
+  @override
   String get sort_recent_read => '最近阅读';
   @override
   String get sort_recent_watched => '最近观看';
@@ -378796,8 +379723,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => '文字';
   @override
-  String get srs_card_appearance_sentence_furigana => '例句注音常显';
-  @override
   String get srs_card_appearance_show_frequency => '词频';
   @override
   String get srs_card_appearance_show_picture => '图片';
@@ -378813,6 +379738,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi 卡片外观';
   @override
   String get srs_card_bury => '埋到明天';
+  @override
+  String get srs_card_defs_collapse_all => '全部收起';
+  @override
+  String get srs_card_defs_expand_all => '全部展开';
   @override
   String srs_card_edit_template({required Object name}) => '编辑 ${name} 模板';
   @override
@@ -379733,6 +380662,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_flag_fields_hint => '填任意字符即开启对应的卡面样式';
   @override
+  String srs_note_types_freq_chip({required Object name}) => '词频排序：${name}';
+  @override
+  String get srs_note_types_freq_field => '词频序字段';
+  @override
+  String get srs_note_types_freq_field_auto => '自动（FreqSort）';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      '牌组按词频出新卡时，读这个字段里的名次（越小越常见）。「自动」= 用名为 FreqSort 的字段。';
+  @override
   String get srs_note_types_front => '正面模板';
   @override
   String get srs_note_types_insert_field => '插入字段';
@@ -379956,6 +380894,18 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_max_interval => '最大间隔（天）';
   @override
   String get srs_settings_max_interval_hint => '任何卡的下次复习都不会超过这么多天';
+  @override
+  String get srs_settings_new_order => '新卡顺序';
+  @override
+  String get srs_settings_new_order_frequency => '按词频';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      '常用词先出：按制卡时存在卡上的词频名次（FreqSort）。名次随笔记同步，每台设备顺序一致。没有名次的卡排在后面，按位置。';
+  @override
+  String get srs_settings_new_order_position => '按位置';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      '按「按词频重排新卡」或 Anki 导入写下的位置；没排过的卡按添加先后。';
   @override
   String get srs_settings_new_per_day => '每日新卡上限';
   @override
@@ -380333,8 +381283,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_now_started => '开始同步复习数据…';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+  String get srs_sync_profile_conflict_adopt_hint => '本机还没有笔记，将直接改用所选的那一份。';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      '同步位置里有其他设备的复习数据，没法自动确定本机该用哪一份。请选择：';
+  @override
+  String get srs_sync_profile_conflict_done => '已关联，正在同步复习数据…';
+  @override
+  String get srs_sync_profile_conflict_failed => '关联复习数据失败';
+  @override
+  String get srs_sync_profile_conflict_keep_separate => '保持本机独立';
+  @override
+  String get srs_sync_profile_conflict_later => '稍后';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      '本机已有的笔记和复习记录会并入所选的那一份，不会丢失。';
+  @override
+  String get srs_sync_profile_conflict_title => '复习同步冲突';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      '更新于 ${date}';
   @override
   String get srs_sync_progress_downloading => '同步复习数据';
   @override
@@ -381665,6 +382633,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '同步词典';
   @override
+  String get sync_progress_finishing => '正在收尾';
+  @override
   String get sync_progress_fonts => '同步字体';
   @override
   String get sync_progress_local_audio => '同步本地音频';
@@ -381674,6 +382644,8 @@ class _StringsZhCn extends _StringsEn {
   String get sync_progress_preparing => '正在准备同步';
   @override
   String get sync_progress_reading => '同步阅读数据';
+  @override
+  String get sync_progress_remote_listing => '正在读取远端文件清单';
   @override
   String get sync_progress_statistics => '同步统计与收藏';
   @override
@@ -383922,6 +384894,16 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       '默认跟随视频自身的语言（音轨 / 刮削元数据）。选定某个语言则始终优先它。';
   @override
+  String get video_setting_jump_pill_auto_hide => '回跳胶囊自动隐藏';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      '跳转后过这么久就不再显示「返回跳转前位置」胶囊，下次跳转再出现';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => '不隐藏';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds} 秒';
+  @override
   String get video_setting_lock_window_aspect => '锁定窗口为视频比例';
   @override
   String get video_setting_long_press_speed => '长按倍速';
@@ -384773,6 +385755,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song => '跳过：判定为纯歌曲（OP/ED、MV）';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      '样式取自 ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete => 'AI 回复多次不完整';
   @override
   String video_subtitle_ai_estimate({
@@ -385558,6 +386543,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_downloads_title => '下载';
   @override
+  String get web_browser_enter => '进入浏览器';
+  @override
   String get web_browser_error_certificate_body => '该网站的安全证书无效、已过期或与网址不符。';
   @override
   String get web_browser_error_certificate_title => '连接不安全';
@@ -385860,14 +386847,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_title => '浏览器';
   @override
   String get web_browser_toolbar_expand => '展开工具栏';
-  @override
-  String get web_browser_youtube_subtitles => 'YouTube 字幕查词';
-  @override
-  String get web_browser_youtube_subtitles_track_empty => '这个视频还没有字幕轨';
-  @override
-  String get web_browser_youtube_subtitles_track_live => '实时采集';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => '选中加载';
   @override
   String get web_hub_browse => '网页';
   @override
@@ -395955,6 +396934,12 @@ class _StringsZhHk extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => '搜索庫';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -398193,6 +399178,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -399346,9 +400335,6 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -401565,6 +402551,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sort_imported => '導入時間';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => '最近閱讀';
   @override
   String get sort_recent_watched => '最近觀看';
@@ -401950,9 +402938,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -401968,6 +402953,10 @@ class _StringsZhHk extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => '全部收起';
+  @override
+  String get srs_card_defs_expand_all => '全部展開';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -402972,6 +403961,16 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -403217,6 +404216,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -403622,8 +404633,29 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -404999,6 +406031,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '正在同步詞典';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '正在同步本機音訊';
@@ -405008,6 +406042,8 @@ class _StringsZhHk extends _StringsEn {
   String get sync_progress_preparing => '正在準備同步';
   @override
   String get sync_progress_reading => '正在同步閱讀資料';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -407343,6 +408379,16 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       '預設跟隨影片自身的語言（音軌 / 刮削元數據）。選定某個語言則始終優先它。';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => '鎖定視窗為影片比例';
   @override
   String get video_setting_long_press_speed => '長按倍速';
@@ -408198,6 +409244,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song => '略過：判定為純歌曲（OP/ED、MV）';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete => 'AI 多次回覆均不完整';
   @override
   String video_subtitle_ai_estimate({
@@ -409005,6 +410054,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -409332,15 +410383,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -418428,6 +419470,12 @@ extension on _StringsEn {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Search library';
       case 'library_sort_filter':
@@ -420494,6 +421542,10 @@ extension on _StringsEn {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -421522,8 +422574,6 @@ extension on _StringsEn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -423599,6 +424649,8 @@ extension on _StringsEn {
         return 'Sort';
       case 'sort_imported':
         return 'Import date';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Recently read';
       case 'sort_recent_watched':
@@ -423941,8 +424993,6 @@ extension on _StringsEn {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -423959,6 +425009,10 @@ extension on _StringsEn {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -424829,6 +425883,14 @@ extension on _StringsEn {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -425036,6 +426098,16 @@ extension on _StringsEn {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -425393,9 +426465,24 @@ extension on _StringsEn {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -426672,6 +427759,8 @@ extension on _StringsEn {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Syncing dictionaries';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -426682,6 +427771,8 @@ extension on _StringsEn {
         return 'Preparing sync';
       case 'sync_progress_reading':
         return 'Syncing reading data';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -428769,6 +429860,14 @@ extension on _StringsEn {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Defaults to the video\'s own language (audio track / scraped metadata). Pick one to always prefer that language instead.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Lock window to video aspect';
       case 'video_setting_long_press_speed':
@@ -429547,6 +430646,8 @@ extension on _StringsEn {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -430272,6 +431373,8 @@ extension on _StringsEn {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -430567,14 +431670,6 @@ extension on _StringsEn {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -439644,6 +440739,12 @@ extension on _StringsAr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'بحث في المكتبة';
       case 'library_sort_filter':
@@ -441710,6 +442811,10 @@ extension on _StringsAr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -442739,8 +443844,6 @@ extension on _StringsAr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -444816,6 +445919,8 @@ extension on _StringsAr {
         return 'الترتيب';
       case 'sort_imported':
         return 'تاريخ الاستيراد';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'آخر قراءة';
       case 'sort_recent_watched':
@@ -445158,8 +446263,6 @@ extension on _StringsAr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -445176,6 +446279,10 @@ extension on _StringsAr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -446046,6 +447153,14 @@ extension on _StringsAr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -446253,6 +447368,16 @@ extension on _StringsAr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -446610,9 +447735,24 @@ extension on _StringsAr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -447884,6 +449024,8 @@ extension on _StringsAr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'مزامنة القواميس';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -447894,6 +449036,8 @@ extension on _StringsAr {
         return 'جارٍ التحضير للمزامنة';
       case 'sync_progress_reading':
         return 'مزامنة بيانات القراءة';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -449983,6 +451127,14 @@ extension on _StringsAr {
         return 'لغة الترجمة الافتراضية';
       case 'video_setting_jimaku_default_language_hint':
         return 'يتبع لغة الفيديو افتراضياً (مسار الصوت / البيانات الوصفية المكشوطة). اختر لغة لتفضيلها دائماً بدلاً من ذلك.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'قفل النافذة على نسبة الفيديو';
       case 'video_setting_long_press_speed':
@@ -450761,6 +451913,8 @@ extension on _StringsAr {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -451487,6 +452641,8 @@ extension on _StringsAr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -451782,14 +452938,6 @@ extension on _StringsAr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -460901,6 +462049,12 @@ extension on _StringsDe {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Bibliothek durchsuchen';
       case 'library_sort_filter':
@@ -462977,6 +464131,10 @@ extension on _StringsDe {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -464010,8 +465168,6 @@ extension on _StringsDe {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -466089,6 +467245,8 @@ extension on _StringsDe {
         return 'Sortieren';
       case 'sort_imported':
         return 'Importdatum';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Zuletzt gelesen';
       case 'sort_recent_watched':
@@ -466431,8 +467589,6 @@ extension on _StringsDe {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -466449,6 +467605,10 @@ extension on _StringsDe {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -467319,6 +468479,14 @@ extension on _StringsDe {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -467526,6 +468694,16 @@ extension on _StringsDe {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -467883,9 +469061,24 @@ extension on _StringsDe {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -469164,6 +470357,8 @@ extension on _StringsDe {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Wörterbücher werden synchronisiert';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -469174,6 +470369,8 @@ extension on _StringsDe {
         return 'Synchronisierung wird vorbereitet';
       case 'sync_progress_reading':
         return 'Lesedaten werden synchronisiert';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -471272,6 +472469,14 @@ extension on _StringsDe {
         return 'Standard-Untertitelsprache';
       case 'video_setting_jimaku_default_language_hint':
         return 'Standardmäßig wird die eigene Sprache des Videos verwendet (Audiospur / gescrapte Metadaten). Wählen Sie eine aus, um stattdessen immer diese Sprache zu bevorzugen.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Fenster auf Videoverhältnis sperren';
       case 'video_setting_long_press_speed':
@@ -472050,6 +473255,8 @@ extension on _StringsDe {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -472778,6 +473985,8 @@ extension on _StringsDe {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -473073,14 +474282,6 @@ extension on _StringsDe {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -482179,6 +483380,12 @@ extension on _StringsEs {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Buscar biblioteca';
       case 'library_sort_filter':
@@ -484254,6 +485461,10 @@ extension on _StringsEs {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -485285,8 +486496,6 @@ extension on _StringsEs {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -487366,6 +488575,8 @@ extension on _StringsEs {
         return 'Ordenar';
       case 'sort_imported':
         return 'Fecha de importación';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Leído recientemente';
       case 'sort_recent_watched':
@@ -487708,8 +488919,6 @@ extension on _StringsEs {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -487726,6 +488935,10 @@ extension on _StringsEs {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -488596,6 +489809,14 @@ extension on _StringsEs {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -488803,6 +490024,16 @@ extension on _StringsEs {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -489160,9 +490391,24 @@ extension on _StringsEs {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -490440,6 +491686,8 @@ extension on _StringsEs {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando diccionarios';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -490450,6 +491698,8 @@ extension on _StringsEs {
         return 'Preparando sincronización';
       case 'sync_progress_reading':
         return 'Sincronizando datos de lectura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -492546,6 +493796,14 @@ extension on _StringsEs {
         return 'Idioma de subtítulos predeterminado';
       case 'video_setting_jimaku_default_language_hint':
         return 'Por defecto usa el idioma propio del vídeo (pista de audio / metadatos obtenidos). Elija uno para siempre preferir ese idioma.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Bloquear la ventana a la proporción del vídeo';
       case 'video_setting_long_press_speed':
@@ -493324,6 +494582,8 @@ extension on _StringsEs {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -494051,6 +495311,8 @@ extension on _StringsEs {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -494346,14 +495608,6 @@ extension on _StringsEs {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -503467,6 +504721,12 @@ extension on _StringsFr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Rechercher dans la bibliothèque';
       case 'library_sort_filter':
@@ -505541,6 +506801,10 @@ extension on _StringsFr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -506574,8 +507838,6 @@ extension on _StringsFr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -508654,6 +509916,8 @@ extension on _StringsFr {
         return 'Trier';
       case 'sort_imported':
         return 'Date d\'importation';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Lu récemment';
       case 'sort_recent_watched':
@@ -508996,8 +510260,6 @@ extension on _StringsFr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -509014,6 +510276,10 @@ extension on _StringsFr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -509884,6 +511150,14 @@ extension on _StringsFr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -510091,6 +511365,16 @@ extension on _StringsFr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -510448,9 +511732,24 @@ extension on _StringsFr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -511727,6 +513026,8 @@ extension on _StringsFr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Synchronisation des dictionnaires';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -511737,6 +513038,8 @@ extension on _StringsFr {
         return 'Préparation de la synchronisation';
       case 'sync_progress_reading':
         return 'Synchronisation des données de lecture';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -513837,6 +515140,14 @@ extension on _StringsFr {
         return 'Langue de sous-titres par défaut';
       case 'video_setting_jimaku_default_language_hint':
         return 'Par défaut la langue propre de la vidéo (piste audio / métadonnées récupérées). Choisissez-en une pour toujours préférer cette langue.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Verrouiller la fenêtre au format de la vidéo';
       case 'video_setting_long_press_speed':
@@ -514615,6 +515926,8 @@ extension on _StringsFr {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -515342,6 +516655,8 @@ extension on _StringsFr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -515637,14 +516952,6 @@ extension on _StringsFr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -524730,6 +526037,12 @@ extension on _StringsId {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Cari pustaka';
       case 'library_sort_filter':
@@ -526797,6 +528110,10 @@ extension on _StringsId {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -527825,8 +529142,6 @@ extension on _StringsId {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -529902,6 +531217,8 @@ extension on _StringsId {
         return 'Urutkan';
       case 'sort_imported':
         return 'Tanggal impor';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Baru dibaca';
       case 'sort_recent_watched':
@@ -530244,8 +531561,6 @@ extension on _StringsId {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -530262,6 +531577,10 @@ extension on _StringsId {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -531132,6 +532451,14 @@ extension on _StringsId {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -531339,6 +532666,16 @@ extension on _StringsId {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -531696,9 +533033,24 @@ extension on _StringsId {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -532975,6 +534327,8 @@ extension on _StringsId {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Menyinkronkan kamus';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -532985,6 +534339,8 @@ extension on _StringsId {
         return 'Menyiapkan sinkronisasi';
       case 'sync_progress_reading':
         return 'Menyinkronkan data baca';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -535073,6 +536429,14 @@ extension on _StringsId {
         return 'Bahasa subtitle default';
       case 'video_setting_jimaku_default_language_hint':
         return 'Default ke bahasa video itu sendiri (trek audio / metadata scrape). Pilih satu untuk selalu mengutamakan bahasa tersebut.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Kunci jendela ke rasio video';
       case 'video_setting_long_press_speed':
@@ -535851,6 +537215,8 @@ extension on _StringsId {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -536577,6 +537943,8 @@ extension on _StringsId {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -536872,14 +538240,6 @@ extension on _StringsId {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -545977,6 +547337,12 @@ extension on _StringsIt {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Cerca nella libreria';
       case 'library_sort_filter':
@@ -548050,6 +549416,10 @@ extension on _StringsIt {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -549080,8 +550450,6 @@ extension on _StringsIt {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -551159,6 +552527,8 @@ extension on _StringsIt {
         return 'Ordina';
       case 'sort_imported':
         return 'Data importazione';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Letti di recente';
       case 'sort_recent_watched':
@@ -551501,8 +552871,6 @@ extension on _StringsIt {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -551519,6 +552887,10 @@ extension on _StringsIt {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -552389,6 +553761,14 @@ extension on _StringsIt {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -552596,6 +553976,16 @@ extension on _StringsIt {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -552953,9 +554343,24 @@ extension on _StringsIt {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -554233,6 +555638,8 @@ extension on _StringsIt {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizzazione dizionari';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -554243,6 +555650,8 @@ extension on _StringsIt {
         return 'Preparazione sincronizzazione';
       case 'sync_progress_reading':
         return 'Sincronizzazione dati di lettura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -556342,6 +557751,14 @@ extension on _StringsIt {
         return 'Lingua sottotitoli predefinita';
       case 'video_setting_jimaku_default_language_hint':
         return 'Predefinito sulla lingua propria del video (traccia audio / metadati ottenuti). Scegline una per preferire sempre quella lingua.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Blocca la finestra sulle proporzioni del video';
       case 'video_setting_long_press_speed':
@@ -557120,6 +558537,8 @@ extension on _StringsIt {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -557848,6 +559267,8 @@ extension on _StringsIt {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -558143,14 +559564,6 @@ extension on _StringsIt {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -567189,6 +568602,12 @@ extension on _StringsJa {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'ライブラリを検索';
       case 'library_sort_filter':
@@ -569251,6 +570670,10 @@ extension on _StringsJa {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -570275,8 +571698,6 @@ extension on _StringsJa {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -572350,6 +573771,8 @@ extension on _StringsJa {
         return '並べ替え';
       case 'sort_imported':
         return 'インポート日';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '最近読んだ';
       case 'sort_recent_watched':
@@ -572692,8 +574115,6 @@ extension on _StringsJa {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -572710,6 +574131,10 @@ extension on _StringsJa {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'すべて折りたたむ';
+      case 'srs_card_defs_expand_all':
+        return 'すべて展開';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -573580,6 +575005,14 @@ extension on _StringsJa {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -573787,6 +575220,16 @@ extension on _StringsJa {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -574144,9 +575587,24 @@ extension on _StringsJa {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -575413,6 +576871,8 @@ extension on _StringsJa {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '辞書を同期中';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -575423,6 +576883,8 @@ extension on _StringsJa {
         return '同期を準備中';
       case 'sync_progress_reading':
         return '読書データを同期中';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -577493,6 +578955,14 @@ extension on _StringsJa {
         return 'デフォルト字幕言語';
       case 'video_setting_jimaku_default_language_hint':
         return 'デフォルトでは動画自体の言語（音声トラック/スクレイプされたメタデータ）を使用します。特定の言語を選択すると、常にその言語が優先されます。';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'ウィンドウを動画の比率に固定';
       case 'video_setting_long_press_speed':
@@ -578269,6 +579739,8 @@ extension on _StringsJa {
         return 'スキップ：台詞がほとんどありません（歌やクリップ）';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'スキップ：歌（OP/ED、MV）と判定されました';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'AIの返答が何度か再試行しても不完全でした';
       case 'video_subtitle_ai_estimate':
@@ -578987,6 +580459,8 @@ extension on _StringsJa {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -579282,14 +580756,6 @@ extension on _StringsJa {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -588329,6 +589795,12 @@ extension on _StringsKo {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return '라이브러리 검색';
       case 'library_sort_filter':
@@ -590389,6 +591861,10 @@ extension on _StringsKo {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -591414,8 +592890,6 @@ extension on _StringsKo {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -593490,6 +594964,8 @@ extension on _StringsKo {
         return '정렬';
       case 'sort_imported':
         return '가져온 날짜';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '최근 읽은 순';
       case 'sort_recent_watched':
@@ -593832,8 +595308,6 @@ extension on _StringsKo {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -593850,6 +595324,10 @@ extension on _StringsKo {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -594720,6 +596198,14 @@ extension on _StringsKo {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -594927,6 +596413,16 @@ extension on _StringsKo {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -595284,9 +596780,24 @@ extension on _StringsKo {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -596554,6 +598065,8 @@ extension on _StringsKo {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '사전 동기화 중';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -596564,6 +598077,8 @@ extension on _StringsKo {
         return '동기화 준비 중';
       case 'sync_progress_reading':
         return '독서 데이터 동기화 중';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -598639,6 +600154,14 @@ extension on _StringsKo {
         return '기본 자막 언어';
       case 'video_setting_jimaku_default_language_hint':
         return '기본적으로 동영상 자체 언어(오디오 트랙 / 스크랩된 메타데이터)를 사용합니다. 항상 특정 언어를 선호하려면 선택하세요.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return '창을 비디오 비율로 고정';
       case 'video_setting_long_press_speed':
@@ -599417,6 +600940,8 @@ extension on _StringsKo {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -600139,6 +601664,8 @@ extension on _StringsKo {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -600434,14 +601961,6 @@ extension on _StringsKo {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -609535,6 +611054,12 @@ extension on _StringsNl {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Bibliotheek doorzoeken';
       case 'library_sort_filter':
@@ -611611,6 +613136,10 @@ extension on _StringsNl {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -612641,8 +614170,6 @@ extension on _StringsNl {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -614720,6 +616247,8 @@ extension on _StringsNl {
         return 'Sorteren';
       case 'sort_imported':
         return 'Importdatum';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Recent gelezen';
       case 'sort_recent_watched':
@@ -615062,8 +616591,6 @@ extension on _StringsNl {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -615080,6 +616607,10 @@ extension on _StringsNl {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -615950,6 +617481,14 @@ extension on _StringsNl {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -616157,6 +617696,16 @@ extension on _StringsNl {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -616514,9 +618063,24 @@ extension on _StringsNl {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -617793,6 +619357,8 @@ extension on _StringsNl {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Woordenboeken synchroniseren';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -617803,6 +619369,8 @@ extension on _StringsNl {
         return 'Synchronisatie voorbereiden';
       case 'sync_progress_reading':
         return 'Leesgegevens synchroniseren';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -619896,6 +621464,14 @@ extension on _StringsNl {
         return 'Standaard ondertiteltaal';
       case 'video_setting_jimaku_default_language_hint':
         return 'Standaard de eigen taal van de video (audiotrack / gescrapete metadata). Kies er een om die taal altijd te prefereren.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Venster vergrendelen op videoverhouding';
       case 'video_setting_long_press_speed':
@@ -620674,6 +622250,8 @@ extension on _StringsNl {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -621402,6 +622980,8 @@ extension on _StringsNl {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -621697,14 +623277,6 @@ extension on _StringsNl {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -630798,6 +632370,12 @@ extension on _StringsPtBr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Buscar na biblioteca';
       case 'library_sort_filter':
@@ -632872,6 +634450,10 @@ extension on _StringsPtBr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -633902,8 +635484,6 @@ extension on _StringsPtBr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -635981,6 +637561,8 @@ extension on _StringsPtBr {
         return 'Ordenar';
       case 'sort_imported':
         return 'Data de importação';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Lidos recentemente';
       case 'sort_recent_watched':
@@ -636323,8 +637905,6 @@ extension on _StringsPtBr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -636341,6 +637921,10 @@ extension on _StringsPtBr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -637211,6 +638795,14 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -637418,6 +639010,16 @@ extension on _StringsPtBr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -637775,9 +639377,24 @@ extension on _StringsPtBr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -639053,6 +640670,8 @@ extension on _StringsPtBr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando dicionários';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -639063,6 +640682,8 @@ extension on _StringsPtBr {
         return 'Preparando sincronização';
       case 'sync_progress_reading':
         return 'Sincronizando dados de leitura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -641155,6 +642776,14 @@ extension on _StringsPtBr {
         return 'Idioma padrão de legenda';
       case 'video_setting_jimaku_default_language_hint':
         return 'Padrão é o idioma do próprio vídeo (faixa de áudio / metadados buscados). Escolha um para sempre preferir esse idioma.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Travar janela na proporção do vídeo';
       case 'video_setting_long_press_speed':
@@ -641933,6 +643562,8 @@ extension on _StringsPtBr {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -642660,6 +644291,8 @@ extension on _StringsPtBr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -642955,14 +644588,6 @@ extension on _StringsPtBr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -652063,6 +653688,12 @@ extension on _StringsRu {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Поиск в библиотеке';
       case 'library_sort_filter':
@@ -654137,6 +655768,10 @@ extension on _StringsRu {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -655167,8 +656802,6 @@ extension on _StringsRu {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -657246,6 +658879,8 @@ extension on _StringsRu {
         return 'Сортировка';
       case 'sort_imported':
         return 'Дата импорта';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Недавно прочитанные';
       case 'sort_recent_watched':
@@ -657588,8 +659223,6 @@ extension on _StringsRu {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -657606,6 +659239,10 @@ extension on _StringsRu {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -658476,6 +660113,14 @@ extension on _StringsRu {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -658683,6 +660328,16 @@ extension on _StringsRu {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -659040,9 +660695,24 @@ extension on _StringsRu {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -660319,6 +661989,8 @@ extension on _StringsRu {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Синхронизация словарей';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -660329,6 +662001,8 @@ extension on _StringsRu {
         return 'Подготовка синхронизации';
       case 'sync_progress_reading':
         return 'Синхронизация данных чтения';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -662419,6 +664093,14 @@ extension on _StringsRu {
         return 'Язык субтитров по умолчанию';
       case 'video_setting_jimaku_default_language_hint':
         return 'По умолчанию используется язык видео (аудиодорожка / метаданные скрейпинга). Выберите конкретный язык, чтобы всегда предпочитать его.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Окно по соотношению сторон видео';
       case 'video_setting_long_press_speed':
@@ -663197,6 +664879,8 @@ extension on _StringsRu {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -663923,6 +665607,8 @@ extension on _StringsRu {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -664218,14 +665904,6 @@ extension on _StringsRu {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -673301,6 +674979,12 @@ extension on _StringsTh {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'ค้นหาคลัง';
       case 'library_sort_filter':
@@ -675367,6 +677051,10 @@ extension on _StringsTh {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -676394,8 +678082,6 @@ extension on _StringsTh {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -678471,6 +680157,8 @@ extension on _StringsTh {
         return 'เรียงตาม';
       case 'sort_imported':
         return 'วันที่นำเข้า';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'อ่านล่าสุด';
       case 'sort_recent_watched':
@@ -678813,8 +680501,6 @@ extension on _StringsTh {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -678831,6 +680517,10 @@ extension on _StringsTh {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -679701,6 +681391,14 @@ extension on _StringsTh {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -679908,6 +681606,16 @@ extension on _StringsTh {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -680265,9 +681973,24 @@ extension on _StringsTh {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -681542,6 +683265,8 @@ extension on _StringsTh {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'กำลังซิงค์พจนานุกรม';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -681552,6 +683277,8 @@ extension on _StringsTh {
         return 'กำลังเตรียมซิงค์';
       case 'sync_progress_reading':
         return 'กำลังซิงค์ข้อมูลการอ่าน';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -683639,6 +685366,14 @@ extension on _StringsTh {
         return 'ภาษาคำบรรยายเริ่มต้น';
       case 'video_setting_jimaku_default_language_hint':
         return 'ค่าเริ่มต้นจะใช้ภาษาของวิดีโอ (แทร็กเสียง / ข้อมูลที่สแกนได้) เลือกภาษาเพื่อให้ใช้ภาษานั้นเสมอแทน';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'ล็อกหน้าต่างตามอัตราส่วนวิดีโอ';
       case 'video_setting_long_press_speed':
@@ -684417,6 +686152,8 @@ extension on _StringsTh {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -685142,6 +686879,8 @@ extension on _StringsTh {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -685437,14 +687176,6 @@ extension on _StringsTh {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -694539,6 +696270,12 @@ extension on _StringsTr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Kütüphanede ara';
       case 'library_sort_filter':
@@ -696610,6 +698347,10 @@ extension on _StringsTr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -697637,8 +699378,6 @@ extension on _StringsTr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -699714,6 +701453,8 @@ extension on _StringsTr {
         return 'Sırala';
       case 'sort_imported':
         return 'İçe aktarma tarihi';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Son okunan';
       case 'sort_recent_watched':
@@ -700056,8 +701797,6 @@ extension on _StringsTr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -700074,6 +701813,10 @@ extension on _StringsTr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -700944,6 +702687,14 @@ extension on _StringsTr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -701151,6 +702902,16 @@ extension on _StringsTr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -701508,9 +703269,24 @@ extension on _StringsTr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -702785,6 +704561,8 @@ extension on _StringsTr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sözlükler eşitleniyor';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -702795,6 +704573,8 @@ extension on _StringsTr {
         return 'Senkronizasyon hazırlanıyor';
       case 'sync_progress_reading':
         return 'Okuma verileri eşitleniyor';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -704888,6 +706668,14 @@ extension on _StringsTr {
         return 'Varsayılan altyazı dili';
       case 'video_setting_jimaku_default_language_hint':
         return 'Varsayılan olarak videonun kendi dilini (ses parçası / taranan meta veriler) kullanır. Her zaman o dili tercih etmek için birini seçin.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Pencereyi video oranına kilitle';
       case 'video_setting_long_press_speed':
@@ -705666,6 +707454,8 @@ extension on _StringsTr {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -706392,6 +708182,8 @@ extension on _StringsTr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -706687,14 +708479,6 @@ extension on _StringsTr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -715779,6 +717563,12 @@ extension on _StringsVi {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Tìm kiếm thư viện';
       case 'library_sort_filter':
@@ -717845,6 +719635,10 @@ extension on _StringsVi {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -718873,8 +720667,6 @@ extension on _StringsVi {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -720952,6 +722744,8 @@ extension on _StringsVi {
         return 'Sắp xếp';
       case 'sort_imported':
         return 'Ngày nhập';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Đọc gần đây';
       case 'sort_recent_watched':
@@ -721294,8 +723088,6 @@ extension on _StringsVi {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -721312,6 +723104,10 @@ extension on _StringsVi {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -722182,6 +723978,14 @@ extension on _StringsVi {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -722389,6 +724193,16 @@ extension on _StringsVi {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -722746,9 +724560,24 @@ extension on _StringsVi {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -724024,6 +725853,8 @@ extension on _StringsVi {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Đang đồng bộ từ điển';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -724034,6 +725865,8 @@ extension on _StringsVi {
         return 'Đang chuẩn bị đồng bộ';
       case 'sync_progress_reading':
         return 'Đang đồng bộ dữ liệu đọc';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -726123,6 +727956,14 @@ extension on _StringsVi {
         return 'Ngôn ngữ phụ đề mặc định';
       case 'video_setting_jimaku_default_language_hint':
         return 'Mặc định theo ngôn ngữ của video (bản âm thanh / siêu dữ liệu quét). Chọn một ngôn ngữ để luôn ưu tiên ngôn ngữ đó thay thế.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Khóa cửa sổ theo tỷ lệ video';
       case 'video_setting_long_press_speed':
@@ -726901,6 +728742,8 @@ extension on _StringsVi {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -727625,6 +729468,8 @@ extension on _StringsVi {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -727920,14 +729765,6 @@ extension on _StringsVi {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -736892,6 +738729,12 @@ extension on _StringsZhCn {
         return '只删除最近一次会话记下的时长与字数，适合误点打开的情况。';
       case 'library_progress_reset_video_message':
         return '观看位置归零、状态改为未看，并从「继续观看」中移除。';
+      case 'library_reorder_action':
+        return '排序';
+      case 'library_reorder_done':
+        return '完成';
+      case 'library_reorder_hint':
+        return '拖动卡片调整顺序';
       case 'library_search':
         return '搜索库';
       case 'library_sort_filter':
@@ -738935,6 +740778,10 @@ extension on _StringsZhCn {
         return '添加一个放着音乐文件的文件夹。';
       case 'music_library_rescan':
         return '重新扫描曲库';
+      case 'music_library_search_empty':
+        return '没有匹配项';
+      case 'music_library_search_hint':
+        return '搜索音乐';
       case 'music_listening_study_hint':
         return '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
       case 'music_listening_study_title':
@@ -739956,8 +741803,6 @@ extension on _StringsZhCn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return '改用 Anki…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
       case 'onboarding_review_fushi_desc':
         return '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
       case 'onboarding_review_fushi_title':
@@ -742025,6 +743870,8 @@ extension on _StringsZhCn {
         return '排序方式';
       case 'sort_imported':
         return '导入时间';
+      case 'sort_manual':
+        return '手动';
       case 'sort_recent_read':
         return '最近阅读';
       case 'sort_recent_watched':
@@ -742363,8 +744210,6 @@ extension on _StringsZhCn {
         return '其它卡片类型';
       case 'srs_card_appearance_section_text':
         return '文字';
-      case 'srs_card_appearance_sentence_furigana':
-        return '例句注音常显';
       case 'srs_card_appearance_show_frequency':
         return '词频';
       case 'srs_card_appearance_show_picture':
@@ -742381,6 +744226,10 @@ extension on _StringsZhCn {
         return 'Fushi 卡片外观';
       case 'srs_card_bury':
         return '埋到明天';
+      case 'srs_card_defs_collapse_all':
+        return '全部收起';
+      case 'srs_card_defs_expand_all':
+        return '全部展开';
       case 'srs_card_edit_template':
         return ({required Object name}) => '编辑 ${name} 模板';
       case 'srs_card_flag':
@@ -743227,6 +745076,14 @@ extension on _StringsZhCn {
         return ({required Object n}) => '开关字段（${n}）';
       case 'srs_note_types_flag_fields_hint':
         return '填任意字符即开启对应的卡面样式';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => '词频排序：${name}';
+      case 'srs_note_types_freq_field':
+        return '词频序字段';
+      case 'srs_note_types_freq_field_auto':
+        return '自动（FreqSort）';
+      case 'srs_note_types_freq_field_hint':
+        return '牌组按词频出新卡时，读这个字段里的名次（越小越常见）。「自动」= 用名为 FreqSort 的字段。';
       case 'srs_note_types_front':
         return '正面模板';
       case 'srs_note_types_insert_field':
@@ -743432,6 +745289,16 @@ extension on _StringsZhCn {
         return '最大间隔（天）';
       case 'srs_settings_max_interval_hint':
         return '任何卡的下次复习都不会超过这么多天';
+      case 'srs_settings_new_order':
+        return '新卡顺序';
+      case 'srs_settings_new_order_frequency':
+        return '按词频';
+      case 'srs_settings_new_order_frequency_hint':
+        return '常用词先出：按制卡时存在卡上的词频名次（FreqSort）。名次随笔记同步，每台设备顺序一致。没有名次的卡排在后面，按位置。';
+      case 'srs_settings_new_order_position':
+        return '按位置';
+      case 'srs_settings_new_order_position_hint':
+        return '按「按词频重排新卡」或 Anki 导入写下的位置；没排过的卡按添加先后。';
       case 'srs_settings_new_per_day':
         return '每日新卡上限';
       case 'srs_settings_new_per_day_hint':
@@ -743788,9 +745655,24 @@ extension on _StringsZhCn {
         return ({required Object progress}) => '正在同步：${progress}';
       case 'srs_sync_now_started':
         return '开始同步复习数据…';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return '本机还没有笔记，将直接改用所选的那一份。';
+      case 'srs_sync_profile_conflict_body':
+        return '同步位置里有其他设备的复习数据，没法自动确定本机该用哪一份。请选择：';
+      case 'srs_sync_profile_conflict_done':
+        return '已关联，正在同步复习数据…';
+      case 'srs_sync_profile_conflict_failed':
+        return '关联复习数据失败';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return '保持本机独立';
+      case 'srs_sync_profile_conflict_later':
+        return '稍后';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return '本机已有的笔记和复习记录会并入所选的那一份，不会丢失。';
+      case 'srs_sync_profile_conflict_title':
+        return '复习同步冲突';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => '更新于 ${date}';
       case 'srs_sync_progress_downloading':
         return '同步复习数据';
       case 'srs_sync_progress_downloading_count':
@@ -745053,6 +746935,8 @@ extension on _StringsZhCn {
         return '同步删除记录';
       case 'sync_progress_dictionaries':
         return '同步词典';
+      case 'sync_progress_finishing':
+        return '正在收尾';
       case 'sync_progress_fonts':
         return '同步字体';
       case 'sync_progress_local_audio':
@@ -745063,6 +746947,8 @@ extension on _StringsZhCn {
         return '正在准备同步';
       case 'sync_progress_reading':
         return '同步阅读数据';
+      case 'sync_progress_remote_listing':
+        return '正在读取远端文件清单';
       case 'sync_progress_statistics':
         return '同步统计与收藏';
       case 'sync_progress_videos':
@@ -747126,6 +749012,14 @@ extension on _StringsZhCn {
         return '默认字幕语言';
       case 'video_setting_jimaku_default_language_hint':
         return '默认跟随视频自身的语言（音轨 / 刮削元数据）。选定某个语言则始终优先它。';
+      case 'video_setting_jump_pill_auto_hide':
+        return '回跳胶囊自动隐藏';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return '跳转后过这么久就不再显示「返回跳转前位置」胶囊，下次跳转再出现';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return '不隐藏';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds} 秒';
       case 'video_setting_lock_window_aspect':
         return '锁定窗口为视频比例';
       case 'video_setting_long_press_speed':
@@ -747900,6 +749794,8 @@ extension on _StringsZhCn {
         return '跳过：几乎没有台词（歌曲或片段）';
       case 'video_subtitle_ai_episode_skipped_song':
         return '跳过：判定为纯歌曲（OP/ED、MV）';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => '样式取自 ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'AI 回复多次不完整';
       case 'video_subtitle_ai_estimate':
@@ -748606,6 +750502,8 @@ extension on _StringsZhCn {
         return '还没有下载记录';
       case 'web_browser_downloads_title':
         return '下载';
+      case 'web_browser_enter':
+        return '进入浏览器';
       case 'web_browser_error_certificate_body':
         return '该网站的安全证书无效、已过期或与网址不符。';
       case 'web_browser_error_certificate_title':
@@ -748899,14 +750797,6 @@ extension on _StringsZhCn {
         return '浏览器';
       case 'web_browser_toolbar_expand':
         return '展开工具栏';
-      case 'web_browser_youtube_subtitles':
-        return 'YouTube 字幕查词';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return '这个视频还没有字幕轨';
-      case 'web_browser_youtube_subtitles_track_live':
-        return '实时采集';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return '选中加载';
       case 'web_hub_browse':
         return '网页';
       case 'web_video_ad_skipping':
@@ -757899,6 +759789,12 @@ extension on _StringsZhHk {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return '搜索庫';
       case 'library_sort_filter':
@@ -759956,6 +761852,10 @@ extension on _StringsZhHk {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -760980,8 +762880,6 @@ extension on _StringsZhHk {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -763054,6 +764952,8 @@ extension on _StringsZhHk {
         return '排序方式';
       case 'sort_imported':
         return '導入時間';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '最近閱讀';
       case 'sort_recent_watched':
@@ -763396,8 +765296,6 @@ extension on _StringsZhHk {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -763414,6 +765312,10 @@ extension on _StringsZhHk {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return '全部收起';
+      case 'srs_card_defs_expand_all':
+        return '全部展開';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -764283,6 +766185,14 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -764490,6 +766400,16 @@ extension on _StringsZhHk {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -764847,9 +766767,24 @@ extension on _StringsZhHk {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -766114,6 +768049,8 @@ extension on _StringsZhHk {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '正在同步詞典';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -766124,6 +768061,8 @@ extension on _StringsZhHk {
         return '正在準備同步';
       case 'sync_progress_reading':
         return '正在同步閱讀資料';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -768188,6 +770127,14 @@ extension on _StringsZhHk {
         return '預設字幕語言';
       case 'video_setting_jimaku_default_language_hint':
         return '預設跟隨影片自身的語言（音軌 / 刮削元數據）。選定某個語言則始終優先它。';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return '鎖定視窗為影片比例';
       case 'video_setting_long_press_speed':
@@ -768963,6 +770910,8 @@ extension on _StringsZhHk {
         return '略過：幾乎沒有台詞（歌曲或片段）';
       case 'video_subtitle_ai_episode_skipped_song':
         return '略過：判定為純歌曲（OP/ED、MV）';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'AI 多次回覆均不完整';
       case 'video_subtitle_ai_estimate':
@@ -769673,6 +771622,8 @@ extension on _StringsZhHk {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -769968,14 +771919,6 @@ extension on _StringsZhHk {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
