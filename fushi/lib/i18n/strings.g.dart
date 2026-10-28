@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 174250 (10250 per locale)
+/// Strings: 174471 (10263 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2837,6 +2837,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Tap to open · long-press or right-click for rename, tags, sort and delete';
   String get collection_manage_search_hint => 'Search collections';
   String get collection_manage_title => 'Manage collections';
+  String get collection_mark_all_unwatched => 'Mark all as unwatched';
+  String get collection_mark_all_watched => 'Mark all as watched';
   String get collection_member_removed => 'Removed from collection';
   String get collection_merge_title => 'Merge collections';
   String get collection_merged => 'Collections merged.';
@@ -2866,6 +2868,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This collection isn\'t in any local video source\'s scrape plan';
   String get collection_rescrape_pick_work => 'Pick a work to rescrape';
   String get collection_rescrape_started => 'Rescrape queued';
+  String get collection_select_all_in_season => 'Select all in season';
+  String get collection_select_episodes => 'Select episodes';
+  String collection_selected_count({required Object n}) => '${n} selected';
   String get collection_sentence => 'Sentence';
   String get collection_sort_ai => 'Sort with AI';
   String get collection_sort_ai_applied => 'Order updated with AI';
@@ -12948,6 +12953,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_loading_subtitle => 'Downloading subtitles…';
   String get video_loop_cue_badge_label => 'Looping line';
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  String video_mark_server_failed({required Object n}) =>
+      'Couldn\'t update the server for ${n} item(s). Local state was updated.';
+  String get video_mark_unwatched => 'Mark as unwatched';
+  String get video_mark_watched => 'Mark as watched';
+  String get video_mark_watched_through => 'Mark this and earlier as watched';
+  String get video_marked_unwatched => 'Marked as unwatched';
+  String get video_marked_watched => 'Marked as watched';
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   String get video_menu_fullscreen => 'Toggle fullscreen';
@@ -19198,6 +19213,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'وضع علامة غير مُشاهَد على الكل';
+  @override
+  String get collection_mark_all_watched => 'وضع علامة مُشاهَد على الكل';
+  @override
   String get collection_member_removed => 'تمت الإزالة من المجموعة';
   @override
   String get collection_merge_title => 'دمج المجموعات';
@@ -19251,6 +19270,12 @@ class _StringsAr extends _StringsEn {
   String get collection_rescrape_pick_work => 'اختر عملًا لإعادة استخراجه';
   @override
   String get collection_rescrape_started => 'تمت جدولة إعادة الاستخراج';
+  @override
+  String get collection_select_all_in_season => 'تحديد كل حلقات الموسم';
+  @override
+  String get collection_select_episodes => 'تحديد الحلقات';
+  @override
+  String collection_selected_count({required Object n}) => 'تم تحديد ${n}';
   @override
   String get collection_sentence => 'جملة';
   @override
@@ -36558,6 +36583,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'تعذّر تحديث الخادم لـ ${n} عنصر. تم تحديث الحالة محليًا.';
+  @override
+  String get video_mark_unwatched => 'وضع علامة كغير مُشاهَد';
+  @override
+  String get video_mark_watched => 'وضع علامة كمُشاهَد';
+  @override
+  String get video_mark_watched_through =>
+      'وضع علامة كمُشاهَد لهذه الحلقة وما قبلها';
+  @override
+  String get video_marked_unwatched => 'تم وضع علامة كغير مُشاهَد';
+  @override
+  String get video_marked_watched => 'تم وضع علامة كمُشاهَد';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -44108,6 +44152,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Alle als ungesehen markieren';
+  @override
+  String get collection_mark_all_watched => 'Alle als gesehen markieren';
+  @override
   String get collection_member_removed => 'Aus Sammlung entfernt';
   @override
   String get collection_merge_title => 'Sammlungen zusammenführen';
@@ -44162,6 +44210,13 @@ class _StringsDe extends _StringsEn {
       'Werk zum erneuten Scrapen wählen';
   @override
   String get collection_rescrape_started => 'Erneutes Scrapen eingereiht';
+  @override
+  String get collection_select_all_in_season =>
+      'Alle Folgen der Staffel auswählen';
+  @override
+  String get collection_select_episodes => 'Folgen auswählen';
+  @override
+  String collection_selected_count({required Object n}) => '${n} ausgewählt';
   @override
   String get collection_sentence => 'Satz';
   @override
@@ -61753,6 +61808,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Der Server konnte für ${n} Element(e) nicht aktualisiert werden. Der lokale Status wurde aktualisiert.';
+  @override
+  String get video_mark_unwatched => 'Als ungesehen markieren';
+  @override
+  String get video_mark_watched => 'Als gesehen markieren';
+  @override
+  String get video_mark_watched_through =>
+      'Diese und frühere als gesehen markieren';
+  @override
+  String get video_marked_unwatched => 'Als ungesehen markiert';
+  @override
+  String get video_marked_watched => 'Als gesehen markiert';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -69364,6 +69438,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Marcar todo como no visto';
+  @override
+  String get collection_mark_all_watched => 'Marcar todo como visto';
+  @override
   String get collection_member_removed => 'Eliminado de la colección';
   @override
   String get collection_merge_title => 'Fusionar colecciones';
@@ -69418,6 +69496,12 @@ class _StringsEs extends _StringsEn {
       'Elige una obra para volver a extraer';
   @override
   String get collection_rescrape_started => 'Nueva extracción en cola';
+  @override
+  String get collection_select_all_in_season => 'Seleccionar toda la temporada';
+  @override
+  String get collection_select_episodes => 'Seleccionar episodios';
+  @override
+  String collection_selected_count({required Object n}) => '${n} seleccionados';
   @override
   String get collection_sentence => 'Oración';
   @override
@@ -87040,6 +87124,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'No se pudo actualizar el servidor para ${n} elemento(s). El estado local sí se actualizó.';
+  @override
+  String get video_mark_unwatched => 'Marcar como no visto';
+  @override
+  String get video_mark_watched => 'Marcar como visto';
+  @override
+  String get video_mark_watched_through =>
+      'Marcar este y los anteriores como vistos';
+  @override
+  String get video_marked_unwatched => 'Marcado como no visto';
+  @override
+  String get video_marked_watched => 'Marcado como visto';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -94683,6 +94786,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Tout marquer comme non vu';
+  @override
+  String get collection_mark_all_watched => 'Tout marquer comme vu';
+  @override
   String get collection_member_removed => 'Retiré de la collection';
   @override
   String get collection_merge_title => 'Fusionner les collections';
@@ -94738,6 +94845,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_rescrape_started =>
       'Nouveau scraping en file d\'attente';
+  @override
+  String get collection_select_all_in_season => 'Sélectionner toute la saison';
+  @override
+  String get collection_select_episodes => 'Sélectionner des épisodes';
+  @override
+  String collection_selected_count({required Object n}) =>
+      '${n} sélectionné(s)';
   @override
   String get collection_sentence => 'Phrase';
   @override
@@ -112403,6 +112517,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Impossible de mettre à jour le serveur pour ${n} élément(s). L\'état local a bien été mis à jour.';
+  @override
+  String get video_mark_unwatched => 'Marquer comme non vu';
+  @override
+  String get video_mark_watched => 'Marquer comme vu';
+  @override
+  String get video_mark_watched_through =>
+      'Marquer celui-ci et les précédents comme vus';
+  @override
+  String get video_marked_unwatched => 'Marqué comme non vu';
+  @override
+  String get video_marked_watched => 'Marqué comme vu';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -120003,6 +120136,10 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Tandai semua belum ditonton';
+  @override
+  String get collection_mark_all_watched => 'Tandai semua sudah ditonton';
+  @override
   String get collection_member_removed => 'Dihapus dari koleksi';
   @override
   String get collection_merge_title => 'Gabung koleksi';
@@ -120057,6 +120194,13 @@ class _StringsId extends _StringsEn {
       'Pilih karya untuk di-scrape ulang';
   @override
   String get collection_rescrape_started => 'Scrape ulang diantrekan';
+  @override
+  String get collection_select_all_in_season =>
+      'Pilih semua episode di musim ini';
+  @override
+  String get collection_select_episodes => 'Pilih episode';
+  @override
+  String collection_selected_count({required Object n}) => '${n} dipilih';
   @override
   String get collection_sentence => 'Kalimat';
   @override
@@ -137493,6 +137637,25 @@ class _StringsId extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Gagal memperbarui server untuk ${n} item. Status lokal sudah diperbarui.';
+  @override
+  String get video_mark_unwatched => 'Tandai belum ditonton';
+  @override
+  String get video_mark_watched => 'Tandai sudah ditonton';
+  @override
+  String get video_mark_watched_through =>
+      'Tandai ini dan sebelumnya sudah ditonton';
+  @override
+  String get video_marked_unwatched => 'Ditandai belum ditonton';
+  @override
+  String get video_marked_watched => 'Ditandai sudah ditonton';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -145066,6 +145229,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Segna tutto come non visto';
+  @override
+  String get collection_mark_all_watched => 'Segna tutto come visto';
+  @override
   String get collection_member_removed => 'Rimosso dalla raccolta';
   @override
   String get collection_merge_title => 'Unisci raccolte';
@@ -145120,6 +145287,12 @@ class _StringsIt extends _StringsEn {
       'Scegli un\'opera di cui rifare lo scraping';
   @override
   String get collection_rescrape_started => 'Nuovo scraping in coda';
+  @override
+  String get collection_select_all_in_season => 'Seleziona tutta la stagione';
+  @override
+  String get collection_select_episodes => 'Seleziona episodi';
+  @override
+  String collection_selected_count({required Object n}) => '${n} selezionati';
   @override
   String get collection_sentence => 'Frase';
   @override
@@ -162671,6 +162844,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Impossibile aggiornare il server per ${n} elemento/i. Lo stato locale è stato aggiornato.';
+  @override
+  String get video_mark_unwatched => 'Segna come non visto';
+  @override
+  String get video_mark_watched => 'Segna come visto';
+  @override
+  String get video_mark_watched_through =>
+      'Segna questo e i precedenti come visti';
+  @override
+  String get video_marked_unwatched => 'Segnato come non visto';
+  @override
+  String get video_marked_watched => 'Segnato come visto';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -170104,6 +170296,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'すべて未視聴にする';
+  @override
+  String get collection_mark_all_watched => 'すべて視聴済みにする';
+  @override
   String get collection_member_removed => 'コレクションから削除しました';
   @override
   String get collection_merge_title => 'コレクションをマージ';
@@ -170156,6 +170352,12 @@ class _StringsJa extends _StringsEn {
   String get collection_rescrape_pick_work => '再取得する作品を選択';
   @override
   String get collection_rescrape_started => '再取得をキューに追加しました';
+  @override
+  String get collection_select_all_in_season => 'シーズンをすべて選択';
+  @override
+  String get collection_select_episodes => 'エピソードを選択';
+  @override
+  String collection_selected_count({required Object n}) => '${n} 件選択中';
   @override
   String get collection_sentence => '文';
   @override
@@ -186996,6 +187198,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '${n} 件のサーバー更新に失敗しました。ローカルの状態は更新されています。';
+  @override
+  String get video_mark_unwatched => '未視聴にする';
+  @override
+  String get video_mark_watched => '視聴済みにする';
+  @override
+  String get video_mark_watched_through => 'この話とそれ以前を視聴済みにする';
+  @override
+  String get video_marked_unwatched => '未視聴にしました';
+  @override
+  String get video_marked_watched => '視聴済みにしました';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -194268,6 +194488,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => '모두 시청 안 함으로 표시';
+  @override
+  String get collection_mark_all_watched => '모두 시청함으로 표시';
+  @override
   String get collection_member_removed => '컬렉션에서 제거됨';
   @override
   String get collection_merge_title => '컬렉션 병합';
@@ -194320,6 +194544,12 @@ class _StringsKo extends _StringsEn {
   String get collection_rescrape_pick_work => '다시 스크레이핑할 작품 선택';
   @override
   String get collection_rescrape_started => '다시 스크레이핑을 대기열에 추가했습니다';
+  @override
+  String get collection_select_all_in_season => '시즌 전체 선택';
+  @override
+  String get collection_select_episodes => '회차 선택';
+  @override
+  String collection_selected_count({required Object n}) => '${n}개 선택됨';
   @override
   String get collection_sentence => '문장';
   @override
@@ -211191,6 +211421,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '${n}개 항목의 서버 업데이트에 실패했습니다. 로컬 상태는 업데이트되었습니다.';
+  @override
+  String get video_mark_unwatched => '시청 안 함으로 표시';
+  @override
+  String get video_mark_watched => '시청함으로 표시';
+  @override
+  String get video_mark_watched_through => '이 회차와 이전 회차를 시청함으로 표시';
+  @override
+  String get video_marked_unwatched => '시청 안 함으로 표시했습니다';
+  @override
+  String get video_marked_watched => '시청함으로 표시했습니다';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -218656,6 +218904,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Alles markeren als niet gezien';
+  @override
+  String get collection_mark_all_watched => 'Alles markeren als gezien';
+  @override
   String get collection_member_removed => 'Verwijderd uit collectie';
   @override
   String get collection_merge_title => 'Collecties samenvoegen';
@@ -218710,6 +218962,13 @@ class _StringsNl extends _StringsEn {
       'Kies een werk om opnieuw te scrapen';
   @override
   String get collection_rescrape_started => 'Opnieuw scrapen in wachtrij gezet';
+  @override
+  String get collection_select_all_in_season =>
+      'Alle afleveringen van het seizoen selecteren';
+  @override
+  String get collection_select_episodes => 'Afleveringen selecteren';
+  @override
+  String collection_selected_count({required Object n}) => '${n} geselecteerd';
   @override
   String get collection_sentence => 'Zin';
   @override
@@ -236222,6 +236481,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'De server kon niet worden bijgewerkt voor ${n} item(s). De lokale status is wel bijgewerkt.';
+  @override
+  String get video_mark_unwatched => 'Markeren als niet gezien';
+  @override
+  String get video_mark_watched => 'Markeren als gezien';
+  @override
+  String get video_mark_watched_through =>
+      'Deze en eerdere markeren als gezien';
+  @override
+  String get video_marked_unwatched => 'Gemarkeerd als niet gezien';
+  @override
+  String get video_marked_watched => 'Gemarkeerd als gezien';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -243815,6 +244093,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Marcar tudo como não assistido';
+  @override
+  String get collection_mark_all_watched => 'Marcar tudo como assistido';
+  @override
   String get collection_member_removed => 'Removido da coleção';
   @override
   String get collection_merge_title => 'Mesclar coleções';
@@ -243869,6 +244151,13 @@ class _StringsPtBr extends _StringsEn {
       'Escolha uma obra para raspar novamente';
   @override
   String get collection_rescrape_started => 'Nova raspagem na fila';
+  @override
+  String get collection_select_all_in_season => 'Selecionar toda a temporada';
+  @override
+  String get collection_select_episodes => 'Selecionar episódios';
+  @override
+  String collection_selected_count({required Object n}) =>
+      '${n} selecionado(s)';
   @override
   String get collection_sentence => 'Frase';
   @override
@@ -261424,6 +261713,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Não foi possível atualizar o servidor para ${n} item(ns). O estado local foi atualizado.';
+  @override
+  String get video_mark_unwatched => 'Marcar como não assistido';
+  @override
+  String get video_mark_watched => 'Marcar como assistido';
+  @override
+  String get video_mark_watched_through =>
+      'Marcar este e os anteriores como assistidos';
+  @override
+  String get video_marked_unwatched => 'Marcado como não assistido';
+  @override
+  String get video_marked_watched => 'Marcado como assistido';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -269018,6 +269326,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched =>
+      'Отметить все как непросмотренные';
+  @override
+  String get collection_mark_all_watched => 'Отметить все как просмотренные';
+  @override
   String get collection_member_removed => 'Удалено из коллекции';
   @override
   String get collection_merge_title => 'Объединить коллекции';
@@ -269072,6 +269385,12 @@ class _StringsRu extends _StringsEn {
       'Выберите произведение для обновления';
   @override
   String get collection_rescrape_started => 'Обновление поставлено в очередь';
+  @override
+  String get collection_select_all_in_season => 'Выбрать все серии сезона';
+  @override
+  String get collection_select_episodes => 'Выбрать серии';
+  @override
+  String collection_selected_count({required Object n}) => 'Выбрано: ${n}';
   @override
   String get collection_sentence => 'Предложение';
   @override
@@ -286588,6 +286907,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Не удалось обновить сервер для элементов: ${n}. Локальное состояние обновлено.';
+  @override
+  String get video_mark_unwatched => 'Отметить как непросмотренное';
+  @override
+  String get video_mark_watched => 'Отметить как просмотренное';
+  @override
+  String get video_mark_watched_through =>
+      'Отметить эту и все предыдущие как просмотренные';
+  @override
+  String get video_marked_unwatched => 'Отмечено как непросмотренное';
+  @override
+  String get video_marked_watched => 'Отмечено как просмотренное';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -294126,6 +294464,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched =>
+      'ทำเครื่องหมายว่ายังไม่ได้ดูทั้งหมด';
+  @override
+  String get collection_mark_all_watched => 'ทำเครื่องหมายว่าดูแล้วทั้งหมด';
+  @override
   String get collection_member_removed => 'ลบออกจากคอลเลกชันแล้ว';
   @override
   String get collection_merge_title => 'รวมคอลเลกชัน';
@@ -294178,6 +294521,12 @@ class _StringsTh extends _StringsEn {
   String get collection_rescrape_pick_work => 'เลือกผลงานที่จะดึงข้อมูลใหม่';
   @override
   String get collection_rescrape_started => 'จัดคิวดึงข้อมูลใหม่แล้ว';
+  @override
+  String get collection_select_all_in_season => 'เลือกทุกตอนในซีซัน';
+  @override
+  String get collection_select_episodes => 'เลือกตอน';
+  @override
+  String collection_selected_count({required Object n}) => 'เลือกแล้ว ${n}';
   @override
   String get collection_sentence => 'ประโยค';
   @override
@@ -311484,6 +311833,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'อัปเดตเซิร์ฟเวอร์ไม่สำเร็จ ${n} รายการ แต่สถานะในเครื่องอัปเดตแล้ว';
+  @override
+  String get video_mark_unwatched => 'ทำเครื่องหมายว่ายังไม่ได้ดู';
+  @override
+  String get video_mark_watched => 'ทำเครื่องหมายว่าดูแล้ว';
+  @override
+  String get video_mark_watched_through =>
+      'ทำเครื่องหมายว่าดูแล้วทั้งตอนนี้และตอนก่อนหน้า';
+  @override
+  String get video_marked_unwatched => 'ทำเครื่องหมายว่ายังไม่ได้ดูแล้ว';
+  @override
+  String get video_marked_watched => 'ทำเครื่องหมายว่าดูแล้ว';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -319001,6 +319369,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched =>
+      'Tümünü izlenmedi olarak işaretle';
+  @override
+  String get collection_mark_all_watched => 'Tümünü izlendi olarak işaretle';
+  @override
   String get collection_member_removed => 'Koleksiyondan kaldırıldı';
   @override
   String get collection_merge_title => 'Koleksiyonları birleştir';
@@ -319055,6 +319428,12 @@ class _StringsTr extends _StringsEn {
       'Yeniden kazınacak bir eser seçin';
   @override
   String get collection_rescrape_started => 'Yeniden kazıma sıraya alındı';
+  @override
+  String get collection_select_all_in_season => 'Sezondaki tüm bölümleri seç';
+  @override
+  String get collection_select_episodes => 'Bölüm seç';
+  @override
+  String collection_selected_count({required Object n}) => '${n} seçildi';
   @override
   String get collection_sentence => 'Cümle';
   @override
@@ -336496,6 +336875,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '${n} öğe için sunucu güncellenemedi. Yerel durum güncellendi.';
+  @override
+  String get video_mark_unwatched => 'İzlenmedi olarak işaretle';
+  @override
+  String get video_mark_watched => 'İzlendi olarak işaretle';
+  @override
+  String get video_mark_watched_through =>
+      'Bunu ve öncekileri izlendi olarak işaretle';
+  @override
+  String get video_marked_unwatched => 'İzlenmedi olarak işaretlendi';
+  @override
+  String get video_marked_watched => 'İzlendi olarak işaretlendi';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -344034,6 +344432,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Đánh dấu tất cả chưa xem';
+  @override
+  String get collection_mark_all_watched => 'Đánh dấu tất cả đã xem';
+  @override
   String get collection_member_removed => 'Đã xóa khỏi bộ sưu tập';
   @override
   String get collection_merge_title => 'Hợp nhất bộ sưu tập';
@@ -344087,6 +344489,12 @@ class _StringsVi extends _StringsEn {
   String get collection_rescrape_pick_work => 'Chọn một tác phẩm để quét lại';
   @override
   String get collection_rescrape_started => 'Đã xếp hàng quét lại';
+  @override
+  String get collection_select_all_in_season => 'Chọn tất cả tập trong mùa';
+  @override
+  String get collection_select_episodes => 'Chọn tập';
+  @override
+  String collection_selected_count({required Object n}) => 'Đã chọn ${n}';
   @override
   String get collection_sentence => 'Câu';
   @override
@@ -361477,6 +361885,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Không cập nhật được máy chủ cho ${n} mục. Trạng thái trên máy đã được cập nhật.';
+  @override
+  String get video_mark_unwatched => 'Đánh dấu chưa xem';
+  @override
+  String get video_mark_watched => 'Đánh dấu đã xem';
+  @override
+  String get video_mark_watched_through =>
+      'Đánh dấu tập này và các tập trước là đã xem';
+  @override
+  String get video_marked_unwatched => 'Đã đánh dấu chưa xem';
+  @override
+  String get video_marked_watched => 'Đã đánh dấu đã xem';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -368611,6 +369038,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_manage_title => '管理合集';
   @override
+  String get collection_mark_all_unwatched => '全部标记为未看';
+  @override
+  String get collection_mark_all_watched => '全部标记为已看';
+  @override
   String get collection_member_removed => '已移出合集';
   @override
   String get collection_merge_title => '合并合集';
@@ -368661,6 +369092,12 @@ class _StringsZhCn extends _StringsEn {
   String get collection_rescrape_pick_work => '选择要重新刮削的作品';
   @override
   String get collection_rescrape_started => '已开始重新刮削';
+  @override
+  String get collection_select_all_in_season => '全选本季';
+  @override
+  String get collection_select_episodes => '选择集数';
+  @override
+  String collection_selected_count({required Object n}) => '已选 ${n} 项';
   @override
   String get collection_sentence => '句子';
   @override
@@ -384622,6 +385059,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => '点击停止循环';
   @override
+  String get video_mark_failed => '未能更新观看状态。';
+  @override
+  String video_mark_remote_failed({required Object n}) => '有 ${n} 项未能在服务器上标记。';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '有 ${n} 项未能同步到服务器，本地状态已更新。';
+  @override
+  String get video_mark_unwatched => '标记为未看';
+  @override
+  String get video_mark_watched => '标记为已看';
+  @override
+  String get video_mark_watched_through => '将此集及之前标记为已看';
+  @override
+  String get video_marked_unwatched => '已标记为未看';
+  @override
+  String get video_marked_watched => '已标记为已看';
+  @override
   String get video_media_server_launch_unavailable =>
       '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
   @override
@@ -391603,6 +392057,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => '全部標記為未看';
+  @override
+  String get collection_mark_all_watched => '全部標記為已看';
+  @override
   String get collection_member_removed => '已移出合集';
   @override
   String get collection_merge_title => '合併合集';
@@ -391653,6 +392111,12 @@ class _StringsZhHk extends _StringsEn {
   String get collection_rescrape_pick_work => '選擇要重新刮削的作品';
   @override
   String get collection_rescrape_started => '已開始重新刮削';
+  @override
+  String get collection_select_all_in_season => '全選本季';
+  @override
+  String get collection_select_episodes => '選擇集數';
+  @override
+  String collection_selected_count({required Object n}) => '已選 ${n} 項';
   @override
   String get collection_sentence => '句子';
   @override
@@ -408087,6 +408551,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '有 ${n} 項未能同步到伺服器，本機狀態已更新。';
+  @override
+  String get video_mark_unwatched => '標記為未看';
+  @override
+  String get video_mark_watched => '標記為已看';
+  @override
+  String get video_mark_watched_through => '將此集及之前標記為已看';
+  @override
+  String get video_marked_unwatched => '已標記為未看';
+  @override
+  String get video_marked_watched => '已標記為已看';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -414659,6 +415141,10 @@ extension on _StringsEn {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Mark all as unwatched';
+      case 'collection_mark_all_watched':
+        return 'Mark all as watched';
       case 'collection_member_removed':
         return 'Removed from collection';
       case 'collection_merge_title':
@@ -414710,6 +415196,12 @@ extension on _StringsEn {
         return 'Pick a work to rescrape';
       case 'collection_rescrape_started':
         return 'Rescrape queued';
+      case 'collection_select_all_in_season':
+        return 'Select all in season';
+      case 'collection_select_episodes':
+        return 'Select episodes';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} selected';
       case 'collection_sentence':
         return 'Sentence';
       case 'collection_sort_ai':
@@ -429687,6 +430179,24 @@ extension on _StringsEn {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Couldn\'t update the server for ${n} item(s). Local state was updated.';
+      case 'video_mark_unwatched':
+        return 'Mark as unwatched';
+      case 'video_mark_watched':
+        return 'Mark as watched';
+      case 'video_mark_watched_through':
+        return 'Mark this and earlier as watched';
+      case 'video_marked_unwatched':
+        return 'Marked as unwatched';
+      case 'video_marked_watched':
+        return 'Marked as watched';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -435956,6 +436466,10 @@ extension on _StringsAr {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'وضع علامة غير مُشاهَد على الكل';
+      case 'collection_mark_all_watched':
+        return 'وضع علامة مُشاهَد على الكل';
       case 'collection_member_removed':
         return 'تمت الإزالة من المجموعة';
       case 'collection_merge_title':
@@ -436007,6 +436521,12 @@ extension on _StringsAr {
         return 'اختر عملًا لإعادة استخراجه';
       case 'collection_rescrape_started':
         return 'تمت جدولة إعادة الاستخراج';
+      case 'collection_select_all_in_season':
+        return 'تحديد كل حلقات الموسم';
+      case 'collection_select_episodes':
+        return 'تحديد الحلقات';
+      case 'collection_selected_count':
+        return ({required Object n}) => 'تم تحديد ${n}';
       case 'collection_sentence':
         return 'جملة';
       case 'collection_sort_ai':
@@ -450976,6 +451496,24 @@ extension on _StringsAr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'تعذّر تحديث الخادم لـ ${n} عنصر. تم تحديث الحالة محليًا.';
+      case 'video_mark_unwatched':
+        return 'وضع علامة كغير مُشاهَد';
+      case 'video_mark_watched':
+        return 'وضع علامة كمُشاهَد';
+      case 'video_mark_watched_through':
+        return 'وضع علامة كمُشاهَد لهذه الحلقة وما قبلها';
+      case 'video_marked_unwatched':
+        return 'تم وضع علامة كغير مُشاهَد';
+      case 'video_marked_watched':
+        return 'تم وضع علامة كمُشاهَد';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -457267,6 +457805,10 @@ extension on _StringsDe {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Alle als ungesehen markieren';
+      case 'collection_mark_all_watched':
+        return 'Alle als gesehen markieren';
       case 'collection_member_removed':
         return 'Aus Sammlung entfernt';
       case 'collection_merge_title':
@@ -457318,6 +457860,12 @@ extension on _StringsDe {
         return 'Werk zum erneuten Scrapen wählen';
       case 'collection_rescrape_started':
         return 'Erneutes Scrapen eingereiht';
+      case 'collection_select_all_in_season':
+        return 'Alle Folgen der Staffel auswählen';
+      case 'collection_select_episodes':
+        return 'Folgen auswählen';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} ausgewählt';
       case 'collection_sentence':
         return 'Satz';
       case 'collection_sort_ai':
@@ -472338,6 +472886,24 @@ extension on _StringsDe {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Der Server konnte für ${n} Element(e) nicht aktualisiert werden. Der lokale Status wurde aktualisiert.';
+      case 'video_mark_unwatched':
+        return 'Als ungesehen markieren';
+      case 'video_mark_watched':
+        return 'Als gesehen markieren';
+      case 'video_mark_watched_through':
+        return 'Diese und frühere als gesehen markieren';
+      case 'video_marked_unwatched':
+        return 'Als ungesehen markiert';
+      case 'video_marked_watched':
+        return 'Als gesehen markiert';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -478628,6 +479194,10 @@ extension on _StringsEs {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Marcar todo como no visto';
+      case 'collection_mark_all_watched':
+        return 'Marcar todo como visto';
       case 'collection_member_removed':
         return 'Eliminado de la colección';
       case 'collection_merge_title':
@@ -478679,6 +479249,12 @@ extension on _StringsEs {
         return 'Elige una obra para volver a extraer';
       case 'collection_rescrape_started':
         return 'Nueva extracción en cola';
+      case 'collection_select_all_in_season':
+        return 'Seleccionar toda la temporada';
+      case 'collection_select_episodes':
+        return 'Seleccionar episodios';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} seleccionados';
       case 'collection_sentence':
         return 'Oración';
       case 'collection_sort_ai':
@@ -493688,6 +494264,24 @@ extension on _StringsEs {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'No se pudo actualizar el servidor para ${n} elemento(s). El estado local sí se actualizó.';
+      case 'video_mark_unwatched':
+        return 'Marcar como no visto';
+      case 'video_mark_watched':
+        return 'Marcar como visto';
+      case 'video_mark_watched_through':
+        return 'Marcar este y los anteriores como vistos';
+      case 'video_marked_unwatched':
+        return 'Marcado como no visto';
+      case 'video_marked_watched':
+        return 'Marcado como visto';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -499981,6 +500575,10 @@ extension on _StringsFr {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Tout marquer comme non vu';
+      case 'collection_mark_all_watched':
+        return 'Tout marquer comme vu';
       case 'collection_member_removed':
         return 'Retiré de la collection';
       case 'collection_merge_title':
@@ -500032,6 +500630,12 @@ extension on _StringsFr {
         return 'Choisissez une œuvre à re-scraper';
       case 'collection_rescrape_started':
         return 'Nouveau scraping en file d\'attente';
+      case 'collection_select_all_in_season':
+        return 'Sélectionner toute la saison';
+      case 'collection_select_episodes':
+        return 'Sélectionner des épisodes';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} sélectionné(s)';
       case 'collection_sentence':
         return 'Phrase';
       case 'collection_sort_ai':
@@ -515053,6 +515657,24 @@ extension on _StringsFr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Impossible de mettre à jour le serveur pour ${n} élément(s). L\'état local a bien été mis à jour.';
+      case 'video_mark_unwatched':
+        return 'Marquer comme non vu';
+      case 'video_mark_watched':
+        return 'Marquer comme vu';
+      case 'video_mark_watched_through':
+        return 'Marquer celui-ci et les précédents comme vus';
+      case 'video_marked_unwatched':
+        return 'Marqué comme non vu';
+      case 'video_marked_watched':
+        return 'Marqué comme vu';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -521333,6 +521955,10 @@ extension on _StringsId {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Tandai semua belum ditonton';
+      case 'collection_mark_all_watched':
+        return 'Tandai semua sudah ditonton';
       case 'collection_member_removed':
         return 'Dihapus dari koleksi';
       case 'collection_merge_title':
@@ -521384,6 +522010,12 @@ extension on _StringsId {
         return 'Pilih karya untuk di-scrape ulang';
       case 'collection_rescrape_started':
         return 'Scrape ulang diantrekan';
+      case 'collection_select_all_in_season':
+        return 'Pilih semua episode di musim ini';
+      case 'collection_select_episodes':
+        return 'Pilih episode';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} dipilih';
       case 'collection_sentence':
         return 'Kalimat';
       case 'collection_sort_ai':
@@ -536366,6 +536998,24 @@ extension on _StringsId {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Gagal memperbarui server untuk ${n} item. Status lokal sudah diperbarui.';
+      case 'video_mark_unwatched':
+        return 'Tandai belum ditonton';
+      case 'video_mark_watched':
+        return 'Tandai sudah ditonton';
+      case 'video_mark_watched_through':
+        return 'Tandai ini dan sebelumnya sudah ditonton';
+      case 'video_marked_unwatched':
+        return 'Ditandai belum ditonton';
+      case 'video_marked_watched':
+        return 'Ditandai sudah ditonton';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -542649,6 +543299,10 @@ extension on _StringsIt {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Segna tutto come non visto';
+      case 'collection_mark_all_watched':
+        return 'Segna tutto come visto';
       case 'collection_member_removed':
         return 'Rimosso dalla raccolta';
       case 'collection_merge_title':
@@ -542700,6 +543354,12 @@ extension on _StringsIt {
         return 'Scegli un\'opera di cui rifare lo scraping';
       case 'collection_rescrape_started':
         return 'Nuovo scraping in coda';
+      case 'collection_select_all_in_season':
+        return 'Seleziona tutta la stagione';
+      case 'collection_select_episodes':
+        return 'Seleziona episodi';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} selezionati';
       case 'collection_sentence':
         return 'Frase';
       case 'collection_sort_ai':
@@ -557710,6 +558370,24 @@ extension on _StringsIt {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Impossibile aggiornare il server per ${n} elemento/i. Lo stato locale è stato aggiornato.';
+      case 'video_mark_unwatched':
+        return 'Segna come non visto';
+      case 'video_mark_watched':
+        return 'Segna come visto';
+      case 'video_mark_watched_through':
+        return 'Segna questo e i precedenti come visti';
+      case 'video_marked_unwatched':
+        return 'Segnato come non visto';
+      case 'video_marked_watched':
+        return 'Segnato come visto';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -563965,6 +564643,10 @@ extension on _StringsJa {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'すべて未視聴にする';
+      case 'collection_mark_all_watched':
+        return 'すべて視聴済みにする';
       case 'collection_member_removed':
         return 'コレクションから削除しました';
       case 'collection_merge_title':
@@ -564016,6 +564698,12 @@ extension on _StringsJa {
         return '再取得する作品を選択';
       case 'collection_rescrape_started':
         return '再取得をキューに追加しました';
+      case 'collection_select_all_in_season':
+        return 'シーズンをすべて選択';
+      case 'collection_select_episodes':
+        return 'エピソードを選択';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} 件選択中';
       case 'collection_sentence':
         return '文';
       case 'collection_sort_ai':
@@ -578942,6 +579630,24 @@ extension on _StringsJa {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            '${n} 件のサーバー更新に失敗しました。ローカルの状態は更新されています。';
+      case 'video_mark_unwatched':
+        return '未視聴にする';
+      case 'video_mark_watched':
+        return '視聴済みにする';
+      case 'video_mark_watched_through':
+        return 'この話とそれ以前を視聴済みにする';
+      case 'video_marked_unwatched':
+        return '未視聴にしました';
+      case 'video_marked_watched':
+        return '視聴済みにしました';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -585176,6 +585882,10 @@ extension on _StringsKo {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return '모두 시청 안 함으로 표시';
+      case 'collection_mark_all_watched':
+        return '모두 시청함으로 표시';
       case 'collection_member_removed':
         return '컬렉션에서 제거됨';
       case 'collection_merge_title':
@@ -585227,6 +585937,12 @@ extension on _StringsKo {
         return '다시 스크레이핑할 작품 선택';
       case 'collection_rescrape_started':
         return '다시 스크레이핑을 대기열에 추가했습니다';
+      case 'collection_select_all_in_season':
+        return '시즌 전체 선택';
+      case 'collection_select_episodes':
+        return '회차 선택';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n}개 선택됨';
       case 'collection_sentence':
         return '문장';
       case 'collection_sort_ai':
@@ -600161,6 +600877,24 @@ extension on _StringsKo {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            '${n}개 항목의 서버 업데이트에 실패했습니다. 로컬 상태는 업데이트되었습니다.';
+      case 'video_mark_unwatched':
+        return '시청 안 함으로 표시';
+      case 'video_mark_watched':
+        return '시청함으로 표시';
+      case 'video_mark_watched_through':
+        return '이 회차와 이전 회차를 시청함으로 표시';
+      case 'video_marked_unwatched':
+        return '시청 안 함으로 표시했습니다';
+      case 'video_marked_watched':
+        return '시청함으로 표시했습니다';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -606431,6 +607165,10 @@ extension on _StringsNl {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Alles markeren als niet gezien';
+      case 'collection_mark_all_watched':
+        return 'Alles markeren als gezien';
       case 'collection_member_removed':
         return 'Verwijderd uit collectie';
       case 'collection_merge_title':
@@ -606482,6 +607220,12 @@ extension on _StringsNl {
         return 'Kies een werk om opnieuw te scrapen';
       case 'collection_rescrape_started':
         return 'Opnieuw scrapen in wachtrij gezet';
+      case 'collection_select_all_in_season':
+        return 'Alle afleveringen van het seizoen selecteren';
+      case 'collection_select_episodes':
+        return 'Afleveringen selecteren';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} geselecteerd';
       case 'collection_sentence':
         return 'Zin';
       case 'collection_sort_ai':
@@ -621487,6 +622231,24 @@ extension on _StringsNl {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'De server kon niet worden bijgewerkt voor ${n} item(s). De lokale status is wel bijgewerkt.';
+      case 'video_mark_unwatched':
+        return 'Markeren als niet gezien';
+      case 'video_mark_watched':
+        return 'Markeren als gezien';
+      case 'video_mark_watched_through':
+        return 'Deze en eerdere markeren als gezien';
+      case 'video_marked_unwatched':
+        return 'Gemarkeerd als niet gezien';
+      case 'video_marked_watched':
+        return 'Gemarkeerd als gezien';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -627774,6 +628536,10 @@ extension on _StringsPtBr {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Marcar tudo como não assistido';
+      case 'collection_mark_all_watched':
+        return 'Marcar tudo como assistido';
       case 'collection_member_removed':
         return 'Removido da coleção';
       case 'collection_merge_title':
@@ -627825,6 +628591,12 @@ extension on _StringsPtBr {
         return 'Escolha uma obra para raspar novamente';
       case 'collection_rescrape_started':
         return 'Nova raspagem na fila';
+      case 'collection_select_all_in_season':
+        return 'Selecionar toda a temporada';
+      case 'collection_select_episodes':
+        return 'Selecionar episódios';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} selecionado(s)';
       case 'collection_sentence':
         return 'Frase';
       case 'collection_sort_ai':
@@ -642822,6 +643594,24 @@ extension on _StringsPtBr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Não foi possível atualizar o servidor para ${n} item(ns). O estado local foi atualizado.';
+      case 'video_mark_unwatched':
+        return 'Marcar como não assistido';
+      case 'video_mark_watched':
+        return 'Marcar como assistido';
+      case 'video_mark_watched_through':
+        return 'Marcar este e os anteriores como assistidos';
+      case 'video_marked_unwatched':
+        return 'Marcado como não assistido';
+      case 'video_marked_watched':
+        return 'Marcado como assistido';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -649111,6 +649901,10 @@ extension on _StringsRu {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Отметить все как непросмотренные';
+      case 'collection_mark_all_watched':
+        return 'Отметить все как просмотренные';
       case 'collection_member_removed':
         return 'Удалено из коллекции';
       case 'collection_merge_title':
@@ -649162,6 +649956,12 @@ extension on _StringsRu {
         return 'Выберите произведение для обновления';
       case 'collection_rescrape_started':
         return 'Обновление поставлено в очередь';
+      case 'collection_select_all_in_season':
+        return 'Выбрать все серии сезона';
+      case 'collection_select_episodes':
+        return 'Выбрать серии';
+      case 'collection_selected_count':
+        return ({required Object n}) => 'Выбрано: ${n}';
       case 'collection_sentence':
         return 'Предложение';
       case 'collection_sort_ai':
@@ -664162,6 +664962,24 @@ extension on _StringsRu {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Не удалось обновить сервер для элементов: ${n}. Локальное состояние обновлено.';
+      case 'video_mark_unwatched':
+        return 'Отметить как непросмотренное';
+      case 'video_mark_watched':
+        return 'Отметить как просмотренное';
+      case 'video_mark_watched_through':
+        return 'Отметить эту и все предыдущие как просмотренные';
+      case 'video_marked_unwatched':
+        return 'Отмечено как непросмотренное';
+      case 'video_marked_watched':
+        return 'Отмечено как просмотренное';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -670431,6 +671249,10 @@ extension on _StringsTh {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'ทำเครื่องหมายว่ายังไม่ได้ดูทั้งหมด';
+      case 'collection_mark_all_watched':
+        return 'ทำเครื่องหมายว่าดูแล้วทั้งหมด';
       case 'collection_member_removed':
         return 'ลบออกจากคอลเลกชันแล้ว';
       case 'collection_merge_title':
@@ -670482,6 +671304,12 @@ extension on _StringsTh {
         return 'เลือกผลงานที่จะดึงข้อมูลใหม่';
       case 'collection_rescrape_started':
         return 'จัดคิวดึงข้อมูลใหม่แล้ว';
+      case 'collection_select_all_in_season':
+        return 'เลือกทุกตอนในซีซัน';
+      case 'collection_select_episodes':
+        return 'เลือกตอน';
+      case 'collection_selected_count':
+        return ({required Object n}) => 'เลือกแล้ว ${n}';
       case 'collection_sentence':
         return 'ประโยค';
       case 'collection_sort_ai':
@@ -685459,6 +686287,24 @@ extension on _StringsTh {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'อัปเดตเซิร์ฟเวอร์ไม่สำเร็จ ${n} รายการ แต่สถานะในเครื่องอัปเดตแล้ว';
+      case 'video_mark_unwatched':
+        return 'ทำเครื่องหมายว่ายังไม่ได้ดู';
+      case 'video_mark_watched':
+        return 'ทำเครื่องหมายว่าดูแล้ว';
+      case 'video_mark_watched_through':
+        return 'ทำเครื่องหมายว่าดูแล้วทั้งตอนนี้และตอนก่อนหน้า';
+      case 'video_marked_unwatched':
+        return 'ทำเครื่องหมายว่ายังไม่ได้ดูแล้ว';
+      case 'video_marked_watched':
+        return 'ทำเครื่องหมายว่าดูแล้ว';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -691741,6 +692587,10 @@ extension on _StringsTr {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Tümünü izlenmedi olarak işaretle';
+      case 'collection_mark_all_watched':
+        return 'Tümünü izlendi olarak işaretle';
       case 'collection_member_removed':
         return 'Koleksiyondan kaldırıldı';
       case 'collection_merge_title':
@@ -691792,6 +692642,12 @@ extension on _StringsTr {
         return 'Yeniden kazınacak bir eser seçin';
       case 'collection_rescrape_started':
         return 'Yeniden kazıma sıraya alındı';
+      case 'collection_select_all_in_season':
+        return 'Sezondaki tüm bölümleri seç';
+      case 'collection_select_episodes':
+        return 'Bölüm seç';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} seçildi';
       case 'collection_sentence':
         return 'Cümle';
       case 'collection_sort_ai':
@@ -706780,6 +707636,24 @@ extension on _StringsTr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            '${n} öğe için sunucu güncellenemedi. Yerel durum güncellendi.';
+      case 'video_mark_unwatched':
+        return 'İzlenmedi olarak işaretle';
+      case 'video_mark_watched':
+        return 'İzlendi olarak işaretle';
+      case 'video_mark_watched_through':
+        return 'Bunu ve öncekileri izlendi olarak işaretle';
+      case 'video_marked_unwatched':
+        return 'İzlenmedi olarak işaretlendi';
+      case 'video_marked_watched':
+        return 'İzlendi olarak işaretlendi';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -713056,6 +713930,10 @@ extension on _StringsVi {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Đánh dấu tất cả chưa xem';
+      case 'collection_mark_all_watched':
+        return 'Đánh dấu tất cả đã xem';
       case 'collection_member_removed':
         return 'Đã xóa khỏi bộ sưu tập';
       case 'collection_merge_title':
@@ -713107,6 +713985,12 @@ extension on _StringsVi {
         return 'Chọn một tác phẩm để quét lại';
       case 'collection_rescrape_started':
         return 'Đã xếp hàng quét lại';
+      case 'collection_select_all_in_season':
+        return 'Chọn tất cả tập trong mùa';
+      case 'collection_select_episodes':
+        return 'Chọn tập';
+      case 'collection_selected_count':
+        return ({required Object n}) => 'Đã chọn ${n}';
       case 'collection_sentence':
         return 'Câu';
       case 'collection_sort_ai':
@@ -728092,6 +728976,24 @@ extension on _StringsVi {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Không cập nhật được máy chủ cho ${n} mục. Trạng thái trên máy đã được cập nhật.';
+      case 'video_mark_unwatched':
+        return 'Đánh dấu chưa xem';
+      case 'video_mark_watched':
+        return 'Đánh dấu đã xem';
+      case 'video_mark_watched_through':
+        return 'Đánh dấu tập này và các tập trước là đã xem';
+      case 'video_marked_unwatched':
+        return 'Đã đánh dấu chưa xem';
+      case 'video_marked_watched':
+        return 'Đã đánh dấu đã xem';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -734302,6 +735204,10 @@ extension on _StringsZhCn {
         return '搜索合集';
       case 'collection_manage_title':
         return '管理合集';
+      case 'collection_mark_all_unwatched':
+        return '全部标记为未看';
+      case 'collection_mark_all_watched':
+        return '全部标记为已看';
       case 'collection_member_removed':
         return '已移出合集';
       case 'collection_merge_title':
@@ -734352,6 +735258,12 @@ extension on _StringsZhCn {
         return '选择要重新刮削的作品';
       case 'collection_rescrape_started':
         return '已开始重新刮削';
+      case 'collection_select_all_in_season':
+        return '全选本季';
+      case 'collection_select_episodes':
+        return '选择集数';
+      case 'collection_selected_count':
+        return ({required Object n}) => '已选 ${n} 项';
       case 'collection_sentence':
         return '句子';
       case 'collection_sort_ai':
@@ -749177,6 +750089,22 @@ extension on _StringsZhCn {
         return '循环当前句';
       case 'video_loop_cue_badge_tooltip':
         return '点击停止循环';
+      case 'video_mark_failed':
+        return '未能更新观看状态。';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) => '有 ${n} 项未能在服务器上标记。';
+      case 'video_mark_server_failed':
+        return ({required Object n}) => '有 ${n} 项未能同步到服务器，本地状态已更新。';
+      case 'video_mark_unwatched':
+        return '标记为未看';
+      case 'video_mark_watched':
+        return '标记为已看';
+      case 'video_mark_watched_through':
+        return '将此集及之前标记为已看';
+      case 'video_marked_unwatched':
+        return '已标记为未看';
+      case 'video_marked_watched':
+        return '已标记为已看';
       case 'video_media_server_launch_unavailable':
         return '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
       case 'video_menu_fullscreen':
@@ -755364,6 +756292,10 @@ extension on _StringsZhHk {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return '全部標記為未看';
+      case 'collection_mark_all_watched':
+        return '全部標記為已看';
       case 'collection_member_removed':
         return '已移出合集';
       case 'collection_merge_title':
@@ -755414,6 +756346,12 @@ extension on _StringsZhHk {
         return '選擇要重新刮削的作品';
       case 'collection_rescrape_started':
         return '已開始重新刮削';
+      case 'collection_select_all_in_season':
+        return '全選本季';
+      case 'collection_select_episodes':
+        return '選擇集數';
+      case 'collection_selected_count':
+        return ({required Object n}) => '已選 ${n} 項';
       case 'collection_sentence':
         return '句子';
       case 'collection_sort_ai':
@@ -770313,6 +771251,23 @@ extension on _StringsZhHk {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) => '有 ${n} 項未能同步到伺服器，本機狀態已更新。';
+      case 'video_mark_unwatched':
+        return '標記為未看';
+      case 'video_mark_watched':
+        return '標記為已看';
+      case 'video_mark_watched_through':
+        return '將此集及之前標記為已看';
+      case 'video_marked_unwatched':
+        return '已標記為未看';
+      case 'video_marked_watched':
+        return '已標記為已看';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
