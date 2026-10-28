@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173808 (10224 per locale)
+/// Strings: 173825 (10225 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11936,6 +11936,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_progress_pending_mines => 'Syncing pending cards';
   String get sync_progress_preparing => 'Preparing sync';
   String get sync_progress_reading => 'Syncing reading data';
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   String get sync_progress_videos => 'Syncing videos';
   String get sync_role_locked_by_client =>
@@ -34798,6 +34799,8 @@ class _StringsAr extends _StringsEn {
   String get sync_progress_preparing => 'جارٍ التحضير للمزامنة';
   @override
   String get sync_progress_reading => 'مزامنة بيانات القراءة';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -59899,6 +59902,8 @@ class _StringsDe extends _StringsEn {
   String get sync_progress_preparing => 'Synchronisierung wird vorbereitet';
   @override
   String get sync_progress_reading => 'Lesedaten werden synchronisiert';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -85112,6 +85117,8 @@ class _StringsEs extends _StringsEn {
   String get sync_progress_preparing => 'Preparando sincronización';
   @override
   String get sync_progress_reading => 'Sincronizando datos de lectura';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -110405,6 +110412,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_progress_reading => 'Synchronisation des données de lecture';
   @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
+  @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Synchronisation des vidéos';
@@ -135450,6 +135459,8 @@ class _StringsId extends _StringsEn {
   String get sync_progress_preparing => 'Menyiapkan sinkronisasi';
   @override
   String get sync_progress_reading => 'Menyinkronkan data baca';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -160558,6 +160569,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_progress_reading => 'Sincronizzazione dati di lettura';
   @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
+  @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Sincronizzazione video';
@@ -184890,6 +184903,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_progress_reading => '読書データを同期中';
   @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
+  @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => '動画を同期中';
@@ -209017,6 +209032,8 @@ class _StringsKo extends _StringsEn {
   String get sync_progress_preparing => '동기화 준비 중';
   @override
   String get sync_progress_reading => '독서 데이터 동기화 중';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -233911,6 +233928,8 @@ class _StringsNl extends _StringsEn {
   String get sync_progress_preparing => 'Synchronisatie voorbereiden';
   @override
   String get sync_progress_reading => 'Leesgegevens synchroniseren';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -259039,6 +259058,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_progress_reading => 'Sincronizando dados de leitura';
   @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
+  @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Sincronizando vídeos';
@@ -284149,6 +284170,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_progress_reading => 'Синхронизация данных чтения';
   @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
+  @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Синхронизация видео';
@@ -309001,6 +309024,8 @@ class _StringsTh extends _StringsEn {
   String get sync_progress_preparing => 'กำลังเตรียมซิงค์';
   @override
   String get sync_progress_reading => 'กำลังซิงค์ข้อมูลการอ่าน';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -333936,6 +333961,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_progress_reading => 'Okuma verileri eşitleniyor';
   @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
+  @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Videolar senkronize ediliyor';
@@ -358854,6 +358881,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_progress_reading => 'Đang đồng bộ dữ liệu đọc';
   @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
+  @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => 'Đang đồng bộ video';
@@ -382083,6 +382112,8 @@ class _StringsZhCn extends _StringsEn {
   String get sync_progress_preparing => '正在准备同步';
   @override
   String get sync_progress_reading => '同步阅读数据';
+  @override
+  String get sync_progress_remote_listing => '正在读取远端文件清单';
   @override
   String get sync_progress_statistics => '同步统计与收藏';
   @override
@@ -405445,6 +405476,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_progress_reading => '正在同步閱讀資料';
   @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
+  @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
   String get sync_progress_videos => '同步影片';
@@ -427139,6 +427172,8 @@ extension on _StringsEn {
         return 'Preparing sync';
       case 'sync_progress_reading':
         return 'Syncing reading data';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -448372,6 +448407,8 @@ extension on _StringsAr {
         return 'جارٍ التحضير للمزامنة';
       case 'sync_progress_reading':
         return 'مزامنة بيانات القراءة';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -469673,6 +469710,8 @@ extension on _StringsDe {
         return 'Synchronisierung wird vorbereitet';
       case 'sync_progress_reading':
         return 'Lesedaten werden synchronisiert';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -490970,6 +491009,8 @@ extension on _StringsEs {
         return 'Preparando sincronización';
       case 'sync_progress_reading':
         return 'Sincronizando datos de lectura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -512278,6 +512319,8 @@ extension on _StringsFr {
         return 'Préparation de la synchronisation';
       case 'sync_progress_reading':
         return 'Synchronisation des données de lecture';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -533547,6 +533590,8 @@ extension on _StringsId {
         return 'Menyiapkan sinkronisasi';
       case 'sync_progress_reading':
         return 'Menyinkronkan data baca';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -554826,6 +554871,8 @@ extension on _StringsIt {
         return 'Preparazione sincronizzazione';
       case 'sync_progress_reading':
         return 'Sincronizzazione dati di lettura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -576027,6 +576074,8 @@ extension on _StringsJa {
         return '同期を準備中';
       case 'sync_progress_reading':
         return '読書データを同期中';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -597189,6 +597238,8 @@ extension on _StringsKo {
         return '동기화 준비 중';
       case 'sync_progress_reading':
         return '독서 데이터 동기화 중';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -618449,6 +618500,8 @@ extension on _StringsNl {
         return 'Synchronisatie voorbereiden';
       case 'sync_progress_reading':
         return 'Leesgegevens synchroniseren';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -639730,6 +639783,8 @@ extension on _StringsPtBr {
         return 'Preparando sincronização';
       case 'sync_progress_reading':
         return 'Sincronizando dados de leitura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -661017,6 +661072,8 @@ extension on _StringsRu {
         return 'Подготовка синхронизации';
       case 'sync_progress_reading':
         return 'Синхронизация данных чтения';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -682261,6 +682318,8 @@ extension on _StringsTh {
         return 'กำลังเตรียมซิงค์';
       case 'sync_progress_reading':
         return 'กำลังซิงค์ข้อมูลการอ่าน';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -703525,6 +703584,8 @@ extension on _StringsTr {
         return 'Senkronizasyon hazırlanıyor';
       case 'sync_progress_reading':
         return 'Okuma verileri eşitleniyor';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -724785,6 +724846,8 @@ extension on _StringsVi {
         return 'Đang chuẩn bị đồng bộ';
       case 'sync_progress_reading':
         return 'Đang đồng bộ dữ liệu đọc';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -745835,6 +745898,8 @@ extension on _StringsZhCn {
         return '正在准备同步';
       case 'sync_progress_reading':
         return '同步阅读数据';
+      case 'sync_progress_remote_listing':
+        return '正在读取远端文件清单';
       case 'sync_progress_statistics':
         return '同步统计与收藏';
       case 'sync_progress_videos':
@@ -766917,6 +766982,8 @@ extension on _StringsZhHk {
         return '正在準備同步';
       case 'sync_progress_reading':
         return '正在同步閱讀資料';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
