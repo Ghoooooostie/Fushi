@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173808 (10224 per locale)
+/// Strings: 173842 (10226 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7757,6 +7757,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_cd_reading => 'Reading disc…';
   String get music_cd_reread => 'Read disc again';
   String music_cd_track_name({required Object n}) => 'Track ${n}';
+  String get music_continue_listening => 'Continue listening';
+  String get music_continue_open_album => 'Open album';
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
@@ -27536,6 +27538,10 @@ class _StringsAr extends _StringsEn {
   String get music_cd_reread => 'Read disc again';
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -52562,6 +52568,10 @@ class _StringsDe extends _StringsEn {
   String get music_cd_reread => 'Read disc again';
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -77764,6 +77774,10 @@ class _StringsEs extends _StringsEn {
   String get music_cd_reread => 'Read disc again';
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -103045,6 +103059,10 @@ class _StringsFr extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -128161,6 +128179,10 @@ class _StringsId extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -153229,6 +153251,10 @@ class _StringsIt extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -177777,6 +177803,10 @@ class _StringsJa extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -201895,6 +201925,10 @@ class _StringsKo extends _StringsEn {
   String get music_cd_reread => 'Read disc again';
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -226585,6 +226619,10 @@ class _StringsNl extends _StringsEn {
   String get music_cd_reread => 'Read disc again';
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -251717,6 +251755,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -276822,6 +276864,10 @@ class _StringsRu extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -301737,6 +301783,10 @@ class _StringsTh extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -326639,6 +326689,10 @@ class _StringsTr extends _StringsEn {
   String get music_cd_reread => 'Read disc again';
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -351577,6 +351631,10 @@ class _StringsVi extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -375387,6 +375445,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => '第 ${n} 轨';
   @override
+  String get music_continue_listening => '继续收听';
+  @override
+  String get music_continue_open_album => '打开专辑';
+  @override
   String get music_crossfade_continuous_hint =>
       '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
   @override
@@ -398442,6 +398504,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
+  String get music_continue_open_album => 'Open album';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -420790,6 +420856,10 @@ extension on _StringsEn {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -442027,6 +442097,10 @@ extension on _StringsAr {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -463315,6 +463389,10 @@ extension on _StringsDe {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -484613,6 +484691,10 @@ extension on _StringsEs {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -505921,6 +506003,10 @@ extension on _StringsFr {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -527198,6 +527284,10 @@ extension on _StringsId {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -548472,6 +548562,10 @@ extension on _StringsIt {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -569694,6 +569788,10 @@ extension on _StringsJa {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -590853,6 +590951,10 @@ extension on _StringsKo {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -612096,6 +612198,10 @@ extension on _StringsNl {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -633378,6 +633484,10 @@ extension on _StringsPtBr {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -654664,6 +654774,10 @@ extension on _StringsRu {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -675915,6 +676029,10 @@ extension on _StringsTh {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -697179,6 +697297,10 @@ extension on _StringsTr {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -718435,6 +718557,10 @@ extension on _StringsVi {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -739549,6 +739675,10 @@ extension on _StringsZhCn {
         return '重新读盘';
       case 'music_cd_track_name':
         return ({required Object n}) => '第 ${n} 轨';
+      case 'music_continue_listening':
+        return '继续收听';
+      case 'music_continue_open_album':
+        return '打开专辑';
       case 'music_crossfade_continuous_hint':
         return '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
       case 'music_crossfade_continuous_title':
@@ -760588,6 +760718,10 @@ extension on _StringsZhHk {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
+      case 'music_continue_open_album':
+        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
