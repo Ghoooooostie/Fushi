@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 174250 (10250 per locale)
+/// Strings: 174284 (10252 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12933,6 +12933,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_loading_subtitle => 'Downloading subtitles…';
   String get video_loop_cue_badge_label => 'Looping line';
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
   String video_mark_server_failed({required Object n}) =>
       'Couldn\'t update the server for ${n} item(s). Local state was updated.';
   String get video_mark_unwatched => 'Mark as unwatched';
@@ -36528,6 +36531,11 @@ class _StringsAr extends _StringsEn {
   String get video_loop_cue_badge_label => 'Looping line';
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
   @override
   String video_mark_server_failed({required Object n}) =>
       'تعذّر تحديث الخادم لـ ${n} عنصر. تم تحديث الحالة محليًا.';
@@ -61717,6 +61725,11 @@ class _StringsDe extends _StringsEn {
   String get video_loop_cue_badge_label => 'Looping line';
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
   @override
   String video_mark_server_failed({required Object n}) =>
       'Der Server konnte für ${n} Element(e) nicht aktualisiert werden. Der lokale Status wurde aktualisiert.';
@@ -86997,6 +87010,11 @@ class _StringsEs extends _StringsEn {
   String get video_loop_cue_badge_label => 'Looping line';
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
   @override
   String video_mark_server_failed({required Object n}) =>
       'No se pudo actualizar el servidor para ${n} elemento(s). El estado local sí se actualizó.';
@@ -112355,6 +112373,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
   String video_mark_server_failed({required Object n}) =>
       'Impossible de mettre à jour le serveur pour ${n} élément(s). L\'état local a bien été mis à jour.';
   @override
@@ -137438,6 +137461,11 @@ class _StringsId extends _StringsEn {
   String get video_loop_cue_badge_label => 'Looping line';
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
   @override
   String video_mark_server_failed({required Object n}) =>
       'Gagal memperbarui server untuk ${n} item. Status lokal sudah diperbarui.';
@@ -162610,6 +162638,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
   String video_mark_server_failed({required Object n}) =>
       'Impossibile aggiornare il server per ${n} elemento/i. Lo stato locale è stato aggiornato.';
   @override
@@ -186928,6 +186961,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
   String video_mark_server_failed({required Object n}) =>
       '${n} 件のサーバー更新に失敗しました。ローカルの状態は更新されています。';
   @override
@@ -211114,6 +211152,11 @@ class _StringsKo extends _StringsEn {
   String get video_loop_cue_badge_label => 'Looping line';
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
   @override
   String video_mark_server_failed({required Object n}) =>
       '${n}개 항목의 서버 업데이트에 실패했습니다. 로컬 상태는 업데이트되었습니다.';
@@ -236138,6 +236181,11 @@ class _StringsNl extends _StringsEn {
   String get video_loop_cue_badge_label => 'Looping line';
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
   @override
   String video_mark_server_failed({required Object n}) =>
       'De server kon niet worden bijgewerkt voor ${n} item(s). De lokale status is wel bijgewerkt.';
@@ -261335,6 +261383,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
   String video_mark_server_failed({required Object n}) =>
       'Não foi possível atualizar o servidor para ${n} item(ns). O estado local foi atualizado.';
   @override
@@ -286493,6 +286546,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
   String video_mark_server_failed({required Object n}) =>
       'Не удалось обновить сервер для элементов: ${n}. Локальное состояние обновлено.';
   @override
@@ -311382,6 +311440,11 @@ class _StringsTh extends _StringsEn {
   String get video_loop_cue_badge_label => 'Looping line';
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
   @override
   String video_mark_server_failed({required Object n}) =>
       'อัปเดตเซิร์ฟเวอร์ไม่สำเร็จ ${n} รายการ แต่สถานะในเครื่องอัปเดตแล้ว';
@@ -336389,6 +336452,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
   String video_mark_server_failed({required Object n}) =>
       '${n} öğe için sunucu güncellenemedi. Yerel durum güncellendi.';
   @override
@@ -361363,6 +361431,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
   String video_mark_server_failed({required Object n}) =>
       'Không cập nhật được máy chủ cho ${n} mục. Trạng thái trên máy đã được cập nhật.';
   @override
@@ -384503,6 +384576,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_loop_cue_badge_label => '循环当前句';
   @override
   String get video_loop_cue_badge_tooltip => '点击停止循环';
+  @override
+  String get video_mark_failed => '未能更新观看状态。';
+  @override
+  String video_mark_remote_failed({required Object n}) => '有 ${n} 项未能在服务器上标记。';
   @override
   String video_mark_server_failed({required Object n}) =>
       '有 ${n} 项未能同步到服务器，本地状态已更新。';
@@ -407961,6 +408038,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
   String video_mark_server_failed({required Object n}) =>
       '有 ${n} 項未能同步到伺服器，本機狀態已更新。';
   @override
@@ -429560,6 +429642,11 @@ extension on _StringsEn {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'Couldn\'t update the server for ${n} item(s). Local state was updated.';
@@ -450848,6 +450935,11 @@ extension on _StringsAr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'تعذّر تحديث الخادم لـ ${n} عنصر. تم تحديث الحالة محليًا.';
@@ -472209,6 +472301,11 @@ extension on _StringsDe {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'Der Server konnte für ${n} Element(e) nicht aktualisiert werden. Der lokale Status wurde aktualisiert.';
@@ -493558,6 +493655,11 @@ extension on _StringsEs {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'No se pudo actualizar el servidor para ${n} elemento(s). El estado local sí se actualizó.';
@@ -514922,6 +515024,11 @@ extension on _StringsFr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'Impossible de mettre à jour le serveur pour ${n} élément(s). L\'état local a bien été mis à jour.';
@@ -536234,6 +536341,11 @@ extension on _StringsId {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'Gagal memperbarui server untuk ${n} item. Status lokal sudah diperbarui.';
@@ -557577,6 +557689,11 @@ extension on _StringsIt {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'Impossibile aggiornare il server per ${n} elemento/i. Lo stato locale è stato aggiornato.';
@@ -578808,6 +578925,11 @@ extension on _StringsJa {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             '${n} 件のサーバー更新に失敗しました。ローカルの状態は更新されています。';
@@ -600026,6 +600148,11 @@ extension on _StringsKo {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             '${n}개 항목의 서버 업데이트에 실패했습니다. 로컬 상태는 업데이트되었습니다.';
@@ -621351,6 +621478,11 @@ extension on _StringsNl {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'De server kon niet worden bijgewerkt voor ${n} item(s). De lokale status is wel bijgewerkt.';
@@ -642685,6 +642817,11 @@ extension on _StringsPtBr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'Não foi possível atualizar o servidor para ${n} item(ns). O estado local foi atualizado.';
@@ -664024,6 +664161,11 @@ extension on _StringsRu {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'Не удалось обновить сервер для элементов: ${n}. Локальное состояние обновлено.';
@@ -685320,6 +685462,11 @@ extension on _StringsTh {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'อัปเดตเซิร์ฟเวอร์ไม่สำเร็จ ${n} รายการ แต่สถานะในเครื่องอัปเดตแล้ว';
@@ -706640,6 +706787,11 @@ extension on _StringsTr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             '${n} öğe için sunucu güncellenemedi. Yerel durum güncellendi.';
@@ -727951,6 +728103,11 @@ extension on _StringsVi {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) =>
             'Không cập nhật được máy chủ cho ${n} mục. Trạng thái trên máy đã được cập nhật.';
@@ -749036,6 +749193,10 @@ extension on _StringsZhCn {
         return '循环当前句';
       case 'video_loop_cue_badge_tooltip':
         return '点击停止循环';
+      case 'video_mark_failed':
+        return '未能更新观看状态。';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) => '有 ${n} 项未能在服务器上标记。';
       case 'video_mark_server_failed':
         return ({required Object n}) => '有 ${n} 项未能同步到服务器，本地状态已更新。';
       case 'video_mark_unwatched':
@@ -770170,6 +770331,11 @@ extension on _StringsZhHk {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
       case 'video_mark_server_failed':
         return ({required Object n}) => '有 ${n} 項未能同步到伺服器，本機狀態已更新。';
       case 'video_mark_unwatched':
