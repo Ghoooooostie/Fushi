@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173808 (10224 per locale)
+/// Strings: 173825 (10225 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14493,6 +14493,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_download_state_failed => 'Failed';
   String get web_browser_downloads_empty => 'No downloads yet';
   String get web_browser_downloads_title => 'Downloads';
+  String get web_browser_enter => 'Open browser';
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   String get web_browser_error_certificate_title => 'Connection isn\'t secure';
@@ -39079,6 +39080,8 @@ class _StringsAr extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -64257,6 +64260,8 @@ class _StringsDe extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -89490,6 +89495,8 @@ class _StringsEs extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -114805,6 +114812,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -139777,6 +139786,8 @@ class _StringsId extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -164909,6 +164920,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -189010,6 +189023,8 @@ class _StringsJa extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -213174,6 +213189,8 @@ class _StringsKo extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -238253,6 +238270,8 @@ class _StringsNl extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -263406,6 +263425,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -288503,6 +288524,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -313276,6 +313299,8 @@ class _StringsTh extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -338254,6 +338279,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -363159,6 +363186,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -385969,6 +385998,8 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_downloads_empty => '还没有下载记录';
   @override
   String get web_browser_downloads_title => '下载';
+  @override
+  String get web_browser_enter => '进入浏览器';
   @override
   String get web_browser_error_certificate_body => '该网站的安全证书无效、已过期或与网址不符。';
   @override
@@ -409444,6 +409475,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_enter => 'Open browser';
+  @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   @override
@@ -430731,6 +430764,8 @@ extension on _StringsEn {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -451967,6 +452002,8 @@ extension on _StringsAr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -473279,6 +473316,8 @@ extension on _StringsDe {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -494573,6 +494612,8 @@ extension on _StringsEs {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -515885,6 +515926,8 @@ extension on _StringsFr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -537141,6 +537184,8 @@ extension on _StringsId {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -558433,6 +558478,8 @@ extension on _StringsIt {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -579593,6 +579640,8 @@ extension on _StringsJa {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -600766,6 +600815,8 @@ extension on _StringsKo {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -622050,6 +622101,8 @@ extension on _StringsNl {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -643329,6 +643382,8 @@ extension on _StringsPtBr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -664613,6 +664668,8 @@ extension on _StringsRu {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -685853,6 +685910,8 @@ extension on _StringsTh {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -707124,6 +707183,8 @@ extension on _StringsTr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -728378,6 +728439,8 @@ extension on _StringsVi {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -749380,6 +749443,8 @@ extension on _StringsZhCn {
         return '还没有下载记录';
       case 'web_browser_downloads_title':
         return '下载';
+      case 'web_browser_enter':
+        return '进入浏览器';
       case 'web_browser_error_certificate_body':
         return '该网站的安全证书无效、已过期或与网址不符。';
       case 'web_browser_error_certificate_title':
@@ -770468,6 +770533,8 @@ extension on _StringsZhHk {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
