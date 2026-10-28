@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173859 (10227 per locale)
+/// Strings: 173791 (10223 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2426,7 +2426,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
   String get batch_tag_title => 'Manage tags';
-  String get book_continue_queue => 'Also reading';
   String get book_continue_reading => 'Continue reading';
   String get book_convert_blocked_already =>
       'This book is already in that format.';
@@ -2748,7 +2747,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_cover_updated => 'Cover updated';
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
-  String get collection_detail_continue => 'Continue';
   String get collection_detail_edit_tags => 'Edit tags';
   String get collection_detail_empty_hint =>
       'Add books from the library with Combine or Add to collection.';
@@ -2767,7 +2765,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_detail_sort_manual => 'Manual';
   String get collection_detail_sort_read => 'Last read';
   String get collection_detail_sort_volume => 'Volume';
-  String get collection_detail_start => 'Start';
   String get collection_detail_view_grid => 'Grid';
   String get collection_detail_view_list => 'List';
   String get collection_empty => 'Collection is empty';
@@ -7759,7 +7756,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_cd_reread => 'Read disc again';
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   String get music_continue_listening => 'Continue listening';
-  String get music_continue_open_album => 'Open album';
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
@@ -18460,8 +18456,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get batch_tag_title => 'إدارة العلامات';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'متابعة القراءة';
   @override
   String get book_convert_blocked_already => 'هذا الكتاب بالفعل بهذه الصيغة.';
@@ -19005,8 +18999,6 @@ class _StringsAr extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -19038,8 +19030,6 @@ class _StringsAr extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -27543,8 +27533,6 @@ class _StringsAr extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -43301,8 +43289,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get batch_tag_title => 'Tags verwalten';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Weiterlesen';
   @override
   String get book_convert_blocked_already =>
@@ -43855,8 +43841,6 @@ class _StringsDe extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -43888,8 +43872,6 @@ class _StringsDe extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -52575,8 +52557,6 @@ class _StringsDe extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -68496,8 +68476,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get batch_tag_title => 'Gestionar etiquetas';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Seguir leyendo';
   @override
   String get book_convert_blocked_already =>
@@ -69050,8 +69028,6 @@ class _StringsEs extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -69083,8 +69059,6 @@ class _StringsEs extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -77783,8 +77757,6 @@ class _StringsEs extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -93750,8 +93722,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get batch_tag_title => 'Gérer les balises';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Reprendre la lecture';
   @override
   String get book_convert_blocked_already =>
@@ -94307,8 +94277,6 @@ class _StringsFr extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -94340,8 +94308,6 @@ class _StringsFr extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -103069,8 +103035,6 @@ class _StringsFr extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -119023,8 +118987,6 @@ class _StringsId extends _StringsEn {
   @override
   String get batch_tag_title => 'Kelola Tag';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Lanjutkan membaca';
   @override
   String get book_convert_blocked_already =>
@@ -119569,8 +119531,6 @@ class _StringsId extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -119602,8 +119562,6 @@ class _StringsId extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -128191,8 +128149,6 @@ class _StringsId extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -144021,8 +143977,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get batch_tag_title => 'Gestisci tag';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Continua a leggere';
   @override
   String get book_convert_blocked_already =>
@@ -144572,8 +144526,6 @@ class _StringsIt extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -144605,8 +144557,6 @@ class _StringsIt extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -153265,8 +153215,6 @@ class _StringsIt extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -169033,8 +168981,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get batch_tag_title => 'タグを一括管理';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => '続きを読む';
   @override
   String get book_convert_blocked_already => 'この書籍はすでにその形式です。';
@@ -169555,8 +169501,6 @@ class _StringsJa extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -169588,8 +169532,6 @@ class _StringsJa extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -177819,8 +177761,6 @@ class _StringsJa extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -193132,8 +193072,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get batch_tag_title => '태그 관리';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => '이어 읽기';
   @override
   String get book_convert_blocked_already => '이 도서는 이미 해당 형식입니다.';
@@ -193657,8 +193595,6 @@ class _StringsKo extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -193690,8 +193626,6 @@ class _StringsKo extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -201944,8 +201878,6 @@ class _StringsKo extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -217429,8 +217361,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get batch_tag_title => 'Tags beheren';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Verder lezen';
   @override
   String get book_convert_blocked_already => 'Dit boek is al in dat formaat.';
@@ -217980,8 +217910,6 @@ class _StringsNl extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -218013,8 +217941,6 @@ class _StringsNl extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -226640,8 +226566,6 @@ class _StringsNl extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -242529,8 +242453,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get batch_tag_title => 'Gerenciar tags';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Continuar lendo';
   @override
   String get book_convert_blocked_already =>
@@ -243082,8 +243004,6 @@ class _StringsPtBr extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -243115,8 +243035,6 @@ class _StringsPtBr extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -251777,8 +251695,6 @@ class _StringsPtBr extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -267672,8 +267588,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get batch_tag_title => 'Управление тегами';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Продолжить чтение';
   @override
   String get book_convert_blocked_already => 'Эта книга уже в этом формате.';
@@ -268224,8 +268138,6 @@ class _StringsRu extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -268257,8 +268169,6 @@ class _StringsRu extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -276888,8 +276798,6 @@ class _StringsRu extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -292728,8 +292636,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get batch_tag_title => 'จัดการแท็ก';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'อ่านต่อ';
   @override
   String get book_convert_blocked_already => 'หนังสือนี้อยู่ในรูปแบบนั้นแล้ว';
@@ -293273,8 +293179,6 @@ class _StringsTh extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -293306,8 +293210,6 @@ class _StringsTh extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -301809,8 +301711,6 @@ class _StringsTh extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -317540,8 +317440,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get batch_tag_title => 'Etiketleri Yönet';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Okumaya devam et';
   @override
   String get book_convert_blocked_already => 'Bu kitap zaten o formatta.';
@@ -318086,8 +317984,6 @@ class _StringsTr extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -318119,8 +318015,6 @@ class _StringsTr extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -326718,8 +326612,6 @@ class _StringsTr extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -342511,8 +342403,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get batch_tag_title => 'Quản lý thẻ';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => 'Đọc tiếp';
   @override
   String get book_convert_blocked_already => 'Sách này đã ở định dạng đó rồi.';
@@ -343060,8 +342950,6 @@ class _StringsVi extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -343093,8 +342981,6 @@ class _StringsVi extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -351661,8 +351547,6 @@ class _StringsVi extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -367098,8 +366982,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get batch_tag_title => '批量管理标签';
   @override
-  String get book_continue_queue => '也在读';
-  @override
   String get book_continue_reading => '继续阅读';
   @override
   String get book_convert_blocked_already => '这本书已经是该格式了。';
@@ -367586,8 +367468,6 @@ class _StringsZhCn extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       '同时删除该合集的 ${n} 个下载订阅';
   @override
-  String get collection_detail_continue => '继续';
-  @override
   String get collection_detail_edit_tags => '编辑标签';
   @override
   String get collection_detail_empty_hint => '在书架里用「组合」或「加入合集」把条目放进来。';
@@ -367618,8 +367498,6 @@ class _StringsZhCn extends _StringsEn {
   String get collection_detail_sort_read => '阅读时间';
   @override
   String get collection_detail_sort_volume => '卷号';
-  @override
-  String get collection_detail_start => '开始';
   @override
   String get collection_detail_view_grid => '网格';
   @override
@@ -375477,8 +375355,6 @@ class _StringsZhCn extends _StringsEn {
   String music_cd_track_name({required Object n}) => '第 ${n} 轨';
   @override
   String get music_continue_listening => '继续收听';
-  @override
-  String get music_continue_open_album => '打开专辑';
   @override
   String get music_crossfade_continuous_hint =>
       '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
@@ -390016,8 +389892,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get batch_tag_title => '批量管理標籤';
   @override
-  String get book_continue_queue => 'Also reading';
-  @override
   String get book_continue_reading => '繼續閱讀';
   @override
   String get book_convert_blocked_already => '這本書已經是該格式了。';
@@ -390518,8 +390392,6 @@ class _StringsZhHk extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -390551,8 +390423,6 @@ class _StringsZhHk extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -398538,8 +398408,6 @@ class _StringsZhHk extends _StringsEn {
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_continue_listening => 'Continue listening';
-  @override
-  String get music_continue_open_album => 'Open album';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -413065,8 +412933,6 @@ extension on _StringsEn {
             'Removed tag "${name}" from ${n} video(s).';
       case 'batch_tag_title':
         return 'Manage tags';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Continue reading';
       case 'book_convert_blocked_already':
@@ -413529,8 +413395,6 @@ extension on _StringsEn {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -413560,8 +413424,6 @@ extension on _StringsEn {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -420893,8 +420755,6 @@ extension on _StringsEn {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -434313,8 +434173,6 @@ extension on _StringsAr {
             'تمت إزالة وسم "${name}" من ${n} فيديو.';
       case 'batch_tag_title':
         return 'إدارة العلامات';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'متابعة القراءة';
       case 'book_convert_blocked_already':
@@ -434778,8 +434636,6 @@ extension on _StringsAr {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -434809,8 +434665,6 @@ extension on _StringsAr {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -442136,8 +441990,6 @@ extension on _StringsAr {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -455576,8 +455428,6 @@ extension on _StringsDe {
             'Tag „${name}" von ${n} Video(s) entfernt.';
       case 'batch_tag_title':
         return 'Tags verwalten';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Weiterlesen';
       case 'book_convert_blocked_already':
@@ -456041,8 +455891,6 @@ extension on _StringsDe {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -456072,8 +455920,6 @@ extension on _StringsDe {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -463430,8 +463276,6 @@ extension on _StringsDe {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -476889,8 +476733,6 @@ extension on _StringsEs {
             'Se eliminó la etiqueta "${name}" de ${n} vídeo(s).';
       case 'batch_tag_title':
         return 'Gestionar etiquetas';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Seguir leyendo';
       case 'book_convert_blocked_already':
@@ -477354,8 +477196,6 @@ extension on _StringsEs {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -477385,8 +477225,6 @@ extension on _StringsEs {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -484734,8 +484572,6 @@ extension on _StringsEs {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -498194,8 +498030,6 @@ extension on _StringsFr {
             'Tag « ${name} » retiré de ${n} vidéo(s).';
       case 'batch_tag_title':
         return 'Gérer les balises';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Reprendre la lecture';
       case 'book_convert_blocked_already':
@@ -498659,8 +498493,6 @@ extension on _StringsFr {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -498690,8 +498522,6 @@ extension on _StringsFr {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -506048,8 +505878,6 @@ extension on _StringsFr {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -519498,8 +519326,6 @@ extension on _StringsId {
             'Menghapus tag "${name}" dari ${n} video.';
       case 'batch_tag_title':
         return 'Kelola Tag';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Lanjutkan membaca';
       case 'book_convert_blocked_already':
@@ -519963,8 +519789,6 @@ extension on _StringsId {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -519994,8 +519818,6 @@ extension on _StringsId {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -527331,8 +527153,6 @@ extension on _StringsId {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -540766,8 +540586,6 @@ extension on _StringsIt {
             'Rimosso tag "${name}" da ${n} video.';
       case 'batch_tag_title':
         return 'Gestisci tag';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Continua a leggere';
       case 'book_convert_blocked_already':
@@ -541231,8 +541049,6 @@ extension on _StringsIt {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -541262,8 +541078,6 @@ extension on _StringsIt {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -548611,8 +548425,6 @@ extension on _StringsIt {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -562036,8 +561848,6 @@ extension on _StringsJa {
             '${n} 本の動画からタグ「${name}」を削除しました。';
       case 'batch_tag_title':
         return 'タグを一括管理';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return '続きを読む';
       case 'book_convert_blocked_already':
@@ -562499,8 +562309,6 @@ extension on _StringsJa {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -562530,8 +562338,6 @@ extension on _StringsJa {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -569839,8 +569645,6 @@ extension on _StringsJa {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -583198,8 +583002,6 @@ extension on _StringsKo {
             '동영상 ${n}개에서 태그 "${name}" 제거됨.';
       case 'batch_tag_title':
         return '태그 관리';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return '이어 읽기';
       case 'book_convert_blocked_already':
@@ -583662,8 +583464,6 @@ extension on _StringsKo {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -583693,8 +583493,6 @@ extension on _StringsKo {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -591004,8 +590802,6 @@ extension on _StringsKo {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -604404,8 +604200,6 @@ extension on _StringsNl {
             'Tag "${name}" verwijderd van ${n} video(\'s).';
       case 'batch_tag_title':
         return 'Tags beheren';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Verder lezen';
       case 'book_convert_blocked_already':
@@ -604869,8 +604663,6 @@ extension on _StringsNl {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -604900,8 +604692,6 @@ extension on _StringsNl {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -612253,8 +612043,6 @@ extension on _StringsNl {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -625699,8 +625487,6 @@ extension on _StringsPtBr {
             'Tag "${name}" removida de ${n} vídeo(s).';
       case 'batch_tag_title':
         return 'Gerenciar tags';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Continuar lendo';
       case 'book_convert_blocked_already':
@@ -626164,8 +625950,6 @@ extension on _StringsPtBr {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -626195,8 +625979,6 @@ extension on _StringsPtBr {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -633541,8 +633323,6 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -646987,8 +646767,6 @@ extension on _StringsRu {
             'Тег «${name}» удалён из видео (${n}).';
       case 'batch_tag_title':
         return 'Управление тегами';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Продолжить чтение';
       case 'book_convert_blocked_already':
@@ -647453,8 +647231,6 @@ extension on _StringsRu {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -647484,8 +647260,6 @@ extension on _StringsRu {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -654833,8 +654607,6 @@ extension on _StringsRu {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -668261,8 +668033,6 @@ extension on _StringsTh {
             'ลบแท็ก "${name}" จากวิดีโอ ${n} รายการแล้ว';
       case 'batch_tag_title':
         return 'จัดการแท็ก';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'อ่านต่อ';
       case 'book_convert_blocked_already':
@@ -668725,8 +668495,6 @@ extension on _StringsTh {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -668756,8 +668524,6 @@ extension on _StringsTh {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -676090,8 +675856,6 @@ extension on _StringsTh {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -689519,8 +689283,6 @@ extension on _StringsTr {
             '${n} videodan "${name}" etiketi kaldırıldı.';
       case 'batch_tag_title':
         return 'Etiketleri Yönet';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Okumaya devam et';
       case 'book_convert_blocked_already':
@@ -689986,8 +689748,6 @@ extension on _StringsTr {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -690017,8 +689777,6 @@ extension on _StringsTr {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -697360,8 +697118,6 @@ extension on _StringsTr {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -710790,8 +710546,6 @@ extension on _StringsVi {
             'Đã xóa nhãn "${name}" khỏi ${n} video.';
       case 'batch_tag_title':
         return 'Quản lý thẻ';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return 'Đọc tiếp';
       case 'book_convert_blocked_already':
@@ -711254,8 +711008,6 @@ extension on _StringsVi {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -711285,8 +711037,6 @@ extension on _StringsVi {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -718622,8 +718372,6 @@ extension on _StringsVi {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -731992,8 +731740,6 @@ extension on _StringsZhCn {
             '已从 ${n} 个视频移除标签「${name}」。';
       case 'batch_tag_title':
         return '批量管理标签';
-      case 'book_continue_queue':
-        return '也在读';
       case 'book_continue_reading':
         return '继续阅读';
       case 'book_convert_blocked_already':
@@ -732452,8 +732198,6 @@ extension on _StringsZhCn {
         return '封面已更新';
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) => '同时删除该合集的 ${n} 个下载订阅';
-      case 'collection_detail_continue':
-        return '继续';
       case 'collection_detail_edit_tags':
         return '编辑标签';
       case 'collection_detail_empty_hint':
@@ -732483,8 +732227,6 @@ extension on _StringsZhCn {
         return '阅读时间';
       case 'collection_detail_sort_volume':
         return '卷号';
-      case 'collection_detail_start':
-        return '开始';
       case 'collection_detail_view_grid':
         return '网格';
       case 'collection_detail_view_list':
@@ -739742,8 +739484,6 @@ extension on _StringsZhCn {
         return ({required Object n}) => '第 ${n} 轨';
       case 'music_continue_listening':
         return '继续收听';
-      case 'music_continue_open_album':
-        return '打开专辑';
       case 'music_crossfade_continuous_hint':
         return '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
       case 'music_crossfade_continuous_title':
@@ -753006,8 +752746,6 @@ extension on _StringsZhHk {
             '已從 ${n} 個影片移除標籤「${name}」。';
       case 'batch_tag_title':
         return '批量管理標籤';
-      case 'book_continue_queue':
-        return 'Also reading';
       case 'book_continue_reading':
         return '繼續閱讀';
       case 'book_convert_blocked_already':
@@ -753467,8 +753205,6 @@ extension on _StringsZhHk {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -753498,8 +753234,6 @@ extension on _StringsZhHk {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -760787,8 +760521,6 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Track ${n}';
       case 'music_continue_listening':
         return 'Continue listening';
-      case 'music_continue_open_album':
-        return 'Open album';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
