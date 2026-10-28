@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173808 (10224 per locale)
+/// Strings: 173876 (10228 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -13408,6 +13408,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Default subtitle language';
   String get video_setting_jimaku_default_language_hint =>
       'Defaults to the video\'s own language (audio track / scraped metadata). Pick one to always prefer that language instead.';
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   String get video_setting_lock_window_aspect => 'Lock window to video aspect';
   String get video_setting_long_press_speed => 'Long-press speed';
   String get video_setting_long_press_speed_hint =>
@@ -37282,6 +37288,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'يتبع لغة الفيديو افتراضياً (مسار الصوت / البيانات الوصفية المكشوطة). اختر لغة لتفضيلها دائماً بدلاً من ذلك.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => 'قفل النافذة على نسبة الفيديو';
   @override
@@ -62427,6 +62443,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Standardmäßig wird die eigene Sprache des Videos verwendet (Audiospur / gescrapte Metadaten). Wählen Sie eine aus, um stattdessen immer diese Sprache zu bevorzugen.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Fenster auf Videoverhältnis sperren';
@@ -87650,6 +87676,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Por defecto usa el idioma propio del vídeo (pista de audio / metadatos obtenidos). Elija uno para siempre preferir ese idioma.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Bloquear la ventana a la proporción del vídeo';
@@ -112952,6 +112988,16 @@ class _StringsFr extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Par défaut la langue propre de la vidéo (piste audio / métadonnées récupérées). Choisissez-en une pour toujours préférer cette langue.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Verrouiller la fenêtre au format de la vidéo';
   @override
@@ -137962,6 +138008,16 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Default ke bahasa video itu sendiri (trek audio / metadata scrape). Pilih satu untuk selalu mengutamakan bahasa tersebut.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => 'Kunci jendela ke rasio video';
   @override
@@ -163077,6 +163133,16 @@ class _StringsIt extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Predefinito sulla lingua propria del video (traccia audio / metadati ottenuti). Scegline una per preferire sempre quella lingua.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Blocca la finestra sulle proporzioni del video';
   @override
@@ -187294,6 +187360,16 @@ class _StringsJa extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'デフォルトでは動画自体の言語（音声トラック/スクレイプされたメタデータ）を使用します。特定の言語を選択すると、常にその言語が優先されます。';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => 'ウィンドウを動画の比率に固定';
   @override
   String get video_setting_long_press_speed => '長押し倍速';
@@ -211432,6 +211508,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       '기본적으로 동영상 자체 언어(오디오 트랙 / 스크랩된 메타데이터)를 사용합니다. 항상 특정 언어를 선호하려면 선택하세요.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => '창을 비디오 비율로 고정';
   @override
@@ -236430,6 +236516,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Standaard de eigen taal van de video (audiotrack / gescrapete metadata). Kies er een om die taal altijd te prefereren.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Venster vergrendelen op videoverhouding';
@@ -261572,6 +261668,16 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Padrão é o idioma do próprio vídeo (faixa de áudio / metadados buscados). Escolha um para sempre preferir esse idioma.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Travar janela na proporção do vídeo';
   @override
@@ -286668,6 +286774,16 @@ class _StringsRu extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'По умолчанию используется язык видео (аудиодорожка / метаданные скрейпинга). Выберите конкретный язык, чтобы всегда предпочитать его.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Окно по соотношению сторон видео';
   @override
@@ -311479,6 +311595,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'ค่าเริ่มต้นจะใช้ภาษาของวิดีโอ (แทร็กเสียง / ข้อมูลที่สแกนได้) เลือกภาษาเพื่อให้ใช้ภาษานั้นเสมอแทน';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'ล็อกหน้าต่างตามอัตราส่วนวิดีโอ';
@@ -336438,6 +336564,16 @@ class _StringsTr extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Varsayılan olarak videonun kendi dilini (ses parçası / taranan meta veriler) kullanır. Her zaman o dili tercih etmek için birini seçin.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect =>
       'Pencereyi video oranına kilitle';
   @override
@@ -361352,6 +361488,16 @@ class _StringsVi extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       'Mặc định theo ngôn ngữ của video (bản âm thanh / siêu dữ liệu quét). Chọn một ngôn ngữ để luôn ưu tiên ngôn ngữ đó thay thế.';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => 'Khóa cửa sổ theo tỷ lệ video';
   @override
   String get video_setting_long_press_speed => 'Tốc độ khi nhấn giữ';
@@ -384330,6 +384476,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       '默认跟随视频自身的语言（音轨 / 刮削元数据）。选定某个语言则始终优先它。';
+  @override
+  String get video_setting_jump_pill_auto_hide => '回跳胶囊自动隐藏';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      '跳转后过这么久就不再显示「返回跳转前位置」胶囊，下次跳转再出现';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => '不隐藏';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds} 秒';
   @override
   String get video_setting_lock_window_aspect => '锁定窗口为视频比例';
   @override
@@ -407779,6 +407935,16 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_jimaku_default_language_hint =>
       '預設跟隨影片自身的語言（音軌 / 刮削元數據）。選定某個語言則始終優先它。';
   @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
+  @override
   String get video_setting_lock_window_aspect => '鎖定視窗為影片比例';
   @override
   String get video_setting_long_press_speed => '長按倍速';
@@ -429226,6 +429392,14 @@ extension on _StringsEn {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Defaults to the video\'s own language (audio track / scraped metadata). Pick one to always prefer that language instead.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Lock window to video aspect';
       case 'video_setting_long_press_speed':
@@ -450461,6 +450635,14 @@ extension on _StringsAr {
         return 'لغة الترجمة الافتراضية';
       case 'video_setting_jimaku_default_language_hint':
         return 'يتبع لغة الفيديو افتراضياً (مسار الصوت / البيانات الوصفية المكشوطة). اختر لغة لتفضيلها دائماً بدلاً من ذلك.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'قفل النافذة على نسبة الفيديو';
       case 'video_setting_long_press_speed':
@@ -471771,6 +471953,14 @@ extension on _StringsDe {
         return 'Standard-Untertitelsprache';
       case 'video_setting_jimaku_default_language_hint':
         return 'Standardmäßig wird die eigene Sprache des Videos verwendet (Audiospur / gescrapte Metadaten). Wählen Sie eine aus, um stattdessen immer diese Sprache zu bevorzugen.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Fenster auf Videoverhältnis sperren';
       case 'video_setting_long_press_speed':
@@ -493066,6 +493256,14 @@ extension on _StringsEs {
         return 'Idioma de subtítulos predeterminado';
       case 'video_setting_jimaku_default_language_hint':
         return 'Por defecto usa el idioma propio del vídeo (pista de audio / metadatos obtenidos). Elija uno para siempre preferir ese idioma.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Bloquear la ventana a la proporción del vídeo';
       case 'video_setting_long_press_speed':
@@ -514378,6 +514576,14 @@ extension on _StringsFr {
         return 'Langue de sous-titres par défaut';
       case 'video_setting_jimaku_default_language_hint':
         return 'Par défaut la langue propre de la vidéo (piste audio / métadonnées récupérées). Choisissez-en une pour toujours préférer cette langue.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Verrouiller la fenêtre au format de la vidéo';
       case 'video_setting_long_press_speed':
@@ -535635,6 +535841,14 @@ extension on _StringsId {
         return 'Bahasa subtitle default';
       case 'video_setting_jimaku_default_language_hint':
         return 'Default ke bahasa video itu sendiri (trek audio / metadata scrape). Pilih satu untuk selalu mengutamakan bahasa tersebut.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Kunci jendela ke rasio video';
       case 'video_setting_long_press_speed':
@@ -556925,6 +557139,14 @@ extension on _StringsIt {
         return 'Lingua sottotitoli predefinita';
       case 'video_setting_jimaku_default_language_hint':
         return 'Predefinito sulla lingua propria del video (traccia audio / metadati ottenuti). Scegline una per preferire sempre quella lingua.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Blocca la finestra sulle proporzioni del video';
       case 'video_setting_long_press_speed':
@@ -578097,6 +578319,14 @@ extension on _StringsJa {
         return 'デフォルト字幕言語';
       case 'video_setting_jimaku_default_language_hint':
         return 'デフォルトでは動画自体の言語（音声トラック/スクレイプされたメタデータ）を使用します。特定の言語を選択すると、常にその言語が優先されます。';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'ウィンドウを動画の比率に固定';
       case 'video_setting_long_press_speed':
@@ -599264,6 +599494,14 @@ extension on _StringsKo {
         return '기본 자막 언어';
       case 'video_setting_jimaku_default_language_hint':
         return '기본적으로 동영상 자체 언어(오디오 트랙 / 스크랩된 메타데이터)를 사용합니다. 항상 특정 언어를 선호하려면 선택하세요.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return '창을 비디오 비율로 고정';
       case 'video_setting_long_press_speed':
@@ -620542,6 +620780,14 @@ extension on _StringsNl {
         return 'Standaard ondertiteltaal';
       case 'video_setting_jimaku_default_language_hint':
         return 'Standaard de eigen taal van de video (audiotrack / gescrapete metadata). Kies er een om die taal altijd te prefereren.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Venster vergrendelen op videoverhouding';
       case 'video_setting_long_press_speed':
@@ -641822,6 +642068,14 @@ extension on _StringsPtBr {
         return 'Idioma padrão de legenda';
       case 'video_setting_jimaku_default_language_hint':
         return 'Padrão é o idioma do próprio vídeo (faixa de áudio / metadados buscados). Escolha um para sempre preferir esse idioma.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Travar janela na proporção do vídeo';
       case 'video_setting_long_press_speed':
@@ -663107,6 +663361,14 @@ extension on _StringsRu {
         return 'Язык субтитров по умолчанию';
       case 'video_setting_jimaku_default_language_hint':
         return 'По умолчанию используется язык видео (аудиодорожка / метаданные скрейпинга). Выберите конкретный язык, чтобы всегда предпочитать его.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Окно по соотношению сторон видео';
       case 'video_setting_long_press_speed':
@@ -684348,6 +684610,14 @@ extension on _StringsTh {
         return 'ภาษาคำบรรยายเริ่มต้น';
       case 'video_setting_jimaku_default_language_hint':
         return 'ค่าเริ่มต้นจะใช้ภาษาของวิดีโอ (แทร็กเสียง / ข้อมูลที่สแกนได้) เลือกภาษาเพื่อให้ใช้ภาษานั้นเสมอแทน';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'ล็อกหน้าต่างตามอัตราส่วนวิดีโอ';
       case 'video_setting_long_press_speed':
@@ -705618,6 +705888,14 @@ extension on _StringsTr {
         return 'Varsayılan altyazı dili';
       case 'video_setting_jimaku_default_language_hint':
         return 'Varsayılan olarak videonun kendi dilini (ses parçası / taranan meta veriler) kullanır. Her zaman o dili tercih etmek için birini seçin.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Pencereyi video oranına kilitle';
       case 'video_setting_long_press_speed':
@@ -726874,6 +727152,14 @@ extension on _StringsVi {
         return 'Ngôn ngữ phụ đề mặc định';
       case 'video_setting_jimaku_default_language_hint':
         return 'Mặc định theo ngôn ngữ của video (bản âm thanh / siêu dữ liệu quét). Chọn một ngôn ngữ để luôn ưu tiên ngôn ngữ đó thay thế.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Khóa cửa sổ theo tỷ lệ video';
       case 'video_setting_long_press_speed':
@@ -747898,6 +748184,14 @@ extension on _StringsZhCn {
         return '默认字幕语言';
       case 'video_setting_jimaku_default_language_hint':
         return '默认跟随视频自身的语言（音轨 / 刮削元数据）。选定某个语言则始终优先它。';
+      case 'video_setting_jump_pill_auto_hide':
+        return '回跳胶囊自动隐藏';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return '跳转后过这么久就不再显示「返回跳转前位置」胶囊，下次跳转再出现';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return '不隐藏';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds} 秒';
       case 'video_setting_lock_window_aspect':
         return '锁定窗口为视频比例';
       case 'video_setting_long_press_speed':
@@ -768981,6 +769275,14 @@ extension on _StringsZhHk {
         return '預設字幕語言';
       case 'video_setting_jimaku_default_language_hint':
         return '預設跟隨影片自身的語言（音軌 / 刮削元數據）。選定某個語言則始終優先它。';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return '鎖定視窗為影片比例';
       case 'video_setting_long_press_speed':
