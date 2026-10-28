@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173825 (10225 per locale)
+/// Strings: 173944 (10232 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8563,8 +8563,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
   String get onboarding_review_anki_title => 'Anki';
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   String get onboarding_review_fushi_title => 'Fushi review';
@@ -10710,6 +10708,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Switch fields (${n})';
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
   String get srs_note_types_front => 'Front template';
   String get srs_note_types_insert_field => 'Insert field';
   String get srs_note_types_kind => 'Kind';
@@ -10857,6 +10861,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_max_interval => 'Maximum interval (days)';
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  String get srs_settings_new_order => 'New card order';
+  String get srs_settings_new_order_frequency => 'By frequency';
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  String get srs_settings_new_order_position => 'By position';
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   String get srs_settings_new_per_day => 'New cards per day';
   String get srs_settings_new_per_day_hint =>
       'When many reviews are due, Fushi automatically shows fewer new cards';
@@ -11931,13 +11942,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_progress_collections => 'Syncing collections';
   String get sync_progress_deletions => 'Syncing deletions';
   String get sync_progress_dictionaries => 'Syncing dictionaries';
-  String get sync_progress_finishing => 'Finishing up';
   String get sync_progress_fonts => 'Syncing fonts';
   String get sync_progress_local_audio => 'Syncing local audio';
   String get sync_progress_pending_mines => 'Syncing pending cards';
   String get sync_progress_preparing => 'Preparing sync';
   String get sync_progress_reading => 'Syncing reading data';
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   String get sync_progress_videos => 'Syncing videos';
   String get sync_role_locked_by_client =>
@@ -28916,9 +28925,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -32664,6 +32670,16 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -32909,6 +32925,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -34791,8 +34819,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'مزامنة القواميس';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'مزامنة الصوت المحلي';
@@ -34802,8 +34828,6 @@ class _StringsAr extends _StringsEn {
   String get sync_progress_preparing => 'جارٍ التحضير للمزامنة';
   @override
   String get sync_progress_reading => 'مزامنة بيانات القراءة';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -53962,9 +53986,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -57753,6 +57774,16 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -57998,6 +58029,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -59896,8 +59939,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Wörterbücher werden synchronisiert';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokales Audio wird synchronisiert';
@@ -59907,8 +59948,6 @@ class _StringsDe extends _StringsEn {
   String get sync_progress_preparing => 'Synchronisierung wird vorbereitet';
   @override
   String get sync_progress_reading => 'Lesedaten werden synchronisiert';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -79168,9 +79207,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -82965,6 +83001,16 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -83210,6 +83256,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -85113,8 +85171,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizando diccionarios';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando audio local';
@@ -85124,8 +85180,6 @@ class _StringsEs extends _StringsEn {
   String get sync_progress_preparing => 'Preparando sincronización';
   @override
   String get sync_progress_reading => 'Sincronizando datos de lectura';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -104459,9 +104513,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -108264,6 +108315,16 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -108509,6 +108570,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -110409,8 +110482,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Synchronisation des dictionnaires';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Synchronisation de l\'audio local';
@@ -110420,8 +110491,6 @@ class _StringsFr extends _StringsEn {
   String get sync_progress_preparing => 'Préparation de la synchronisation';
   @override
   String get sync_progress_reading => 'Synchronisation des données de lecture';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -129562,9 +129631,6 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -133327,6 +133393,16 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -133572,6 +133648,18 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -135459,8 +135547,6 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Menyinkronkan kamus';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Menyinkronkan audio lokal';
@@ -135470,8 +135556,6 @@ class _StringsId extends _StringsEn {
   String get sync_progress_preparing => 'Menyiapkan sinkronisasi';
   @override
   String get sync_progress_reading => 'Menyinkronkan data baca';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -154638,9 +154722,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -158432,6 +158513,16 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -158677,6 +158768,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -160570,8 +160673,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizzazione dizionari';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizzazione audio locale';
@@ -160581,8 +160682,6 @@ class _StringsIt extends _StringsEn {
   String get sync_progress_preparing => 'Preparazione sincronizzazione';
   @override
   String get sync_progress_reading => 'Sincronizzazione dati di lettura';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -179148,9 +179247,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -182827,6 +182923,16 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -183072,6 +183178,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -184906,8 +185024,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '辞書を同期中';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'ローカル音声を同期中';
@@ -184917,8 +185033,6 @@ class _StringsJa extends _StringsEn {
   String get sync_progress_preparing => '同期を準備中';
   @override
   String get sync_progress_reading => '読書データを同期中';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -203277,9 +203391,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -206958,6 +207069,16 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -207203,6 +207324,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -209038,8 +209171,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '사전 동기화 중';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '로컬 오디오 동기화 중';
@@ -209049,8 +209180,6 @@ class _StringsKo extends _StringsEn {
   String get sync_progress_preparing => '동기화 준비 중';
   @override
   String get sync_progress_reading => '독서 데이터 동기화 중';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -228012,9 +228141,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -231795,6 +231921,16 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -232040,6 +232176,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -233936,8 +234084,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Woordenboeken synchroniseren';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokale audio synchroniseren';
@@ -233947,8 +234093,6 @@ class _StringsNl extends _StringsEn {
   String get sync_progress_preparing => 'Synchronisatie voorbereiden';
   @override
   String get sync_progress_reading => 'Leesgegevens synchroniseren';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -253143,9 +253287,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -256931,6 +257072,16 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -257176,6 +257327,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -259067,8 +259230,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizando dicionários';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando áudio local';
@@ -259078,8 +259239,6 @@ class _StringsPtBr extends _StringsEn {
   String get sync_progress_preparing => 'Preparando sincronização';
   @override
   String get sync_progress_reading => 'Sincronizando dados de leitura';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -278256,9 +278415,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -282044,6 +282200,16 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -282289,6 +282455,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -284181,8 +284359,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Синхронизация словарей';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Синхронизация локального аудио';
@@ -284192,8 +284368,6 @@ class _StringsRu extends _StringsEn {
   String get sync_progress_preparing => 'Подготовка синхронизации';
   @override
   String get sync_progress_reading => 'Синхронизация данных чтения';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -303158,9 +303332,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -306909,6 +307080,16 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -307154,6 +307335,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -309038,8 +309231,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'กำลังซิงค์พจนานุกรม';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'กำลังซิงค์เสียงในเครื่อง';
@@ -309049,8 +309240,6 @@ class _StringsTh extends _StringsEn {
   String get sync_progress_preparing => 'กำลังเตรียมซิงค์';
   @override
   String get sync_progress_reading => 'กำลังซิงค์ข้อมูลการอ่าน';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -328075,9 +328264,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -331839,6 +332025,16 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -332084,6 +332280,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -333976,8 +334184,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sözlükler eşitleniyor';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Yerel ses eşitleniyor';
@@ -333987,8 +334193,6 @@ class _StringsTr extends _StringsEn {
   String get sync_progress_preparing => 'Senkronizasyon hazırlanıyor';
   @override
   String get sync_progress_reading => 'Okuma verileri eşitleniyor';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -353009,9 +353213,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -356765,6 +356966,16 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -357010,6 +357221,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -358898,8 +359121,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Đang đồng bộ từ điển';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Đang đồng bộ âm thanh cục bộ';
@@ -358909,8 +359130,6 @@ class _StringsVi extends _StringsEn {
   String get sync_progress_preparing => 'Đang chuẩn bị đồng bộ';
   @override
   String get sync_progress_reading => 'Đang đồng bộ dữ liệu đọc';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -376713,9 +376932,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => '改用 Anki…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
-  @override
   String get onboarding_review_fushi_desc =>
       '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
   @override
@@ -380182,6 +380398,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_flag_fields_hint => '填任意字符即开启对应的卡面样式';
   @override
+  String srs_note_types_freq_chip({required Object name}) => '词频排序：${name}';
+  @override
+  String get srs_note_types_freq_field => '词频序字段';
+  @override
+  String get srs_note_types_freq_field_auto => '自动（FreqSort）';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      '牌组按词频出新卡时，读这个字段里的名次（越小越常见）。「自动」= 用名为 FreqSort 的字段。';
+  @override
   String get srs_note_types_front => '正面模板';
   @override
   String get srs_note_types_insert_field => '插入字段';
@@ -380405,6 +380630,18 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_max_interval => '最大间隔（天）';
   @override
   String get srs_settings_max_interval_hint => '任何卡的下次复习都不会超过这么多天';
+  @override
+  String get srs_settings_new_order => '新卡顺序';
+  @override
+  String get srs_settings_new_order_frequency => '按词频';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      '常用词先出：按制卡时存在卡上的词频名次（FreqSort）。名次随笔记同步，每台设备顺序一致。没有名次的卡排在后面，按位置。';
+  @override
+  String get srs_settings_new_order_position => '按位置';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      '按「按词频重排新卡」或 Anki 导入写下的位置；没排过的卡按添加先后。';
   @override
   String get srs_settings_new_per_day => '每日新卡上限';
   @override
@@ -382132,8 +382369,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '同步词典';
   @override
-  String get sync_progress_finishing => '正在收尾';
-  @override
   String get sync_progress_fonts => '同步字体';
   @override
   String get sync_progress_local_audio => '同步本地音频';
@@ -382143,8 +382378,6 @@ class _StringsZhCn extends _StringsEn {
   String get sync_progress_preparing => '正在准备同步';
   @override
   String get sync_progress_reading => '同步阅读数据';
-  @override
-  String get sync_progress_remote_listing => '正在读取远端文件清单';
   @override
   String get sync_progress_statistics => '同步统计与收藏';
   @override
@@ -399821,9 +400054,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
-  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -403449,6 +403679,16 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -403694,6 +403934,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -405497,8 +405749,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '正在同步詞典';
   @override
-  String get sync_progress_finishing => 'Finishing up';
-  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '正在同步本機音訊';
@@ -405508,8 +405758,6 @@ class _StringsZhHk extends _StringsEn {
   String get sync_progress_preparing => '正在準備同步';
   @override
   String get sync_progress_reading => '正在同步閱讀資料';
-  @override
-  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -422026,8 +422274,6 @@ extension on _StringsEn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -425337,6 +425583,14 @@ extension on _StringsEn {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -425544,6 +425798,16 @@ extension on _StringsEn {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -427195,8 +427459,6 @@ extension on _StringsEn {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Syncing dictionaries';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -427207,8 +427469,6 @@ extension on _StringsEn {
         return 'Preparing sync';
       case 'sync_progress_reading':
         return 'Syncing reading data';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -443268,8 +443528,6 @@ extension on _StringsAr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -446579,6 +446837,14 @@ extension on _StringsAr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -446786,6 +447052,16 @@ extension on _StringsAr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -448432,8 +448708,6 @@ extension on _StringsAr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'مزامنة القواميس';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -448444,8 +448718,6 @@ extension on _StringsAr {
         return 'جارٍ التحضير للمزامنة';
       case 'sync_progress_reading':
         return 'مزامنة بيانات القراءة';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -464564,8 +464836,6 @@ extension on _StringsDe {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -467877,6 +468147,14 @@ extension on _StringsDe {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -468084,6 +468362,16 @@ extension on _StringsDe {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -469737,8 +470025,6 @@ extension on _StringsDe {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Wörterbücher werden synchronisiert';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -469749,8 +470035,6 @@ extension on _StringsDe {
         return 'Synchronisierung wird vorbereitet';
       case 'sync_progress_reading':
         return 'Lesedaten werden synchronisiert';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -485864,8 +486148,6 @@ extension on _StringsEs {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -489179,6 +489461,14 @@ extension on _StringsEs {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -489386,6 +489676,16 @@ extension on _StringsEs {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -491038,8 +491338,6 @@ extension on _StringsEs {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando diccionarios';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -491050,8 +491348,6 @@ extension on _StringsEs {
         return 'Preparando sincronización';
       case 'sync_progress_reading':
         return 'Sincronizando datos de lectura';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -507178,8 +507474,6 @@ extension on _StringsFr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -510492,6 +510786,14 @@ extension on _StringsFr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -510699,6 +511001,16 @@ extension on _StringsFr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -512350,8 +512662,6 @@ extension on _StringsFr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Synchronisation des dictionnaires';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -512362,8 +512672,6 @@ extension on _StringsFr {
         return 'Préparation de la synchronisation';
       case 'sync_progress_reading':
         return 'Synchronisation des données de lecture';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -528454,8 +528762,6 @@ extension on _StringsId {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -531765,6 +532071,14 @@ extension on _StringsId {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -531972,6 +532286,16 @@ extension on _StringsId {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -533623,8 +533947,6 @@ extension on _StringsId {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Menyinkronkan kamus';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -533635,8 +533957,6 @@ extension on _StringsId {
         return 'Menyiapkan sinkronisasi';
       case 'sync_progress_reading':
         return 'Menyinkronkan data baca';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -549734,8 +550054,6 @@ extension on _StringsIt {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -553047,6 +553365,14 @@ extension on _StringsIt {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -553254,6 +553580,16 @@ extension on _StringsIt {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -554906,8 +555242,6 @@ extension on _StringsIt {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizzazione dizionari';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -554918,8 +555252,6 @@ extension on _StringsIt {
         return 'Preparazione sincronizzazione';
       case 'sync_progress_reading':
         return 'Sincronizzazione dati di lettura';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -570954,8 +571286,6 @@ extension on _StringsJa {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -574263,6 +574593,14 @@ extension on _StringsJa {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -574470,6 +574808,16 @@ extension on _StringsJa {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -576111,8 +576459,6 @@ extension on _StringsJa {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '辞書を同期中';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -576123,8 +576469,6 @@ extension on _StringsJa {
         return '同期を準備中';
       case 'sync_progress_reading':
         return '読書データを同期中';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -592118,8 +592462,6 @@ extension on _StringsKo {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -595428,6 +595770,14 @@ extension on _StringsKo {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -595635,6 +595985,16 @@ extension on _StringsKo {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -597277,8 +597637,6 @@ extension on _StringsKo {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '사전 동기화 중';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -597289,8 +597647,6 @@ extension on _StringsKo {
         return '동기화 준비 중';
       case 'sync_progress_reading':
         return '독서 데이터 동기화 중';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -613370,8 +613726,6 @@ extension on _StringsNl {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -616683,6 +617037,14 @@ extension on _StringsNl {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -616890,6 +617252,16 @@ extension on _StringsNl {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -618541,8 +618913,6 @@ extension on _StringsNl {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Woordenboeken synchroniseren';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -618553,8 +618923,6 @@ extension on _StringsNl {
         return 'Synchronisatie voorbereiden';
       case 'sync_progress_reading':
         return 'Leesgegevens synchroniseren';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -634656,8 +635024,6 @@ extension on _StringsPtBr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -637969,6 +638335,14 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -638176,6 +638550,16 @@ extension on _StringsPtBr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -639826,8 +640210,6 @@ extension on _StringsPtBr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando dicionários';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -639838,8 +640220,6 @@ extension on _StringsPtBr {
         return 'Preparando sincronização';
       case 'sync_progress_reading':
         return 'Sincronizando dados de leitura';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -655946,8 +656326,6 @@ extension on _StringsRu {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -659259,6 +659637,14 @@ extension on _StringsRu {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -659466,6 +659852,16 @@ extension on _StringsRu {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -661117,8 +661513,6 @@ extension on _StringsRu {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Синхронизация словарей';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -661129,8 +661523,6 @@ extension on _StringsRu {
         return 'Подготовка синхронизации';
       case 'sync_progress_reading':
         return 'Синхронизация данных чтения';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -677198,8 +677590,6 @@ extension on _StringsTh {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -680509,6 +680899,14 @@ extension on _StringsTh {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -680716,6 +681114,16 @@ extension on _StringsTh {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -682365,8 +682773,6 @@ extension on _StringsTh {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'กำลังซิงค์พจนานุกรม';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -682377,8 +682783,6 @@ extension on _StringsTh {
         return 'กำลังเตรียมซิงค์';
       case 'sync_progress_reading':
         return 'กำลังซิงค์ข้อมูลการอ่าน';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -698466,8 +698870,6 @@ extension on _StringsTr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -701777,6 +702179,14 @@ extension on _StringsTr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -701984,6 +702394,16 @@ extension on _StringsTr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -703633,8 +704053,6 @@ extension on _StringsTr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sözlükler eşitleniyor';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -703645,8 +704063,6 @@ extension on _StringsTr {
         return 'Senkronizasyon hazırlanıyor';
       case 'sync_progress_reading':
         return 'Okuma verileri eşitleniyor';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -719727,8 +720143,6 @@ extension on _StringsVi {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -723040,6 +723454,14 @@ extension on _StringsVi {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -723247,6 +723669,16 @@ extension on _StringsVi {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -724897,8 +725329,6 @@ extension on _StringsVi {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Đang đồng bộ từ điển';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -724909,8 +725339,6 @@ extension on _StringsVi {
         return 'Đang chuẩn bị đồng bộ';
       case 'sync_progress_reading':
         return 'Đang đồng bộ dữ liệu đọc';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -740835,8 +741263,6 @@ extension on _StringsZhCn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return '改用 Anki…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
       case 'onboarding_review_fushi_desc':
         return '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
       case 'onboarding_review_fushi_title':
@@ -744110,6 +744536,14 @@ extension on _StringsZhCn {
         return ({required Object n}) => '开关字段（${n}）';
       case 'srs_note_types_flag_fields_hint':
         return '填任意字符即开启对应的卡面样式';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => '词频排序：${name}';
+      case 'srs_note_types_freq_field':
+        return '词频序字段';
+      case 'srs_note_types_freq_field_auto':
+        return '自动（FreqSort）';
+      case 'srs_note_types_freq_field_hint':
+        return '牌组按词频出新卡时，读这个字段里的名次（越小越常见）。「自动」= 用名为 FreqSort 的字段。';
       case 'srs_note_types_front':
         return '正面模板';
       case 'srs_note_types_insert_field':
@@ -744315,6 +744749,16 @@ extension on _StringsZhCn {
         return '最大间隔（天）';
       case 'srs_settings_max_interval_hint':
         return '任何卡的下次复习都不会超过这么多天';
+      case 'srs_settings_new_order':
+        return '新卡顺序';
+      case 'srs_settings_new_order_frequency':
+        return '按词频';
+      case 'srs_settings_new_order_frequency_hint':
+        return '常用词先出：按制卡时存在卡上的词频名次（FreqSort）。名次随笔记同步，每台设备顺序一致。没有名次的卡排在后面，按位置。';
+      case 'srs_settings_new_order_position':
+        return '按位置';
+      case 'srs_settings_new_order_position_hint':
+        return '按「按词频重排新卡」或 Anki 导入写下的位置；没排过的卡按添加先后。';
       case 'srs_settings_new_per_day':
         return '每日新卡上限';
       case 'srs_settings_new_per_day_hint':
@@ -745951,8 +746395,6 @@ extension on _StringsZhCn {
         return '同步删除记录';
       case 'sync_progress_dictionaries':
         return '同步词典';
-      case 'sync_progress_finishing':
-        return '正在收尾';
       case 'sync_progress_fonts':
         return '同步字体';
       case 'sync_progress_local_audio':
@@ -745963,8 +746405,6 @@ extension on _StringsZhCn {
         return '正在准备同步';
       case 'sync_progress_reading':
         return '同步阅读数据';
-      case 'sync_progress_remote_listing':
-        return '正在读取远端文件清单';
       case 'sync_progress_statistics':
         return '同步统计与收藏';
       case 'sync_progress_videos':
@@ -761884,8 +762324,6 @@ extension on _StringsZhHk {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -765191,6 +765629,14 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -765398,6 +765844,16 @@ extension on _StringsZhHk {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -767037,8 +767493,6 @@ extension on _StringsZhHk {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '正在同步詞典';
-      case 'sync_progress_finishing':
-        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -767049,8 +767503,6 @@ extension on _StringsZhHk {
         return '正在準備同步';
       case 'sync_progress_reading':
         return '正在同步閱讀資料';
-      case 'sync_progress_remote_listing':
-        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
