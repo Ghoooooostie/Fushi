@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173842 (10226 per locale)
+/// Strings: 173859 (10227 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2426,6 +2426,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String batch_tag_removed_video({required Object name, required Object n}) =>
       'Removed tag "${name}" from ${n} video(s).';
   String get batch_tag_title => 'Manage tags';
+  String get book_continue_queue => 'Also reading';
   String get book_continue_reading => 'Continue reading';
   String get book_convert_blocked_already =>
       'This book is already in that format.';
@@ -18458,6 +18459,8 @@ class _StringsAr extends _StringsEn {
       'تمت إزالة وسم "${name}" من ${n} فيديو.';
   @override
   String get batch_tag_title => 'إدارة العلامات';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => 'متابعة القراءة';
   @override
@@ -43297,6 +43300,8 @@ class _StringsDe extends _StringsEn {
       'Tag „${name}" von ${n} Video(s) entfernt.';
   @override
   String get batch_tag_title => 'Tags verwalten';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => 'Weiterlesen';
   @override
@@ -68490,6 +68495,8 @@ class _StringsEs extends _StringsEn {
       'Se eliminó la etiqueta "${name}" de ${n} vídeo(s).';
   @override
   String get batch_tag_title => 'Gestionar etiquetas';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => 'Seguir leyendo';
   @override
@@ -93742,6 +93749,8 @@ class _StringsFr extends _StringsEn {
       'Tag « ${name} » retiré de ${n} vidéo(s).';
   @override
   String get batch_tag_title => 'Gérer les balises';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => 'Reprendre la lecture';
   @override
@@ -119014,6 +119023,8 @@ class _StringsId extends _StringsEn {
   @override
   String get batch_tag_title => 'Kelola Tag';
   @override
+  String get book_continue_queue => 'Also reading';
+  @override
   String get book_continue_reading => 'Lanjutkan membaca';
   @override
   String get book_convert_blocked_already =>
@@ -144009,6 +144020,8 @@ class _StringsIt extends _StringsEn {
       'Rimosso tag "${name}" da ${n} video.';
   @override
   String get batch_tag_title => 'Gestisci tag';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => 'Continua a leggere';
   @override
@@ -169020,6 +169033,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get batch_tag_title => 'タグを一括管理';
   @override
+  String get book_continue_queue => 'Also reading';
+  @override
   String get book_continue_reading => '続きを読む';
   @override
   String get book_convert_blocked_already => 'この書籍はすでにその形式です。';
@@ -193116,6 +193131,8 @@ class _StringsKo extends _StringsEn {
       '동영상 ${n}개에서 태그 "${name}" 제거됨.';
   @override
   String get batch_tag_title => '태그 관리';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => '이어 읽기';
   @override
@@ -217411,6 +217428,8 @@ class _StringsNl extends _StringsEn {
       'Tag "${name}" verwijderd van ${n} video(\'s).';
   @override
   String get batch_tag_title => 'Tags beheren';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => 'Verder lezen';
   @override
@@ -242509,6 +242528,8 @@ class _StringsPtBr extends _StringsEn {
       'Tag "${name}" removida de ${n} vídeo(s).';
   @override
   String get batch_tag_title => 'Gerenciar tags';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => 'Continuar lendo';
   @override
@@ -267651,6 +267672,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get batch_tag_title => 'Управление тегами';
   @override
+  String get book_continue_queue => 'Also reading';
+  @override
   String get book_continue_reading => 'Продолжить чтение';
   @override
   String get book_convert_blocked_already => 'Эта книга уже в этом формате.';
@@ -292705,6 +292728,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get batch_tag_title => 'จัดการแท็ก';
   @override
+  String get book_continue_queue => 'Also reading';
+  @override
   String get book_continue_reading => 'อ่านต่อ';
   @override
   String get book_convert_blocked_already => 'หนังสือนี้อยู่ในรูปแบบนั้นแล้ว';
@@ -317514,6 +317539,8 @@ class _StringsTr extends _StringsEn {
       '${n} videodan "${name}" etiketi kaldırıldı.';
   @override
   String get batch_tag_title => 'Etiketleri Yönet';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => 'Okumaya devam et';
   @override
@@ -342484,6 +342511,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get batch_tag_title => 'Quản lý thẻ';
   @override
+  String get book_continue_queue => 'Also reading';
+  @override
   String get book_continue_reading => 'Đọc tiếp';
   @override
   String get book_convert_blocked_already => 'Sách này đã ở định dạng đó rồi.';
@@ -367069,6 +367098,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get batch_tag_title => '批量管理标签';
   @override
+  String get book_continue_queue => '也在读';
+  @override
   String get book_continue_reading => '继续阅读';
   @override
   String get book_convert_blocked_already => '这本书已经是该格式了。';
@@ -389984,6 +390015,8 @@ class _StringsZhHk extends _StringsEn {
       '已從 ${n} 個影片移除標籤「${name}」。';
   @override
   String get batch_tag_title => '批量管理標籤';
+  @override
+  String get book_continue_queue => 'Also reading';
   @override
   String get book_continue_reading => '繼續閱讀';
   @override
@@ -413032,6 +413065,8 @@ extension on _StringsEn {
             'Removed tag "${name}" from ${n} video(s).';
       case 'batch_tag_title':
         return 'Manage tags';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Continue reading';
       case 'book_convert_blocked_already':
@@ -434278,6 +434313,8 @@ extension on _StringsAr {
             'تمت إزالة وسم "${name}" من ${n} فيديو.';
       case 'batch_tag_title':
         return 'إدارة العلامات';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'متابعة القراءة';
       case 'book_convert_blocked_already':
@@ -455539,6 +455576,8 @@ extension on _StringsDe {
             'Tag „${name}" von ${n} Video(s) entfernt.';
       case 'batch_tag_title':
         return 'Tags verwalten';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Weiterlesen';
       case 'book_convert_blocked_already':
@@ -476850,6 +476889,8 @@ extension on _StringsEs {
             'Se eliminó la etiqueta "${name}" de ${n} vídeo(s).';
       case 'batch_tag_title':
         return 'Gestionar etiquetas';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Seguir leyendo';
       case 'book_convert_blocked_already':
@@ -498153,6 +498194,8 @@ extension on _StringsFr {
             'Tag « ${name} » retiré de ${n} vidéo(s).';
       case 'batch_tag_title':
         return 'Gérer les balises';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Reprendre la lecture';
       case 'book_convert_blocked_already':
@@ -519455,6 +519498,8 @@ extension on _StringsId {
             'Menghapus tag "${name}" dari ${n} video.';
       case 'batch_tag_title':
         return 'Kelola Tag';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Lanjutkan membaca';
       case 'book_convert_blocked_already':
@@ -540721,6 +540766,8 @@ extension on _StringsIt {
             'Rimosso tag "${name}" da ${n} video.';
       case 'batch_tag_title':
         return 'Gestisci tag';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Continua a leggere';
       case 'book_convert_blocked_already':
@@ -561989,6 +562036,8 @@ extension on _StringsJa {
             '${n} 本の動画からタグ「${name}」を削除しました。';
       case 'batch_tag_title':
         return 'タグを一括管理';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return '続きを読む';
       case 'book_convert_blocked_already':
@@ -583149,6 +583198,8 @@ extension on _StringsKo {
             '동영상 ${n}개에서 태그 "${name}" 제거됨.';
       case 'batch_tag_title':
         return '태그 관리';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return '이어 읽기';
       case 'book_convert_blocked_already':
@@ -604353,6 +604404,8 @@ extension on _StringsNl {
             'Tag "${name}" verwijderd van ${n} video(\'s).';
       case 'batch_tag_title':
         return 'Tags beheren';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Verder lezen';
       case 'book_convert_blocked_already':
@@ -625646,6 +625699,8 @@ extension on _StringsPtBr {
             'Tag "${name}" removida de ${n} vídeo(s).';
       case 'batch_tag_title':
         return 'Gerenciar tags';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Continuar lendo';
       case 'book_convert_blocked_already':
@@ -646932,6 +646987,8 @@ extension on _StringsRu {
             'Тег «${name}» удалён из видео (${n}).';
       case 'batch_tag_title':
         return 'Управление тегами';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Продолжить чтение';
       case 'book_convert_blocked_already':
@@ -668204,6 +668261,8 @@ extension on _StringsTh {
             'ลบแท็ก "${name}" จากวิดีโอ ${n} รายการแล้ว';
       case 'batch_tag_title':
         return 'จัดการแท็ก';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'อ่านต่อ';
       case 'book_convert_blocked_already':
@@ -689460,6 +689519,8 @@ extension on _StringsTr {
             '${n} videodan "${name}" etiketi kaldırıldı.';
       case 'batch_tag_title':
         return 'Etiketleri Yönet';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Okumaya devam et';
       case 'book_convert_blocked_already':
@@ -710729,6 +710790,8 @@ extension on _StringsVi {
             'Đã xóa nhãn "${name}" khỏi ${n} video.';
       case 'batch_tag_title':
         return 'Quản lý thẻ';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return 'Đọc tiếp';
       case 'book_convert_blocked_already':
@@ -731929,6 +731992,8 @@ extension on _StringsZhCn {
             '已从 ${n} 个视频移除标签「${name}」。';
       case 'batch_tag_title':
         return '批量管理标签';
+      case 'book_continue_queue':
+        return '也在读';
       case 'book_continue_reading':
         return '继续阅读';
       case 'book_convert_blocked_already':
@@ -752941,6 +753006,8 @@ extension on _StringsZhHk {
             '已從 ${n} 個影片移除標籤「${name}」。';
       case 'batch_tag_title':
         return '批量管理標籤';
+      case 'book_continue_queue':
+        return 'Also reading';
       case 'book_continue_reading':
         return '繼續閱讀';
       case 'book_convert_blocked_already':
