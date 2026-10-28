@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173757 (10221 per locale)
+/// Strings: 173774 (10222 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -13952,6 +13952,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Skipped: almost no dialogue (song or clip)';
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   String video_subtitle_ai_estimate({
@@ -38199,6 +38201,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
@@ -63355,6 +63360,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
@@ -88581,6 +88589,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
@@ -113882,6 +113893,9 @@ class _StringsFr extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -138858,6 +138872,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
@@ -163978,6 +163995,9 @@ class _StringsIt extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -188128,6 +188148,9 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'スキップ：歌（OP/ED、MV）と判定されました';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'AIの返答が何度か再試行しても不完全でした';
   @override
@@ -212267,6 +212290,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
@@ -237306,6 +237332,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
@@ -262449,6 +262478,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -287534,6 +287566,9 @@ class _StringsRu extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -312315,6 +312350,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
   @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
@@ -337280,6 +337318,9 @@ class _StringsTr extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -362181,6 +362222,9 @@ class _StringsVi extends _StringsEn {
   String get video_subtitle_ai_episode_skipped_song =>
       'Skipped: judged to be a song (OP/ED, MV)';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete =>
       'the AI reply was incomplete after several retries';
   @override
@@ -385075,6 +385119,9 @@ class _StringsZhCn extends _StringsEn {
       '跳过：几乎没有台词（歌曲或片段）';
   @override
   String get video_subtitle_ai_episode_skipped_song => '跳过：判定为纯歌曲（OP/ED、MV）';
+  @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      '样式取自 ${name}';
   @override
   String get video_subtitle_ai_error_reply_incomplete => 'AI 回复多次不完整';
   @override
@@ -408521,6 +408568,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_ai_episode_skipped_song => '略過：判定為純歌曲（OP/ED、MV）';
   @override
+  String video_subtitle_ai_episode_styled_from({required Object name}) =>
+      'Styles from ${name}';
+  @override
   String get video_subtitle_ai_error_reply_incomplete => 'AI 多次回覆均不完整';
   @override
   String video_subtitle_ai_estimate({
@@ -429884,6 +429934,8 @@ extension on _StringsEn {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -451113,6 +451165,8 @@ extension on _StringsAr {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -472417,6 +472471,8 @@ extension on _StringsDe {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -493706,6 +493762,8 @@ extension on _StringsEs {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -515012,6 +515070,8 @@ extension on _StringsFr {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -536263,6 +536323,8 @@ extension on _StringsId {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -557547,6 +557609,8 @@ extension on _StringsIt {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -578711,6 +578775,8 @@ extension on _StringsJa {
         return 'スキップ：台詞がほとんどありません（歌やクリップ）';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'スキップ：歌（OP/ED、MV）と判定されました';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'AIの返答が何度か再試行しても不完全でした';
       case 'video_subtitle_ai_estimate':
@@ -599874,6 +599940,8 @@ extension on _StringsKo {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -621146,6 +621214,8 @@ extension on _StringsNl {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -642420,6 +642490,8 @@ extension on _StringsPtBr {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -663699,6 +663771,8 @@ extension on _StringsRu {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -684934,6 +685008,8 @@ extension on _StringsTh {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -706198,6 +706274,8 @@ extension on _StringsTr {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -727448,6 +727526,8 @@ extension on _StringsVi {
         return 'Skipped: almost no dialogue (song or clip)';
       case 'video_subtitle_ai_episode_skipped_song':
         return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'the AI reply was incomplete after several retries';
       case 'video_subtitle_ai_estimate':
@@ -748462,6 +748542,8 @@ extension on _StringsZhCn {
         return '跳过：几乎没有台词（歌曲或片段）';
       case 'video_subtitle_ai_episode_skipped_song':
         return '跳过：判定为纯歌曲（OP/ED、MV）';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => '样式取自 ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'AI 回复多次不完整';
       case 'video_subtitle_ai_estimate':
@@ -769540,6 +769622,8 @@ extension on _StringsZhHk {
         return '略過：幾乎沒有台詞（歌曲或片段）';
       case 'video_subtitle_ai_episode_skipped_song':
         return '略過：判定為純歌曲（OP/ED、MV）';
+      case 'video_subtitle_ai_episode_styled_from':
+        return ({required Object name}) => 'Styles from ${name}';
       case 'video_subtitle_ai_error_reply_incomplete':
         return 'AI 多次回覆均不完整';
       case 'video_subtitle_ai_estimate':
