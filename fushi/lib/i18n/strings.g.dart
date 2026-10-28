@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173604 (10212 per locale)
+/// Strings: 173723 (10219 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6034,8 +6034,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_book_downloaded => 'Downloaded';
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  String get kavita_book_mark_read => 'Mark as read';
+  String get kavita_book_mark_unread => 'Mark as unread';
+  String get kavita_book_marked_read => 'Marked as read';
+  String get kavita_book_marked_unread => 'Marked as unread';
   String get kavita_book_no_chapters => 'This book has no readable file';
   String get kavita_book_open => 'Read';
+  String get kavita_book_progress_finished => 'Read';
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   String get kavita_book_remove_download => 'Remove download';
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
@@ -24581,9 +24590,25 @@ class _StringsAr extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -49517,9 +49542,25 @@ class _StringsDe extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -74685,9 +74726,25 @@ class _StringsEs extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -99928,9 +99985,25 @@ class _StringsFr extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -125061,9 +125134,25 @@ class _StringsId extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -150075,9 +150164,25 @@ class _StringsIt extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -174733,9 +174838,25 @@ class _StringsJa extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -198813,9 +198934,25 @@ class _StringsKo extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -223363,9 +223500,25 @@ class _StringsNl extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -248454,9 +248607,25 @@ class _StringsPtBr extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -273537,9 +273706,25 @@ class _StringsRu extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -298469,9 +298654,25 @@ class _StringsTh extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -323319,9 +323520,25 @@ class _StringsTr extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -348238,9 +348455,25 @@ class _StringsVi extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -372249,9 +372482,25 @@ class _StringsZhCn extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       '正在下载 ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      '更新阅读状态失败：${reason}';
+  @override
+  String get kavita_book_mark_read => '标记为已读';
+  @override
+  String get kavita_book_mark_unread => '标记为未读';
+  @override
+  String get kavita_book_marked_read => '已标记为已读';
+  @override
+  String get kavita_book_marked_unread => '已标记为未读';
+  @override
   String get kavita_book_no_chapters => '此书没有可阅读的文件';
   @override
   String get kavita_book_open => '阅读';
+  @override
+  String get kavita_book_progress_finished => '已读完';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '已读 ${percent}%';
   @override
   String get kavita_book_remove_download => '移除下载';
   @override
@@ -395227,9 +395476,25 @@ class _StringsZhHk extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -417769,10 +418034,25 @@ extension on _StringsEn {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -438984,10 +439264,25 @@ extension on _StringsAr {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -460237,10 +460532,25 @@ extension on _StringsDe {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -481514,10 +481824,25 @@ extension on _StringsEs {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -502800,10 +503125,25 @@ extension on _StringsFr {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -524061,10 +524401,25 @@ extension on _StringsId {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -545306,10 +545661,25 @@ extension on _StringsIt {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -566519,10 +566889,25 @@ extension on _StringsJa {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -587657,10 +588042,25 @@ extension on _StringsKo {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -608857,10 +609257,25 @@ extension on _StringsNl {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -630119,10 +630534,25 @@ extension on _StringsPtBr {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -651382,10 +651812,25 @@ extension on _StringsRu {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -672617,10 +673062,25 @@ extension on _StringsTh {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -693853,10 +694313,25 @@ extension on _StringsTr {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -715092,10 +715567,25 @@ extension on _StringsVi {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -736208,10 +736698,24 @@ extension on _StringsZhCn {
         return '已下载';
       case 'kavita_book_downloading':
         return ({required Object percent}) => '正在下载 ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) => '更新阅读状态失败：${reason}';
+      case 'kavita_book_mark_read':
+        return '标记为已读';
+      case 'kavita_book_mark_unread':
+        return '标记为未读';
+      case 'kavita_book_marked_read':
+        return '已标记为已读';
+      case 'kavita_book_marked_unread':
+        return '已标记为未读';
       case 'kavita_book_no_chapters':
         return '此书没有可阅读的文件';
       case 'kavita_book_open':
         return '阅读';
+      case 'kavita_book_progress_finished':
+        return '已读完';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '已读 ${percent}%';
       case 'kavita_book_remove_download':
         return '移除下载';
       case 'kavita_book_remove_download_confirm':
@@ -757213,10 +757717,25 @@ extension on _StringsZhHk {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
