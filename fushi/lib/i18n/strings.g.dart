@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173604 (10212 per locale)
+/// Strings: 173757 (10221 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6477,6 +6477,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+  String get library_reorder_action => 'Reorder';
+  String get library_reorder_done => 'Done';
+  String get library_reorder_hint => 'Drag cards to reorder';
   String get library_search => 'Search library';
   String get library_sort_filter => 'Sort and filter';
   String get library_view_audiobookshelf => 'Audiobookshelf';
@@ -9879,6 +9882,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get skip_action_sentence => '1 sentence';
   String get sort_by => 'Sort';
   String get sort_imported => 'Import date';
+  String get sort_manual => 'Manual';
   String get sort_recent_read => 'Recently read';
   String get sort_recent_watched => 'Recently watched';
   String get sort_title => 'Name';
@@ -10099,8 +10103,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_section_layout => 'Layout';
   String get srs_card_appearance_section_other => 'Other card types';
   String get srs_card_appearance_section_text => 'Text';
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   String get srs_card_appearance_show_frequency => 'Frequency';
   String get srs_card_appearance_show_picture => 'Picture';
   String get srs_card_appearance_show_source => 'Source';
@@ -10109,6 +10111,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_text_size => 'Text size';
   String get srs_card_appearance_title => 'Fushi Card appearance';
   String get srs_card_bury => 'Bury until tomorrow';
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  String get srs_card_defs_expand_all => 'Expand all';
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   String get srs_card_flag => 'Flag';
@@ -11086,8 +11090,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_sync_now_busy({required Object progress}) =>
       'Already syncing: ${progress}';
   String get srs_sync_now_started => 'Review sync started';
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  String get srs_sync_profile_conflict_later => 'Later';
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   String get srs_sync_progress_downloading => 'Syncing review data';
   String srs_sync_progress_downloading_count({
     required Object done,
@@ -14655,11 +14672,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_text_size_reset => 'Reset text size';
   String get web_browser_title => 'Browser';
   String get web_browser_toolbar_expand => 'Show toolbar';
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String get web_hub_browse => 'Web';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
@@ -25320,6 +25332,12 @@ class _StringsAr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'بحث في المكتبة';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -31226,6 +31244,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get sort_imported => 'تاريخ الاستيراد';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'آخر قراءة';
   @override
   String get sort_recent_watched => 'آخر مشاهدة';
@@ -31611,9 +31631,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -31629,6 +31646,10 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -33283,8 +33304,29 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -39355,15 +39397,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -50272,6 +50305,12 @@ class _StringsDe extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Bibliothek durchsuchen';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -56283,6 +56322,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get sort_imported => 'Importdatum';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Zuletzt gelesen';
   @override
   String get sort_recent_watched => 'Zuletzt angesehen';
@@ -56668,9 +56709,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -56686,6 +56724,10 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -58340,8 +58382,29 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -64505,15 +64568,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -75443,6 +75497,12 @@ class _StringsEs extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Buscar biblioteca';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -81462,6 +81522,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get sort_imported => 'Fecha de importación';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Leído recientemente';
   @override
   String get sort_recent_watched => 'Visto recientemente';
@@ -81848,9 +81910,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -81866,6 +81925,10 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -83520,8 +83583,29 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -89710,15 +89794,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -100686,6 +100761,12 @@ class _StringsFr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Rechercher dans la bibliothèque';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -106729,6 +106810,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get sort_imported => 'Date d\'importation';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Lu récemment';
   @override
   String get sort_recent_watched => 'Regardé récemment';
@@ -107115,9 +107198,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -107133,6 +107213,10 @@ class _StringsFr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -108787,8 +108871,29 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -114996,15 +115101,6 @@ class _StringsFr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -125811,6 +125907,12 @@ class _StringsId extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Cari pustaka';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -131761,6 +131863,8 @@ class _StringsId extends _StringsEn {
   @override
   String get sort_imported => 'Tanggal impor';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Baru dibaca';
   @override
   String get sort_recent_watched => 'Baru ditonton';
@@ -132146,9 +132250,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -132164,6 +132265,10 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -133818,8 +133923,29 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -139941,15 +140067,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -150824,6 +150941,12 @@ class _StringsIt extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Cerca nella libreria';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -156834,6 +156957,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get sort_imported => 'Data importazione';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Letti di recente';
   @override
   String get sort_recent_watched => 'Visti di recente';
@@ -157219,9 +157344,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -157237,6 +157359,10 @@ class _StringsIt extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -158891,8 +159017,29 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -165044,15 +165191,6 @@ class _StringsIt extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -175455,6 +175593,12 @@ class _StringsJa extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'ライブラリを検索';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -181197,6 +181341,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get sort_imported => 'インポート日';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => '最近読んだ';
   @override
   String get sort_recent_watched => '最近視聴した';
@@ -181582,9 +181728,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -181600,6 +181743,10 @@ class _StringsJa extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'すべて折りたたむ';
+  @override
+  String get srs_card_defs_expand_all => 'すべて展開';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -183254,8 +183401,29 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -189118,15 +189286,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -199534,6 +199693,12 @@ class _StringsKo extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => '라이브러리 검색';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -205296,6 +205461,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get sort_imported => '가져온 날짜';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => '최근 읽은 순';
   @override
   String get sort_recent_watched => '최근 시청 순';
@@ -205681,9 +205848,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -205699,6 +205863,10 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -207353,8 +207521,29 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -213254,15 +213443,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -224117,6 +224297,12 @@ class _StringsNl extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Bibliotheek doorzoeken';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -230101,6 +230287,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get sort_imported => 'Importdatum';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Recent gelezen';
   @override
   String get sort_recent_watched => 'Recent bekeken';
@@ -230486,9 +230674,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -230504,6 +230689,10 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -232158,8 +232347,29 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -238305,15 +238515,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -249210,6 +249411,12 @@ class _StringsPtBr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Buscar na biblioteca';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -255204,6 +255411,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sort_imported => 'Data de importação';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Lidos recentemente';
   @override
   String get sort_recent_watched => 'Assistidos recentemente';
@@ -255590,9 +255799,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -255608,6 +255814,10 @@ class _StringsPtBr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -257262,8 +257472,29 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -263429,15 +263660,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -274292,6 +274514,12 @@ class _StringsRu extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Поиск в библиотеке';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -280286,6 +280514,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get sort_imported => 'Дата импорта';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Недавно прочитанные';
   @override
   String get sort_recent_watched => 'Недавно просмотренные';
@@ -280671,9 +280901,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -280689,6 +280916,10 @@ class _StringsRu extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -282343,8 +282574,29 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -288498,15 +288750,6 @@ class _StringsRu extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -299209,6 +299452,12 @@ class _StringsTh extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'ค้นหาคลัง';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -305119,6 +305368,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get sort_imported => 'วันที่นำเข้า';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'อ่านล่าสุด';
   @override
   String get sort_recent_watched => 'ดูล่าสุด';
@@ -305504,9 +305755,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -305522,6 +305770,10 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -307176,8 +307428,29 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -313244,15 +313517,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -324067,6 +324331,12 @@ class _StringsTr extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Kütüphanede ara';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -330017,6 +330287,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get sort_imported => 'İçe aktarma tarihi';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Son okunan';
   @override
   String get sort_recent_watched => 'Son izlenen';
@@ -330402,9 +330674,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -330420,6 +330689,10 @@ class _StringsTr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -332074,8 +332347,29 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -338193,15 +338487,6 @@ class _StringsTr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -348984,6 +349269,12 @@ class _StringsVi extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => 'Tìm kiếm thư viện';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -354911,6 +355202,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get sort_imported => 'Ngày nhập';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => 'Đọc gần đây';
   @override
   String get sort_recent_watched => 'Xem gần đây';
@@ -355296,9 +355589,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -355314,6 +355604,10 @@ class _StringsVi extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -356968,8 +357262,29 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -363070,15 +363385,6 @@ class _StringsVi extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -372936,6 +373242,12 @@ class _StringsZhCn extends _StringsEn {
   String get library_progress_reset_video_message =>
       '观看位置归零、状态改为未看，并从「继续观看」中移除。';
   @override
+  String get library_reorder_action => '排序';
+  @override
+  String get library_reorder_done => '完成';
+  @override
+  String get library_reorder_hint => '拖动卡片调整顺序';
+  @override
   String get library_search => '搜索库';
   @override
   String get library_sort_filter => '排序与筛选';
@@ -378398,6 +378710,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sort_imported => '导入时间';
   @override
+  String get sort_manual => '手动';
+  @override
   String get sort_recent_read => '最近阅读';
   @override
   String get sort_recent_watched => '最近观看';
@@ -378765,8 +379079,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => '文字';
   @override
-  String get srs_card_appearance_sentence_furigana => '例句注音常显';
-  @override
   String get srs_card_appearance_show_frequency => '词频';
   @override
   String get srs_card_appearance_show_picture => '图片';
@@ -378782,6 +379094,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi 卡片外观';
   @override
   String get srs_card_bury => '埋到明天';
+  @override
+  String get srs_card_defs_collapse_all => '全部收起';
+  @override
+  String get srs_card_defs_expand_all => '全部展开';
   @override
   String srs_card_edit_template({required Object name}) => '编辑 ${name} 模板';
   @override
@@ -380302,8 +380618,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_now_started => '开始同步复习数据…';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+  String get srs_sync_profile_conflict_adopt_hint => '本机还没有笔记，将直接改用所选的那一份。';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      '同步位置里有其他设备的复习数据，没法自动确定本机该用哪一份。请选择：';
+  @override
+  String get srs_sync_profile_conflict_done => '已关联，正在同步复习数据…';
+  @override
+  String get srs_sync_profile_conflict_failed => '关联复习数据失败';
+  @override
+  String get srs_sync_profile_conflict_keep_separate => '保持本机独立';
+  @override
+  String get srs_sync_profile_conflict_later => '稍后';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      '本机已有的笔记和复习记录会并入所选的那一份，不会丢失。';
+  @override
+  String get srs_sync_profile_conflict_title => '复习同步冲突';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      '更新于 ${date}';
   @override
   String get srs_sync_progress_downloading => '同步复习数据';
   @override
@@ -385829,14 +386163,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_title => '浏览器';
   @override
   String get web_browser_toolbar_expand => '展开工具栏';
-  @override
-  String get web_browser_youtube_subtitles => 'YouTube 字幕查词';
-  @override
-  String get web_browser_youtube_subtitles_track_empty => '这个视频还没有字幕轨';
-  @override
-  String get web_browser_youtube_subtitles_track_live => '实时采集';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => '选中加载';
   @override
   String get web_hub_browse => '网页';
   @override
@@ -395924,6 +396250,12 @@ class _StringsZhHk extends _StringsEn {
   String get library_progress_reset_video_message =>
       'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
   @override
+  String get library_reorder_action => 'Reorder';
+  @override
+  String get library_reorder_done => 'Done';
+  @override
+  String get library_reorder_hint => 'Drag cards to reorder';
+  @override
   String get library_search => '搜索庫';
   @override
   String get library_sort_filter => 'Sort and filter';
@@ -401532,6 +401864,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sort_imported => '導入時間';
   @override
+  String get sort_manual => 'Manual';
+  @override
   String get sort_recent_read => '最近閱讀';
   @override
   String get sort_recent_watched => '最近觀看';
@@ -401917,9 +402251,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -401935,6 +402266,10 @@ class _StringsZhHk extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => '全部收起';
+  @override
+  String get srs_card_defs_expand_all => '全部展開';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -403589,8 +403924,29 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_sync_now_started => 'Review sync started';
   @override
-  String srs_sync_profile_not_linked({required Object name}) =>
-      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_profile_conflict_adopt_hint =>
+      'This device has no notes yet and will switch to the one you choose.';
+  @override
+  String get srs_sync_profile_conflict_body =>
+      'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+  @override
+  String get srs_sync_profile_conflict_done => 'Linked. Syncing review data…';
+  @override
+  String get srs_sync_profile_conflict_failed =>
+      'Couldn\'t link the review data';
+  @override
+  String get srs_sync_profile_conflict_keep_separate =>
+      'Keep this device separate';
+  @override
+  String get srs_sync_profile_conflict_later => 'Later';
+  @override
+  String get srs_sync_profile_conflict_merge_hint =>
+      'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+  @override
+  String get srs_sync_profile_conflict_title => 'Review sync conflict';
+  @override
+  String srs_sync_profile_conflict_updated({required Object date}) =>
+      'Updated ${date}';
   @override
   String get srs_sync_progress_downloading => 'Syncing review data';
   @override
@@ -409299,15 +409655,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_browser_toolbar_expand => 'Show toolbar';
-  @override
-  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -418395,6 +418742,12 @@ extension on _StringsEn {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Search library';
       case 'library_sort_filter':
@@ -423564,6 +423917,8 @@ extension on _StringsEn {
         return 'Sort';
       case 'sort_imported':
         return 'Import date';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Recently read';
       case 'sort_recent_watched':
@@ -423906,8 +424261,6 @@ extension on _StringsEn {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -423924,6 +424277,10 @@ extension on _StringsEn {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -425358,9 +425715,24 @@ extension on _StringsEn {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -430532,14 +430904,6 @@ extension on _StringsEn {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -439609,6 +439973,12 @@ extension on _StringsAr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'بحث في المكتبة';
       case 'library_sort_filter':
@@ -444779,6 +445149,8 @@ extension on _StringsAr {
         return 'الترتيب';
       case 'sort_imported':
         return 'تاريخ الاستيراد';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'آخر قراءة';
       case 'sort_recent_watched':
@@ -445121,8 +445493,6 @@ extension on _StringsAr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -445139,6 +445509,10 @@ extension on _StringsAr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -446573,9 +446947,24 @@ extension on _StringsAr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -451745,14 +452134,6 @@ extension on _StringsAr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -460864,6 +461245,12 @@ extension on _StringsDe {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Bibliothek durchsuchen';
       case 'library_sort_filter':
@@ -466050,6 +466437,8 @@ extension on _StringsDe {
         return 'Sortieren';
       case 'sort_imported':
         return 'Importdatum';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Zuletzt gelesen';
       case 'sort_recent_watched':
@@ -466392,8 +466781,6 @@ extension on _StringsDe {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -466410,6 +466797,10 @@ extension on _StringsDe {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -467844,9 +468235,24 @@ extension on _StringsDe {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -473034,14 +473440,6 @@ extension on _StringsDe {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -482140,6 +482538,12 @@ extension on _StringsEs {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Buscar biblioteca';
       case 'library_sort_filter':
@@ -487325,6 +487729,8 @@ extension on _StringsEs {
         return 'Ordenar';
       case 'sort_imported':
         return 'Fecha de importación';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Leído recientemente';
       case 'sort_recent_watched':
@@ -487667,8 +488073,6 @@ extension on _StringsEs {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -487685,6 +488089,10 @@ extension on _StringsEs {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -489119,9 +489527,24 @@ extension on _StringsEs {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -494305,14 +494728,6 @@ extension on _StringsEs {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -503426,6 +503841,12 @@ extension on _StringsFr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Rechercher dans la bibliothèque';
       case 'library_sort_filter':
@@ -508611,6 +509032,8 @@ extension on _StringsFr {
         return 'Trier';
       case 'sort_imported':
         return 'Date d\'importation';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Lu récemment';
       case 'sort_recent_watched':
@@ -508953,8 +509376,6 @@ extension on _StringsFr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -508971,6 +509392,10 @@ extension on _StringsFr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -510405,9 +510830,24 @@ extension on _StringsFr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -515594,14 +516034,6 @@ extension on _StringsFr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -524687,6 +525119,12 @@ extension on _StringsId {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Cari pustaka';
       case 'library_sort_filter':
@@ -529857,6 +530295,8 @@ extension on _StringsId {
         return 'Urutkan';
       case 'sort_imported':
         return 'Tanggal impor';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Baru dibaca';
       case 'sort_recent_watched':
@@ -530199,8 +530639,6 @@ extension on _StringsId {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -530217,6 +530655,10 @@ extension on _StringsId {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -531651,9 +532093,24 @@ extension on _StringsId {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -536827,14 +537284,6 @@ extension on _StringsId {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -545932,6 +546381,12 @@ extension on _StringsIt {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Cerca nella libreria';
       case 'library_sort_filter':
@@ -551112,6 +551567,8 @@ extension on _StringsIt {
         return 'Ordina';
       case 'sort_imported':
         return 'Data importazione';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Letti di recente';
       case 'sort_recent_watched':
@@ -551454,8 +551911,6 @@ extension on _StringsIt {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -551472,6 +551927,10 @@ extension on _StringsIt {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -552906,9 +553365,24 @@ extension on _StringsIt {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -558096,14 +558570,6 @@ extension on _StringsIt {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -567142,6 +567608,12 @@ extension on _StringsJa {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'ライブラリを検索';
       case 'library_sort_filter':
@@ -572301,6 +572773,8 @@ extension on _StringsJa {
         return '並べ替え';
       case 'sort_imported':
         return 'インポート日';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '最近読んだ';
       case 'sort_recent_watched':
@@ -572643,8 +573117,6 @@ extension on _StringsJa {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -572661,6 +573133,10 @@ extension on _StringsJa {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'すべて折りたたむ';
+      case 'srs_card_defs_expand_all':
+        return 'すべて展開';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -574095,9 +574571,24 @@ extension on _StringsJa {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -579233,14 +579724,6 @@ extension on _StringsJa {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -588280,6 +588763,12 @@ extension on _StringsKo {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return '라이브러리 검색';
       case 'library_sort_filter':
@@ -593439,6 +593928,8 @@ extension on _StringsKo {
         return '정렬';
       case 'sort_imported':
         return '가져온 날짜';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '최근 읽은 순';
       case 'sort_recent_watched':
@@ -593781,8 +594272,6 @@ extension on _StringsKo {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -593799,6 +594288,10 @@ extension on _StringsKo {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -595233,9 +595726,24 @@ extension on _StringsKo {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -600383,14 +600891,6 @@ extension on _StringsKo {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -609484,6 +609984,12 @@ extension on _StringsNl {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Bibliotheek doorzoeken';
       case 'library_sort_filter':
@@ -614667,6 +615173,8 @@ extension on _StringsNl {
         return 'Sorteren';
       case 'sort_imported':
         return 'Importdatum';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Recent gelezen';
       case 'sort_recent_watched':
@@ -615009,8 +615517,6 @@ extension on _StringsNl {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -615027,6 +615533,10 @@ extension on _StringsNl {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -616461,9 +616971,24 @@ extension on _StringsNl {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -621644,14 +622169,6 @@ extension on _StringsNl {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -630745,6 +631262,12 @@ extension on _StringsPtBr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Buscar na biblioteca';
       case 'library_sort_filter':
@@ -635926,6 +636449,8 @@ extension on _StringsPtBr {
         return 'Ordenar';
       case 'sort_imported':
         return 'Data de importação';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Lidos recentemente';
       case 'sort_recent_watched':
@@ -636268,8 +636793,6 @@ extension on _StringsPtBr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -636286,6 +636809,10 @@ extension on _StringsPtBr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -637720,9 +638247,24 @@ extension on _StringsPtBr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -642900,14 +643442,6 @@ extension on _StringsPtBr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -652008,6 +652542,12 @@ extension on _StringsRu {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Поиск в библиотеке';
       case 'library_sort_filter':
@@ -657189,6 +657729,8 @@ extension on _StringsRu {
         return 'Сортировка';
       case 'sort_imported':
         return 'Дата импорта';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Недавно прочитанные';
       case 'sort_recent_watched':
@@ -657531,8 +658073,6 @@ extension on _StringsRu {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -657549,6 +658089,10 @@ extension on _StringsRu {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -658983,9 +659527,24 @@ extension on _StringsRu {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -664161,14 +664720,6 @@ extension on _StringsRu {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -673244,6 +673795,12 @@ extension on _StringsTh {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'ค้นหาคลัง';
       case 'library_sort_filter':
@@ -678412,6 +678969,8 @@ extension on _StringsTh {
         return 'เรียงตาม';
       case 'sort_imported':
         return 'วันที่นำเข้า';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'อ่านล่าสุด';
       case 'sort_recent_watched':
@@ -678754,8 +679313,6 @@ extension on _StringsTh {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -678772,6 +679329,10 @@ extension on _StringsTh {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -680206,9 +680767,24 @@ extension on _StringsTh {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -685378,14 +685954,6 @@ extension on _StringsTh {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -694480,6 +695048,12 @@ extension on _StringsTr {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Kütüphanede ara';
       case 'library_sort_filter':
@@ -699653,6 +700227,8 @@ extension on _StringsTr {
         return 'Sırala';
       case 'sort_imported':
         return 'İçe aktarma tarihi';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Son okunan';
       case 'sort_recent_watched':
@@ -699995,8 +700571,6 @@ extension on _StringsTr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -700013,6 +700587,10 @@ extension on _StringsTr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -701447,9 +702025,24 @@ extension on _StringsTr {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -706626,14 +707219,6 @@ extension on _StringsTr {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -715718,6 +716303,12 @@ extension on _StringsVi {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return 'Tìm kiếm thư viện';
       case 'library_sort_filter':
@@ -720889,6 +721480,8 @@ extension on _StringsVi {
         return 'Sắp xếp';
       case 'sort_imported':
         return 'Ngày nhập';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return 'Đọc gần đây';
       case 'sort_recent_watched':
@@ -721231,8 +721824,6 @@ extension on _StringsVi {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -721249,6 +721840,10 @@ extension on _StringsVi {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -722683,9 +723278,24 @@ extension on _StringsVi {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -727857,14 +728467,6 @@ extension on _StringsVi {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
@@ -736829,6 +737431,12 @@ extension on _StringsZhCn {
         return '只删除最近一次会话记下的时长与字数，适合误点打开的情况。';
       case 'library_progress_reset_video_message':
         return '观看位置归零、状态改为未看，并从「继续观看」中移除。';
+      case 'library_reorder_action':
+        return '排序';
+      case 'library_reorder_done':
+        return '完成';
+      case 'library_reorder_hint':
+        return '拖动卡片调整顺序';
       case 'library_search':
         return '搜索库';
       case 'library_sort_filter':
@@ -741960,6 +742568,8 @@ extension on _StringsZhCn {
         return '排序方式';
       case 'sort_imported':
         return '导入时间';
+      case 'sort_manual':
+        return '手动';
       case 'sort_recent_read':
         return '最近阅读';
       case 'sort_recent_watched':
@@ -742298,8 +742908,6 @@ extension on _StringsZhCn {
         return '其它卡片类型';
       case 'srs_card_appearance_section_text':
         return '文字';
-      case 'srs_card_appearance_sentence_furigana':
-        return '例句注音常显';
       case 'srs_card_appearance_show_frequency':
         return '词频';
       case 'srs_card_appearance_show_picture':
@@ -742316,6 +742924,10 @@ extension on _StringsZhCn {
         return 'Fushi 卡片外观';
       case 'srs_card_bury':
         return '埋到明天';
+      case 'srs_card_defs_collapse_all':
+        return '全部收起';
+      case 'srs_card_defs_expand_all':
+        return '全部展开';
       case 'srs_card_edit_template':
         return ({required Object name}) => '编辑 ${name} 模板';
       case 'srs_card_flag':
@@ -743723,9 +744335,24 @@ extension on _StringsZhCn {
         return ({required Object progress}) => '正在同步：${progress}';
       case 'srs_sync_now_started':
         return '开始同步复习数据…';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return '本机还没有笔记，将直接改用所选的那一份。';
+      case 'srs_sync_profile_conflict_body':
+        return '同步位置里有其他设备的复习数据，没法自动确定本机该用哪一份。请选择：';
+      case 'srs_sync_profile_conflict_done':
+        return '已关联，正在同步复习数据…';
+      case 'srs_sync_profile_conflict_failed':
+        return '关联复习数据失败';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return '保持本机独立';
+      case 'srs_sync_profile_conflict_later':
+        return '稍后';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return '本机已有的笔记和复习记录会并入所选的那一份，不会丢失。';
+      case 'srs_sync_profile_conflict_title':
+        return '复习同步冲突';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => '更新于 ${date}';
       case 'srs_sync_progress_downloading':
         return '同步复习数据';
       case 'srs_sync_progress_downloading_count':
@@ -748834,14 +749461,6 @@ extension on _StringsZhCn {
         return '浏览器';
       case 'web_browser_toolbar_expand':
         return '展开工具栏';
-      case 'web_browser_youtube_subtitles':
-        return 'YouTube 字幕查词';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return '这个视频还没有字幕轨';
-      case 'web_browser_youtube_subtitles_track_live':
-        return '实时采集';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return '选中加载';
       case 'web_hub_browse':
         return '网页';
       case 'web_video_ad_skipping':
@@ -757834,6 +758453,12 @@ extension on _StringsZhHk {
         return 'Removes only the time and characters recorded by the latest session, useful after opening it by mistake.';
       case 'library_progress_reset_video_message':
         return 'The watch position goes back to the start, the status becomes unwatched, and it leaves Continue watching.';
+      case 'library_reorder_action':
+        return 'Reorder';
+      case 'library_reorder_done':
+        return 'Done';
+      case 'library_reorder_hint':
+        return 'Drag cards to reorder';
       case 'library_search':
         return '搜索庫';
       case 'library_sort_filter':
@@ -762987,6 +763612,8 @@ extension on _StringsZhHk {
         return '排序方式';
       case 'sort_imported':
         return '導入時間';
+      case 'sort_manual':
+        return 'Manual';
       case 'sort_recent_read':
         return '最近閱讀';
       case 'sort_recent_watched':
@@ -763329,8 +763956,6 @@ extension on _StringsZhHk {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -763347,6 +763972,10 @@ extension on _StringsZhHk {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return '全部收起';
+      case 'srs_card_defs_expand_all':
+        return '全部展開';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -764780,9 +765409,24 @@ extension on _StringsZhHk {
         return ({required Object progress}) => 'Already syncing: ${progress}';
       case 'srs_sync_now_started':
         return 'Review sync started';
-      case 'srs_sync_profile_not_linked':
-        return ({required Object name}) =>
-            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_profile_conflict_adopt_hint':
+        return 'This device has no notes yet and will switch to the one you choose.';
+      case 'srs_sync_profile_conflict_body':
+        return 'This sync location has review data from other devices, and it isn\'t clear which one this device should use. Choose one:';
+      case 'srs_sync_profile_conflict_done':
+        return 'Linked. Syncing review data…';
+      case 'srs_sync_profile_conflict_failed':
+        return 'Couldn\'t link the review data';
+      case 'srs_sync_profile_conflict_keep_separate':
+        return 'Keep this device separate';
+      case 'srs_sync_profile_conflict_later':
+        return 'Later';
+      case 'srs_sync_profile_conflict_merge_hint':
+        return 'Notes and review history already on this device will be merged into the one you choose. Nothing is lost.';
+      case 'srs_sync_profile_conflict_title':
+        return 'Review sync conflict';
+      case 'srs_sync_profile_conflict_updated':
+        return ({required Object date}) => 'Updated ${date}';
       case 'srs_sync_progress_downloading':
         return 'Syncing review data';
       case 'srs_sync_progress_downloading_count':
@@ -769901,14 +770545,6 @@ extension on _StringsZhHk {
         return 'Browser';
       case 'web_browser_toolbar_expand':
         return 'Show toolbar';
-      case 'web_browser_youtube_subtitles':
-        return 'Clickable YouTube subtitles';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_video_ad_skipping':
