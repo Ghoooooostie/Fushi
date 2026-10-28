@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 174182 (10246 per locale)
+/// Strings: 174250 (10250 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3401,6 +3401,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_audiobookshelf_api_key_label => 'API key (optional)';
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   String get discovery_audiobookshelf_http_allow_hint =>
       'Only for servers on your local network';
@@ -6068,6 +6072,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_connect_unauthorized => 'The server rejected the API key';
   String get kavita_http_allow => 'Allow plain HTTP';
   String get kavita_http_allow_hint => 'Only for servers on your local network';
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
   String get kavita_name_hint => 'Optional, defaults to the host name';
   String get kavita_name_label => 'Name';
   String kavita_progress_conflict_body({
@@ -6086,6 +6092,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_settings_title => 'Kavita servers';
   String get kavita_source_name => 'Kavita';
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   String get kavita_url_http_optin_required =>
       'Plain HTTP must be allowed below';
@@ -20175,6 +20186,12 @@ class _StringsAr extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -24685,6 +24702,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -24715,6 +24735,12 @@ class _StringsAr extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -45090,6 +45116,12 @@ class _StringsDe extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -49700,6 +49732,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -49730,6 +49765,12 @@ class _StringsDe extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -70334,6 +70375,12 @@ class _StringsEs extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -74947,6 +74994,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -74977,6 +75027,12 @@ class _StringsEs extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -95646,6 +95702,12 @@ class _StringsFr extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -100269,6 +100331,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -100299,6 +100364,12 @@ class _StringsFr extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -120928,6 +120999,12 @@ class _StringsId extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -125481,6 +125558,9 @@ class _StringsId extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -125511,6 +125591,12 @@ class _StringsId extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -145982,6 +146068,12 @@ class _StringsIt extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -150574,6 +150666,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -150604,6 +150699,12 @@ class _StringsIt extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -170956,6 +171057,12 @@ class _StringsJa extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -175311,6 +175418,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -175341,6 +175451,12 @@ class _StringsJa extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -195101,6 +195217,12 @@ class _StringsKo extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -199470,6 +199592,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -199500,6 +199625,12 @@ class _StringsKo extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -219527,6 +219658,12 @@ class _StringsNl extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -224099,6 +224236,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -224129,6 +224269,12 @@ class _StringsNl extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -244673,6 +244819,12 @@ class _StringsPtBr extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -249269,6 +249421,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -249299,6 +249454,12 @@ class _StringsPtBr extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -269856,6 +270017,12 @@ class _StringsRu extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -274431,6 +274598,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -274461,6 +274631,12 @@ class _StringsRu extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -294935,6 +295111,12 @@ class _StringsTh extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -299442,6 +299624,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -299472,6 +299657,12 @@ class _StringsTh extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -319809,6 +320000,12 @@ class _StringsTr extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -324371,6 +324568,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -324401,6 +324601,12 @@ class _StringsTr extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -344825,6 +345031,12 @@ class _StringsVi extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -349369,6 +349581,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -349399,6 +349614,12 @@ class _StringsVi extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -369317,6 +369538,11 @@ class _StringsZhCn extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       '该 Audiobookshelf 账号没有下载权限，请让服务器管理员开启下载权限';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      '把 Audiobookshelf 上收听中的条目混排进首页「继续」。关闭后只在 Audiobookshelf 标签页查看。';
+  @override
+  String get discovery_audiobookshelf_home_continue_title => '在首页「继续」中显示';
+  @override
   String get discovery_audiobookshelf_http_allow => '允许明文 HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint => '仅用于局域网内的服务器';
@@ -373454,6 +373680,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get kavita_http_allow_hint => '仅用于局域网内的服务器';
   @override
+  String get kavita_manga_mark_saved_locally => '已在本机标记。Kavita 未能更新，下次打开该章时同步';
+  @override
   String get kavita_name_hint => '可选，默认使用主机名';
   @override
   String get kavita_name_label => '名称';
@@ -373483,6 +373711,11 @@ class _StringsZhCn extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => '从你的 Kavita 服务器在线阅读漫画';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) => '这本书的阅读进度不会与 Kavita 同步：服务器上有 ${server} 个章节，本机副本有 ${local} 个';
   @override
   String get kavita_url_hint => '例如 http://192.168.1.10:5000';
   @override
@@ -392303,6 +392536,12 @@ class _StringsZhHk extends _StringsEn {
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
   @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
+  @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
   String get discovery_audiobookshelf_http_allow_hint =>
@@ -396514,6 +396753,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -396544,6 +396786,12 @@ class _StringsZhHk extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -415292,6 +415540,10 @@ extension on _StringsEn {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -419127,6 +419379,8 @@ extension on _StringsEn {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -419154,6 +419408,9 @@ extension on _StringsEn {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -436580,6 +436837,10 @@ extension on _StringsAr {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -440410,6 +440671,8 @@ extension on _StringsAr {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -440437,6 +440700,9 @@ extension on _StringsAr {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -457889,6 +458155,10 @@ extension on _StringsDe {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -461731,6 +462001,8 @@ extension on _StringsDe {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -461758,6 +462030,9 @@ extension on _StringsDe {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -479237,6 +479512,10 @@ extension on _StringsEs {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -483076,6 +483355,8 @@ extension on _StringsEs {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -483103,6 +483384,9 @@ extension on _StringsEs {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -500586,6 +500870,10 @@ extension on _StringsFr {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -504430,6 +504718,8 @@ extension on _StringsFr {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -504457,6 +504747,9 @@ extension on _StringsFr {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -521923,6 +522216,10 @@ extension on _StringsId {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -525759,6 +526056,8 @@ extension on _StringsId {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -525786,6 +526085,9 @@ extension on _StringsId {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -543233,6 +543535,10 @@ extension on _StringsIt {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -547072,6 +547378,8 @@ extension on _StringsIt {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -547099,6 +547407,9 @@ extension on _StringsIt {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -564533,6 +564844,10 @@ extension on _StringsJa {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -568353,6 +568668,8 @@ extension on _StringsJa {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -568380,6 +568697,9 @@ extension on _StringsJa {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -585736,6 +586056,10 @@ extension on _StringsKo {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -589559,6 +589883,8 @@ extension on _StringsKo {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -589586,6 +589912,9 @@ extension on _StringsKo {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -606990,6 +607319,10 @@ extension on _StringsNl {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -610827,6 +611160,8 @@ extension on _StringsNl {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -610854,6 +611189,9 @@ extension on _StringsNl {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -628321,6 +628659,10 @@ extension on _StringsPtBr {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -632157,6 +632499,8 @@ extension on _StringsPtBr {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -632184,6 +632528,9 @@ extension on _StringsPtBr {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -649650,6 +649997,10 @@ extension on _StringsRu {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -653488,6 +653839,8 @@ extension on _StringsRu {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -653515,6 +653868,9 @@ extension on _StringsRu {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -670956,6 +671312,10 @@ extension on _StringsTh {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -674791,6 +675151,8 @@ extension on _StringsTh {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -674818,6 +675180,9 @@ extension on _StringsTh {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -692258,6 +692623,10 @@ extension on _StringsTr {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -696095,6 +696464,8 @@ extension on _StringsTr {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -696122,6 +696493,9 @@ extension on _StringsTr {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -713566,6 +713940,10 @@ extension on _StringsVi {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -717402,6 +717780,8 @@ extension on _StringsVi {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -717429,6 +717809,9 @@ extension on _StringsVi {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -734792,6 +735175,10 @@ extension on _StringsZhCn {
         return 'API key（可选）';
       case 'discovery_audiobookshelf_download_forbidden':
         return '该 Audiobookshelf 账号没有下载权限，请让服务器管理员开启下载权限';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return '把 Audiobookshelf 上收听中的条目混排进首页「继续」。关闭后只在 Audiobookshelf 标签页查看。';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return '在首页「继续」中显示';
       case 'discovery_audiobookshelf_http_allow':
         return '允许明文 HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -738585,6 +738972,8 @@ extension on _StringsZhCn {
         return '允许明文 HTTP';
       case 'kavita_http_allow_hint':
         return '仅用于局域网内的服务器';
+      case 'kavita_manga_mark_saved_locally':
+        return '已在本机标记。Kavita 未能更新，下次打开该章时同步';
       case 'kavita_name_hint':
         return '可选，默认使用主机名';
       case 'kavita_name_label':
@@ -738612,6 +739001,9 @@ extension on _StringsZhCn {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return '从你的 Kavita 服务器在线阅读漫画';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            '这本书的阅读进度不会与 Kavita 同步：服务器上有 ${server} 个章节，本机副本有 ${local} 个';
       case 'kavita_url_hint':
         return '例如 http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -755848,6 +756240,10 @@ extension on _StringsZhHk {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -759658,6 +760054,8 @@ extension on _StringsZhHk {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -759685,6 +760083,9 @@ extension on _StringsZhHk {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
