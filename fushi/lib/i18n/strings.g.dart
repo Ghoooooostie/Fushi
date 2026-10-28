@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173604 (10212 per locale)
+/// Strings: 173621 (10213 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10099,8 +10099,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_section_layout => 'Layout';
   String get srs_card_appearance_section_other => 'Other card types';
   String get srs_card_appearance_section_text => 'Text';
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   String get srs_card_appearance_show_frequency => 'Frequency';
   String get srs_card_appearance_show_picture => 'Picture';
   String get srs_card_appearance_show_source => 'Source';
@@ -10109,6 +10107,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_text_size => 'Text size';
   String get srs_card_appearance_title => 'Fushi Card appearance';
   String get srs_card_bury => 'Bury until tomorrow';
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  String get srs_card_defs_expand_all => 'Expand all';
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
   String get srs_card_flag => 'Flag';
@@ -31611,9 +31611,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -31629,6 +31626,10 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -56668,9 +56669,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -56686,6 +56684,10 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -81848,9 +81850,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -81866,6 +81865,10 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -107115,9 +107118,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -107133,6 +107133,10 @@ class _StringsFr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -132146,9 +132150,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -132164,6 +132165,10 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -157219,9 +157224,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -157237,6 +157239,10 @@ class _StringsIt extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -181582,9 +181588,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -181600,6 +181603,10 @@ class _StringsJa extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'すべて折りたたむ';
+  @override
+  String get srs_card_defs_expand_all => 'すべて展開';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -205681,9 +205688,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -205699,6 +205703,10 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -230486,9 +230494,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -230504,6 +230509,10 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -255590,9 +255599,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -255608,6 +255614,10 @@ class _StringsPtBr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -280671,9 +280681,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -280689,6 +280696,10 @@ class _StringsRu extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -305504,9 +305515,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -305522,6 +305530,10 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -330402,9 +330414,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -330420,6 +330429,10 @@ class _StringsTr extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -355296,9 +355309,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -355314,6 +355324,10 @@ class _StringsVi extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => 'Collapse all';
+  @override
+  String get srs_card_defs_expand_all => 'Expand all';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -378765,8 +378779,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => '文字';
   @override
-  String get srs_card_appearance_sentence_furigana => '例句注音常显';
-  @override
   String get srs_card_appearance_show_frequency => '词频';
   @override
   String get srs_card_appearance_show_picture => '图片';
@@ -378782,6 +378794,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi 卡片外观';
   @override
   String get srs_card_bury => '埋到明天';
+  @override
+  String get srs_card_defs_collapse_all => '全部收起';
+  @override
+  String get srs_card_defs_expand_all => '全部展开';
   @override
   String srs_card_edit_template({required Object name}) => '编辑 ${name} 模板';
   @override
@@ -401917,9 +401933,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -401935,6 +401948,10 @@ class _StringsZhHk extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   @override
   String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_defs_collapse_all => '全部收起';
+  @override
+  String get srs_card_defs_expand_all => '全部展開';
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
@@ -423906,8 +423923,6 @@ extension on _StringsEn {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -423924,6 +423939,10 @@ extension on _StringsEn {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -445121,8 +445140,6 @@ extension on _StringsAr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -445139,6 +445156,10 @@ extension on _StringsAr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -466392,8 +466413,6 @@ extension on _StringsDe {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -466410,6 +466429,10 @@ extension on _StringsDe {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -487667,8 +487690,6 @@ extension on _StringsEs {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -487685,6 +487706,10 @@ extension on _StringsEs {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -508953,8 +508978,6 @@ extension on _StringsFr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -508971,6 +508994,10 @@ extension on _StringsFr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -530199,8 +530226,6 @@ extension on _StringsId {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -530217,6 +530242,10 @@ extension on _StringsId {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -551454,8 +551483,6 @@ extension on _StringsIt {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -551472,6 +551499,10 @@ extension on _StringsIt {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -572643,8 +572674,6 @@ extension on _StringsJa {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -572661,6 +572690,10 @@ extension on _StringsJa {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'すべて折りたたむ';
+      case 'srs_card_defs_expand_all':
+        return 'すべて展開';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -593781,8 +593814,6 @@ extension on _StringsKo {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -593799,6 +593830,10 @@ extension on _StringsKo {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -615009,8 +615044,6 @@ extension on _StringsNl {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -615027,6 +615060,10 @@ extension on _StringsNl {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -636268,8 +636305,6 @@ extension on _StringsPtBr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -636286,6 +636321,10 @@ extension on _StringsPtBr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -657531,8 +657570,6 @@ extension on _StringsRu {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -657549,6 +657586,10 @@ extension on _StringsRu {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -678754,8 +678795,6 @@ extension on _StringsTh {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -678772,6 +678811,10 @@ extension on _StringsTh {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -699995,8 +700038,6 @@ extension on _StringsTr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -700013,6 +700054,10 @@ extension on _StringsTr {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -721231,8 +721276,6 @@ extension on _StringsVi {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -721249,6 +721292,10 @@ extension on _StringsVi {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return 'Collapse all';
+      case 'srs_card_defs_expand_all':
+        return 'Expand all';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
@@ -742298,8 +742345,6 @@ extension on _StringsZhCn {
         return '其它卡片类型';
       case 'srs_card_appearance_section_text':
         return '文字';
-      case 'srs_card_appearance_sentence_furigana':
-        return '例句注音常显';
       case 'srs_card_appearance_show_frequency':
         return '词频';
       case 'srs_card_appearance_show_picture':
@@ -742316,6 +742361,10 @@ extension on _StringsZhCn {
         return 'Fushi 卡片外观';
       case 'srs_card_bury':
         return '埋到明天';
+      case 'srs_card_defs_collapse_all':
+        return '全部收起';
+      case 'srs_card_defs_expand_all':
+        return '全部展开';
       case 'srs_card_edit_template':
         return ({required Object name}) => '编辑 ${name} 模板';
       case 'srs_card_flag':
@@ -763329,8 +763378,6 @@ extension on _StringsZhHk {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -763347,6 +763394,10 @@ extension on _StringsZhHk {
         return 'Fushi Card appearance';
       case 'srs_card_bury':
         return 'Bury until tomorrow';
+      case 'srs_card_defs_collapse_all':
+        return '全部收起';
+      case 'srs_card_defs_expand_all':
+        return '全部展開';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
       case 'srs_card_flag':
