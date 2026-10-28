@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173808 (10224 per locale)
+/// Strings: 173825 (10225 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11931,6 +11931,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_progress_collections => 'Syncing collections';
   String get sync_progress_deletions => 'Syncing deletions';
   String get sync_progress_dictionaries => 'Syncing dictionaries';
+  String get sync_progress_finishing => 'Finishing up';
   String get sync_progress_fonts => 'Syncing fonts';
   String get sync_progress_local_audio => 'Syncing local audio';
   String get sync_progress_pending_mines => 'Syncing pending cards';
@@ -34788,6 +34789,8 @@ class _StringsAr extends _StringsEn {
   String get sync_progress_deletions => 'Syncing deletions';
   @override
   String get sync_progress_dictionaries => 'مزامنة القواميس';
+  @override
+  String get sync_progress_finishing => 'Finishing up';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
@@ -59889,6 +59892,8 @@ class _StringsDe extends _StringsEn {
   String get sync_progress_deletions => 'Syncing deletions';
   @override
   String get sync_progress_dictionaries => 'Wörterbücher werden synchronisiert';
+  @override
+  String get sync_progress_finishing => 'Finishing up';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
@@ -85102,6 +85107,8 @@ class _StringsEs extends _StringsEn {
   String get sync_progress_deletions => 'Syncing deletions';
   @override
   String get sync_progress_dictionaries => 'Sincronizando diccionarios';
+  @override
+  String get sync_progress_finishing => 'Finishing up';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
@@ -110395,6 +110402,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Synchronisation des dictionnaires';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Synchronisation de l\'audio local';
@@ -135440,6 +135449,8 @@ class _StringsId extends _StringsEn {
   String get sync_progress_deletions => 'Syncing deletions';
   @override
   String get sync_progress_dictionaries => 'Menyinkronkan kamus';
+  @override
+  String get sync_progress_finishing => 'Finishing up';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
@@ -160548,6 +160559,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizzazione dizionari';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizzazione audio locale';
@@ -184880,6 +184893,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '辞書を同期中';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'ローカル音声を同期中';
@@ -209007,6 +209022,8 @@ class _StringsKo extends _StringsEn {
   String get sync_progress_deletions => 'Syncing deletions';
   @override
   String get sync_progress_dictionaries => '사전 동기화 중';
+  @override
+  String get sync_progress_finishing => 'Finishing up';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
@@ -233901,6 +233918,8 @@ class _StringsNl extends _StringsEn {
   String get sync_progress_deletions => 'Syncing deletions';
   @override
   String get sync_progress_dictionaries => 'Woordenboeken synchroniseren';
+  @override
+  String get sync_progress_finishing => 'Finishing up';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
@@ -259029,6 +259048,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizando dicionários';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando áudio local';
@@ -284139,6 +284160,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Синхронизация словарей';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Синхронизация локального аудио';
@@ -308991,6 +309014,8 @@ class _StringsTh extends _StringsEn {
   String get sync_progress_deletions => 'Syncing deletions';
   @override
   String get sync_progress_dictionaries => 'กำลังซิงค์พจนานุกรม';
+  @override
+  String get sync_progress_finishing => 'Finishing up';
   @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
@@ -333926,6 +333951,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sözlükler eşitleniyor';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Yerel ses eşitleniyor';
@@ -358844,6 +358871,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Đang đồng bộ từ điển';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Đang đồng bộ âm thanh cục bộ';
@@ -382073,6 +382102,8 @@ class _StringsZhCn extends _StringsEn {
   String get sync_progress_deletions => '同步删除记录';
   @override
   String get sync_progress_dictionaries => '同步词典';
+  @override
+  String get sync_progress_finishing => '正在收尾';
   @override
   String get sync_progress_fonts => '同步字体';
   @override
@@ -405435,6 +405466,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '正在同步詞典';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '正在同步本機音訊';
@@ -427129,6 +427162,8 @@ extension on _StringsEn {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Syncing dictionaries';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -448362,6 +448397,8 @@ extension on _StringsAr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'مزامنة القواميس';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -469663,6 +469700,8 @@ extension on _StringsDe {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Wörterbücher werden synchronisiert';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -490960,6 +490999,8 @@ extension on _StringsEs {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando diccionarios';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -512268,6 +512309,8 @@ extension on _StringsFr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Synchronisation des dictionnaires';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -533537,6 +533580,8 @@ extension on _StringsId {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Menyinkronkan kamus';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -554816,6 +554861,8 @@ extension on _StringsIt {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizzazione dizionari';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -576017,6 +576064,8 @@ extension on _StringsJa {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '辞書を同期中';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -597179,6 +597228,8 @@ extension on _StringsKo {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '사전 동기화 중';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -618439,6 +618490,8 @@ extension on _StringsNl {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Woordenboeken synchroniseren';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -639720,6 +639773,8 @@ extension on _StringsPtBr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando dicionários';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -661007,6 +661062,8 @@ extension on _StringsRu {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Синхронизация словарей';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -682251,6 +682308,8 @@ extension on _StringsTh {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'กำลังซิงค์พจนานุกรม';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -703515,6 +703574,8 @@ extension on _StringsTr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sözlükler eşitleniyor';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -724775,6 +724836,8 @@ extension on _StringsVi {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Đang đồng bộ từ điển';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -745825,6 +745888,8 @@ extension on _StringsZhCn {
         return '同步删除记录';
       case 'sync_progress_dictionaries':
         return '同步词典';
+      case 'sync_progress_finishing':
+        return '正在收尾';
       case 'sync_progress_fonts':
         return '同步字体';
       case 'sync_progress_local_audio':
@@ -766907,6 +766972,8 @@ extension on _StringsZhHk {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '正在同步詞典';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
