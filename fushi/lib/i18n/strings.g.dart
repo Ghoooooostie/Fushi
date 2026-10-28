@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173604 (10212 per locale)
+/// Strings: 173638 (10214 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7848,6 +7848,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_library_empty_hint =>
       'Add a folder that holds your music files.';
   String get music_library_rescan => 'Rescan library';
+  String get music_library_search_empty => 'No matches';
+  String get music_library_search_hint => 'Search music';
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   String get music_listening_study_title => 'Count listening as study time';
@@ -27673,6 +27675,10 @@ class _StringsAr extends _StringsEn {
       'Add a folder that holds your music files.';
   @override
   String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
   @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
@@ -52671,6 +52677,10 @@ class _StringsDe extends _StringsEn {
       'Add a folder that holds your music files.';
   @override
   String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
   @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
@@ -77845,6 +77855,10 @@ class _StringsEs extends _StringsEn {
       'Add a folder that holds your music files.';
   @override
   String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
   @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
@@ -103098,6 +103112,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -128186,6 +128204,10 @@ class _StringsId extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -153226,6 +153248,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -177746,6 +177772,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -201836,6 +201866,10 @@ class _StringsKo extends _StringsEn {
       'Add a folder that holds your music files.';
   @override
   String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
   @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
@@ -226498,6 +226532,10 @@ class _StringsNl extends _StringsEn {
       'Add a folder that holds your music files.';
   @override
   String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
   @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
@@ -251602,6 +251640,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -276679,6 +276721,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -301566,6 +301612,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -326440,6 +326490,10 @@ class _StringsTr extends _StringsEn {
       'Add a folder that holds your music files.';
   @override
   String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
   @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
@@ -351350,6 +351404,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -375117,6 +375175,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_library_rescan => '重新扫描曲库';
   @override
+  String get music_library_search_empty => '没有匹配项';
+  @override
+  String get music_library_search_hint => '搜索音乐';
+  @override
   String get music_listening_study_hint => '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
   @override
   String get music_listening_study_title => '听歌计入学习';
@@ -398160,6 +398222,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_library_search_empty => 'No matches';
+  @override
+  String get music_library_search_hint => 'Search music';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -420459,6 +420525,10 @@ extension on _StringsEn {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -441673,6 +441743,10 @@ extension on _StringsAr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -462938,6 +463012,10 @@ extension on _StringsDe {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -484213,6 +484291,10 @@ extension on _StringsEs {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -505498,6 +505580,10 @@ extension on _StringsFr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -526752,6 +526838,10 @@ extension on _StringsId {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -548003,6 +548093,10 @@ extension on _StringsIt {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -569202,6 +569296,10 @@ extension on _StringsJa {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -590338,6 +590436,10 @@ extension on _StringsKo {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -611558,6 +611660,10 @@ extension on _StringsNl {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -632817,6 +632923,10 @@ extension on _StringsPtBr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -654080,6 +654190,10 @@ extension on _StringsRu {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -675308,6 +675422,10 @@ extension on _StringsTh {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -696549,6 +696667,10 @@ extension on _StringsTr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -717782,6 +717904,10 @@ extension on _StringsVi {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -738870,6 +738996,10 @@ extension on _StringsZhCn {
         return '添加一个放着音乐文件的文件夹。';
       case 'music_library_rescan':
         return '重新扫描曲库';
+      case 'music_library_search_empty':
+        return '没有匹配项';
+      case 'music_library_search_hint':
+        return '搜索音乐';
       case 'music_listening_study_hint':
         return '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
       case 'music_listening_study_title':
@@ -759889,6 +760019,10 @@ extension on _StringsZhHk {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_library_search_empty':
+        return 'No matches';
+      case 'music_library_search_hint':
+        return 'Search music';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
