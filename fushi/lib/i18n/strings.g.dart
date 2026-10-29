@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 176086 (10358 per locale)
+/// Strings: 176120 (10360 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8038,7 +8038,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_plugins_perm_network => 'Network access';
   String get music_plugins_perm_storage => 'Save data on this device';
   String get music_plugins_permissions => 'Permissions';
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   String get music_plugins_title => 'Plugin sources';
   String get music_plugins_uninstall => 'Uninstall';
   String music_plugins_uninstall_confirm({required Object name}) =>
@@ -28207,7 +28211,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -53544,7 +53554,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -79056,7 +79072,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -104647,7 +104669,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -130074,7 +130102,13 @@ class _StringsId extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -155452,7 +155486,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -180310,7 +180350,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -204738,7 +204784,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -229738,7 +229790,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -255180,7 +255238,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -280596,7 +280660,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -305822,7 +305892,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -331036,7 +331112,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -356283,7 +356365,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -380364,7 +380452,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_plugins_permissions => '权限';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      '自签名（未验证）：公钥 ${key}';
+  @override
   String music_plugins_signed({required Object key}) => '签名公钥 ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      '签名者与已安装版本不同：将按新插件安装，原有登录状态与插件数据会被清除';
   @override
   String get music_plugins_title => '插件音源';
   @override
@@ -403746,7 +403840,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_plugins_permissions => 'Permissions';
   @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
   String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
   @override
   String get music_plugins_title => 'Plugin sources';
   @override
@@ -426350,8 +426450,13 @@ extension on _StringsEn {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -447864,8 +447969,13 @@ extension on _StringsAr {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -469429,8 +469539,13 @@ extension on _StringsDe {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -491004,8 +491119,13 @@ extension on _StringsEs {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -512589,8 +512709,13 @@ extension on _StringsFr {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -534143,8 +534268,13 @@ extension on _StringsId {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -555694,8 +555824,13 @@ extension on _StringsIt {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -577193,8 +577328,13 @@ extension on _StringsJa {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -598629,8 +598769,13 @@ extension on _StringsKo {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -620149,8 +620294,13 @@ extension on _StringsNl {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -641708,8 +641858,13 @@ extension on _StringsPtBr {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -663271,8 +663426,13 @@ extension on _StringsRu {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -684799,8 +684959,13 @@ extension on _StringsTh {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -706340,8 +706505,13 @@ extension on _StringsTr {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -727873,8 +728043,13 @@ extension on _StringsVi {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
@@ -749256,8 +749431,12 @@ extension on _StringsZhCn {
         return '在本机保存数据';
       case 'music_plugins_permissions':
         return '权限';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) => '自签名（未验证）：公钥 ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => '签名公钥 ${key}';
+      case 'music_plugins_signer_changed':
+        return '签名者与已安装版本不同：将按新插件安装，原有登录状态与插件数据会被清除';
       case 'music_plugins_title':
         return '插件音源';
       case 'music_plugins_uninstall':
@@ -770572,8 +770751,13 @@ extension on _StringsZhHk {
         return 'Save data on this device';
       case 'music_plugins_permissions':
         return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
       case 'music_plugins_signed':
         return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
       case 'music_plugins_title':
         return 'Plugin sources';
       case 'music_plugins_uninstall':
