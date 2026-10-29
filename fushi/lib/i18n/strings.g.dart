@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 174471 (10263 per locale)
+/// Strings: 174607 (10271 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5675,6 +5675,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_panel_mode_auto => 'Auto';
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_mode_shown => 'Show';
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  String get home_panel_panorama_title => 'Library panorama';
   String get home_panel_srs_hint =>
       'Auto shows it once you mine to Fushi review or have review cards';
   String get home_recently_added => 'Recently added';
@@ -8716,6 +8719,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get page_turn_follow_drag => 'Follow finger while dragging';
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  String get panorama_loading => 'Building your panorama…';
+  String get panorama_open_fullscreen => 'Full screen';
+  String get panorama_share_animation => 'Play share animation';
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   String get paste => 'Paste';
   String get pause => 'Pause';
   String get pause_on_lookup => 'Pause on lookup';
@@ -24069,6 +24083,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'إظهار';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'يظهر تلقائيًا عند الإرسال إلى Fushi SRS أو وجود بطاقات مراجعة';
   @override
@@ -29230,6 +29249,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'لصق';
   @override
@@ -49122,6 +49158,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Anzeigen';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Automatisch sichtbar, sobald du in Fushi SRS minst oder Karten hast';
   @override
@@ -54375,6 +54416,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Einfügen';
   @override
@@ -74410,6 +74468,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Mostrar';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Se muestra al minar a Fushi SRS o si ya tienes tarjetas';
   @override
@@ -79667,6 +79730,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Pegar';
   @override
@@ -99774,6 +99854,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Afficher';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Affiché dès que vous minez vers Fushi SRS ou avez des cartes';
   @override
@@ -105052,6 +105137,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Coller';
   @override
@@ -125043,6 +125145,11 @@ class _StringsId extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Tampilkan';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Otomatis tampil saat menambang ke Fushi SRS atau sudah ada kartu';
   @override
@@ -130244,6 +130351,23 @@ class _StringsId extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Tempel';
   @override
@@ -150173,6 +150297,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Mostra';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Appare quando invii le carte a Fushi SRS o hai già carte';
   @override
@@ -155412,6 +155541,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Incolla';
   @override
@@ -174989,6 +175135,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_panel_mode_shown => '表示';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint => '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
   @override
   String get home_recently_added => '最近追加';
@@ -180007,6 +180158,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => '貼り付け';
   @override
@@ -199190,6 +199358,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_panel_mode_shown => '표시';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint => '자동: Fushi SRS로 카드를 만들거나 복습 카드가 있으면 표시';
   @override
   String get home_recently_added => '최근 추가';
@@ -204223,6 +204396,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => '붙여넣기';
   @override
@@ -223831,6 +224021,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Tonen';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Automatisch zichtbaar zodra je naar Fushi SRS minet of kaarten hebt';
   @override
@@ -229057,6 +229252,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Plakken';
   @override
@@ -249046,6 +249258,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Mostrar';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Aparece ao minerar para o Fushi SRS ou se já houver cartões';
   @override
@@ -254283,6 +254500,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Colar';
   @override
@@ -274255,6 +274489,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Показать';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Авто: показывается, если карточки идут в Fushi SRS или они уже есть';
   @override
@@ -279490,6 +279729,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Вставить';
   @override
@@ -299316,6 +299572,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'แสดง';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยัง Fushi SRS หรือมีการ์ดอยู่แล้ว';
   @override
@@ -304478,6 +304739,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'วาง';
   @override
@@ -324287,6 +324565,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Göster';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Fushi SRS\'e kart eklediğinde veya kartın varsa otomatik görünür';
   @override
@@ -329488,6 +329771,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Yapıştır';
   @override
@@ -349333,6 +349633,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Hiện';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Tự động hiện khi tạo thẻ vào Fushi SRS hoặc đã có thẻ';
   @override
@@ -354512,6 +354817,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Dán';
   @override
@@ -373520,6 +373842,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_panel_mode_shown => '显示';
   @override
+  String get home_panel_panorama_hint => '全部作品封面与制卡词汇组成的可操作 3D 星空';
+  @override
+  String get home_panel_panorama_title => '媒体库全景';
+  @override
   String get home_panel_srs_hint => '自动：制卡发往 Fushi 复习或已有复习卡时显示';
   @override
   String get home_recently_added => '最近添加';
@@ -378283,6 +378609,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       '页面随手指移动，松手时拖过四分之一宽度或快速甩动就翻页，否则回弹';
+  @override
+  String get panorama_empty => '添加书、视频、游戏或音乐后，这里会出现你的媒体库全景';
+  @override
+  String get panorama_load_failed => '全景生成失败';
+  @override
+  String get panorama_loading => '正在生成全景…';
+  @override
+  String get panorama_open_fullscreen => '全屏';
+  @override
+  String get panorama_share_animation => '播放分享动画';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} 部作品 · 共制卡 ${mined} 张 · 展示 ${shown} 个词';
   @override
   String get paste => '粘贴';
   @override
@@ -396598,6 +396940,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_panel_mode_shown => '顯示';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint => '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
   @override
   String get home_recently_added => '最近添加';
@@ -401487,6 +401834,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => '貼上';
   @override
@@ -419321,6 +419685,10 @@ extension on _StringsEn {
         return 'Hide';
       case 'home_panel_mode_shown':
         return 'Show';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Auto shows it once you mine to Fushi review or have review cards';
       case 'home_recently_added':
@@ -423758,6 +424126,22 @@ extension on _StringsEn {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Paste';
       case 'pause':
@@ -440644,6 +441028,10 @@ extension on _StringsAr {
         return 'إخفاء';
       case 'home_panel_mode_shown':
         return 'إظهار';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'يظهر تلقائيًا عند الإرسال إلى Fushi SRS أو وجود بطاقات مراجعة';
       case 'home_recently_added':
@@ -445078,6 +445466,22 @@ extension on _StringsAr {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'لصق';
       case 'pause':
@@ -461996,6 +462400,10 @@ extension on _StringsDe {
         return 'Ausblenden';
       case 'home_panel_mode_shown':
         return 'Anzeigen';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Automatisch sichtbar, sobald du in Fushi SRS minst oder Karten hast';
       case 'home_recently_added':
@@ -466452,6 +466860,22 @@ extension on _StringsDe {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Einfügen';
       case 'pause':
@@ -483380,6 +483804,10 @@ extension on _StringsEs {
         return 'Ocultar';
       case 'home_panel_mode_shown':
         return 'Mostrar';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Se muestra al minar a Fushi SRS o si ya tienes tarjetas';
       case 'home_recently_added':
@@ -487830,6 +488258,22 @@ extension on _StringsEs {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Pegar';
       case 'pause':
@@ -504770,6 +505214,10 @@ extension on _StringsFr {
         return 'Masquer';
       case 'home_panel_mode_shown':
         return 'Afficher';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Affiché dès que vous minez vers Fushi SRS ou avez des cartes';
       case 'home_recently_added':
@@ -509222,6 +509670,22 @@ extension on _StringsFr {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Coller';
       case 'pause':
@@ -526138,6 +526602,10 @@ extension on _StringsId {
         return 'Sembunyikan';
       case 'home_panel_mode_shown':
         return 'Tampilkan';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Otomatis tampil saat menambang ke Fushi SRS atau sudah ada kartu';
       case 'home_recently_added':
@@ -530576,6 +531044,22 @@ extension on _StringsId {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Tempel';
       case 'pause':
@@ -547487,6 +547971,10 @@ extension on _StringsIt {
         return 'Nascondi';
       case 'home_panel_mode_shown':
         return 'Mostra';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Appare quando invii le carte a Fushi SRS o hai già carte';
       case 'home_recently_added':
@@ -551934,6 +552422,22 @@ extension on _StringsIt {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Incolla';
       case 'pause':
@@ -568815,6 +569319,10 @@ extension on _StringsJa {
         return '非表示';
       case 'home_panel_mode_shown':
         return '表示';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
       case 'home_recently_added':
@@ -573232,6 +573740,22 @@ extension on _StringsJa {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return '貼り付け';
       case 'pause':
@@ -590057,6 +590581,10 @@ extension on _StringsKo {
         return '숨기기';
       case 'home_panel_mode_shown':
         return '표시';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return '자동: Fushi SRS로 카드를 만들거나 복습 카드가 있으면 표시';
       case 'home_recently_added':
@@ -594474,6 +595002,22 @@ extension on _StringsKo {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return '붙여넣기';
       case 'pause':
@@ -611352,6 +611896,10 @@ extension on _StringsNl {
         return 'Verbergen';
       case 'home_panel_mode_shown':
         return 'Tonen';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Automatisch zichtbaar zodra je naar Fushi SRS minet of kaarten hebt';
       case 'home_recently_added':
@@ -615804,6 +616352,22 @@ extension on _StringsNl {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Plakken';
       case 'pause':
@@ -632720,6 +633284,10 @@ extension on _StringsPtBr {
         return 'Ocultar';
       case 'home_panel_mode_shown':
         return 'Mostrar';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Aparece ao minerar para o Fushi SRS ou se já houver cartões';
       case 'home_recently_added':
@@ -637168,6 +637736,22 @@ extension on _StringsPtBr {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Colar';
       case 'pause':
@@ -654088,6 +654672,10 @@ extension on _StringsRu {
         return 'Скрыть';
       case 'home_panel_mode_shown':
         return 'Показать';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Авто: показывается, если карточки идут в Fushi SRS или они уже есть';
       case 'home_recently_added':
@@ -658536,6 +659124,22 @@ extension on _StringsRu {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Вставить';
       case 'pause':
@@ -675430,6 +676034,10 @@ extension on _StringsTh {
         return 'ซ่อน';
       case 'home_panel_mode_shown':
         return 'แสดง';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยัง Fushi SRS หรือมีการ์ดอยู่แล้ว';
       case 'home_recently_added':
@@ -679866,6 +680474,22 @@ extension on _StringsTh {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'วาง';
       case 'pause':
@@ -696770,6 +697394,10 @@ extension on _StringsTr {
         return 'Gizle';
       case 'home_panel_mode_shown':
         return 'Göster';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Fushi SRS\'e kart eklediğinde veya kartın varsa otomatik görünür';
       case 'home_recently_added':
@@ -701212,6 +701840,22 @@ extension on _StringsTr {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Yapıştır';
       case 'pause':
@@ -718115,6 +718759,10 @@ extension on _StringsVi {
         return 'Ẩn';
       case 'home_panel_mode_shown':
         return 'Hiện';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Tự động hiện khi tạo thẻ vào Fushi SRS hoặc đã có thẻ';
       case 'home_recently_added':
@@ -722551,6 +723199,22 @@ extension on _StringsVi {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Dán';
       case 'pause':
@@ -739347,6 +740011,10 @@ extension on _StringsZhCn {
         return '隐藏';
       case 'home_panel_mode_shown':
         return '显示';
+      case 'home_panel_panorama_hint':
+        return '全部作品封面与制卡词汇组成的可操作 3D 星空';
+      case 'home_panel_panorama_title':
+        return '媒体库全景';
       case 'home_panel_srs_hint':
         return '自动：制卡发往 Fushi 复习或已有复习卡时显示';
       case 'home_recently_added':
@@ -743735,6 +744403,22 @@ extension on _StringsZhCn {
         return '拖动跟手';
       case 'page_turn_follow_drag_description':
         return '页面随手指移动，松手时拖过四分之一宽度或快速甩动就翻页，否则回弹';
+      case 'panorama_empty':
+        return '添加书、视频、游戏或音乐后，这里会出现你的媒体库全景';
+      case 'panorama_load_failed':
+        return '全景生成失败';
+      case 'panorama_loading':
+        return '正在生成全景…';
+      case 'panorama_open_fullscreen':
+        return '全屏';
+      case 'panorama_share_animation':
+        return '播放分享动画';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} 部作品 · 共制卡 ${mined} 张 · 展示 ${shown} 个词';
       case 'paste':
         return '粘贴';
       case 'pause':
@@ -760452,6 +761136,10 @@ extension on _StringsZhHk {
         return '隱藏';
       case 'home_panel_mode_shown':
         return '顯示';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
       case 'home_recently_added':
@@ -764861,6 +765549,22 @@ extension on _StringsZhHk {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return '貼上';
       case 'pause':
