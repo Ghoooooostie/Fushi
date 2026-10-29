@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 174590 (10270 per locale)
+/// Strings: 176239 (10367 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7856,6 +7856,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
+  String get music_favorite_add => 'Like';
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  String get music_favorite_remove => 'Unlike';
   String get music_folder_add => 'Add music folder';
   String get music_folder_duplicate => 'This folder is already a music source';
   String get music_gapless_hint =>
@@ -7880,6 +7886,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_library_rescan => 'Rescan library';
   String get music_library_search_empty => 'No matches';
   String get music_library_search_hint => 'Search music';
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  String get music_liked_title => 'Liked songs';
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  String get music_link_unavailable => 'Can\'t open this from here';
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   String get music_listening_study_title => 'Count listening as study time';
@@ -7890,10 +7901,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
   String get music_lyrics_ab_loop_line => 'Loop this line';
   String get music_lyrics_ab_loop_off => 'Stop looping';
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
   String get music_lyrics_choose_source => 'Choose lyrics source';
   String get music_lyrics_empty => 'No lyrics for this track';
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   String get music_lyrics_exported => 'Lyrics exported';
+  String get music_lyrics_layout_disc => 'Record';
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   String get music_lyrics_media_session_hint =>
       'Show the current line as the subtitle of the media notification and lock screen';
@@ -7935,7 +7963,97 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_play_all => 'Play';
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
+  String get music_play_mode_repeat_all => 'Repeat all';
+  String get music_play_mode_repeat_one => 'Repeat one';
+  String get music_play_mode_sequential => 'Play in order';
+  String get music_play_mode_shuffle => 'Shuffle';
   String get music_playlists_empty => 'No playlists yet';
+  String get music_playlists_local => 'On this device';
+  String get music_plugin_account_anonymous => 'Not signed in';
+  String get music_plugin_account_login => 'Sign in';
+  String get music_plugin_account_logout => 'Sign out';
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  String get music_plugin_artist_bio => 'Biography';
+  String get music_plugin_artist_no_details => 'No details yet';
+  String get music_plugin_artist_play_popular => 'Play popular';
+  String get music_plugin_artist_tab_details => 'Details';
+  String get music_plugin_description_less => 'Show less';
+  String get music_plugin_description_more => 'Show more';
+  String get music_plugin_hero_open => 'Open';
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  String get music_plugin_login_retry => 'Start over';
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  String get music_plugin_popular => 'Popular songs';
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  String get music_plugin_search_hint => 'Search this source';
+  String get music_plugin_search_prompt => 'Type something to search';
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  String get music_plugin_unplayable => 'Not playable';
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  String get music_plugins_cap_search => 'Search';
+  String get music_plugins_cap_stream => 'Playback';
+  String get music_plugins_capabilities => 'Provides';
+  String get music_plugins_domains => 'Sites it can access';
+  String get music_plugins_empty => 'No plugins installed';
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  String get music_plugins_install => 'Install from file';
+  String get music_plugins_install_action => 'Install';
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  String get music_plugins_install_title => 'Install this plugin?';
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  String get music_plugins_perm_network => 'Network access';
+  String get music_plugins_perm_storage => 'Save data on this device';
+  String get music_plugins_permissions => 'Permissions';
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  String get music_plugins_title => 'Plugin sources';
+  String get music_plugins_uninstall => 'Uninstall';
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  String get music_recent_plays_title => 'Recently played';
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
   String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
@@ -7973,9 +8091,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Identified via ${method}';
   String get music_scrape_status_none => 'Not identified yet';
   String get music_scrape_status_unmatched => 'No confident match';
+  String get music_search_play_all => 'Play all';
+  String get music_search_see_all => 'See all';
+  String get music_search_source_all => 'All sources';
+  String get music_search_source_local => 'Local';
+  String get music_search_top_result => 'Top result';
   String get music_section_albums => 'Albums';
   String get music_section_artists => 'Artists';
   String get music_section_playlists => 'Playlists';
+  String get music_section_recommend => 'For you';
   String get music_section_songs => 'Songs';
   String get music_section_works => 'Works';
   String get music_server_add_subsonic => 'Add OpenSubsonic server';
@@ -27768,6 +27892,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -27812,6 +27946,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -27830,6 +27973,31 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -27837,6 +28005,12 @@ class _StringsAr extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -27915,7 +28089,166 @@ class _StringsAr extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -27980,11 +28313,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -52910,6 +53255,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -52954,6 +53309,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -52972,6 +53336,31 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -52979,6 +53368,12 @@ class _StringsDe extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -53057,7 +53452,166 @@ class _StringsDe extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -53122,11 +53676,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -78227,6 +78793,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -78271,6 +78847,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -78289,6 +78874,31 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -78296,6 +78906,12 @@ class _StringsEs extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -78374,7 +78990,166 @@ class _StringsEs extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -78439,11 +79214,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -103623,6 +104410,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -103667,6 +104464,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -103685,6 +104491,31 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -103692,6 +104523,12 @@ class _StringsFr extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -103770,7 +104607,166 @@ class _StringsFr extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -103835,11 +104831,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -128855,6 +129863,16 @@ class _StringsId extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -128899,6 +129917,15 @@ class _StringsId extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -128917,6 +129944,31 @@ class _StringsId extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -128924,6 +129976,12 @@ class _StringsId extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -129002,7 +130060,166 @@ class _StringsId extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -129067,11 +130284,23 @@ class _StringsId extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -154038,6 +155267,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -154082,6 +155321,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -154100,6 +155348,31 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -154107,6 +155380,12 @@ class _StringsIt extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -154185,7 +155464,166 @@ class _StringsIt extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -154250,11 +155688,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -178701,6 +180151,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -178745,6 +180205,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -178763,6 +180232,31 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -178770,6 +180264,12 @@ class _StringsJa extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -178848,7 +180348,166 @@ class _StringsJa extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -178913,11 +180572,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -202934,6 +204605,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -202978,6 +204659,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -202996,6 +204686,31 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -203003,6 +204718,12 @@ class _StringsKo extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -203081,7 +204802,166 @@ class _StringsKo extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -203146,11 +205026,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -227739,6 +229631,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -227783,6 +229685,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -227801,6 +229712,31 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -227808,6 +229744,12 @@ class _StringsNl extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -227886,7 +229828,166 @@ class _StringsNl extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -227951,11 +230052,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -252986,6 +255099,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -253030,6 +255153,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -253048,6 +255180,31 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -253055,6 +255212,12 @@ class _StringsPtBr extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -253133,7 +255296,166 @@ class _StringsPtBr extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -253198,11 +255520,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -278207,6 +280541,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -278251,6 +280595,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -278269,6 +280622,31 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -278276,6 +280654,12 @@ class _StringsRu extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -278354,7 +280738,166 @@ class _StringsRu extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -278419,11 +280962,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -303238,6 +305793,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -303282,6 +305847,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -303300,6 +305874,31 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -303307,6 +305906,12 @@ class _StringsTh extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -303385,7 +305990,166 @@ class _StringsTh extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -303450,11 +306214,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -328257,6 +331033,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -328301,6 +331087,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -328319,6 +331114,31 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -328326,6 +331146,12 @@ class _StringsTr extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -328404,7 +331230,166 @@ class _StringsTr extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -328469,11 +331454,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -353309,6 +356306,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -353353,6 +356360,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -353371,6 +356387,31 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -353378,6 +356419,12 @@ class _StringsVi extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -353456,7 +356503,166 @@ class _StringsVi extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -353521,11 +356727,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -377218,6 +380436,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_exclusive_title => '独占（bit-perfect）输出';
   @override
+  String get music_favorite_add => '收藏';
+  @override
+  String music_favorite_failed({required Object error}) => '收藏失败：${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      '登录${name}后才能收藏歌曲。';
+  @override
+  String get music_favorite_remove => '取消收藏';
+  @override
   String get music_folder_add => '添加音乐文件夹';
   @override
   String get music_folder_duplicate => '这个文件夹已经是音乐来源了';
@@ -377259,6 +380486,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_library_search_hint => '搜索音乐';
   @override
+  String music_liked_login_hint({required Object name}) => '登录${name}后可用';
+  @override
+  String get music_liked_title => '我喜欢的音乐';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name}没有提供「我喜欢的音乐」歌单。';
+  @override
+  String get music_link_unavailable => '这里打不开它的详情';
+  @override
   String get music_listening_study_hint => '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
   @override
   String get music_listening_study_title => '听歌计入学习';
@@ -377275,6 +380511,29 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => '停止循环';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => '动态流动';
+  @override
+  String get music_lyrics_backdrop_motion_static => '静态（渲染一次，更省电）';
+  @override
+  String get music_lyrics_backdrop_motion_title => '背景动效';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      '歌词页流体背景的饱和度；背景偏亮或偏暗看不清歌词时可以调整';
+  @override
+  String get music_lyrics_backdrop_saturation_title => '背景饱和度';
+  @override
+  String get music_lyrics_backdrop_style_classic => '经典';
+  @override
+  String get music_lyrics_backdrop_style_hint => '切换歌词页的流体背景算法';
+  @override
+  String get music_lyrics_backdrop_style_mesh => '网格渐变';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi 渲染器';
+  @override
+  String get music_lyrics_backdrop_style_title => '流体样式';
+  @override
+  String get music_lyrics_backdrop_title => '歌词页背景';
+  @override
   String get music_lyrics_choose_source => '选择歌词来源';
   @override
   String get music_lyrics_empty => '这首歌没有歌词';
@@ -377282,6 +380541,12 @@ class _StringsZhCn extends _StringsEn {
   String get music_lyrics_export_ttml => '导出 TTML 到音频文件旁';
   @override
   String get music_lyrics_exported => '歌词已导出';
+  @override
+  String get music_lyrics_layout_disc => '唱片';
+  @override
+  String get music_lyrics_layout_split => '左封面右歌词';
+  @override
+  String get music_lyrics_layout_stage => '歌词居中';
   @override
   String get music_lyrics_lookup_pause_title => '查词时暂停';
   @override
@@ -377355,7 +380620,153 @@ class _StringsZhCn extends _StringsEn {
   @override
   String music_play_failed({required Object error}) => '播放失败：${error}';
   @override
+  String get music_play_mode_repeat_all => '列表循环';
+  @override
+  String get music_play_mode_repeat_one => '单曲循环';
+  @override
+  String get music_play_mode_sequential => '顺序播放';
+  @override
+  String get music_play_mode_shuffle => '随机播放';
+  @override
   String get music_playlists_empty => '还没有歌单';
+  @override
+  String get music_playlists_local => '本地歌单';
+  @override
+  String get music_plugin_account_anonymous => '未登录';
+  @override
+  String get music_plugin_account_login => '登录';
+  @override
+  String get music_plugin_account_logout => '退出登录';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      '已登录：${name}';
+  @override
+  String get music_plugin_artist_bio => '简介';
+  @override
+  String get music_plugin_artist_no_details => '暂无介绍';
+  @override
+  String get music_plugin_artist_play_popular => '播放热门';
+  @override
+  String get music_plugin_artist_tab_details => '详情';
+  @override
+  String get music_plugin_description_less => '收起';
+  @override
+  String get music_plugin_description_more => '展开';
+  @override
+  String get music_plugin_hero_open => '打开';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} 首';
+  @override
+  String get music_plugin_home_empty => '暂时没有推荐内容。';
+  @override
+  String get music_plugin_home_refresh => '换一批';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      '在插件管理里登录${name}后，这里会显示你的歌单。';
+  @override
+  String music_plugin_library_title({required Object name}) => '${name} · 我的歌单';
+  @override
+  String music_plugin_login_failed({required Object error}) => '登录失败：${error}';
+  @override
+  String get music_plugin_login_no_methods => '这个插件在本设备上没有可用的登录方式';
+  @override
+  String get music_plugin_login_open_app => '在本机 App 中确认';
+  @override
+  String get music_plugin_login_qr_hint => '用手机上的 App 扫描二维码';
+  @override
+  String get music_plugin_login_qr_refresh => '刷新二维码';
+  @override
+  String get music_plugin_login_retry => '重新开始';
+  @override
+  String music_plugin_login_success({required Object name}) => '已登录 ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) => '登录 ${name}';
+  @override
+  String get music_plugin_login_web_open => '打开登录页';
+  @override
+  String get music_plugin_login_web_waiting => '在页面里完成登录，登录成功后会自动关闭';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      '退出 ${name} 的登录？保存的登录信息会被删除。';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} 次播放';
+  @override
+  String music_plugin_playlist_by({required Object name}) => '${name} 创建';
+  @override
+  String get music_plugin_popular => '热门歌曲';
+  @override
+  String music_plugin_released_on({required Object date}) => '${date} 发行';
+  @override
+  String get music_plugin_search_hint => '搜索这个音源';
+  @override
+  String get music_plugin_search_prompt => '输入关键词开始搜索';
+  @override
+  String music_plugin_stat_fans({required Object count}) => '${count} 粉丝';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} 个 MV';
+  @override
+  String music_plugin_subtitle({required Object version}) => '插件 · v${version}';
+  @override
+  String get music_plugin_unplayable => '不可播放';
+  @override
+  String get music_plugins_broken => '插件文件被改动或不完整，请重新安装';
+  @override
+  String get music_plugins_cap_lyrics => '歌词';
+  @override
+  String get music_plugins_cap_search => '搜索';
+  @override
+  String get music_plugins_cap_stream => '播放';
+  @override
+  String get music_plugins_capabilities => '提供的能力';
+  @override
+  String get music_plugins_domains => '可访问的网站';
+  @override
+  String get music_plugins_empty => '还没有安装插件';
+  @override
+  String get music_plugins_entry_hint => '安装在线音源并登录；浏览在音乐页的「推荐」和搜索里。';
+  @override
+  String get music_plugins_hint =>
+      '第三方 JS 插件，用来接入在线音乐平台。插件在沙箱里运行，但能访问它声明的网站；只安装你信任的插件。';
+  @override
+  String get music_plugins_install => '从文件安装';
+  @override
+  String get music_plugins_install_action => '安装';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      '插件安装失败：${error}';
+  @override
+  String get music_plugins_install_title => '安装这个插件？';
+  @override
+  String music_plugins_installed({required Object name}) => '已安装 ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => '不加密的 HTTP 连接';
+  @override
+  String get music_plugins_perm_network => '访问网络';
+  @override
+  String get music_plugins_perm_storage => '在本机保存数据';
+  @override
+  String get music_plugins_permissions => '权限';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      '自签名（未验证）：公钥 ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => '签名公钥 ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      '签名者与已安装版本不同：将按新插件安装，原有登录状态与插件数据会被清除';
+  @override
+  String get music_plugins_title => '插件音源';
+  @override
+  String get music_plugins_uninstall => '卸载';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      '卸载 ${name}？它在本机保存的数据也会一并删除。';
+  @override
+  String get music_plugins_unsigned => '未签名：无法核实发布者';
+  @override
+  String music_plugins_version({required Object version}) => '版本 ${version}';
+  @override
+  String get music_recent_plays_title => '最近播放';
   @override
   String get music_replaygain_hint => '整张专辑顺序播放用专辑增益，其它情况用单曲增益';
   @override
@@ -377417,11 +380828,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => '没有足够确定的匹配';
   @override
+  String get music_search_play_all => '播放全部';
+  @override
+  String get music_search_see_all => '全部';
+  @override
+  String get music_search_source_all => '全部来源';
+  @override
+  String get music_search_source_local => '本地';
+  @override
+  String get music_search_top_result => '最佳匹配';
+  @override
   String get music_section_albums => '专辑';
   @override
   String get music_section_artists => '艺人';
   @override
   String get music_section_playlists => '歌单';
+  @override
+  String get music_section_recommend => '推荐';
   @override
   String get music_section_songs => '歌曲';
   @override
@@ -400396,6 +403819,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
+  String get music_favorite_add => 'Like';
+  @override
+  String music_favorite_failed({required Object error}) =>
+      'Couldn\'t update like: ${error}';
+  @override
+  String music_favorite_login_required({required Object name}) =>
+      'Sign in to ${name} to like songs.';
+  @override
+  String get music_favorite_remove => 'Unlike';
+  @override
   String get music_folder_add => 'Add music folder';
   @override
   String get music_folder_duplicate => 'This folder is already a music source';
@@ -400440,6 +403873,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_library_search_hint => 'Search music';
   @override
+  String music_liked_login_hint({required Object name}) => 'Sign in to ${name}';
+  @override
+  String get music_liked_title => 'Liked songs';
+  @override
+  String music_liked_unavailable({required Object name}) =>
+      '${name} has no liked songs playlist.';
+  @override
+  String get music_link_unavailable => 'Can\'t open this from here';
+  @override
   String get music_listening_study_hint =>
       'When off, only listening after a lookup, card or loop on the lyrics page counts';
   @override
@@ -400458,6 +403900,31 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
+  String get music_lyrics_backdrop_motion_dynamic => 'Flowing';
+  @override
+  String get music_lyrics_backdrop_motion_static =>
+      'Static (render once, saves power)';
+  @override
+  String get music_lyrics_backdrop_motion_title => 'Background motion';
+  @override
+  String get music_lyrics_backdrop_saturation_hint =>
+      'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+  @override
+  String get music_lyrics_backdrop_saturation_title => 'Background saturation';
+  @override
+  String get music_lyrics_backdrop_style_classic => 'Classic';
+  @override
+  String get music_lyrics_backdrop_style_hint =>
+      'Switch the fluid background algorithm of the lyrics page';
+  @override
+  String get music_lyrics_backdrop_style_mesh => 'Mesh gradient';
+  @override
+  String get music_lyrics_backdrop_style_pixi => 'Pixi renderer';
+  @override
+  String get music_lyrics_backdrop_style_title => 'Fluid style';
+  @override
+  String get music_lyrics_backdrop_title => 'Lyrics page background';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
@@ -400465,6 +403932,12 @@ class _StringsZhHk extends _StringsEn {
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   @override
   String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_layout_disc => 'Record';
+  @override
+  String get music_lyrics_layout_split => 'Cover and lyrics side by side';
+  @override
+  String get music_lyrics_layout_stage => 'Lyrics stage';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
   @override
@@ -400543,7 +404016,166 @@ class _StringsZhHk extends _StringsEn {
   String music_play_failed({required Object error}) =>
       'Playback failed: ${error}';
   @override
+  String get music_play_mode_repeat_all => 'Repeat all';
+  @override
+  String get music_play_mode_repeat_one => 'Repeat one';
+  @override
+  String get music_play_mode_sequential => 'Play in order';
+  @override
+  String get music_play_mode_shuffle => 'Shuffle';
+  @override
   String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_playlists_local => 'On this device';
+  @override
+  String get music_plugin_account_anonymous => 'Not signed in';
+  @override
+  String get music_plugin_account_login => 'Sign in';
+  @override
+  String get music_plugin_account_logout => 'Sign out';
+  @override
+  String music_plugin_account_signed_in({required Object name}) =>
+      'Signed in as ${name}';
+  @override
+  String get music_plugin_artist_bio => 'Biography';
+  @override
+  String get music_plugin_artist_no_details => 'No details yet';
+  @override
+  String get music_plugin_artist_play_popular => 'Play popular';
+  @override
+  String get music_plugin_artist_tab_details => 'Details';
+  @override
+  String get music_plugin_description_less => 'Show less';
+  @override
+  String get music_plugin_description_more => 'Show more';
+  @override
+  String get music_plugin_hero_open => 'Open';
+  @override
+  String music_plugin_hero_track_count({required Object n}) => '${n} tracks';
+  @override
+  String get music_plugin_home_empty => 'Nothing to recommend right now.';
+  @override
+  String get music_plugin_home_refresh => 'Refresh recommendations';
+  @override
+  String music_plugin_library_login_hint({required Object name}) =>
+      'Sign in to ${name} in plugin management to see your playlists here.';
+  @override
+  String music_plugin_library_title({required Object name}) =>
+      '${name} · My playlists';
+  @override
+  String music_plugin_login_failed({required Object error}) =>
+      'Sign-in failed: ${error}';
+  @override
+  String get music_plugin_login_no_methods =>
+      'This plugin offers no sign-in method on this device';
+  @override
+  String get music_plugin_login_open_app => 'Confirm in the app on this device';
+  @override
+  String get music_plugin_login_qr_hint =>
+      'Scan the code with the app on your phone';
+  @override
+  String get music_plugin_login_qr_refresh => 'New QR code';
+  @override
+  String get music_plugin_login_retry => 'Start over';
+  @override
+  String music_plugin_login_success({required Object name}) =>
+      'Signed in to ${name}';
+  @override
+  String music_plugin_login_title({required Object name}) =>
+      'Sign in to ${name}';
+  @override
+  String get music_plugin_login_web_open => 'Open sign-in page';
+  @override
+  String get music_plugin_login_web_waiting =>
+      'Sign in on the page; it closes by itself once you are signed in';
+  @override
+  String music_plugin_logout_confirm({required Object name}) =>
+      'Sign out of ${name}? The saved sign-in data is deleted.';
+  @override
+  String music_plugin_play_count({required Object count}) => '${count} plays';
+  @override
+  String music_plugin_playlist_by({required Object name}) => 'By ${name}';
+  @override
+  String get music_plugin_popular => 'Popular songs';
+  @override
+  String music_plugin_released_on({required Object date}) => 'Released ${date}';
+  @override
+  String get music_plugin_search_hint => 'Search this source';
+  @override
+  String get music_plugin_search_prompt => 'Type something to search';
+  @override
+  String music_plugin_stat_fans({required Object count}) =>
+      '${count} followers';
+  @override
+  String music_plugin_stat_mvs({required Object count}) => '${count} MVs';
+  @override
+  String music_plugin_subtitle({required Object version}) =>
+      'Plugin · v${version}';
+  @override
+  String get music_plugin_unplayable => 'Not playable';
+  @override
+  String get music_plugins_broken =>
+      'Plugin files were modified or are incomplete; reinstall it';
+  @override
+  String get music_plugins_cap_lyrics => 'Lyrics';
+  @override
+  String get music_plugins_cap_search => 'Search';
+  @override
+  String get music_plugins_cap_stream => 'Playback';
+  @override
+  String get music_plugins_capabilities => 'Provides';
+  @override
+  String get music_plugins_domains => 'Sites it can access';
+  @override
+  String get music_plugins_empty => 'No plugins installed';
+  @override
+  String get music_plugins_entry_hint =>
+      'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+  @override
+  String get music_plugins_hint =>
+      'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+  @override
+  String get music_plugins_install => 'Install from file';
+  @override
+  String get music_plugins_install_action => 'Install';
+  @override
+  String music_plugins_install_failed({required Object error}) =>
+      'Could not install the plugin: ${error}';
+  @override
+  String get music_plugins_install_title => 'Install this plugin?';
+  @override
+  String music_plugins_installed({required Object name}) => 'Installed ${name}';
+  @override
+  String get music_plugins_perm_insecure_http => 'Unencrypted HTTP connections';
+  @override
+  String get music_plugins_perm_network => 'Network access';
+  @override
+  String get music_plugins_perm_storage => 'Save data on this device';
+  @override
+  String get music_plugins_permissions => 'Permissions';
+  @override
+  String music_plugins_self_signed({required Object key}) =>
+      'Self-signed (not verified): key ${key}';
+  @override
+  String music_plugins_signed({required Object key}) => 'Signed by key ${key}';
+  @override
+  String get music_plugins_signer_changed =>
+      'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+  @override
+  String get music_plugins_title => 'Plugin sources';
+  @override
+  String get music_plugins_uninstall => 'Uninstall';
+  @override
+  String music_plugins_uninstall_confirm({required Object name}) =>
+      'Uninstall ${name}? Data it saved on this device is deleted too.';
+  @override
+  String get music_plugins_unsigned =>
+      'Unsigned: the publisher cannot be verified';
+  @override
+  String music_plugins_version({required Object version}) =>
+      'Version ${version}';
+  @override
+  String get music_recent_plays_title => 'Recently played';
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -400608,11 +404240,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_scrape_status_unmatched => 'No confident match';
   @override
+  String get music_search_play_all => 'Play all';
+  @override
+  String get music_search_see_all => 'See all';
+  @override
+  String get music_search_source_all => 'All sources';
+  @override
+  String get music_search_source_local => 'Local';
+  @override
+  String get music_search_top_result => 'Top result';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
   @override
   String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_recommend => 'For you';
   @override
   String get music_section_songs => 'Songs';
   @override
@@ -422833,6 +426477,14 @@ extension on _StringsEn {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -422873,6 +426525,15 @@ extension on _StringsEn {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -422889,6 +426550,28 @@ extension on _StringsEn {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -422897,6 +426580,12 @@ extension on _StringsEn {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -422969,8 +426658,151 @@ extension on _StringsEn {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -423025,12 +426857,24 @@ extension on _StringsEn {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -444170,6 +448014,14 @@ extension on _StringsAr {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -444210,6 +448062,15 @@ extension on _StringsAr {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -444226,6 +448087,28 @@ extension on _StringsAr {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -444234,6 +448117,12 @@ extension on _StringsAr {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -444306,8 +448195,151 @@ extension on _StringsAr {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -444362,12 +448394,24 @@ extension on _StringsAr {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -465558,6 +469602,14 @@ extension on _StringsDe {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -465598,6 +469650,15 @@ extension on _StringsDe {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -465614,6 +469675,28 @@ extension on _StringsDe {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -465622,6 +469705,12 @@ extension on _StringsDe {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -465694,8 +469783,151 @@ extension on _StringsDe {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -465750,12 +469982,24 @@ extension on _StringsDe {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -486956,6 +491200,14 @@ extension on _StringsEs {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -486996,6 +491248,15 @@ extension on _StringsEs {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -487012,6 +491273,28 @@ extension on _StringsEs {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -487020,6 +491303,12 @@ extension on _StringsEs {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -487092,8 +491381,151 @@ extension on _StringsEs {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -487148,12 +491580,24 @@ extension on _StringsEs {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -508364,6 +512808,14 @@ extension on _StringsFr {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -508404,6 +512856,15 @@ extension on _StringsFr {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -508420,6 +512881,28 @@ extension on _StringsFr {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -508428,6 +512911,12 @@ extension on _StringsFr {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -508500,8 +512989,151 @@ extension on _StringsFr {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -508556,12 +513188,24 @@ extension on _StringsFr {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -529741,6 +534385,14 @@ extension on _StringsId {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -529781,6 +534433,15 @@ extension on _StringsId {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -529797,6 +534458,28 @@ extension on _StringsId {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -529805,6 +534488,12 @@ extension on _StringsId {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -529877,8 +534566,151 @@ extension on _StringsId {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -529933,12 +534765,24 @@ extension on _StringsId {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -551115,6 +555959,14 @@ extension on _StringsIt {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -551155,6 +556007,15 @@ extension on _StringsIt {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -551171,6 +556032,28 @@ extension on _StringsIt {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -551179,6 +556062,12 @@ extension on _StringsIt {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -551251,8 +556140,151 @@ extension on _StringsIt {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -551307,12 +556339,24 @@ extension on _StringsIt {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -572437,6 +577481,14 @@ extension on _StringsJa {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -572477,6 +577529,15 @@ extension on _StringsJa {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -572493,6 +577554,28 @@ extension on _StringsJa {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -572501,6 +577584,12 @@ extension on _StringsJa {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -572573,8 +577662,151 @@ extension on _StringsJa {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -572629,12 +577861,24 @@ extension on _StringsJa {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -593696,6 +598940,14 @@ extension on _StringsKo {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -593736,6 +598988,15 @@ extension on _StringsKo {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -593752,6 +599013,28 @@ extension on _StringsKo {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -593760,6 +599043,12 @@ extension on _StringsKo {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -593832,8 +599121,151 @@ extension on _StringsKo {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -593888,12 +599320,24 @@ extension on _StringsKo {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -615039,6 +620483,14 @@ extension on _StringsNl {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -615079,6 +620531,15 @@ extension on _StringsNl {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -615095,6 +620556,28 @@ extension on _StringsNl {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -615103,6 +620586,12 @@ extension on _StringsNl {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -615175,8 +620664,151 @@ extension on _StringsNl {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -615231,12 +620863,24 @@ extension on _StringsNl {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -636421,6 +642065,14 @@ extension on _StringsPtBr {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -636461,6 +642113,15 @@ extension on _StringsPtBr {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -636477,6 +642138,28 @@ extension on _StringsPtBr {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -636485,6 +642168,12 @@ extension on _StringsPtBr {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -636557,8 +642246,151 @@ extension on _StringsPtBr {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -636613,12 +642445,24 @@ extension on _StringsPtBr {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -657807,6 +663651,14 @@ extension on _StringsRu {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -657847,6 +663699,15 @@ extension on _StringsRu {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -657863,6 +663724,28 @@ extension on _StringsRu {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -657871,6 +663754,12 @@ extension on _StringsRu {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -657943,8 +663832,151 @@ extension on _StringsRu {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -657999,12 +664031,24 @@ extension on _StringsRu {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -679158,6 +685202,14 @@ extension on _StringsTh {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -679198,6 +685250,15 @@ extension on _StringsTh {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -679214,6 +685275,28 @@ extension on _StringsTh {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -679222,6 +685305,12 @@ extension on _StringsTh {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -679294,8 +685383,151 @@ extension on _StringsTh {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -679350,12 +685582,24 @@ extension on _StringsTh {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -700522,6 +706766,14 @@ extension on _StringsTr {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -700562,6 +706814,15 @@ extension on _StringsTr {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -700578,6 +706839,28 @@ extension on _StringsTr {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -700586,6 +706869,12 @@ extension on _StringsTr {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -700658,8 +706947,151 @@ extension on _StringsTr {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -700714,12 +707146,24 @@ extension on _StringsTr {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -721878,6 +728322,14 @@ extension on _StringsVi {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -721918,6 +728370,15 @@ extension on _StringsVi {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -721934,6 +728395,28 @@ extension on _StringsVi {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -721942,6 +728425,12 @@ extension on _StringsVi {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -722014,8 +728503,151 @@ extension on _StringsVi {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -722070,12 +728702,24 @@ extension on _StringsVi {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
@@ -743088,6 +749732,14 @@ extension on _StringsZhCn {
         return '绕过系统混音，让 DAC 收到原样的源样本。播放音乐时其他程序没有声音。';
       case 'music_exclusive_title':
         return '独占（bit-perfect）输出';
+      case 'music_favorite_add':
+        return '收藏';
+      case 'music_favorite_failed':
+        return ({required Object error}) => '收藏失败：${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => '登录${name}后才能收藏歌曲。';
+      case 'music_favorite_remove':
+        return '取消收藏';
       case 'music_folder_add':
         return '添加音乐文件夹';
       case 'music_folder_duplicate':
@@ -743128,6 +749780,14 @@ extension on _StringsZhCn {
         return '没有匹配项';
       case 'music_library_search_hint':
         return '搜索音乐';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => '登录${name}后可用';
+      case 'music_liked_title':
+        return '我喜欢的音乐';
+      case 'music_liked_unavailable':
+        return ({required Object name}) => '${name}没有提供「我喜欢的音乐」歌单。';
+      case 'music_link_unavailable':
+        return '这里打不开它的详情';
       case 'music_listening_study_hint':
         return '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
       case 'music_listening_study_title':
@@ -743144,6 +749804,28 @@ extension on _StringsZhCn {
         return '循环当前行';
       case 'music_lyrics_ab_loop_off':
         return '停止循环';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return '动态流动';
+      case 'music_lyrics_backdrop_motion_static':
+        return '静态（渲染一次，更省电）';
+      case 'music_lyrics_backdrop_motion_title':
+        return '背景动效';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return '歌词页流体背景的饱和度；背景偏亮或偏暗看不清歌词时可以调整';
+      case 'music_lyrics_backdrop_saturation_title':
+        return '背景饱和度';
+      case 'music_lyrics_backdrop_style_classic':
+        return '经典';
+      case 'music_lyrics_backdrop_style_hint':
+        return '切换歌词页的流体背景算法';
+      case 'music_lyrics_backdrop_style_mesh':
+        return '网格渐变';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi 渲染器';
+      case 'music_lyrics_backdrop_style_title':
+        return '流体样式';
+      case 'music_lyrics_backdrop_title':
+        return '歌词页背景';
       case 'music_lyrics_choose_source':
         return '选择歌词来源';
       case 'music_lyrics_empty':
@@ -743152,6 +749834,12 @@ extension on _StringsZhCn {
         return '导出 TTML 到音频文件旁';
       case 'music_lyrics_exported':
         return '歌词已导出';
+      case 'music_lyrics_layout_disc':
+        return '唱片';
+      case 'music_lyrics_layout_split':
+        return '左封面右歌词';
+      case 'music_lyrics_layout_stage':
+        return '歌词居中';
       case 'music_lyrics_lookup_pause_title':
         return '查词时暂停';
       case 'music_lyrics_media_session_hint':
@@ -743224,8 +749912,146 @@ extension on _StringsZhCn {
         return '播放';
       case 'music_play_failed':
         return ({required Object error}) => '播放失败：${error}';
+      case 'music_play_mode_repeat_all':
+        return '列表循环';
+      case 'music_play_mode_repeat_one':
+        return '单曲循环';
+      case 'music_play_mode_sequential':
+        return '顺序播放';
+      case 'music_play_mode_shuffle':
+        return '随机播放';
       case 'music_playlists_empty':
         return '还没有歌单';
+      case 'music_playlists_local':
+        return '本地歌单';
+      case 'music_plugin_account_anonymous':
+        return '未登录';
+      case 'music_plugin_account_login':
+        return '登录';
+      case 'music_plugin_account_logout':
+        return '退出登录';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => '已登录：${name}';
+      case 'music_plugin_artist_bio':
+        return '简介';
+      case 'music_plugin_artist_no_details':
+        return '暂无介绍';
+      case 'music_plugin_artist_play_popular':
+        return '播放热门';
+      case 'music_plugin_artist_tab_details':
+        return '详情';
+      case 'music_plugin_description_less':
+        return '收起';
+      case 'music_plugin_description_more':
+        return '展开';
+      case 'music_plugin_hero_open':
+        return '打开';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} 首';
+      case 'music_plugin_home_empty':
+        return '暂时没有推荐内容。';
+      case 'music_plugin_home_refresh':
+        return '换一批';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) => '在插件管理里登录${name}后，这里会显示你的歌单。';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · 我的歌单';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => '登录失败：${error}';
+      case 'music_plugin_login_no_methods':
+        return '这个插件在本设备上没有可用的登录方式';
+      case 'music_plugin_login_open_app':
+        return '在本机 App 中确认';
+      case 'music_plugin_login_qr_hint':
+        return '用手机上的 App 扫描二维码';
+      case 'music_plugin_login_qr_refresh':
+        return '刷新二维码';
+      case 'music_plugin_login_retry':
+        return '重新开始';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => '已登录 ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => '登录 ${name}';
+      case 'music_plugin_login_web_open':
+        return '打开登录页';
+      case 'music_plugin_login_web_waiting':
+        return '在页面里完成登录，登录成功后会自动关闭';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) => '退出 ${name} 的登录？保存的登录信息会被删除。';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} 次播放';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => '${name} 创建';
+      case 'music_plugin_popular':
+        return '热门歌曲';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => '${date} 发行';
+      case 'music_plugin_search_hint':
+        return '搜索这个音源';
+      case 'music_plugin_search_prompt':
+        return '输入关键词开始搜索';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} 粉丝';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} 个 MV';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => '插件 · v${version}';
+      case 'music_plugin_unplayable':
+        return '不可播放';
+      case 'music_plugins_broken':
+        return '插件文件被改动或不完整，请重新安装';
+      case 'music_plugins_cap_lyrics':
+        return '歌词';
+      case 'music_plugins_cap_search':
+        return '搜索';
+      case 'music_plugins_cap_stream':
+        return '播放';
+      case 'music_plugins_capabilities':
+        return '提供的能力';
+      case 'music_plugins_domains':
+        return '可访问的网站';
+      case 'music_plugins_empty':
+        return '还没有安装插件';
+      case 'music_plugins_entry_hint':
+        return '安装在线音源并登录；浏览在音乐页的「推荐」和搜索里。';
+      case 'music_plugins_hint':
+        return '第三方 JS 插件，用来接入在线音乐平台。插件在沙箱里运行，但能访问它声明的网站；只安装你信任的插件。';
+      case 'music_plugins_install':
+        return '从文件安装';
+      case 'music_plugins_install_action':
+        return '安装';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) => '插件安装失败：${error}';
+      case 'music_plugins_install_title':
+        return '安装这个插件？';
+      case 'music_plugins_installed':
+        return ({required Object name}) => '已安装 ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return '不加密的 HTTP 连接';
+      case 'music_plugins_perm_network':
+        return '访问网络';
+      case 'music_plugins_perm_storage':
+        return '在本机保存数据';
+      case 'music_plugins_permissions':
+        return '权限';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) => '自签名（未验证）：公钥 ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => '签名公钥 ${key}';
+      case 'music_plugins_signer_changed':
+        return '签名者与已安装版本不同：将按新插件安装，原有登录状态与插件数据会被清除';
+      case 'music_plugins_title':
+        return '插件音源';
+      case 'music_plugins_uninstall':
+        return '卸载';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) => '卸载 ${name}？它在本机保存的数据也会一并删除。';
+      case 'music_plugins_unsigned':
+        return '未签名：无法核实发布者';
+      case 'music_plugins_version':
+        return ({required Object version}) => '版本 ${version}';
+      case 'music_recent_plays_title':
+        return '最近播放';
       case 'music_replaygain_hint':
         return '整张专辑顺序播放用专辑增益，其它情况用单曲增益';
       case 'music_replaygain_preamp_title':
@@ -743280,12 +750106,24 @@ extension on _StringsZhCn {
         return '尚未识别';
       case 'music_scrape_status_unmatched':
         return '没有足够确定的匹配';
+      case 'music_search_play_all':
+        return '播放全部';
+      case 'music_search_see_all':
+        return '全部';
+      case 'music_search_source_all':
+        return '全部来源';
+      case 'music_search_source_local':
+        return '本地';
+      case 'music_search_top_result':
+        return '最佳匹配';
       case 'music_section_albums':
         return '专辑';
       case 'music_section_artists':
         return '艺人';
       case 'music_section_playlists':
         return '歌单';
+      case 'music_section_recommend':
+        return '推荐';
       case 'music_section_songs':
         return '歌曲';
       case 'music_section_works':
@@ -764228,6 +771066,14 @@ extension on _StringsZhHk {
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
         return 'Exclusive (bit-perfect) output';
+      case 'music_favorite_add':
+        return 'Like';
+      case 'music_favorite_failed':
+        return ({required Object error}) => 'Couldn\'t update like: ${error}';
+      case 'music_favorite_login_required':
+        return ({required Object name}) => 'Sign in to ${name} to like songs.';
+      case 'music_favorite_remove':
+        return 'Unlike';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -764268,6 +771114,15 @@ extension on _StringsZhHk {
         return 'No matches';
       case 'music_library_search_hint':
         return 'Search music';
+      case 'music_liked_login_hint':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_liked_title':
+        return 'Liked songs';
+      case 'music_liked_unavailable':
+        return ({required Object name}) =>
+            '${name} has no liked songs playlist.';
+      case 'music_link_unavailable':
+        return 'Can\'t open this from here';
       case 'music_listening_study_hint':
         return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
       case 'music_listening_study_title':
@@ -764284,6 +771139,28 @@ extension on _StringsZhHk {
         return 'Loop this line';
       case 'music_lyrics_ab_loop_off':
         return 'Stop looping';
+      case 'music_lyrics_backdrop_motion_dynamic':
+        return 'Flowing';
+      case 'music_lyrics_backdrop_motion_static':
+        return 'Static (render once, saves power)';
+      case 'music_lyrics_backdrop_motion_title':
+        return 'Background motion';
+      case 'music_lyrics_backdrop_saturation_hint':
+        return 'Saturation of the lyrics page\'s fluid background; adjust it if the lyrics are hard to read on a background that is too bright or too dark';
+      case 'music_lyrics_backdrop_saturation_title':
+        return 'Background saturation';
+      case 'music_lyrics_backdrop_style_classic':
+        return 'Classic';
+      case 'music_lyrics_backdrop_style_hint':
+        return 'Switch the fluid background algorithm of the lyrics page';
+      case 'music_lyrics_backdrop_style_mesh':
+        return 'Mesh gradient';
+      case 'music_lyrics_backdrop_style_pixi':
+        return 'Pixi renderer';
+      case 'music_lyrics_backdrop_style_title':
+        return 'Fluid style';
+      case 'music_lyrics_backdrop_title':
+        return 'Lyrics page background';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -764292,6 +771169,12 @@ extension on _StringsZhHk {
         return 'Export TTML next to the audio file';
       case 'music_lyrics_exported':
         return 'Lyrics exported';
+      case 'music_lyrics_layout_disc':
+        return 'Record';
+      case 'music_lyrics_layout_split':
+        return 'Cover and lyrics side by side';
+      case 'music_lyrics_layout_stage':
+        return 'Lyrics stage';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
       case 'music_lyrics_media_session_hint':
@@ -764364,8 +771247,151 @@ extension on _StringsZhHk {
         return 'Play';
       case 'music_play_failed':
         return ({required Object error}) => 'Playback failed: ${error}';
+      case 'music_play_mode_repeat_all':
+        return 'Repeat all';
+      case 'music_play_mode_repeat_one':
+        return 'Repeat one';
+      case 'music_play_mode_sequential':
+        return 'Play in order';
+      case 'music_play_mode_shuffle':
+        return 'Shuffle';
       case 'music_playlists_empty':
         return 'No playlists yet';
+      case 'music_playlists_local':
+        return 'On this device';
+      case 'music_plugin_account_anonymous':
+        return 'Not signed in';
+      case 'music_plugin_account_login':
+        return 'Sign in';
+      case 'music_plugin_account_logout':
+        return 'Sign out';
+      case 'music_plugin_account_signed_in':
+        return ({required Object name}) => 'Signed in as ${name}';
+      case 'music_plugin_artist_bio':
+        return 'Biography';
+      case 'music_plugin_artist_no_details':
+        return 'No details yet';
+      case 'music_plugin_artist_play_popular':
+        return 'Play popular';
+      case 'music_plugin_artist_tab_details':
+        return 'Details';
+      case 'music_plugin_description_less':
+        return 'Show less';
+      case 'music_plugin_description_more':
+        return 'Show more';
+      case 'music_plugin_hero_open':
+        return 'Open';
+      case 'music_plugin_hero_track_count':
+        return ({required Object n}) => '${n} tracks';
+      case 'music_plugin_home_empty':
+        return 'Nothing to recommend right now.';
+      case 'music_plugin_home_refresh':
+        return 'Refresh recommendations';
+      case 'music_plugin_library_login_hint':
+        return ({required Object name}) =>
+            'Sign in to ${name} in plugin management to see your playlists here.';
+      case 'music_plugin_library_title':
+        return ({required Object name}) => '${name} · My playlists';
+      case 'music_plugin_login_failed':
+        return ({required Object error}) => 'Sign-in failed: ${error}';
+      case 'music_plugin_login_no_methods':
+        return 'This plugin offers no sign-in method on this device';
+      case 'music_plugin_login_open_app':
+        return 'Confirm in the app on this device';
+      case 'music_plugin_login_qr_hint':
+        return 'Scan the code with the app on your phone';
+      case 'music_plugin_login_qr_refresh':
+        return 'New QR code';
+      case 'music_plugin_login_retry':
+        return 'Start over';
+      case 'music_plugin_login_success':
+        return ({required Object name}) => 'Signed in to ${name}';
+      case 'music_plugin_login_title':
+        return ({required Object name}) => 'Sign in to ${name}';
+      case 'music_plugin_login_web_open':
+        return 'Open sign-in page';
+      case 'music_plugin_login_web_waiting':
+        return 'Sign in on the page; it closes by itself once you are signed in';
+      case 'music_plugin_logout_confirm':
+        return ({required Object name}) =>
+            'Sign out of ${name}? The saved sign-in data is deleted.';
+      case 'music_plugin_play_count':
+        return ({required Object count}) => '${count} plays';
+      case 'music_plugin_playlist_by':
+        return ({required Object name}) => 'By ${name}';
+      case 'music_plugin_popular':
+        return 'Popular songs';
+      case 'music_plugin_released_on':
+        return ({required Object date}) => 'Released ${date}';
+      case 'music_plugin_search_hint':
+        return 'Search this source';
+      case 'music_plugin_search_prompt':
+        return 'Type something to search';
+      case 'music_plugin_stat_fans':
+        return ({required Object count}) => '${count} followers';
+      case 'music_plugin_stat_mvs':
+        return ({required Object count}) => '${count} MVs';
+      case 'music_plugin_subtitle':
+        return ({required Object version}) => 'Plugin · v${version}';
+      case 'music_plugin_unplayable':
+        return 'Not playable';
+      case 'music_plugins_broken':
+        return 'Plugin files were modified or are incomplete; reinstall it';
+      case 'music_plugins_cap_lyrics':
+        return 'Lyrics';
+      case 'music_plugins_cap_search':
+        return 'Search';
+      case 'music_plugins_cap_stream':
+        return 'Playback';
+      case 'music_plugins_capabilities':
+        return 'Provides';
+      case 'music_plugins_domains':
+        return 'Sites it can access';
+      case 'music_plugins_empty':
+        return 'No plugins installed';
+      case 'music_plugins_entry_hint':
+        return 'Install and sign in to online music sources. Browse them from For you and search on the music page.';
+      case 'music_plugins_hint':
+        return 'Third-party JavaScript plugins that add online music sources. Plugins run in a sandbox but can reach the sites they declare; only install plugins you trust.';
+      case 'music_plugins_install':
+        return 'Install from file';
+      case 'music_plugins_install_action':
+        return 'Install';
+      case 'music_plugins_install_failed':
+        return ({required Object error}) =>
+            'Could not install the plugin: ${error}';
+      case 'music_plugins_install_title':
+        return 'Install this plugin?';
+      case 'music_plugins_installed':
+        return ({required Object name}) => 'Installed ${name}';
+      case 'music_plugins_perm_insecure_http':
+        return 'Unencrypted HTTP connections';
+      case 'music_plugins_perm_network':
+        return 'Network access';
+      case 'music_plugins_perm_storage':
+        return 'Save data on this device';
+      case 'music_plugins_permissions':
+        return 'Permissions';
+      case 'music_plugins_self_signed':
+        return ({required Object key}) =>
+            'Self-signed (not verified): key ${key}';
+      case 'music_plugins_signed':
+        return ({required Object key}) => 'Signed by key ${key}';
+      case 'music_plugins_signer_changed':
+        return 'Signed by a different key than the installed version: it will be treated as a new plugin and its login and data will be cleared';
+      case 'music_plugins_title':
+        return 'Plugin sources';
+      case 'music_plugins_uninstall':
+        return 'Uninstall';
+      case 'music_plugins_uninstall_confirm':
+        return ({required Object name}) =>
+            'Uninstall ${name}? Data it saved on this device is deleted too.';
+      case 'music_plugins_unsigned':
+        return 'Unsigned: the publisher cannot be verified';
+      case 'music_plugins_version':
+        return ({required Object version}) => 'Version ${version}';
+      case 'music_recent_plays_title':
+        return 'Recently played';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
       case 'music_replaygain_preamp_title':
@@ -764420,12 +771446,24 @@ extension on _StringsZhHk {
         return 'Not identified yet';
       case 'music_scrape_status_unmatched':
         return 'No confident match';
+      case 'music_search_play_all':
+        return 'Play all';
+      case 'music_search_see_all':
+        return 'See all';
+      case 'music_search_source_all':
+        return 'All sources';
+      case 'music_search_source_local':
+        return 'Local';
+      case 'music_search_top_result':
+        return 'Top result';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
         return 'Artists';
       case 'music_section_playlists':
         return 'Playlists';
+      case 'music_section_recommend':
+        return 'For you';
       case 'music_section_songs':
         return 'Songs';
       case 'music_section_works':
