@@ -10142,7 +10142,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_section_other => 'Other card types';
   String get srs_card_appearance_section_text => 'Text';
   String get srs_card_appearance_show_frequency => 'Frequency';
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   String get srs_card_appearance_show_source => 'Source';
   String get srs_card_appearance_show_translation => 'Sentence translation';
   String get srs_card_appearance_term_size => 'Headword size';
@@ -10355,8 +10355,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Where the card came from: the work title (tap to jump back) and the timestamp.';
   String get srs_field_info_misc_info_name => 'Source';
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
-  String get srs_field_info_picture_name => 'Picture';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
+  String get srs_field_info_picture_name => 'Media';
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
   String get srs_field_info_pitch_categories_name => 'Pitch accent type';
@@ -10393,7 +10393,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_field_kind_data => 'Data for the template, usually not shown';
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   String get srs_field_kind_text => 'Text';
   String get srs_flag_blue => 'Blue';
@@ -10629,7 +10629,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_block_definitions => 'Definitions';
   String get srs_note_block_frequency => 'Frequency';
   String get srs_note_block_other => 'Other';
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   String get srs_note_block_reading => 'Reading';
   String get srs_note_block_sentence => 'Sentence';
   String get srs_note_block_source => 'Source';
@@ -10696,8 +10696,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_image_paste => 'Paste image';
   String get srs_note_image_paste_empty => 'No image on the clipboard';
   String get srs_note_image_pick => 'Choose image';
-  String get srs_note_image_remove => 'Remove image';
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_remove => 'Remove media';
+  String get srs_note_image_replace => 'Replace media';
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   String get srs_note_restore => 'Restore';
   String get srs_note_save => 'Save';
@@ -31767,7 +31767,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -32133,9 +32133,9 @@ class _StringsAr extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -32197,7 +32197,7 @@ class _StringsAr extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -32581,7 +32581,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -32702,9 +32702,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -56968,7 +56968,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -57334,9 +57334,9 @@ class _StringsDe extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -57398,7 +57398,7 @@ class _StringsDe extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -57782,7 +57782,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -57903,9 +57903,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -82291,7 +82291,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -82657,9 +82657,9 @@ class _StringsEs extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -82721,7 +82721,7 @@ class _StringsEs extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -83105,7 +83105,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -83226,9 +83226,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -107702,7 +107702,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -108068,9 +108068,9 @@ class _StringsFr extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -108132,7 +108132,7 @@ class _StringsFr extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -108516,7 +108516,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -108637,9 +108637,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -132877,7 +132877,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -133243,9 +133243,9 @@ class _StringsId extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -133307,7 +133307,7 @@ class _StringsId extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -133691,7 +133691,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -133812,9 +133812,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -158093,7 +158093,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -158459,9 +158459,9 @@ class _StringsIt extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -158523,7 +158523,7 @@ class _StringsIt extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -158907,7 +158907,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -159028,9 +159028,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -182599,7 +182599,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -182965,9 +182965,9 @@ class _StringsJa extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -183029,7 +183029,7 @@ class _StringsJa extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -183413,7 +183413,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -183534,9 +183534,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -206840,7 +206840,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -207206,9 +207206,9 @@ class _StringsKo extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -207270,7 +207270,7 @@ class _StringsKo extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -207654,7 +207654,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -207775,9 +207775,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -231788,7 +231788,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -232154,9 +232154,9 @@ class _StringsNl extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -232218,7 +232218,7 @@ class _StringsNl extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -232602,7 +232602,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -232723,9 +232723,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -257036,7 +257036,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -257402,9 +257402,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -257466,7 +257466,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -257850,7 +257850,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -257971,9 +257971,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -282261,7 +282261,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -282627,9 +282627,9 @@ class _StringsRu extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -282691,7 +282691,7 @@ class _StringsRu extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -283075,7 +283075,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -283196,9 +283196,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -307238,7 +307238,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -307604,9 +307604,9 @@ class _StringsTh extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -307668,7 +307668,7 @@ class _StringsTh extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -308052,7 +308052,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -308173,9 +308173,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -332280,7 +332280,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -332646,9 +332646,9 @@ class _StringsTr extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -332710,7 +332710,7 @@ class _StringsTr extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -333094,7 +333094,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -333215,9 +333215,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -357317,7 +357317,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -357683,9 +357683,9 @@ class _StringsVi extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -357747,7 +357747,7 @@ class _StringsVi extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -358131,7 +358131,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -358252,9 +358252,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -380924,7 +380924,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => '词频';
   @override
-  String get srs_card_appearance_show_picture => '图片';
+  String get srs_card_appearance_show_picture => '多媒体';
   @override
   String get srs_card_appearance_show_source => '来源';
   @override
@@ -381253,9 +381253,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_field_info_misc_info_name => '来源';
   @override
-  String get srs_field_info_picture_desc => '截图或配图，显示在卡面上帮助回忆。';
+  String get srs_field_info_picture_desc => '截图、动图或视频片段，显示在卡面上帮助回忆。';
   @override
-  String get srs_field_info_picture_name => '图片';
+  String get srs_field_info_picture_name => '多媒体';
   @override
   String get srs_field_info_pitch_categories_desc =>
       '平板 / 头高 / 中高 / 尾高等类型名，模板用来给读音上色。';
@@ -381312,7 +381312,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_field_kind_flag => '开关：填任意字符即开启，本身不显示';
   @override
-  String get srs_field_kind_image => '图片';
+  String get srs_field_kind_image => '多媒体';
   @override
   String get srs_field_kind_rich => '带格式的文字（词典内容）';
   @override
@@ -381673,7 +381673,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_block_other => '其它';
   @override
-  String get srs_note_block_picture => '图片';
+  String get srs_note_block_picture => '多媒体';
   @override
   String get srs_note_block_reading => '读音';
   @override
@@ -381782,9 +381782,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_image_pick => '选择图片';
   @override
-  String get srs_note_image_remove => '删除图片';
+  String get srs_note_image_remove => '删除多媒体';
   @override
-  String get srs_note_image_replace => '替换图片';
+  String get srs_note_image_replace => '替换多媒体';
   @override
   String srs_note_more_fields({required Object n}) => '更多字段（${n}）';
   @override
@@ -404215,7 +404215,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -404581,9 +404581,9 @@ class _StringsZhHk extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -404645,7 +404645,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -405029,7 +405029,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -405150,9 +405150,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -426339,7 +426339,7 @@ extension on _StringsEn {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -426656,9 +426656,9 @@ extension on _StringsEn {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -426708,7 +426708,7 @@ extension on _StringsEn {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -427045,7 +427045,7 @@ extension on _StringsEn {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -427153,9 +427153,9 @@ extension on _StringsEn {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -447677,7 +447677,7 @@ extension on _StringsAr {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -447994,9 +447994,9 @@ extension on _StringsAr {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -448046,7 +448046,7 @@ extension on _StringsAr {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -448383,7 +448383,7 @@ extension on _StringsAr {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -448491,9 +448491,9 @@ extension on _StringsAr {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -469071,7 +469071,7 @@ extension on _StringsDe {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -469388,9 +469388,9 @@ extension on _StringsDe {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -469440,7 +469440,7 @@ extension on _StringsDe {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -469777,7 +469777,7 @@ extension on _StringsDe {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -469885,9 +469885,9 @@ extension on _StringsDe {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -490469,7 +490469,7 @@ extension on _StringsEs {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -490786,9 +490786,9 @@ extension on _StringsEs {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -490838,7 +490838,7 @@ extension on _StringsEs {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -491175,7 +491175,7 @@ extension on _StringsEs {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -491283,9 +491283,9 @@ extension on _StringsEs {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -511878,7 +511878,7 @@ extension on _StringsFr {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -512195,9 +512195,9 @@ extension on _StringsFr {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -512247,7 +512247,7 @@ extension on _StringsFr {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -512584,7 +512584,7 @@ extension on _StringsFr {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -512692,9 +512692,9 @@ extension on _StringsFr {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -533247,7 +533247,7 @@ extension on _StringsId {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -533564,9 +533564,9 @@ extension on _StringsId {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -533616,7 +533616,7 @@ extension on _StringsId {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -533953,7 +533953,7 @@ extension on _StringsId {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -534061,9 +534061,9 @@ extension on _StringsId {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -554625,7 +554625,7 @@ extension on _StringsIt {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -554942,9 +554942,9 @@ extension on _StringsIt {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -554994,7 +554994,7 @@ extension on _StringsIt {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -555331,7 +555331,7 @@ extension on _StringsIt {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -555439,9 +555439,9 @@ extension on _StringsIt {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -575937,7 +575937,7 @@ extension on _StringsJa {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -576254,9 +576254,9 @@ extension on _StringsJa {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -576306,7 +576306,7 @@ extension on _StringsJa {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -576643,7 +576643,7 @@ extension on _StringsJa {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -576751,9 +576751,9 @@ extension on _StringsJa {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -597198,7 +597198,7 @@ extension on _StringsKo {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -597515,9 +597515,9 @@ extension on _StringsKo {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -597567,7 +597567,7 @@ extension on _StringsKo {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -597904,7 +597904,7 @@ extension on _StringsKo {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -598012,9 +598012,9 @@ extension on _StringsKo {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -618549,7 +618549,7 @@ extension on _StringsNl {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -618866,9 +618866,9 @@ extension on _StringsNl {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -618918,7 +618918,7 @@ extension on _StringsNl {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -619255,7 +619255,7 @@ extension on _StringsNl {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -619363,9 +619363,9 @@ extension on _StringsNl {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -639931,7 +639931,7 @@ extension on _StringsPtBr {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -640248,9 +640248,9 @@ extension on _StringsPtBr {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -640300,7 +640300,7 @@ extension on _StringsPtBr {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -640637,7 +640637,7 @@ extension on _StringsPtBr {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -640745,9 +640745,9 @@ extension on _StringsPtBr {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -661317,7 +661317,7 @@ extension on _StringsRu {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -661634,9 +661634,9 @@ extension on _StringsRu {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -661686,7 +661686,7 @@ extension on _StringsRu {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -662023,7 +662023,7 @@ extension on _StringsRu {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -662131,9 +662131,9 @@ extension on _StringsRu {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -682663,7 +682663,7 @@ extension on _StringsTh {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -682980,9 +682980,9 @@ extension on _StringsTh {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -683032,7 +683032,7 @@ extension on _StringsTh {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -683369,7 +683369,7 @@ extension on _StringsTh {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -683477,9 +683477,9 @@ extension on _StringsTh {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -704027,7 +704027,7 @@ extension on _StringsTr {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -704344,9 +704344,9 @@ extension on _StringsTr {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -704396,7 +704396,7 @@ extension on _StringsTr {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -704733,7 +704733,7 @@ extension on _StringsTr {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -704841,9 +704841,9 @@ extension on _StringsTr {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -725386,7 +725386,7 @@ extension on _StringsVi {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -725703,9 +725703,9 @@ extension on _StringsVi {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -725755,7 +725755,7 @@ extension on _StringsVi {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -726092,7 +726092,7 @@ extension on _StringsVi {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -726200,9 +726200,9 @@ extension on _StringsVi {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -746575,7 +746575,7 @@ extension on _StringsZhCn {
       case 'srs_card_appearance_show_frequency':
         return '词频';
       case 'srs_card_appearance_show_picture':
-        return '图片';
+        return '多媒体';
       case 'srs_card_appearance_show_source':
         return '来源';
       case 'srs_card_appearance_show_translation':
@@ -746884,9 +746884,9 @@ extension on _StringsZhCn {
       case 'srs_field_info_misc_info_name':
         return '来源';
       case 'srs_field_info_picture_desc':
-        return '截图或配图，显示在卡面上帮助回忆。';
+        return '截图、动图或视频片段，显示在卡面上帮助回忆。';
       case 'srs_field_info_picture_name':
-        return '图片';
+        return '多媒体';
       case 'srs_field_info_pitch_categories_desc':
         return '平板 / 头高 / 中高 / 尾高等类型名，模板用来给读音上色。';
       case 'srs_field_info_pitch_categories_name':
@@ -746936,7 +746936,7 @@ extension on _StringsZhCn {
       case 'srs_field_kind_flag':
         return '开关：填任意字符即开启，本身不显示';
       case 'srs_field_kind_image':
-        return '图片';
+        return '多媒体';
       case 'srs_field_kind_rich':
         return '带格式的文字（词典内容）';
       case 'srs_field_kind_text':
@@ -747257,7 +747257,7 @@ extension on _StringsZhCn {
       case 'srs_note_block_other':
         return '其它';
       case 'srs_note_block_picture':
-        return '图片';
+        return '多媒体';
       case 'srs_note_block_reading':
         return '读音';
       case 'srs_note_block_sentence':
@@ -747365,9 +747365,9 @@ extension on _StringsZhCn {
       case 'srs_note_image_pick':
         return '选择图片';
       case 'srs_note_image_remove':
-        return '删除图片';
+        return '删除多媒体';
       case 'srs_note_image_replace':
-        return '替换图片';
+        return '替换多媒体';
       case 'srs_note_more_fields':
         return ({required Object n}) => '更多字段（${n}）';
       case 'srs_note_restore':
@@ -767727,7 +767727,7 @@ extension on _StringsZhHk {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -768044,9 +768044,9 @@ extension on _StringsZhHk {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -768096,7 +768096,7 @@ extension on _StringsZhHk {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -768432,7 +768432,7 @@ extension on _StringsZhHk {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -768540,9 +768540,9 @@ extension on _StringsZhHk {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
