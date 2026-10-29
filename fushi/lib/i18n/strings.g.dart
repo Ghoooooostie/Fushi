@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 174590 (10270 per locale)
+/// Strings: 174658 (10274 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8724,6 +8724,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get panorama_loading => 'Building your panorama…';
   String get panorama_open_fullscreen => 'Full screen';
   String get panorama_share_animation => 'Play share animation';
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -29257,6 +29263,16 @@ class _StringsAr extends _StringsEn {
   String get panorama_open_fullscreen => 'Full screen';
   @override
   String get panorama_share_animation => 'Play share animation';
+  @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
   @override
   String panorama_summary({
     required Object works,
@@ -54422,6 +54438,16 @@ class _StringsDe extends _StringsEn {
   String get panorama_open_fullscreen => 'Full screen';
   @override
   String get panorama_share_animation => 'Play share animation';
+  @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
   @override
   String panorama_summary({
     required Object works,
@@ -79734,6 +79760,16 @@ class _StringsEs extends _StringsEn {
   String get panorama_open_fullscreen => 'Full screen';
   @override
   String get panorama_share_animation => 'Play share animation';
+  @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
   @override
   String panorama_summary({
     required Object works,
@@ -105140,6 +105176,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get panorama_share_animation => 'Play share animation';
   @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -130352,6 +130398,16 @@ class _StringsId extends _StringsEn {
   @override
   String get panorama_share_animation => 'Play share animation';
   @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -155540,6 +155596,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get panorama_share_animation => 'Play share animation';
   @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -180155,6 +180221,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get panorama_share_animation => 'Play share animation';
   @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -204390,6 +204466,16 @@ class _StringsKo extends _StringsEn {
   String get panorama_open_fullscreen => 'Full screen';
   @override
   String get panorama_share_animation => 'Play share animation';
+  @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
   @override
   String panorama_summary({
     required Object works,
@@ -229244,6 +229330,16 @@ class _StringsNl extends _StringsEn {
   String get panorama_open_fullscreen => 'Full screen';
   @override
   String get panorama_share_animation => 'Play share animation';
+  @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
   @override
   String panorama_summary({
     required Object works,
@@ -254491,6 +254587,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get panorama_share_animation => 'Play share animation';
   @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -279718,6 +279824,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get panorama_share_animation => 'Play share animation';
   @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -304725,6 +304841,16 @@ class _StringsTh extends _StringsEn {
   String get panorama_open_fullscreen => 'Full screen';
   @override
   String get panorama_share_animation => 'Play share animation';
+  @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
   @override
   String panorama_summary({
     required Object works,
@@ -329755,6 +329881,16 @@ class _StringsTr extends _StringsEn {
   String get panorama_open_fullscreen => 'Full screen';
   @override
   String get panorama_share_animation => 'Play share animation';
+  @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
   @override
   String panorama_summary({
     required Object works,
@@ -354800,6 +354936,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get panorama_share_animation => 'Play share animation';
   @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -378589,6 +378735,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get panorama_share_animation => '播放分享动画';
   @override
+  String get panorama_share_pick_message => '动画会穿过整个媒体库，最后飞到并打开这部作品。';
+  @override
+  String get panorama_share_pick_title => '分享动画：选择结尾的作品';
+  @override
+  String get panorama_stage_to_galaxy => '切换到星系视图';
+  @override
+  String get panorama_stage_to_sphere => '切换到球幕视图';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -401813,6 +401967,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get panorama_share_animation => 'Play share animation';
   @override
+  String get panorama_share_pick_message =>
+      'The animation flies through your library and ends by opening this work.';
+  @override
+  String get panorama_share_pick_title =>
+      'Share animation: pick the ending work';
+  @override
+  String get panorama_stage_to_galaxy => 'Switch to galaxy view';
+  @override
+  String get panorama_stage_to_sphere => 'Switch to sphere view';
+  @override
   String panorama_summary({
     required Object works,
     required Object mined,
@@ -424101,6 +424265,14 @@ extension on _StringsEn {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -445439,6 +445611,14 @@ extension on _StringsAr {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -466831,6 +467011,14 @@ extension on _StringsDe {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -488227,6 +488415,14 @@ extension on _StringsEs {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -509637,6 +509833,14 @@ extension on _StringsFr {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -531009,6 +531213,14 @@ extension on _StringsId {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -552385,6 +552597,14 @@ extension on _StringsIt {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -573701,6 +573921,14 @@ extension on _StringsJa {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -594961,6 +595189,14 @@ extension on _StringsKo {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -616309,6 +616545,14 @@ extension on _StringsNl {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -637691,6 +637935,14 @@ extension on _StringsPtBr {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -659077,6 +659329,14 @@ extension on _StringsRu {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -680425,6 +680685,14 @@ extension on _StringsTh {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -701789,6 +702057,14 @@ extension on _StringsTr {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -723146,6 +723422,14 @@ extension on _StringsVi {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -744348,6 +744632,14 @@ extension on _StringsZhCn {
         return '全屏';
       case 'panorama_share_animation':
         return '播放分享动画';
+      case 'panorama_share_pick_message':
+        return '动画会穿过整个媒体库，最后飞到并打开这部作品。';
+      case 'panorama_share_pick_title':
+        return '分享动画：选择结尾的作品';
+      case 'panorama_stage_to_galaxy':
+        return '切换到星系视图';
+      case 'panorama_stage_to_sphere':
+        return '切换到球幕视图';
       case 'panorama_summary':
         return ({
           required Object works,
@@ -765492,6 +765784,14 @@ extension on _StringsZhHk {
         return 'Full screen';
       case 'panorama_share_animation':
         return 'Play share animation';
+      case 'panorama_share_pick_message':
+        return 'The animation flies through your library and ends by opening this work.';
+      case 'panorama_share_pick_title':
+        return 'Share animation: pick the ending work';
+      case 'panorama_stage_to_galaxy':
+        return 'Switch to galaxy view';
+      case 'panorama_stage_to_sphere':
+        return 'Switch to sphere view';
       case 'panorama_summary':
         return ({
           required Object works,
