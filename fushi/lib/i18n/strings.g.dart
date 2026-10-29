@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 174590 (10270 per locale)
+/// Strings: 174573 (10269 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -242,7 +242,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'vol. ${number}';
   String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
-  String get ai_agent_ask_action => 'Ask AI';
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
   String get ai_agent_attach_screen_text => 'Attach screen text';
@@ -14942,8 +14941,6 @@ class _StringsAr extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'إضافة إلى مجموعة';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -39844,8 +39841,6 @@ class _StringsDe extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'Zur Sammlung hinzufügen';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -65138,8 +65133,6 @@ class _StringsEs extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'Añadir a colección';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -90488,8 +90481,6 @@ class _StringsFr extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'Ajouter à la collection';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -115920,8 +115911,6 @@ class _StringsId extends _StringsEn {
   @override
   String get add_to_collection => 'Tambah ke koleksi';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
   @override
@@ -141005,8 +140994,6 @@ class _StringsIt extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'Aggiungi alla raccolta';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -166255,8 +166242,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get add_to_collection => 'コレクションに追加';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
   @override
@@ -190465,8 +190450,6 @@ class _StringsKo extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => '컬렉션에 추가';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -214743,8 +214726,6 @@ class _StringsNl extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'Aan collectie toevoegen';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -239942,8 +239923,6 @@ class _StringsPtBr extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'Adicionar à coleção';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -265210,8 +265189,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get add_to_collection => 'Добавить в коллекцию';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
   @override
@@ -290422,8 +290399,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get add_to_collection => 'เพิ่มในคอลเลกชัน';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
   @override
@@ -315311,8 +315286,6 @@ class _StringsTr extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'Koleksiyona ekle';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -340406,8 +340379,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get add_to_collection => 'Thêm vào bộ sưu tập';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
   @override
@@ -365422,8 +365393,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
-  String get ai_agent_ask_action => '问 AI';
-  @override
   String get ai_agent_attach_screen_image => '附上屏幕截图和文字';
   @override
   String get ai_agent_attach_screen_text => '附上屏幕文字';
@@ -388304,8 +388273,6 @@ class _StringsZhHk extends _StringsEn {
   String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => '加入合集';
-  @override
-  String get ai_agent_ask_action => 'Ask AI';
   @override
   String get ai_agent_attach_screen_image =>
       'Attach a screenshot and screen text';
@@ -411878,8 +411845,6 @@ extension on _StringsEn {
         return 'Volume';
       case 'add_to_collection':
         return 'Add to collection';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -433220,8 +433185,6 @@ extension on _StringsAr {
         return 'Volume';
       case 'add_to_collection':
         return 'إضافة إلى مجموعة';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -454556,8 +454519,6 @@ extension on _StringsDe {
         return 'Volume';
       case 'add_to_collection':
         return 'Zur Sammlung hinzufügen';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -475968,8 +475929,6 @@ extension on _StringsEs {
         return 'Volume';
       case 'add_to_collection':
         return 'Añadir a colección';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -497362,8 +497321,6 @@ extension on _StringsFr {
         return 'Volume';
       case 'add_to_collection':
         return 'Ajouter à la collection';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -518774,8 +518731,6 @@ extension on _StringsId {
         return 'Volume';
       case 'add_to_collection':
         return 'Tambah ke koleksi';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -540130,8 +540085,6 @@ extension on _StringsIt {
         return 'Volume';
       case 'add_to_collection':
         return 'Aggiungi alla raccolta';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -561522,8 +561475,6 @@ extension on _StringsJa {
         return 'Volume';
       case 'add_to_collection':
         return 'コレクションに追加';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -582779,8 +582730,6 @@ extension on _StringsKo {
         return 'Volume';
       case 'add_to_collection':
         return '컬렉션에 추가';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -604052,8 +604001,6 @@ extension on _StringsNl {
         return 'Volume';
       case 'add_to_collection':
         return 'Aan collectie toevoegen';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -625439,8 +625386,6 @@ extension on _StringsPtBr {
         return 'Volume';
       case 'add_to_collection':
         return 'Adicionar à coleção';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -646818,8 +646763,6 @@ extension on _StringsRu {
         return 'Volume';
       case 'add_to_collection':
         return 'Добавить в коллекцию';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -668202,8 +668145,6 @@ extension on _StringsTh {
         return 'Volume';
       case 'add_to_collection':
         return 'เพิ่มในคอลเลกชัน';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -689542,8 +689483,6 @@ extension on _StringsTr {
         return 'Volume';
       case 'add_to_collection':
         return 'Koleksiyona ekle';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -710913,8 +710852,6 @@ extension on _StringsVi {
         return 'Volume';
       case 'add_to_collection':
         return 'Thêm vào bộ sưu tập';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
@@ -732266,8 +732203,6 @@ extension on _StringsZhCn {
         return '卷';
       case 'add_to_collection':
         return '加入合集';
-      case 'ai_agent_ask_action':
-        return '问 AI';
       case 'ai_agent_attach_screen_image':
         return '附上屏幕截图和文字';
       case 'ai_agent_attach_screen_text':
@@ -753356,8 +753291,6 @@ extension on _StringsZhHk {
         return 'Volume';
       case 'add_to_collection':
         return '加入合集';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
       case 'ai_agent_attach_screen_image':
         return 'Attach a screenshot and screen text';
       case 'ai_agent_attach_screen_text':
