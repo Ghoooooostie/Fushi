@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 176120 (10360 per locale)
+/// Strings: 176239 (10367 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2747,7 +2747,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_cover_updated => 'Cover updated';
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
-  String get collection_detail_continue => 'Continue';
   String get collection_detail_edit_tags => 'Edit tags';
   String get collection_detail_empty_hint =>
       'Add books from the library with Combine or Add to collection.';
@@ -2766,7 +2765,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_detail_sort_manual => 'Manual';
   String get collection_detail_sort_read => 'Last read';
   String get collection_detail_sort_volume => 'Volume';
-  String get collection_detail_start => 'Start';
   String get collection_detail_view_grid => 'Grid';
   String get collection_detail_view_list => 'List';
   String get collection_empty => 'Collection is empty';
@@ -5675,6 +5673,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_panel_mode_auto => 'Auto';
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_mode_shown => 'Show';
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  String get home_panel_panorama_title => 'Library panorama';
   String get home_panel_srs_hint =>
       'Auto shows it once you mine to Fushi review or have review cards';
   String get home_recently_added => 'Recently added';
@@ -7782,6 +7783,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_cd_reading => 'Reading disc…';
   String get music_cd_reread => 'Read disc again';
   String music_cd_track_name({required Object n}) => 'Track ${n}';
+  String get music_continue_listening => 'Continue listening';
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
@@ -8840,6 +8842,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get page_turn_follow_drag => 'Follow finger while dragging';
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  String get panorama_loading => 'Building your panorama…';
+  String get panorama_open_fullscreen => 'Full screen';
+  String get panorama_share_animation => 'Play share animation';
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   String get paste => 'Paste';
   String get pause => 'Pause';
   String get pause_on_lookup => 'Pause on lookup';
@@ -10253,7 +10266,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_section_other => 'Other card types';
   String get srs_card_appearance_section_text => 'Text';
   String get srs_card_appearance_show_frequency => 'Frequency';
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   String get srs_card_appearance_show_source => 'Source';
   String get srs_card_appearance_show_translation => 'Sentence translation';
   String get srs_card_appearance_term_size => 'Headword size';
@@ -10466,8 +10479,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Where the card came from: the work title (tap to jump back) and the timestamp.';
   String get srs_field_info_misc_info_name => 'Source';
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
-  String get srs_field_info_picture_name => 'Picture';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
+  String get srs_field_info_picture_name => 'Media';
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
   String get srs_field_info_pitch_categories_name => 'Pitch accent type';
@@ -10504,7 +10517,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_field_kind_data => 'Data for the template, usually not shown';
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   String get srs_field_kind_text => 'Text';
   String get srs_flag_blue => 'Blue';
@@ -10740,7 +10753,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_block_definitions => 'Definitions';
   String get srs_note_block_frequency => 'Frequency';
   String get srs_note_block_other => 'Other';
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   String get srs_note_block_reading => 'Reading';
   String get srs_note_block_sentence => 'Sentence';
   String get srs_note_block_source => 'Source';
@@ -10807,8 +10820,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_image_paste => 'Paste image';
   String get srs_note_image_paste_empty => 'No image on the clipboard';
   String get srs_note_image_pick => 'Choose image';
-  String get srs_note_image_remove => 'Remove image';
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_remove => 'Remove media';
+  String get srs_note_image_replace => 'Replace media';
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   String get srs_note_restore => 'Restore';
   String get srs_note_save => 'Save';
@@ -19179,8 +19192,6 @@ class _StringsAr extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -19212,8 +19223,6 @@ class _StringsAr extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -24193,6 +24202,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'إظهار';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'يظهر تلقائيًا عند الإرسال إلى Fushi SRS أو وجود بطاقات مراجعة';
   @override
@@ -27757,6 +27771,8 @@ class _StringsAr extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -29575,6 +29591,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'لصق';
   @override
@@ -32079,7 +32112,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -32445,9 +32478,9 @@ class _StringsAr extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -32509,7 +32542,7 @@ class _StringsAr extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -32893,7 +32926,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -33014,9 +33047,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -44339,8 +44372,6 @@ class _StringsDe extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -44372,8 +44403,6 @@ class _StringsDe extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -49467,6 +49496,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Anzeigen';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Automatisch sichtbar, sobald du in Fushi SRS minst oder Karten hast';
   @override
@@ -53100,6 +53134,8 @@ class _StringsDe extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -54941,6 +54977,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Einfügen';
   @override
@@ -57481,7 +57534,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -57847,9 +57900,9 @@ class _StringsDe extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -57911,7 +57964,7 @@ class _StringsDe extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -58295,7 +58348,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -58416,9 +58469,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -69845,8 +69898,6 @@ class _StringsEs extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -69878,8 +69929,6 @@ class _StringsEs extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -74976,6 +75025,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Mostrar';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Se muestra al minar a Fushi SRS o si ya tienes tarjetas';
   @override
@@ -78618,6 +78672,8 @@ class _StringsEs extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -80454,6 +80510,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Pegar';
   @override
@@ -83005,7 +83078,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -83371,9 +83444,9 @@ class _StringsEs extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -83435,7 +83508,7 @@ class _StringsEs extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -83819,7 +83892,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -83940,9 +84013,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -95412,8 +95485,6 @@ class _StringsFr extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -95445,8 +95516,6 @@ class _StringsFr extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -100561,6 +100630,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Afficher';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Affiché dès que vous minez vers Fushi SRS ou avez des cartes';
   @override
@@ -104215,6 +104289,8 @@ class _StringsFr extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -106060,6 +106136,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Coller';
   @override
@@ -108617,7 +108710,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -108983,9 +109076,9 @@ class _StringsFr extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -109047,7 +109140,7 @@ class _StringsFr extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -109431,7 +109524,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -109552,9 +109645,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -120985,8 +121078,6 @@ class _StringsId extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -121018,8 +121109,6 @@ class _StringsId extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -126051,6 +126140,11 @@ class _StringsId extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Tampilkan';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Otomatis tampil saat menambang ke Fushi SRS atau sudah ada kartu';
   @override
@@ -129648,6 +129742,8 @@ class _StringsId extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -131473,6 +131569,23 @@ class _StringsId extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Tempel';
   @override
@@ -133993,7 +134106,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -134359,9 +134472,9 @@ class _StringsId extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -134423,7 +134536,7 @@ class _StringsId extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -134807,7 +134920,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -134928,9 +135041,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -146299,8 +146412,6 @@ class _StringsIt extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -146332,8 +146443,6 @@ class _StringsIt extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -151402,6 +151511,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Mostra';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Appare quando invii le carte a Fushi SRS o hai già carte';
   @override
@@ -155032,6 +155146,8 @@ class _StringsIt extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -156862,6 +156978,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Incolla';
   @override
@@ -159410,7 +159543,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -159776,9 +159909,9 @@ class _StringsIt extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -159840,7 +159973,7 @@ class _StringsIt extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -160224,7 +160357,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -160345,9 +160478,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -171592,8 +171725,6 @@ class _StringsJa extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -171625,8 +171756,6 @@ class _StringsJa extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -176439,6 +176568,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_panel_mode_shown => '表示';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint => '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
   @override
   String get home_recently_added => '最近追加';
@@ -179896,6 +180030,8 @@ class _StringsJa extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -181678,6 +181814,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => '貼り付け';
   @override
@@ -184117,7 +184270,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -184483,9 +184636,9 @@ class _StringsJa extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -184547,7 +184700,7 @@ class _StringsJa extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -184931,7 +185084,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -185052,9 +185205,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -196003,8 +196156,6 @@ class _StringsKo extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -196036,8 +196187,6 @@ class _StringsKo extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -200861,6 +201010,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_panel_mode_shown => '표시';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint => '자동: Fushi SRS로 카드를 만들거나 복습 카드가 있으면 표시';
   @override
   String get home_recently_added => '최근 추가';
@@ -204330,6 +204484,8 @@ class _StringsKo extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -206115,6 +206271,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => '붙여넣기';
   @override
@@ -208559,7 +208732,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -208925,9 +209098,9 @@ class _StringsKo extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -208989,7 +209162,7 @@ class _StringsKo extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -209373,7 +209546,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -209494,9 +209667,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -220635,8 +220808,6 @@ class _StringsNl extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -220668,8 +220839,6 @@ class _StringsNl extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -225723,6 +225892,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Tonen';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Automatisch zichtbaar zodra je naar Fushi SRS minet of kaarten hebt';
   @override
@@ -229336,6 +229510,8 @@ class _StringsNl extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -231170,6 +231346,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Plakken';
   @override
@@ -233708,7 +233901,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -234074,9 +234267,9 @@ class _StringsNl extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -234138,7 +234331,7 @@ class _StringsNl extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -234522,7 +234715,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -234643,9 +234836,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -246048,8 +246241,6 @@ class _StringsPtBr extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -246081,8 +246272,6 @@ class _StringsPtBr extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -251159,6 +251348,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Mostrar';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Aparece ao minerar para o Fushi SRS ou se já houver cartões';
   @override
@@ -254784,6 +254978,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -256617,6 +256813,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Colar';
   @override
@@ -259157,7 +259370,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -259523,9 +259736,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -259587,7 +259800,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -259971,7 +260184,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -260092,9 +260305,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -271501,8 +271714,6 @@ class _StringsRu extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -271534,8 +271745,6 @@ class _StringsRu extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -276589,6 +276798,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Показать';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Авто: показывается, если карточки идут в Fushi SRS или они уже есть';
   @override
@@ -280206,6 +280420,8 @@ class _StringsRu extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -282045,6 +282261,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Вставить';
   @override
@@ -284583,7 +284816,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -284949,9 +285182,9 @@ class _StringsRu extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -285013,7 +285246,7 @@ class _StringsRu extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -285397,7 +285630,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -285518,9 +285751,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -296861,8 +297094,6 @@ class _StringsTh extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -296894,8 +297125,6 @@ class _StringsTh extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -301871,6 +302100,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'แสดง';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยัง Fushi SRS หรือมีการ์ดอยู่แล้ว';
   @override
@@ -305438,6 +305672,8 @@ class _StringsTh extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -307254,6 +307490,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'วาง';
   @override
@@ -309761,7 +310014,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -310127,9 +310380,9 @@ class _StringsTh extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -310191,7 +310444,7 @@ class _StringsTh extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -310575,7 +310828,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -310696,9 +310949,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -321985,8 +322238,6 @@ class _StringsTr extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -322018,8 +322269,6 @@ class _StringsTr extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -327063,6 +327312,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Göster';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Fushi SRS\'e kart eklediğinde veya kartın varsa otomatik görünür';
   @override
@@ -330658,6 +330912,8 @@ class _StringsTr extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -332485,6 +332741,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Yapıştır';
   @override
@@ -335004,7 +335277,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -335370,9 +335643,9 @@ class _StringsTr extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -335434,7 +335707,7 @@ class _StringsTr extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -335818,7 +336091,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -335939,9 +336212,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -347270,8 +347543,6 @@ class _StringsVi extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -347303,8 +347574,6 @@ class _StringsVi extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -352330,6 +352599,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_panel_mode_shown => 'Hiện';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint =>
       'Tự động hiện khi tạo thẻ vào Fushi SRS hoặc đã có thẻ';
   @override
@@ -355911,6 +356185,8 @@ class _StringsVi extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -357730,6 +358006,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => 'Dán';
   @override
@@ -360242,7 +360535,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -360608,9 +360901,9 @@ class _StringsVi extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -360672,7 +360965,7 @@ class _StringsVi extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -361056,7 +361349,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -361177,9 +361470,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -372106,8 +372399,6 @@ class _StringsZhCn extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       '同时删除该合集的 ${n} 个下载订阅';
   @override
-  String get collection_detail_continue => '继续';
-  @override
   String get collection_detail_edit_tags => '编辑标签';
   @override
   String get collection_detail_empty_hint => '在书架里用「组合」或「加入合集」把条目放进来。';
@@ -372138,8 +372429,6 @@ class _StringsZhCn extends _StringsEn {
   String get collection_detail_sort_read => '阅读时间';
   @override
   String get collection_detail_sort_volume => '卷号';
-  @override
-  String get collection_detail_start => '开始';
   @override
   String get collection_detail_view_grid => '网格';
   @override
@@ -376738,6 +377027,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_panel_mode_shown => '显示';
   @override
+  String get home_panel_panorama_hint => '全部作品封面与制卡词汇组成的可操作 3D 星空';
+  @override
+  String get home_panel_panorama_title => '媒体库全景';
+  @override
   String get home_panel_srs_hint => '自动：制卡发往 Fushi 复习或已有复习卡时显示';
   @override
   String get home_recently_added => '最近添加';
@@ -380034,6 +380327,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => '第 ${n} 轨';
   @override
+  String get music_continue_listening => '继续收听';
+  @override
   String get music_crossfade_continuous_hint =>
       '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
   @override
@@ -381706,6 +382001,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       '页面随手指移动，松手时拖过四分之一宽度或快速甩动就翻页，否则回弹';
+  @override
+  String get panorama_empty => '添加书、视频、游戏或音乐后，这里会出现你的媒体库全景';
+  @override
+  String get panorama_load_failed => '全景生成失败';
+  @override
+  String get panorama_loading => '正在生成全景…';
+  @override
+  String get panorama_open_fullscreen => '全屏';
+  @override
+  String get panorama_share_animation => '播放分享动画';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} 部作品 · 共制卡 ${mined} 张 · 展示 ${shown} 个词';
   @override
   String get paste => '粘贴';
   @override
@@ -384036,7 +384347,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => '词频';
   @override
-  String get srs_card_appearance_show_picture => '图片';
+  String get srs_card_appearance_show_picture => '多媒体';
   @override
   String get srs_card_appearance_show_source => '来源';
   @override
@@ -384365,9 +384676,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_field_info_misc_info_name => '来源';
   @override
-  String get srs_field_info_picture_desc => '截图或配图，显示在卡面上帮助回忆。';
+  String get srs_field_info_picture_desc => '截图、动图或视频片段，显示在卡面上帮助回忆。';
   @override
-  String get srs_field_info_picture_name => '图片';
+  String get srs_field_info_picture_name => '多媒体';
   @override
   String get srs_field_info_pitch_categories_desc =>
       '平板 / 头高 / 中高 / 尾高等类型名，模板用来给读音上色。';
@@ -384424,7 +384735,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_field_kind_flag => '开关：填任意字符即开启，本身不显示';
   @override
-  String get srs_field_kind_image => '图片';
+  String get srs_field_kind_image => '多媒体';
   @override
   String get srs_field_kind_rich => '带格式的文字（词典内容）';
   @override
@@ -384785,7 +385096,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_block_other => '其它';
   @override
-  String get srs_note_block_picture => '图片';
+  String get srs_note_block_picture => '多媒体';
   @override
   String get srs_note_block_reading => '读音';
   @override
@@ -384894,9 +385205,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_image_pick => '选择图片';
   @override
-  String get srs_note_image_remove => '删除图片';
+  String get srs_note_image_remove => '删除多媒体';
   @override
-  String get srs_note_image_replace => '替换图片';
+  String get srs_note_image_replace => '替换多媒体';
   @override
   String srs_note_more_fields({required Object n}) => '更多字段（${n}）';
   @override
@@ -395326,8 +395637,6 @@ class _StringsZhHk extends _StringsEn {
   String collection_delete_also_subscriptions({required Object n}) =>
       'Also delete ${n} download subscription(s) for this collection';
   @override
-  String get collection_detail_continue => 'Continue';
-  @override
   String get collection_detail_edit_tags => 'Edit tags';
   @override
   String get collection_detail_empty_hint =>
@@ -395359,8 +395668,6 @@ class _StringsZhHk extends _StringsEn {
   String get collection_detail_sort_read => 'Last read';
   @override
   String get collection_detail_sort_volume => 'Volume';
-  @override
-  String get collection_detail_start => 'Start';
   @override
   String get collection_detail_view_grid => 'Grid';
   @override
@@ -400021,6 +400328,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_panel_mode_shown => '顯示';
   @override
+  String get home_panel_panorama_hint =>
+      'All your covers and mined words as one 3D sky you can explore';
+  @override
+  String get home_panel_panorama_title => 'Library panorama';
+  @override
   String get home_panel_srs_hint => '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
   @override
   String get home_recently_added => '最近添加';
@@ -403386,6 +403698,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
+  String get music_continue_listening => 'Continue listening';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -405131,6 +405445,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get page_turn_follow_drag_description =>
       'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get panorama_empty =>
+      'Add books, videos, games or music to see your library panorama';
+  @override
+  String get panorama_load_failed => 'Couldn\'t build the panorama';
+  @override
+  String get panorama_loading => 'Building your panorama…';
+  @override
+  String get panorama_open_fullscreen => 'Full screen';
+  @override
+  String get panorama_share_animation => 'Play share animation';
+  @override
+  String panorama_summary({
+    required Object works,
+    required Object mined,
+    required Object shown,
+  }) => '${works} works · ${mined} cards mined · ${shown} words shown';
   @override
   String get paste => '貼上';
   @override
@@ -407528,7 +407859,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
-  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_picture => 'Media';
   @override
   String get srs_card_appearance_show_source => 'Source';
   @override
@@ -407894,9 +408225,9 @@ class _StringsZhHk extends _StringsEn {
   String get srs_field_info_misc_info_name => 'Source';
   @override
   String get srs_field_info_picture_desc =>
-      'A screenshot or picture shown on the card to help you remember.';
+      'A screenshot, animation or video clip shown on the card to help you remember.';
   @override
-  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_picture_name => 'Media';
   @override
   String get srs_field_info_pitch_categories_desc =>
       'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
@@ -407958,7 +408289,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_field_kind_flag =>
       'Switch: any character turns it on, not shown itself';
   @override
-  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_image => 'Media';
   @override
   String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
   @override
@@ -408342,7 +408673,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_block_other => 'Other';
   @override
-  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_picture => 'Media';
   @override
   String get srs_note_block_reading => 'Reading';
   @override
@@ -408463,9 +408794,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_image_pick => 'Choose image';
   @override
-  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_remove => 'Remove media';
   @override
-  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_replace => 'Replace media';
   @override
   String srs_note_more_fields({required Object n}) => 'More fields (${n})';
   @override
@@ -418646,8 +418977,6 @@ extension on _StringsEn {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -418677,8 +419006,6 @@ extension on _StringsEn {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -422965,6 +423292,10 @@ extension on _StringsEn {
         return 'Hide';
       case 'home_panel_mode_shown':
         return 'Show';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Auto shows it once you mine to Fushi review or have review cards';
       case 'home_recently_added':
@@ -426042,6 +426373,8 @@ extension on _StringsEn {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -427602,6 +427935,22 @@ extension on _StringsEn {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Paste';
       case 'pause':
@@ -429834,7 +430183,7 @@ extension on _StringsEn {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -430151,9 +430500,9 @@ extension on _StringsEn {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -430203,7 +430552,7 @@ extension on _StringsEn {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -430540,7 +430889,7 @@ extension on _StringsEn {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -430648,9 +430997,9 @@ extension on _StringsEn {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -440171,8 +440520,6 @@ extension on _StringsAr {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -440202,8 +440549,6 @@ extension on _StringsAr {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -444488,6 +444833,10 @@ extension on _StringsAr {
         return 'إخفاء';
       case 'home_panel_mode_shown':
         return 'إظهار';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'يظهر تلقائيًا عند الإرسال إلى Fushi SRS أو وجود بطاقات مراجعة';
       case 'home_recently_added':
@@ -447561,6 +447910,8 @@ extension on _StringsAr {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -449122,6 +449473,22 @@ extension on _StringsAr {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'لصق';
       case 'pause':
@@ -451354,7 +451721,7 @@ extension on _StringsAr {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -451671,9 +452038,9 @@ extension on _StringsAr {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -451723,7 +452090,7 @@ extension on _StringsAr {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -452060,7 +452427,7 @@ extension on _StringsAr {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -452168,9 +452535,9 @@ extension on _StringsAr {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -461710,8 +462077,6 @@ extension on _StringsDe {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -461741,8 +462106,6 @@ extension on _StringsDe {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -466040,6 +466403,10 @@ extension on _StringsDe {
         return 'Ausblenden';
       case 'home_panel_mode_shown':
         return 'Anzeigen';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Automatisch sichtbar, sobald du in Fushi SRS minst oder Karten hast';
       case 'home_recently_added':
@@ -469131,6 +469498,8 @@ extension on _StringsDe {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -470696,6 +471065,22 @@ extension on _StringsDe {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Einfügen';
       case 'pause':
@@ -472930,7 +473315,7 @@ extension on _StringsDe {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -473247,9 +473632,9 @@ extension on _StringsDe {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -473299,7 +473684,7 @@ extension on _StringsDe {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -473636,7 +474021,7 @@ extension on _StringsDe {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -473744,9 +474129,9 @@ extension on _StringsDe {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -483299,8 +483684,6 @@ extension on _StringsEs {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -483330,8 +483713,6 @@ extension on _StringsEs {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -487624,6 +488005,10 @@ extension on _StringsEs {
         return 'Ocultar';
       case 'home_panel_mode_shown':
         return 'Mostrar';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Se muestra al minar a Fushi SRS o si ya tienes tarjetas';
       case 'home_recently_added':
@@ -490711,6 +491096,8 @@ extension on _StringsEs {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -492274,6 +492661,22 @@ extension on _StringsEs {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Pegar';
       case 'pause':
@@ -494510,7 +494913,7 @@ extension on _StringsEs {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -494827,9 +495230,9 @@ extension on _StringsEs {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -494879,7 +495282,7 @@ extension on _StringsEs {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -495216,7 +495619,7 @@ extension on _StringsEs {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -495324,9 +495727,9 @@ extension on _StringsEs {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -504880,8 +505283,6 @@ extension on _StringsFr {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -504911,8 +505312,6 @@ extension on _StringsFr {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -509214,6 +509613,10 @@ extension on _StringsFr {
         return 'Masquer';
       case 'home_panel_mode_shown':
         return 'Afficher';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Affiché dès que vous minez vers Fushi SRS ou avez des cartes';
       case 'home_recently_added':
@@ -512301,6 +512704,8 @@ extension on _StringsFr {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -513866,6 +514271,22 @@ extension on _StringsFr {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Coller';
       case 'pause':
@@ -516101,7 +516522,7 @@ extension on _StringsFr {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -516418,9 +516839,9 @@ extension on _StringsFr {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -516470,7 +516891,7 @@ extension on _StringsFr {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -516807,7 +517228,7 @@ extension on _StringsFr {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -516915,9 +517336,9 @@ extension on _StringsFr {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -526460,8 +526881,6 @@ extension on _StringsId {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -526491,8 +526910,6 @@ extension on _StringsId {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -530782,6 +531199,10 @@ extension on _StringsId {
         return 'Sembunyikan';
       case 'home_panel_mode_shown':
         return 'Tampilkan';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Otomatis tampil saat menambang ke Fushi SRS atau sudah ada kartu';
       case 'home_recently_added':
@@ -533860,6 +534281,8 @@ extension on _StringsId {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -535420,6 +535843,22 @@ extension on _StringsId {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Tempel';
       case 'pause':
@@ -537652,7 +538091,7 @@ extension on _StringsId {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -537969,9 +538408,9 @@ extension on _StringsId {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -538021,7 +538460,7 @@ extension on _StringsId {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -538358,7 +538797,7 @@ extension on _StringsId {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -538466,9 +538905,9 @@ extension on _StringsId {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -548004,8 +548443,6 @@ extension on _StringsIt {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -548035,8 +548472,6 @@ extension on _StringsIt {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -552331,6 +552766,10 @@ extension on _StringsIt {
         return 'Nascondi';
       case 'home_panel_mode_shown':
         return 'Mostra';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Appare quando invii le carte a Fushi SRS o hai già carte';
       case 'home_recently_added':
@@ -555416,6 +555855,8 @@ extension on _StringsIt {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -556978,6 +557419,22 @@ extension on _StringsIt {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Incolla';
       case 'pause':
@@ -559212,7 +559669,7 @@ extension on _StringsIt {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -559529,9 +559986,9 @@ extension on _StringsIt {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -559581,7 +560038,7 @@ extension on _StringsIt {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -559918,7 +560375,7 @@ extension on _StringsIt {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -560026,9 +560483,9 @@ extension on _StringsIt {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -569548,8 +570005,6 @@ extension on _StringsJa {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -569579,8 +570034,6 @@ extension on _StringsJa {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -573859,6 +574312,10 @@ extension on _StringsJa {
         return '非表示';
       case 'home_panel_mode_shown':
         return '表示';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
       case 'home_recently_added':
@@ -576920,6 +577377,8 @@ extension on _StringsJa {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -578476,6 +578935,22 @@ extension on _StringsJa {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return '貼り付け';
       case 'pause':
@@ -580706,7 +581181,7 @@ extension on _StringsJa {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -581023,9 +581498,9 @@ extension on _StringsJa {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -581075,7 +581550,7 @@ extension on _StringsJa {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -581412,7 +581887,7 @@ extension on _StringsJa {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -581520,9 +581995,9 @@ extension on _StringsJa {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -590987,8 +591462,6 @@ extension on _StringsKo {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -591018,8 +591491,6 @@ extension on _StringsKo {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -595301,6 +595772,10 @@ extension on _StringsKo {
         return '숨기기';
       case 'home_panel_mode_shown':
         return '표시';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return '자동: Fushi SRS로 카드를 만들거나 복습 카드가 있으면 표시';
       case 'home_recently_added':
@@ -598361,6 +598836,8 @@ extension on _StringsKo {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -599918,6 +600395,22 @@ extension on _StringsKo {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return '붙여넣기';
       case 'pause':
@@ -602149,7 +602642,7 @@ extension on _StringsKo {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -602466,9 +602959,9 @@ extension on _StringsKo {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -602518,7 +603011,7 @@ extension on _StringsKo {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -602855,7 +603348,7 @@ extension on _StringsKo {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -602963,9 +603456,9 @@ extension on _StringsKo {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -612470,8 +612963,6 @@ extension on _StringsNl {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -612501,8 +612992,6 @@ extension on _StringsNl {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -616796,6 +617285,10 @@ extension on _StringsNl {
         return 'Verbergen';
       case 'home_panel_mode_shown':
         return 'Tonen';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Automatisch zichtbaar zodra je naar Fushi SRS minet of kaarten hebt';
       case 'home_recently_added':
@@ -619886,6 +620379,8 @@ extension on _StringsNl {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -621448,6 +621943,22 @@ extension on _StringsNl {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Plakken';
       case 'pause':
@@ -623682,7 +624193,7 @@ extension on _StringsNl {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -623999,9 +624510,9 @@ extension on _StringsNl {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -624051,7 +624562,7 @@ extension on _StringsNl {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -624388,7 +624899,7 @@ extension on _StringsNl {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -624496,9 +625007,9 @@ extension on _StringsNl {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -634041,8 +634552,6 @@ extension on _StringsPtBr {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -634072,8 +634581,6 @@ extension on _StringsPtBr {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -638364,6 +638871,10 @@ extension on _StringsPtBr {
         return 'Ocultar';
       case 'home_panel_mode_shown':
         return 'Mostrar';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Aparece ao minerar para o Fushi SRS ou se já houver cartões';
       case 'home_recently_added':
@@ -641450,6 +641961,8 @@ extension on _StringsPtBr {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -643012,6 +643525,22 @@ extension on _StringsPtBr {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Colar';
       case 'pause':
@@ -645246,7 +645775,7 @@ extension on _StringsPtBr {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -645563,9 +646092,9 @@ extension on _StringsPtBr {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -645615,7 +646144,7 @@ extension on _StringsPtBr {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -645952,7 +646481,7 @@ extension on _StringsPtBr {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -646060,9 +646589,9 @@ extension on _StringsPtBr {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -655606,8 +656135,6 @@ extension on _StringsRu {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -655637,8 +656164,6 @@ extension on _StringsRu {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -659932,6 +660457,10 @@ extension on _StringsRu {
         return 'Скрыть';
       case 'home_panel_mode_shown':
         return 'Показать';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Авто: показывается, если карточки идут в Fushi SRS или они уже есть';
       case 'home_recently_added':
@@ -663018,6 +663547,8 @@ extension on _StringsRu {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -664580,6 +665111,22 @@ extension on _StringsRu {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Вставить';
       case 'pause':
@@ -666814,7 +667361,7 @@ extension on _StringsRu {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -667131,9 +667678,9 @@ extension on _StringsRu {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -667183,7 +667730,7 @@ extension on _StringsRu {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -667520,7 +668067,7 @@ extension on _StringsRu {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -667628,9 +668175,9 @@ extension on _StringsRu {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -677154,8 +677701,6 @@ extension on _StringsTh {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -677185,8 +677730,6 @@ extension on _StringsTh {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -681474,6 +682017,10 @@ extension on _StringsTh {
         return 'ซ่อน';
       case 'home_panel_mode_shown':
         return 'แสดง';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยัง Fushi SRS หรือมีการ์ดอยู่แล้ว';
       case 'home_recently_added':
@@ -684551,6 +685098,8 @@ extension on _StringsTh {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -686110,6 +686659,22 @@ extension on _StringsTh {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'วาง';
       case 'pause':
@@ -688342,7 +688907,7 @@ extension on _StringsTh {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -688659,9 +689224,9 @@ extension on _StringsTh {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -688711,7 +689276,7 @@ extension on _StringsTh {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -689048,7 +689613,7 @@ extension on _StringsTh {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -689156,9 +689721,9 @@ extension on _StringsTh {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -698691,8 +699256,6 @@ extension on _StringsTr {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -698722,8 +699285,6 @@ extension on _StringsTr {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -703014,6 +703575,10 @@ extension on _StringsTr {
         return 'Gizle';
       case 'home_panel_mode_shown':
         return 'Göster';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Fushi SRS\'e kart eklediğinde veya kartın varsa otomatik görünür';
       case 'home_recently_added':
@@ -706097,6 +706662,8 @@ extension on _StringsTr {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -707656,6 +708223,22 @@ extension on _StringsTr {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Yapıştır';
       case 'pause':
@@ -709888,7 +710471,7 @@ extension on _StringsTr {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -710205,9 +710788,9 @@ extension on _StringsTr {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -710257,7 +710840,7 @@ extension on _StringsTr {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -710594,7 +711177,7 @@ extension on _StringsTr {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -710702,9 +711285,9 @@ extension on _StringsTr {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -720235,8 +720818,6 @@ extension on _StringsVi {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -720266,8 +720847,6 @@ extension on _StringsVi {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -724559,6 +725138,10 @@ extension on _StringsVi {
         return 'Ẩn';
       case 'home_panel_mode_shown':
         return 'Hiện';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return 'Tự động hiện khi tạo thẻ vào Fushi SRS hoặc đã có thẻ';
       case 'home_recently_added':
@@ -727635,6 +728218,8 @@ extension on _StringsVi {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -729195,6 +729780,22 @@ extension on _StringsVi {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return 'Dán';
       case 'pause':
@@ -731429,7 +732030,7 @@ extension on _StringsVi {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -731746,9 +732347,9 @@ extension on _StringsVi {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -731798,7 +732399,7 @@ extension on _StringsVi {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -732135,7 +732736,7 @@ extension on _StringsVi {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -732243,9 +732844,9 @@ extension on _StringsVi {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
@@ -741709,8 +742310,6 @@ extension on _StringsZhCn {
         return '封面已更新';
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) => '同时删除该合集的 ${n} 个下载订阅';
-      case 'collection_detail_continue':
-        return '继续';
       case 'collection_detail_edit_tags':
         return '编辑标签';
       case 'collection_detail_empty_hint':
@@ -741740,8 +742339,6 @@ extension on _StringsZhCn {
         return '阅读时间';
       case 'collection_detail_sort_volume':
         return '卷号';
-      case 'collection_detail_start':
-        return '开始';
       case 'collection_detail_view_grid':
         return '网格';
       case 'collection_detail_view_list':
@@ -745991,6 +746588,10 @@ extension on _StringsZhCn {
         return '隐藏';
       case 'home_panel_mode_shown':
         return '显示';
+      case 'home_panel_panorama_hint':
+        return '全部作品封面与制卡词汇组成的可操作 3D 星空';
+      case 'home_panel_panorama_title':
+        return '媒体库全景';
       case 'home_panel_srs_hint':
         return '自动：制卡发往 Fushi 复习或已有复习卡时显示';
       case 'home_recently_added':
@@ -749030,6 +749631,8 @@ extension on _StringsZhCn {
         return '重新读盘';
       case 'music_cd_track_name':
         return ({required Object n}) => '第 ${n} 轨';
+      case 'music_continue_listening':
+        return '继续收听';
       case 'music_crossfade_continuous_hint':
         return '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
       case 'music_crossfade_continuous_title':
@@ -750573,6 +751176,22 @@ extension on _StringsZhCn {
         return '拖动跟手';
       case 'page_turn_follow_drag_description':
         return '页面随手指移动，松手时拖过四分之一宽度或快速甩动就翻页，否则回弹';
+      case 'panorama_empty':
+        return '添加书、视频、游戏或音乐后，这里会出现你的媒体库全景';
+      case 'panorama_load_failed':
+        return '全景生成失败';
+      case 'panorama_loading':
+        return '正在生成全景…';
+      case 'panorama_open_fullscreen':
+        return '全屏';
+      case 'panorama_share_animation':
+        return '播放分享动画';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} 部作品 · 共制卡 ${mined} 张 · 展示 ${shown} 个词';
       case 'paste':
         return '粘贴';
       case 'pause':
@@ -752794,7 +753413,7 @@ extension on _StringsZhCn {
       case 'srs_card_appearance_show_frequency':
         return '词频';
       case 'srs_card_appearance_show_picture':
-        return '图片';
+        return '多媒体';
       case 'srs_card_appearance_show_source':
         return '来源';
       case 'srs_card_appearance_show_translation':
@@ -753103,9 +753722,9 @@ extension on _StringsZhCn {
       case 'srs_field_info_misc_info_name':
         return '来源';
       case 'srs_field_info_picture_desc':
-        return '截图或配图，显示在卡面上帮助回忆。';
+        return '截图、动图或视频片段，显示在卡面上帮助回忆。';
       case 'srs_field_info_picture_name':
-        return '图片';
+        return '多媒体';
       case 'srs_field_info_pitch_categories_desc':
         return '平板 / 头高 / 中高 / 尾高等类型名，模板用来给读音上色。';
       case 'srs_field_info_pitch_categories_name':
@@ -753155,7 +753774,7 @@ extension on _StringsZhCn {
       case 'srs_field_kind_flag':
         return '开关：填任意字符即开启，本身不显示';
       case 'srs_field_kind_image':
-        return '图片';
+        return '多媒体';
       case 'srs_field_kind_rich':
         return '带格式的文字（词典内容）';
       case 'srs_field_kind_text':
@@ -753476,7 +754095,7 @@ extension on _StringsZhCn {
       case 'srs_note_block_other':
         return '其它';
       case 'srs_note_block_picture':
-        return '图片';
+        return '多媒体';
       case 'srs_note_block_reading':
         return '读音';
       case 'srs_note_block_sentence':
@@ -753584,9 +754203,9 @@ extension on _StringsZhCn {
       case 'srs_note_image_pick':
         return '选择图片';
       case 'srs_note_image_remove':
-        return '删除图片';
+        return '删除多媒体';
       case 'srs_note_image_replace':
-        return '替换图片';
+        return '替换多媒体';
       case 'srs_note_more_fields':
         return ({required Object n}) => '更多字段（${n}）';
       case 'srs_note_restore':
@@ -762991,8 +763610,6 @@ extension on _StringsZhHk {
       case 'collection_delete_also_subscriptions':
         return ({required Object n}) =>
             'Also delete ${n} download subscription(s) for this collection';
-      case 'collection_detail_continue':
-        return 'Continue';
       case 'collection_detail_edit_tags':
         return 'Edit tags';
       case 'collection_detail_empty_hint':
@@ -763022,8 +763639,6 @@ extension on _StringsZhHk {
         return 'Last read';
       case 'collection_detail_sort_volume':
         return 'Volume';
-      case 'collection_detail_start':
-        return 'Start';
       case 'collection_detail_view_grid':
         return 'Grid';
       case 'collection_detail_view_list':
@@ -767290,6 +767905,10 @@ extension on _StringsZhHk {
         return '隱藏';
       case 'home_panel_mode_shown':
         return '顯示';
+      case 'home_panel_panorama_hint':
+        return 'All your covers and mined words as one 3D sky you can explore';
+      case 'home_panel_panorama_title':
+        return 'Library panorama';
       case 'home_panel_srs_hint':
         return '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
       case 'home_recently_added':
@@ -770343,6 +770962,8 @@ extension on _StringsZhHk {
         return 'Read disc again';
       case 'music_cd_track_name':
         return ({required Object n}) => 'Track ${n}';
+      case 'music_continue_listening':
+        return 'Continue listening';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -771899,6 +772520,22 @@ extension on _StringsZhHk {
         return 'Follow finger while dragging';
       case 'page_turn_follow_drag_description':
         return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'panorama_empty':
+        return 'Add books, videos, games or music to see your library panorama';
+      case 'panorama_load_failed':
+        return 'Couldn\'t build the panorama';
+      case 'panorama_loading':
+        return 'Building your panorama…';
+      case 'panorama_open_fullscreen':
+        return 'Full screen';
+      case 'panorama_share_animation':
+        return 'Play share animation';
+      case 'panorama_summary':
+        return ({
+          required Object works,
+          required Object mined,
+          required Object shown,
+        }) => '${works} works · ${mined} cards mined · ${shown} words shown';
       case 'paste':
         return '貼上';
       case 'pause':
@@ -774128,7 +774765,7 @@ extension on _StringsZhHk {
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_card_appearance_show_source':
         return 'Source';
       case 'srs_card_appearance_show_translation':
@@ -774445,9 +775082,9 @@ extension on _StringsZhHk {
       case 'srs_field_info_misc_info_name':
         return 'Source';
       case 'srs_field_info_picture_desc':
-        return 'A screenshot or picture shown on the card to help you remember.';
+        return 'A screenshot, animation or video clip shown on the card to help you remember.';
       case 'srs_field_info_picture_name':
-        return 'Picture';
+        return 'Media';
       case 'srs_field_info_pitch_categories_desc':
         return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
       case 'srs_field_info_pitch_categories_name':
@@ -774497,7 +775134,7 @@ extension on _StringsZhHk {
       case 'srs_field_kind_flag':
         return 'Switch: any character turns it on, not shown itself';
       case 'srs_field_kind_image':
-        return 'Image';
+        return 'Media';
       case 'srs_field_kind_rich':
         return 'Formatted text (dictionary HTML)';
       case 'srs_field_kind_text':
@@ -774833,7 +775470,7 @@ extension on _StringsZhHk {
       case 'srs_note_block_other':
         return 'Other';
       case 'srs_note_block_picture':
-        return 'Picture';
+        return 'Media';
       case 'srs_note_block_reading':
         return 'Reading';
       case 'srs_note_block_sentence':
@@ -774941,9 +775578,9 @@ extension on _StringsZhHk {
       case 'srs_note_image_pick':
         return 'Choose image';
       case 'srs_note_image_remove':
-        return 'Remove image';
+        return 'Remove media';
       case 'srs_note_image_replace':
-        return 'Replace image';
+        return 'Replace media';
       case 'srs_note_more_fields':
         return ({required Object n}) => 'More fields (${n})';
       case 'srs_note_restore':
