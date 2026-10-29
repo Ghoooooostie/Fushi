@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173791 (10223 per locale)
+/// Strings: 174454 (10262 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2835,6 +2835,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Tap to open · long-press or right-click for rename, tags, sort and delete';
   String get collection_manage_search_hint => 'Search collections';
   String get collection_manage_title => 'Manage collections';
+  String get collection_mark_all_unwatched => 'Mark all as unwatched';
+  String get collection_mark_all_watched => 'Mark all as watched';
   String get collection_member_removed => 'Removed from collection';
   String get collection_merge_title => 'Merge collections';
   String get collection_merged => 'Collections merged.';
@@ -2864,6 +2866,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This collection isn\'t in any local video source\'s scrape plan';
   String get collection_rescrape_pick_work => 'Pick a work to rescrape';
   String get collection_rescrape_started => 'Rescrape queued';
+  String get collection_select_all_in_season => 'Select all in season';
+  String get collection_select_episodes => 'Select episodes';
+  String collection_selected_count({required Object n}) => '${n} selected';
   String get collection_sentence => 'Sentence';
   String get collection_sort_ai => 'Sort with AI';
   String get collection_sort_ai_applied => 'Order updated with AI';
@@ -3399,6 +3404,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_audiobookshelf_api_key_label => 'API key (optional)';
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   String get discovery_audiobookshelf_http_allow_hint =>
       'Only for servers on your local network';
@@ -6032,8 +6041,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_book_downloaded => 'Downloaded';
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  String get kavita_book_mark_read => 'Mark as read';
+  String get kavita_book_mark_unread => 'Mark as unread';
+  String get kavita_book_marked_read => 'Marked as read';
+  String get kavita_book_marked_unread => 'Marked as unread';
   String get kavita_book_no_chapters => 'This book has no readable file';
   String get kavita_book_open => 'Read';
+  String get kavita_book_progress_finished => 'Read';
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   String get kavita_book_remove_download => 'Remove download';
   String get kavita_book_remove_download_confirm =>
       'Remove the downloaded copy? It leaves the bookshelf on this device; reading progress stays on the server.';
@@ -6057,6 +6075,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_connect_unauthorized => 'The server rejected the API key';
   String get kavita_http_allow => 'Allow plain HTTP';
   String get kavita_http_allow_hint => 'Only for servers on your local network';
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
   String get kavita_name_hint => 'Optional, defaults to the host name';
   String get kavita_name_label => 'Name';
   String kavita_progress_conflict_body({
@@ -6075,6 +6095,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get kavita_settings_title => 'Kavita servers';
   String get kavita_source_name => 'Kavita';
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   String get kavita_url_http_optin_required =>
       'Plain HTTP must be allowed below';
@@ -6483,8 +6508,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_view_audiobookshelf => 'Audiobookshelf';
   String get library_view_discover => 'Discover';
   String get library_view_import => 'Import';
-  String get library_view_kavita => 'Kavita';
   String get library_view_media => 'Library';
+  String get library_view_media_servers => 'Media servers';
   String get library_view_shelf => 'Shelf';
   String get library_view_sources => 'Sources';
   String get loading_illustrations => 'Loading illustrations…';
@@ -8562,8 +8587,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
   String get onboarding_review_anki_title => 'Anki';
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   String get onboarding_review_fushi_title => 'Fushi review';
@@ -10709,6 +10732,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Switch fields (${n})';
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
   String get srs_note_types_front => 'Front template';
   String get srs_note_types_insert_field => 'Insert field';
   String get srs_note_types_kind => 'Kind';
@@ -10856,6 +10885,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_max_interval => 'Maximum interval (days)';
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  String get srs_settings_new_order => 'New card order';
+  String get srs_settings_new_order_frequency => 'By frequency';
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  String get srs_settings_new_order_position => 'By position';
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   String get srs_settings_new_per_day => 'New cards per day';
   String get srs_settings_new_per_day_hint =>
       'When many reviews are due, Fushi automatically shows fewer new cards';
@@ -11930,11 +11966,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_progress_collections => 'Syncing collections';
   String get sync_progress_deletions => 'Syncing deletions';
   String get sync_progress_dictionaries => 'Syncing dictionaries';
+  String get sync_progress_finishing => 'Finishing up';
   String get sync_progress_fonts => 'Syncing fonts';
   String get sync_progress_local_audio => 'Syncing local audio';
   String get sync_progress_pending_mines => 'Syncing pending cards';
   String get sync_progress_preparing => 'Preparing sync';
   String get sync_progress_reading => 'Syncing reading data';
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   String get sync_progress_videos => 'Syncing videos';
   String get sync_role_locked_by_client =>
@@ -12914,6 +12952,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_loading_subtitle => 'Downloading subtitles…';
   String get video_loop_cue_badge_label => 'Looping line';
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  String video_mark_server_failed({required Object n}) =>
+      'Couldn\'t update the server for ${n} item(s). Local state was updated.';
+  String get video_mark_unwatched => 'Mark as unwatched';
+  String get video_mark_watched => 'Mark as watched';
+  String get video_mark_watched_through => 'Mark this and earlier as watched';
+  String get video_marked_unwatched => 'Marked as unwatched';
+  String get video_marked_watched => 'Marked as watched';
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   String get video_menu_fullscreen => 'Toggle fullscreen';
@@ -13407,6 +13455,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Default subtitle language';
   String get video_setting_jimaku_default_language_hint =>
       'Defaults to the video\'s own language (audio track / scraped metadata). Pick one to always prefer that language instead.';
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   String get video_setting_lock_window_aspect => 'Lock window to video aspect';
   String get video_setting_long_press_speed => 'Long-press speed';
   String get video_setting_long_press_speed_hint =>
@@ -14492,6 +14546,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_download_state_failed => 'Failed';
   String get web_browser_downloads_empty => 'No downloads yet';
   String get web_browser_downloads_title => 'Downloads';
+  String get web_browser_enter => 'Open browser';
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
   String get web_browser_error_certificate_title => 'Connection isn\'t secure';
@@ -19153,6 +19208,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'وضع علامة غير مُشاهَد على الكل';
+  @override
+  String get collection_mark_all_watched => 'وضع علامة مُشاهَد على الكل';
+  @override
   String get collection_member_removed => 'تمت الإزالة من المجموعة';
   @override
   String get collection_merge_title => 'دمج المجموعات';
@@ -19206,6 +19265,12 @@ class _StringsAr extends _StringsEn {
   String get collection_rescrape_pick_work => 'اختر عملًا لإعادة استخراجه';
   @override
   String get collection_rescrape_started => 'تمت جدولة إعادة الاستخراج';
+  @override
+  String get collection_select_all_in_season => 'تحديد كل حلقات الموسم';
+  @override
+  String get collection_select_episodes => 'تحديد الحلقات';
+  @override
+  String collection_selected_count({required Object n}) => 'تم تحديد ${n}';
   @override
   String get collection_sentence => 'جملة';
   @override
@@ -20140,6 +20205,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -24592,9 +24663,25 @@ class _StringsAr extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -24635,6 +24722,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -24665,6 +24755,12 @@ class _StringsAr extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -25347,9 +25443,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get library_view_import => 'استيراد';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'المكتبة';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'الرف';
   @override
@@ -28910,9 +29006,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -32659,6 +32752,16 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -32904,6 +33007,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -34786,6 +34901,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'مزامنة القواميس';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'مزامنة الصوت المحلي';
@@ -34795,6 +34912,8 @@ class _StringsAr extends _StringsEn {
   String get sync_progress_preparing => 'جارٍ التحضير للمزامنة';
   @override
   String get sync_progress_reading => 'مزامنة بيانات القراءة';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -36461,6 +36580,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'تعذّر تحديث الخادم لـ ${n} عنصر. تم تحديث الحالة محليًا.';
+  @override
+  String get video_mark_unwatched => 'وضع علامة كغير مُشاهَد';
+  @override
+  String get video_mark_watched => 'وضع علامة كمُشاهَد';
+  @override
+  String get video_mark_watched_through =>
+      'وضع علامة كمُشاهَد لهذه الحلقة وما قبلها';
+  @override
+  String get video_marked_unwatched => 'تم وضع علامة كغير مُشاهَد';
+  @override
+  String get video_marked_watched => 'تم وضع علامة كمُشاهَد';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -37279,6 +37417,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'يتبع لغة الفيديو افتراضياً (مسار الصوت / البيانات الوصفية المكشوطة). اختر لغة لتفضيلها دائماً بدلاً من ذلك.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => 'قفل النافذة على نسبة الفيديو';
   @override
@@ -39076,6 +39224,8 @@ class _StringsAr extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -43995,6 +44145,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Alle als ungesehen markieren';
+  @override
+  String get collection_mark_all_watched => 'Alle als gesehen markieren';
+  @override
   String get collection_member_removed => 'Aus Sammlung entfernt';
   @override
   String get collection_merge_title => 'Sammlungen zusammenführen';
@@ -44049,6 +44203,13 @@ class _StringsDe extends _StringsEn {
       'Werk zum erneuten Scrapen wählen';
   @override
   String get collection_rescrape_started => 'Erneutes Scrapen eingereiht';
+  @override
+  String get collection_select_all_in_season =>
+      'Alle Folgen der Staffel auswählen';
+  @override
+  String get collection_select_episodes => 'Folgen auswählen';
+  @override
+  String collection_selected_count({required Object n}) => '${n} ausgewählt';
   @override
   String get collection_sentence => 'Satz';
   @override
@@ -45002,6 +45163,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -49554,9 +49721,25 @@ class _StringsDe extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -49597,6 +49780,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -49627,6 +49813,12 @@ class _StringsDe extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -50325,9 +50517,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get library_view_import => 'Importieren';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Bibliothek';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Regal';
   @override
@@ -53950,9 +54142,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -57742,6 +57931,16 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -57987,6 +58186,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -59885,6 +60096,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Wörterbücher werden synchronisiert';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokales Audio wird synchronisiert';
@@ -59894,6 +60107,8 @@ class _StringsDe extends _StringsEn {
   String get sync_progress_preparing => 'Synchronisierung wird vorbereitet';
   @override
   String get sync_progress_reading => 'Lesedaten werden synchronisiert';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -61588,6 +61803,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Der Server konnte für ${n} Element(e) nicht aktualisiert werden. Der lokale Status wurde aktualisiert.';
+  @override
+  String get video_mark_unwatched => 'Als ungesehen markieren';
+  @override
+  String get video_mark_watched => 'Als gesehen markieren';
+  @override
+  String get video_mark_watched_through =>
+      'Diese und frühere als gesehen markieren';
+  @override
+  String get video_marked_unwatched => 'Als ungesehen markiert';
+  @override
+  String get video_marked_watched => 'Als gesehen markiert';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -62422,6 +62656,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Standardmäßig wird die eigene Sprache des Videos verwendet (Audiospur / gescrapte Metadaten). Wählen Sie eine aus, um stattdessen immer diese Sprache zu bevorzugen.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Fenster auf Videoverhältnis sperren';
@@ -64252,6 +64496,8 @@ class _StringsDe extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -69183,6 +69429,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Marcar todo como no visto';
+  @override
+  String get collection_mark_all_watched => 'Marcar todo como visto';
+  @override
   String get collection_member_removed => 'Eliminado de la colección';
   @override
   String get collection_merge_title => 'Fusionar colecciones';
@@ -69237,6 +69487,12 @@ class _StringsEs extends _StringsEn {
       'Elige una obra para volver a extraer';
   @override
   String get collection_rescrape_started => 'Nueva extracción en cola';
+  @override
+  String get collection_select_all_in_season => 'Seleccionar toda la temporada';
+  @override
+  String get collection_select_episodes => 'Seleccionar episodios';
+  @override
+  String collection_selected_count({required Object n}) => '${n} seleccionados';
   @override
   String get collection_sentence => 'Oración';
   @override
@@ -70193,6 +70449,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -74748,9 +75010,25 @@ class _StringsEs extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -74791,6 +75069,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -74821,6 +75102,12 @@ class _StringsEs extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -75522,9 +75809,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get library_view_import => 'Importar';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Biblioteca';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Estante';
   @override
@@ -79150,9 +79437,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -82948,6 +83232,16 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -83193,6 +83487,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -85096,6 +85402,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizando diccionarios';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando audio local';
@@ -85105,6 +85413,8 @@ class _StringsEs extends _StringsEn {
   String get sync_progress_preparing => 'Preparando sincronización';
   @override
   String get sync_progress_reading => 'Sincronizando datos de lectura';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -86807,6 +87117,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'No se pudo actualizar el servidor para ${n} elemento(s). El estado local sí se actualizó.';
+  @override
+  String get video_mark_unwatched => 'Marcar como no visto';
+  @override
+  String get video_mark_watched => 'Marcar como visto';
+  @override
+  String get video_mark_watched_through =>
+      'Marcar este y los anteriores como vistos';
+  @override
+  String get video_marked_unwatched => 'Marcado como no visto';
+  @override
+  String get video_marked_watched => 'Marcado como visto';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -87643,6 +87972,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Por defecto usa el idioma propio del vídeo (pista de audio / metadatos obtenidos). Elija uno para siempre preferir ese idioma.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Bloquear la ventana a la proporción del vídeo';
@@ -89483,6 +89822,8 @@ class _StringsEs extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -94434,6 +94775,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Tout marquer comme non vu';
+  @override
+  String get collection_mark_all_watched => 'Tout marquer comme vu';
+  @override
   String get collection_member_removed => 'Retiré de la collection';
   @override
   String get collection_merge_title => 'Fusionner les collections';
@@ -94489,6 +94834,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_rescrape_started =>
       'Nouveau scraping en file d\'attente';
+  @override
+  String get collection_select_all_in_season => 'Sélectionner toute la saison';
+  @override
+  String get collection_select_episodes => 'Sélectionner des épisodes';
+  @override
+  String collection_selected_count({required Object n}) =>
+      '${n} sélectionné(s)';
   @override
   String get collection_sentence => 'Phrase';
   @override
@@ -95452,6 +95804,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -100017,9 +100375,25 @@ class _StringsFr extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -100060,6 +100434,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -100090,6 +100467,12 @@ class _StringsFr extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -100791,9 +101174,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get library_view_import => 'Importer';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Bibliothèque';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Étagère';
   @override
@@ -104435,9 +104818,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -108241,6 +108621,16 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -108486,6 +108876,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -110386,6 +110788,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Synchronisation des dictionnaires';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Synchronisation de l\'audio local';
@@ -110395,6 +110799,8 @@ class _StringsFr extends _StringsEn {
   String get sync_progress_preparing => 'Préparation de la synchronisation';
   @override
   String get sync_progress_reading => 'Synchronisation des données de lecture';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -112102,6 +112508,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Impossible de mettre à jour le serveur pour ${n} élément(s). L\'état local a bien été mis à jour.';
+  @override
+  String get video_mark_unwatched => 'Marquer comme non vu';
+  @override
+  String get video_mark_watched => 'Marquer comme vu';
+  @override
+  String get video_mark_watched_through =>
+      'Marquer celui-ci et les précédents comme vus';
+  @override
+  String get video_marked_unwatched => 'Marqué comme non vu';
+  @override
+  String get video_marked_watched => 'Marqué comme vu';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -112942,6 +113367,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Par défaut la langue propre de la vidéo (piste audio / métadonnées récupérées). Choisissez-en une pour toujours préférer cette langue.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Verrouiller la fenêtre au format de la vidéo';
@@ -114795,6 +115230,8 @@ class _StringsFr extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -119686,6 +120123,10 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Tandai semua belum ditonton';
+  @override
+  String get collection_mark_all_watched => 'Tandai semua sudah ditonton';
+  @override
   String get collection_member_removed => 'Dihapus dari koleksi';
   @override
   String get collection_merge_title => 'Gabung koleksi';
@@ -119740,6 +120181,13 @@ class _StringsId extends _StringsEn {
       'Pilih karya untuk di-scrape ulang';
   @override
   String get collection_rescrape_started => 'Scrape ulang diantrekan';
+  @override
+  String get collection_select_all_in_season =>
+      'Pilih semua episode di musim ini';
+  @override
+  String get collection_select_episodes => 'Pilih episode';
+  @override
+  String collection_selected_count({required Object n}) => '${n} dipilih';
   @override
   String get collection_sentence => 'Kalimat';
   @override
@@ -120681,6 +121129,12 @@ class _StringsId extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -125176,9 +125630,25 @@ class _StringsId extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -125219,6 +125689,9 @@ class _StringsId extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -125249,6 +125722,12 @@ class _StringsId extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -125942,9 +126421,9 @@ class _StringsId extends _StringsEn {
   @override
   String get library_view_import => 'Impor';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Perpustakaan';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Rak';
   @override
@@ -129532,9 +130011,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -133298,6 +133774,16 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -133543,6 +134029,18 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -135430,6 +135928,8 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Menyinkronkan kamus';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Menyinkronkan audio lokal';
@@ -135439,6 +135939,8 @@ class _StringsId extends _StringsEn {
   String get sync_progress_preparing => 'Menyiapkan sinkronisasi';
   @override
   String get sync_progress_reading => 'Menyinkronkan data baca';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -137124,6 +137626,25 @@ class _StringsId extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Gagal memperbarui server untuk ${n} item. Status lokal sudah diperbarui.';
+  @override
+  String get video_mark_unwatched => 'Tandai belum ditonton';
+  @override
+  String get video_mark_watched => 'Tandai sudah ditonton';
+  @override
+  String get video_mark_watched_through =>
+      'Tandai ini dan sebelumnya sudah ditonton';
+  @override
+  String get video_marked_unwatched => 'Ditandai belum ditonton';
+  @override
+  String get video_marked_watched => 'Ditandai sudah ditonton';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -137951,6 +138472,16 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Default ke bahasa video itu sendiri (trek audio / metadata scrape). Pilih satu untuk selalu mengutamakan bahasa tersebut.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => 'Kunci jendela ke rasio video';
   @override
@@ -139766,6 +140297,8 @@ class _StringsId extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -144681,6 +145214,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Segna tutto come non visto';
+  @override
+  String get collection_mark_all_watched => 'Segna tutto come visto';
+  @override
   String get collection_member_removed => 'Rimosso dalla raccolta';
   @override
   String get collection_merge_title => 'Unisci raccolte';
@@ -144735,6 +145272,12 @@ class _StringsIt extends _StringsEn {
       'Scegli un\'opera di cui rifare lo scraping';
   @override
   String get collection_rescrape_started => 'Nuovo scraping in coda';
+  @override
+  String get collection_select_all_in_season => 'Seleziona tutta la stagione';
+  @override
+  String get collection_select_episodes => 'Seleziona episodi';
+  @override
+  String collection_selected_count({required Object n}) => '${n} selezionati';
   @override
   String get collection_sentence => 'Frase';
   @override
@@ -145682,6 +146225,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -150216,9 +150765,25 @@ class _StringsIt extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -150259,6 +150824,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -150289,6 +150857,12 @@ class _StringsIt extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -150981,9 +151555,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get library_view_import => 'Importa';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Libreria';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Scaffale';
   @override
@@ -154602,9 +155176,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -158397,6 +158968,16 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -158642,6 +159223,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -160535,6 +161128,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizzazione dizionari';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizzazione audio locale';
@@ -160544,6 +161139,8 @@ class _StringsIt extends _StringsEn {
   String get sync_progress_preparing => 'Preparazione sincronizzazione';
   @override
   String get sync_progress_reading => 'Sincronizzazione dati di lettura';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -162234,6 +162831,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Impossibile aggiornare il server per ${n} elemento/i. Lo stato locale è stato aggiornato.';
+  @override
+  String get video_mark_unwatched => 'Segna come non visto';
+  @override
+  String get video_mark_watched => 'Segna come visto';
+  @override
+  String get video_mark_watched_through =>
+      'Segna questo e i precedenti come visti';
+  @override
+  String get video_marked_unwatched => 'Segnato come non visto';
+  @override
+  String get video_marked_watched => 'Segnato come visto';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -163063,6 +163679,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Predefinito sulla lingua propria del video (traccia audio / metadati ottenuti). Scegline una per preferire sempre quella lingua.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Blocca la finestra sulle proporzioni del video';
@@ -164895,6 +165521,8 @@ class _StringsIt extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -169651,6 +170279,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'すべて未視聴にする';
+  @override
+  String get collection_mark_all_watched => 'すべて視聴済みにする';
+  @override
   String get collection_member_removed => 'コレクションから削除しました';
   @override
   String get collection_merge_title => 'コレクションをマージ';
@@ -169703,6 +170335,12 @@ class _StringsJa extends _StringsEn {
   String get collection_rescrape_pick_work => '再取得する作品を選択';
   @override
   String get collection_rescrape_started => '再取得をキューに追加しました';
+  @override
+  String get collection_select_all_in_season => 'シーズンをすべて選択';
+  @override
+  String get collection_select_episodes => 'エピソードを選択';
+  @override
+  String collection_selected_count({required Object n}) => '${n} 件選択中';
   @override
   String get collection_sentence => '文';
   @override
@@ -170603,6 +171241,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -174900,9 +175544,25 @@ class _StringsJa extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -174943,6 +175603,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -174973,6 +175636,12 @@ class _StringsJa extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -175638,9 +176307,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get library_view_import => 'インポート';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'ライブラリ';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => '本棚';
   @override
@@ -179106,9 +179775,6 @@ class _StringsJa extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -182786,6 +183452,16 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -183031,6 +183707,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -184865,6 +185553,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '辞書を同期中';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'ローカル音声を同期中';
@@ -184874,6 +185564,8 @@ class _StringsJa extends _StringsEn {
   String get sync_progress_preparing => '同期を準備中';
   @override
   String get sync_progress_reading => '読書データを同期中';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -186491,6 +187183,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '${n} 件のサーバー更新に失敗しました。ローカルの状態は更新されています。';
+  @override
+  String get video_mark_unwatched => '未視聴にする';
+  @override
+  String get video_mark_watched => '視聴済みにする';
+  @override
+  String get video_mark_watched_through => 'この話とそれ以前を視聴済みにする';
+  @override
+  String get video_marked_unwatched => '未視聴にしました';
+  @override
+  String get video_marked_watched => '視聴済みにしました';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -187278,6 +187988,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'デフォルトでは動画自体の言語（音声トラック/スクレイプされたメタデータ）を使用します。特定の言語を選択すると、常にその言語が優先されます。';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => 'ウィンドウを動画の比率に固定';
   @override
@@ -188995,6 +189715,8 @@ class _StringsJa extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -193747,6 +194469,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => '모두 시청 안 함으로 표시';
+  @override
+  String get collection_mark_all_watched => '모두 시청함으로 표시';
+  @override
   String get collection_member_removed => '컬렉션에서 제거됨';
   @override
   String get collection_merge_title => '컬렉션 병합';
@@ -193799,6 +194525,12 @@ class _StringsKo extends _StringsEn {
   String get collection_rescrape_pick_work => '다시 스크레이핑할 작품 선택';
   @override
   String get collection_rescrape_started => '다시 스크레이핑을 대기열에 추가했습니다';
+  @override
+  String get collection_select_all_in_season => '시즌 전체 선택';
+  @override
+  String get collection_select_episodes => '회차 선택';
+  @override
+  String collection_selected_count({required Object n}) => '${n}개 선택됨';
   @override
   String get collection_sentence => '문장';
   @override
@@ -194695,6 +195427,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -199006,9 +199744,25 @@ class _StringsKo extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -199049,6 +199803,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -199079,6 +199836,12 @@ class _StringsKo extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -199743,9 +200506,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get library_view_import => '가져오기';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => '라이브러리';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => '서재';
   @override
@@ -203229,9 +203992,6 @@ class _StringsKo extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -206911,6 +207671,16 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -207156,6 +207926,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -208991,6 +209773,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '사전 동기화 중';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '로컬 오디오 동기화 중';
@@ -209000,6 +209784,8 @@ class _StringsKo extends _StringsEn {
   String get sync_progress_preparing => '동기화 준비 중';
   @override
   String get sync_progress_reading => '독서 데이터 동기화 중';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -210618,6 +211404,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '${n}개 항목의 서버 업데이트에 실패했습니다. 로컬 상태는 업데이트되었습니다.';
+  @override
+  String get video_mark_unwatched => '시청 안 함으로 표시';
+  @override
+  String get video_mark_watched => '시청함으로 표시';
+  @override
+  String get video_mark_watched_through => '이 회차와 이전 회차를 시청함으로 표시';
+  @override
+  String get video_marked_unwatched => '시청 안 함으로 표시했습니다';
+  @override
+  String get video_marked_watched => '시청함으로 표시했습니다';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -211415,6 +212219,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       '기본적으로 동영상 자체 언어(오디오 트랙 / 스크랩된 메타데이터)를 사용합니다. 항상 특정 언어를 선호하려면 선택하세요.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => '창을 비디오 비율로 고정';
   @override
@@ -213157,6 +213971,8 @@ class _StringsKo extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -218067,6 +218883,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Alles markeren als niet gezien';
+  @override
+  String get collection_mark_all_watched => 'Alles markeren als gezien';
+  @override
   String get collection_member_removed => 'Verwijderd uit collectie';
   @override
   String get collection_merge_title => 'Collecties samenvoegen';
@@ -218121,6 +218941,13 @@ class _StringsNl extends _StringsEn {
       'Kies een werk om opnieuw te scrapen';
   @override
   String get collection_rescrape_started => 'Opnieuw scrapen in wachtrij gezet';
+  @override
+  String get collection_select_all_in_season =>
+      'Alle afleveringen van het seizoen selecteren';
+  @override
+  String get collection_select_episodes => 'Afleveringen selecteren';
+  @override
+  String collection_selected_count({required Object n}) => '${n} geselecteerd';
   @override
   String get collection_sentence => 'Zin';
   @override
@@ -219068,6 +219895,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -223582,9 +224415,25 @@ class _StringsNl extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -223625,6 +224474,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -223655,6 +224507,12 @@ class _StringsNl extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -224352,9 +225210,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get library_view_import => 'Importeren';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Bibliotheek';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Plank';
   @override
@@ -227958,9 +228816,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -231742,6 +232597,16 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -231987,6 +232852,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -233883,6 +234760,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Woordenboeken synchroniseren';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Lokale audio synchroniseren';
@@ -233892,6 +234771,8 @@ class _StringsNl extends _StringsEn {
   String get sync_progress_preparing => 'Synchronisatie voorbereiden';
   @override
   String get sync_progress_reading => 'Leesgegevens synchroniseren';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -235581,6 +236462,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'De server kon niet worden bijgewerkt voor ${n} item(s). De lokale status is wel bijgewerkt.';
+  @override
+  String get video_mark_unwatched => 'Markeren als niet gezien';
+  @override
+  String get video_mark_watched => 'Markeren als gezien';
+  @override
+  String get video_mark_watched_through =>
+      'Deze en eerdere markeren als gezien';
+  @override
+  String get video_marked_unwatched => 'Gemarkeerd als niet gezien';
+  @override
+  String get video_marked_watched => 'Gemarkeerd als gezien';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -236411,6 +237311,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Standaard de eigen taal van de video (audiotrack / gescrapete metadata). Kies er een om die taal altijd te prefereren.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Venster vergrendelen op videoverhouding';
@@ -238234,6 +239144,8 @@ class _StringsNl extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -243158,6 +244070,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Marcar tudo como não assistido';
+  @override
+  String get collection_mark_all_watched => 'Marcar tudo como assistido';
+  @override
   String get collection_member_removed => 'Removido da coleção';
   @override
   String get collection_merge_title => 'Mesclar coleções';
@@ -243212,6 +244128,13 @@ class _StringsPtBr extends _StringsEn {
       'Escolha uma obra para raspar novamente';
   @override
   String get collection_rescrape_started => 'Nova raspagem na fila';
+  @override
+  String get collection_select_all_in_season => 'Selecionar toda a temporada';
+  @override
+  String get collection_select_episodes => 'Selecionar episódios';
+  @override
+  String collection_selected_count({required Object n}) =>
+      '${n} selecionado(s)';
   @override
   String get collection_sentence => 'Frase';
   @override
@@ -244161,6 +245084,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -248699,9 +249628,25 @@ class _StringsPtBr extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -248742,6 +249687,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -248772,6 +249720,12 @@ class _StringsPtBr extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -249471,9 +250425,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get library_view_import => 'Importar';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Biblioteca';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Estante';
   @override
@@ -253083,9 +254037,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -256872,6 +257823,16 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -257117,6 +258078,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -259008,6 +259981,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sincronizando dicionários';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Sincronizando áudio local';
@@ -259017,6 +259992,8 @@ class _StringsPtBr extends _StringsEn {
   String get sync_progress_preparing => 'Preparando sincronização';
   @override
   String get sync_progress_reading => 'Sincronizando dados de leitura';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -260715,6 +261692,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Não foi possível atualizar o servidor para ${n} item(ns). O estado local foi atualizado.';
+  @override
+  String get video_mark_unwatched => 'Marcar como não assistido';
+  @override
+  String get video_mark_watched => 'Marcar como assistido';
+  @override
+  String get video_mark_watched_through =>
+      'Marcar este e os anteriores como assistidos';
+  @override
+  String get video_marked_unwatched => 'Marcado como não assistido';
+  @override
+  String get video_marked_watched => 'Marcado como assistido';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -261550,6 +262546,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Padrão é o idioma do próprio vídeo (faixa de áudio / metadados buscados). Escolha um para sempre preferir esse idioma.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Travar janela na proporção do vídeo';
@@ -263384,6 +264390,8 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -268293,6 +269301,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched =>
+      'Отметить все как непросмотренные';
+  @override
+  String get collection_mark_all_watched => 'Отметить все как просмотренные';
+  @override
   String get collection_member_removed => 'Удалено из коллекции';
   @override
   String get collection_merge_title => 'Объединить коллекции';
@@ -268347,6 +269360,12 @@ class _StringsRu extends _StringsEn {
       'Выберите произведение для обновления';
   @override
   String get collection_rescrape_started => 'Обновление поставлено в очередь';
+  @override
+  String get collection_select_all_in_season => 'Выбрать все серии сезона';
+  @override
+  String get collection_select_episodes => 'Выбрать серии';
+  @override
+  String collection_selected_count({required Object n}) => 'Выбрано: ${n}';
   @override
   String get collection_sentence => 'Предложение';
   @override
@@ -269291,6 +270310,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -273808,9 +274833,25 @@ class _StringsRu extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -273851,6 +274892,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -273881,6 +274925,12 @@ class _StringsRu extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -274579,9 +275629,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get library_view_import => 'Импорт';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Библиотека';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Полка';
   @override
@@ -278190,9 +279240,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -281979,6 +283026,16 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -282224,6 +283281,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -284116,6 +285185,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Синхронизация словарей';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Синхронизация локального аудио';
@@ -284125,6 +285196,8 @@ class _StringsRu extends _StringsEn {
   String get sync_progress_preparing => 'Подготовка синхронизации';
   @override
   String get sync_progress_reading => 'Синхронизация данных чтения';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -285811,6 +286884,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Не удалось обновить сервер для элементов: ${n}. Локальное состояние обновлено.';
+  @override
+  String get video_mark_unwatched => 'Отметить как непросмотренное';
+  @override
+  String get video_mark_watched => 'Отметить как просмотренное';
+  @override
+  String get video_mark_watched_through =>
+      'Отметить эту и все предыдущие как просмотренные';
+  @override
+  String get video_marked_unwatched => 'Отмечено как непросмотренное';
+  @override
+  String get video_marked_watched => 'Отмечено как просмотренное';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -286644,6 +287736,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'По умолчанию используется язык видео (аудиодорожка / метаданные скрейпинга). Выберите конкретный язык, чтобы всегда предпочитать его.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Окно по соотношению сторон видео';
@@ -288479,6 +289581,8 @@ class _StringsRu extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -293333,6 +294437,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched =>
+      'ทำเครื่องหมายว่ายังไม่ได้ดูทั้งหมด';
+  @override
+  String get collection_mark_all_watched => 'ทำเครื่องหมายว่าดูแล้วทั้งหมด';
+  @override
   String get collection_member_removed => 'ลบออกจากคอลเลกชันแล้ว';
   @override
   String get collection_merge_title => 'รวมคอลเลกชัน';
@@ -293385,6 +294494,12 @@ class _StringsTh extends _StringsEn {
   String get collection_rescrape_pick_work => 'เลือกผลงานที่จะดึงข้อมูลใหม่';
   @override
   String get collection_rescrape_started => 'จัดคิวดึงข้อมูลใหม่แล้ว';
+  @override
+  String get collection_select_all_in_season => 'เลือกทุกตอนในซีซัน';
+  @override
+  String get collection_select_episodes => 'เลือกตอน';
+  @override
+  String collection_selected_count({required Object n}) => 'เลือกแล้ว ${n}';
   @override
   String get collection_sentence => 'ประโยค';
   @override
@@ -294317,6 +295432,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -298766,9 +299887,25 @@ class _StringsTh extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -298809,6 +299946,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -298839,6 +299979,12 @@ class _StringsTh extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -299522,9 +300668,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get library_view_import => 'นำเข้า';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'คลัง';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'ชั้นหนังสือ';
   @override
@@ -303086,9 +304232,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -306838,6 +307981,16 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -307083,6 +308236,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -308967,6 +310132,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'กำลังซิงค์พจนานุกรม';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'กำลังซิงค์เสียงในเครื่อง';
@@ -308976,6 +310143,8 @@ class _StringsTh extends _StringsEn {
   String get sync_progress_preparing => 'กำลังเตรียมซิงค์';
   @override
   String get sync_progress_reading => 'กำลังซิงค์ข้อมูลการอ่าน';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -310639,6 +311808,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'อัปเดตเซิร์ฟเวอร์ไม่สำเร็จ ${n} รายการ แต่สถานะในเครื่องอัปเดตแล้ว';
+  @override
+  String get video_mark_unwatched => 'ทำเครื่องหมายว่ายังไม่ได้ดู';
+  @override
+  String get video_mark_watched => 'ทำเครื่องหมายว่าดูแล้ว';
+  @override
+  String get video_mark_watched_through =>
+      'ทำเครื่องหมายว่าดูแล้วทั้งตอนนี้และตอนก่อนหน้า';
+  @override
+  String get video_marked_unwatched => 'ทำเครื่องหมายว่ายังไม่ได้ดูแล้ว';
+  @override
+  String get video_marked_watched => 'ทำเครื่องหมายว่าดูแล้ว';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -311454,6 +312642,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'ค่าเริ่มต้นจะใช้ภาษาของวิดีโอ (แทร็กเสียง / ข้อมูลที่สแกนได้) เลือกภาษาเพื่อให้ใช้ภาษานั้นเสมอแทน';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'ล็อกหน้าต่างตามอัตราส่วนวิดีโอ';
@@ -313251,6 +314449,8 @@ class _StringsTh extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -318140,6 +319340,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched =>
+      'Tümünü izlenmedi olarak işaretle';
+  @override
+  String get collection_mark_all_watched => 'Tümünü izlendi olarak işaretle';
+  @override
   String get collection_member_removed => 'Koleksiyondan kaldırıldı';
   @override
   String get collection_merge_title => 'Koleksiyonları birleştir';
@@ -318194,6 +319399,12 @@ class _StringsTr extends _StringsEn {
       'Yeniden kazınacak bir eser seçin';
   @override
   String get collection_rescrape_started => 'Yeniden kazıma sıraya alındı';
+  @override
+  String get collection_select_all_in_season => 'Sezondaki tüm bölümleri seç';
+  @override
+  String get collection_select_episodes => 'Bölüm seç';
+  @override
+  String collection_selected_count({required Object n}) => '${n} seçildi';
   @override
   String get collection_sentence => 'Cümle';
   @override
@@ -319138,6 +320349,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -323642,9 +324859,25 @@ class _StringsTr extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -323685,6 +324918,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -323715,6 +324951,12 @@ class _StringsTr extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -324406,9 +325648,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get library_view_import => 'İçe aktar';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Kütüphane';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Raf';
   @override
@@ -327997,9 +329239,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -331762,6 +333001,16 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -332007,6 +333256,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -333899,6 +335160,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Sözlükler eşitleniyor';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Yerel ses eşitleniyor';
@@ -333908,6 +335171,8 @@ class _StringsTr extends _StringsEn {
   String get sync_progress_preparing => 'Senkronizasyon hazırlanıyor';
   @override
   String get sync_progress_reading => 'Okuma verileri eşitleniyor';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -335583,6 +336848,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '${n} öğe için sunucu güncellenemedi. Yerel durum güncellendi.';
+  @override
+  String get video_mark_unwatched => 'İzlenmedi olarak işaretle';
+  @override
+  String get video_mark_watched => 'İzlendi olarak işaretle';
+  @override
+  String get video_mark_watched_through =>
+      'Bunu ve öncekileri izlendi olarak işaretle';
+  @override
+  String get video_marked_unwatched => 'İzlenmedi olarak işaretlendi';
+  @override
+  String get video_marked_watched => 'İzlendi olarak işaretlendi';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -336410,6 +337694,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Varsayılan olarak videonun kendi dilini (ses parçası / taranan meta veriler) kullanır. Her zaman o dili tercih etmek için birini seçin.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect =>
       'Pencereyi video oranına kilitle';
@@ -338226,6 +339520,8 @@ class _StringsTr extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -343105,6 +344401,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => 'Đánh dấu tất cả chưa xem';
+  @override
+  String get collection_mark_all_watched => 'Đánh dấu tất cả đã xem';
+  @override
   String get collection_member_removed => 'Đã xóa khỏi bộ sưu tập';
   @override
   String get collection_merge_title => 'Hợp nhất bộ sưu tập';
@@ -343158,6 +344458,12 @@ class _StringsVi extends _StringsEn {
   String get collection_rescrape_pick_work => 'Chọn một tác phẩm để quét lại';
   @override
   String get collection_rescrape_started => 'Đã xếp hàng quét lại';
+  @override
+  String get collection_select_all_in_season => 'Chọn tất cả tập trong mùa';
+  @override
+  String get collection_select_episodes => 'Chọn tập';
+  @override
+  String collection_selected_count({required Object n}) => 'Đã chọn ${n}';
   @override
   String get collection_sentence => 'Câu';
   @override
@@ -344101,6 +345407,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -348587,9 +349899,25 @@ class _StringsVi extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -348630,6 +349958,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -348660,6 +349991,12 @@ class _StringsVi extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -349349,9 +350686,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get library_view_import => 'Nhập';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => 'Thư viện';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Kệ';
   @override
@@ -352925,9 +354262,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -356682,6 +358016,16 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -356927,6 +358271,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -358815,6 +360171,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_progress_dictionaries => 'Đang đồng bộ từ điển';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => 'Đang đồng bộ âm thanh cục bộ';
@@ -358824,6 +360182,8 @@ class _StringsVi extends _StringsEn {
   String get sync_progress_preparing => 'Đang chuẩn bị đồng bộ';
   @override
   String get sync_progress_reading => 'Đang đồng bộ dữ liệu đọc';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -360496,6 +361856,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      'Không cập nhật được máy chủ cho ${n} mục. Trạng thái trên máy đã được cập nhật.';
+  @override
+  String get video_mark_unwatched => 'Đánh dấu chưa xem';
+  @override
+  String get video_mark_watched => 'Đánh dấu đã xem';
+  @override
+  String get video_mark_watched_through =>
+      'Đánh dấu tập này và các tập trước là đã xem';
+  @override
+  String get video_marked_unwatched => 'Đã đánh dấu chưa xem';
+  @override
+  String get video_marked_watched => 'Đã đánh dấu đã xem';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -361322,6 +362701,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Mặc định theo ngôn ngữ của video (bản âm thanh / siêu dữ liệu quét). Chọn một ngôn ngữ để luôn ưu tiên ngôn ngữ đó thay thế.';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => 'Khóa cửa sổ theo tỷ lệ video';
   @override
@@ -363129,6 +364518,8 @@ class _StringsVi extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -367614,6 +369005,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_manage_title => '管理合集';
   @override
+  String get collection_mark_all_unwatched => '全部标记为未看';
+  @override
+  String get collection_mark_all_watched => '全部标记为已看';
+  @override
   String get collection_member_removed => '已移出合集';
   @override
   String get collection_merge_title => '合并合集';
@@ -367664,6 +369059,12 @@ class _StringsZhCn extends _StringsEn {
   String get collection_rescrape_pick_work => '选择要重新刮削的作品';
   @override
   String get collection_rescrape_started => '已开始重新刮削';
+  @override
+  String get collection_select_all_in_season => '全选本季';
+  @override
+  String get collection_select_episodes => '选择集数';
+  @override
+  String collection_selected_count({required Object n}) => '已选 ${n} 项';
   @override
   String get collection_sentence => '句子';
   @override
@@ -368540,6 +369941,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       '该 Audiobookshelf 账号没有下载权限，请让服务器管理员开启下载权限';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      '把 Audiobookshelf 上收听中的条目混排进首页「继续」。关闭后只在 Audiobookshelf 标签页查看。';
+  @override
+  String get discovery_audiobookshelf_home_continue_title => '在首页「继续」中显示';
   @override
   String get discovery_audiobookshelf_http_allow => '允许明文 HTTP';
   @override
@@ -372624,9 +374030,25 @@ class _StringsZhCn extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       '正在下载 ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      '更新阅读状态失败：${reason}';
+  @override
+  String get kavita_book_mark_read => '标记为已读';
+  @override
+  String get kavita_book_mark_unread => '标记为未读';
+  @override
+  String get kavita_book_marked_read => '已标记为已读';
+  @override
+  String get kavita_book_marked_unread => '已标记为未读';
+  @override
   String get kavita_book_no_chapters => '此书没有可阅读的文件';
   @override
   String get kavita_book_open => '阅读';
+  @override
+  String get kavita_book_progress_finished => '已读完';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '已读 ${percent}%';
   @override
   String get kavita_book_remove_download => '移除下载';
   @override
@@ -372662,6 +374084,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get kavita_http_allow_hint => '仅用于局域网内的服务器';
   @override
+  String get kavita_manga_mark_saved_locally => '已在本机标记。Kavita 未能更新，下次打开该章时同步';
+  @override
   String get kavita_name_hint => '可选，默认使用主机名';
   @override
   String get kavita_name_label => '名称';
@@ -372691,6 +374115,11 @@ class _StringsZhCn extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => '从你的 Kavita 服务器在线阅读漫画';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) => '这本书的阅读进度不会与 Kavita 同步：服务器上有 ${server} 个章节，本机副本有 ${local} 个';
   @override
   String get kavita_url_hint => '例如 http://192.168.1.10:5000';
   @override
@@ -373327,9 +374756,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get library_view_import => '导入';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => '媒体库';
+  @override
+  String get library_view_media_servers => '媒体服务器';
   @override
   String get library_view_shelf => '书架';
   @override
@@ -376623,9 +378052,6 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => '改用 Anki…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
   @override
   String get onboarding_review_fushi_desc =>
       '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
@@ -380093,6 +381519,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_flag_fields_hint => '填任意字符即开启对应的卡面样式';
   @override
+  String srs_note_types_freq_chip({required Object name}) => '词频排序：${name}';
+  @override
+  String get srs_note_types_freq_field => '词频序字段';
+  @override
+  String get srs_note_types_freq_field_auto => '自动（FreqSort）';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      '牌组按词频出新卡时，读这个字段里的名次（越小越常见）。「自动」= 用名为 FreqSort 的字段。';
+  @override
   String get srs_note_types_front => '正面模板';
   @override
   String get srs_note_types_insert_field => '插入字段';
@@ -380316,6 +381751,18 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_max_interval => '最大间隔（天）';
   @override
   String get srs_settings_max_interval_hint => '任何卡的下次复习都不会超过这么多天';
+  @override
+  String get srs_settings_new_order => '新卡顺序';
+  @override
+  String get srs_settings_new_order_frequency => '按词频';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      '常用词先出：按制卡时存在卡上的词频名次（FreqSort）。名次随笔记同步，每台设备顺序一致。没有名次的卡排在后面，按位置。';
+  @override
+  String get srs_settings_new_order_position => '按位置';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      '按「按词频重排新卡」或 Anki 导入写下的位置；没排过的卡按添加先后。';
   @override
   String get srs_settings_new_per_day => '每日新卡上限';
   @override
@@ -382043,6 +383490,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '同步词典';
   @override
+  String get sync_progress_finishing => '正在收尾';
+  @override
   String get sync_progress_fonts => '同步字体';
   @override
   String get sync_progress_local_audio => '同步本地音频';
@@ -382052,6 +383501,8 @@ class _StringsZhCn extends _StringsEn {
   String get sync_progress_preparing => '正在准备同步';
   @override
   String get sync_progress_reading => '同步阅读数据';
+  @override
+  String get sync_progress_remote_listing => '正在读取远端文件清单';
   @override
   String get sync_progress_statistics => '同步统计与收藏';
   @override
@@ -383577,6 +385028,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => '点击停止循环';
   @override
+  String get video_mark_failed => '未能更新观看状态。';
+  @override
+  String video_mark_remote_failed({required Object n}) => '有 ${n} 项未能在服务器上标记。';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '有 ${n} 项未能同步到服务器，本地状态已更新。';
+  @override
+  String get video_mark_unwatched => '标记为未看';
+  @override
+  String get video_mark_watched => '标记为已看';
+  @override
+  String get video_mark_watched_through => '将此集及之前标记为已看';
+  @override
+  String get video_marked_unwatched => '已标记为未看';
+  @override
+  String get video_marked_watched => '已标记为已看';
+  @override
   String get video_media_server_launch_unavailable =>
       '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
   @override
@@ -384299,6 +385767,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       '默认跟随视频自身的语言（音轨 / 刮削元数据）。选定某个语言则始终优先它。';
+  @override
+  String get video_setting_jump_pill_auto_hide => '回跳胶囊自动隐藏';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      '跳转后过这么久就不再显示「返回跳转前位置」胶囊，下次跳转再出现';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => '不隐藏';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds} 秒';
   @override
   String get video_setting_lock_window_aspect => '锁定窗口为视频比例';
   @override
@@ -385938,6 +387416,8 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_downloads_empty => '还没有下载记录';
   @override
   String get web_browser_downloads_title => '下载';
+  @override
+  String get web_browser_enter => '进入浏览器';
   @override
   String get web_browser_error_certificate_body => '该网站的安全证书无效、已过期或与网址不符。';
   @override
@@ -390542,6 +392022,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_manage_title => 'Manage collections';
   @override
+  String get collection_mark_all_unwatched => '全部標記為未看';
+  @override
+  String get collection_mark_all_watched => '全部標記為已看';
+  @override
   String get collection_member_removed => '已移出合集';
   @override
   String get collection_merge_title => '合併合集';
@@ -390592,6 +392076,12 @@ class _StringsZhHk extends _StringsEn {
   String get collection_rescrape_pick_work => '選擇要重新刮削的作品';
   @override
   String get collection_rescrape_started => '已開始重新刮削';
+  @override
+  String get collection_select_all_in_season => '全選本季';
+  @override
+  String get collection_select_episodes => '選擇集數';
+  @override
+  String collection_selected_count({required Object n}) => '已選 ${n} 項';
   @override
   String get collection_sentence => '句子';
   @override
@@ -391474,6 +392964,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_audiobookshelf_download_forbidden =>
       'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+  @override
+  String get discovery_audiobookshelf_home_continue_hint =>
+      'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+  @override
+  String get discovery_audiobookshelf_home_continue_title =>
+      'Show in Home Continue';
   @override
   String get discovery_audiobookshelf_http_allow => 'Allow plain HTTP';
   @override
@@ -395627,9 +397123,25 @@ class _StringsZhHk extends _StringsEn {
   String kavita_book_downloading({required Object percent}) =>
       'Downloading ${percent}%';
   @override
+  String kavita_book_mark_failed({required Object reason}) =>
+      'Could not update read state: ${reason}';
+  @override
+  String get kavita_book_mark_read => 'Mark as read';
+  @override
+  String get kavita_book_mark_unread => 'Mark as unread';
+  @override
+  String get kavita_book_marked_read => 'Marked as read';
+  @override
+  String get kavita_book_marked_unread => 'Marked as unread';
+  @override
   String get kavita_book_no_chapters => 'This book has no readable file';
   @override
   String get kavita_book_open => 'Read';
+  @override
+  String get kavita_book_progress_finished => 'Read';
+  @override
+  String kavita_book_progress_percent({required Object percent}) =>
+      '${percent}% read';
   @override
   String get kavita_book_remove_download => 'Remove download';
   @override
@@ -395670,6 +397182,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get kavita_http_allow_hint => 'Only for servers on your local network';
   @override
+  String get kavita_manga_mark_saved_locally =>
+      'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
+  @override
   String get kavita_name_hint => 'Optional, defaults to the host name';
   @override
   String get kavita_name_label => 'Name';
@@ -395700,6 +397215,12 @@ class _StringsZhHk extends _StringsEn {
   String get kavita_source_name => 'Kavita';
   @override
   String get kavita_source_subtitle => 'Stream manga from your Kavita server';
+  @override
+  String kavita_sync_section_mismatch({
+    required Object server,
+    required Object local,
+  }) =>
+      'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
   @override
   String get kavita_url_hint => 'For example http://192.168.1.10:5000';
   @override
@@ -396340,9 +397861,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get library_view_import => '導入';
   @override
-  String get library_view_kavita => 'Kavita';
-  @override
   String get library_view_media => '媒體庫';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => '書架';
   @override
@@ -399725,9 +401246,6 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
-  @override
-  String get onboarding_review_fushi_auto_reposition_hint =>
-      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -403354,6 +404872,16 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_flag_fields_hint =>
       'Put any character in one to turn that card style on';
   @override
+  String srs_note_types_freq_chip({required Object name}) =>
+      'Frequency order: ${name}';
+  @override
+  String get srs_note_types_freq_field => 'Frequency rank field';
+  @override
+  String get srs_note_types_freq_field_auto => 'Auto (FreqSort)';
+  @override
+  String get srs_note_types_freq_field_hint =>
+      'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
+  @override
   String get srs_note_types_front => 'Front template';
   @override
   String get srs_note_types_insert_field => 'Insert field';
@@ -403599,6 +405127,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_max_interval_hint =>
       'No card is scheduled further out than this';
+  @override
+  String get srs_settings_new_order => 'New card order';
+  @override
+  String get srs_settings_new_order_frequency => 'By frequency';
+  @override
+  String get srs_settings_new_order_frequency_hint =>
+      'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+  @override
+  String get srs_settings_new_order_position => 'By position';
+  @override
+  String get srs_settings_new_order_position_hint =>
+      'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
   @override
   String get srs_settings_new_per_day => 'New cards per day';
   @override
@@ -405402,6 +406942,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_progress_dictionaries => '正在同步詞典';
   @override
+  String get sync_progress_finishing => 'Finishing up';
+  @override
   String get sync_progress_fonts => 'Syncing fonts';
   @override
   String get sync_progress_local_audio => '正在同步本機音訊';
@@ -405411,6 +406953,8 @@ class _StringsZhHk extends _StringsEn {
   String get sync_progress_preparing => '正在準備同步';
   @override
   String get sync_progress_reading => '正在同步閱讀資料';
+  @override
+  String get sync_progress_remote_listing => 'Reading the remote file list';
   @override
   String get sync_progress_statistics => 'Syncing statistics and favorites';
   @override
@@ -406974,6 +408518,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
+  String get video_mark_failed => 'Couldn\'t update the watched state.';
+  @override
+  String video_mark_remote_failed({required Object n}) =>
+      'Couldn\'t mark ${n} item(s) on the server.';
+  @override
+  String video_mark_server_failed({required Object n}) =>
+      '有 ${n} 項未能同步到伺服器，本機狀態已更新。';
+  @override
+  String get video_mark_unwatched => '標記為未看';
+  @override
+  String get video_mark_watched => '標記為已看';
+  @override
+  String get video_mark_watched_through => '將此集及之前標記為已看';
+  @override
+  String get video_marked_unwatched => '已標記為未看';
+  @override
+  String get video_marked_watched => '已標記為已看';
+  @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
@@ -407745,6 +409307,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       '預設跟隨影片自身的語言（音軌 / 刮削元數據）。選定某個語言則始終優先它。';
+  @override
+  String get video_setting_jump_pill_auto_hide => 'Auto-hide jump-back pill';
+  @override
+  String get video_setting_jump_pill_auto_hide_hint =>
+      'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+  @override
+  String get video_setting_jump_pill_auto_hide_never => 'Never';
+  @override
+  String video_setting_jump_pill_auto_hide_seconds({required Object seconds}) =>
+      '${seconds}s';
   @override
   String get video_setting_lock_window_aspect => '鎖定視窗為影片比例';
   @override
@@ -409410,6 +410982,8 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_downloads_empty => 'No downloads yet';
   @override
   String get web_browser_downloads_title => 'Downloads';
+  @override
+  String get web_browser_enter => 'Open browser';
   @override
   String get web_browser_error_certificate_body =>
       'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
@@ -413530,6 +415104,10 @@ extension on _StringsEn {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Mark all as unwatched';
+      case 'collection_mark_all_watched':
+        return 'Mark all as watched';
       case 'collection_member_removed':
         return 'Removed from collection';
       case 'collection_merge_title':
@@ -413581,6 +415159,12 @@ extension on _StringsEn {
         return 'Pick a work to rescrape';
       case 'collection_rescrape_started':
         return 'Rescrape queued';
+      case 'collection_select_all_in_season':
+        return 'Select all in season';
+      case 'collection_select_episodes':
+        return 'Select episodes';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} selected';
       case 'collection_sentence':
         return 'Sentence';
       case 'collection_sort_ai':
@@ -414411,6 +415995,10 @@ extension on _StringsEn {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -418195,10 +419783,25 @@ extension on _StringsEn {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -418231,6 +419834,8 @@ extension on _StringsEn {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -418258,6 +419863,9 @@ extension on _StringsEn {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -418837,10 +420445,10 @@ extension on _StringsEn {
         return 'Discover';
       case 'library_view_import':
         return 'Import';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Library';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Shelf';
       case 'library_view_sources':
@@ -421925,8 +423533,6 @@ extension on _StringsEn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -425236,6 +426842,14 @@ extension on _StringsEn {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -425443,6 +427057,16 @@ extension on _StringsEn {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -427094,6 +428718,8 @@ extension on _StringsEn {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Syncing dictionaries';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -427104,6 +428730,8 @@ extension on _StringsEn {
         return 'Preparing sync';
       case 'sync_progress_reading':
         return 'Syncing reading data';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -428516,6 +430144,24 @@ extension on _StringsEn {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Couldn\'t update the server for ${n} item(s). Local state was updated.';
+      case 'video_mark_unwatched':
+        return 'Mark as unwatched';
+      case 'video_mark_watched':
+        return 'Mark as watched';
+      case 'video_mark_watched_through':
+        return 'Mark this and earlier as watched';
+      case 'video_marked_unwatched':
+        return 'Marked as unwatched';
+      case 'video_marked_watched':
+        return 'Marked as watched';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -429191,6 +430837,14 @@ extension on _StringsEn {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Defaults to the video\'s own language (audio track / scraped metadata). Pick one to always prefer that language instead.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Lock window to video aspect';
       case 'video_setting_long_press_speed':
@@ -430696,6 +432350,8 @@ extension on _StringsEn {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -434771,6 +436427,10 @@ extension on _StringsAr {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'وضع علامة غير مُشاهَد على الكل';
+      case 'collection_mark_all_watched':
+        return 'وضع علامة مُشاهَد على الكل';
       case 'collection_member_removed':
         return 'تمت الإزالة من المجموعة';
       case 'collection_merge_title':
@@ -434822,6 +436482,12 @@ extension on _StringsAr {
         return 'اختر عملًا لإعادة استخراجه';
       case 'collection_rescrape_started':
         return 'تمت جدولة إعادة الاستخراج';
+      case 'collection_select_all_in_season':
+        return 'تحديد كل حلقات الموسم';
+      case 'collection_select_episodes':
+        return 'تحديد الحلقات';
+      case 'collection_selected_count':
+        return ({required Object n}) => 'تم تحديد ${n}';
       case 'collection_sentence':
         return 'جملة';
       case 'collection_sort_ai':
@@ -435652,6 +437318,10 @@ extension on _StringsAr {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -439431,10 +441101,25 @@ extension on _StringsAr {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -439467,6 +441152,8 @@ extension on _StringsAr {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -439494,6 +441181,9 @@ extension on _StringsAr {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -440072,10 +441762,10 @@ extension on _StringsAr {
         return 'اكتشاف';
       case 'library_view_import':
         return 'استيراد';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'المكتبة';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'الرف';
       case 'library_view_sources':
@@ -443161,8 +444851,6 @@ extension on _StringsAr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -446472,6 +448160,14 @@ extension on _StringsAr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -446679,6 +448375,16 @@ extension on _StringsAr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -448325,6 +450031,8 @@ extension on _StringsAr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'مزامنة القواميس';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -448335,6 +450043,8 @@ extension on _StringsAr {
         return 'جارٍ التحضير للمزامنة';
       case 'sync_progress_reading':
         return 'مزامنة بيانات القراءة';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -449749,6 +451459,24 @@ extension on _StringsAr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'تعذّر تحديث الخادم لـ ${n} عنصر. تم تحديث الحالة محليًا.';
+      case 'video_mark_unwatched':
+        return 'وضع علامة كغير مُشاهَد';
+      case 'video_mark_watched':
+        return 'وضع علامة كمُشاهَد';
+      case 'video_mark_watched_through':
+        return 'وضع علامة كمُشاهَد لهذه الحلقة وما قبلها';
+      case 'video_marked_unwatched':
+        return 'تم وضع علامة كغير مُشاهَد';
+      case 'video_marked_watched':
+        return 'تم وضع علامة كمُشاهَد';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -450424,6 +452152,14 @@ extension on _StringsAr {
         return 'لغة الترجمة الافتراضية';
       case 'video_setting_jimaku_default_language_hint':
         return 'يتبع لغة الفيديو افتراضياً (مسار الصوت / البيانات الوصفية المكشوطة). اختر لغة لتفضيلها دائماً بدلاً من ذلك.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'قفل النافذة على نسبة الفيديو';
       case 'video_setting_long_press_speed':
@@ -451930,6 +453666,8 @@ extension on _StringsAr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -456026,6 +457764,10 @@ extension on _StringsDe {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Alle als ungesehen markieren';
+      case 'collection_mark_all_watched':
+        return 'Alle als gesehen markieren';
       case 'collection_member_removed':
         return 'Aus Sammlung entfernt';
       case 'collection_merge_title':
@@ -456077,6 +457819,12 @@ extension on _StringsDe {
         return 'Werk zum erneuten Scrapen wählen';
       case 'collection_rescrape_started':
         return 'Erneutes Scrapen eingereiht';
+      case 'collection_select_all_in_season':
+        return 'Alle Folgen der Staffel auswählen';
+      case 'collection_select_episodes':
+        return 'Folgen auswählen';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} ausgewählt';
       case 'collection_sentence':
         return 'Satz';
       case 'collection_sort_ai':
@@ -456914,6 +458662,10 @@ extension on _StringsDe {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -460705,10 +462457,25 @@ extension on _StringsDe {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -460741,6 +462508,8 @@ extension on _StringsDe {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -460768,6 +462537,9 @@ extension on _StringsDe {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -461348,10 +463120,10 @@ extension on _StringsDe {
         return 'Entdecken';
       case 'library_view_import':
         return 'Importieren';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Bibliothek';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Regal';
       case 'library_view_sources':
@@ -464451,8 +466223,6 @@ extension on _StringsDe {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -467764,6 +469534,14 @@ extension on _StringsDe {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -467971,6 +469749,16 @@ extension on _StringsDe {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -469624,6 +471412,8 @@ extension on _StringsDe {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Wörterbücher werden synchronisiert';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -469634,6 +471424,8 @@ extension on _StringsDe {
         return 'Synchronisierung wird vorbereitet';
       case 'sync_progress_reading':
         return 'Lesedaten werden synchronisiert';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -471055,6 +472847,24 @@ extension on _StringsDe {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Der Server konnte für ${n} Element(e) nicht aktualisiert werden. Der lokale Status wurde aktualisiert.';
+      case 'video_mark_unwatched':
+        return 'Als ungesehen markieren';
+      case 'video_mark_watched':
+        return 'Als gesehen markieren';
+      case 'video_mark_watched_through':
+        return 'Diese und frühere als gesehen markieren';
+      case 'video_marked_unwatched':
+        return 'Als ungesehen markiert';
+      case 'video_marked_watched':
+        return 'Als gesehen markiert';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -471732,6 +473542,14 @@ extension on _StringsDe {
         return 'Standard-Untertitelsprache';
       case 'video_setting_jimaku_default_language_hint':
         return 'Standardmäßig wird die eigene Sprache des Videos verwendet (Audiospur / gescrapte Metadaten). Wählen Sie eine aus, um stattdessen immer diese Sprache zu bevorzugen.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Fenster auf Videoverhältnis sperren';
       case 'video_setting_long_press_speed':
@@ -473240,6 +475058,8 @@ extension on _StringsDe {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -477331,6 +479151,10 @@ extension on _StringsEs {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Marcar todo como no visto';
+      case 'collection_mark_all_watched':
+        return 'Marcar todo como visto';
       case 'collection_member_removed':
         return 'Eliminado de la colección';
       case 'collection_merge_title':
@@ -477382,6 +479206,12 @@ extension on _StringsEs {
         return 'Elige una obra para volver a extraer';
       case 'collection_rescrape_started':
         return 'Nueva extracción en cola';
+      case 'collection_select_all_in_season':
+        return 'Seleccionar toda la temporada';
+      case 'collection_select_episodes':
+        return 'Seleccionar episodios';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} seleccionados';
       case 'collection_sentence':
         return 'Oración';
       case 'collection_sort_ai':
@@ -478215,6 +480045,10 @@ extension on _StringsEs {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -482003,10 +483837,25 @@ extension on _StringsEs {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -482039,6 +483888,8 @@ extension on _StringsEs {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -482066,6 +483917,9 @@ extension on _StringsEs {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -482645,10 +484499,10 @@ extension on _StringsEs {
         return 'Descubrir';
       case 'library_view_import':
         return 'Importar';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Biblioteca';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Estante';
       case 'library_view_sources':
@@ -485745,8 +487599,6 @@ extension on _StringsEs {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -489060,6 +490912,14 @@ extension on _StringsEs {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -489267,6 +491127,16 @@ extension on _StringsEs {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -490919,6 +492789,8 @@ extension on _StringsEs {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando diccionarios';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -490929,6 +492801,8 @@ extension on _StringsEs {
         return 'Preparando sincronización';
       case 'sync_progress_reading':
         return 'Sincronizando datos de lectura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -492349,6 +494223,24 @@ extension on _StringsEs {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'No se pudo actualizar el servidor para ${n} elemento(s). El estado local sí se actualizó.';
+      case 'video_mark_unwatched':
+        return 'Marcar como no visto';
+      case 'video_mark_watched':
+        return 'Marcar como visto';
+      case 'video_mark_watched_through':
+        return 'Marcar este y los anteriores como vistos';
+      case 'video_marked_unwatched':
+        return 'Marcado como no visto';
+      case 'video_marked_watched':
+        return 'Marcado como visto';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -493025,6 +494917,14 @@ extension on _StringsEs {
         return 'Idioma de subtítulos predeterminado';
       case 'video_setting_jimaku_default_language_hint':
         return 'Por defecto usa el idioma propio del vídeo (pista de audio / metadatos obtenidos). Elija uno para siempre preferir ese idioma.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Bloquear la ventana a la proporción del vídeo';
       case 'video_setting_long_press_speed':
@@ -494532,6 +496432,8 @@ extension on _StringsEs {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -498628,6 +500530,10 @@ extension on _StringsFr {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Tout marquer comme non vu';
+      case 'collection_mark_all_watched':
+        return 'Tout marquer comme vu';
       case 'collection_member_removed':
         return 'Retiré de la collection';
       case 'collection_merge_title':
@@ -498679,6 +500585,12 @@ extension on _StringsFr {
         return 'Choisissez une œuvre à re-scraper';
       case 'collection_rescrape_started':
         return 'Nouveau scraping en file d\'attente';
+      case 'collection_select_all_in_season':
+        return 'Sélectionner toute la saison';
+      case 'collection_select_episodes':
+        return 'Sélectionner des épisodes';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} sélectionné(s)';
       case 'collection_sentence':
         return 'Phrase';
       case 'collection_sort_ai':
@@ -499517,6 +501429,10 @@ extension on _StringsFr {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -503310,10 +505226,25 @@ extension on _StringsFr {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -503346,6 +505277,8 @@ extension on _StringsFr {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -503373,6 +505306,9 @@ extension on _StringsFr {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -503952,10 +505888,10 @@ extension on _StringsFr {
         return 'Découvrir';
       case 'library_view_import':
         return 'Importer';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Bibliothèque';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Étagère';
       case 'library_view_sources':
@@ -507053,8 +508989,6 @@ extension on _StringsFr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -510367,6 +512301,14 @@ extension on _StringsFr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -510574,6 +512516,16 @@ extension on _StringsFr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -512225,6 +514177,8 @@ extension on _StringsFr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Synchronisation des dictionnaires';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -512235,6 +514189,8 @@ extension on _StringsFr {
         return 'Préparation de la synchronisation';
       case 'sync_progress_reading':
         return 'Synchronisation des données de lecture';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -513658,6 +515614,24 @@ extension on _StringsFr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Impossible de mettre à jour le serveur pour ${n} élément(s). L\'état local a bien été mis à jour.';
+      case 'video_mark_unwatched':
+        return 'Marquer comme non vu';
+      case 'video_mark_watched':
+        return 'Marquer comme vu';
+      case 'video_mark_watched_through':
+        return 'Marquer celui-ci et les précédents comme vus';
+      case 'video_marked_unwatched':
+        return 'Marqué comme non vu';
+      case 'video_marked_watched':
+        return 'Marqué comme vu';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -514335,6 +516309,14 @@ extension on _StringsFr {
         return 'Langue de sous-titres par défaut';
       case 'video_setting_jimaku_default_language_hint':
         return 'Par défaut la langue propre de la vidéo (piste audio / métadonnées récupérées). Choisissez-en une pour toujours préférer cette langue.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Verrouiller la fenêtre au format de la vidéo';
       case 'video_setting_long_press_speed':
@@ -515842,6 +517824,8 @@ extension on _StringsFr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -519924,6 +521908,10 @@ extension on _StringsId {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Tandai semua belum ditonton';
+      case 'collection_mark_all_watched':
+        return 'Tandai semua sudah ditonton';
       case 'collection_member_removed':
         return 'Dihapus dari koleksi';
       case 'collection_merge_title':
@@ -519975,6 +521963,12 @@ extension on _StringsId {
         return 'Pilih karya untuk di-scrape ulang';
       case 'collection_rescrape_started':
         return 'Scrape ulang diantrekan';
+      case 'collection_select_all_in_season':
+        return 'Pilih semua episode di musim ini';
+      case 'collection_select_episodes':
+        return 'Pilih episode';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} dipilih';
       case 'collection_sentence':
         return 'Kalimat';
       case 'collection_sort_ai':
@@ -520807,6 +522801,10 @@ extension on _StringsId {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -524592,10 +526590,25 @@ extension on _StringsId {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -524628,6 +526641,8 @@ extension on _StringsId {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -524655,6 +526670,9 @@ extension on _StringsId {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -525234,10 +527252,10 @@ extension on _StringsId {
         return 'Jelajahi';
       case 'library_view_import':
         return 'Impor';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Perpustakaan';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Rak';
       case 'library_view_sources':
@@ -528323,8 +530341,6 @@ extension on _StringsId {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -531634,6 +533650,14 @@ extension on _StringsId {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -531841,6 +533865,16 @@ extension on _StringsId {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -533492,6 +535526,8 @@ extension on _StringsId {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Menyinkronkan kamus';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -533502,6 +535538,8 @@ extension on _StringsId {
         return 'Menyiapkan sinkronisasi';
       case 'sync_progress_reading':
         return 'Menyinkronkan data baca';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -534915,6 +536953,24 @@ extension on _StringsId {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Gagal memperbarui server untuk ${n} item. Status lokal sudah diperbarui.';
+      case 'video_mark_unwatched':
+        return 'Tandai belum ditonton';
+      case 'video_mark_watched':
+        return 'Tandai sudah ditonton';
+      case 'video_mark_watched_through':
+        return 'Tandai ini dan sebelumnya sudah ditonton';
+      case 'video_marked_unwatched':
+        return 'Ditandai belum ditonton';
+      case 'video_marked_watched':
+        return 'Ditandai sudah ditonton';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -535590,6 +537646,14 @@ extension on _StringsId {
         return 'Bahasa subtitle default';
       case 'video_setting_jimaku_default_language_hint':
         return 'Default ke bahasa video itu sendiri (trek audio / metadata scrape). Pilih satu untuk selalu mengutamakan bahasa tersebut.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Kunci jendela ke rasio video';
       case 'video_setting_long_press_speed':
@@ -537096,6 +539160,8 @@ extension on _StringsId {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -541184,6 +543250,10 @@ extension on _StringsIt {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Segna tutto come non visto';
+      case 'collection_mark_all_watched':
+        return 'Segna tutto come visto';
       case 'collection_member_removed':
         return 'Rimosso dalla raccolta';
       case 'collection_merge_title':
@@ -541235,6 +543305,12 @@ extension on _StringsIt {
         return 'Scegli un\'opera di cui rifare lo scraping';
       case 'collection_rescrape_started':
         return 'Nuovo scraping in coda';
+      case 'collection_select_all_in_season':
+        return 'Seleziona tutta la stagione';
+      case 'collection_select_episodes':
+        return 'Seleziona episodi';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} selezionati';
       case 'collection_sentence':
         return 'Frase';
       case 'collection_sort_ai':
@@ -542070,6 +544146,10 @@ extension on _StringsIt {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -545858,10 +547938,25 @@ extension on _StringsIt {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -545894,6 +547989,8 @@ extension on _StringsIt {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -545921,6 +548018,9 @@ extension on _StringsIt {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -546500,10 +548600,10 @@ extension on _StringsIt {
         return 'Scopri';
       case 'library_view_import':
         return 'Importa';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Libreria';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Scaffale';
       case 'library_view_sources':
@@ -549597,8 +551697,6 @@ extension on _StringsIt {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -552910,6 +555008,14 @@ extension on _StringsIt {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -553117,6 +555223,16 @@ extension on _StringsIt {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -554769,6 +556885,8 @@ extension on _StringsIt {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizzazione dizionari';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -554779,6 +556897,8 @@ extension on _StringsIt {
         return 'Preparazione sincronizzazione';
       case 'sync_progress_reading':
         return 'Sincronizzazione dati di lettura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -556203,6 +558323,24 @@ extension on _StringsIt {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Impossibile aggiornare il server per ${n} elemento/i. Lo stato locale è stato aggiornato.';
+      case 'video_mark_unwatched':
+        return 'Segna come non visto';
+      case 'video_mark_watched':
+        return 'Segna come visto';
+      case 'video_mark_watched_through':
+        return 'Segna questo e i precedenti come visti';
+      case 'video_marked_unwatched':
+        return 'Segnato come non visto';
+      case 'video_marked_watched':
+        return 'Segnato come visto';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -556878,6 +559016,14 @@ extension on _StringsIt {
         return 'Lingua sottotitoli predefinita';
       case 'video_setting_jimaku_default_language_hint':
         return 'Predefinito sulla lingua propria del video (traccia audio / metadati ottenuti). Scegline una per preferire sempre quella lingua.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Blocca la finestra sulle proporzioni del video';
       case 'video_setting_long_press_speed':
@@ -558386,6 +560532,8 @@ extension on _StringsIt {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -562444,6 +564592,10 @@ extension on _StringsJa {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'すべて未視聴にする';
+      case 'collection_mark_all_watched':
+        return 'すべて視聴済みにする';
       case 'collection_member_removed':
         return 'コレクションから削除しました';
       case 'collection_merge_title':
@@ -562495,6 +564647,12 @@ extension on _StringsJa {
         return '再取得する作品を選択';
       case 'collection_rescrape_started':
         return '再取得をキューに追加しました';
+      case 'collection_select_all_in_season':
+        return 'シーズンをすべて選択';
+      case 'collection_select_episodes':
+        return 'エピソードを選択';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} 件選択中';
       case 'collection_sentence':
         return '文';
       case 'collection_sort_ai':
@@ -563323,6 +565481,10 @@ extension on _StringsJa {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -567092,10 +569254,25 @@ extension on _StringsJa {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -567128,6 +569305,8 @@ extension on _StringsJa {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -567155,6 +569334,9 @@ extension on _StringsJa {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -567731,10 +569913,10 @@ extension on _StringsJa {
         return '見つける';
       case 'library_view_import':
         return 'インポート';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'ライブラリ';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return '本棚';
       case 'library_view_sources':
@@ -570811,8 +572993,6 @@ extension on _StringsJa {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -574120,6 +576300,14 @@ extension on _StringsJa {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -574327,6 +576515,16 @@ extension on _StringsJa {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -575968,6 +578166,8 @@ extension on _StringsJa {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '辞書を同期中';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -575978,6 +578178,8 @@ extension on _StringsJa {
         return '同期を準備中';
       case 'sync_progress_reading':
         return '読書データを同期中';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -577379,6 +579581,24 @@ extension on _StringsJa {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            '${n} 件のサーバー更新に失敗しました。ローカルの状態は更新されています。';
+      case 'video_mark_unwatched':
+        return '未視聴にする';
+      case 'video_mark_watched':
+        return '視聴済みにする';
+      case 'video_mark_watched_through':
+        return 'この話とそれ以前を視聴済みにする';
+      case 'video_marked_unwatched':
+        return '未視聴にしました';
+      case 'video_marked_watched':
+        return '視聴済みにしました';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -578048,6 +580268,14 @@ extension on _StringsJa {
         return 'デフォルト字幕言語';
       case 'video_setting_jimaku_default_language_hint':
         return 'デフォルトでは動画自体の言語（音声トラック/スクレイプされたメタデータ）を使用します。特定の言語を選択すると、常にその言語が優先されます。';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'ウィンドウを動画の比率に固定';
       case 'video_setting_long_press_speed':
@@ -579544,6 +581772,8 @@ extension on _StringsJa {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -583599,6 +585829,10 @@ extension on _StringsKo {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return '모두 시청 안 함으로 표시';
+      case 'collection_mark_all_watched':
+        return '모두 시청함으로 표시';
       case 'collection_member_removed':
         return '컬렉션에서 제거됨';
       case 'collection_merge_title':
@@ -583650,6 +585884,12 @@ extension on _StringsKo {
         return '다시 스크레이핑할 작품 선택';
       case 'collection_rescrape_started':
         return '다시 스크레이핑을 대기열에 추가했습니다';
+      case 'collection_select_all_in_season':
+        return '시즌 전체 선택';
+      case 'collection_select_episodes':
+        return '회차 선택';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n}개 선택됨';
       case 'collection_sentence':
         return '문장';
       case 'collection_sort_ai':
@@ -584479,6 +586719,10 @@ extension on _StringsKo {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -588251,10 +590495,25 @@ extension on _StringsKo {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -588287,6 +590546,8 @@ extension on _StringsKo {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -588314,6 +590575,9 @@ extension on _StringsKo {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -588890,10 +591154,10 @@ extension on _StringsKo {
         return '발견';
       case 'library_view_import':
         return '가져오기';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return '라이브러리';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return '서재';
       case 'library_view_sources':
@@ -591969,8 +594233,6 @@ extension on _StringsKo {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -595279,6 +597541,14 @@ extension on _StringsKo {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -595486,6 +597756,16 @@ extension on _StringsKo {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -597128,6 +599408,8 @@ extension on _StringsKo {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '사전 동기화 중';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -597138,6 +599420,8 @@ extension on _StringsKo {
         return '동기화 준비 중';
       case 'sync_progress_reading':
         return '독서 데이터 동기화 중';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -598542,6 +600826,24 @@ extension on _StringsKo {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            '${n}개 항목의 서버 업데이트에 실패했습니다. 로컬 상태는 업데이트되었습니다.';
+      case 'video_mark_unwatched':
+        return '시청 안 함으로 표시';
+      case 'video_mark_watched':
+        return '시청함으로 표시';
+      case 'video_mark_watched_through':
+        return '이 회차와 이전 회차를 시청함으로 표시';
+      case 'video_marked_unwatched':
+        return '시청 안 함으로 표시했습니다';
+      case 'video_marked_watched':
+        return '시청함으로 표시했습니다';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -599213,6 +601515,14 @@ extension on _StringsKo {
         return '기본 자막 언어';
       case 'video_setting_jimaku_default_language_hint':
         return '기본적으로 동영상 자체 언어(오디오 트랙 / 스크랩된 메타데이터)를 사용합니다. 항상 특정 언어를 선호하려면 선택하세요.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return '창을 비디오 비율로 고정';
       case 'video_setting_long_press_speed':
@@ -600715,6 +603025,8 @@ extension on _StringsKo {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -604798,6 +607110,10 @@ extension on _StringsNl {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Alles markeren als niet gezien';
+      case 'collection_mark_all_watched':
+        return 'Alles markeren als gezien';
       case 'collection_member_removed':
         return 'Verwijderd uit collectie';
       case 'collection_merge_title':
@@ -604849,6 +607165,12 @@ extension on _StringsNl {
         return 'Kies een werk om opnieuw te scrapen';
       case 'collection_rescrape_started':
         return 'Opnieuw scrapen in wachtrij gezet';
+      case 'collection_select_all_in_season':
+        return 'Alle afleveringen van het seizoen selecteren';
+      case 'collection_select_episodes':
+        return 'Afleveringen selecteren';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} geselecteerd';
       case 'collection_sentence':
         return 'Zin';
       case 'collection_sort_ai':
@@ -605686,6 +608008,10 @@ extension on _StringsNl {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -609472,10 +611798,25 @@ extension on _StringsNl {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -609508,6 +611849,8 @@ extension on _StringsNl {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -609535,6 +611878,9 @@ extension on _StringsNl {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -610115,10 +612461,10 @@ extension on _StringsNl {
         return 'Ontdekken';
       case 'library_view_import':
         return 'Importeren';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Bibliotheek';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Plank';
       case 'library_view_sources':
@@ -613215,8 +615561,6 @@ extension on _StringsNl {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -616528,6 +618872,14 @@ extension on _StringsNl {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -616735,6 +619087,16 @@ extension on _StringsNl {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -618386,6 +620748,8 @@ extension on _StringsNl {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Woordenboeken synchroniseren';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -618396,6 +620760,8 @@ extension on _StringsNl {
         return 'Synchronisatie voorbereiden';
       case 'sync_progress_reading':
         return 'Leesgegevens synchroniseren';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -619812,6 +622178,24 @@ extension on _StringsNl {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'De server kon niet worden bijgewerkt voor ${n} item(s). De lokale status is wel bijgewerkt.';
+      case 'video_mark_unwatched':
+        return 'Markeren als niet gezien';
+      case 'video_mark_watched':
+        return 'Markeren als gezien';
+      case 'video_mark_watched_through':
+        return 'Deze en eerdere markeren als gezien';
+      case 'video_marked_unwatched':
+        return 'Gemarkeerd als niet gezien';
+      case 'video_marked_watched':
+        return 'Gemarkeerd als gezien';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -620489,6 +622873,14 @@ extension on _StringsNl {
         return 'Standaard ondertiteltaal';
       case 'video_setting_jimaku_default_language_hint':
         return 'Standaard de eigen taal van de video (audiotrack / gescrapete metadata). Kies er een om die taal altijd te prefereren.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Venster vergrendelen op videoverhouding';
       case 'video_setting_long_press_speed':
@@ -621997,6 +624389,8 @@ extension on _StringsNl {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -626085,6 +628479,10 @@ extension on _StringsPtBr {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Marcar tudo como não assistido';
+      case 'collection_mark_all_watched':
+        return 'Marcar tudo como assistido';
       case 'collection_member_removed':
         return 'Removido da coleção';
       case 'collection_merge_title':
@@ -626136,6 +628534,12 @@ extension on _StringsPtBr {
         return 'Escolha uma obra para raspar novamente';
       case 'collection_rescrape_started':
         return 'Nova raspagem na fila';
+      case 'collection_select_all_in_season':
+        return 'Selecionar toda a temporada';
+      case 'collection_select_episodes':
+        return 'Selecionar episódios';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} selecionado(s)';
       case 'collection_sentence':
         return 'Frase';
       case 'collection_sort_ai':
@@ -626970,6 +629374,10 @@ extension on _StringsPtBr {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -630755,10 +633163,25 @@ extension on _StringsPtBr {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -630791,6 +633214,8 @@ extension on _StringsPtBr {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -630818,6 +633243,9 @@ extension on _StringsPtBr {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -631397,10 +633825,10 @@ extension on _StringsPtBr {
         return 'Descobrir';
       case 'library_view_import':
         return 'Importar';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Biblioteca';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Estante';
       case 'library_view_sources':
@@ -634495,8 +636923,6 @@ extension on _StringsPtBr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -637808,6 +640234,14 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -638015,6 +640449,16 @@ extension on _StringsPtBr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -639665,6 +642109,8 @@ extension on _StringsPtBr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sincronizando dicionários';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -639675,6 +642121,8 @@ extension on _StringsPtBr {
         return 'Preparando sincronização';
       case 'sync_progress_reading':
         return 'Sincronizando dados de leitura';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -641091,6 +643539,24 @@ extension on _StringsPtBr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Não foi possível atualizar o servidor para ${n} item(ns). O estado local foi atualizado.';
+      case 'video_mark_unwatched':
+        return 'Marcar como não assistido';
+      case 'video_mark_watched':
+        return 'Marcar como assistido';
+      case 'video_mark_watched_through':
+        return 'Marcar este e os anteriores como assistidos';
+      case 'video_marked_unwatched':
+        return 'Marcado como não assistido';
+      case 'video_marked_watched':
+        return 'Marcado como assistido';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -641767,6 +644233,14 @@ extension on _StringsPtBr {
         return 'Idioma padrão de legenda';
       case 'video_setting_jimaku_default_language_hint':
         return 'Padrão é o idioma do próprio vídeo (faixa de áudio / metadados buscados). Escolha um para sempre preferir esse idioma.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Travar janela na proporção do vídeo';
       case 'video_setting_long_press_speed':
@@ -643274,6 +645748,8 @@ extension on _StringsPtBr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -647366,6 +649842,10 @@ extension on _StringsRu {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Отметить все как непросмотренные';
+      case 'collection_mark_all_watched':
+        return 'Отметить все как просмотренные';
       case 'collection_member_removed':
         return 'Удалено из коллекции';
       case 'collection_merge_title':
@@ -647417,6 +649897,12 @@ extension on _StringsRu {
         return 'Выберите произведение для обновления';
       case 'collection_rescrape_started':
         return 'Обновление поставлено в очередь';
+      case 'collection_select_all_in_season':
+        return 'Выбрать все серии сезона';
+      case 'collection_select_episodes':
+        return 'Выбрать серии';
+      case 'collection_selected_count':
+        return ({required Object n}) => 'Выбрано: ${n}';
       case 'collection_sentence':
         return 'Предложение';
       case 'collection_sort_ai':
@@ -648252,6 +650738,10 @@ extension on _StringsRu {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -652039,10 +654529,25 @@ extension on _StringsRu {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -652075,6 +654580,8 @@ extension on _StringsRu {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -652102,6 +654609,9 @@ extension on _StringsRu {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -652681,10 +655191,10 @@ extension on _StringsRu {
         return 'Обзор';
       case 'library_view_import':
         return 'Импорт';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Библиотека';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Полка';
       case 'library_view_sources':
@@ -655779,8 +658289,6 @@ extension on _StringsRu {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -659092,6 +661600,14 @@ extension on _StringsRu {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -659299,6 +661815,16 @@ extension on _StringsRu {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -660950,6 +663476,8 @@ extension on _StringsRu {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Синхронизация словарей';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -660960,6 +663488,8 @@ extension on _StringsRu {
         return 'Подготовка синхронизации';
       case 'sync_progress_reading':
         return 'Синхронизация данных чтения';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -662375,6 +664905,24 @@ extension on _StringsRu {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Не удалось обновить сервер для элементов: ${n}. Локальное состояние обновлено.';
+      case 'video_mark_unwatched':
+        return 'Отметить как непросмотренное';
+      case 'video_mark_watched':
+        return 'Отметить как просмотренное';
+      case 'video_mark_watched_through':
+        return 'Отметить эту и все предыдущие как просмотренные';
+      case 'video_marked_unwatched':
+        return 'Отмечено как непросмотренное';
+      case 'video_marked_watched':
+        return 'Отмечено как просмотренное';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -663050,6 +665598,14 @@ extension on _StringsRu {
         return 'Язык субтитров по умолчанию';
       case 'video_setting_jimaku_default_language_hint':
         return 'По умолчанию используется язык видео (аудиодорожка / метаданные скрейпинга). Выберите конкретный язык, чтобы всегда предпочитать его.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Окно по соотношению сторон видео';
       case 'video_setting_long_press_speed':
@@ -664556,6 +667112,8 @@ extension on _StringsRu {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -668630,6 +671188,10 @@ extension on _StringsTh {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'ทำเครื่องหมายว่ายังไม่ได้ดูทั้งหมด';
+      case 'collection_mark_all_watched':
+        return 'ทำเครื่องหมายว่าดูแล้วทั้งหมด';
       case 'collection_member_removed':
         return 'ลบออกจากคอลเลกชันแล้ว';
       case 'collection_merge_title':
@@ -668681,6 +671243,12 @@ extension on _StringsTh {
         return 'เลือกผลงานที่จะดึงข้อมูลใหม่';
       case 'collection_rescrape_started':
         return 'จัดคิวดึงข้อมูลใหม่แล้ว';
+      case 'collection_select_all_in_season':
+        return 'เลือกทุกตอนในซีซัน';
+      case 'collection_select_episodes':
+        return 'เลือกตอน';
+      case 'collection_selected_count':
+        return ({required Object n}) => 'เลือกแล้ว ${n}';
       case 'collection_sentence':
         return 'ประโยค';
       case 'collection_sort_ai':
@@ -669511,6 +672079,10 @@ extension on _StringsTh {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -673295,10 +675867,25 @@ extension on _StringsTh {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -673331,6 +675918,8 @@ extension on _StringsTh {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -673358,6 +675947,9 @@ extension on _StringsTh {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -673938,10 +676530,10 @@ extension on _StringsTh {
         return 'ค้นพบ';
       case 'library_view_import':
         return 'นำเข้า';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'คลัง';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'ชั้นหนังสือ';
       case 'library_view_sources':
@@ -677025,8 +679617,6 @@ extension on _StringsTh {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -680336,6 +682926,14 @@ extension on _StringsTh {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -680543,6 +683141,16 @@ extension on _StringsTh {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -682192,6 +684800,8 @@ extension on _StringsTh {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'กำลังซิงค์พจนานุกรม';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -682202,6 +684812,8 @@ extension on _StringsTh {
         return 'กำลังเตรียมซิงค์';
       case 'sync_progress_reading':
         return 'กำลังซิงค์ข้อมูลการอ่าน';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -683616,6 +686228,24 @@ extension on _StringsTh {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'อัปเดตเซิร์ฟเวอร์ไม่สำเร็จ ${n} รายการ แต่สถานะในเครื่องอัปเดตแล้ว';
+      case 'video_mark_unwatched':
+        return 'ทำเครื่องหมายว่ายังไม่ได้ดู';
+      case 'video_mark_watched':
+        return 'ทำเครื่องหมายว่าดูแล้ว';
+      case 'video_mark_watched_through':
+        return 'ทำเครื่องหมายว่าดูแล้วทั้งตอนนี้และตอนก่อนหน้า';
+      case 'video_marked_unwatched':
+        return 'ทำเครื่องหมายว่ายังไม่ได้ดูแล้ว';
+      case 'video_marked_watched':
+        return 'ทำเครื่องหมายว่าดูแล้ว';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -684289,6 +686919,14 @@ extension on _StringsTh {
         return 'ภาษาคำบรรยายเริ่มต้น';
       case 'video_setting_jimaku_default_language_hint':
         return 'ค่าเริ่มต้นจะใช้ภาษาของวิดีโอ (แทร็กเสียง / ข้อมูลที่สแกนได้) เลือกภาษาเพื่อให้ใช้ภาษานั้นเสมอแทน';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'ล็อกหน้าต่างตามอัตราส่วนวิดีโอ';
       case 'video_setting_long_press_speed':
@@ -685794,6 +688432,8 @@ extension on _StringsTh {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -689884,6 +692524,10 @@ extension on _StringsTr {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Tümünü izlenmedi olarak işaretle';
+      case 'collection_mark_all_watched':
+        return 'Tümünü izlendi olarak işaretle';
       case 'collection_member_removed':
         return 'Koleksiyondan kaldırıldı';
       case 'collection_merge_title':
@@ -689935,6 +692579,12 @@ extension on _StringsTr {
         return 'Yeniden kazınacak bir eser seçin';
       case 'collection_rescrape_started':
         return 'Yeniden kazıma sıraya alındı';
+      case 'collection_select_all_in_season':
+        return 'Sezondaki tüm bölümleri seç';
+      case 'collection_select_episodes':
+        return 'Bölüm seç';
+      case 'collection_selected_count':
+        return ({required Object n}) => '${n} seçildi';
       case 'collection_sentence':
         return 'Cümle';
       case 'collection_sort_ai':
@@ -690766,6 +693416,10 @@ extension on _StringsTr {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -694552,10 +697206,25 @@ extension on _StringsTr {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -694588,6 +697257,8 @@ extension on _StringsTr {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -694615,6 +697286,9 @@ extension on _StringsTr {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -695195,10 +697869,10 @@ extension on _StringsTr {
         return 'Keşfet';
       case 'library_view_import':
         return 'İçe aktar';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Kütüphane';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Raf';
       case 'library_view_sources':
@@ -698287,8 +700961,6 @@ extension on _StringsTr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -701598,6 +704270,14 @@ extension on _StringsTr {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -701805,6 +704485,16 @@ extension on _StringsTr {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -703454,6 +706144,8 @@ extension on _StringsTr {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Sözlükler eşitleniyor';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -703464,6 +706156,8 @@ extension on _StringsTr {
         return 'Senkronizasyon hazırlanıyor';
       case 'sync_progress_reading':
         return 'Okuma verileri eşitleniyor';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -704881,6 +707575,24 @@ extension on _StringsTr {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            '${n} öğe için sunucu güncellenemedi. Yerel durum güncellendi.';
+      case 'video_mark_unwatched':
+        return 'İzlenmedi olarak işaretle';
+      case 'video_mark_watched':
+        return 'İzlendi olarak işaretle';
+      case 'video_mark_watched_through':
+        return 'Bunu ve öncekileri izlendi olarak işaretle';
+      case 'video_marked_unwatched':
+        return 'İzlenmedi olarak işaretlendi';
+      case 'video_marked_watched':
+        return 'İzlendi olarak işaretlendi';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -705557,6 +708269,14 @@ extension on _StringsTr {
         return 'Varsayılan altyazı dili';
       case 'video_setting_jimaku_default_language_hint':
         return 'Varsayılan olarak videonun kendi dilini (ses parçası / taranan meta veriler) kullanır. Her zaman o dili tercih etmek için birini seçin.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Pencereyi video oranına kilitle';
       case 'video_setting_long_press_speed':
@@ -707063,6 +709783,8 @@ extension on _StringsTr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -711143,6 +713865,10 @@ extension on _StringsVi {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return 'Đánh dấu tất cả chưa xem';
+      case 'collection_mark_all_watched':
+        return 'Đánh dấu tất cả đã xem';
       case 'collection_member_removed':
         return 'Đã xóa khỏi bộ sưu tập';
       case 'collection_merge_title':
@@ -711194,6 +713920,12 @@ extension on _StringsVi {
         return 'Chọn một tác phẩm để quét lại';
       case 'collection_rescrape_started':
         return 'Đã xếp hàng quét lại';
+      case 'collection_select_all_in_season':
+        return 'Chọn tất cả tập trong mùa';
+      case 'collection_select_episodes':
+        return 'Chọn tập';
+      case 'collection_selected_count':
+        return ({required Object n}) => 'Đã chọn ${n}';
       case 'collection_sentence':
         return 'Câu';
       case 'collection_sort_ai':
@@ -712027,6 +714759,10 @@ extension on _StringsVi {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -715812,10 +718548,25 @@ extension on _StringsVi {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -715848,6 +718599,8 @@ extension on _StringsVi {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -715875,6 +718628,9 @@ extension on _StringsVi {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -716454,10 +719210,10 @@ extension on _StringsVi {
         return 'Khám phá';
       case 'library_view_import':
         return 'Nhập';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return 'Thư viện';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Kệ';
       case 'library_view_sources':
@@ -719542,8 +722298,6 @@ extension on _StringsVi {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -722855,6 +725609,14 @@ extension on _StringsVi {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -723062,6 +725824,16 @@ extension on _StringsVi {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -724712,6 +727484,8 @@ extension on _StringsVi {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return 'Đang đồng bộ từ điển';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -724722,6 +727496,8 @@ extension on _StringsVi {
         return 'Đang chuẩn bị đồng bộ';
       case 'sync_progress_reading':
         return 'Đang đồng bộ dữ liệu đọc';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -726137,6 +728913,24 @@ extension on _StringsVi {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) =>
+            'Không cập nhật được máy chủ cho ${n} mục. Trạng thái trên máy đã được cập nhật.';
+      case 'video_mark_unwatched':
+        return 'Đánh dấu chưa xem';
+      case 'video_mark_watched':
+        return 'Đánh dấu đã xem';
+      case 'video_mark_watched_through':
+        return 'Đánh dấu tập này và các tập trước là đã xem';
+      case 'video_marked_unwatched':
+        return 'Đã đánh dấu chưa xem';
+      case 'video_marked_watched':
+        return 'Đã đánh dấu đã xem';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -726811,6 +729605,14 @@ extension on _StringsVi {
         return 'Ngôn ngữ phụ đề mặc định';
       case 'video_setting_jimaku_default_language_hint':
         return 'Mặc định theo ngôn ngữ của video (bản âm thanh / siêu dữ liệu quét). Chọn một ngôn ngữ để luôn ưu tiên ngôn ngữ đó thay thế.';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return 'Khóa cửa sổ theo tỷ lệ video';
       case 'video_setting_long_press_speed':
@@ -728315,6 +731117,8 @@ extension on _StringsVi {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
@@ -732333,6 +735137,10 @@ extension on _StringsZhCn {
         return '搜索合集';
       case 'collection_manage_title':
         return '管理合集';
+      case 'collection_mark_all_unwatched':
+        return '全部标记为未看';
+      case 'collection_mark_all_watched':
+        return '全部标记为已看';
       case 'collection_member_removed':
         return '已移出合集';
       case 'collection_merge_title':
@@ -732383,6 +735191,12 @@ extension on _StringsZhCn {
         return '选择要重新刮削的作品';
       case 'collection_rescrape_started':
         return '已开始重新刮削';
+      case 'collection_select_all_in_season':
+        return '全选本季';
+      case 'collection_select_episodes':
+        return '选择集数';
+      case 'collection_selected_count':
+        return ({required Object n}) => '已选 ${n} 项';
       case 'collection_sentence':
         return '句子';
       case 'collection_sort_ai':
@@ -733206,6 +736020,10 @@ extension on _StringsZhCn {
         return 'API key（可选）';
       case 'discovery_audiobookshelf_download_forbidden':
         return '该 Audiobookshelf 账号没有下载权限，请让服务器管理员开启下载权限';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return '把 Audiobookshelf 上收听中的条目混排进首页「继续」。关闭后只在 Audiobookshelf 标签页查看。';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return '在首页「继续」中显示';
       case 'discovery_audiobookshelf_http_allow':
         return '允许明文 HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -736949,10 +739767,24 @@ extension on _StringsZhCn {
         return '已下载';
       case 'kavita_book_downloading':
         return ({required Object percent}) => '正在下载 ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) => '更新阅读状态失败：${reason}';
+      case 'kavita_book_mark_read':
+        return '标记为已读';
+      case 'kavita_book_mark_unread':
+        return '标记为未读';
+      case 'kavita_book_marked_read':
+        return '已标记为已读';
+      case 'kavita_book_marked_unread':
+        return '已标记为未读';
       case 'kavita_book_no_chapters':
         return '此书没有可阅读的文件';
       case 'kavita_book_open':
         return '阅读';
+      case 'kavita_book_progress_finished':
+        return '已读完';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '已读 ${percent}%';
       case 'kavita_book_remove_download':
         return '移除下载';
       case 'kavita_book_remove_download_confirm':
@@ -736985,6 +739817,8 @@ extension on _StringsZhCn {
         return '允许明文 HTTP';
       case 'kavita_http_allow_hint':
         return '仅用于局域网内的服务器';
+      case 'kavita_manga_mark_saved_locally':
+        return '已在本机标记。Kavita 未能更新，下次打开该章时同步';
       case 'kavita_name_hint':
         return '可选，默认使用主机名';
       case 'kavita_name_label':
@@ -737012,6 +739846,9 @@ extension on _StringsZhCn {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return '从你的 Kavita 服务器在线阅读漫画';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            '这本书的阅读进度不会与 Kavita 同步：服务器上有 ${server} 个章节，本机副本有 ${local} 个';
       case 'kavita_url_hint':
         return '例如 http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -737586,10 +740423,10 @@ extension on _StringsZhCn {
         return '发现';
       case 'library_view_import':
         return '导入';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return '媒体库';
+      case 'library_view_media_servers':
+        return '媒体服务器';
       case 'library_view_shelf':
         return '书架';
       case 'library_view_sources':
@@ -740644,8 +743481,6 @@ extension on _StringsZhCn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return '改用 Anki…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
       case 'onboarding_review_fushi_desc':
         return '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
       case 'onboarding_review_fushi_title':
@@ -743919,6 +746754,14 @@ extension on _StringsZhCn {
         return ({required Object n}) => '开关字段（${n}）';
       case 'srs_note_types_flag_fields_hint':
         return '填任意字符即开启对应的卡面样式';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => '词频排序：${name}';
+      case 'srs_note_types_freq_field':
+        return '词频序字段';
+      case 'srs_note_types_freq_field_auto':
+        return '自动（FreqSort）';
+      case 'srs_note_types_freq_field_hint':
+        return '牌组按词频出新卡时，读这个字段里的名次（越小越常见）。「自动」= 用名为 FreqSort 的字段。';
       case 'srs_note_types_front':
         return '正面模板';
       case 'srs_note_types_insert_field':
@@ -744124,6 +746967,16 @@ extension on _StringsZhCn {
         return '最大间隔（天）';
       case 'srs_settings_max_interval_hint':
         return '任何卡的下次复习都不会超过这么多天';
+      case 'srs_settings_new_order':
+        return '新卡顺序';
+      case 'srs_settings_new_order_frequency':
+        return '按词频';
+      case 'srs_settings_new_order_frequency_hint':
+        return '常用词先出：按制卡时存在卡上的词频名次（FreqSort）。名次随笔记同步，每台设备顺序一致。没有名次的卡排在后面，按位置。';
+      case 'srs_settings_new_order_position':
+        return '按位置';
+      case 'srs_settings_new_order_position_hint':
+        return '按「按词频重排新卡」或 Anki 导入写下的位置；没排过的卡按添加先后。';
       case 'srs_settings_new_per_day':
         return '每日新卡上限';
       case 'srs_settings_new_per_day_hint':
@@ -745760,6 +748613,8 @@ extension on _StringsZhCn {
         return '同步删除记录';
       case 'sync_progress_dictionaries':
         return '同步词典';
+      case 'sync_progress_finishing':
+        return '正在收尾';
       case 'sync_progress_fonts':
         return '同步字体';
       case 'sync_progress_local_audio':
@@ -745770,6 +748625,8 @@ extension on _StringsZhCn {
         return '正在准备同步';
       case 'sync_progress_reading':
         return '同步阅读数据';
+      case 'sync_progress_remote_listing':
+        return '正在读取远端文件清单';
       case 'sync_progress_statistics':
         return '同步统计与收藏';
       case 'sync_progress_videos':
@@ -747167,6 +750024,22 @@ extension on _StringsZhCn {
         return '循环当前句';
       case 'video_loop_cue_badge_tooltip':
         return '点击停止循环';
+      case 'video_mark_failed':
+        return '未能更新观看状态。';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) => '有 ${n} 项未能在服务器上标记。';
+      case 'video_mark_server_failed':
+        return ({required Object n}) => '有 ${n} 项未能同步到服务器，本地状态已更新。';
+      case 'video_mark_unwatched':
+        return '标记为未看';
+      case 'video_mark_watched':
+        return '标记为已看';
+      case 'video_mark_watched_through':
+        return '将此集及之前标记为已看';
+      case 'video_marked_unwatched':
+        return '已标记为未看';
+      case 'video_marked_watched':
+        return '已标记为已看';
       case 'video_media_server_launch_unavailable':
         return '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
       case 'video_menu_fullscreen':
@@ -747833,6 +750706,14 @@ extension on _StringsZhCn {
         return '默认字幕语言';
       case 'video_setting_jimaku_default_language_hint':
         return '默认跟随视频自身的语言（音轨 / 刮削元数据）。选定某个语言则始终优先它。';
+      case 'video_setting_jump_pill_auto_hide':
+        return '回跳胶囊自动隐藏';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return '跳转后过这么久就不再显示「返回跳转前位置」胶囊，下次跳转再出现';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return '不隐藏';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds} 秒';
       case 'video_setting_lock_window_aspect':
         return '锁定窗口为视频比例';
       case 'video_setting_long_press_speed':
@@ -749315,6 +752196,8 @@ extension on _StringsZhCn {
         return '还没有下载记录';
       case 'web_browser_downloads_title':
         return '下载';
+      case 'web_browser_enter':
+        return '进入浏览器';
       case 'web_browser_error_certificate_body':
         return '该网站的安全证书无效、已过期或与网址不符。';
       case 'web_browser_error_certificate_title':
@@ -753340,6 +756223,10 @@ extension on _StringsZhHk {
         return 'Search collections';
       case 'collection_manage_title':
         return 'Manage collections';
+      case 'collection_mark_all_unwatched':
+        return '全部標記為未看';
+      case 'collection_mark_all_watched':
+        return '全部標記為已看';
       case 'collection_member_removed':
         return '已移出合集';
       case 'collection_merge_title':
@@ -753390,6 +756277,12 @@ extension on _StringsZhHk {
         return '選擇要重新刮削的作品';
       case 'collection_rescrape_started':
         return '已開始重新刮削';
+      case 'collection_select_all_in_season':
+        return '全選本季';
+      case 'collection_select_episodes':
+        return '選擇集數';
+      case 'collection_selected_count':
+        return ({required Object n}) => '已選 ${n} 項';
       case 'collection_sentence':
         return '句子';
       case 'collection_sort_ai':
@@ -754216,6 +757109,10 @@ extension on _StringsZhHk {
         return 'API key (optional)';
       case 'discovery_audiobookshelf_download_forbidden':
         return 'This Audiobookshelf account has no download permission. Ask the server admin to allow downloads';
+      case 'discovery_audiobookshelf_home_continue_hint':
+        return 'Mix in-progress Audiobookshelf items into the Continue row on Home. Off: find them in the Audiobookshelf tab only.';
+      case 'discovery_audiobookshelf_home_continue_title':
+        return 'Show in Home Continue';
       case 'discovery_audiobookshelf_http_allow':
         return 'Allow plain HTTP';
       case 'discovery_audiobookshelf_http_allow_hint':
@@ -757975,10 +760872,25 @@ extension on _StringsZhHk {
         return 'Downloaded';
       case 'kavita_book_downloading':
         return ({required Object percent}) => 'Downloading ${percent}%';
+      case 'kavita_book_mark_failed':
+        return ({required Object reason}) =>
+            'Could not update read state: ${reason}';
+      case 'kavita_book_mark_read':
+        return 'Mark as read';
+      case 'kavita_book_mark_unread':
+        return 'Mark as unread';
+      case 'kavita_book_marked_read':
+        return 'Marked as read';
+      case 'kavita_book_marked_unread':
+        return 'Marked as unread';
       case 'kavita_book_no_chapters':
         return 'This book has no readable file';
       case 'kavita_book_open':
         return 'Read';
+      case 'kavita_book_progress_finished':
+        return 'Read';
+      case 'kavita_book_progress_percent':
+        return ({required Object percent}) => '${percent}% read';
       case 'kavita_book_remove_download':
         return 'Remove download';
       case 'kavita_book_remove_download_confirm':
@@ -758011,6 +760923,8 @@ extension on _StringsZhHk {
         return 'Allow plain HTTP';
       case 'kavita_http_allow_hint':
         return 'Only for servers on your local network';
+      case 'kavita_manga_mark_saved_locally':
+        return 'Marked on this device. Kavita couldn\'t be updated; it syncs the next time you open the chapter';
       case 'kavita_name_hint':
         return 'Optional, defaults to the host name';
       case 'kavita_name_label':
@@ -758038,6 +760952,9 @@ extension on _StringsZhHk {
         return 'Kavita';
       case 'kavita_source_subtitle':
         return 'Stream manga from your Kavita server';
+      case 'kavita_sync_section_mismatch':
+        return ({required Object server, required Object local}) =>
+            'Reading progress for this book isn\'t synced with Kavita: the server lists ${server} sections, this copy has ${local}';
       case 'kavita_url_hint':
         return 'For example http://192.168.1.10:5000';
       case 'kavita_url_http_optin_required':
@@ -758612,10 +761529,10 @@ extension on _StringsZhHk {
         return '發現';
       case 'library_view_import':
         return '導入';
-      case 'library_view_kavita':
-        return 'Kavita';
       case 'library_view_media':
         return '媒體庫';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return '書架';
       case 'library_view_sources':
@@ -761687,8 +764604,6 @@ extension on _StringsZhHk {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
-      case 'onboarding_review_fushi_auto_reposition_hint':
-        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -764994,6 +767909,14 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Switch fields (${n})';
       case 'srs_note_types_flag_fields_hint':
         return 'Put any character in one to turn that card style on';
+      case 'srs_note_types_freq_chip':
+        return ({required Object name}) => 'Frequency order: ${name}';
+      case 'srs_note_types_freq_field':
+        return 'Frequency rank field';
+      case 'srs_note_types_freq_field_auto':
+        return 'Auto (FreqSort)';
+      case 'srs_note_types_freq_field_hint':
+        return 'In decks ordered by frequency, new cards come out by the rank in this field (smaller = more common). Auto uses the field named FreqSort.';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -765201,6 +768124,16 @@ extension on _StringsZhHk {
         return 'Maximum interval (days)';
       case 'srs_settings_max_interval_hint':
         return 'No card is scheduled further out than this';
+      case 'srs_settings_new_order':
+        return 'New card order';
+      case 'srs_settings_new_order_frequency':
+        return 'By frequency';
+      case 'srs_settings_new_order_frequency_hint':
+        return 'Common words first, by the frequency rank saved on each card when it was mined (FreqSort). The rank syncs with the note, so every device shows the same order. Cards without a rank come after, by position.';
+      case 'srs_settings_new_order_position':
+        return 'By position';
+      case 'srs_settings_new_order_position_hint':
+        return 'By the position set with “Reorder new cards by frequency” or by an Anki import; cards never positioned come in the order they were added.';
       case 'srs_settings_new_per_day':
         return 'New cards per day';
       case 'srs_settings_new_per_day_hint':
@@ -766840,6 +769773,8 @@ extension on _StringsZhHk {
         return 'Syncing deletions';
       case 'sync_progress_dictionaries':
         return '正在同步詞典';
+      case 'sync_progress_finishing':
+        return 'Finishing up';
       case 'sync_progress_fonts':
         return 'Syncing fonts';
       case 'sync_progress_local_audio':
@@ -766850,6 +769785,8 @@ extension on _StringsZhHk {
         return '正在準備同步';
       case 'sync_progress_reading':
         return '正在同步閱讀資料';
+      case 'sync_progress_remote_listing':
+        return 'Reading the remote file list';
       case 'sync_progress_statistics':
         return 'Syncing statistics and favorites';
       case 'sync_progress_videos':
@@ -768247,6 +771184,23 @@ extension on _StringsZhHk {
         return 'Looping line';
       case 'video_loop_cue_badge_tooltip':
         return 'Click to stop looping';
+      case 'video_mark_failed':
+        return 'Couldn\'t update the watched state.';
+      case 'video_mark_remote_failed':
+        return ({required Object n}) =>
+            'Couldn\'t mark ${n} item(s) on the server.';
+      case 'video_mark_server_failed':
+        return ({required Object n}) => '有 ${n} 項未能同步到伺服器，本機狀態已更新。';
+      case 'video_mark_unwatched':
+        return '標記為未看';
+      case 'video_mark_watched':
+        return '標記為已看';
+      case 'video_mark_watched_through':
+        return '將此集及之前標記為已看';
+      case 'video_marked_unwatched':
+        return '已標記為未看';
+      case 'video_marked_watched':
+        return '已標記為已看';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -768914,6 +771868,14 @@ extension on _StringsZhHk {
         return '預設字幕語言';
       case 'video_setting_jimaku_default_language_hint':
         return '預設跟隨影片自身的語言（音軌 / 刮削元數據）。選定某個語言則始終優先它。';
+      case 'video_setting_jump_pill_auto_hide':
+        return 'Auto-hide jump-back pill';
+      case 'video_setting_jump_pill_auto_hide_hint':
+        return 'After a seek, hide the "back to previous position" pill after this long; it reappears on the next jump';
+      case 'video_setting_jump_pill_auto_hide_never':
+        return 'Never';
+      case 'video_setting_jump_pill_auto_hide_seconds':
+        return ({required Object seconds}) => '${seconds}s';
       case 'video_setting_lock_window_aspect':
         return '鎖定視窗為影片比例';
       case 'video_setting_long_press_speed':
@@ -770401,6 +773363,8 @@ extension on _StringsZhHk {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_enter':
+        return 'Open browser';
       case 'web_browser_error_certificate_body':
         return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
       case 'web_browser_error_certificate_title':
