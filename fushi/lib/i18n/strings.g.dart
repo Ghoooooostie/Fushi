@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 176239 (10367 per locale)
+/// Strings: 176290 (10370 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7379,6 +7379,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_source_alist_url => 'Site URL';
   String media_source_count_book({required Object n}) => '${n} books';
   String media_source_count_manga({required Object n}) => '${n} volumes';
+  String media_source_count_music({required Object n}) => '${n} tracks';
   String media_source_count_video({required Object n}) => '${n} videos';
   String get media_source_folder_access_missing =>
       'This folder\'s access permission was not saved. Add the same folder again to restore access.';
@@ -7956,6 +7957,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_mv_unbind => 'Remove';
   String get music_now_playing => 'Now playing';
   String get music_open_library => 'Music library';
+  String get music_open_library_hint => 'Go to the music page';
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   String get music_output_fallback_exclusive =>
@@ -8191,6 +8193,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String music_sleep_minutes({required Object n}) => '${n} min';
   String get music_sleep_off => 'Off';
   String get music_sleep_title => 'Sleep timer';
+  String get music_sources_manage => 'Manage music folders';
   String get music_speed_title => 'Speed (pitch preserved)';
   String get music_stop => 'Stop music';
   String get music_tag_field_album => 'Album';
@@ -27096,6 +27099,8 @@ class _StringsAr extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} مجلد';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} فيديوهات';
   @override
   String get media_source_folder_access_missing =>
@@ -28078,6 +28083,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -28495,6 +28502,8 @@ class _StringsAr extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -52446,6 +52455,8 @@ class _StringsDe extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} Bände';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} Videos';
   @override
   String get media_source_folder_access_missing =>
@@ -53441,6 +53452,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -53858,6 +53871,8 @@ class _StringsDe extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -77987,6 +78002,8 @@ class _StringsEs extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} volúmenes';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} vídeos';
   @override
   String get media_source_folder_access_missing =>
@@ -78979,6 +78996,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -79396,6 +79415,8 @@ class _StringsEs extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -103600,6 +103621,8 @@ class _StringsFr extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} tomes';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} vidéos';
   @override
   String get media_source_folder_access_missing =>
@@ -104596,6 +104619,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -105013,6 +105038,8 @@ class _StringsFr extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -129062,6 +129089,8 @@ class _StringsId extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} volume';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} video';
   @override
   String get media_source_folder_access_missing =>
@@ -130049,6 +130078,8 @@ class _StringsId extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -130466,6 +130497,8 @@ class _StringsId extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -154459,6 +154492,8 @@ class _StringsIt extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} volumi';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} video';
   @override
   String get media_source_folder_access_missing =>
@@ -155453,6 +155488,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -155870,6 +155907,8 @@ class _StringsIt extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -179382,6 +179421,8 @@ class _StringsJa extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n}巻';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n}本の動画';
   @override
   String get media_source_folder_access_missing =>
@@ -180337,6 +180378,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -180754,6 +180797,8 @@ class _StringsJa extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -203834,6 +203879,8 @@ class _StringsKo extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n}권';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '동영상 ${n}개';
   @override
   String get media_source_folder_access_missing =>
@@ -204791,6 +204838,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -205208,6 +205257,8 @@ class _StringsKo extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -228827,6 +228878,8 @@ class _StringsNl extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} delen';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} video\'s';
   @override
   String get media_source_folder_access_missing =>
@@ -229817,6 +229870,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -230234,6 +230289,8 @@ class _StringsNl extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -254293,6 +254350,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} vídeos';
   @override
   String get media_source_folder_access_missing =>
@@ -255285,6 +255344,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -255702,6 +255763,8 @@ class _StringsPtBr extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -279734,6 +279797,8 @@ class _StringsRu extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} томов';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} видео';
   @override
   String get media_source_folder_access_missing =>
@@ -280727,6 +280792,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -281144,6 +281211,8 @@ class _StringsRu extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -304994,6 +305063,8 @@ class _StringsTh extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} เล่ม';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} วิดีโอ';
   @override
   String get media_source_folder_access_missing =>
@@ -305979,6 +306050,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -306396,6 +306469,8 @@ class _StringsTh extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -330229,6 +330304,8 @@ class _StringsTr extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} cilt';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} video';
   @override
   String get media_source_folder_access_missing =>
@@ -331219,6 +331296,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -331636,6 +331715,8 @@ class _StringsTr extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -355507,6 +355588,8 @@ class _StringsVi extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} tập';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} video';
   @override
   String get media_source_folder_access_missing =>
@@ -356492,6 +356575,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -356909,6 +356994,8 @@ class _StringsVi extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -379713,6 +379800,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} 卷';
   @override
+  String media_source_count_music({required Object n}) => '${n} 首曲目';
+  @override
   String media_source_count_video({required Object n}) => '${n} 个视频';
   @override
   String get media_source_folder_access_missing =>
@@ -380612,6 +380701,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_open_library => '曲库';
   @override
+  String get music_open_library_hint => '前往音乐页';
+  @override
   String get music_output_fallback_device => '所选输出设备不可用，已改用系统默认设备';
   @override
   String get music_output_fallback_exclusive => '独占输出不可用，已退回共享模式';
@@ -381003,6 +381094,8 @@ class _StringsZhCn extends _StringsEn {
   String get music_sleep_off => '关闭';
   @override
   String get music_sleep_title => '睡眠定时';
+  @override
+  String get music_sources_manage => '管理音乐文件夹';
   @override
   String get music_speed_title => '速度（不变调）';
   @override
@@ -403076,6 +403169,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String media_source_count_manga({required Object n}) => '${n} 卷';
   @override
+  String media_source_count_music({required Object n}) => '${n} tracks';
+  @override
   String media_source_count_video({required Object n}) => '${n} 個影片';
   @override
   String get media_source_folder_access_missing =>
@@ -404005,6 +404100,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_open_library => 'Music library';
   @override
+  String get music_open_library_hint => 'Go to the music page';
+  @override
   String get music_output_fallback_device =>
       'The selected output device is unavailable, using the system default';
   @override
@@ -404422,6 +404519,8 @@ class _StringsZhHk extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sources_manage => 'Manage music folders';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -425786,6 +425885,8 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} books';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} videos';
       case 'media_source_folder_access_missing':
@@ -426650,6 +426751,8 @@ extension on _StringsEn {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -427025,6 +427128,8 @@ extension on _StringsEn {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -447323,6 +447428,8 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} كتب';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} مجلد';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} فيديوهات';
       case 'media_source_folder_access_missing':
@@ -448187,6 +448294,8 @@ extension on _StringsAr {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -448562,6 +448671,8 @@ extension on _StringsAr {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -468907,6 +469018,8 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} Bücher';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} Bände';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} Videos';
       case 'media_source_folder_access_missing':
@@ -469775,6 +469888,8 @@ extension on _StringsDe {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -470150,6 +470265,8 @@ extension on _StringsDe {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -490505,6 +490622,8 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} libros';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volúmenes';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} vídeos';
       case 'media_source_folder_access_missing':
@@ -491373,6 +491492,8 @@ extension on _StringsEs {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -491748,6 +491869,8 @@ extension on _StringsEs {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -512113,6 +512236,8 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} livres';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} tomes';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} vidéos';
       case 'media_source_folder_access_missing':
@@ -512981,6 +513106,8 @@ extension on _StringsFr {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -513356,6 +513483,8 @@ extension on _StringsFr {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -533694,6 +533823,8 @@ extension on _StringsId {
         return ({required Object n}) => '${n} buku';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volume';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video';
       case 'media_source_folder_access_missing':
@@ -534558,6 +534689,8 @@ extension on _StringsId {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -534933,6 +535066,8 @@ extension on _StringsId {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -555264,6 +555399,8 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} libri';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumi';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video';
       case 'media_source_folder_access_missing':
@@ -556132,6 +556269,8 @@ extension on _StringsIt {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -556507,6 +556646,8 @@ extension on _StringsIt {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -576792,6 +576933,8 @@ extension on _StringsJa {
         return ({required Object n}) => '${n}冊';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n}巻';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n}本の動画';
       case 'media_source_folder_access_missing':
@@ -577654,6 +577797,8 @@ extension on _StringsJa {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -578029,6 +578174,8 @@ extension on _StringsJa {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -598252,6 +598399,8 @@ extension on _StringsKo {
         return ({required Object n}) => '도서 ${n}권';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n}권';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '동영상 ${n}개';
       case 'media_source_folder_access_missing':
@@ -599113,6 +599262,8 @@ extension on _StringsKo {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -599488,6 +599639,8 @@ extension on _StringsKo {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -619788,6 +619941,8 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} boeken';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} delen';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video\'s';
       case 'media_source_folder_access_missing':
@@ -620656,6 +620811,8 @@ extension on _StringsNl {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -621031,6 +621188,8 @@ extension on _StringsNl {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -641370,6 +641529,8 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} livros';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} vídeos';
       case 'media_source_folder_access_missing':
@@ -642238,6 +642399,8 @@ extension on _StringsPtBr {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -642613,6 +642776,8 @@ extension on _StringsPtBr {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -662956,6 +663121,8 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} книг';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} томов';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} видео';
       case 'media_source_folder_access_missing':
@@ -663824,6 +663991,8 @@ extension on _StringsRu {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -664199,6 +664368,8 @@ extension on _StringsRu {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -684511,6 +684682,8 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} เล่ม';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} เล่ม';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} วิดีโอ';
       case 'media_source_folder_access_missing':
@@ -685375,6 +685548,8 @@ extension on _StringsTh {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -685750,6 +685925,8 @@ extension on _StringsTh {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -706072,6 +706249,8 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} kitap';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} cilt';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video';
       case 'media_source_folder_access_missing':
@@ -706939,6 +707118,8 @@ extension on _StringsTr {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -707314,6 +707495,8 @@ extension on _StringsTr {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -727631,6 +727814,8 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} sách';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} tập';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video';
       case 'media_source_folder_access_missing':
@@ -728495,6 +728680,8 @@ extension on _StringsVi {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -728870,6 +729057,8 @@ extension on _StringsVi {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -749055,6 +749244,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 本书';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} 卷';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} 首曲目';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} 个视频';
       case 'media_source_folder_access_missing':
@@ -749904,6 +750095,8 @@ extension on _StringsZhCn {
         return '正在播放';
       case 'music_open_library':
         return '曲库';
+      case 'music_open_library_hint':
+        return '前往音乐页';
       case 'music_output_fallback_device':
         return '所选输出设备不可用，已改用系统默认设备';
       case 'music_output_fallback_exclusive':
@@ -750272,6 +750465,8 @@ extension on _StringsZhCn {
         return '关闭';
       case 'music_sleep_title':
         return '睡眠定时';
+      case 'music_sources_manage':
+        return '管理音乐文件夹';
       case 'music_speed_title':
         return '速度（不变调）';
       case 'music_stop':
@@ -770380,6 +770575,8 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 本書';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} 卷';
+      case 'media_source_count_music':
+        return ({required Object n}) => '${n} tracks';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} 個影片';
       case 'media_source_folder_access_missing':
@@ -771239,6 +771436,8 @@ extension on _StringsZhHk {
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_open_library_hint':
+        return 'Go to the music page';
       case 'music_output_fallback_device':
         return 'The selected output device is unavailable, using the system default';
       case 'music_output_fallback_exclusive':
@@ -771614,6 +771813,8 @@ extension on _StringsZhHk {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sources_manage':
+        return 'Manage music folders';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
