@@ -25,23 +25,36 @@ void main() {
     // 合并语料保持原顺序，剥离范围与原单文件等价。
     final String source = _withoutVideoSideActionRail(readVideoFushiSource());
 
-    expect(source, contains('_subtitleTextColor(ColorScheme'));
+    // #2312：字幕文字色画在视频画面上，不跟随 App 主题（旧数据 null 解析为固定白），
+    // 页面不得再从 ColorScheme 给它喂回退色。
+    expect(source, isNot(contains('_subtitleTextColor(')));
     expect(source, contains('_videoChromeColorScheme'));
     // UI 巡检 PR-4：标题前景改 chrome 固定近白（不随 colorScheme），签名去 cs 参。
     expect(source, contains('TextStyle _videoControlTitleStyle()'));
     expect(source, contains('_osdSurfaceColor(ColorScheme'));
     expect(source, contains('_osdTextColor(ColorScheme'));
-    expect(source, contains('_subtitleStyle.resolveTextColor('));
-    expect(source, contains('_subtitleStyle.resolveShadowColor('));
-    expect(source, contains('_subtitleStyle.resolveBackgroundColor('));
+    // 链式调用允许 formatter 在 receiver 与方法名之间断行；仍锁同一 receiver/method。
+    for (final String method in <String>[
+      'resolveTextColor',
+      'resolveShadowColor',
+      'resolveBackgroundColor',
+      'resolveFontWeight',
+      'resolveShadowThickness',
+    ]) {
+      expect(
+        RegExp('_subtitleStyle\\s*\\.\\s*$method\\s*\\(').hasMatch(source),
+        isTrue,
+        reason: '字幕样式必须经 _subtitleStyle.$method 解析，不能绕过主题/缩放',
+      );
+    }
     expect(source, contains('double get _videoUiScale => appModel.appUiScale'));
-    expect(source, contains('_subtitleStyle.resolveFontWeight('));
-    expect(source, contains('_subtitleStyle.resolveShadowThickness('));
     expect(source, contains('uiScale: _videoUiScale'));
     expect(source, isNot(contains('FushiAppUiScale.of(context)')));
     expect(source, isNot(contains('fontWeight: _subtitleStyle.fontWeight')));
-    expect(source,
-        isNot(contains('shadowThickness: _subtitleStyle.shadowThickness')));
+    expect(
+      source,
+      isNot(contains('shadowThickness: _subtitleStyle.shadowThickness')),
+    );
     expect(source, isNot(contains('color: Colors.white')));
     expect(source, isNot(contains('color: Colors.black.withValues')));
   });
@@ -52,7 +65,12 @@ void main() {
     final String source = readVideoFushiSource();
 
     // 播放器画面外围（letterbox/pillarbox）按播放器惯例固定纯黑，不跟随主题 surface。
-    expect(source, contains('fill: Colors.black,'));
+    // 唯一例外是网页档（底层合成）：站点画面在 Flutter 下面，Video 必须透明才透得出来，
+    // 黑边由页面里的 <video> 自己垫（web_video_glue.js 的 video-only 样式）。
+    expect(
+      source,
+      contains('fill: _webMode ? Colors.transparent : Colors.black,'),
+    );
     expect(
       source,
       isNot(contains('fill: Theme.of(context).colorScheme.surface')),

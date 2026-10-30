@@ -1,14 +1,17 @@
 import 'dart:io';
 
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:fushi/src/media/video/video_player_controller.dart';
 import 'package:fushi/src/media/video/video_subtitle_jump_panel.dart';
+import 'package:fushi/src/shortcuts/platform_modifier_state.dart';
 import 'package:fushi/utils.dart';
 import 'package:fushi_audio/fushi_audio.dart';
+import '../../helpers/glass_unwrap.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 
 AudioCue _cue(int i, int s, int e, String text) => AudioCue()
   ..bookKey = 'video/1'
@@ -154,7 +157,7 @@ List<AudioCue> _manyCues(int count) => List<AudioCue>.generate(count, (int i) {
 String _repoEvidencePath(String relativePath) {
   final Directory current = Directory.current;
   final Directory root =
-      current.path.endsWith('${Platform.pathSeparator}hibiki')
+      current.path.endsWith('${Platform.pathSeparator}fushi')
           ? current.parent
           : current;
   return '${root.path}${Platform.pathSeparator}$relativePath';
@@ -196,6 +199,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -225,6 +229,7 @@ void main() {
       AudioCue? tapped;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (AudioCue cue) => tapped = cue,
         onClose: () {},
@@ -257,6 +262,7 @@ void main() {
       AudioCue? tapped;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (AudioCue cue) => tapped = cue,
         onClose: () {},
@@ -287,6 +293,80 @@ void main() {
       expect(tapped!.startMs, 4000);
     });
 
+    testWidgets(
+        'xlzGuK5YmD: opens on the remembered tab and reports tab switches',
+        (WidgetTester tester) async {
+      final VideoPlayerController controller = VideoPlayerController();
+      addTearDown(controller.dispose);
+      controller.setCues(<AudioCue>[
+        _cue(0, 0, 1000, 'alpha line'),
+        _cue(1, 2000, 3000, 'beta favorite'),
+      ]);
+      final List<VideoSubtitleListFilter> reported =
+          <VideoSubtitleListFilter>[];
+      Widget panel(VideoSubtitleListFilter initial) => _wrap(
+            VideoSubtitleJumpPanel(
+              key: ValueKey<VideoSubtitleListFilter>(initial),
+              layout: VideoSubtitleListLayout.classic,
+              controller: controller,
+              onTapCue: (_) {},
+              onClose: () {},
+              onCopyCue: (_) => true,
+              onFavoriteCue: (_) async {},
+              isCueFavorited: (AudioCue cue) => cue.text.contains('favorite'),
+              colorScheme: const ColorScheme.dark(),
+              title: 'Subtitle list',
+              emptyHint: 'empty',
+              width: 520,
+              initialFilter: initial,
+              onFilterChanged: reported.add,
+            ),
+          );
+
+      // 上次停在「收藏」：重开直接是收藏页签，不必先进「全部」再切。
+      await tester.pumpWidget(panel(VideoSubtitleListFilter.favorites));
+      await tester.pumpAndSettle();
+      expect(find.text('beta favorite'), findsOneWidget);
+      expect(find.text('alpha line'), findsNothing);
+      expect(reported, isEmpty, reason: '恢复初值不是一次用户切换');
+
+      await tester.tap(find.text(t.video_subtitle_filter_all));
+      await tester.pumpAndSettle();
+      expect(find.text('alpha line'), findsOneWidget);
+      expect(reported, <VideoSubtitleListFilter>[VideoSubtitleListFilter.all]);
+
+      // 上次停在「全部」：即使有收藏也开「全部」（不按「有收藏就开收藏」硬判）。
+      await tester.pumpWidget(panel(VideoSubtitleListFilter.all));
+      await tester.pumpAndSettle();
+      expect(find.text('alpha line'), findsOneWidget);
+      expect(find.text('beta favorite'), findsOneWidget);
+    });
+
+    test('xlzGuK5YmD: persisted tab name round-trips, unknown falls back to all',
+        () {
+      for (final VideoSubtitleListFilter f in VideoSubtitleListFilter.values) {
+        expect(videoSubtitleListFilterFromName(f.name), f);
+      }
+      expect(videoSubtitleListFilterFromName(null), VideoSubtitleListFilter.all);
+      expect(
+        videoSubtitleListFilterFromName('bogus'),
+        VideoSubtitleListFilter.all,
+      );
+      for (final String page in <String>[
+        'lib/src/pages/implementations/video_fushi/subtitle.part.dart',
+        'lib/src/pages/implementations/web_video_fushi_page.dart',
+      ]) {
+        final String src = File(page).readAsStringSync();
+        expect(src, contains('initialFilter: videoSubtitleListFilterFromName('),
+            reason: '$page 必须用记住的页签打开列表');
+        expect(src, contains('.setVideoSubtitleListFilter('),
+            reason: '$page 必须把页签切换落盘');
+      }
+      // 持久化值冻结：改枚举名会让老用户的记忆失效。
+      expect(VideoSubtitleListFilter.favorites.name, 'favorites');
+      expect(VideoSubtitleListFilter.all.name, 'all');
+    });
+
     testWidgets('row has no card-selection checkbox', (
       WidgetTester tester,
     ) async {
@@ -298,6 +378,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -324,6 +405,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -363,6 +445,7 @@ void main() {
       controller.setCues(const <AudioCue>[]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -393,6 +476,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -426,6 +510,7 @@ void main() {
       controller.setCues(const <AudioCue>[]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -451,6 +536,7 @@ void main() {
       controller.debugSetSubtitleCuesLoadingForTesting(true);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -463,7 +549,7 @@ void main() {
         loadingHint: 'Loading subtitles...',
       )));
 
-      expect(find.byType(CircularProgressIndicator), findsOneWidget);
+      expect(find.byType(FushiCircularProgressIndicator), findsOneWidget);
       expect(find.text('Loading subtitles...'), findsOneWidget);
       expect(find.text('No subtitles loaded'), findsNothing);
 
@@ -480,6 +566,7 @@ void main() {
       int closes = 0;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () => closes++,
@@ -493,8 +580,8 @@ void main() {
 
       // TODO-637: the X is back (BUG-256 tap-outside barrier removed because it
       // ate the picture-subtitle lookup gesture, TODO-636). Tapping it closes.
-      expect(find.byIcon(Icons.close), findsOneWidget);
-      await tester.tap(find.byIcon(Icons.close));
+      expect(find.byIcon(FushiIcons.close), findsOneWidget);
+      await tester.tap(find.byIcon(FushiIcons.close));
       await tester.pump();
       expect(closes, 1, reason: 'tapping the X must invoke onClose (TODO-637)');
     });
@@ -512,6 +599,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (_) => true,
@@ -526,9 +614,9 @@ void main() {
       // STILL be present on every row (regression guard: revert to the old
       // `showActions = hovered || selected || selectedForCard` gate -> these
       // would be findsNothing -> red).
-      expect(find.byIcon(Icons.play_arrow), findsNWidgets(2));
-      expect(find.byIcon(Icons.content_copy_outlined), findsNWidgets(2));
-      expect(find.byIcon(Icons.star_border), findsNWidgets(2));
+      expect(find.byIcon(FushiIcons.play), findsNWidgets(2));
+      expect(find.byIcon(FushiIcons.copy), findsNWidgets(2));
+      expect(find.byIcon(FushiIcons.star), findsNWidgets(2));
     });
 
     testWidgets('inline copy button fires onCopyCue with the row cue', (
@@ -540,6 +628,7 @@ void main() {
       AudioCue? copied;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (AudioCue c) {
@@ -556,7 +645,7 @@ void main() {
       controller.debugUpdateCueForPosition(500);
       await tester.pump();
 
-      await tester.tap(find.byIcon(Icons.content_copy_outlined));
+      await tester.tap(find.byIcon(FushiIcons.copy));
       await tester.pump();
       expect(copied, isNotNull);
       expect(copied!.text, 'copy me');
@@ -575,6 +664,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         // 与两个真实实现（`_copyCueText` / 网页页 `_copyCue`）同契约：空句返回 false。
@@ -588,24 +678,24 @@ void main() {
       )));
       controller.debugUpdateCueForPosition(500);
       await tester.pump();
-      expect(find.byIcon(Icons.check), findsNothing);
+      expect(find.byIcon(FushiIcons.check), findsNothing);
 
-      await tester.tap(find.byIcon(Icons.content_copy_outlined).first);
+      await tester.tap(find.byIcon(FushiIcons.copy).first);
       await tester.pump();
-      expect(find.byIcon(Icons.check), findsOneWidget);
-      expect(find.byIcon(Icons.content_copy_outlined), findsOneWidget,
+      expect(find.byIcon(FushiIcons.check), findsOneWidget);
+      expect(find.byIcon(FushiIcons.copy), findsOneWidget,
           reason: '只有被点的那一行切 ✓，其它行不动');
       expect(find.byTooltip(t.copied), findsOneWidget);
 
       await tester.pump(kCopyFeedbackDuration);
       await tester.pump();
-      expect(find.byIcon(Icons.check), findsNothing);
-      expect(find.byIcon(Icons.content_copy_outlined), findsNWidgets(2));
+      expect(find.byIcon(FushiIcons.check), findsNothing);
+      expect(find.byIcon(FushiIcons.copy), findsNWidgets(2));
 
       // 空文本行：handler 返回 false（没写剪贴板），按钮不装成功。
-      await tester.tap(find.byIcon(Icons.content_copy_outlined).last);
+      await tester.tap(find.byIcon(FushiIcons.copy).last);
       await tester.pump();
-      expect(find.byIcon(Icons.check), findsNothing);
+      expect(find.byIcon(FushiIcons.check), findsNothing);
     });
 
     testWidgets(
@@ -624,6 +714,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (AudioCue c) => c.text.trim().isNotEmpty,
@@ -638,15 +729,15 @@ void main() {
       await tester.pump();
 
       // 复制当前正在播的那一行。
-      await tester.tap(find.byIcon(Icons.content_copy_outlined).first);
+      await tester.tap(find.byIcon(FushiIcons.copy).first);
       await tester.pump();
-      expect(find.byIcon(Icons.check), findsOneWidget);
+      expect(find.byIcon(FushiIcons.check), findsOneWidget);
 
       // 播放头推进到下一句：第 0 行不再 selected，行 key 翻转 → Element 重建。
       controller.debugUpdateCueForPosition(2500);
       await tester.pump();
       expect(
-        find.byIcon(Icons.check),
+        find.byIcon(FushiIcons.check),
         findsOneWidget,
         reason: '反馈窗口还没到，✓ 不该因为播放头走开就消失',
       );
@@ -655,7 +746,7 @@ void main() {
       // 窗口到点仍正常回落（不是把 ✓ 焊死）。
       await tester.pump(kCopyFeedbackDuration);
       await tester.pump();
-      expect(find.byIcon(Icons.check), findsNothing);
+      expect(find.byIcon(FushiIcons.check), findsNothing);
     });
 
     testWidgets('only one row can be checked at a time',
@@ -669,6 +760,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (AudioCue c) => c.text.trim().isNotEmpty,
@@ -681,12 +773,12 @@ void main() {
       )));
       await tester.pump();
 
-      await tester.tap(find.byIcon(Icons.content_copy_outlined).first);
+      await tester.tap(find.byIcon(FushiIcons.copy).first);
       await tester.pump();
-      await tester.tap(find.byIcon(Icons.content_copy_outlined).last);
+      await tester.tap(find.byIcon(FushiIcons.copy).last);
       await tester.pump();
-      expect(find.byIcon(Icons.check), findsOneWidget);
-      expect(find.byIcon(Icons.content_copy_outlined), findsOneWidget);
+      expect(find.byIcon(FushiIcons.check), findsOneWidget);
+      expect(find.byIcon(FushiIcons.copy), findsOneWidget);
     });
 
     testWidgets('unmounting inside the feedback window does not throw',
@@ -698,6 +790,7 @@ void main() {
       controller.setCues(<AudioCue>[_cue(0, 0, 1000, 'copy me')]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (AudioCue c) => c.text.trim().isNotEmpty,
@@ -709,9 +802,9 @@ void main() {
         emptyHint: 'empty',
       )));
       await tester.pump();
-      await tester.tap(find.byIcon(Icons.content_copy_outlined).first);
+      await tester.tap(find.byIcon(FushiIcons.copy).first);
       await tester.pump();
-      expect(find.byIcon(Icons.check), findsOneWidget);
+      expect(find.byIcon(FushiIcons.check), findsOneWidget);
 
       await tester.pumpWidget(const SizedBox.shrink());
       await tester.pump(kCopyFeedbackDuration + const Duration(seconds: 1));
@@ -728,6 +821,7 @@ void main() {
       bool isFav = false;
 
       VideoSubtitleJumpPanel panel() => VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
             controller: controller,
             onTapCue: (_) {},
             onCopyCue: (_) => true,
@@ -744,8 +838,8 @@ void main() {
       await tester.pump();
 
       // Not favorited yet -> hollow star.
-      expect(find.byIcon(Icons.star_border), findsOneWidget);
-      await tester.tap(find.byIcon(Icons.star_border));
+      expect(find.byIcon(FushiIcons.star), findsOneWidget);
+      await tester.tap(find.byIcon(FushiIcons.star));
       await tester.pump();
       expect(favorited, isNotNull);
       expect(favorited!.text, 'fav me');
@@ -755,7 +849,7 @@ void main() {
       await tester.pumpWidget(_wrap(panel()));
       controller.debugUpdateCueForPosition(500);
       await tester.pump();
-      expect(find.byIcon(Icons.star), findsOneWidget);
+      expect(find.byIcon(FushiIcons.filled(FushiIcons.star)), findsOneWidget);
     });
 
     testWidgets('header toolbar has font A-/A+ and auto-scroll toggle', (
@@ -766,6 +860,7 @@ void main() {
       controller.setCues(<AudioCue>[_cue(0, 0, 1000, 'x')]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (_) => true,
@@ -778,14 +873,14 @@ void main() {
       )));
 
       // Font step buttons + auto-scroll (default on -> filled icon).
-      expect(find.byIcon(Icons.text_decrease), findsOneWidget);
-      expect(find.byIcon(Icons.text_increase), findsOneWidget);
-      expect(find.byIcon(Icons.vertical_align_center), findsOneWidget);
+      expect(find.byIcon(FushiIcons.textDecrease), findsOneWidget);
+      expect(find.byIcon(FushiIcons.textIncrease), findsOneWidget);
+      expect(find.byIcon(FushiIcons.alignCenterVertical), findsOneWidget);
 
       // Toggle auto-scroll off -> pause icon.
-      await tester.tap(find.byIcon(Icons.vertical_align_center));
+      await tester.tap(find.byIcon(FushiIcons.alignCenterVertical));
       await tester.pump();
-      expect(find.byIcon(Icons.pause_circle_outline), findsOneWidget);
+      expect(find.byIcon(FushiIcons.pauseCircle), findsOneWidget);
     });
 
     testWidgets(
@@ -800,6 +895,7 @@ void main() {
         width: 520,
         height: 620,
         child: VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
           controller: controller,
           onTapCue: (_) {},
           onClose: () {},
@@ -835,6 +931,7 @@ void main() {
         width: 520,
         height: 620,
         child: VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
           controller: controller,
           onTapCue: (_) {},
           onLookupCue: (AudioCue _, int __, Rect ___) {},
@@ -871,6 +968,7 @@ void main() {
         width: 520,
         height: 620,
         child: VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
           controller: controller,
           onTapCue: (_) {},
           onClose: () {},
@@ -884,9 +982,9 @@ void main() {
         ),
       )));
 
-      await tester.tap(find.byIcon(Icons.vertical_align_center));
+      await tester.tap(find.byIcon(FushiIcons.alignCenterVertical));
       await tester.pump();
-      expect(find.byIcon(Icons.pause_circle_outline), findsOneWidget);
+      expect(find.byIcon(FushiIcons.pauseCircle), findsOneWidget);
 
       controller.debugUpdateCueForPosition(150050);
       await tester.pump();
@@ -896,7 +994,7 @@ void main() {
       expect(find.text('cue 00150 text'), findsNothing,
           reason: 'disabled auto-scroll must not force-follow playback');
 
-      await tester.tap(find.byIcon(Icons.pause_circle_outline));
+      await tester.tap(find.byIcon(FushiIcons.pauseCircle));
       await tester.pump();
       for (int i = 0; i < 24; i++) {
         await tester.pump(const Duration(milliseconds: 16));
@@ -944,6 +1042,7 @@ void main() {
       controller.setCues(<AudioCue>[_cue(0, 0, 1000, sentence)]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onLookupCue: (AudioCue _, int __, Rect ___) {},
@@ -978,6 +1077,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         // onLookupCue omitted → whole sentence is a single Text, still wraps.
@@ -1014,6 +1114,7 @@ void main() {
       Offset? tapPoint;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (AudioCue c) => seeked = c,
         onLookupCue: (AudioCue c, int i, Rect r) {
@@ -1058,6 +1159,7 @@ void main() {
       int? lookupIndex;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onLookupCue: (AudioCue _, int i, Rect __) => lookupIndex = i,
@@ -1091,6 +1193,7 @@ void main() {
       AudioCue? lookedUp;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (AudioCue c) => seeked = c,
         onLookupCue: (AudioCue c, int _, Rect __) => lookedUp = c,
@@ -1128,6 +1231,7 @@ void main() {
         width: 520,
         height: 620,
         child: VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
           controller: controller,
           onTapCue: (_) {},
           onLookupCue: (AudioCue _, int __, Rect ___) {},
@@ -1189,6 +1293,7 @@ void main() {
       AudioCue? seeked;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (AudioCue c) => seeked = c,
         // onLookupCue intentionally omitted (null).
@@ -1219,6 +1324,7 @@ void main() {
       const ColorScheme cs = ColorScheme.dark();
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (_) => true,
@@ -1262,6 +1368,7 @@ void main() {
       controller.setCues(<AudioCue>[_cue(0, 0, 1000, 'sized')]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (_) => true,
@@ -1277,7 +1384,7 @@ void main() {
           tester.widget<Text>(find.text(text)).style!.fontSize!;
       final double before = fontOf('sized');
 
-      await tester.tap(find.byIcon(Icons.text_increase));
+      await tester.tap(find.byIcon(FushiIcons.textIncrease));
       await tester.pump();
       expect(fontOf('sized'), greaterThan(before),
           reason: 'A+ enlarges row font (local transient step)');
@@ -1300,6 +1407,7 @@ void main() {
         width: 320,
         height: 400,
         child: VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
           controller: controller,
           onTapCue: (_) {},
           onClose: () {},
@@ -1348,6 +1456,7 @@ void main() {
         width: 360,
         height: 400,
         child: VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
           controller: controller,
           onTapCue: (_) {},
           onClose: () {},
@@ -1376,9 +1485,9 @@ void main() {
       final double before = tsColumnWidth();
       // Step the font up twice (to the largest 1.3x step) and the timestamp
       // column must grow so 'h:mm:ss' keeps fitting instead of overflowing.
-      await tester.tap(find.byIcon(Icons.text_increase));
+      await tester.tap(find.byIcon(FushiIcons.textIncrease));
       await tester.pump();
-      await tester.tap(find.byIcon(Icons.text_increase));
+      await tester.tap(find.byIcon(FushiIcons.textIncrease));
       await tester.pump();
       expect(tsColumnWidth(), greaterThan(before),
           reason: 'larger font must widen the timestamp column (TODO-567)');
@@ -1399,6 +1508,7 @@ void main() {
       // pumpAndSettle / async DB round-trip needed — that is the TODO-566 fix
       // (panel-open no longer re-queries the DB and makes stars appear late).
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -1412,9 +1522,9 @@ void main() {
 
       // No pumpAndSettle: exactly one filled star (the favorited row) and one
       // hollow star (the plain row) must already be present.
-      expect(find.byIcon(Icons.star), findsOneWidget,
+      expect(find.byIcon(FushiIcons.filled(FushiIcons.star)), findsOneWidget,
           reason: 'favorited row must show a filled star on the first frame');
-      expect(find.byIcon(Icons.star_border), findsOneWidget,
+      expect(find.byIcon(FushiIcons.star), findsOneWidget,
           reason: 'non-favorited row keeps a hollow star');
     });
 
@@ -1427,6 +1537,7 @@ void main() {
       controller.setCues(<AudioCue>[_cue(0, 0, 1000, 'x')]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (_) => true,
@@ -1440,10 +1551,10 @@ void main() {
         emptyHint: 'empty',
       )));
 
-      expect(find.byIcon(Icons.pause_circle_outline), findsOneWidget,
+      expect(find.byIcon(FushiIcons.pauseCircle), findsOneWidget,
           reason:
               'initialAutoScroll:false must start in the off (paused) state');
-      expect(find.byIcon(Icons.vertical_align_center), findsNothing);
+      expect(find.byIcon(FushiIcons.alignCenterVertical), findsNothing);
     });
 
     testWidgets(
@@ -1455,6 +1566,7 @@ void main() {
       final List<bool> changes = <bool>[];
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (_) => true,
@@ -1469,13 +1581,13 @@ void main() {
       )));
 
       // Starts on → tap turns it off and reports false.
-      await tester.tap(find.byIcon(Icons.vertical_align_center));
+      await tester.tap(find.byIcon(FushiIcons.alignCenterVertical));
       await tester.pump();
       expect(changes, <bool>[false],
           reason: 'turning auto-scroll off must report false to persist');
 
       // Tap again → on, reports true.
-      await tester.tap(find.byIcon(Icons.pause_circle_outline));
+      await tester.tap(find.byIcon(FushiIcons.pauseCircle));
       await tester.pump();
       expect(changes, <bool>[false, true]);
     });
@@ -1494,6 +1606,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},
@@ -1550,6 +1663,7 @@ void main() {
         width: 520,
         height: 600,
         child: VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
           controller: controller,
           onTapCue: (_) {},
           onClose: () {},
@@ -1609,6 +1723,7 @@ void main() {
       // 种子档位 = 最大档（下标 6 = 2.0×），基准 fontSize 14 → 有效 28。旧上限只到 1.3×
       // （最大 18.2），撤修复 → 数组不含 2.0 / 种子回默认 → 字号回 14 → 红。
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         key: const ValueKey<String>('seed-max'),
         controller: controller,
         onTapCue: (_) {},
@@ -1627,12 +1742,10 @@ void main() {
               '这条断言必须**保持不变**——下标就是持久化值，既有元素一旦改动，'
               '所有存量用户的字号都会静默漂移');
       // BUG-2156 之后 2.0× 不再是最大档，A+ 应当仍然可用。
-      final IconButton increase = tester.widget<IconButton>(
-        find.ancestor(
-          of: find.byIcon(Icons.text_increase),
+      final IconButton increase = tester.widget<IconButton>(glassUnwrap<IconButton>(find.ancestor(
+          of: find.byIcon(FushiIcons.textIncrease),
           matching: find.byType(IconButton),
-        ),
-      );
+        )),);
       expect(increase.onPressed, isNotNull,
           reason: '2.0× 上面还有档位（BUG-2156），A+ 不该禁用');
     });
@@ -1651,6 +1764,7 @@ void main() {
       // 下标 10 = 3.0×，基准 14 → 42。撤掉追加的四档 → 种子被 clamp 回下标 6（2.0×）
       // → 字号 28 → 红。
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         key: const ValueKey<String>('seed-max-2156'),
         controller: controller,
         onTapCue: (_) {},
@@ -1667,12 +1781,10 @@ void main() {
       expect(fontOf('sized'), closeTo(42.0, 0.01),
           reason: '最高档 3.0× × 基准 14 = 42');
 
-      final IconButton increase = tester.widget<IconButton>(
-        find.ancestor(
-          of: find.byIcon(Icons.text_increase),
+      final IconButton increase = tester.widget<IconButton>(glassUnwrap<IconButton>(find.ancestor(
+          of: find.byIcon(FushiIcons.textIncrease),
           matching: find.byType(IconButton),
-        ),
-      );
+        )),);
       expect(increase.onPressed, isNull, reason: '已在最大档，A+ 禁用');
     });
 
@@ -1685,6 +1797,7 @@ void main() {
       final List<int> changes = <int>[];
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onCopyCue: (_) => true,
@@ -1698,12 +1811,55 @@ void main() {
         emptyHint: 'empty',
       )));
 
-      await tester.tap(find.byIcon(Icons.text_increase));
+      await tester.tap(find.byIcon(FushiIcons.textIncrease));
       await tester.pump();
       expect(changes, <int>[2], reason: 'A+ 报新档位 2 供页面层落盘');
-      await tester.tap(find.byIcon(Icons.text_decrease));
+      await tester.tap(find.byIcon(FushiIcons.textDecrease));
       await tester.pump();
       expect(changes, <int>[2, 1], reason: 'A- 报回档位 1');
+    });
+
+    testWidgets(
+        'stale Ctrl (key-up lost to WebView2) does not turn the wheel into '
+        'font zoom; a real Ctrl still zooms (feedback TpKspDUst7)',
+        (WidgetTester tester) async {
+      final VideoPlayerController controller = VideoPlayerController();
+      addTearDown(controller.dispose);
+      controller.setCues(<AudioCue>[_cue(0, 0, 1000, 'x')]);
+      final List<int> changes = <int>[];
+      bool platformCtrlDown = false;
+      debugPlatformZoomModifierQuery = () => platformCtrlDown;
+      addTearDown(() => debugPlatformZoomModifierQuery = null);
+
+      await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
+        controller: controller,
+        onTapCue: (_) {},
+        onCopyCue: (_) => true,
+        onFavoriteCue: (_) async {},
+        isCueFavorited: (_) => false,
+        onClose: () {},
+        initialFontScaleIndex: 1,
+        onFontScaleIndexChanged: changes.add,
+        colorScheme: const ColorScheme.dark(),
+        title: 'Subtitle list',
+        emptyHint: 'empty',
+      )));
+
+      // Flutter 看到了 Ctrl 按下，但抬起落在别处：缓存卡在「按下」。
+      await tester.sendKeyDownEvent(LogicalKeyboardKey.controlLeft);
+      final Offset row = tester.getCenter(find.text('x'));
+      final TestPointer pointer = TestPointer(1, PointerDeviceKind.mouse);
+      await tester.sendEventToBinding(pointer.hover(row));
+      await tester.sendEventToBinding(pointer.scroll(const Offset(0, -100)));
+      await tester.pump();
+      expect(changes, isEmpty, reason: '平台说 Ctrl 没按：不能缩字号');
+
+      platformCtrlDown = true;
+      await tester.sendEventToBinding(pointer.scroll(const Offset(0, -100)));
+      await tester.pump();
+      expect(changes, <int>[2], reason: '真按着 Ctrl：照常放大');
+      await tester.sendKeyUpEvent(LogicalKeyboardKey.controlLeft);
     });
 
     // ── BUG-879：字幕列表行 Shift-悬停查词（与画面字幕对称）─────────────────
@@ -1718,6 +1874,7 @@ void main() {
       int? lookupIndex;
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onLookupCue: (AudioCue c, int i, Rect r) {
@@ -1778,8 +1935,8 @@ void main() {
       );
       expect(hoverBody, contains('_hitTestRows('),
           reason: 'hover 查词复用 RenderParagraph 反查（不为每次 hover 重排 TextPainter）');
-      expect(hoverBody, contains('isShiftPressed'),
-          reason: 'hover 查词门控需读 Shift 键状态');
+      expect(hoverBody, contains('hoverLookupModifier.isPressed()'),
+          reason: 'hover 查词门控读设置的查词键（默认 Shift）');
     });
 
     // Source guard（BUG-879 命中收窄 + BUG-916 偏左一格）：tap / hover / barrier 三路共用的
@@ -1865,6 +2022,7 @@ void main() {
       ]);
 
       await tester.pumpWidget(_wrap(VideoSubtitleJumpPanel(
+        layout: VideoSubtitleListLayout.classic,
         controller: controller,
         onTapCue: (_) {},
         onClose: () {},

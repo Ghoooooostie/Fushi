@@ -32,13 +32,21 @@ mixin _LocalLibraryHostAudiobooks
         title: title,
         hasAudio: hasAudio,
         positionMs: PrefCodec.decode<int>(
-            allPrefs[audiobookPositionPrefKey(identity)] ?? '', 0),
+          allPrefs[audiobookPositionPrefKey(identity)] ?? '',
+          0,
+        ),
         positionUpdatedAtMs: PrefCodec.decode<int>(
-            allPrefs[audiobookPositionAtPrefKey(identity)] ?? '', 0),
+          allPrefs[audiobookPositionAtPrefKey(identity)] ?? '',
+          0,
+        ),
         delayMs: PrefCodec.decode<int>(
-            allPrefs[audiobookDelayPrefKey(identity)] ?? '', 0),
+          allPrefs[audiobookDelayPrefKey(identity)] ?? '',
+          0,
+        ),
         delayUpdatedAtMs: PrefCodec.decode<int>(
-            allPrefs[audiobookDelayAtPrefKey(identity)] ?? '', 0),
+          allPrefs[audiobookDelayAtPrefKey(identity)] ?? '',
+          0,
+        ),
         // `SrtBooks.importedAt`：client 书架的远端占位卡据此排进「导入时间」序
         // （与 [RemoteBookInfo.importedAt] 同范式）。
         importedAt: importedAt,
@@ -51,16 +59,18 @@ mixin _LocalLibraryHostAudiobooks
     for (final AudiobookRow r in rows) {
       final SrtBookRow? srt = await _db.getSrtBookByBookKey(r.bookKey);
       if (srt == null) continue;
-      result.add(build(
-        r.bookKey,
-        srt.uid,
-        srt.title,
-        importedAt: srt.importedAt,
-        hasAudio: await audiobookAudioIsIntact(
-          audioPathsJson: r.audioPathsJson,
-          audioRoot: r.audioRoot,
+      result.add(
+        build(
+          r.bookKey,
+          srt.uid,
+          srt.title,
+          importedAt: srt.importedAt,
+          hasAudio: await audiobookAudioIsIntact(
+            audioPathsJson: r.audioPathsJson,
+            audioRoot: r.audioRoot,
+          ),
         ),
-      ));
+      );
       emittedUids.add(srt.uid);
     }
     // 纯 SRT（standalone）有声书：bookKey 为空、不落 Audiobooks 行，身份 = uid。
@@ -68,16 +78,18 @@ mixin _LocalLibraryHostAudiobooks
     for (final SrtBookRow srt in srtRows) {
       if (srt.bookKey.isNotEmpty) continue; // srt-backed 已在上面枚举
       if (!emittedUids.add(srt.uid)) continue; // 去重（防重复 uid）
-      result.add(build(
-        '',
-        srt.uid,
-        srt.title,
-        importedAt: srt.importedAt,
-        hasAudio: await audiobookAudioIsIntact(
-          audioPathsJson: srt.audioPathsJson,
-          audioRoot: srt.audioRoot,
+      result.add(
+        build(
+          '',
+          srt.uid,
+          srt.title,
+          importedAt: srt.importedAt,
+          hasAudio: await audiobookAudioIsIntact(
+            audioPathsJson: srt.audioPathsJson,
+            audioRoot: srt.audioRoot,
+          ),
         ),
-      ));
+      );
     }
     return result;
   }
@@ -86,11 +98,16 @@ mixin _LocalLibraryHostAudiobooks
   /// `audiobook_delay_` pref（旧数据无戳记 0，被任何带戳对端值盖过）。
   @override
   Future<({int delayMs, int updatedAtMs})> getAudiobookDelay(
-      String identity) async {
-    final int delay =
-        await _db.getPrefTyped<int>(audiobookDelayPrefKey(identity), 0);
-    final int at =
-        await _db.getPrefTyped<int>(audiobookDelayAtPrefKey(identity), 0);
+    String identity,
+  ) async {
+    final int delay = await _db.getPrefTyped<int>(
+      audiobookDelayPrefKey(identity),
+      0,
+    );
+    final int at = await _db.getPrefTyped<int>(
+      audiobookDelayAtPrefKey(identity),
+      0,
+    );
     return (delayMs: delay, updatedAtMs: at);
   }
 
@@ -99,14 +116,22 @@ mixin _LocalLibraryHostAudiobooks
   /// 有声书调轴本地读取就是这对 prefs，写入即对 host 本机播放生效（无行写穿）。
   @override
   Future<void> putAudiobookDelay(
-      String identity, int delayMs, int updatedAtMs) async {
+    String identity,
+    int delayMs,
+    int updatedAtMs,
+  ) async {
     if (!await audiobookExists(identity)) return;
-    final int clamped =
-        delayMs.clamp(-kVideoSubtitleDelayLimitMs, kVideoSubtitleDelayLimitMs);
-    final int nowCapMs = DateTime.now().millisecondsSinceEpoch + 5 * 60 * 1000;
-    final int cappedAt = updatedAtMs > nowCapMs ? nowCapMs : updatedAtMs;
-    final ({int delayMs, int updatedAtMs}) current =
-        await getAudiobookDelay(identity);
+    final int clamped = delayMs.clamp(
+      -kVideoSubtitleDelayLimitMs,
+      kVideoSubtitleDelayLimitMs,
+    );
+    final int cappedAt = capFutureSyncStamp(
+      updatedAtMs,
+      nowMs: DateTime.now().millisecondsSinceEpoch,
+    );
+    final ({int delayMs, int updatedAtMs}) current = await getAudiobookDelay(
+      identity,
+    );
     final ({int delayMs, int updatedAtMs}) winner = resolveDelayLww(
       aDelayMs: current.delayMs,
       aUpdatedAtMs: current.updatedAtMs,
@@ -118,9 +143,13 @@ mixin _LocalLibraryHostAudiobooks
       return; // host 已存更新或相等，no-op。
     }
     await _db.setPrefTyped<int>(
-        audiobookDelayPrefKey(identity), winner.delayMs);
+      audiobookDelayPrefKey(identity),
+      winner.delayMs,
+    );
     await _db.setPrefTyped<int>(
-        audiobookDelayAtPrefKey(identity), winner.updatedAtMs);
+      audiobookDelayAtPrefKey(identity),
+      winner.updatedAtMs,
+    );
   }
 
   /// 即时把身份键为 [identity] 的有声书打包成临时文件，返回该文件。
@@ -160,6 +189,30 @@ mixin _LocalLibraryHostAudiobooks
     throw StateError('audiobook not found for identity: $identity');
   }
 
+  /// 只打身份键为 [identity] 的有声书**字幕侧**（[AudiobookSubtitleHost]）：身份解析
+  /// 与 [exportAudiobook] 同一套（先 Audiobooks.bookKey，再 SrtBooks.uid）。
+  @override
+  Future<File> exportAudiobookSubtitles(String identity) async {
+    _assertSafeName(identity);
+    final AudiobookRow? ab = await _db.getAudiobookByBookKey(identity);
+    final SrtBookRow? srt = ab != null
+        ? await _db.getSrtBookByBookKey(identity)
+        : await _db.getSrtBookByUid(identity);
+    if (srt == null) {
+      throw StateError('audiobook not found for identity: $identity');
+    }
+    final Directory tmpDir = await Directory.systemTemp.createTemp(
+      'fushi_audiobook_subs_export',
+    );
+    final File out = File(p.join(tmpDir.path, '$identity.fushisubs'));
+    await _packages.exportAudioSubtitlePackage(
+      srtBookUid: srt.uid,
+      outputFile: out,
+      bookKey: ab != null ? identity : null,
+    );
+    return out;
+  }
+
   /// 打包成 `<identity>.fushiaudio` 临时文件（srt-backed 传 [bookKey]；纯 SRT 传
   /// null，包管线据此省略 audiobook 段、cue 走 uid 命名空间）。
   Future<File> _packAudiobook({
@@ -167,8 +220,9 @@ mixin _LocalLibraryHostAudiobooks
     required String srtBookUid,
     required String? bookKey,
   }) async {
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_audiobook_export');
+    final Directory tmpDir = await Directory.systemTemp.createTemp(
+      'fushi_audiobook_export',
+    );
     final File out = File(p.join(tmpDir.path, '$identity.fushiaudio'));
     await _packages.exportAudioDatabasePackage(
       srtBookUid: srtBookUid,
@@ -192,8 +246,10 @@ mixin _LocalLibraryHostAudiobooks
   /// 把有声书包文件导入 host（解包写 DB + 音频文件）。
   /// 需要在构造器传入 [audioDatabaseRoot]；为 null 时抛 [UnsupportedError]。
   @override
-  Future<void> importAudiobook(File packageFile,
-      {String? bookKeyOverride}) async {
+  Future<void> importAudiobook(
+    File packageFile, {
+    String? bookKeyOverride,
+  }) async {
     final Directory? root = _audioDatabaseRoot;
     if (root == null) {
       throw UnsupportedError(
@@ -225,11 +281,16 @@ mixin _LocalLibraryHostAudiobooks
         // getSrtBookByBookKey 先拿 uid，再用 deleteSrtBookByUid 级联删 audioCue 行。
         final SrtBookRow? srt = await _db.getSrtBookByBookKey(bookKey);
         if (srt != null) {
+          // 关联 SRT 书（bookKey 非空）的跨设备身份是 bookKey，由下面的 audiobook
+          // 墓碑覆盖；不另写 srtbook 墓碑，否则对端会弹两条重复确认（与
+          // SrtBookRepository.delete 的 standalone 判据同源）。
           await _db.deleteSrtBookByUid(srt.uid);
         }
 
         // 删除 Audiobooks 行（及其 audioCues 级联，via deleteAudiobookByBookKey）。
         await _db.deleteAudiobookByBookKey(bookKey);
+        // BUG-2945：同步删除墓碑，其它设备经 /api/tombstones 跟着删。
+        await _writeHostSyncTombstone(SyncTombstoneKind.audiobook, bookKey);
 
         await _deleteAudioRootIfPersisted(audioRoot);
         return;
@@ -240,7 +301,11 @@ mixin _LocalLibraryHostAudiobooks
       final SrtBookRow? srt = await _db.getSrtBookByUid(bookKey);
       if (srt == null) return; // 幂等：都不存在则静默跳过
       final String? audioRoot = srt.audioRoot;
-      await _db.deleteSrtBookByUid(srt.uid);
+      // srtbook 墓碑只对 standalone 行写（bookKey 为空，身份 = uid），与
+      // SrtBookRepository.delete / _collectPresentDeletionKeys 同一判据。
+      if (await _db.deleteSrtBookByUid(srt.uid) > 0 && srt.bookKey.isEmpty) {
+        await _writeHostSyncTombstone(SyncTombstoneKind.srtbook, srt.uid);
+      }
       await _deleteAudioRootIfPersisted(audioRoot);
     });
   }
@@ -256,7 +321,7 @@ mixin _LocalLibraryHostAudiobooks
     );
     if (!referenced) {
       final Directory dir = Directory(audioRoot);
-      if (dir.existsSync()) await dir.delete(recursive: true);
+      if (await dir.exists()) await dir.delete(recursive: true);
     }
   }
 
@@ -271,10 +336,14 @@ mixin _LocalLibraryHostAudiobooks
   Future<({int positionMs, int updatedAtMs})> getAudiobookPosition(
     String bookKey,
   ) async {
-    final int pos =
-        await _db.getPrefTyped<int>(audiobookPositionPrefKey(bookKey), 0);
-    final int at =
-        await _db.getPrefTyped<int>(audiobookPositionAtPrefKey(bookKey), 0);
+    final int pos = await _db.getPrefTyped<int>(
+      audiobookPositionPrefKey(bookKey),
+      0,
+    );
+    final int at = await _db.getPrefTyped<int>(
+      audiobookPositionAtPrefKey(bookKey),
+      0,
+    );
     return (positionMs: pos, updatedAtMs: at);
   }
 
@@ -300,21 +369,39 @@ mixin _LocalLibraryHostAudiobooks
         await _db.getSrtBookByUid(bookKey) == null) {
       return;
     }
-    final ({int positionMs, int updatedAtMs}) current =
-        await getAudiobookPosition(bookKey);
-    final ({int positionMs, int updatedAtMs}) winner = resolvePositionLww(
-      localPositionMs: current.positionMs,
-      localUpdatedAtMs: current.updatedAtMs,
-      remotePositionMs: positionMs < 0 ? 0 : positionMs,
-      remoteUpdatedAtMs: updatedAtMs,
+    // 读-比较-写在同步状态窄锁内（与 [putBookProgress] 同纪律）：两个对端并发上报
+    // 不会互相用旧值盖掉对方；不用 _runExclusive，免得排在本机整轮同步后面超时。
+    // 同时放进一个 DB 事务（BUG-3537）：本机出站同步落地在事务里比较后写入，这里
+    // 的读-比较-写也须原子，否则出站落地插在「读 current」与「写 winner」之间会被
+    // 按旧 current 算出的 winner 盖掉。
+    await _runSyncStateExclusive(
+      () => _db.transaction(() async {
+        final ({int positionMs, int updatedAtMs}) current =
+            await getAudiobookPosition(bookKey);
+        // BUG-3367：上报戳截到 host 当前时刻 + 余量；已存的超限毒戳按 0 比较以便自愈。
+        final int nowMs = DateTime.now().millisecondsSinceEpoch;
+        final ({int positionMs, int updatedAtMs}) winner = resolvePositionLww(
+          localPositionMs: current.positionMs,
+          localUpdatedAtMs: trustedStoredSyncStamp(
+            current.updatedAtMs,
+            nowMs: nowMs,
+          ),
+          remotePositionMs: positionMs < 0 ? 0 : positionMs,
+          remoteUpdatedAtMs: capFutureSyncStamp(updatedAtMs, nowMs: nowMs),
+        );
+        if (winner.updatedAtMs == current.updatedAtMs &&
+            winner.positionMs == current.positionMs) {
+          return; // host 已存更新或相等，no-op。
+        }
+        await _db.setPrefTyped<int>(
+          audiobookPositionPrefKey(bookKey),
+          winner.positionMs,
+        );
+        await _db.setPrefTyped<int>(
+          audiobookPositionAtPrefKey(bookKey),
+          winner.updatedAtMs,
+        );
+      }),
     );
-    if (winner.updatedAtMs == current.updatedAtMs &&
-        winner.positionMs == current.positionMs) {
-      return; // host 已存更新或相等，no-op。
-    }
-    await _db.setPrefTyped<int>(
-        audiobookPositionPrefKey(bookKey), winner.positionMs);
-    await _db.setPrefTyped<int>(
-        audiobookPositionAtPrefKey(bookKey), winner.updatedAtMs);
   }
 }

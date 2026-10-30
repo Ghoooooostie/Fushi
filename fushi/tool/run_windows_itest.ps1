@@ -49,7 +49,16 @@ param(
   [switch]$KeepUserDirs,
   # Extra --dart-define=KEY=VALUE pairs forwarded to `flutter test` (e.g.
   # -DartDefine FUSHI_PROBE_EPUB=D:/books/x.epub for the real-book probes).
-  [string[]]$DartDefine = @()
+  [string[]]$DartDefine = @(),
+  # tool/dist_test.dart --itest: launch this prebuilt Debug binary with
+  # `flutter drive --use-application-binary` instead of building -Target
+  # (`flutter test -d windows` rebuilds every file from a fresh temporary
+  # entry point: 80-130 s a file). The test root then reaches the app through
+  # the environment only (a dart-define cannot change a built binary).
+  [string]$ApplicationBinary = "",
+  # With -ApplicationBinary: the test file of the generated entry this launch
+  # runs (FUSHI_DIST_ITEST, see tool/dist_test/itest_entry.sh).
+  [string]$DistItest = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -370,14 +379,23 @@ $LauncherProcessId = 0
 Write-JsonFile $before (Join-Path $EvidenceDir "process-before.json") -AsArray
 Write-JsonFile $Paths (Join-Path $EvidenceDir "paths.json")
 
-# FLUTTER_ROOT 未设置时 Join-Path 会因 null 直接抛错（Strict 模式），先判空再拼。
-$FlutterExe = if ($env:FLUTTER_ROOT) { Join-Path $env:FLUTTER_ROOT "bin\flutter.bat" } else { "" }
-if (-not $env:FLUTTER_ROOT -or -not (Test-Path -LiteralPath $FlutterExe)) {
-  $FlutterExe = "D:\flutter_sdk\flutter_extracted\flutter\bin\flutter.bat"
+function Resolve-FlutterExecutable {
+  # An explicit usable SDK wins; otherwise use the caller's selected PATH SDK.
+  # Never substitute a machine-local installation with a different Dart version.
+  if (-not [string]::IsNullOrWhiteSpace($env:FLUTTER_ROOT)) {
+    $fromRoot = Join-Path $env:FLUTTER_ROOT "bin\flutter.bat"
+    if (Test-Path -LiteralPath $fromRoot -PathType Leaf) {
+      return (Get-Item -LiteralPath $fromRoot).FullName
+    }
+  }
+  $command = Get-Command flutter -CommandType Application -ErrorAction SilentlyContinue |
+    Select-Object -First 1
+  if ($null -ne $command -and (Test-Path -LiteralPath $command.Source -PathType Leaf)) {
+    return $command.Source
+  }
+  throw 'Flutter SDK not found. Set FLUTTER_ROOT to an SDK containing bin\flutter.bat, or add the required Flutter SDK bin directory to PATH.'
 }
-if (-not (Test-Path -LiteralPath $FlutterExe)) {
-  $FlutterExe = "flutter"
-}
+$FlutterExe = Resolve-FlutterExecutable
 
 $flutterArgs = @(
   "test",
@@ -389,6 +407,18 @@ $flutterArgs = @(
   "--dart-define=FUSHI_TEST_RUN_ID=$RunId"
 )
 foreach ($d in $DartDefine) { $flutterArgs += "--dart-define=$d" }
+if (-not [string]::IsNullOrWhiteSpace($ApplicationBinary)) {
+  $flutterArgs = @(
+    "drive",
+    "--no-pub",
+    "-d",
+    "windows",
+    "--driver=test_driver/integration_test.dart",
+    "-t",
+    $Target,
+    "--use-application-binary=$ApplicationBinary"
+  )
+}
 $commandLine = "$FlutterExe $((@($flutterArgs) | ForEach-Object { ConvertTo-CommandArgument $_ }) -join ' ')"
 $commandLog = Join-Path $EvidenceDir "command.log"
 $runnerInfoPath = Join-Path $EvidenceDir "runner-info.json"
@@ -491,6 +521,9 @@ if ($DryRun) {
     }
     $psi.EnvironmentVariables["FUSHI_TEST_ROOT"] = $Paths.isolatedRoot
     $psi.EnvironmentVariables["FUSHI_TEST_RUN_ID"] = $RunId
+    if (-not [string]::IsNullOrWhiteSpace($DistItest)) {
+      $psi.EnvironmentVariables["FUSHI_DIST_ITEST"] = $DistItest
+    }
     $psi.EnvironmentVariables["FUSHI_WEBVIEW2_USER_DATA_FOLDER"] =
       $Paths.webView2Profile
     $psi.EnvironmentVariables["APPDATA"] = $Paths.appData
@@ -528,7 +561,9 @@ if ($DryRun) {
       # Throttled OS screen-grab of the runner window: ~1 shot / 2s, capped at
       # 12. -Visible uses CopyFromScreen (real on-screen pixels incl. WebView);
       # off-screen default falls back to best-effort PrintWindow. Never fatal.
-      if (($shotIteration % 8) -eq 0 -and $shotCount -lt 12) {
+      # dist_test (-ApplicationBinary) reads the verdict, not pixels: no shots.
+      if (($shotIteration % 8) -eq 0 -and $shotCount -lt 12 -and
+          [string]::IsNullOrWhiteSpace($ApplicationBinary)) {
         $shotHandle = Get-RunnerWindowHandle -Snapshot $snapshot
         if ($shotHandle -ne [IntPtr]::Zero) {
           # PrintWindow is the primary capture: it grabs the window's own

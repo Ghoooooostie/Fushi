@@ -22,6 +22,27 @@ void main() {
       contains('dart run tool/flutter_test_failures.dart '
           r'--file-shard=${{ matrix.part }}/4 --exclude-tags golden'),
     );
+    // Both shard runs use --experimental-faster-testing (one dill per batch
+    // instead of a serial compile per test file). PR #2422's random SIGSEGV
+    // was the Dart JIT mis-materializing sunk Pointer.asTypedList views on
+    // deopt; all views now go through package:fushi_ffi_view
+    // (test/build/ffi_typed_list_view_guard_test.dart). --concurrency=1
+    // because the lightweight engines share flutter_tester's single UI
+    // thread (more concurrency only starves suites into 30 s timeouts), and
+    // --max-suites-per-run splits a shard into separate processes.
+    for (final String workflow in <String>[mainWorkflow, releaseWorkflow]) {
+      final List<String> shardRuns = workflow
+          .split('\n')
+          .where((String line) =>
+              line.contains('tool/flutter_test_failures.dart --file-shard='))
+          .toList();
+      expect(shardRuns, isNotEmpty);
+      for (final String line in shardRuns) {
+        expect(line, contains('--experimental-faster-testing'));
+        expect(line, contains('--concurrency=1'));
+        expect(line, contains('--max-suites-per-run=400'));
+      }
+    }
     expect(mainWorkflow, contains('shard: [0, 1, 2, 3]'));
     expect(releaseWorkflow, contains("part: ['0', '1', '2', '3', checks]"));
     // Coverage was never uploaded or read by anything and roughly doubled the

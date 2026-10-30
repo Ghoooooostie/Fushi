@@ -122,6 +122,30 @@ void main() {
     expect(splitReleaseBuild, isNot(contains('--target-platform')),
         reason: 'beta/formal 必须保留全 ABI，不得限制到单一 ABI');
 
+    // BUG-3874：--target-platform 只过滤 libflutter/libapp，Flutter 插件不分包时又把
+    // abiFilters 固定写回三个 ABI，调试包 459 MB 里 ~228 MB 是起不来的 v7a/x86_64。
+    // 关掉 Flutter 那份、build.gradle 按 target-platform 收，出包后 CI 钉死只有 arm64。
+    final String gradle = readAndroidBuildGradle();
+    expect(gradle, contains('abiFilters.addAll(targetPlatform.split'),
+        reason: 'BUG-3874：不分包时必须按 target-platform 收 ndk.abiFilters');
+    expect(gradle, contains("findProperty('split-per-abi')"),
+        reason: 'BUG-3874：--split-per-abi 时不得再设 abiFilters（AGP 不许与 splits.abi 并存）');
+    final String gradleProperties =
+        File('android/gradle.properties').readAsStringSync();
+    expect(gradleProperties, contains('disable-abi-filtering=true'),
+        reason: 'BUG-3874：不关掉 Flutter 插件那份，它会把 abiFilters 覆盖回三个 ABI');
+    final String debugAbiGate = workflowStep(
+      workflow,
+      'Verify debug-channel APK is arm64-only',
+    );
+    expect(debugAbiGate,
+        contains("if: steps.channel.outputs.build_debug_channel_apk == 'true'"));
+    expect(debugAbiGate, contains('"\$abis" != "arm64-v8a"'));
+    expect(
+      workflow.indexOf('Prepare release-signed debug-channel APK asset'),
+      lessThan(workflow.indexOf('Verify debug-channel APK is arm64-only')),
+    );
+
     expect(preBuildDiagnostics, contains('flutter --version'));
     expect(preBuildDiagnostics, contains('dart --version'));
     expect(preBuildDiagnostics, contains('java -version'));
@@ -374,14 +398,33 @@ void main() {
 
     expect(macosJob, contains('flutter build macos --release'));
     expect(macosJob, contains('ditto -c -k --keepParent'));
-    expect(macosJob, contains(r'fushi-${BUILD_VERSION_NAME}-macos.zip'));
+    expect(macosJob, contains(r'fushi-${BUILD_VERSION_NAME}-macos-arm64.zip'));
+    // 手动下载用的 dmg（用户 2026-10-09：zip 解压麻烦）。zip 仍是更新器吃的那份，
+    // 两个都要出；未签名时 dmg 里随包放 Gatekeeper 放行说明。
+    expect(macosJob, contains('hdiutil create'));
+    expect(macosJob, contains(r'fushi-${BUILD_VERSION_NAME}-macos-arm64.dmg'));
+    expect(macosJob, contains('xattr -dr com.apple.quarantine'));
 
     expect(iosJob, contains('flutter build ios --release --no-codesign'));
     expect(iosJob, contains('Payload'));
     expect(iosJob, contains(r'fushi-${BUILD_VERSION_NAME}-ios.ipa'));
 
-    expect(publishJob, contains('fushi-*-macos.zip'));
+    expect(publishJob, contains('fushi-*-macos-arm64.zip'));
+    expect(publishJob, contains('fushi-*-macos-arm64.dmg'));
     expect(publishJob, contains('fushi-*-ios.ipa'));
+
+    // dmg 是官网手动下载的首装形态：产出、签名公证、发布、进更新清单四处都要在。
+    // 官网 Worker 只从清单挑资产，dmg 不进清单官网就拿不到；应用内自动更新
+    // 仍只认 zip（MacUpdater.selectAsset 的判据，platform_updater_test 钉住）。
+    expect(macosJob, contains(r'fushi-${BUILD_VERSION_NAME}-macos-arm64.dmg'));
+    expect(macosJob, contains('hdiutil create'));
+    expect(macosJob, contains('Sign and notarize macOS dmg'));
+    expect(publishJob, contains('fushi-*-macos-arm64.dmg'));
+    expect(
+        publishJob,
+        contains('ASSET_GLOB: fushi-*-macos-arm64.zip '
+            'fushi-*-macos-arm64.dmg fushi-*-ios.ipa'),
+        reason: '官网 macOS 默认下载 dmg，它必须随 Apple 清单发布。');
     expect(
         publishJob, contains('Publish mirror update manifest (Apple assets)'));
   });
@@ -480,7 +523,7 @@ void main() {
     expect(
       smoke,
       contains(r'fushi\build\windows\x64\runner\Release\ffmpeg.exe'),
-      reason: 'release must test the exact ffmpeg.exe copied beside hibiki.exe',
+      reason: 'release must test the exact ffmpeg.exe copied beside fushi.exe',
     );
     // BUG-1420: ffprobe is a second, independent executable with its own
     // consumers (embedded subtitle fonts, audio container tags). Both consumers
@@ -491,39 +534,23 @@ void main() {
       smoke,
       contains(r'fushi\build\windows\x64\runner\Release\ffprobe.exe'),
       reason:
-          'release must test the exact ffprobe.exe copied beside hibiki.exe '
+          'release must test the exact ffprobe.exe copied beside fushi.exe '
           '(BUG-1420: it was never built nor bundled, and both of its consumers '
           'degrade silently when it is absent)',
     );
+    // Unified FFmpeg: the shipped binary is a full build, so the capability
+    // floor and the behavioural smoke run on it directly.
     expect(
       smoke,
-      contains('tool/ffmpeg-min/smoke-test.sh'),
+      contains('tool/ffmpeg-unified/verify_ffmpeg_capabilities.py'),
+      reason: 'the bundle smoke must check the capability floor the player '
+          'and card mining share (tool/ffmpeg-unified/capabilities.json)',
+    );
+    expect(
+      smoke,
+      contains('tool/ffmpeg-unified/smoke-test.sh'),
       reason:
           'the final bundle smoke must exercise subtitle, GIF, frame, cover, and sentence audio commands',
-    );
-    expect(
-      smoke,
-      contains(r'$env:FIXTURE_FFMPEG'),
-      reason:
-          'representative MP4/MKV fixtures must be generated by a full ffmpeg, not the minimal runtime binary',
-    );
-    expect(
-      smoke,
-      contains('choco install ffmpeg'),
-      reason:
-          'GitHub runners that lack full ffmpeg still need a fixture generator, but it must not be bundled',
-    );
-    expect(
-      smoke,
-      isNot(contains(r'FIXTURE_FFMPEG="$FFMPEG_MIN"')),
-      reason:
-          'the minimal bundled ffmpeg must not need MP4/MKV muxers or video/subtitle encoders just to generate smoke fixtures',
-    );
-    expect(
-      smoke,
-      isNot(contains('SELF_CONTAINED_FIXTURES=1')),
-      reason:
-          'release smoke should use a full fixture generator instead of expanding the minimal ffmpeg allowlist',
     );
     expect(
       smoke,
@@ -531,9 +558,18 @@ void main() {
       reason:
           'PowerShell must execute the copied Windows binary outside MSYS2 before installer compilation',
     );
+    expect(
+      smoke,
+      contains(r'throw "Bundled ffmpeg failed -version'),
+      reason: 'the bundled ffmpeg -version gate must remain a hard failure; '
+          'it verifies the exact binary we ship',
+    );
+    // TODO-652: the chocolatey fixture ffmpeg (and its 504 flakes) existed only
+    // because the minimal build could not author fixtures; it must not return.
+    expect(smoke, isNot(contains('choco install ffmpeg')));
     expectWorkflowOrder(
       workflow,
-      'Install vendored ffmpeg-min runtime into Windows bundle',
+      'Build Windows release',
       'Smoke test bundled ffmpeg in Windows bundle',
     );
     expectWorkflowOrder(
@@ -543,75 +579,20 @@ void main() {
     );
   });
 
-  test(
-      'TODO-652: Windows ffmpeg smoke tolerates external chocolatey flake '
-      'without failing the desktop release', () {
-    final String workflow = readReleaseDesktopWorkflow();
-    final String smoke = workflowStep(
-      workflow,
-      'Smoke test bundled ffmpeg in Windows bundle',
-    );
-
-    // The bundled binary -version check stays a hard gate (it is the shipped
-    // deliverable, no external dependency): it must still throw on failure.
-    expect(
-      smoke,
-      contains(r'throw "Bundled ffmpeg failed -version'),
-      reason: 'the bundled ffmpeg -version gate must remain a hard failure; '
-          'it verifies the exact binary we ship',
-    );
-
-    // The fixture ffmpeg is only a reference generator fetched from chocolatey,
-    // whose source intermittently returns 504. Its acquisition must be retried
-    // and, on persistent failure, skipped with a loud warning - never throw and
-    // fail the whole Desktop release (TODO-652, mirrors TODO-624 precedent).
-    expect(
-      smoke,
-      contains(r'for ($attempt = 1; $attempt -le 3; $attempt++)'),
-      reason: 'choco install ffmpeg must be retried to absorb transient 504s',
-    );
-    expect(
-      smoke,
-      isNot(contains(r'Get-Command ffmpeg -ErrorAction Stop')),
-      reason:
-          'fixture ffmpeg lookup must not hard-throw when chocolatey flakes; '
-          'that regressed the whole Desktop workflow on runs +130/+132',
-    );
-    expect(
-      smoke,
-      contains('::warning title=Fixture ffmpeg unavailable'),
-      reason: 'a persistent fixture-ffmpeg outage must surface a visible '
-          'warning, not a silent pass',
-    );
-    expect(
-      smoke,
-      contains('exit 0'),
-      reason: 'when only the reference fixture is unavailable the step skips '
-          'the comparison smoke and exits 0 instead of failing the release',
-    );
-  });
-
-  test('ffmpeg smoke fixture generation does not require the minimal binary',
+  test('unified ffmpeg smoke authors its own fixtures with the shipped binary',
       () {
-    final String smoke = readRepositoryTool('ffmpeg-min/smoke-test.sh');
+    final String smoke = readRepositoryTool('ffmpeg-unified/smoke-test.sh');
 
     expect(
       smoke,
-      contains(r'FIXTURE_FFMPEG="${FIXTURE_FFMPEG:-ffmpeg}"'),
-      reason:
-          'fixture generation should default to a full host ffmpeg while FFMPEG_MIN exercises runtime extraction paths',
-    );
-    expect(
-      smoke,
-      isNot(contains('SELF_CONTAINED_FIXTURES')),
-      reason:
-          'do not add a path that asks the minimal runtime ffmpeg to author representative MP4/MKV fixtures',
+      contains(r'FIXTURE_FFMPEG="${FIXTURE_FFMPEG:-$FFMPEG_MIN}"'),
+      reason: 'the unified FFmpeg is a full build: fixtures default to the '
+          'binary under test, no external reference ffmpeg is required',
     );
     expect(
       smoke,
       isNot(contains('-c:v mpeg4')),
-      reason:
-          'mpeg4 fixture authoring would pressure the minimal build to ship input-generation-only encoders/muxers',
+      reason: 'fixtures stay on the codecs the app actually emits',
     );
   });
 }

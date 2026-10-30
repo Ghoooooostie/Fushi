@@ -128,6 +128,88 @@ if(EXISTS "${FUSHI_P2P_SO}")
     COMPONENT Runtime)
 endif()
 
+# SRS 排程内核（fsrs-rs，copy-if-present）：native/fushi_fsrs/build_linux_so.sh 产出
+# prebuilt/linux-x64/libfushi_fsrs.so 则随包进 bundle/lib/（Dart 侧按裸名经 $ORIGIN/lib 定位）；
+# 缺失时 SRS 原生内核判不可用，构建照常。与 fushi_p2p 同一语义。
+set(FUSHI_FSRS_SO
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../native/fushi_fsrs/prebuilt/linux-x64/libfushi_fsrs.so")
+if(EXISTS "${FUSHI_FSRS_SO}")
+  install(FILES "${FUSHI_FSRS_SO}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+    COMPONENT Runtime)
+endif()
+# 网页内容核心（fushi_web_core：广告拦截 + 漫画章末广告页识别，Rust）：
+# native/fushi_web_core/build_linux_so.sh 产出 prebuilt/linux-x64/libfushi_web_core.so，随包进
+# bundle/lib/（Dart 侧按裸名经 $ORIGIN/lib 定位）。**硬依赖**（Dart 侧没有降级分支）：
+# Profile/Release bundle 缺它构建失败，Debug 只告警。Linux 网络层不拦广告是插件能力问题，
+# 与此无关——cosmetic 隐藏与漫画广告页识别照样要这个库。
+set(FUSHI_WEB_CORE_SO
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../native/fushi_web_core/prebuilt/linux-x64/libfushi_web_core.so")
+if(EXISTS "${FUSHI_WEB_CORE_SO}")
+  install(FILES "${FUSHI_WEB_CORE_SO}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+    COMPONENT Runtime)
+else()
+  message(WARNING
+    "fushi_web_core: ${FUSHI_WEB_CORE_SO} not found. Run "
+    "native/fushi_web_core/build_linux_so.sh; Profile/Release bundles refuse to build without it.")
+endif()
+install(CODE "
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES \"^(Profile|Release)$\" AND NOT EXISTS \"${FUSHI_WEB_CORE_SO}\")
+    message(FATAL_ERROR
+      \"Missing required native library libfushi_web_core.so. \"
+      \"Run native/fushi_web_core/build_linux_so.sh before building a Profile/Release bundle.\")
+  endif()
+" COMPONENT Runtime)
+
+# 计算内核（哈希 / 图像 / 文本，**硬依赖**）：native/fushi_compute/build_linux_so.sh 产出
+# prebuilt/linux-x64/libfushi_compute.so 随包进 bundle/lib/（Dart 侧按裸名经 $ORIGIN/lib 定位）。
+# 与上面几个 copy-if-present 不同：没有 Dart 回退实现，缺库时在配置期直接失败。
+set(FUSHI_COMPUTE_SO
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../native/fushi_compute/prebuilt/linux-x64/libfushi_compute.so")
+if(NOT EXISTS "${FUSHI_COMPUTE_SO}")
+  message(FATAL_ERROR
+    "fushi_compute is a required native dependency, but ${FUSHI_COMPUTE_SO} is missing. "
+    "Build it first: bash native/fushi_compute/build_linux_so.sh (needs Rust/cargo).")
+endif()
+install(FILES "${FUSHI_COMPUTE_SO}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+  COMPONENT Runtime)
+
+# RWKV-Instant 排程推理（**硬依赖**，AGPL-3.0-or-later）：native/fushi_rwkv/build_linux_so.sh 产出
+# prebuilt/linux-x64/libfushi_rwkv.so 随包进 bundle/lib/（Dart 侧按裸名经 $ORIGIN/lib 定位）。
+# 与 fushi_compute 同一语义：没有 Dart 回退实现，缺库时在配置期直接失败。
+set(FUSHI_RWKV_SO
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../native/fushi_rwkv/prebuilt/linux-x64/libfushi_rwkv.so")
+if(NOT EXISTS "${FUSHI_RWKV_SO}")
+  message(FATAL_ERROR
+    "fushi_rwkv is a required native dependency, but ${FUSHI_RWKV_SO} is missing. "
+    "Build it first: bash native/fushi_rwkv/build_linux_so.sh (needs Rust/cargo).")
+endif()
+install(FILES "${FUSHI_RWKV_SO}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+  COMPONENT Runtime)
+
+# 音乐胖核心（**硬依赖**，GPL-3.0-only）：native/fushi_music/build_linux_so.sh 产出
+# prebuilt/linux-x64/libfushi_music.so 随包进 bundle/lib/（Dart 侧按裸名经 $ORIGIN/lib 定位）。
+set(FUSHI_MUSIC_SO
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../native/fushi_music/prebuilt/linux-x64/libfushi_music.so")
+if(NOT EXISTS "${FUSHI_MUSIC_SO}")
+  message(FATAL_ERROR
+    "fushi_music is a required native dependency, but ${FUSHI_MUSIC_SO} is missing. "
+    "Build it first: bash native/fushi_music/build_linux_so.sh (needs Rust/cargo).")
+endif()
+install(FILES "${FUSHI_MUSIC_SO}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+  COMPONENT Runtime)
+
+# 语料胖核心（**硬依赖**，GPL-3.0-only）：native/fushi_corpus/build_linux_so.sh 产出
+# prebuilt/linux-x64/libfushi_corpus.so 随包进 bundle/lib/（Dart 侧按裸名经 $ORIGIN/lib 定位）。
+set(FUSHI_CORPUS_SO
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../native/fushi_corpus/prebuilt/linux-x64/libfushi_corpus.so")
+if(NOT EXISTS "${FUSHI_CORPUS_SO}")
+  message(FATAL_ERROR
+    "fushi_corpus is a required native dependency, but ${FUSHI_CORPUS_SO} is missing. "
+    "Build it first: bash native/fushi_corpus/build_linux_so.sh (needs Rust/cargo).")
+endif()
+install(FILES "${FUSHI_CORPUS_SO}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+  COMPONENT Runtime)
+
 # 内置 libtorrent 引擎（copy-if-present）：native/fushi_torrent/build_linux_so.sh 产出
 # prebuilt/linux-x64/libfushi_torrent_ffi.so（vcpkg 静态链 libtorrent/boost/openssl +
 # -static-libstdc++，只剩 glibc 动态），与无头服务端随包的是同一份。存在则随包进

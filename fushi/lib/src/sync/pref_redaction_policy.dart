@@ -1,3 +1,5 @@
+import 'package:fushi/src/models/preference_keys.dart'
+    show kAnkiSettingsPrefKey;
 import 'package:fushi/src/sync/sync_repository.dart';
 
 /// 「一条 `preferences` key 能不能离开本设备」的**唯一真相源**。
@@ -24,7 +26,7 @@ import 'package:fushi/src/sync/sync_repository.dart';
 ///   *全部* Drift prefs 逐行复制进快照，而备份导出只 DELETE `preferences`。
 ///   默认导出类别包含 `profiles`（见 `defaultBackupExportCategories()`），所以
 ///   只要用户切换过一次 Profile，`preferences` 那份删了也白删——凭据以
-///   `category='pref'` 行原样躺在导出的 `hibiki.db` 里。
+///   `category='pref'` 行原样躺在导出的 `fushi.db` 里。
 ///
 /// 所以判定必须收敛成一个谓词，由所有出境通道共用。形状兜底不再限定 `sync_`
 /// 前缀：一个 key 只要长得像凭据，无论属于哪个子系统都不出境。
@@ -65,6 +67,8 @@ abstract final class PrefRedactionPolicy {
   /// 形状兜底对它们无效（`qb_connection_config` 不含任何凭据子串），而它们的值
   /// 确实是明文密码或 API key。新增同类 key 时必须补进这里。
   static const Set<String> sensitiveKeys = <String>{
+    // 复习同步 v2 各存储位置的端到端加密密钥（hex）。
+    'srs_sync2_location_keys',
     // qBittorrent WebUI 连接配置：{host, port, username, password} JSON，密码明文。
     'qb_connection_config',
     // 手动 HTTP 代理登录名；密码由 `password` 形状兜底命中，两者都不得随备份出境。
@@ -77,6 +81,7 @@ abstract final class PrefRedactionPolicy {
     'video_subtitle_subdl_api_key',
     'manga_cloud_ocr_api_key',
     'video_scraper_tmdb_api_key',
+    'music_acoustid_api_key',
     'video_metadata_fanart_api_key',
     'video_metadata_bangumi_token',
     'video_metadata_douban_authorized_token',
@@ -91,6 +96,8 @@ abstract final class PrefRedactionPolicy {
     // 必须显式点名。两者也在 deviceLocalPrefKeys 中，双重声明便于安全审计。
     'video_resource_torznab_config',
     'video_subtitle_opensubtitles_config',
+    // 同形：用户 BT 站清单，地址里可能带站点 passkey。也在 deviceLocalPrefKeys 中。
+    'resource_bt_sites',
     // AI 提供商清单：每条里带 base64 的 API key，键名本身没有 api_key/token 形状，
     // 必须显式点名，否则备份/Profile 分享时会把用户的付费 key 旁路带出设备。
     'ai_providers',
@@ -99,6 +106,17 @@ abstract final class PrefRedactionPolicy {
     'discovery_opds_servers',
     // 同形：AList / OpenList 站点清单里的 base64 密码。
     'discovery_alist_sites',
+    // 同形：Kavita 服务器清单里的 base64 长期 API key。
+    'kavita_servers',
+    // 同形：Audiobookshelf 服务器清单里的 base64 access / refresh token。
+    'discovery_audiobookshelf_servers',
+    // 同形：OpenSubsonic 服务器清单（服务器曲库）里的 base64 密码 / API key。
+    'music_subsonic_servers',
+    // 同形：朗读声音预设清单里 base64 的 Azure / Google API key 与网关 Bearer。
+    // 也在 deviceLocalPrefKeys 中。
+    'tts_voice_presets',
+    // 同形：AnkiSettings JSON 里的 AnkiConnect apiKey 明文。也在 deviceLocalPrefKeys 中。
+    kAnkiSettingsPrefKey,
   };
 
   /// key 是否属于「设备本地 / 凭据」，即备份、Profile 快照与 Profile 分享 JSON

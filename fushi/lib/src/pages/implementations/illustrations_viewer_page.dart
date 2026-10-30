@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart' show compute;
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:fushi_audio/fushi_audio.dart'
     show ReaderPosition, ReaderPositionRepository;
 import 'package:fushi_core/fushi_core.dart' show FushiDatabase;
@@ -14,8 +14,9 @@ import 'package:fushi/src/media/sources/reader_fushi_source.dart'
 import 'package:fushi/src/pages/implementations/reader_fushi_page.dart'
     show computeTocAnchorCharOffsets, tocAnchorKey;
 import 'package:fushi/src/reader/illustration_zoom_viewer.dart';
+import 'package:fushi/src/reader/image_actions_sheet.dart';
 import 'package:fushi/src/reader/reader_collection_volumes.dart'
-    show epubImageFileFor, parseVolumeBookForPeek;
+    show epubImageFileFor, parseVolumeBookForPeekOffUi;
 import 'package:fushi/src/reader/reader_gallery_page.dart';
 import 'package:fushi/src/reader/ttu_toc_flatten.dart';
 import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
@@ -27,7 +28,7 @@ import 'package:fushi/utils.dart';
 /// 装载与接线，画廊本体只有一份。
 ///
 /// 与阅读器内打开的差别只在数据来源：
-/// - 结构在 isolate 里解析（[parseVolumeBookForPeek]，与看兄弟卷同一入口）；
+/// - 结构在 isolate 里解析（[parseVolumeBookForPeekOffUi]，与看兄弟卷同一入口）；
 /// - 阅读位置读 Drift `reader_positions`；没有位置行 = 这本一次都没打开过，
 ///   传 `currentChapter: null`——不按进度遮罩、不出「当前阅读位置」标记；
 /// - 揭开 / 恢复遮罩直接落 `revealed_images`（与阅读器共享真相源，BUG-898）；
@@ -99,12 +100,14 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
     }
     try {
       // 结构解析（isolate）与两次 Drift 读互不依赖，并行起跑。
-      final Future<EpubBook> bookFuture =
-          compute(parseVolumeBookForPeek, widget.extractDir);
+      final Future<EpubBook> bookFuture = parseVolumeBookForPeekOffUi(
+        widget.extractDir,
+      );
       final Future<ReaderPosition?> positionFuture = widget.bookUid.isEmpty
           ? Future<ReaderPosition?>.value(null)
-          : ReaderPositionRepository(widget.database)
-              .findByBookUid(widget.bookUid);
+          : ReaderPositionRepository(
+              widget.database,
+            ).findByBookUid(widget.bookUid);
       final Future<Set<String>> revealedFuture = widget.bookUid.isEmpty
           ? Future<Set<String>>.value(<String>{})
           : widget.database.getRevealedImageKeys(widget.bookUid);
@@ -158,7 +161,10 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
     if (widget.bookUid.isEmpty) return; // 无 uid 只留内存态，不落孤儿行。
     try {
       await widget.database.markImageRevealed(
-          widget.bookUid, key, DateTime.now().millisecondsSinceEpoch);
+        widget.bookUid,
+        key,
+        DateTime.now().millisecondsSinceEpoch,
+      );
     } catch (e, stack) {
       ErrorLogService.instance.log('IllustrationsViewer.reveal', e, stack);
     }
@@ -175,8 +181,8 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
 
   File? _fileFor(EpubImageRef ref) => epubImageFileFor(widget.extractDir, ref);
 
-  /// 与阅读器正文 / 阅读器插图册同一条缩放路径；Windows 右键复制、移动端长按
-  /// 分享（TODO-093 / BUG-177 的两个入口）。
+  /// 与阅读器正文 / 阅读器插图册同一条缩放路径；Windows 右键保存 / 复制、移动端
+  /// 长按弹图片动作面板（TODO-093 / BUG-177 的两个入口）。
   void _openZoom(EpubImageRef ref) {
     final File? file = _fileFor(ref);
     if (file == null) return;
@@ -186,18 +192,24 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
         context,
         (BuildContext routeContext) => ContextMenuTrigger(
           onInvoke: isWindowsPlatform
-              ? (Offset position) => unawaited(showImageCopyContextMenu(
+              ? (Offset position) => unawaited(
+                  showImageCopyContextMenu(
                     routeContext,
                     position,
                     onCopy: () => copyImageFileToClipboard(file),
-                  ))
+                    onSave: () => runImageAction(ImageAction.save, file),
+                  ),
+                )
               : null,
+          // 长按 = 全局图片动作面板（保存 / 分享），与阅读器正文同一个。
           child: IllustrationZoomViewer(
             file: file,
             diagnosticTag: 'IllustrationsViewer.zoom',
             onLongPress: isWindowsPlatform
                 ? null
-                : () => unawaited(shareImageFile(file)),
+                : () => unawaited(
+                    showImageActionsSheet(routeContext, file: file),
+                  ),
           ),
         ),
       ),
@@ -243,31 +255,23 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
   }
 
   /// 装载中 / 出错：带返回键的普通页面壳。
+  ///
+  /// 走统一的加载 / 空态组件：MD3 Expressive 指示器 / Apple 菊花，错误用中性
+  /// 占位块 + 单色错误图标，不再整段铺 error 色文字。
   Widget _buildPending(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
-    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final String? error = _error;
     return FushiPageScaffold(
       title: widget.bookTitle,
-      body: Center(
+      // 页头浮在正文上（脚手架默认 extendBodyBehindHeader）：不滚动的占位整体
+      // 让开页头。
+      body: SafeArea(
+        bottom: false,
         child: error != null
-            ? Padding(
-                padding:
-                    EdgeInsets.all(tokens.spacing.page + tokens.spacing.card),
-                child: Text(
-                  error,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: theme.colorScheme.error),
-                ),
+            ? FushiPlaceholderMessage(
+                icon: Icons.error_outline_rounded,
+                message: error,
               )
-            : Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  adaptiveIndicator(context: context),
-                  SizedBox(height: tokens.spacing.card),
-                  Text(t.loading_illustrations),
-                ],
-              ),
+            : FushiLoadingView(message: t.loading_illustrations),
       ),
     );
   }

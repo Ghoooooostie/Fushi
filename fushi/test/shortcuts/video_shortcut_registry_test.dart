@@ -30,6 +30,7 @@ VideoPlayerShortcutActions _recordingActions(List<String> log) {
     nextFrame: () => log.add('nextFrame'),
     screenshot: () => log.add('screenshot'),
     screenshotSubtitled: () => log.add('screenshotSubtitled'),
+    ocrFrame: () => log.add('ocrFrame'),
     toggleFullscreen: () => log.add('toggleFullscreen'),
     toggleMiniWindow: () => log.add('toggleMiniWindow'),
     toggleMiniChrome: () => log.add('toggleMiniChrome'),
@@ -45,6 +46,9 @@ VideoPlayerShortcutActions _recordingActions(List<String> log) {
     toggleFavoriteSentence: () => log.add('toggleFavoriteSentence'),
     replayCurrentSubtitle: () => log.add('replayCurrentSubtitle'),
     replayPreviousSubtitle: () => log.add('replayPreviousSubtitle'),
+    copyCurrentSubtitle: () => log.add('copyCurrentSubtitle'),
+    copyCurrentSecondarySubtitle: () => log.add('copyCurrentSecondarySubtitle'),
+    toggleLoopCurrentSubtitle: () => log.add('toggleLoopCurrentSubtitle'),
     previousChapter: () => log.add('previousChapter'),
     nextChapter: () => log.add('nextChapter'),
     openSubtitleAlign: () => log.add('openSubtitleAlign'),
@@ -72,8 +76,13 @@ MapEntry<SingleActivator, VoidCallback>? _findSingleActivator(
 }) {
   for (final MapEntry<ShortcutActivator, VoidCallback> entry
       in activators.entries) {
-    final ShortcutActivator key = entry.key;
-    if (key is! SingleActivator) continue;
+    final ShortcutActivator raw = entry.key;
+    final SingleActivator? key = raw is InputBindingActivator
+        ? raw.exact
+        : raw is SingleActivator
+            ? raw
+            : null;
+    if (key == null) continue;
     if (key.trigger != trigger) continue;
     if (key.control != control || key.shift != shift) continue;
     if (key.alt != alt || key.meta != meta) continue;

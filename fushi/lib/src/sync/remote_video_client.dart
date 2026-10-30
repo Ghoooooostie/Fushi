@@ -1,5 +1,9 @@
 import 'dart:io';
 
+import 'package:fushi_engine/media/video/dandanplay_file_key.dart'
+    show DandanplayFileKey;
+import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart'
+    show VideoMetadataWork;
 import 'package:fushi_engine/sync/fushi_library_host_service.dart';
 import 'package:fushi/src/sync/remote_library_source.dart';
 
@@ -58,6 +62,20 @@ class RemoteDownloadCancelled implements Exception {
   String toString() => 'RemoteDownloadCancelled: $message';
 }
 
+/// 来源自己说清了原因的取流失败（如音乐插件回答「需要会员」）：播放页失败态原样显示
+/// [message]，不再按异常文本去猜「网络 / 不可用」。[message] 已是给用户看的文字。
+class RemoteVideoStreamRefusedException implements Exception {
+  const RemoteVideoStreamRefusedException(this.message, [this.cause]);
+
+  final String message;
+
+  /// 原始异常（只留证，不参与文案）。
+  final Object? cause;
+
+  @override
+  String toString() => 'RemoteVideoStreamRefusedException: $message ($cause)';
+}
+
 /// 具备实时流播 / 外挂字幕 / 跨端断点的远端视频源——只有互联 host 的 live 库有这些
 /// 端点（云盘目录只是一堆静态资产，没有服务端能回答这些请求）。
 abstract class RemoteVideoClient extends RemoteVideoSource {
@@ -108,6 +126,33 @@ abstract interface class RemoteVideoStreamHeaders {
   Map<String, String> get httpHeaderFields;
 }
 
+/// 「host 能回传图形字幕整轨」的可选能力（互联 host：它有原文件）。
+///
+/// 图形字幕（PGS / VobSub / DVB）由 libmpv 自绘，播放页要每句的起止才能制卡锚句；
+/// host 在本机把那一条字幕轨原样抽出来（几百 KB）回传，client 不为字幕把整片再读一遍。
+/// 媒体服务器 / URL 流没有这种端点，不实现本能力（它们的整轨抽取走流地址）。
+abstract interface class RemoteVideoGraphicSubtitleTrackFetch {
+  /// 把视频 [id] 第 [embeddedStreamIndex] 条字幕轨（host 的
+  /// [RemoteVideoEmbeddedSubtitleTrack.streamIndex]）的整轨载荷下载到 [dest]。host 不支持
+  /// （老 host 404 / 没接入抽取 501 / 编码不支持 415）或抽取失败时抛错。
+  Future<void> getRemoteVideoGraphicSubtitleTrack(
+    String id,
+    File dest, {
+    required int embeddedStreamIndex,
+    int episodeIndex = 0,
+  });
+
+  /// 同一条轨的轨头（JSON：编码 + 载荷里没有的 extradata，如 VobSub 调色板 / DVB
+  /// 页号）下载到 [dest]。这条轨没有轨头（PGS）或 host 不支持时抛错——调用方据此
+  /// 只靠载荷本身解（PGS 段流自带全部信息）。
+  Future<void> getRemoteVideoGraphicSubtitleTrackHeader(
+    String id,
+    File dest, {
+    required int embeddedStreamIndex,
+    int episodeIndex = 0,
+  });
+}
+
 /// 「知道某一集的集号」的可选能力（BUG-2626）。
 ///
 /// [RemoteVideoInfo] 只有 `title` 与合集内的 `sortIndex`：前者是分集标题（在线视频源
@@ -119,6 +164,37 @@ abstract interface class RemoteVideoStreamHeaders {
 abstract interface class RemoteVideoEpisodeNumber {
   /// 远端视频 [id] 的集号；不知道则 null（调用方据此回落，不要返回 0 或序号冒充）。
   int? remoteVideoEpisodeNumber(String id);
+}
+
+/// 远端视频所属作品的**身份**（字幕检索用，BUG-3199）。
+class RemoteVideoTitleIdentity {
+  const RemoteVideoTitleIdentity({
+    this.originalTitle,
+    this.title,
+    this.externalIds = const <String, String>{},
+    this.isMovie = false,
+  });
+
+  /// 作品原名（日文原名等）。
+  final String? originalTitle;
+
+  /// 服务器上的作品显示名（常是用户语言的译名）。
+  final String? title;
+
+  /// `provider → id`，provider 名小写（`anilist` / `tmdb` / `imdb` / `anidb` …），
+  /// 与 `video_metadata_provider_identities.provider` 同口径。
+  final Map<String, String> externalIds;
+
+  final bool isMovie;
+}
+
+/// 「知道远端视频是哪部作品」的可选能力（BUG-3199）：媒体服务器的条目自带
+/// `OriginalTitle` 与 `ProviderIds`，而界面上的标题是服务器的显示名（中文用户的库里
+/// 就是中文译名），拿它去日语字幕站搜必然空手。字幕检索先按 ID / 原名搜，没有时
+/// 才回落显示名。
+abstract interface class RemoteVideoTitleIdentityFetch {
+  /// 远端视频 [id] 所属作品的身份；拿不到返回 null（调用方回落显示名）。
+  Future<RemoteVideoTitleIdentity?> remoteVideoTitleIdentity(String id);
 }
 
 /// 「远端合集就是一部作品」的标记能力（BUG-2626 审查补）。
@@ -140,6 +216,16 @@ abstract interface class RemoteVideoPlaybackStop {
   Future<void> stopRemoteVideoPlayback(String id, int positionMs);
 }
 
+/// 「手动标记已看 / 未看」的可选能力（Jellyfin / Emby 的 PlayedItems 端点）。
+///
+/// 互联 host 与云盘的「看完」状态归对端自己，没有这个协议，所以单独拆成可选接口，
+/// 与 [RemoteVideoPlaybackStop] 同范式：页面 `source is RemoteVideoPlayedMark`
+/// 才出对应菜单项。
+abstract interface class RemoteVideoPlayedMark {
+  /// 把远端视频 [id] 标成已看（[played] = true）或未看。
+  Future<void> setRemoteVideoPlayed(String id, {required bool played});
+}
+
 /// 「播放会话生命周期」的可选能力——[RemoteVideoPlaybackStop] 的超集。
 ///
 /// Jellyfin / Emby 的会话协议是三段式：`/Sessions/Playing`（开始）→
@@ -159,6 +245,38 @@ abstract interface class RemoteVideoPlaybackSession
     int positionMs, {
     required bool paused,
   });
+}
+
+/// [RemoteVideoPlaybackSession] 实现共用的「按条目的本地暂停意图」。
+///
+/// 周期心跳（[RemoteVideoClient.putRemoteVideoPosition]）不知道播放器此刻是否暂停，
+/// 而播放页的断点落库是异步的：后台先暂停、延迟落库后才发的那条心跳若恒报「播放中」，
+/// 服务器会把刚暂停的条目重新标成播放中（BUG：Jellyfin #2107 / Plex 同根）。心跳的
+/// 播放态因此以这里记的意图为准。
+///
+/// 契约（各实现必须同样遵守，否则时序窗口重新打开）：
+/// - [record] 在暂停 / 继续请求发出**之前**同步调用：请求在途或失败都不改变本地意图，
+///   后一条心跳负责把失败的暂停补上。
+/// - [reset] 在起播的第一个 await **之前**调用：新一次播放从「播放中」开始。
+/// - 停止**不**清除意图：路由销毁时可能在停止上报之后再落一次断点，那不是继续播放。
+/// - 意图属于条目：别的条目不受影响。
+final class RemotePlaybackPauseIntent {
+  final Set<String> _pausedIds = <String>{};
+
+  /// 记录 [id] 的暂停 / 继续意图。
+  void record(String id, {required bool paused}) {
+    if (paused) {
+      _pausedIds.add(id);
+    } else {
+      _pausedIds.remove(id);
+    }
+  }
+
+  /// 新一次播放起播：清除 [id] 的暂停意图。
+  void reset(String id) => _pausedIds.remove(id);
+
+  /// 心跳读：[id] 最近一次本地意图是否为暂停。
+  bool isPaused(String id) => _pausedIds.contains(id);
 }
 
 /// 媒体服务器串流画质档（成熟客户端的「画质」菜单：自动 / 1080p 20 Mbps / …）。
@@ -231,6 +349,32 @@ abstract interface class RemoteVideoDetailFetch {
   /// 用单条目详情补齐 [listInfo]（同 id）。失败时由调用方 best-effort 退回
   /// [listInfo] —— 补字段是锦上添花，不该把下载/信息弹窗整条路径拖死。
   Future<RemoteVideoInfo> remoteVideoDetail(RemoteVideoInfo listInfo);
+}
+
+/// 「远端文件的弹幕匹配指纹」的**可选**能力（BUG-3614）。
+///
+/// 弹幕（弹弹play）按文件名 + 前 16 MiB md5 + 字节数匹配；远端流播时本机没有
+/// 文件、算不出指纹，播放页的弹幕于是整条短路——下载到本机后才有弹幕。只有持有
+/// 文件的互联 host 能算（媒体服务器 / 云盘 / 在线源没有这个端点），故单列能力，
+/// 播放页用 `client is RemoteVideoDanmakuKeyFetch` 判据。
+abstract interface class RemoteVideoDanmakuKeyFetch {
+  /// 远端视频 [id] 第 [episodeIndex] 集的弹弹play 指纹；host 不支持 / 视频没有
+  /// 本地文件返回 null（调用方当作没有弹幕来源，与改动前相同）。
+  Future<DandanplayFileKey?> remoteVideoDanmakuKey(
+    String id, {
+    int episodeIndex = 0,
+  });
+}
+
+/// 「远端单条视频自己的刮削资料」的**可选**能力（BUG-3613）。
+///
+/// 合集作品的资料随同步落进本机库（合集行本机有），但独立电影 / 单集作品挂在
+/// host 的视频行上，本机没有那一行（`video_metadata_works.book_uid` 外键指向
+/// `video_books`），同步只能跳过——远端单条视频因此在库页点开就直接播放，看不到
+/// 资料页。资料页改为按需向 host 取这一部的资料。
+abstract interface class RemoteVideoWorkMetadataFetch {
+  /// 远端视频 [id] 自己拥有的作品资料；host 没刮过 / 不支持返回 null。
+  Future<VideoMetadataWork?> remoteVideoWorkMetadata(String id);
 }
 
 /// 「播放偏好跨设备同步」的**可选**能力（BUG-1620 调轴起步，播放偏好同步泛化批

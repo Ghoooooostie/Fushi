@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fushi/src/utils/components/fushi_design_tokens.dart';
+import 'package:fushi/src/utils/components/shelf_cover_material.dart';
 
 import '../helpers/source_guard.dart';
 import '../widgets/widget_test_helpers.dart';
@@ -27,49 +27,64 @@ import '../widgets/widget_test_helpers.dart';
 void main() {
   const String path = 'lib/src/pages/implementations/home_video_page.dart';
 
-  test(
-      'video card covers are pinned to an orientation-adaptive AspectRatio '
+  test('video card covers are pinned to an orientation-adaptive AspectRatio '
       '(portrait 2:3 / landscape 16:9, no gap) — BUG-928 / TODO-2486', () {
     final String source = File(path).readAsStringSync();
 
     // 注释掩码（共享 maskComments，行+块）后再断言：把锚点字面量塞进行注释或
     // /* */ 块注释、实际代码回退定值的假绿被堵死（两种形态都变异实测确认）。
     final Map<String, String> bodies = <String, String>{
-      '_buildCard':
-          _stripLineComments(_functionSource(source, 'Widget _buildCard(')),
+      '_buildCard': _stripLineComments(
+        _functionSource(source, 'Widget _buildCard('),
+      ),
       '_buildRemoteVideoCard': _stripLineComments(
-          _functionSource(source, 'Widget _buildRemoteVideoCard(')),
+        _functionSource(source, 'Widget _buildRemoteVideoCard('),
+      ),
     };
 
     // 封面 Stack 直接被 Expanded 包裹 = 比例随剩余空间浮动的回归写法（BUG-928 根因）。
-    final RegExp expandedCover =
-        RegExp(r'Expanded\(\s*child: Stack\(\s*fit: StackFit\.expand');
+    final RegExp expandedCover = RegExp(
+      r'Expanded\(\s*child: Stack\(\s*fit: StackFit\.expand',
+    );
 
     for (final MapEntry<String, String> entry in bodies.entries) {
       final String name = entry.key;
       final String body = entry.value;
 
       expect(
-        body,
+        compactCode(body),
         contains(
-            'orientation == VideoCardOrientation.landscape ? 16 / 9 : 2 / 3'),
-        reason: '$name 的封面比例必须按朝向分流（TODO-2486 朝向自适应：竖版 '
+          compactCode(
+            'AspectRatio('
+            'aspectRatio: orientation == VideoCardOrientation.landscape '
+            '? 16 / 9 : 2 / 3, child: ShelfCoverFrame(child: Stack(',
+          ),
+        ),
+        reason:
+            '$name 的封面比例必须按朝向分流（TODO-2486 朝向自适应：竖版 '
             '2:3 / 横版 16:9），不得回到单一定值或随文字块浮动',
       );
       expect(
         body,
         isNot(contains(expandedCover)),
-        reason: '$name 封面不得用 Expanded(child: Stack(...)) 包裹——比例会随下方'
+        reason:
+            '$name 封面不得用 Expanded(child: Stack(...)) 包裹——比例会随下方'
             '文字块高度浮动、把空隙灌回封面区（BUG-928 回归）',
       );
 
-      // BUG-1184 起标题改为两行（原 BUG-943 要求单行，见下方 text block 用例里
-      // 记录的权衡）：窄屏卡宽只有约 154px，单行 ellipsis 放不下一个日文剧名。
+      // 2026-10-25 库页材质定版：文字块统一为 [ShelfCardMeta]（标题 + 副行 +
+      // 进度条，三个库同一形态）。标题仍是两行（BUG-1184：窄屏卡宽约 154px，
+      // 单行放不下常见的日文剧名；用户 10-25 复核「卡片标题要显示两行」），
+      // 行数由 kShelfCardMetaTitleLines 一处钉住。
       expect(
         body,
-        contains('maxLines: 2'),
-        reason: '$name 标题必须 maxLines: 2——窄屏卡宽约 154px，单行放不下常见的'
-            '日文剧名（BUG-1184）',
+        contains('_videoCardMeta('),
+        reason: '$name 文字块必须走统一的 _videoCardMeta / ShelfCardMeta',
+      );
+      expect(
+        kShelfCardMetaTitleLines,
+        2,
+        reason: '卡片标题必须两行（BUG-1184 / 用户 2026-10-25）',
       );
     }
   });
@@ -87,15 +102,15 @@ void main() {
   // 仍小于当年的最坏预留 83，比收敛后的 52 多约 22px。也就是说 BUG-943 抱怨的那块
   // 约 50px 空白并没有回归，短标题卡多出的约 22px 是让长标题能显示第二行必须付的
   // 代价。下面两个用例守住的是「不得回到最坏预留、也不得算漏一行」这条区间。
-  test(
-      'video card text block is computed from real line heights, not a '
+  test('video card text block is computed from real line heights, not a '
       'worst-case constant — BUG-943 / BUG-1184', () {
     final String source = File(path).readAsStringSync();
 
     expect(
       source,
       isNot(contains('_kVideoCardTextBlock =')),
-      reason: '文字块高度不得再退回硬编码常量——它必须随字号/文字缩放算出，否则'
+      reason:
+          '文字块高度不得再退回硬编码常量——它必须随字号/文字缩放算出，否则'
           '大字号下要么裁字（BUG-1184）要么留空白（BUG-943）',
     );
     expect(
@@ -113,42 +128,39 @@ void main() {
   // labelMedium 是 1.33，硬编码 1.3 会算低约 8px）。日后 MD3 排版或 metadata
   // token 变化把文字块推过 83，这条会红。
   testWidgets(
-      'computed video card text block stays well under the old worst-case '
-      '83px reservation — BUG-943 / BUG-1184', (WidgetTester tester) async {
-    double? measured;
-    await tester.pumpWidget(
-      buildTestApp(
-        Builder(builder: (BuildContext context) {
-          // 与 _videoCardTextBlock 同构：两行标题 + 一行进度 + 内边距 8/6 + slack。
-          final double titleLine = textLineHeight(
-            context,
-            Theme.of(context).textTheme.bodyMedium ??
-                const TextStyle(fontSize: 14),
-          );
-          final double metaLine = textLineHeight(
-            context,
-            FushiDesignTokens.of(context).type.metadata,
-          );
-          measured = titleLine * 2 + 8 + metaLine + 6 + kTextBlockSlack;
-          return const SizedBox.shrink();
-        }),
-      ),
-    );
+    'computed video card text block stays well under the old worst-case '
+    '83px reservation — BUG-943 / BUG-1184',
+    (WidgetTester tester) async {
+      double? measured;
+      await tester.pumpWidget(
+        buildTestApp(
+          Builder(
+            builder: (BuildContext context) {
+              // 与 _videoCardTextBlock 同源：材质库页统一文字块。
+              measured = ShelfCardMeta.heightFor(context);
+              return const SizedBox.shrink();
+            },
+          ),
+        ),
+      );
 
-    expect(measured, isNotNull, reason: 'builder 没跑到，测试无效');
-    expect(
-      measured!,
-      lessThan(83),
-      reason: '文字块高度必须明显小于 BUG-943 当年的最坏预留 83px，否则视频卡底部'
-          '再次出现常驻空白块',
-    );
-    expect(
-      measured!,
-      greaterThan(60),
-      reason: '两行标题 + 进度行装不下 60px——低于这个值说明公式又漏了一行或行高，'
-          '大字号下会重新裁字（BUG-1184）',
-    );
-  });
+      expect(measured, isNotNull, reason: 'builder 没跑到，测试无效');
+      expect(
+        measured!,
+        lessThan(83),
+        reason:
+            '文字块高度必须明显小于 BUG-943 当年的最坏预留 83px，否则视频卡底部'
+            '再次出现常驻空白块',
+      );
+      expect(
+        measured!,
+        greaterThan(60),
+        reason:
+            '标题行 + 副行 + 进度条装不下 40px——低于这个值说明公式漏了一行或行高，'
+            '大字号下会裁字（BUG-1184）',
+      );
+    },
+  );
 }
 
 /// 注释一律掩掉再断言（行注释 + 块注释，等长空白掩码）——复核实测：手写只剥
@@ -163,7 +175,8 @@ String _functionSource(String source, String startToken) {
   final RegExpMatch? next = nextWidget.firstMatch(
     source.substring(start + startToken.length),
   );
-  final int end =
-      next == null ? source.length : start + startToken.length + next.start + 1;
+  final int end = next == null
+      ? source.length
+      : start + startToken.length + next.start + 1;
   return source.substring(start, end);
 }

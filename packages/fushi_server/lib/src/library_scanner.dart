@@ -2,8 +2,9 @@
 ///
 /// 与 app 的 `SourceLibraryScanner` 走同一条入库路径（`VideoBookRepository` /
 /// `EpubImporter`），所以客户端经 `/api/library/videos` / `/books` 看到的行与
-/// 本机导入的一模一样。漫画根（kind=manga）走引擎 `MangaImporter`：`.mokuro`
-/// 卷与纯页图目录，卷归组规则与 app 共用引擎 `planMangaFolders`。
+/// 本机导入的一模一样。漫画根（kind=manga）走引擎 `MangaImporter` /
+/// `MangaArchiveImporter`：`.mokuro` 卷、单文件卷（cbz / zip / rar …）与纯页图目录，
+/// 卷归组规则与 app 共用引擎 `planMangaFolders`。
 ///
 /// 书 / 漫画根同样登记一行 `media_sources`（kind = book / manga），入库行带 `sourceId`，
 /// 并在来源扫描索引（引擎 `BookSourceIndex`）里记下「源相对路径 → 书 uid」——书 / 漫画
@@ -20,9 +21,15 @@ import 'dart:io';
 
 import 'package:drift/drift.dart' show Value;
 import 'package:fushi_core/fushi_core.dart';
+import 'package:fushi_engine/media/collections/library_organize/library_organize_service.dart';
+import 'package:fushi_engine/media/collections/library_organize/library_organize_facts.dart' show organizeEntryKeysAddedSince;
+import 'package:fushi_engine/media/collections/library_organize/library_organize_plan.dart' show OrganizeTrigger;
 import 'package:fushi_engine/epub/book_title_conflict.dart';
 import 'package:fushi_engine/epub/epub_importer.dart';
 import 'package:fushi_engine/foundation/engine_log.dart';
+import 'package:fushi_engine/media/collections/book_series_grouper.dart';
+import 'package:fushi_engine/media/manga/manga_archive_importer.dart';
+import 'package:fushi_engine/media/manga/manga_archive_probe.dart';
 import 'package:fushi_engine/media/manga/manga_folder_plan.dart';
 import 'package:fushi_engine/media/manga/manga_importer.dart';
 import 'package:fushi_engine/media/media_extensions.dart';
@@ -79,6 +86,10 @@ class _BookScan {
   final BookSourceIndex index;
   final Set<String> found;
   final Set<String> baselineUids;
+
+  /// 本轮枚举出的全部源（索引键形态）。重复判据（`isDuplicateSourceBook`）据此分辨
+  /// 「同名书是本来源里另一个仍在场的文件导进来的」与「是这个源自己的旧行」。
+  final Set<String> present = <String>{};
 }
 
 /// 一个视频根的扫描产物：磁盘上现存的归一路径 + 导入前已在库的行 uid（对账基线）。
@@ -97,6 +108,7 @@ class LibraryScanner {
     this.pruneMissing = true,
     this.pruneThreshold = const LibraryPruneThreshold(),
     this.pruneForce = false,
+    this.organizer,
   }) : _videos = VideoBookRepository(db);
 
   final FushiDatabase db;
@@ -112,6 +124,15 @@ class LibraryScanner {
   /// 越过护栏阈值也照删（危险：库根整体不可达时会批量误删）。
   final bool pruneForce;
   final VideoBookRepository _videos;
+
+  /// 扫描后对本轮新入库、规则归不了组的条目跑一次自动 AI 整理（spec
+  /// `docs/specs/2026-10-20-ai-library-organize-design.md` §10.2）；null = 不整理
+  /// （yaml `ai.library_organize` 没开）。
+  final LibraryOrganizeService? organizer;
+
+  /// 本轮新入库的成员行键（`mediaType NUL entryKey`），按库页域分。
+  final Map<CollectionShelfDomain, Set<String>> _newMembers =
+      <CollectionShelfDomain, Set<String>>{};
 
   Future<ScanSummary> scanAll(List<LibraryRootConfig> roots) async {
     final ScanSummary summary = ScanSummary();
@@ -129,15 +150,55 @@ class LibraryScanner {
         case 'book':
           final _BookScan scan = await _scanBooks(dir, root, summary);
           if (pruneMissing) await _pruneBookRoot(dir, root.id, SourceLibraryKind.book, scan, summary);
+          await _groupBookSeries(summary);
         case 'manga':
           final _BookScan scan = await _scanManga(dir, root, summary);
           if (pruneMissing) await _pruneBookRoot(dir, root.id, SourceLibraryKind.manga, scan, summary);
+          await _groupBookSeries(summary);
         default:
           summary.errors.add('${root.id}: 未支持的 kind "${root.kind}"（只有 video / book / manga）');
       }
     }
+    await _organizeNewEntries(summary);
     engineLog.logDiagnostic('LibraryScanner', 'scan done: $summary');
     return summary;
+  }
+
+  Future<void> _organizeNewEntries(ScanSummary summary) async {
+    final LibraryOrganizeService? service = organizer;
+    if (service == null) return;
+    for (final CollectionShelfDomain domain in const <CollectionShelfDomain>[
+      CollectionShelfDomain.books,
+      CollectionShelfDomain.manga,
+      CollectionShelfDomain.video,
+    ]) {
+      // 本轮新入库的 + 上次**跑完**的自动整理之后入库、还没处理到的（被每日额度 /
+      // 失败截断的那批不丢，下一轮扫描接着整理）。从没跑完过时只看本轮新的——打开
+      // 开关不会把整个库发给 AI。
+      final int? last = await service.lastCompletedAutoRunStartedAt(domain);
+      final Set<String> keys = <String>{
+        ...?_newMembers[domain],
+        if (last != null)
+          ...await organizeEntryKeysAddedSince(db, domain, last),
+      };
+      if (keys.isEmpty) continue;
+      final MapEntry<CollectionShelfDomain, Set<String>> e =
+          MapEntry<CollectionShelfDomain, Set<String>>(domain, keys);
+      try {
+        final LibraryOrganizeResult r = await service.run(
+          e.key,
+          trigger: OrganizeTrigger.auto,
+          onlyEntryKeys: e.value,
+        );
+        if (r.status == LibraryOrganizeStatus.failed) {
+          summary.errors.add('AI 整理（${e.key.name}）中止: ${r.error}');
+        }
+      } catch (err, stack) {
+        summary.errors.add('AI 整理（${e.key.name}）失败: $err');
+        engineLog.log('LibraryScanner.organize', err, stack);
+      }
+    }
+    _newMembers.clear();
   }
 
   /// 扫描一个视频根，返回**磁盘上现存**的视频文件路径集合（归一）与导入前已在库
@@ -177,7 +238,7 @@ class LibraryScanner {
             uniqueVideoBookUid(singleVideoBookUid(file.path), existingKeys);
         existingKeys.add(bookUid);
         final String? sidecar =
-            findSidecarSubtitle(file.path, langCode: subtitleLanguage);
+            await findSidecarSubtitle(file.path, langCode: subtitleLanguage);
         final String? subtitleFormat = sidecar == null
             ? null
             : p.extension(sidecar).replaceFirst('.', '').toLowerCase();
@@ -194,6 +255,8 @@ class LibraryScanner {
         ));
         createdPaths.add(file.path);
         summary.videosAdded++;
+        (_newMembers[CollectionShelfDomain.video] ??= <String>{})
+            .add('${MediaKind.video.dbValue}\u0000$bookUid');
         if (extractCovers) {
           final String? cover = await extractVideoCover(
             videoPath: file.path,
@@ -275,6 +338,17 @@ class LibraryScanner {
       lastScannedAt: DateTime.now(),
       lastScanError: error,
     );
+  }
+
+  /// 书 / 漫画根入库后，分卷按系列持久归组（与 app 来源扫描同步，BUG-3441）：
+  /// 无头服务端没有书架页，不在这里归，互联 client 拿到的清单就永远不带系列归属。
+  Future<void> _groupBookSeries(ScanSummary summary) async {
+    try {
+      await BookSeriesGrouper(db).groupAll();
+    } catch (e, stack) {
+      summary.errors.add('分卷系列归组失败: $e');
+      engineLog.log('LibraryScanner.groupBookSeries', e, stack);
+    }
   }
 
   /// 对一个视频根做一次对账（见 [pruneMissingVideoRows]）。
@@ -405,7 +479,9 @@ class LibraryScanner {
     final _BookScan scan = await _beginBookScan(dir, root, SourceLibraryKind.book);
     final int addedBefore = summary.booksAdded;
     int untracked = 0;
-    for (final String path in await listEpubSourceFiles(dir)) {
+    final List<String> epubs = await listEpubSourceFiles(dir);
+    scan.present.addAll(<String>[for (final String path in epubs) bookSourceRelPath(dir.path, path)]);
+    for (final String path in epubs) {
       final bool tracked = await _importTracked(
         scan,
         dir,
@@ -414,11 +490,11 @@ class LibraryScanner {
         isManga: false,
         format: BookFormat.epub,
         sourceFileName: p.basename(path),
-        import: () => EpubImporter.importFromPath(
+        import: (DuplicatePolicy policy) => EpubImporter.importFromPath(
           db: db,
           filePath: path,
           fileName: p.basename(path),
-          policy: const DuplicatePolicy.skip(),
+          policy: policy,
           sourceId: scan.source.id,
         ),
       );
@@ -428,17 +504,26 @@ class LibraryScanner {
     return scan;
   }
 
-  /// 漫画根：先逐个导入 `.mokuro` 卷，再把引擎归组出的纯页图卷目录逐个导入
-  /// （标题 = 目录名，与 app 源库扫描同口径）。重复卷按标题身份静默跳过；单卷
-  /// 失败只记错误，不中断整批。
+  /// 漫画根：先逐个导入 `.mokuro` 卷，再导入单文件卷（cbz / zip / rar / cbr / cb7 /
+  /// 纯图 EPUB），最后把引擎归组出的纯页图卷目录逐个导入（标题 = 文件名 / 目录名，
+  /// 与 app 源库扫描同口径）。重复判据是标题 + 来源路径（`isDuplicateSourceBook`）：
+  /// 本来源里另一个仍在场的文件撞了标题时换名另导；单卷失败只记错误，不中断整批。
   ///
-  /// cbz / cbr / pdf 本轮不做：压缩包导入器（`MangaArchiveImporter`）还在 app 侧
-  /// 且 rar/cb7 依赖外部 7-Zip；等它下沉进引擎再接。
+  /// 单文件卷走引擎 `MangaArchiveImporter`（rar / cbr / cb7 要 PATH 上有 7-Zip，缺了
+  /// 那一卷记错误）。包旁的 `book.mokuro` sidecar 已由归组划给包，导入器自己在包旁
+  /// 读它，不再另算一卷。`.zip` / `.epub` 先在后台 isolate 开包确认是页图包，词典包 /
+  /// 文字书跳过并记进来源索引的负向表（指纹 = 字节数 + 修改时刻），文件不变就不再重判。
+  /// PDF 不收：逐页栅格化在 app 侧（pdfium），服务端没有这条能力。
   Future<_BookScan> _scanManga(Directory dir, LibraryRootConfig root, ScanSummary summary) async {
     final _BookScan scan = await _beginBookScan(dir, root, SourceLibraryKind.manga);
     final int addedBefore = summary.mangaAdded;
     int untracked = 0;
     final MangaFolderPlan plan = planMangaFoldersInDirectory(dir);
+    scan.present.addAll(<String>[
+      for (final String path in <String>[...plan.mokuroPaths, ...plan.carrierPaths, ...plan.imageFolders])
+        bookSourceRelPath(dir.path, path),
+    ]);
+    scan.index.retainRejected(scan.present);
     for (final String mokuroPath in plan.mokuroPaths) {
       final bool tracked = await _importTracked(
         scan,
@@ -447,10 +532,40 @@ class LibraryScanner {
         summary,
         isManga: true,
         format: BookFormat.manga,
-        import: () => MangaImporter.importFromMokuroPath(
+        import: (DuplicatePolicy policy) => MangaImporter.importFromMokuroPath(
           db: db,
           mokuroPath: mokuroPath,
-          policy: const DuplicatePolicy.skip(),
+          policy: policy,
+          sourceId: scan.source.id,
+        ),
+      );
+      if (!tracked) untracked++;
+    }
+    for (final String carrierPath in plan.carrierPaths) {
+      // `.zip` / `.epub` 与词典包 / 文字书同形：与手动导入同一判据开包定性。
+      // 已在来源索引里的卷不再开包，由 [_importTracked] 直接按索引跳过；判过「不是
+      // 漫画」且内容没变的也不再开包。
+      final String rel = bookSourceRelPath(dir.path, carrierPath);
+      if (mangaArchiveNeedsContentProbe(carrierPath) && scan.index.uidOf(rel) == null) {
+        final String? fingerprint = localSourceContentFingerprint(carrierPath);
+        if (scan.index.isRejected(rel, fingerprint)) continue;
+        if (!await looksLikeImageArchiveInBackground(carrierPath)) {
+          scan.index.reject(rel, fingerprint);
+          continue;
+        }
+      }
+      final bool tracked = await _importTracked(
+        scan,
+        dir,
+        carrierPath,
+        summary,
+        isManga: true,
+        format: BookFormat.manga,
+        import: (DuplicatePolicy policy) => MangaArchiveImporter.importArchive(
+          db: db,
+          archivePath: carrierPath,
+          title: p.basenameWithoutExtension(carrierPath),
+          policy: policy,
           sourceId: scan.source.id,
         ),
       );
@@ -464,26 +579,73 @@ class LibraryScanner {
         summary,
         isManga: true,
         format: BookFormat.manga,
-        import: () => MangaImporter.importFromImageFolder(
+        import: (DuplicatePolicy policy) => MangaImporter.importFromImageFolder(
           db: db,
           imageDirPath: folder,
-          title: p.basename(folder),
-          policy: const DuplicatePolicy.skip(),
+          // 「系列/卷N」下探出的卷叫「系列名 卷目录名」，与 app 同口径（见引擎
+          // MangaSeriesVolume.title）；随后 BookSeriesGrouper 按书名把它们收进系列合集。
+          title: plan.imageFolderTitle(folder),
+          policy: policy,
           sourceId: scan.source.id,
         ),
       );
       if (!tracked) untracked++;
     }
+    await _retireFlattenedSeries(dir, root.id, plan, scan, summary);
     await _finishBookScan(root.id, scan, summary.mangaAdded - addedBefore, untracked);
     return scan;
+  }
+
+  /// 旧版把 `系列/卷N/页图` 的整个系列目录导成一本；本轮拆出的分卷全部在库后回收那本
+  /// 合订本（引擎 `retireFlattenedMangaSeries`，与 app 来源扫描同一份）。它的源目录
+  /// 还在，对账不会删它，不收就是合订本与分卷各一份。
+  Future<void> _retireFlattenedSeries(
+    Directory dir,
+    String rootId,
+    MangaFolderPlan plan,
+    _BookScan scan,
+    ScanSummary summary,
+  ) async {
+    final Map<String, List<String>> volumeDirs = plan.seriesVolumeDirs;
+    if (volumeDirs.isEmpty) return;
+    final ({List<String> retiredUids, List<String> errors}) result = await retireFlattenedMangaSeries(
+      db: db,
+      index: scan.index,
+      sourceId: scan.source.id,
+      series: <FlattenedMangaSeries>[
+        for (final MapEntry<String, List<String>> e in volumeDirs.entries)
+          (
+            seriesRel: bookSourceRelPath(dir.path, e.key),
+            seriesTitle: plan.seriesVolumes[e.value.first]!.seriesTitle,
+            volumeRels: <String>[for (final String v in e.value) bookSourceRelPath(dir.path, v)],
+          ),
+      ],
+    );
+    summary.mangaPruned += result.retiredUids.length;
+    if (result.retiredUids.isNotEmpty) {
+      engineLog.logDiagnostic(
+        'LibraryScanner.manga',
+        '$rootId: retired ${result.retiredUids.length} flattened series book(s) superseded by split volumes',
+      );
+    }
+    for (final String e in result.errors) {
+      summary.errors.add('$rootId: retire flattened series: $e');
+      engineLog.logDiagnostic('LibraryScanner.manga', '$rootId: $e');
+    }
   }
 
   /// 导入一个书 / 漫画源并登记进来源索引。返回 false 表示这个源撞上了一本
   /// **认领不了**的同名书（别的库根 / 手动导入的）：它不进索引，也就永远不会被对账删。
   ///
   /// 索引里已有该源且书还在库 → 不再导入（此前每轮都重新解压整本再判重复）。
-  /// 导入被判重复 → 交给引擎 `adoptExistingBookForSource` 按保守判据认领存量行
-  /// （旧版扫描进来、没记来源的书在这里回填）。单卷失败只记错误，不中断整批。
+  /// 导入撞上同名书 → 引擎重复判据 `isDuplicateSourceBook`（标题 + 来源路径）：
+  /// - 本来源里另一个仍在场的文件已认领那本书 → 不是重复，按 `DuplicatePolicy.suffix()`
+  ///   换名另导（`系列A/Vol 1.cbz` 与 `系列B/Vol 1.cbz` 是两卷）；
+  /// - 是这个源自己的旧行 → `adoptExistingBookForSource` 认领（旧版扫描进来、没记
+  ///   来源的书在这里回填）；
+  /// - 别的库根 / 手动导入的书 → 不认领、不导入。
+  ///
+  /// 单卷失败只记错误，不中断整批。
   Future<bool> _importTracked(
     _BookScan scan,
     Directory dir,
@@ -492,7 +654,7 @@ class LibraryScanner {
     required bool isManga,
     required BookFormat format,
     String? sourceFileName,
-    required Future<String> Function() import,
+    required Future<String> Function(DuplicatePolicy policy) import,
   }) async {
     final String rel = bookSourceRelPath(dir.path, sourcePath);
     scan.found.add(rel);
@@ -500,17 +662,46 @@ class LibraryScanner {
       isManga ? summary.mangaSkipped++ : summary.booksSkipped++;
       return true;
     }
-    try {
-      final String bookKey = await import();
+    Future<void> record(String bookKey) async {
       final String? uid = await bookUidForKey(db, bookKey);
-      if (uid != null) scan.index.put(rel, uid);
+      if (uid != null) {
+        scan.index.put(rel, uid);
+        (_newMembers[isManga
+                ? CollectionShelfDomain.manga
+                : CollectionShelfDomain.books] ??= <String>{})
+            .add('${MediaKind.epub.dbValue}\u0000$uid');
+      }
       isManga ? summary.mangaAdded++ : summary.booksAdded++;
-    } on DuplicateImportCancelledException catch (dup) {
+    }
+
+    try {
+      String? duplicateTitle;
+      try {
+        await record(await import(const DuplicatePolicy.skip()));
+      } on DuplicateImportCancelledException catch (dup) {
+        duplicateTitle = dup.title;
+      }
+      if (duplicateTitle == null) return true;
+      final SourceDuplicateVerdict verdict = await isDuplicateSourceBook(
+        db: db,
+        index: scan.index,
+        sourceId: scan.source.id,
+        rel: rel,
+        proposedTitle: duplicateTitle,
+        format: format,
+        presentRels: scan.present,
+        sourceFileName: sourceFileName,
+      );
+      if (verdict.kind == SourceDuplicateKind.otherSourceFile) {
+        await record(await import(const DuplicatePolicy.suffix()));
+        return true;
+      }
       isManga ? summary.mangaSkipped++ : summary.booksSkipped++;
+      if (verdict.kind != SourceDuplicateKind.sameSource) return false;
       final String? uid = await adoptExistingBookForSource(
         db: db,
         sourceId: scan.source.id,
-        proposedTitle: dup.title,
+        proposedTitle: duplicateTitle,
         format: format,
         sourceFileName: sourceFileName,
       );

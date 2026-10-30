@@ -172,6 +172,40 @@ void main() {
     }
   });
 
+  test(
+      'BUG-3490 online content identities may omit the fingerprint, '
+      'file-name identities may not', () {
+    CardSourceLink video(String uid, {String? fingerprint}) => CardSourceLink(
+        kind: CardSourceKind.video,
+        uid: uid,
+        sourceId: _sourceId,
+        episodeIndex: 0,
+        startMs: 1000,
+        endMs: 2000,
+        fingerprint: fingerprint);
+    for (final String uid in <String>[
+      'video/stream/yt:dQw4w9WgXcQ',
+      'video/stream/0123456789ab',
+      'anime-source:eu.kanade.tachiyomi.animeextension.en.x:42:/ep/5',
+    ]) {
+      expect(CardSourceLink.isContentAddressedVideoUid(uid), isTrue);
+      final CardSourceLink parsed =
+          CardSourceLink.parse(video(uid).toUri().toString());
+      expect(parsed.uid, uid);
+      expect(parsed.fingerprint, isNull);
+      // Downloaded online episodes still carry their file fingerprint.
+      expect(video(uid, fingerprint: _fingerprint).fingerprint, _fingerprint);
+    }
+    for (final String uid in <String>[
+      'video/作品',
+      'video/playlist/作品',
+      'video/iptv/0123456789ab-0123456789ab',
+    ]) {
+      expect(CardSourceLink.isContentAddressedVideoUid(uid), isFalse);
+      expect(() => video(uid), throwsFormatException, reason: uid);
+    }
+  });
+
   test('real video namespace and Unicode title identities survive round trip',
       () {
     for (final String uid in <String>[
@@ -350,6 +384,88 @@ void main() {
     expect(html, contains('&amp;'));
     expect(html, isNot(contains('/private')));
     expect(link.toHtml(label: '<script>'), contains('&lt;script&gt;'));
+  });
+
+  group('web sourceUrl', () {
+    String renderLink(AnkiMiningContext context) =>
+        AnkiHandlebarRenderer.render(
+          '{source-link}|{document-title}',
+          const AnkiMiningPayload(expression: 'word'),
+          context,
+        );
+
+    test('renders an escaped link when there is no library locator', () {
+      expect(
+        renderLink(
+          const AnkiMiningContext(
+            sentence: 's',
+            documentTitle: 'A <b> & "c"',
+            sourceUrl: 'https://example.com/p?a=1&b="x"',
+          ),
+        ),
+        '<a href="https://example.com/p?a=1&amp;b=%22x%22">'
+        'A &lt;b&gt; &amp; "c"</a>|A <b> & "c"',
+      );
+    });
+
+    test('falls back to the host when the title is blank', () {
+      expect(
+        renderLink(
+          const AnkiMiningContext(
+            sentence: 's',
+            sourceUrl: 'https://news.example.jp/a',
+          ),
+        ),
+        '<a href="https://news.example.jp/a">news.example.jp</a>|',
+      );
+    });
+
+    test('library locator wins over the web url', () {
+      final String html = renderLink(
+        AnkiMiningContext(
+          sentence: 's',
+          documentTitle: 'Book',
+          sourceLink: book(),
+          sourceUrl: 'https://example.com/',
+        ),
+      );
+      expect(html, contains('fushi://source?'));
+      expect(html, isNot(contains('example.com')));
+    });
+
+    test('non-http schemes and legacy contexts render the plain title', () {
+      for (final String? url in <String?>[
+        null,
+        '',
+        'javascript:alert(1)',
+        'file:///etc/passwd',
+        'not a url',
+      ]) {
+        expect(
+          renderLink(
+            AnkiMiningContext(
+              sentence: 's',
+              documentTitle: 'T',
+              sourceUrl: url,
+            ),
+          ),
+          'T|T',
+          reason: '$url',
+        );
+      }
+    });
+
+    test('copies keep the url', () {
+      const AnkiMiningContext base = AnkiMiningContext(
+        sentence: 's',
+        sourceUrl: 'https://example.com/',
+      );
+      expect(base.withSourceLink(null).sourceUrl, 'https://example.com/');
+      expect(
+        base.withMediaRefs(coverRef: null, sentenceAudioRef: null).sourceUrl,
+        'https://example.com/',
+      );
+    });
   });
 
   test('mined notes carry no source marker tag (BUG-2527)', () {

@@ -16,3 +16,6 @@
     consider(smash_fzmedia_);
     consider(yuris_);
     consider(fvp_);
+    consider(kogado_hy_);
+    consider(luca_);
+    consider(knife_);

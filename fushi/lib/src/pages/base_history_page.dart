@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:fushi/media.dart';
 import 'package:fushi/pages.dart';
 import 'package:fushi/src/shortcuts/gamepad_service.dart'
@@ -58,7 +58,7 @@ abstract class BaseHistoryPageState<T extends BaseHistoryPage>
   /// and long pressing.
   Widget buildMediaItem(MediaItem item) {
     Future<void> onLongPress() async {
-      await showAppDialog(
+      await showMediaItemActions(
         context: context,
         builder: (context) => MediaItemDialogPage(
           item: item,

@@ -127,6 +127,22 @@ class PathRebasePref {
 /// 按 tables.dart 出现顺序排列，便于人工对照。
 const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
   // ── media_open_history（v80 最近打开流，取代 media_items）──────────
+  // v124 AI 整理记录：改动细节 JSON（合集名 / 成员键 / 分组键）与「规则 / AI」来源
+  // 标记，都不含路径。
+  PathRebaseColumn('LibraryOrganizeChanges', 'payloadJson',
+      PathRebaseKind.notAPath, '成员键与合集快照 JSON，无路径。'),
+  PathRebaseColumn('LibraryOrganizeChanges', 'source', PathRebaseKind.notAPath,
+      '`rule` / `ai` 来源标记，不是来源路径。'),
+  // v136 AI 助手对话存档与操作记录（设备本地历史记录）：JSON 是当时的对话 / 参数 /
+  // 撤销载荷快照，不是供重开的路径引用，数据根迁移不改写。
+  PathRebaseColumn('AiAgentSessions', 'payloadJson', PathRebaseKind.notAPath,
+      '整场对话 JSON 快照，历史记录，无路径引用。'),
+  PathRebaseColumn('AiAgentActions', 'argsJson', PathRebaseKind.notAPath,
+      '操作参数 JSON 快照（记录当时调用了什么），不是路径引用。'),
+  PathRebaseColumn('AiAgentActions', 'undoPayloadJson',
+      PathRebaseKind.notAPath, '撤销载荷 JSON（操作前的值快照），不是路径引用。'),
+  PathRebaseColumn('MediaLinks', 'source', PathRebaseKind.notAPath,
+      '作品图谱连接来源（manual / mal / ai …），不是来源路径。'),
   PathRebaseColumn('MediaOpenHistory', 'mediaSource', PathRebaseKind.notAPath,
       '媒体源标识（MediaSource.uniqueKey），不是路径。'),
   PathRebaseColumn(
@@ -405,14 +421,14 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       'VideoMetadataPeople',
       'profilePath',
       PathRebaseKind.externalUserPath,
-      '预留给媒体来源旁的人物头像 sidecar；位于用户选择的来源根，不随 Hibiki 数据根迁移。'),
+      '预留给媒体来源旁的人物头像 sidecar；位于用户选择的来源根，不随 Fushi 数据根迁移。'),
   PathRebaseColumn('VideoMetadataCharacters', 'imageUrl',
       PathRebaseKind.notAPath, '角色图片的远端 provider URL，不是本机路径。'),
   PathRebaseColumn(
       'VideoMetadataCharacters',
       'imagePath',
       PathRebaseKind.externalUserPath,
-      '预留给媒体来源旁的角色图片 sidecar；位于用户选择的来源根，不随 Hibiki 数据根迁移。'),
+      '预留给媒体来源旁的角色图片 sidecar；位于用户选择的来源根，不随 Fushi 数据根迁移。'),
   PathRebaseColumn('VideoMetadataProviderIdentities', 'externalUrl',
       PathRebaseKind.notAPath, 'provider 条目详情页的远端 URL，不是本机路径。'),
   PathRebaseColumn('VideoMetadataRawSnapshots', 'rawJson',
@@ -430,7 +446,15 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       'VideoSidecarArtifacts',
       'path',
       PathRebaseKind.externalUserPath,
-      'Hibiki 生成的 NFO/图片在用户媒体来源目录中的规范绝对路径；不得随应用数据根改写。'),
+      'Fushi 生成的 NFO/图片在用户媒体来源目录中的规范绝对路径；不得随应用数据根改写。'),
+
+  // ── video_subtitle_glossaries（schema v119，视频字幕 AI 校对专名表）──
+  PathRebaseColumn('VideoSubtitleGlossaries', 'glossaryJson',
+      PathRebaseKind.notAPath,
+      '专名表 JSON（正式写法 / 读音 / 误写 / 备注 + 指纹与时刻），不含本机路径。'),
+  PathRebaseColumn('VideoSubtitleGlossaries', 'sourceFingerprint',
+      PathRebaseKind.notAPath,
+      '生成专名表所用资料的摘要指纹（撞正则是因为 source），不是路径。'),
 
   // ── video_metadata_extras（schema v69 本地/在线附加内容）──────────
   PathRebaseColumn('VideoMetadataExtras', 'sourceKind', PathRebaseKind.notAPath,
@@ -450,6 +474,26 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
   PathRebaseColumn('WebMineQueue', 'fieldsJson', PathRebaseKind.notAPath,
       '弹窗点击时冻结的 Anki 字段映射 JSON（词头/释义/句子文本），不含本机路径。'),
 
+  // ── web_browser_*（schema v128，内置浏览器）──────────────────────────
+  PathRebaseColumn('WebBrowserHistory', 'url', PathRebaseKind.notAPath,
+      '浏览历史的网页 URL，不是本机路径。'),
+  PathRebaseColumn('WebBrowserBookmarks', 'url', PathRebaseKind.notAPath,
+      '书签的网页 URL（NULL = 文件夹），不是本机路径。'),
+  PathRebaseColumn('WebBrowserSessionTabs', 'url', PathRebaseKind.notAPath,
+      '标签页会话里的网页 URL，不是本机路径。'),
+  PathRebaseColumn('WebBrowserClosedTabs', 'url', PathRebaseKind.notAPath,
+      '最近关闭标签页的网页 URL，不是本机路径。'),
+  PathRebaseColumn('WebBrowserDownloads', 'url', PathRebaseKind.notAPath,
+      '下载来源的远端 URL，不是本机路径。'),
+  PathRebaseColumn('WebBrowserDownloads', 'fileName', PathRebaseKind.notAPath,
+      '下载文件的裸文件名（展示用），不是绝对路径。'),
+  PathRebaseColumn(
+      'WebBrowserDownloads',
+      'savedPath',
+      PathRebaseKind.externalUserPath,
+      '浏览器下载落盘位置在系统下载目录 / 用户选的目录，不在数据根内；数据根迁移不搬'
+          '下载文件，也绝不能改写这一列（改了反而指向不存在的文件）。'),
+
   // ── pending_mine_queue（schema v116，设备端待发制卡队列，device-local）──
   PathRebaseColumn(
       'PendingMineQueue',
@@ -457,6 +501,20 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       PathRebaseKind.notAPath,
       '128-bit 随机 hex 行身份；载荷文件 <support>/pending_mine_queue/<id>.json 的文件名'
           '由它派生，表内不存任何路径列——数据根迁移整目录搬 support 即可，无需改写。'),
+
+  // SRS（v117 起的 9 张表）2026-10-23 起不在 tables.dart 里：归 Rust 的 srs.db
+  // （docs/specs/2026-10-23-srs-rust-store.md）。那些列全是身份 / 规范事件 JSON / 本机状态，
+  // 笔记字段里的媒体引用只存文件名，数据根迁移随 support 目录整搬 srs.db 即可，无需改写。
+  // ── remote_audio_bindings（schema v137，字幕书的远端音频绑定，device-local）──
+  // 全是协议名 / 服务器配置 id / 条目 id / 音轨 JSON（ino、偏移、时长、文件名）；
+  // 音频在服务器上，本机没有任何路径列，数据根迁移无需改写。
+  PathRebaseColumn('RemoteAudioBindings', 'serverConfigId',
+      PathRebaseKind.notAPath, '本机设置里的服务器配置 id，不是路径。'),
+  PathRebaseColumn('RemoteAudioBindings', 'itemId', PathRebaseKind.notAPath,
+      '服务器上的条目 id，不是路径。'),
+  PathRebaseColumn('RemoteAudioBindings', 'tracksJson', PathRebaseKind.notAPath,
+      '服务器音轨表（ino / 偏移 / 时长 / 文件名），文件名只是显示用，不是本机路径。'),
+
 
   // ── video_download_*（schema v78，device-local 持久流水线）────────
   PathRebaseColumn('VideoDownloadJobs', 'resourceProvider',
@@ -474,8 +532,11 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
   PathRebaseColumn(
       'VideoDownloadJobs',
       'observedSavePath',
-      PathRebaseKind.externalUserPath,
-      '下载后端报告的远端或用户外部保存根；由显式 remote→local 映射解释，不能随应用数据根改写。'),
+      PathRebaseKind.documentsRooted,
+      '下载后端报告的保存根（后端坐标）。内置引擎用默认下载根 <documents>/anime_downloads/content '
+          '时它就是数据根内的本机路径，随数据根搬走（resume 同步改写，BUG-3541），不改写就停在'
+          '旧根（BUG-3542）。外接远端 qBittorrent 的远端坐标、用户自选的外部下载根都不在旧根下，'
+          'DocumentsPathRebaser 按搬移作用域原样跳过；远端坐标仍由显式 remote→local 映射解释。'),
   PathRebaseColumn('VideoDownloadJobs', 'targetRelativeRoot',
       PathRebaseKind.notAPath, '受管来源内的相对整理根，不是绝对路径。'),
   PathRebaseColumn('VideoDownloadJobFiles', 'originalRelativePath',
@@ -487,20 +548,26 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
   PathRebaseColumn(
       'VideoDownloadJobFiles',
       'finalAbsolutePath',
-      PathRebaseKind.externalUserPath,
-      '用户选择的 MediaSource 内最终视频绝对路径；MediaSources.rootPath 同样明确不随应用数据根改写。'),
+      PathRebaseKind.documentsRooted,
+      '下载保存根内的最终视频绝对路径（原位做种），是任务与 VideoBooks.videoPath 的唯一纽带。'
+          '默认下载根 <documents>/anime_downloads/content 在搬移白名单里：文件与 videoPath '
+          '一起被搬/改写，这列不改写就与库行失配；用户自选的外部下载根不在作用域内，'
+          'DocumentsPathRebaser 按「位于被搬移顶层项下才改写」天然跳过。'),
   PathRebaseColumn('VideoDownloadJobSubtitles', 'originalFileName',
       PathRebaseKind.notAPath, 'provider 返回的原始字幕文件名，不是绝对路径。'),
   PathRebaseColumn(
       'VideoDownloadJobSubtitles',
       'stagedPath',
-      PathRebaseKind.externalUserPath,
-      '新任务暂存文件与视频 sidecar 同目录；legacy 导入要求保留原路径语义，均不随应用数据根改写。'),
+      PathRebaseKind.documentsRooted,
+      '新任务暂存文件与视频 sidecar 同目录：视频在默认下载根（<documents>/anime_downloads）'
+          '下时随数据根一起搬走，必须同步改写；外部下载根 / legacy 外部原路径不在搬移作用域内，'
+          '按作用域判据原样保留。'),
   PathRebaseColumn(
       'VideoDownloadJobSubtitles',
       'finalPath',
-      PathRebaseKind.externalUserPath,
-      '安装在用户 MediaSource 中的字幕 sidecar 绝对路径，不随应用数据根改写。'),
+      PathRebaseKind.documentsRooted,
+      '与视频同目录的字幕 sidecar 绝对路径；与 finalAbsolutePath 同判据——位于被搬移的'
+          '默认下载根下才改写，外部下载根原样保留。'),
   PathRebaseColumn('VideoDownloadSubscriptions', 'resourceProvider',
       PathRebaseKind.notAPath, '资源 provider/实例身份，不是路径。'),
   PathRebaseColumn('VideoDownloadSubscriptions', 'coverUrl',
@@ -655,6 +722,16 @@ final List<PathRebasePref> kPathRebasePrefs = <PathRebasePref>[
       PathValueShape.fontListJson,
       '同上（游戏查词窗口字体）。'),
   PathRebasePref(
+      dbSourcePrefKey(kReaderSourcePersistedKey, 'floating_lyric_fonts'),
+      PathRebaseKind.documentsRooted,
+      PathValueShape.fontListJson,
+      '同上（有声书悬浮字幕字体）。'),
+  PathRebasePref(
+      dbSourcePrefKey(kReaderSourcePersistedKey, 'srs_card_fonts'),
+      PathRebaseKind.documentsRooted,
+      PathValueShape.fontListJson,
+      '同上（复习 Fushi 卡片卡面字体）。'),
+  PathRebasePref(
       'local_audio_dbs',
       PathRebaseKind.supportRooted,
       PathValueShape.localAudioDbsJson,
@@ -707,7 +784,7 @@ final List<PathRebasePref> kPathRebasePrefs = <PathRebasePref>[
       PathRebaseKind.externalUserPath,
       PathValueShape.none,
       'qBittorrent remoteRoot→localRoot 显式映射；localRoot 是用户/后端外部文件系统路径，'
-          '与 MediaSources.rootPath 同语义，不能随 Hibiki 应用数据根改写。'),
+          '与 MediaSources.rootPath 同语义，不能随 Fushi 应用数据根改写。'),
   PathRebasePref('video_mpv_shader_dir', PathRebaseKind.externalUserPath,
       PathValueShape.none, '用户本机 mpv 着色器目录，外部路径，不随数据根走。'),
   PathRebasePref(
@@ -715,7 +792,7 @@ final List<PathRebasePref> kPathRebasePrefs = <PathRebasePref>[
       PathRebaseKind.externalUserPath,
       PathValueShape.none,
       '有声书素材库目录（JSON 字符串数组）。用户自己挑的字幕/正文库位置——通常是外接盘'
-          '或下载目录，不在 Hibiki 数据根下，跟着数据根改写只会把有效路径改坏。'
+          '或下载目录，不在 Fushi 数据根下，跟着数据根改写只会把有效路径改坏。'
           '目录没了不影响已入库的书（素材在导入时已复制进书的存储），设置页按'
           'missingDirs 如实提示。'),
   PathRebasePref('manga_external_mokuro_path', PathRebaseKind.externalUserPath,
@@ -728,6 +805,8 @@ final List<PathRebasePref> kPathRebasePrefs = <PathRebasePref>[
           '多要求几条声明，也不放过一个真路径 key。'),
   PathRebasePref('active_profile_id', PathRebaseKind.notAPath,
       PathValueShape.none, '当前 Profile 的自增 id（撞正则是因为 profile 里含 file）。不是路径。'),
+  PathRebasePref('profile_fallback_id', PathRebaseKind.notAPath,
+      PathValueShape.none, '绑定临时切换前用户自选 Profile 的自增 id（撞正则是因为 profile 里含 file）。不是路径。'),
   PathRebasePref('local_audio_db_display_name', PathRebaseKind.notAPath,
       PathValueShape.none, '旧单库显示名（与 local_audio_db_path 同族），不是路径。'),
 ];

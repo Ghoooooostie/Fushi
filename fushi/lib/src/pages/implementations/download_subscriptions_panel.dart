@@ -1,14 +1,20 @@
 import 'dart:async' show unawaited;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/utils/components/fushi_m3e_feedback.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:fushi/src/media/torrent/anime_download_subscription.dart';
 import 'package:fushi_engine/media/video/jimaku_client.dart'
     show jimakuLanguageLabel;
 import 'package:fushi/src/models/app_model.dart';
+import 'package:fushi/src/pages/implementations/bt_site_settings_route.dart';
+import 'package:fushi_engine/media/video/download/video_download_subscription_service.dart'
+    show isVideoSubscriptionBtSiteMissingError;
 import 'package:fushi/src/pages/fushi_page_placeholders.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 import 'package:fushi/utils.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 
 class DownloadSubscriptionsPanel extends ConsumerStatefulWidget {
   const DownloadSubscriptionsPanel({super.key});
@@ -87,28 +93,16 @@ class _DownloadSubscriptionsPanelState
   }
 
   Future<void> _delete(AnimeDownloadSubscription subscription) async {
-    final bool confirmed = await showAppDialog<bool>(
-          context: context,
-          builder: (BuildContext dialogContext) => AlertDialog(
-            title: Text(t.download_subscription_delete),
-            content: Text(
-              t.download_subscription_delete_confirm(
-                title: subscription.seriesTitle,
-              ),
-            ),
-            actions: <Widget>[
-              TextButton(
-                onPressed: () => Navigator.pop(dialogContext, false),
-                child: Text(t.dialog_cancel),
-              ),
-              FilledButton(
-                onPressed: () => Navigator.pop(dialogContext, true),
-                child: Text(t.dialog_delete),
-              ),
-            ],
-          ),
-        ) ??
-        false;
+    final bool confirmed = await showFushiConfirmDialog(
+      context: context,
+      title: t.download_subscription_delete,
+      message: t.download_subscription_delete_confirm(
+        title: subscription.seriesTitle,
+      ),
+      icon: FushiIcons.delete,
+      confirmLabel: t.dialog_delete,
+      destructive: true,
+    );
     if (!confirmed) return;
     await ref
         .read(appProvider)
@@ -119,15 +113,17 @@ class _DownloadSubscriptionsPanelState
 
   String _formatTime(int? milliseconds) {
     if (milliseconds == null) return t.download_subscription_never_checked;
-    final DateTime value =
-        DateTime.fromMillisecondsSinceEpoch(milliseconds).toLocal();
+    final DateTime value = DateTime.fromMillisecondsSinceEpoch(
+      milliseconds,
+    ).toLocal();
     return FushiTimeFormat.dateHourMinute(value);
   }
 
   @override
   Widget build(BuildContext context) {
-    final AnimeDownloadSubscriptionService? service =
-        ref.read(appProvider).animeDownloadSubscriptionService;
+    final AnimeDownloadSubscriptionService? service = ref
+        .read(appProvider)
+        .animeDownloadSubscriptionService;
     if (_loading) return buildLoading();
     if (service == null) {
       return Center(child: Text(t.anime_download_store_unavailable));
@@ -142,7 +138,7 @@ class _DownloadSubscriptionsPanelState
             Expanded(
               child: _subscriptions.isEmpty
                   ? _buildEmptyState(context)
-                  : RefreshIndicator(
+                  : FushiRefreshIndicator(
                       onRefresh: _checkAll,
                       child: ListView.separated(
                         padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
@@ -150,10 +146,10 @@ class _DownloadSubscriptionsPanelState
                         separatorBuilder: (_, __) => const SizedBox(height: 8),
                         itemBuilder: (BuildContext context, int index) =>
                             _buildSubscriptionCard(
-                          context,
-                          _subscriptions[index],
-                          checking,
-                        ),
+                              context,
+                              _subscriptions[index],
+                              checking,
+                            ),
                       ),
                     ),
             ),
@@ -174,8 +170,8 @@ class _DownloadSubscriptionsPanelState
             padding: const EdgeInsets.fromLTRB(16, 12, 12, 12),
             child: Row(
               children: <Widget>[
-                Icon(
-                  Icons.schedule_outlined,
+                FushiIcon(
+                  FushiIcons.schedule,
                   color: theme.colorScheme.primary,
                 ),
                 const SizedBox(width: 12),
@@ -186,15 +182,15 @@ class _DownloadSubscriptionsPanelState
                   ),
                 ),
                 const SizedBox(width: 8),
-                FilledButton.tonalIcon(
+                FushiFilledButton.tonalIcon(
                   onPressed: checking ? null : _checkAll,
                   icon: checking
                       ? const SizedBox(
                           width: 16,
                           height: 16,
-                          child: CircularProgressIndicator(strokeWidth: 2),
+                          child: FushiCircularProgressIndicator(strokeWidth: 2),
                         )
-                      : const Icon(Icons.refresh, size: 18),
+                      : const FushiIcon(FushiIcons.refresh, size: 18),
                   label: Text(t.download_subscription_check_all),
                 ),
               ],
@@ -206,28 +202,15 @@ class _DownloadSubscriptionsPanelState
   }
 
   Widget _buildEmptyState(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
     return ListView(
       padding: const EdgeInsets.all(24),
       children: <Widget>[
         const SizedBox(height: 72),
-        Icon(
-          Icons.subscriptions_outlined,
-          size: 48,
-          color: theme.colorScheme.outline,
-        ),
-        const SizedBox(height: 16),
-        Text(
-          t.download_subscription_empty_title,
-          textAlign: TextAlign.center,
-          style: theme.textTheme.titleMedium,
-        ),
-        const SizedBox(height: 8),
-        Text(
-          t.download_subscription_empty_body,
-          textAlign: TextAlign.center,
-          style: theme.textTheme.bodyMedium
-              ?.copyWith(color: theme.colorScheme.outline),
+        // 空态走共享占位（MD3 分组底卡 / Apple ContentUnavailableView 观感）。
+        FushiPlaceholderMessage(
+          icon: FushiIcons.subscriptions,
+          message: t.download_subscription_empty_title,
+          detail: t.download_subscription_empty_body,
         ),
       ],
     );
@@ -246,7 +229,7 @@ class _DownloadSubscriptionsPanelState
       if (subscription.jimakuEntryName?.isNotEmpty ?? false)
         '${t.video_jimaku_source}: ${subscription.jimakuEntryName}'
             '${subscription.jimakuLanguage == null ? '' : ' · '
-                '${jimakuLanguageLabel(subscription.jimakuLanguage!)}'}',
+                      '${jimakuLanguageLabel(subscription.jimakuLanguage!)}'}',
       t.download_subscription_after_episode(
         episode: subscription.startAfterEpisode,
       ),
@@ -266,10 +249,10 @@ class _DownloadSubscriptionsPanelState
             // BUG-1184：标题是番剧名，右侧 trailing 挂着开关 + 刷新 + 删除（≈150px
             // 不可压缩），窄屏上留给番剧名的宽度只剩几十像素。行高自由，放宽到两行。
             titleMaxLines: 2,
-            leading: Icon(
+            leading: FushiIcon(
               subscription.enabled
-                  ? Icons.notifications_active_outlined
-                  : Icons.notifications_off_outlined,
+                  ? FushiIcons.notificationsActive
+                  : FushiIcons.notificationsOff,
               color: subscription.enabled
                   ? theme.colorScheme.primary
                   : theme.colorScheme.outline,
@@ -293,20 +276,42 @@ class _DownloadSubscriptionsPanelState
                     ),
                     style: theme.textTheme.bodySmall,
                   ),
-                if (subscription.lastError?.isNotEmpty ?? false)
+                // 没有可用 BT 站而暂停：中性提示 + 去添加的入口，不显示引擎标记。
+                if (isVideoSubscriptionBtSiteMissingError(
+                  subscription.lastError,
+                ))
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: FushiInlineNotice(
+                      key: ValueKey<String>(
+                        'anime-subscription-bt-site-missing-${subscription.id}',
+                      ),
+                      severity: FushiNoticeSeverity.warning,
+                      message: t.bt_site_missing_status,
+                      actions: <Widget>[
+                        FushiTextButton(
+                          onPressed: () =>
+                              unawaited(pushBtSiteSettingsPage(context)),
+                          child: Text(t.bt_site_open_settings_action),
+                        ),
+                      ],
+                    ),
+                  )
+                else if (subscription.lastError?.isNotEmpty ?? false)
                   Text(
                     subscription.lastError!,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.bodySmall
-                        ?.copyWith(color: theme.colorScheme.error),
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: theme.colorScheme.error,
+                    ),
                   ),
               ],
             ),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Switch.adaptive(
+                FushiSwitch.adaptive(
                   value: subscription.enabled,
                   onChanged: checking
                       ? null
@@ -314,12 +319,12 @@ class _DownloadSubscriptionsPanelState
                 ),
                 FushiIconButton(
                   tooltip: t.download_subscription_check_now,
-                  icon: Icons.refresh,
+                  icon: FushiIcons.refresh,
                   onTap: checking ? null : () => _checkOne(subscription),
                 ),
                 FushiIconButton(
                   tooltip: t.download_subscription_delete,
-                  icon: Icons.delete_outline,
+                  icon: FushiIcons.delete,
                   onTap: () => _delete(subscription),
                 ),
               ],

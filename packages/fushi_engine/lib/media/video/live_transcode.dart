@@ -6,8 +6,9 @@
 //
 // ## 为什么是「自己拼 playlist + MPEG-TS 分段」
 //
-// 随包的精简 ffmpeg（`tool/ffmpeg-min`）没有编入 `hls` muxer，但 playlist 不过是一段
-// 文本，分段一段一个短命 ffmpeg 出 `mpegts` 就够——于是 playlist 由 Dart 生成。
+// 当时随包的精简 ffmpeg-min 没有编入 `hls` muxer（统一 FFmpeg 已含 `hls`），但 playlist
+// 不过是一段文本，分段一段一个短命 ffmpeg 出 `mpegts` 就够——于是 playlist 由 Dart 生成
+// （该设计沿用，也不依赖外部 ffmpeg 带 hls muxer）。
 //
 // 这条路换来的是**播放器侧零特殊处理**：libmpv 原生吃 HLS，进度条、总时长、seek 全
 // 部照常工作。相对的另一条路（一条不可 Range 的渐进流）要在播放器里拦截 seek、伪造
@@ -38,6 +39,8 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:fushi_core/fushi_core.dart' show fushiDebugPrint;
+import 'package:fushi_engine/media/video/bluray/aacs_media_session.dart';
+import 'package:fushi_engine/media/video/dvd/dvd_ffmpeg_input.dart';
 import 'package:fushi_engine/media/video/ffmpeg_backend.dart';
 import 'package:fushi_engine/utils/misc/helper_process_registry.dart';
 import 'package:meta/meta.dart';
@@ -140,7 +143,10 @@ List<String> buildTranscodeSegmentArgs({
     '-nostdin',
     '-loglevel', 'error',
     '-ss', _ffmpegSeconds(start),
-    '-to', _ffmpegSeconds(end),
+    // 用时长 `-t` 而不是终点 `-to`：两者对普通文件等价，但蓝光输入改写
+    // （`prepareBlurayFfmpegArgs`）把输入侧的 `-ss` / `-t` 折进播放列表窗口，不认
+    // `-to`——留着它会被原样套在拼接后的 concat 输入上，按错的时间轴截断。
+    '-t', _ffmpegSeconds(end - start),
     '-i', inputPath,
     // 视频恒取第一条；音频可由 client 指定（多音轨番剧的日配/中配），越界时 `?` 让
     // ffmpeg 静默跳过而不是硬失败。
@@ -188,8 +194,19 @@ List<String> buildTranscodeSegmentArgs({
     // PTS 域，而 HLS 的分段索引是 DTS 域的——两域必须重合，段边界才自洽。代价是
     // 少了 B 帧的压缩收益，但弱网上「seek 能用」比那几个百分点重要得多，何况
     // `-g 600` 本来就是一段一个关键帧。守卫见
-    // `fushi/test/media/video/live_transcode_test.dart` 与 `tool/ffmpeg-min/smoke-test.sh`。
+    // `fushi/test/media/video/live_transcode_test.dart` 与 `tool/ffmpeg-unified/smoke-test.sh`。
     '-bf', '0',
+    // **音频必须从段起点开始**：同一条 DTS 门槛的另一半。hls demuxer 的
+    // `first_timestamp` 取的是第 0 段**最先吐出**的包，而 mpegts 里音频 PES 小、
+    // 总比跨几十个 TS 包的视频 PES 先完整——于是第 0 段音频只要比视频晚起一点点，
+    // 门槛（`first_timestamp` + 累计 EXTINF）就越过了每一段唯一的段首 IDR，任何
+    // seek（含起播恢复进度）都把关键帧丢掉、一帧也解不出。源本身音轨带延迟就会
+    // 中招；蓝光标题的输入改写（`aselect`/`asetpts`）也会让音频晚起几百微秒。
+    // `first_pts=0` 正是 aresample 为「音频比视频晚起」准备的：开头补静音到段起点
+    // （编码器 priming 带来的负时间戳照旧由 muxer 抬平，音频仍不晚于视频）。实测
+    // 见 `fushi/test/sync/fushi_sync_server_bluray_native_test.dart`。没有音轨时这条
+    // 滤镜不生效。
+    '-af', 'aresample=first_pts=0',
     '-c:a', 'aac',
     '-b:a', '$audioBitrate',
     '-ac', '2',
@@ -319,11 +336,18 @@ bool transcodeAvailable() {
   // 一次时，移动端照样拿到 CliFfmpegBackend，于是能力位报 true、HLS URL 照发、
   // 每一段都失败。这里兜一条硬的。
   if (Platform.isAndroid || Platform.isIOS) return false;
-  // 进程单例外面恒套一层蓝光输入适配器；判的是它代理的真实后端能不能 exec 子进程。
-  final FfmpegBackend backend = resolveFfmpegBackend();
-  final FfmpegBackend runner = backend is BlurayFfmpegBackend
-      ? backend.delegate
-      : backend;
+  // 进程单例外面恒套原盘输入适配器（蓝光 → DVD）；判的是它们最终代理的真实后端
+  // 能不能 exec 子进程，适配器层数与顺序不进判据。
+  FfmpegBackend runner = resolveFfmpegBackend();
+  while (true) {
+    if (runner is BlurayFfmpegBackend) {
+      runner = runner.delegate;
+    } else if (runner is DvdFfmpegBackend) {
+      runner = runner.delegate;
+    } else {
+      break;
+    }
+  }
   return runner is CliFfmpegBackend;
 }
 
@@ -400,7 +424,7 @@ const Duration kTranscodeSegmentTimeout = Duration(seconds: 90);
 
 /// 跑一次分段转码进程，返回 (退出码, stdout 字节, stderr 摘要)。超时 SIGKILL 并抛
 /// [TranscodeFailure]（与既有 [runFfmpegProcess] 的处置同口径）。
-Future<({int code, List<int> bytes, String stderr})> _spawnSegment(
+Future<({int code, Uint8List bytes, String stderr})> _spawnSegment(
   String executable,
   List<String> args,
 ) async {
@@ -410,9 +434,17 @@ Future<({int code, List<int> bytes, String stderr})> _spawnSegment(
   );
   // stdout / stderr 必须同时 drain：任一管道写满 64 KB 都会把 ffmpeg 堵死，表现为
   // 「转码莫名其妙停住」。与既有 runFfmpegProcess 的防死锁处理同因。
-  final Future<List<int>> stdoutFuture = process.stdout
-      .expand<int>((List<int> c) => c)
-      .toList();
+  // 按块攒进 BytesBuilder：`expand<int>().toList()` 会把每段几 MB 的输出逐字节装箱成
+  // List<int>，最后还要再整段拷一次。
+  final Future<Uint8List> stdoutFuture = process.stdout
+      .fold<BytesBuilder>(BytesBuilder(copy: false), (
+        BytesBuilder b,
+        List<int> chunk,
+      ) {
+        b.add(chunk);
+        return b;
+      })
+      .then((BytesBuilder b) => b.takeBytes());
   final StringBuffer stderrBuffer = StringBuffer();
   final Future<void> stderrFuture = process.stderr.forEach((List<int> chunk) {
     if (stderrBuffer.length < 4096) {
@@ -420,7 +452,7 @@ Future<({int code, List<int> bytes, String stderr})> _spawnSegment(
     }
   });
   try {
-    final List<int> collected = await stdoutFuture.timeout(
+    final Uint8List collected = await stdoutFuture.timeout(
       kTranscodeSegmentTimeout,
     );
     await stderrFuture.timeout(kTranscodeSegmentTimeout);
@@ -447,39 +479,61 @@ Future<({int code, List<int> bytes, String stderr})> _spawnSegment(
 bool _bundledSegmentUnusable(int code, List<int> bytes) =>
     code != 0 && bytes.isEmpty;
 
-Future<Uint8List> _runSegment(List<String> args) async {
+/// 分段命令也是「吃媒体输入的 ffmpeg 命令」，必须经过与进程单例后端同一条蓝光输入
+/// 改写（[runWithBlurayFfmpegInput]）：互联 host 上蓝光标题的输入是 `.mpls`，不改写
+/// 就是把播放列表文件本身交给 ffmpeg。普通文件经过它原样不变。
+///
+/// 先取并发名额再开改写：加密盘的改写要为每段起一个解密 isolate，排队中的分段不该
+/// 提前占着它们。DVD 标题输入同理改写成 `dvdvideo` demuxer（[prepareDvdFfmpegArgs]，
+/// 与 [DvdFfmpegBackend] 同一条），不直接读 VOB。
+Future<Uint8List> _runSegment(List<String> input) async {
+  final List<String> args = prepareDvdFfmpegArgs(input);
   final TranscodeSegmentRunner? override = _runnerOverride;
-  if (override != null) return override(args);
+  if (override != null) {
+    return runWithBlurayFfmpegInput(
+      args,
+      (List<String> resolved, AacsMediaSession _) => override(resolved),
+    );
+  }
 
   await _acquireTranscodeSlot();
   try {
-    final String executable = resolveFfmpegExecutable();
-    ({int code, List<int> bytes, String stderr}) r;
-    try {
-      r = await _spawnSegment(executable, args);
-    } on ProcessException {
-      // 随包路径存在于磁盘却起不来（损坏 / 架构不匹配 / 无执行权限）。
-      if (executable == 'ffmpeg' || ffmpegExplicitOverride() != null) rethrow;
-      fushiDebugPrint('bundled ffmpeg failed to start, retrying PATH ffmpeg');
-      r = await _spawnSegment('ffmpeg', args);
-    }
-    if (_bundledSegmentUnusable(r.code, r.bytes) &&
-        executable != 'ffmpeg' &&
-        ffmpegExplicitOverride() == null) {
-      fushiDebugPrint(
-        'bundled ffmpeg produced no output (code=${r.code}); '
-        'retrying PATH ffmpeg',
-      );
-      r = await _spawnSegment('ffmpeg', args);
-    }
-    if (r.code != 0) {
-      fushiDebugPrint('transcode segment exited ${r.code}: ${r.stderr}');
-      throw TranscodeFailure(r.code, r.stderr);
-    }
-    return Uint8List.fromList(r.bytes);
+    return await runWithBlurayFfmpegInput(args, _spawnResolvedSegment);
   } finally {
     _releaseTranscodeSlot();
   }
+}
+
+Future<Uint8List> _spawnResolvedSegment(
+  List<String> args,
+  AacsMediaSession session,
+) async {
+  final String executable = resolveFfmpegExecutable();
+  ({int code, Uint8List bytes, String stderr}) r;
+  try {
+    r = await _spawnSegment(executable, args);
+  } on ProcessException {
+    // 随包路径存在于磁盘却起不来（损坏 / 架构不匹配 / 无执行权限）。
+    if (executable == 'ffmpeg' || ffmpegExplicitOverride() != null) rethrow;
+    fushiDebugPrint('bundled ffmpeg failed to start, retrying PATH ffmpeg');
+    r = await _spawnSegment('ffmpeg', args);
+  }
+  if (_bundledSegmentUnusable(r.code, r.bytes) &&
+      executable != 'ffmpeg' &&
+      ffmpegExplicitOverride() == null) {
+    fushiDebugPrint(
+      'bundled ffmpeg produced no output (code=${r.code}); '
+      'retrying PATH ffmpeg',
+    );
+    r = await _spawnSegment('ffmpeg', args);
+  }
+  if (r.code != 0) {
+    // stderr 可能带着解密回环 URL（持有即可读明文的 bearer 能力），进日志前脱敏。
+    final String stderr = session.redact(r.stderr);
+    fushiDebugPrint('transcode segment exited ${r.code}: $stderr');
+    throw TranscodeFailure(r.code, stderr);
+  }
+  return r.bytes;
 }
 
 /// 转码进程以非 0 退出。带上 ffmpeg 的 stderr，好让 host 日志里能看出是源文件的问题

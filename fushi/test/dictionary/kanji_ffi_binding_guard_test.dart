@@ -13,8 +13,8 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  String read(String relativeToHibiki) {
-    final File f = File(relativeToHibiki);
+  String read(String relativeToFushi) {
+    final File f = File(relativeToFushi);
     expect(f.existsSync(), isTrue,
         reason: 'expected file at ${f.absolute.path}');
     return f.readAsStringSync();
@@ -76,16 +76,5 @@ void main() {
     expect(engine.contains('FushiKanjiResult _convertKanji('), isTrue);
     // initializeTyped must accept the kanji bucket so S4 can route kanji dicts.
     expect(engine.contains('List<String> kanjiPaths'), isTrue);
-  });
-
-  test('Android JNI mirrors the kanji bindings symmetrically', () {
-    final String jni = read('../native/fushidicts/fushidicts_jni.cpp');
-    expect(jni.contains('nativeAddKanjiDict'), isTrue);
-    expect(jni.contains('nativeQueryKanjiJson'), isTrue);
-    final String bridge = read(
-        '../fushi/android/app/src/main/java/app/fushi/reader/FushiBridge.kt');
-    expect(bridge.contains('nativeAddKanjiDict'), isTrue);
-    expect(bridge.contains('nativeQueryKanjiJson'), isTrue);
-    expect(bridge.contains('fun queryKanjiJson('), isTrue);
   });
 }

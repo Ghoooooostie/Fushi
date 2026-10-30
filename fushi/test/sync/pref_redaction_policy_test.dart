@@ -1,4 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:fushi/src/models/preferences_repository.dart'
+    show kFloatingLyricWindowRectPrefKey;
+import 'package:fushi/src/profile/profile_keys.dart';
 import 'package:fushi/src/sync/pref_redaction_policy.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
 
@@ -15,6 +18,21 @@ void main() {
         expect(PrefRedactionPolicy.isDeviceLocalOrCredential(key), isTrue,
             reason: '$key 是设备本地 key，必须剔除');
       }
+    });
+
+    test('floating lyric window rect (local physical px) stays on this device',
+        () {
+      // 存的是本机物理像素坐标：随备份 / 同步 / Profile 到别的显示器布局只会把
+      // 窗口放到屏幕外。字面量钉死冻结的持久化名。
+      expect(kFloatingLyricWindowRectPrefKey, 'floating_lyric_window_rect');
+      expect(SyncRepository.deviceLocalPrefKeys,
+          contains(kFloatingLyricWindowRectPrefKey));
+      expect(
+          PrefRedactionPolicy.isDeviceLocalOrCredential(
+              kFloatingLyricWindowRectPrefKey),
+          isTrue);
+      expect(
+          ProfileKeys.isExcludedPref(kFloatingLyricWindowRectPrefKey), isTrue);
     });
 
     test(
@@ -76,6 +94,8 @@ void main() {
         // sync_* 里的行为开关（是用户设置，不是凭据——见 sync_repository 注释）。
         'sync_auto_enabled',
         'sync_content_enabled',
+        'sync_manga_content_enabled',
+        'interconnect_sync_manga_content',
         'sync_stats_enabled',
         // 'sync_dictionary_enabled' 曾在此：那个开关已随「词典改成显式上传 / 下载」
         // 删除，键没有读写方了，再列在这里只是一条钉住死数据的空断言。

@@ -17,9 +17,18 @@ extension _SyncOrchestratorAggregate on SyncOrchestrator {
         _db,
         scope: _scope,
         localApplyLock: runExclusiveWithSyncStateApply,
+        peerSnapshotCache: DirectoryAggregatePeerSnapshotCache(
+          () async => Directory(p.join(
+            (await enginePaths.supportRootDirectory()).path,
+            'sync_cache',
+            'aggregate',
+          )),
+        ),
       ).sync(
         store: _backend,
         deviceId: deviceId,
+        shareStats: syncStats,
+        shareWebHistory: syncWebHistory,
       );
     } catch (e) {
       report.noteError('aggregate sync', e);
@@ -72,6 +81,7 @@ extension _SyncOrchestratorAggregate on SyncOrchestrator {
         pushMerged: backend.putRemoteAggregate,
         shareStats: syncStats,
         shareFavorites: syncFavorites,
+        shareWebHistory: syncWebHistory,
       );
     } catch (e) {
       report.noteError('aggregate live sync', e);

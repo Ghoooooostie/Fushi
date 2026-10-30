@@ -1,10 +1,14 @@
 import 'dart:convert';
 
-import 'package:drift/drift.dart' show Value;
+import 'package:drift/drift.dart' show TableUpdateQuery, Value;
 import 'package:fushi_anki/fushi_anki.dart';
 import 'package:fushi_core/fushi_core.dart';
+import 'package:fushi_dictionary/fushi_dictionary.dart'
+    show kDictKanjiPartSettingKeys, kanjiPartSettingsIn;
 import 'package:fushi_engine/profile/profile_document.dart';
 import 'package:fushi/src/media/media_source.dart';
+import 'package:fushi/src/models/preference_keys.dart'
+    show kProfileFallbackIdPrefKey;
 import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/profile/language_binding.dart';
 import 'package:fushi/src/profile/profile_keys.dart';
@@ -39,6 +43,16 @@ class ProfileRepository {
 
   Future<List<ProfileRow>> getAllProfiles() => _db.getAllProfiles();
 
+  /// BUG-3148：`profiles` 表的任何写入（新建 / 改名 / 删除 / 导入）都会在这里冒一个
+  /// 事件，不论写入方是谁。
+  ///
+  /// 配置列表的视图模型是常驻的（非 autoDispose），以前只在自己发起的操作之后重读；
+  /// 互联「下载配置」与对端「上传配置」入站这两条写入绕过了它，列表就一直停在旧值，
+  /// 杀后台重进才看得到新配置。表级变更流是 drift 自带的唯一真相，比在每个写入点
+  /// 记得通知一遍可靠。
+  Stream<void> watchProfilesChanged() =>
+      _db.tableUpdates(TableUpdateQuery.onTable(_db.profiles)).map((_) {});
+
   Future<ProfileRow?> getProfileById(int id) => _db.getProfileById(id);
 
   Future<int> getActiveProfileId() async {
@@ -48,6 +62,17 @@ class ProfileRepository {
 
   Future<void> setActiveProfileId(int id) =>
       _db.setPref('active_profile_id', id.toString());
+
+  /// 「绑定切换前」用户自己选的那份配置（见 [kProfileFallbackIdPrefKey]）。
+  /// null = 当前激活配置就是用户自己选的，没有处于「绑定临时生效」状态。
+  Future<int?> getFallbackProfileId() async {
+    final raw = await _db.getPref(kProfileFallbackIdPrefKey);
+    return raw == null ? null : int.tryParse(raw);
+  }
+
+  Future<void> setFallbackProfileId(int? id) => id == null
+      ? _db.deletePref(kProfileFallbackIdPrefKey)
+      : _db.setPref(kProfileFallbackIdPrefKey, id.toString());
 
   Future<int> createProfile(String name) async {
     final now = DateTime.now().millisecondsSinceEpoch;
@@ -89,7 +114,7 @@ class ProfileRepository {
 
     final entries = <ProfileSettingsCompanion>[];
 
-    // Anki settings (SharedPreferences)
+    // Anki settings (Drift `anki_settings` row via the repository store)
     final ankiSettings = await _ankiRepo.loadSettings();
     final ankiMap = ProfileKeys.ankiSettingsToMap(ankiSettings);
     for (final entry in ankiMap.entries) {
@@ -221,6 +246,12 @@ class ProfileRepository {
       // `hasDictMeta` 保留：前 TODO-1077 的旧快照没有 dictionary_meta 行，跳过整
       // 段即可，不能被误当成「没有词典」。
       if (hasDictMeta) {
+        final Map<String, DictionaryMetaRow> liveDictRows =
+            <String, DictionaryMetaRow>{
+          for (final DictionaryMetaRow r
+              in await _db.getAllDictionaryMetadata())
+            r.name: r,
+        };
         for (final MapEntry<String, DictionaryMetadataCompanion> entry
             in dictMetaMap.entries) {
           final DictionaryMetadataCompanion companion = entry.value;
@@ -231,6 +262,10 @@ class ProfileRepository {
             collapsedLanguagesJson: companion.collapsedLanguagesJson.value,
             expandedLanguagesJson: companion.expandedLanguagesJson.value,
             languageOverride: companion.languageOverride.value,
+            metadataJson: _metadataWithProfileKanjiPartSettings(
+              liveDictRows[entry.key]?.metadataJson,
+              companion.metadataJson.value,
+            ),
           );
           if (updated == 0 &&
               (_isDictionaryInstalled?.call(entry.key) ?? false)) {
@@ -265,7 +300,7 @@ class ProfileRepository {
       );
     });
 
-    // Anki settings (SharedPreferences)
+    // Anki settings (Drift `anki_settings` row via the repository store)
     if (ankiMap.isNotEmpty) {
       final current = await _ankiRepo.loadSettings();
       final updated = ProfileKeys.mapToAnkiSettings(ankiMap, current);
@@ -358,6 +393,21 @@ class ProfileRepository {
     required String? bookUid,
     String? languageTag,
     required ProfileMediaKind? mediaType,
+  }) async =>
+      (await resolveBoundProfileId(
+        bookUid: bookUid,
+        languageTag: languageTag,
+        mediaType: mediaType,
+      )) ??
+      await getActiveProfileId();
+
+  /// [resolveProfileId] 的前三级：只返回**绑定命中**的 Profile，没命中返回 null
+  /// （不回落到激活配置）。调用方需要区分「绑定指定了它」与「没有绑定」——后者应当
+  /// 回到用户自己选的配置，而不是停在上一本书的绑定配置上。
+  Future<int?> resolveBoundProfileId({
+    required String? bookUid,
+    String? languageTag,
+    required ProfileMediaKind? mediaType,
   }) async {
     if (bookUid != null) {
       final bookProfileId = await getBookProfileId(bookUid);
@@ -375,7 +425,7 @@ class ProfileRepository {
       if (mtRow != null) return mtRow.profileId;
     }
 
-    return getActiveProfileId();
+    return null;
   }
 
   // ── 导出 / 导入（单 Profile JSON 序列化）────────────────────────────
@@ -479,6 +529,8 @@ class ProfileRepository {
     dbSourcePrefKey(kReaderSourcePersistedKey, 'dict_fonts'),
     dbSourcePrefKey(kReaderSourcePersistedKey, 'video_sub_fonts'),
     dbSourcePrefKey(kReaderSourcePersistedKey, 'game_lookup_fonts'),
+    dbSourcePrefKey(kReaderSourcePersistedKey, 'floating_lyric_fonts'),
+    dbSourcePrefKey(kReaderSourcePersistedKey, 'srs_card_fonts'),
   ];
 
   /// 解析并校验一个导出 JSON 字符串。坏文件 / 魔数不符 / 版本不兼容 / 结构非法
@@ -543,6 +595,44 @@ class ProfileRepository {
     });
   }
 
+  /// live 行的 metadataJson 换上快照里混合词典汉字部分的开关 / 位置
+  /// （[kDictKanjiPartSettingKeys]）后的 JSON；无需改写时回 null（= 不写该列）。
+  ///
+  /// metadataJson 其余键是安装事实（重导 / 在线更新整份重建），profile 不回写；
+  /// 但这两项是与 hiddenLanguages / order 同级的用户设置——不跟 profile 的话，
+  /// 在一个 profile 里关掉混合词典的汉字卡，所有 profile 都一起关了，而它的术语
+  /// 部分却按 profile 各自开关。快照里没有这两个键 = 该 profile 用默认值。
+  static String? _metadataWithProfileKanjiPartSettings(
+    String? liveMetadataJson,
+    String snapshotMetadataJson,
+  ) {
+    if (liveMetadataJson == null) return null;
+    final Object? live;
+    final Object? snapshot;
+    try {
+      live = jsonDecode(liveMetadataJson);
+      snapshot = jsonDecode(snapshotMetadataJson);
+    } on FormatException {
+      // 损坏的 JSON 不在这里修：live 行由词典仓库读取时处理，这里只是不碰它。
+      return null;
+    }
+    if (live is! Map || snapshot is! Map) return null;
+    final Map<dynamic, dynamic> liveMap = live;
+    final Map<String, String> wanted = kanjiPartSettingsIn(<String, String>{
+      for (final MapEntry<dynamic, dynamic> e in snapshot.entries)
+        if (e.key is String && e.value is String)
+          e.key as String: e.value as String,
+    });
+    final bool unchanged = kDictKanjiPartSettingKeys
+        .every((String key) => liveMap[key] == wanted[key]);
+    if (unchanged) return null;
+    return jsonEncode(<String, dynamic>{
+      for (final MapEntry<dynamic, dynamic> e in liveMap.entries)
+        if (!kDictKanjiPartSettingKeys.contains(e.key)) '${e.key}': e.value,
+      ...wanted,
+    });
+  }
+
   /// Decode a snapshot dictionary-meta value back into an upsert companion.
   /// Returns null (skip the row) on any malformed data — a single bad row must
   /// not abort the whole profile-apply (mirrors [ProfileKeys] Anki parsing,
@@ -580,7 +670,24 @@ class ProfileRepository {
     }
   }
 
-  Future<void> ensureDefaultProfile() async {
+  /// 同一个库上在跑的 [ensureDefaultProfile]（按库对象分组：仓储有多个实例共用
+  /// 一个库）。它是「先查有没有、没有就建 Default」：两路并发（视图模型首次加载 +
+  /// 控制通道 / AI 的 reload）会都看见空表、都去建，第二路撞 `profiles.name` 唯一
+  /// 约束（BUG-3784）。并发调用合并到同一次。
+  static final Expando<Future<void>> _ensuringDefault =
+      Expando<Future<void>>('ensureDefaultProfile');
+
+  Future<void> ensureDefaultProfile() {
+    final Future<void>? running = _ensuringDefault[_db];
+    if (running != null) return running;
+    final Future<void> ensuring = _ensureDefaultProfile().whenComplete(
+      () => _ensuringDefault[_db] = null,
+    );
+    _ensuringDefault[_db] = ensuring;
+    return ensuring;
+  }
+
+  Future<void> _ensureDefaultProfile() async {
     final existing = await _db.getAllProfiles();
     if (existing.isEmpty) {
       final id = await createProfile('Default');

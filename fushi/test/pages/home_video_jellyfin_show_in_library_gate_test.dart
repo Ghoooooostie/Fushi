@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -36,7 +36,7 @@ void main() {
   late Directory pathProviderDir;
   setUpAll(() {
     pathProviderDir = Directory.systemTemp.createTempSync(
-      'hibiki_jellyfin_show_gate_pp',
+      'fushi_jellyfin_show_gate_pp',
     );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
@@ -68,7 +68,7 @@ void main() {
     db = FushiDatabase.forTesting(NativeDatabase.memory());
     prefs = PreferencesRepository(db);
     await prefs.loadFromDb();
-    storeDir = Directory.systemTemp.createTempSync('hibiki_jellyfin_show_gate');
+    storeDir = Directory.systemTemp.createTempSync('fushi_jellyfin_show_gate');
     platformServices = testPlatformServices();
     ankiRepository = FakeAnkiRepository();
     appModel = AppModel(platformServices)
@@ -128,9 +128,7 @@ void main() {
     expect(client.listCalls, 0, reason: '闸门关时一次拍平清单请求都不发');
   });
 
-  testWidgets('对照：混排开 → 同一路径确实会问 Jellyfin 要清单', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('对照：混排开 → 同一路径确实会问 Jellyfin 要清单', (WidgetTester tester) async {
     await prefs.setJellyfinShowInLibrary(true);
     final _CountingJellyfinClient client = _CountingJellyfinClient();
     int loaderCalls = 0;
@@ -146,6 +144,25 @@ void main() {
       greaterThanOrEqualTo(1),
       reason: '闸门开时这条路径要真的取数，否则上面的 0 只是「根本没走到」',
     );
+  });
+
+  testWidgets('混排开→关：远端卡片立即消失，再开回来重新出现', (WidgetTester tester) async {
+    await prefs.setJellyfinShowInLibrary(true);
+    final _CountingJellyfinClient client = _CountingJellyfinClient();
+
+    await tester.pumpWidget(buildApp(client: client, onLoaderCalled: () {}));
+    await tester.pumpAndSettle();
+    expect(find.text('远端条目'), findsWidgets);
+
+    // 关掉开关：页面必须重取并丢掉旧清单，不能留下没有 client 的幽灵卡片
+    // （封面空白、点击无反应）。
+    await prefs.setJellyfinShowInLibrary(false);
+    await tester.pumpAndSettle();
+    expect(find.text('远端条目'), findsNothing);
+
+    await prefs.setJellyfinShowInLibrary(true);
+    await tester.pumpAndSettle();
+    expect(find.text('远端条目'), findsWidgets);
   });
 }
 

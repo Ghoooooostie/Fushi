@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/media/video/video_player_controller.dart';
 import 'package:fushi/src/media/video/video_subtitle_overlay.dart';
@@ -205,13 +205,15 @@ void main() {
             .replaceAll('\r\n', '\n');
     expect(actionsSrc.contains('video_setting_subtitle_text_color'), isTrue,
         reason: '必须用文字颜色 i18n 标题 key');
+    // PM-iIH9G0b：调色盘改经自适应外壳 FushiDialogColorPicker（内部仍是
+    // flutter_colorpicker 的 ColorPicker，按对话框内容区约束排版，窄屏不裁剪）。
     expect(
         actionsSrc.contains(
-            "import 'package:flutter_colorpicker/flutter_colorpicker.dart';"),
+            "import 'package:fushi/src/utils/components/fushi_dialog_color_picker.dart';"),
         isTrue,
-        reason: '必须引入 flutter_colorpicker 调色盘');
-    expect(actionsSrc.contains('ColorPicker('), isTrue,
-        reason: '必须用 ColorPicker 组件（调色盘取任意色，非固定预设）');
+        reason: '必须引入自适应调色盘外壳');
+    expect(actionsSrc.contains('FushiDialogColorPicker('), isTrue,
+        reason: '必须用调色盘组件（取任意色，非固定预设）');
     expect(actionsSrc.contains('_buildSubtitleColorRow('), isTrue,
         reason: '文字/背景色统一走取色行构建器');
     expect(actionsSrc.contains('s.copyWith(textColor: c)'), isTrue,
@@ -234,5 +236,39 @@ void main() {
         VideoSubtitleStyle.decode(VideoSubtitleStyle.encode(picked));
     expect(back.textColor, preset,
         reason: '用户选的字幕文字颜色必须持久化不丢（preferences 层往返）');
+  });
+
+  // #2312：「关掉尊重字幕自带样式后字幕一会白一会黑」。旧数据 textColor 为 null 时
+  // 渲染端曾回落 `ColorScheme.onSurface`——字幕色跟着 App 主题明暗翻转（浅色主题黑字
+  // 压画面）。开着尊重样式时 ASS 主色把它盖住，一关就暴露。字幕画在视频上，与主题无关。
+  group('#2312 未指定文字色时恒为固定白，不随 App 主题', () {
+    for (final Brightness brightness in Brightness.values) {
+      for (final bool respect in <bool>[false, true]) {
+        testWidgets('$brightness · respectAssStyle=$respect',
+            (WidgetTester tester) async {
+          // 带 markup 但无 ASS 主色：respect 开时也走用户统一色这条回退。
+          final VideoPlayerController c = _stubWithCues(<AudioCue>[
+            _assCue(r'{\an2}字幕'),
+            _plainCue('无样式')
+              ..sentenceIndex = 1
+              ..textFragmentId = '[data-cue-id="1"]',
+          ]);
+          addTearDown(c.dispose);
+          await tester.pumpWidget(MaterialApp(
+            theme: ThemeData(brightness: brightness),
+            home: Scaffold(
+              body: VideoSubtitleOverlay(
+                controller: c,
+                respectAssStyle: respect,
+              ),
+            ),
+          ));
+          await tester.pump();
+          expect(_fillText(tester, '字').style?.color, kDefaultSubtitleTextColor,
+              reason: '未指定文字色的字幕填充必须是固定白，不得取主题 onSurface');
+          expect(_fillText(tester, '无').style?.color, kDefaultSubtitleTextColor);
+        });
+      }
+    }
   });
 }

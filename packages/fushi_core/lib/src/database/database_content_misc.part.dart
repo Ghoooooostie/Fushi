@@ -31,6 +31,9 @@ mixin _FushiDbContentMisc
     required String collapsedLanguagesJson,
     required String expandedLanguagesJson,
     required String? languageOverride,
+    // metadataJson 整体是安装事实，profile 不回写；只有调用方已把其中属于用户
+    // 设置的键（混合词典汉字部分的开关 / 位置）合并进 live 值时才传，null = 不动。
+    String? metadataJson,
   }) =>
       (update(dictionaryMetadata)..where((t) => t.name.equals(name))).write(
         DictionaryMetadataCompanion(
@@ -39,6 +42,9 @@ mixin _FushiDbContentMisc
           collapsedLanguagesJson: Value(collapsedLanguagesJson),
           expandedLanguagesJson: Value(expandedLanguagesJson),
           languageOverride: Value(languageOverride),
+          metadataJson: metadataJson == null
+              ? const Value<String>.absent()
+              : Value<String>(metadataJson),
         ),
       );
 
@@ -100,6 +106,7 @@ mixin _FushiDbContentMisc
             epubBooks.title,
             epubBooks.format,
             epubBooks.importedAt,
+            epubBooks.localAddedAt,
             epubBooks.extractDir,
             epubBooks.completedAt,
           ])
@@ -113,6 +120,7 @@ mixin _FushiDbContentMisc
             title: row.read(epubBooks.title)!,
             format: row.read(epubBooks.format)!,
             importedAt: row.read(epubBooks.importedAt)!,
+            localAddedAt: row.read(epubBooks.localAddedAt),
             extractDir: row.read(epubBooks.extractDir)!,
             completedAt: row.read(epubBooks.completedAt),
           ),
@@ -202,15 +210,62 @@ mixin _FushiDbContentMisc
             ..where((t) => t.bookKey.equals(bookKey) & t.isbn.isNull()))
           .write(EpubBooksCompanion(isbn: Value<String?>(isbn)));
 
+  /// 还没写过 `sourceMetadata` 的 EPUB（`format='epub'` 且列为空）的
+  /// `(bookKey, extractDir)`，供引擎侧 `backfillEpubSeries` 只读 OPF 回填系列声明
+  /// （n4KC1azJvw）。导入时已写过系列描述符（含「没有声明」标记）或带别的描述符
+  /// （在线 / 网页小说）的书不在内。
+  Future<List<({String bookKey, String extractDir})>>
+      getEpubBooksMissingSourceMetadata() async {
+    final JoinedSelectStatement<HasResultSet, dynamic> query =
+        selectOnly(epubBooks)
+          ..addColumns(<Expression<Object>>[
+            epubBooks.bookKey,
+            epubBooks.extractDir,
+          ])
+          ..where(epubBooks.sourceMetadata.isNull() &
+              epubBooks.format.equals(BookFormat.epub.dbValue));
+    final List<TypedResult> rows = await query.get();
+    return <({String bookKey, String extractDir})>[
+      for (final TypedResult row in rows)
+        (
+          bookKey: row.read(epubBooks.bookKey)!,
+          extractDir: row.read(epubBooks.extractDir)!,
+        ),
+    ];
+  }
+
+  /// 只在 `sourceMetadata` 仍为空时写入（回填与导入 / 在线描述符并发时不覆盖先到
+  /// 的值）。返回受影响行数。
+  Future<int> setEpubBookSourceMetadataIfMissing(
+    String bookKey,
+    String sourceMetadata,
+  ) =>
+      (update(epubBooks)
+            ..where((t) =>
+                t.bookKey.equals(bookKey) & t.sourceMetadata.isNull()))
+          .write(EpubBooksCompanion(sourceMetadata: Value<String?>(sourceMetadata)));
+
   /// Inserts a book; returns its bookKey (the primary key) on success.
   ///
   /// v81：companion 未携带（或空）本机稳定 uid 时在此**单点自动生成**——
   /// 全部导入方（epub/manga/pdf/远端下载/格式重建）零改动即获得身份列。
+  ///
+  /// v118：`localAddedAt`（本机开始拥有的时刻）同样在此单点补齐——未携带即
+  /// 当时 now。本地导入、互联下载、云同步拉下全经这里落行，所以「本机首次拥有」
+  /// 只有这一个写入口；互联下载随后把 `importedAt` 改写成对端入库时刻（BUG-3452），
+  /// 不碰本列。备份恢复 / 合并导入是整行 SQL 搬运、不经此处，**保留备份内的值**：
+  /// 备份是某一时刻的快照，恢复它是重现当时的拥有事实，而不是用户在知道某次删除
+  /// 之后又主动取回了它——快照之后别处发生的「从所有设备删除」理应照常对它弹确认；
+  /// 写成恢复时刻会让一次整库恢复把快照之后被删掉的所有条目静默留下。
   Future<String> insertEpubBook(EpubBooksCompanion book) async {
+    final EpubBooksCompanion withLocalAddedAt = book.localAddedAt.present
+        ? book
+        : book.copyWith(
+            localAddedAt: Value<int?>(DateTime.now().millisecondsSinceEpoch));
     final EpubBooksCompanion withUid =
-        (book.uid.present && book.uid.value.isNotEmpty)
-            ? book
-            : book.copyWith(uid: Value(generateEpubBookUid()));
+        (withLocalAddedAt.uid.present && withLocalAddedAt.uid.value.isNotEmpty)
+            ? withLocalAddedAt
+            : withLocalAddedAt.copyWith(uid: Value(generateEpubBookUid()));
     // 三条语句一个事务：一次 fsync 而非三次，且 `watchEpubBookKeys` 之类的表级
     // 监听只在提交时收到一次失效，而不是每条语句各触发一次书架重算。
     await transaction(() async {

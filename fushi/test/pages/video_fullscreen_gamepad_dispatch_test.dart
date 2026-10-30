@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/media/video/video_player_shortcuts.dart';
 import 'package:fushi/src/shortcuts/gamepad_service.dart';
@@ -211,6 +211,7 @@ class _Rig {
       nextFrame: _noop,
       screenshot: _noop,
       screenshotSubtitled: _noop,
+      ocrFrame: _noop,
       toggleFullscreen: _noop,
       toggleMiniWindow: _noop,
       toggleMiniChrome: _noop,
@@ -225,6 +226,9 @@ class _Rig {
       toggleFavoriteSentence: _noop,
       replayCurrentSubtitle: _noop,
       replayPreviousSubtitle: _noop,
+      copyCurrentSubtitle: _noop,
+      copyCurrentSecondarySubtitle: _noop,
+      toggleLoopCurrentSubtitle: _noop,
       previousChapter: _noop,
       nextChapter: _noop,
       openSubtitleAlign: _noop,

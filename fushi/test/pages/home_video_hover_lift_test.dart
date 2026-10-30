@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:drift/drift.dart' show Value;
 import 'package:drift/native.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -36,6 +36,11 @@ import '../helpers/test_platform_services.dart';
 ///
 /// 另有一条几何门：横滚行视口高度若恰等于卡高，放大溢出的上下沿会被 ListView
 /// 视口裁成平边（墙格无此问题：格间不裁）。行高必须给 (scale-1)/2 留余量。
+///
+/// 2026-10-28 方案 F：继续观看全在首屏 VideoContinueSpotlight（主卡 + 小卡），
+/// 不再有「继续观看」横滚行；横滚行的几何门改用「最近添加」行（[seedRecent]）
+/// 验，首屏小卡另验悬停（被测小卡要先种一部更近播放的「主卡占位」
+/// [seedHeroDecoy]，才会落到小卡位）。
 void main() {
   final TestWidgetsFlutterBinding binding =
       TestWidgetsFlutterBinding.ensureInitialized();
@@ -178,7 +183,11 @@ void main() {
     );
     await mouse.moveTo(const Offset(5, 5));
     await tester.pumpAndSettle();
-    expect(liftScaleOf(tester, cardKey), closeTo(1.0, 1e-6), reason: '鼠标移出必须复位');
+    expect(
+      liftScaleOf(tester, cardKey),
+      closeTo(1.0, 1e-6),
+      reason: '鼠标移出必须复位',
+    );
   }
 
   Future<void> seedInProgress(String uid, String title) => db.upsertVideoBook(
@@ -190,18 +199,53 @@ void main() {
     ),
   );
 
-  testWidgets('首页继续观看行卡：悬停放大、移出复位', (WidgetTester tester) async {
-    await seedInProgress('video/row', 'Row Show');
+  /// 刚导入、没播过的单片：进「最近添加」横滚行。
+  Future<void> seedRecent(String uid, String title) => db.upsertVideoBook(
+    VideoBooksCompanion(
+      bookUid: Value<String>(uid),
+      title: Value<String>(title),
+      videoPath: Value<String>('/abs/$title.mp4'),
+      importedAt: Value<int?>(DateTime.now().millisecondsSinceEpoch),
+    ),
+  );
+
+  /// 一部最近刚播放的在看合集：占首屏主卡，其余在看条目落到首屏小卡位。
+  Future<void> seedHeroDecoy() async {
+    final int cid = await db.createMediaCollection(
+      'HeroDecoy',
+      collectionType: 'playlist',
+    );
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value<String>('video/hero-decoy'),
+        title: const Value<String>('HeroDecoy Ep1'),
+        videoPath: const Value<String>('/abs/hero-decoy.mp4'),
+        lastPositionMs: const Value<int>(60000),
+        lastPlayedAt: Value<int?>(DateTime.now().millisecondsSinceEpoch),
+      ),
+    );
+    await db.addToCollection(cid, MediaKind.video, 'video/hero-decoy');
+  }
+
+  testWidgets('首页「最近添加」行卡：悬停放大、移出复位', (WidgetTester tester) async {
+    await seedRecent('video/row', 'Row Show');
     await pumpPage(tester);
-    await expectHoverLifts(tester, 'home_video_continue_video/row');
+    await expectHoverLifts(tester, 'home_video_recent_video/row');
+  });
+
+  testWidgets('首屏继续观看小卡：悬停放大、移出复位', (WidgetTester tester) async {
+    await seedHeroDecoy();
+    await seedInProgress('video/side', 'Side Show');
+    await pumpPage(tester);
+    await expectHoverLifts(tester, 'home_video_continue_video/side');
   });
 
   testWidgets('横滚行视口给放大留出余量（不被裁成平边）', (WidgetTester tester) async {
-    await seedInProgress('video/room', 'Room Show');
+    await seedRecent('video/room', 'Room Show');
     await pumpPage(tester);
 
     final Finder card = find.byKey(
-      const ValueKey<String>('home_video_continue_video/room'),
+      const ValueKey<String>('home_video_recent_video/room'),
     );
     final Rect cardRect = tester.getRect(card);
     final Rect rowRect = tester.getRect(
@@ -217,6 +261,25 @@ void main() {
       rowRect.bottom - cardRect.bottom,
       greaterThanOrEqualTo(need - 0.5),
       reason: '放大溢出的下沿会被行视口裁掉：行高必须留 (scale-1)/2 余量',
+    );
+  });
+
+  testWidgets('横滚行首张卡左侧给放大留出横向余量（不被视口裁成平边）', (WidgetTester tester) async {
+    await seedRecent('video/side', 'Side Show');
+    await pumpPage(tester);
+
+    final Finder card = find.byKey(
+      const ValueKey<String>('home_video_recent_video/side'),
+    );
+    final Rect cardRect = tester.getRect(card);
+    final Rect rowRect = tester.getRect(
+      find.ancestor(of: card, matching: find.byType(ListView)).first,
+    );
+    final double need = cardRect.width * (kFushiHoverLiftScale - 1) / 2;
+    expect(
+      cardRect.left - rowRect.left,
+      greaterThanOrEqualTo(need - 0.5),
+      reason: '首张卡放大溢出的左沿会被行视口裁掉：列表首尾必须留横向余量',
     );
   });
 

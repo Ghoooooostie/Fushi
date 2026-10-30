@@ -25,6 +25,8 @@ import 'package:fushi/src/media/manga/manga_ocr_background_job.dart';
 import 'package:fushi/src/media/manga/mihon/manga_page_provider.dart';
 import 'package:fushi/src/utils/misc/error_log_service.dart';
 import 'package:fushi_engine/media/manga/mokuro_payload.dart';
+import 'package:fushi_engine/ocr/manga_ocr_service_impl.dart'
+    show ocrIntraOpNumThreads, resolveOcrPlatform;
 
 /// 一个正在（或刚刚）跑的整卷 OCR 任务。
 ///
@@ -94,6 +96,7 @@ class MangaOcrRunningJob {
       MangaOcrBackgroundEvent.progress(
         pagesDone: last?.pagesDone ?? 0,
         pagesTotal: last?.pagesTotal ?? 0,
+        uploading: last?.uploading ?? false,
         pageIndex: update.pageIndex,
         page: update.page,
       ),
@@ -160,16 +163,55 @@ class MangaOcrRunningJob {
 /// 进入阅读器即整卷识别之后，连着点开 N 本本地卷就是 N 个任务：本地 ONNX 每个任务
 /// 一个 isolate + 一整套 ORT 会话，Lens 则是 N 路并发上传。手机与开了低内存模式的
 /// 设备只跑 1 卷；桌面按核数给 1～2 卷（ONNX 自己就吃多核，再多只是互相抢）。
-/// [requestedTasks] 为 0 时自动选择，桌面用户可显式选择 1～4 个任务。
+/// [requestedTasks] 为 0 时自动选择，桌面用户可显式选择 1～[maxTasks] 个任务
+/// （[maxTasks] 见 [mangaOcrMaxParallelTasks]）。
 int resolveMangaOcrJobConcurrency({
   required bool isMobile,
   required bool lowMemoryMode,
   required int processors,
   int requestedTasks = 0,
+  int maxTasks = kMangaOcrMinSelectableTasks,
 }) {
   if (isMobile || lowMemoryMode) return 1;
-  if (requestedTasks > 0) return requestedTasks.clamp(1, 4);
+  if (requestedTasks > 0) return requestedTasks.clamp(1, maxTasks);
   return (processors ~/ 4).clamp(1, 2);
+}
+
+/// 手动档至少给到 4（放开前的上限；已存 4 的用户不能被悄悄降档）。
+const int kMangaOcrMinSelectableTasks = 4;
+
+/// 手动档的硬顶：每个任务一个 isolate + 一整套 ORT 会话（逐列 CTC 一套约 42 MB），
+/// 再多就是内存问题而不是 CPU 问题。偏好存储也按它截断。
+const int kMangaOcrMaxSelectableTasks = 16;
+
+/// 本机手动档最多能选几个跨书任务。
+///
+/// 单个任务的吞吐不随线程数涨（Windows 每任务钉 2 线程是实测最优，见
+/// `ocrIntraOpNumThreads`），机器更大时只能靠多开任务吃满核：上限 = 逻辑核 /
+/// 每任务线程数。[threadsPerJob] 为 null（非 Windows，ORT 默认吃满核）时多开只是
+/// 互抢，保持 [kMangaOcrMinSelectableTasks]。
+int mangaOcrMaxParallelTasks({
+  required int processors,
+  required int? threadsPerJob,
+}) {
+  final int threads = threadsPerJob ?? processors;
+  if (threads <= 0) return kMangaOcrMinSelectableTasks;
+  return (processors ~/ threads).clamp(
+    kMangaOcrMinSelectableTasks,
+    kMangaOcrMaxSelectableTasks,
+  );
+}
+
+/// 当前宿主的 [mangaOcrMaxParallelTasks]（设置 UI 与注册表共用）。
+int hostMangaOcrMaxParallelTasks() {
+  final int processors = Platform.numberOfProcessors;
+  return mangaOcrMaxParallelTasks(
+    processors: processors,
+    threadsPerJob: ocrIntraOpNumThreads(
+      platform: resolveOcrPlatform(Platform.operatingSystem),
+      processorCount: processors,
+    ),
+  );
 }
 
 /// 按 `bookKey` 索引的任务注册表；一本书同一时刻最多一个整卷任务。
@@ -454,12 +496,13 @@ class MangaOcrJobRegistry {
     // 整卷落盘与在线几何回填共用同一把 per-path 写锁：两者都是整份读-改-写，
     // 交叠会互相覆盖。
     final String target = running.mangaJsonPath;
-    await runExclusiveOnMangaJson<void>(
+    // 落盘的是并进 PDF 文字层之后的那份：阅读页拿 result 刷新显示，必须和磁盘一致。
+    final MokuroPayload written = await runExclusiveOnMangaJson<MokuroPayload>(
       target,
       () => writeMangaJsonAtomically(target, payload),
     );
-    running._result = payload;
-    follower?.onPersisted(target, payload);
+    running._result = written;
+    follower?.onPersisted(target, written);
     return event;
   }
 }

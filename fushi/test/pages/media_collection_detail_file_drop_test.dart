@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart' show Value;
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/src/media/collections/collection_episode_slot.dart';
@@ -77,6 +77,8 @@ void main() {
           home: MediaCollectionDetailPage(
             database: db,
             collection: MediaCollectionRow(
+              origin: 'user',
+              organizeAliases: '',
               id: collectionId,
               name: 'Show',
               collectionType: 'playlist',
@@ -106,6 +108,11 @@ void main() {
       ),
     );
     final Future<void> done = target.runDrop(paths, Offset.zero);
+    // BUG-3756：拖入路径的「是不是目录」改为 async 判（拖进来的常是网络盘上的文件，
+    // 同步 stat 冻结 UI isolate），真实 IO 在 fakeAsync 下要 runAsync 才回话。
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 50)),
+    );
     await tester.pumpAndSettle();
     await done;
     await tester.pumpAndSettle();
@@ -157,6 +164,10 @@ void main() {
     final Future<void> done = target.runDrop(<String>[
       '/v/Show 04.mkv',
     ], Offset.zero);
+    // 拖入路径的目录判定是真实 async IO（BUG-3756），fakeAsync 下要 runAsync 才回话。
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 50)),
+    );
     await tester.pumpAndSettle();
 
     final Finder dialog = find.byType(VideoImportDialog);

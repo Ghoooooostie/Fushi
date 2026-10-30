@@ -16,3 +16,6 @@
   SmashFzmediaAdapter smash_fzmedia_;
   YurisAdapter yuris_;
   FvpAdapter fvp_;
+  KogadoHyAdapter kogado_hy_;
+  LucaAdapter luca_;
+  KnifeAdapter knife_;

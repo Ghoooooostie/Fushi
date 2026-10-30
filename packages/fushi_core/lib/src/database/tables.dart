@@ -108,7 +108,14 @@ class SrtBooks extends Table {
   TextColumn get audioPathsJson => text().nullable()();
   TextColumn get srtPath => text()();
   TextColumn get coverPath => text().nullable()();
+
+  /// 原始入库时刻（毫秒，跨设备保留、展示与排序用；同步资产包导入时沿用包内值）。
   IntColumn get importedAt => integer()();
+
+  /// v118：本机开始拥有这条字幕书的时刻（毫秒，设备本地，同 [EpubBooks.localAddedAt]
+  /// 的语义与理由）。写入单点 [FushiDatabase.upsertSrtBook]：插入时未携带 → now；
+  /// 冲突转更新时永不改写。v118 迁移以 importedAt 回填存量行。
+  IntColumn get localAddedAt => integer().nullable()();
   // Standalone SRT books (no backing epub) use the empty-string sentinel.
   TextColumn get bookKey => text().withDefault(const Constant(''))();
 
@@ -150,6 +157,16 @@ class Bookmarks extends Table {
   TextColumn get bookTitle => text().nullable()();
   IntColumn get pageInChapter => integer().nullable()();
   IntColumn get totalPagesInChapter => integer().nullable()();
+
+  /// v127：书签所在页首字符的章内精确字符偏移（与 [ReaderPositions.charOffset]
+  /// 同计量）。存字符而不是页码：改字号 / 边距后页码会变，字符位置不变。-1 = 无
+  /// 精确偏移（v127 前的旧书签 / 拿不到页范围），跳转回退 [normCharOffset] 分数。
+  /// 漫画 / PDF 书签按页记，恒 -1。
+  IntColumn get charOffset => integer().withDefault(const Constant(-1))();
+
+  /// v127：在线漫画书签所在章的稳定键（`MangaChapterStates.chapterKey`，Mihon 下是
+  /// 章 url）。章下标会随源更新漂移，按键找章；本地卷 / EPUB / PDF 为 null。
+  TextColumn get chapterKey => text().nullable()();
 }
 
 // ── reading_statistics ──────────────────────────────────────────────
@@ -456,7 +473,25 @@ class EpubBooks extends Table {
   TextColumn get chaptersJson => text()();
   TextColumn get tocJson => text().nullable()();
   TextColumn get sourceMetadata => text().nullable()();
+
+  /// 条目的**原始入库时刻**（毫秒）：跨设备保留、用户可见——书架「导入时间」排序、
+  /// 「最近阅读」对没读过的书的回落键、合集组内回退序都按它。互联下载的书写对端的
+  /// 入库时刻（BUG-3452），所以它**不是**「本机从什么时候起拥有这本书」，那件事见
+  /// [localAddedAt]。
   IntColumn get importedAt => integer()();
+
+  /// v118：本机**开始拥有**这本书的时刻（毫秒）。与 [importedAt] 是两个事实：
+  /// 互联下载把 importedAt 写成对端入库时刻，而删除墓碑仲裁（「删除发生在本机
+  /// 拥有之后才管得着它」，BUG-2044）与首页「最近添加」要的是本机落地那一刻——
+  /// 共用一列时，对端早已入库、本机刚下载的书会被第三台设备在其间的「从所有设备
+  /// 删除」追着弹确认，也进不了「最近添加」。
+  ///
+  /// 设备本地语义：不进互联 / 云同步 wire。备份按整行随包、恢复时保留备份内的值
+  /// （恢复 = 重现快照时刻的拥有事实，见 `FushiDatabase.insertEpubBook`）。写入
+  /// 单点是 [FushiDatabase.insertEpubBook]（未携带 → 当时 now）；此后不再改写。
+  /// null = 时刻未知（墓碑仲裁按「无从仲裁」处理，宁可多问一次）。v118 迁移以
+  /// importedAt 回填存量行。
+  IntColumn get localAddedAt => integer().nullable()();
 
   /// v87：书的内容语言（BCP-47，如 `ja` / `zh-Hant`），决定正文用哪条字体链。
   ///
@@ -557,6 +592,11 @@ class TagAssignments extends Table {
 class Profiles extends Table {
   IntColumn get id => integer().autoIncrement()();
   TextColumn get name => text().unique()();
+
+  /// v117：profile 的全局身份（UUIDv7）。不同设备上的同一个本机自增 id 不代表同一个 profile；
+  /// SRS 的一切行与同步路径都用它（docs/specs/2026-10-14-fushi-srs-design.md 铁律 E）。
+  /// 迁移时为存量行生成；可空只为兼容迁移顺序，读取方经 FushiDatabase.profileUidOf 惰性补齐。
+  TextColumn get uid => text().nullable()();
   IntColumn get createdAt => integer()();
   IntColumn get updatedAt => integer()();
 }
@@ -680,8 +720,15 @@ class VideoBooks extends Table {
 
   /// 导入时间（毫秒戳，同 [EpubBooks].importedAt / [SrtBooks].importedAt int
   /// 范式）；null = 旧数据无导入时间。v57 前是 drift DateTime（Unix 秒存储），
-  /// v57 迁移统一为 int 毫秒。
+  /// v57 迁移统一为 int 毫秒。互联下载登记镜像 host 的值（BUG-2463），所以它是
+  /// 「原始入库时刻」，不是「本机从什么时候起拥有」——后者见 [localAddedAt]。
   IntColumn get importedAt => integer().nullable()();
+
+  /// v118：本机开始拥有这条视频的时刻（毫秒，设备本地，同 [EpubBooks.localAddedAt]
+  /// 的语义与理由）。写入单点 [FushiDatabase.upsertVideoBook]：插入时未携带 → now；
+  /// 冲突转更新时永不改写（重复登记同一 bookUid 不算重新拥有）。v118 迁移以
+  /// importedAt 回填存量行；importedAt 为 null 的旧行仍为 null（时刻未知）。
+  IntColumn get localAddedAt => integer().nullable()();
 
   /// m3u8 多集播放列表 JSON：`[{title,path}]`（绝对路径）。单视频导入时为 null。
   TextColumn get playlistJson => text().nullable()();
@@ -842,21 +889,34 @@ class MinedSentences extends Table {
   TextColumn get glossary => text().withDefault(const Constant(''))();
   TextColumn get sentence => text().withDefault(const Constant(''))();
 
-  /// 跳转/分流来源标识，与 `kFavoriteSentenceSourceBook` / `Video` 等同值（'book' |
-  /// 'video' | 'audiobook' | 'lyrics'）。统计语义（book/video 桶）也由它派生。
+  /// 跳转/分流来源标识，与 `kFavoriteSentenceSource*` 同值（'book' | 'video' |
+  /// 'audiobook' | 'lyrics' | 'game' | 'manga' | 'music'，见 `SentenceSourceKind`）。
   TextColumn get source => text()();
   TextColumn get documentTitle => text().nullable()();
   TextColumn get chapterLabel => text().nullable()();
 
-  /// 定位锚点（与收藏句同构）：书内是 bookKey，视频是 bookUid。
+  /// 出处身份（按 [source] 分域）：书 / 有声书 / 歌词模式 / 漫画是 bookKey，视频是
+  /// bookUid，游戏是 `galgames.id`，音乐是 `music_tracks.track_uid`。
   TextColumn get bookKey => text().nullable()();
+
+  /// 书内章节下标；视频是集下标（单视频恒 0）。
   IntColumn get sectionIndex => integer().nullable()();
 
-  /// 书内是归一化字符偏移；视频来源里复用为 cue 起点 ms（与收藏句一致）。
+  /// **只**表示章内归一化字符偏移（书 / 有声书 / 歌词模式）。v132 前视频来源把它
+  /// 复用成 cue 起点毫秒，v132 迁移已把那批值搬进 [positionMs] 并清空本列。
   IntColumn get normCharOffset => integer().nullable()();
 
-  /// 视频来源里复用为 cue 时长 ms（书内为选区长度）。
+  /// **只**表示选区字符长度（同 [normCharOffset]）。v132 前视频复用为 cue 时长。
   IntColumn get normCharLength => integer().nullable()();
+
+  /// 媒体时间轴上的起点毫秒（视频 / 音乐；v132）。
+  IntColumn get positionMs => integer().nullable()();
+
+  /// 片段时长毫秒（与 [positionMs] 成对；v132）。
+  IntColumn get durationMs => integer().nullable()();
+
+  /// 漫画页码（0 起；v132）。
+  IntColumn get pageIndex => integer().nullable()();
 
   /// AnkiConnect 成功制卡带回的 note id；AnkiDroid 恒 null。
   IntColumn get noteId => integer().nullable()();
@@ -868,7 +928,9 @@ class MinedSentences extends Table {
 /// TODO-817 网络/本地来源库：一个「来源」是一个媒体根（本地文件夹或网络根），
 /// 扫描后产出多本书/视频（[EpubBooks].sourceId / [VideoBooks].sourceId 反向指向）。
 ///
-/// 🔴 凭据红线：[configJson] **绝不裸存明文密码**。本地来源恒 NULL；网络来源（SFTP/
+/// 🔴 凭据红线：[configJson] **绝不裸存明文密码**。本地来源只在 iOS 上带一条安全
+/// 作用域书签（`iosBookmark`，不是凭据，见 `kSourceConfigIosBookmarkKey`），其余
+/// 平台恒 NULL；网络来源（SFTP/
 /// FTP，TODO-1274 已接入）只存**非敏感连接参数** JSON（host/port/username/useTls）；
 /// 密码/私钥经 SourceLibraryCredentialStore 以 base64 单独落 Preferences（键
 /// `media_source_secret_<id>`，按行 id 隐式引用），绝不进入 configJson。
@@ -896,7 +958,8 @@ class MediaSources extends Table {
   TextColumn get rootPath => text()();
 
   /// 非敏感网络连接参数 JSON（host/port/username/useTls）。**绝不裸存明文密码/
-  /// 私钥**（它们在 Preferences 单独 base64 落库）；本地来源恒 NULL。
+  /// 私钥**（它们在 Preferences 单独 base64 落库）；本地来源恒 NULL（iOS 例外：
+  /// 存 `iosBookmark` 安全作用域书签）。
   TextColumn get configJson => text().nullable()();
 
   /// 截图「媒体数」：上次扫描产出的条目数。
@@ -1075,6 +1138,26 @@ class MediaCollections extends Table {
   /// **NULL = 没人配过**（消费方走默认选轨），非 NULL 覆盖每集。无损迁移：
   /// nullable 无 default → 旧库既有行全 NULL = 行为与旧版一致。
   TextColumn get subtitleReleaseGroup => text().nullable()();
+
+  /// 合集由谁建 / 归谁管（schema v124，AI 整理库 spec
+  /// `docs/specs/2026-10-20-ai-library-organize-design.md` §5.1）：
+  /// `user`（用户或其它非整理器路径建的，整理器永不改它）/ `rule`（规则归组器）/
+  /// `ai`（AI 整理）/ `folder`（目录自动合集）。**只升不降**：`ai` / `rule` 合集一旦
+  /// 被用户编辑（加减成员、改名、手动排序、合并）就转成 `user`，跨端同步按秩取大
+  /// （[collectionOriginRank]），所以转过的永远转不回来。迁移时存量行一律 `user`、
+  /// `sourceFolderPath` 非空的回填 `folder`——分不清的宁可当用户的。
+  TextColumn get origin => text().withDefault(const Constant('user'))();
+
+  /// 整理分组身份键（schema v124，spec §6）：同一个系列在每台设备上算出同一个键
+  /// （外部 id 键 `anilist:` / `tmdb:` / `vndb:`，否则原语言标题归一化键 `t:`）。
+  /// 整理收敛（`organize_convergence.dart`）按它把各端各自建的同系列合集认成一个。
+  /// NULL = 不是整理器建的、也没从整理合集转来。
+  TextColumn get organizeKey => text().nullable()();
+
+  /// 本合集吸收过的其它分组键（schema v124，spec §8.3）：换行分隔、字典序、去重。
+  /// 只增不删（跨端按并集合并）：合并掉的合集即使被旧对端复活，它的键也仍指向本合集，
+  /// 下一轮收敛照样并回来。空串 = 没吸收过。
+  TextColumn get organizeAliases => text().withDefault(const Constant(''))();
 }
 
 // ── media_collection_items (合集成员引用 = Jellyfin LinkedChildren) ────
@@ -1141,6 +1224,27 @@ class CollectionMemberTombstones extends Table {
 
   /// 移出/删除毫秒戳（LWW 比较键；重复移出 upsert 取新）。
   IntColumn get deletedAt => integer()();
+
+  /// 合集级删除哨兵行（mediaType = entryKey = ''）上被删合集的整理分组键**集合**（schema
+  /// v124，spec §5.2）：主键 + 吸收过的别名，换行分隔（`encodeOrganizeAliases`）。用户删的
+  /// （[organizeMerged] = false）且键不在任何活合集的 [MediaCollections.organizeKey] /
+  /// [MediaCollections.organizeAliases] 里 = 用户**拒绝**了这个分组，任何设备上的 AI 都
+  /// 不再建它。自动路径删的合集不记键。成员墓碑行恒 NULL。
+  TextColumn get organizeKey => text().nullable()();
+
+  /// 合集级删除哨兵行：这次删除是整理器把它**并进了别的合集**（true），还是用户删的
+  /// （false，默认）。只看键找不找得到吸收者分不清这两者——吸收者可能还没同步过来；
+  /// 分不清就会把并掉的当成用户拒绝、把成员丢回散条目（schema v124，spec §8.5）。
+  BoolColumn get organizeMerged =>
+      boolean().withDefault(const Constant(false))();
+
+  /// 这条墓碑知识**进入本库**的毫秒戳（schema v128，BUG-3743 后续）：本机作互联 host 时
+  /// 清单里的 `publishedAt`（成员墓碑）/ `deletedPublishedAt`（合集级哨兵行），对端用
+  /// 「自己的基线 vs 它」判墓碑是不是新闻。只由同步应用端
+  /// （`applyCollectionLocalChanges`）给**新知识**盖戳，已有同键同 [deletedAt] 的行原值
+  /// 保留、一经确定不刷新。NULL = 本机用户亲手移出 / 删除（进库时刻就是 [deletedAt]，
+  /// 对端回退它判）或升级前的存量行。本机自己同步时不读它（本端侧按 [deletedAt] 裁决）。
+  IntColumn get publishedAt => integer().nullable()();
 
   /// 一 (合集, 成员) 一行；合集级哨兵行天然也唯一。
   @override
@@ -1745,6 +1849,11 @@ class VideoMetadataPeople extends Table {
 class VideoMetadataCharacters extends Table {
   TextColumn get characterKey => text()();
   TextColumn get name => text()();
+
+  /// v119：角色日文原名（MAL `/characters/{id}` 的 `name_kanji`）。[name] 是刮削源
+  /// 的显示名（AniDB / MAL 多为罗马音）；视频字幕 AI 校对的专名表要的是日文写法。
+  /// NULL = 源没给 / 没取（AniDB anime XML 不带角色日文名）。
+  TextColumn get originalName => text().nullable()();
   TextColumn get description => text().nullable()();
   TextColumn get imageUrl => text().nullable()();
   TextColumn get imagePath => text().nullable()();
@@ -2221,6 +2330,65 @@ abstract final class PendingMineStatus {
   static const String landed = 'landed';
 }
 
+/// 字幕书与远端（流式）音频的绑定（schema v137）。
+///
+/// 目前只有 Audiobookshelf：一本 [SrtBooks] 的音频不在本机磁盘上，而是在用户自己的
+/// 服务器上按需流式播放。**不**把 `abs://…` 塞进 `srt_books.audio_paths_json`——那一列
+/// 有二十多个消费者（删除判据、数据根迁移、路径重定位、互联音频包、断链检测）都把它当
+/// 本机绝对路径，塞进去会让它们静默出错。字幕书本身保持「只有字幕」的形态（音频路径
+/// 恒为空），音频来源记在这里；没有绑定行的字幕书走原来的本地路径，行为完全不变。
+///
+/// 设备本地：[serverConfigId] 指向本机设置里的服务器配置，对别的设备没有意义，不进
+/// 备份 / 同步（与 `pending_mine_queue` 同列于 backup 的 device-local 清单）。
+/// 与 `srt_books` 之间没有外键（项目惯例：逻辑外键），删除字幕书时在
+/// `deleteSrtBookByUid` 的同一事务里清掉本行。
+@DataClassName('RemoteAudioBindingRow')
+class RemoteAudioBindings extends Table {
+  /// 绑定的 [SrtBooks.uid]；一本字幕书至多一条绑定。
+  TextColumn get srtBookUid => text()();
+
+  /// 远端协议：目前恒为 `audiobookshelf`。
+  TextColumn get provider => text()();
+
+  /// 本机设置里的服务器配置 id。
+  TextColumn get serverConfigId => text()();
+
+  /// 服务器上的条目 id。
+  TextColumn get itemId => text()();
+
+  /// 播客单集 id；null = 有声书条目本身。
+  TextColumn get episodeId => text().nullable()();
+
+  /// 音轨表 JSON：`[{ino, startOffsetMs, durationMs, mime, size, filename}]`。同时是
+  /// 服务器重扫后「音轨变了没」的指纹：变了就要按新偏移重切字幕时间轴。
+  TextColumn get tracksJson => text()();
+
+  /// 字幕从哪来：`local`（用户选的本机文件）或 `server:<ino>`（服务器条目里的文件）。
+  TextColumn get subtitleOrigin => text().withDefault(const Constant('local'))();
+
+  /// 毫秒。
+  IntColumn get createdAt => integer()();
+  IntColumn get updatedAt => integer()();
+
+  /// 本机最后一次真的听过 / 拖过这本书的时刻（毫秒）；null = 本机从没写过进度。
+  /// 开书时拿它和服务器进度的 `lastUpdate` 比，决定谁的位置更新。**不能复用
+  /// [updatedAt]**：重切字幕、改字幕来源也会刷新 [updatedAt]，那样会把「改过绑定」
+  /// 误判成「本机后听的」，别的设备的新进度就被本机旧位置盖掉。
+  IntColumn get localProgressAt => integer().nullable()();
+
+  /// v138：本机最后一次与服务器进度一致时，服务器记的 `lastUpdate`（毫秒，**服务器
+  /// 时钟**）；null = 从没对齐过。开书时服务器 `lastUpdate` 比它新 = 别的设备写过。
+  /// 只和服务器给的时刻比，不和本机时钟比（两台机器的时钟差不进判定）。
+  IntColumn get serverProgressAt => integer().nullable()();
+
+  /// v138：本机最后一次与服务器进度一致的时刻（毫秒，**本机时钟**）；null = 从没对齐
+  /// 过。[localProgressAt] 比它新 = 本机有还没推上去的进度。
+  IntColumn get progressSyncedAt => integer().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {srtBookUid};
+}
+
 @DataClassName('VideoDownloadJobRow')
 class VideoDownloadJobs extends Table {
   /// 调用方生成的稳定任务 id；不能用自增 id 充当跨崩溃幂等键。
@@ -2254,7 +2422,7 @@ class VideoDownloadJobs extends Table {
   TextColumn get identityJson => text().nullable()();
 
   /// 后端连接身份与去重身份。敏感凭据不进数据库；backendProfileId 是下载配置档
-  /// 的字符串身份，不是 Hibiki 用户 Profile，故没有 FK 到 Profiles。
+  /// 的字符串身份，不是 Fushi 用户 Profile，故没有 FK 到 Profiles。
   TextColumn get backendKind => text()();
   TextColumn get backendTaskId => text().nullable()();
   TextColumn get backendProfileId => text().nullable()();
@@ -3065,7 +3233,7 @@ class VideoFileSpecs extends Table {
 
 // ── update_feed_entries ─────────────────────────────────────────────
 /// v101：全应用**统一的更新事件流**。番剧新集、漫画新章、漫画扩展新版本、
-/// Hibiki 自身新版本，四个域投递到同一张表，UI 只消费这一处。
+/// Fushi 自身新版本，四个域投递到同一张表，UI 只消费这一处。
 ///
 /// 为什么必须是一张表而不是四套提醒：在此之前「有更新」这个事实散在四个互不
 /// 知情的地方——番剧靠首页一行现算（`video_subscription_updates.dart`）、扩展靠
@@ -3291,4 +3459,335 @@ class MangaReaderOverrides extends Table {
 
   @override
   Set<Column> get primaryKey => {bookUid};
+}
+
+
+// ── video_subtitle_glossaries（v119：视频字幕 AI 校对的作品级专名表）──────
+/// 视频字幕 AI 校对（docs/specs/2026-10-19-video-asr-llm-subtitle-pipeline.md
+/// 第 3 节 S0）的专名表：一部作品一行，各集共用。[glossaryJson] 是
+/// `SubtitleGlossary.encode()` 的产物（条目 + 来源指纹 + 生成 / 编辑时刻），
+/// 另把 [sourceFingerprint] / [userEditedAt] 上提成列，便于不解 JSON 判断「资料变了
+/// 要不要重新生成」「用户动过没有」。
+///
+/// [workKey] 是 `SubtitleWorkContext.workKey`：`collection:<合集 id>` /
+/// `work:<video_metadata_works.id>` / `folder:<sha1(目录)>` / `title:<sha1(标题)>`。
+/// 前两种是本机自增 id，不跨设备：表随备份走（用户手编的条目是用户数据），但不进
+/// live-sync / 合并导入。逻辑外键：合集 / 作品删掉后行不级联删除（重新刮削会换新
+/// 作品 id，留着的旧行只是无人引用；用户的手编内容不因一次删库重刮就丢）。
+@DataClassName('VideoSubtitleGlossaryRow')
+class VideoSubtitleGlossaries extends Table {
+  TextColumn get workKey => text()();
+  TextColumn get glossaryJson => text()();
+
+  /// 生成时所用资料的指纹（与 JSON 里的 `sourceFingerprint` 同值）；'' = 纯手填。
+  TextColumn get sourceFingerprint =>
+      text().withDefault(const Constant(''))();
+
+  /// 用户最近一次编辑的时刻（毫秒）；NULL = 没编辑过。
+  IntColumn get userEditedAt => integer().nullable()();
+  IntColumn get updatedAt => integer()();
+
+  @override
+  Set<Column> get primaryKey => <Column>{workKey};
+}
+
+// ── media_privacy_flags（v122：作品级「私密」标记）──────────────────────
+/// 用户手动把一部作品标成私密：不上传排行榜、不推 Bangumi 进度（也不拿它的标题去
+/// Bangumi 搜自动映射）。外部分级（扩展 contentWarning / 刮削 contentRating / 游戏
+/// nsfw）只能模糊封面，本地书 / 本地漫画根本没有分级信号，所以要一个用户自己说了算
+/// 的开关。
+///
+/// 键与 [TagAssignments] 同一套逻辑外键（[mediaKind] = `TagHostKind.dbValue`，
+/// [entryKey]：epub=bookKey / video=bookUid / collection=合集 id 字符串 /
+/// game=Galgames.id），跨端身份换算也复用互联标签同步（标签清单条目上的可选
+/// `privacy` 字段）：只有一台设备是排行榜上传设备，在别的设备上标的私密必须到得了它。
+///
+/// 一行两只时钟（LWW）：[privateAt] = 最近一次设为私密，[clearedAt] = 最近一次取消；
+/// 私密 ⇔ privateAt 非空且（clearedAt 为空或 privateAt > clearedAt），相等取消胜
+/// （与标签墓碑同口径）。取消不删行——删了就分不清「取消过」和「从没标过」，对端
+/// 旧的私密戳会把它复活。宿主删除不级联：同 bookKey 重新导入仍是私密（宁可多藏）。
+@DataClassName('MediaPrivacyFlagRow')
+class MediaPrivacyFlags extends Table {
+  TextColumn get mediaKind => text()();
+  TextColumn get entryKey => text()();
+
+  /// 最近一次设为私密的毫秒戳；NULL = 从没设过。
+  IntColumn get privateAt => integer().nullable()();
+
+  /// 最近一次取消私密的毫秒戳；NULL = 从没取消过。
+  IntColumn get clearedAt => integer().nullable()();
+
+  @override
+  Set<Column> get primaryKey => <Column>{mediaKind, entryKey};
+}
+
+// ── library_organize_runs / library_organize_changes（AI 整理记录，schema v124）──
+// spec `docs/specs/2026-10-20-ai-library-organize-design.md` §5.3：本机这一次整理
+// 做了什么，供「整理记录」页与撤销用。**设备本地**：不同步、不进备份——别的设备有
+// 自己的记录，撤销的结果经合集墓碑 / 拒绝键跨端传播。
+@DataClassName('LibraryOrganizeRunRow')
+class LibraryOrganizeRuns extends Table {
+  IntColumn get id => integer().autoIncrement()();
+
+  /// `CollectionShelfDomain.name`：books / manga / video / games。
+  TextColumn get domain => text()();
+
+  /// `manual` | `auto`。
+  TextColumn get trigger => text()();
+
+  IntColumn get startedAt => integer()();
+  IntColumn get finishedAt => integer().nullable()();
+
+  /// `running` | `done` | `failed` | `cancelled` | `skipped`。
+  TextColumn get status => text()();
+
+  TextColumn get providerName => text().withDefault(const Constant(''))();
+  TextColumn get model => text().withDefault(const Constant(''))();
+  IntColumn get requestCount => integer().withDefault(const Constant(0))();
+  IntColumn get inputTokens => integer().withDefault(const Constant(0))();
+  IntColumn get outputTokens => integer().withDefault(const Constant(0))();
+
+  /// 失败 / 跳过的脱敏原因码（`AiChatFailure.message` 或本地原因）；成功为 NULL。
+  TextColumn get error => text().nullable()();
+}
+
+@DataClassName('LibraryOrganizeChangeRow')
+class LibraryOrganizeChanges extends Table {
+  IntColumn get id => integer().autoIncrement()();
+
+  IntColumn get runId => integer()
+      .references(LibraryOrganizeRuns, #id, onDelete: KeyAction.cascade)();
+
+  /// `create` | `add` | `merge` | `evict` | `tag`。
+  TextColumn get kind => text()();
+
+  /// 改动落在哪个合集（自然键；改名 / 合并后按记录时的名字找）。
+  TextColumn get collectionName => text()();
+  TextColumn get collectionType => text()();
+  TextColumn get organizeKey => text().nullable()();
+
+  /// `rule` | `ai`：这一处是规则定的还是 AI 定的。
+  TextColumn get source => text()();
+
+  /// `high` | `medium`（规则恒 high）。
+  TextColumn get confidence => text()();
+
+  /// 撤销所需的全部细节（JSON）：成员清单、被合并合集的快照、标签名等。
+  TextColumn get payloadJson => text()();
+
+  /// 撤销时刻；NULL = 未撤销。
+  IntColumn get undoneAt => integer().nullable()();
+}
+
+// ── ai_agent_sessions / ai_agent_actions（AI 助手，schema v136）──────────────
+// spec `docs/specs/2026-10-26-ai-operations-agent-design.md` §5.3 / D3 / D5：AI 助手的
+// 对话存档与它做过的操作记录，供「操作记录」页与撤销用。与 library_organize_* 同一口径：
+// **设备本地**——不同步、不进备份、不分 Profile；本机按期限清理（D5 对话存档 30 天），
+// 清理只删记录与快照，不动已生效的改动。
+
+/// AI 助手的一场对话（整场序列化成 [payloadJson]）。
+@DataClassName('AiAgentSessionRow')
+class AiAgentSessions extends Table {
+  /// 会话 id（调用方生成）。
+  TextColumn get id => text()();
+
+  /// 首句用户话截断，调用方给。
+  TextColumn get title => text()();
+
+  /// `general` | `reader` | `manga` | `video` | `system`。
+  TextColumn get scene => text()();
+
+  /// 整场会话 JSON（调用方序列化，已剔除凭据）。
+  TextColumn get payloadJson => text()();
+
+  IntColumn get totalTokens => integer().withDefault(const Constant(0))();
+
+  IntColumn get createdAt => integer()();
+  IntColumn get updatedAt => integer()();
+
+  @override
+  Set<Column> get primaryKey => <Column>{id};
+}
+
+/// AI 助手执行过的一次操作（§5.3）。
+@DataClassName('AiAgentActionRow')
+class AiAgentActions extends Table {
+  IntColumn get id => integer().autoIncrement()();
+
+  /// `ai_agent_sessions.id`。**没有外键**：会话存档按期限删掉后，操作记录仍可保留到
+  /// 自己的期限；设备本地表在覆盖恢复后原样回灌，外键也会打断回灌。
+  TextColumn get sessionId => text()();
+
+  /// 操作目录 id（如 `settings.set`）。
+  TextColumn get opId => text()();
+
+  /// 参数 JSON（调用方已剔除凭据）。
+  TextColumn get argsJson => text()();
+
+  /// `read` | `write` | `irreversible`。
+  TextColumn get risk => text()();
+
+  /// `auto`（可逆、直接执行）| `user`（用户点了确认）。
+  TextColumn get confirmation => text()();
+
+  /// `ok` 或错误短码。
+  TextColumn get resultCode => text()();
+
+  /// 撤销载荷 JSON；NULL = 不可撤销。
+  TextColumn get undoPayloadJson => text().nullable()();
+
+  /// 给人看的改前 / 改后。
+  TextColumn get beforeText => text().nullable()();
+  TextColumn get afterText => text().nullable()();
+
+  IntColumn get createdAt => integer()();
+
+  /// 撤销时刻；NULL = 未撤销。
+  IntColumn get undoneAt => integer().nullable()();
+
+  /// `done` | `superseded` | `failed`；NULL = 未撤销。
+  TextColumn get undoStatus => text().nullable()();
+}
+
+// ── web_browser_*（内置浏览器，schema v128）────────────────────────────
+// 历史 / 书签（含文件夹）随备份走、经聚合快照跨端同步（删除写 sync_deletion_tombstones，
+// 种类 `webhistory` / `webbookmark`）；标签页会话、最近关闭、下载记录是**设备本地**：
+// 不同步、不进备份。无痕标签页的任何数据都不进这几张表。
+
+/// 浏览历史：同一 url 一行（访问合并：标题取最近一次、次数累加）。
+///
+/// 跨端身份就是 [url] 本身；合并按 url 并集，次数取大、最近访问取大、标题跟最近访问走。
+@DataClassName('WebBrowserHistoryRow')
+class WebBrowserHistory extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get url => text().unique()();
+  TextColumn get title => text().withDefault(const Constant(''))();
+
+  /// 最近一次访问的毫秒戳。
+  IntColumn get lastVisitedAt => integer()();
+  IntColumn get visitCount => integer().withDefault(const Constant(1))();
+}
+
+/// 浏览器书签与书签文件夹（[url] 为 NULL = 文件夹）。
+///
+/// [parentId] 是本机自增 id 的逻辑外键（NULL = 根目录），删文件夹由 store 显式级联并
+/// 逐条写墓碑。跨端身份是 [uid]（随机生成、永不改变）；wire 上父级用父文件夹的 uid 表示，
+/// 落地时按 uid 换回本机 id。合并按 uid 取 [updatedAt] 大者（LWW）。
+@DataClassName('WebBrowserBookmarkRow')
+class WebBrowserBookmarks extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get uid => text().unique()();
+  TextColumn get title => text()();
+  TextColumn get url => text().nullable()();
+  IntColumn get parentId => integer().nullable()();
+  IntColumn get position => integer().withDefault(const Constant(0))();
+  IntColumn get createdAt => integer()();
+  IntColumn get updatedAt => integer()();
+}
+
+/// 标签页会话（设备本地）：整份覆盖，[position] 即标签顺序。
+@DataClassName('WebBrowserSessionTabRow')
+class WebBrowserSessionTabs extends Table {
+  IntColumn get position => integer()();
+
+  /// 标签页 id（壳生成的字符串，只在本机有意义）。
+  TextColumn get tabId => text()();
+  TextColumn get url => text()();
+  TextColumn get title => text().withDefault(const Constant(''))();
+
+  /// 是否为当前激活的标签页（至多一行为真）。
+  BoolColumn get active => boolean().withDefault(const Constant(false))();
+
+  @override
+  Set<Column> get primaryKey => <Column>{position};
+}
+
+/// 最近关闭的标签页（设备本地，最多保留 25 条）。
+@DataClassName('WebBrowserClosedTabRow')
+class WebBrowserClosedTabs extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get url => text()();
+  TextColumn get title => text().withDefault(const Constant(''))();
+  IntColumn get closedAt => integer()();
+
+  /// 关闭时在标签列表里的位置（恢复时尽量放回原位）。
+  IntColumn get tabIndex => integer().withDefault(const Constant(0))();
+}
+
+/// 浏览器下载记录（设备本地）。
+@DataClassName('WebBrowserDownloadRow')
+class WebBrowserDownloads extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get url => text()();
+  TextColumn get fileName => text()();
+  TextColumn get mimeType => text().nullable()();
+  IntColumn get totalBytes => integer().nullable()();
+  IntColumn get receivedBytes => integer().withDefault(const Constant(0))();
+
+  /// `running` | `completed` | `failed` | `cancelled`。
+  TextColumn get state => text()();
+
+  /// 下载落盘的本机绝对路径；完成前为 NULL。
+  TextColumn get savedPath => text().nullable()();
+  IntColumn get startedAt => integer()();
+}
+
+// ── media_links（跨模块作品图谱，schema v129）───────────────────────────
+/// 跨模块作品图谱的一条连接（spec `docs/specs/2026-10-24-cross-media-links.md`）：
+/// `(from_kind, from_key) —relation→ (to_kind, to_key)`。不另起「作品」实体取代
+/// 各模块数据，只加一层连接。
+///
+/// 端点种类 / 关系的值域见 `MediaLinkKind` / `MediaLinkRelation`（落库值冻结）；
+/// 键是各模块的**本地**稳定身份（书 bookKey、视频 bookUid、合集 id 字符串、游戏
+/// `Galgames.id`、音乐 uid），跨端换算只在互联同步清单里做（`media_link_sync.dart`），
+/// 与标签映射同一套。端点不设外键：目标条目本机不存在时照常保留（详情页显示「未入库」
+/// 灰卡），宿主删除也不级联。
+///
+/// 一行三态（`MediaLinkState`）：[deletedAt] 非空 = 已删除 / 已否决（墓碑，推断
+/// 不得重复提议同一对条目）；否则 [isUserConfirmed] 决定是「同一作品」事实还是
+/// 「可能相关」建议。跨端合并整行 LWW（按 [updatedAt]），所以删除 / 否决只写墓碑
+/// 不删行——删了就分不清「否决过」和「从没提过」，对端的旧行会把它复活。
+@DataClassName('MediaLinkRow')
+class MediaLinks extends Table {
+  TextColumn get fromKind => text()();
+  TextColumn get fromKey => text()();
+
+  /// `MediaLinkRelation.dbValue`。无方向关系（same_work）落库前两端已按
+  /// `canonicalMediaLinkEndpoints` 排序。
+  TextColumn get relation => text()();
+  TextColumn get toKind => text()();
+  TextColumn get toKey => text()();
+
+  /// 关系内的角色：theme_song 的 `op` / `ed` / `insert` / `theme`，cast 的角色名等。
+  TextColumn get role => text().nullable()();
+
+  /// 适用集数范围（theme_song 用，如 `1-12`）；NULL = 全部。
+  TextColumn get episodeRange => text().nullable()();
+
+  /// `MediaLinkSource`：`manual` 或推断来源名（vndb / mal / ai …）。
+  TextColumn get source => text().withDefault(const Constant('manual'))();
+
+  /// 推断置信度 0..1；手动连接为 NULL。
+  RealColumn get confidence => real().nullable()();
+
+  BoolColumn get isUserConfirmed =>
+      boolean().withDefault(const Constant(false))();
+
+  /// 推断理由（AI 的「为什么认为是同一作品」、确定性判据的证据摘要）。
+  TextColumn get reason => text().nullable()();
+
+  IntColumn get createdAt => integer()();
+  IntColumn get updatedAt => integer()();
+
+  /// 删除 / 否决时刻（墓碑）；NULL = 存活。
+  IntColumn get deletedAt => integer().nullable()();
+
+  @override
+  Set<Column> get primaryKey => <Column>{
+        fromKind,
+        fromKey,
+        relation,
+        toKind,
+        toKey,
+      };
 }

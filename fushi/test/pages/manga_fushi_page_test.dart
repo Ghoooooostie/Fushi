@@ -5,9 +5,10 @@ import 'dart:typed_data';
 
 import 'package:drift/drift.dart' show Value;
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:fushi/src/media/manga/reader/manga_control_layout.dart';
 import 'package:fushi/src/shortcuts/shortcut_action.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/models.dart';
@@ -24,7 +25,7 @@ import 'package:fushi/src/media/manga/manga_reading_mode.dart';
 import 'package:fushi/src/media/manga/manga_reader_preferences.dart';
 import 'package:fushi/src/media/manga/manga_view_prefs.dart';
 import 'package:fushi/src/media/manga/reader/manga_reader_chrome.dart'
-    show kMangaChromeBarHeight, MangaChromeAction;
+    show kMangaChromeBarHeight, MangaChromeAction, MangaReaderTopBar;
 import 'package:fushi_engine/media/manga/mokuro_payload.dart';
 import 'package:fushi/src/media/media_item.dart';
 import 'package:fushi_engine/ocr/manga_ocr_service.dart';
@@ -55,6 +56,9 @@ class _MangaTestAppModel extends AppModel {
   double get popupMaxWidth => 360;
 
   @override
+  double get dictionaryFontSize => 16;
+
+  @override
   double get popupMaxHeight => 360;
 
   @override
@@ -81,11 +85,22 @@ class _MangaTestAppModel extends AppModel {
   String get mangaPageAnimation => MangaPageAnimation.slide.key;
 
   @override
+  String get mangaPageAnimationSpeed => PageTurnAnimationSpeed.normal.key;
+
+  @override
+  bool get mangaPageTurnFollowDrag => kMangaPageTurnFollowDragDefault;
+
+  @override
   bool get mangaTapZonePaging => true;
 
   // 固定顶栏：测试默认要看得见栏里的按钮（悬浮态默认收起）。
   @override
   bool get mangaChromeFloating => false;
+
+  // 工具栏布局走 prefsRepo（测试里为 null）：给出厂布局。
+  @override
+  MangaControlLayout mangaControlLayoutFor({required bool compact}) =>
+      MangaControlLayout.defaults;
 
   @override
   bool get mangaVolumeKeyPaging => false;
@@ -299,6 +314,20 @@ void main() {
       isTrue,
       reason: '词典 WebView 必须位于漫画翻页键处理器的 Focus 子树内',
     );
+    // 反馈 8HcJchWAcr：词典层必须画在 chrome 之上（页面主 Stack 的最后一个孩子）。
+    // 排在它之后的 chrome 会盖过弹窗的 dismiss barrier（点底栏打开快捷设置），
+    // 在 iOS 上还会被 engine 并进弹窗平台视图的 overlay、按弹窗圆角裁剪。
+    final Finder host = find.byKey(
+      const ValueKey<String>('manga_dictionary_host'),
+    );
+    final Stack pageStack = tester.widget<Stack>(
+      find.ancestor(of: host, matching: find.byType(Stack)).first,
+    );
+    expect(
+      pageStack.children.last.key,
+      const ValueKey<String>('manga_dictionary_host'),
+      reason: '查词弹窗层之后不得再有任何 Flutter 内容（chrome / 浮标 / 按钮）',
+    );
   });
 
   testWidgets('有书行时加载 manga.json 并恢复已存页码（真实进度读穿）', (WidgetTester tester) async {
@@ -363,9 +392,22 @@ void main() {
     // Linux 是无后端占位）——书行 + manga.json 全链路加载成功。
     expect(find.byKey(const ValueKey<String>('manga_content_ready')),
         findsOneWidget);
-    // 页码指示恢复到已存页：2 / 2（sectionIndex=1 → 1-based 第 2 页）。
-    expect(find.text('2 / 2'), findsOneWidget,
+    // 页码读数恢复到已存页：第 2 页 / 共 2 页（sectionIndex=1 → 1-based 第 2
+    // 页）。M3E chrome 把页码读数放在底部滑块胶囊里，当前页与总页数是两枚独立
+    // 数字（不再是顶栏的 `2 / 2` 胶囊）。
+    expect(
+        tester
+            .widget<Text>(
+                find.byKey(const ValueKey<String>('manga_slider_current_page')))
+            .data,
+        '2',
         reason: 'ReaderPositions.sectionIndex 必须恢复为当前页（0-based → 1-based 显示）');
+    expect(
+        tester
+            .widget<Text>(
+                find.byKey(const ValueKey<String>('manga_slider_page_count')))
+            .data,
+        '2');
   });
 
   testWidgets(
@@ -439,7 +481,23 @@ void main() {
             break;
           }
         }
-        expect(find.text('2 / 2'), findsOneWidget);
+        // 底部滑块胶囊的读数：当前页 2 / 总页数 2（来源回看直接打开第 2 页）。
+        expect(
+          tester
+              .widget<Text>(
+                find.byKey(const ValueKey<String>('manga_slider_current_page')),
+              )
+              .data,
+          '2',
+        );
+        expect(
+          tester
+              .widget<Text>(
+                find.byKey(const ValueKey<String>('manga_slider_page_count')),
+              )
+              .data,
+          '2',
+        );
         await ExitFlushRegistry.instance.flushAll(clearCallbacks: false);
         final ReaderPosition? afterFlush = await positions.findByBookUid(uid);
         expect(afterFlush?.sectionIndex, original?.sectionIndex);
@@ -456,9 +514,11 @@ void main() {
     },
   );
 
-  testWidgets('手动模式：进入不排整卷任务，⋮ 里给「识别本卷」；无「识别当前页」，保留返回与查词键盘宿主',
+  testWidgets('手动模式：进入不排整卷任务，窄屏 ⋯ 里给「识别本卷」；无「识别当前页」，保留返回与查词键盘宿主',
       (WidgetTester tester) async {
-    tester.view.physicalSize = const Size(600, 1000);
+    // 360dp 手机宽：右上角放不下标题保底 + 动作，动作收进「⋯」（默认展开，空间不足
+    // 才收起；宽屏平铺见下一条）。
+    tester.view.physicalSize = const Size(360, 1000);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
@@ -563,9 +623,10 @@ void main() {
 
   // 进入即整卷识别：没有任何用户动作，打开一本没识别过的卷就排上整卷任务，
   // 从当前页开始跑，右上角浮标显示进度（对齐 Mangatan / Chimahon）。
-  testWidgets('已识别的卷：⋮ 里给「重新识别本卷」（换引擎重跑的唯一入口），不给「识别本卷」',
+  testWidgets('已识别的卷：右上角平铺「重新识别本卷」（换引擎重跑的唯一入口），不给「识别本卷」',
       (WidgetTester tester) async {
-    tester.view.physicalSize = const Size(600, 1000);
+    // 宽到能放下全部右上角动作（窄时低优先级动作收进「⋯」）。
+    tester.view.physicalSize = const Size(800, 1000);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
@@ -618,26 +679,26 @@ void main() {
     await tester.pump();
     expect(ocrService.folderRequests, 0, reason: '已识别的卷不自动重排');
 
-    await tester.tap(find.byKey(const ValueKey<String>('manga_chrome_overflow')));
-    await tester.pumpAndSettle();
-    final Iterable<PopupMenuItem<MangaChromeAction>> menuItems =
-        tester.widgetList<PopupMenuItem<MangaChromeAction>>(
-            find.byType(PopupMenuItem<MangaChromeAction>));
-    final PopupMenuItem<MangaChromeAction> rerun = menuItems.singleWhere(
-        (PopupMenuItem<MangaChromeAction> item) =>
-            item.value?.key ==
-            const ValueKey<String>('manga_reader_ocr_rerun_button'));
-    expect(rerun.value!.onPressed, isNotNull);
+    // 800dp 下右上角放得下全部动作：默认展开、不画「⋯」。
+    expect(find.byKey(const ValueKey<String>('manga_chrome_overflow')),
+        findsNothing,
+        reason: '空间够时右上角动作默认全部平铺，不收进「⋯」');
+    expect(find.byKey(const ValueKey<String>('manga_reader_ocr_rerun_button')),
+        findsOneWidget);
+    final List<MangaChromeAction> topActions = tester
+        .widget<MangaReaderTopBar>(find.byType(MangaReaderTopBar))
+        .actions;
+    final MangaChromeAction rerun = topActions.singleWhere(
+        (MangaChromeAction a) =>
+            a.key == const ValueKey<String>('manga_reader_ocr_rerun_button'));
+    expect(rerun.onPressed, isNotNull);
     expect(
-        menuItems.any((PopupMenuItem<MangaChromeAction> item) =>
-            item.value?.key ==
-            const ValueKey<String>('manga_reader_ocr_volume_button')),
+        topActions.any((MangaChromeAction a) =>
+            a.key == const ValueKey<String>('manga_reader_ocr_volume_button')),
         isFalse,
         reason: '识别过的卷不该再给「识别本卷」');
-    Navigator.of(tester
-            .element(find.byType(PopupMenuItem<MangaChromeAction>).first))
-        .pop();
-    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey<String>('manga_reader_ocr_volume_button')),
+        findsNothing);
   });
 
   testWidgets('自动模式：进入阅读器即排整卷任务，右上角浮标显示进度',
@@ -804,22 +865,12 @@ void main() {
     expect(runner.requests, isEmpty);
 
     // 拒绝期间自动模式也给「识别本卷」入口：否则只能重启 app 才能再识别。
-    await tester.tap(find.byKey(const ValueKey<String>('manga_chrome_overflow')));
-    await tester.pumpAndSettle();
+    // 600dp 下右上角动作默认平铺，入口直接可见。
     expect(
-      tester
-          .widgetList<PopupMenuItem<MangaChromeAction>>(
-              find.byType(PopupMenuItem<MangaChromeAction>))
-          .any((PopupMenuItem<MangaChromeAction> item) =>
-              item.value?.key ==
-              const ValueKey<String>('manga_reader_ocr_volume_button')),
-      isTrue,
+      find.byKey(const ValueKey<String>('manga_reader_ocr_volume_button')),
+      findsOneWidget,
       reason: '拒绝 Lens 后自动模式不排任务，必须留一个主动识别的入口',
     );
-    Navigator.of(tester
-            .element(find.byType(PopupMenuItem<MangaChromeAction>).first))
-        .pop();
-    await tester.pumpAndSettle();
 
     // 换走引擎再换回 Lens：重新征求同意（拒绝只对当时那个引擎偏好有效）。
     await tester.pumpWidget(const SizedBox.shrink());
@@ -1128,6 +1179,122 @@ void main() {
     expect(registry.running(bookKey), isNull);
     expect(cancelButton, findsNothing, reason: '任务停了取消按钮随之消失');
     expect(find.text('OCR 1/2'), findsNothing, reason: 'HUD 进度随任务结束消失');
+  });
+
+  testWidgets('BUG-3605：远程 OCR 的上传段与识别段分开显示，进度不会走两遍', (
+    WidgetTester tester,
+  ) async {
+    tester.view.physicalSize = const Size(600, 1000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
+    addTearDown(db.close);
+    final _MangaTestAppModel appModel = _MangaTestAppModel(db);
+
+    final Directory bookDir = Directory.systemTemp.createTempSync(
+      'manga_ocr_remote_phase_',
+    );
+    addTearDown(() {
+      if (bookDir.existsSync()) bookDir.deleteSync(recursive: true);
+    });
+    File(p.join(bookDir.path, 'manga.json')).writeAsStringSync(_mangaJson());
+    Directory(p.join(bookDir.path, 'images')).createSync();
+    File(p.join(bookDir.path, 'images', 'p001.jpg')).writeAsBytesSync(<int>[1]);
+    File(p.join(bookDir.path, 'images', 'p002.jpg')).writeAsBytesSync(<int>[2]);
+
+    const String bookKey = 'ocr remote phase book';
+    final StreamController<MangaOcrBackgroundEvent> source =
+        StreamController<MangaOcrBackgroundEvent>();
+    final MangaOcrJobRegistry registry = MangaOcrJobRegistry();
+    registry.start(
+      job: MangaOcrBackgroundJob(
+        bookKey: bookKey,
+        managedDirectory: bookDir.path,
+        engine: MangaOcrEngineId.pairedHost,
+        events: source.stream,
+      ),
+      mangaJsonPath: p.join(bookDir.path, 'manga.json'),
+    );
+    // 上传段：已上传 1/2 页，host 还一页都没识别。
+    source.add(
+      const MangaOcrBackgroundEvent.progress(
+        pagesDone: 1,
+        pagesTotal: 2,
+        uploading: true,
+      ),
+    );
+
+    await tester.runAsync(() async {
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: bookKey,
+          title: 'ocr remote phase book',
+          epubPath: 'manga.json',
+          extractDir: bookDir.path,
+          chapterCount: 2,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+          format: const Value<String>('manga'),
+        ),
+      );
+      await tester.pumpWidget(
+        _harness(
+          appModel,
+          _item(bookKey),
+          bookKey,
+          extraOverrides: <Override>[
+            mangaOcrServiceProvider.overrideWithValue(
+              _FakeMangaOcrService(ready: true),
+            ),
+            mangaOcrJobRegistryProvider.overrideWithValue(registry),
+          ],
+        ),
+      );
+      for (int i = 0; i < 50; i++) {
+        await Future<void>.delayed(const Duration(milliseconds: 50));
+        await tester.pump();
+        if (find
+            .byKey(const ValueKey<String>('manga_content_ready'))
+            .evaluate()
+            .isNotEmpty) {
+          break;
+        }
+      }
+      await Future<void>.delayed(const Duration(milliseconds: 50));
+      await tester.pump();
+    });
+    await tester.pump();
+
+    expect(
+      find.text('OCR · ${t.manga_remote_ocr_uploading(done: 1, total: 2)}'),
+      findsOneWidget,
+      reason: '上传段必须标成上传，不能冒充识别进度',
+    );
+    expect(
+      find.text('OCR 1/2'),
+      findsNothing,
+      reason: '上传计数不得显示成「OCR x/y」，否则识别段从 0 重数就像走了两遍',
+    );
+
+    // 识别段：host 识别了 1/2 页。
+    await tester.runAsync(() async {
+      source.add(
+        const MangaOcrBackgroundEvent.progress(pagesDone: 1, pagesTotal: 2),
+      );
+      await Future<void>.delayed(const Duration(milliseconds: 50));
+      await tester.pump();
+    });
+    await tester.pump();
+    expect(find.text('OCR 1/2'), findsOneWidget);
+    expect(
+      find.text('OCR · ${t.manga_remote_ocr_uploading(done: 1, total: 2)}'),
+      findsNothing,
+    );
+
+    await tester.runAsync(() async {
+      await registry.cancel(bookKey);
+      await source.close();
+    });
   });
 
   testWidgets('页码弹窗关闭动画期间不使用已 dispose 的输入控制器', (WidgetTester tester) async {

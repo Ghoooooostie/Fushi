@@ -1,13 +1,20 @@
+import 'package:fushi/src/utils/adaptive/fushi_page_backdrop.dart';
+import 'package:fushi/src/media/tags/tag_picker_sheet.dart';
 import 'dart:async';
 import 'dart:io';
+import 'dart:ui' as ui;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/utils/components/shelf_cover_material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:fushi/models.dart';
 import 'package:fushi/src/media/collections/add_to_collection_dialog.dart';
+import 'package:fushi/src/media/detail/media_detail_kit.dart';
+import 'package:fushi/src/mining/gal_hook_session_controller.dart';
 import 'package:fushi/src/mining/galgame_library.dart';
 import 'package:fushi/src/mining/galgame_repository.dart';
 import 'package:fushi/src/mining/galgame_scrape_controller.dart';
@@ -15,15 +22,31 @@ import 'package:fushi/src/mining/galgame_scrape_dialog.dart';
 import 'package:fushi/src/mining/metadata/galgame_metadata_draft.dart';
 import 'package:fushi/src/mining/metadata/galgame_metadata_merge.dart';
 import 'package:fushi_engine/mining/metadata/galgame_metadata_source.dart';
+import 'package:fushi/src/pages/implementations/game_shared.dart'
+    show galHookAudioBackendLabel, galHookSessionPhaseLabel;
 import 'package:fushi/src/pages/implementations/games_library_page.dart'
-    show formatGalgameDate, galgamePlayStatusLabel;
+    show
+        formatGalgameDate,
+        galgamePlayStatusLabel,
+        isGameCollectionMemberVisible;
 import 'package:fushi/src/pages/implementations/tag_filter_sheet.dart'
     show allTagsProvider, filteredGameIdsProvider, gameTagMapProvider;
-import 'package:fushi/src/pages/implementations/tag_picker_page.dart';
 import 'package:fushi/src/pages/implementations/stat_charts.dart';
 import 'package:fushi/src/pages/implementations/stat_shared.dart'
     show formatStatSessionRange, formatStatTime;
 import 'package:fushi/src/pages/fushi_page_placeholders.dart';
+import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
+import 'package:fushi/src/media/links/media_link_entries.dart'
+    show MediaLinkEntry;
+import 'package:fushi/src/media/links/media_link_inference_host.dart'
+    show mediaLinkInferCallback;
+import 'package:fushi/src/media/links/media_link_opener.dart'
+    show mediaLinkSearchAction, openMediaLinkEntry;
+import 'package:fushi/src/media/links/media_links_section.dart'
+    show MediaLinksSection;
+import 'package:fushi/src/media/people/person_entry_sections.dart'
+    show GameVoiceCastSection;
 import 'package:fushi/utils.dart';
 
 /// galgame 详情页（契约 §4.2）：头部常驻 + 统计 / 简介 / 编辑三个 tab。
@@ -105,7 +128,8 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   }
 
   Future<void> _load() async {
-    final GalgameEntry? game = _repo.byId(widget.gameId) ??
+    final GalgameEntry? game =
+        _repo.byId(widget.gameId) ??
         (await _repo.load())
             .where((GalgameEntry g) => g.id == widget.gameId)
             .firstOrNull;
@@ -119,8 +143,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     }
     final List<GalgameSessionRow> sessions = await _repo.sessions(game.id);
     final List<GalgameSourceRow> sources = await _repo.sourcesOf(game.id);
-    final List<BookTagRow> userTags =
-        await _appModel.database.getTagsForGame(game.id);
+    final List<BookTagRow> userTags = await _appModel.database.getTagsForGame(
+      game.id,
+    );
     final Map<String, int> daily = await _loadRange(game.id, _rangeDays);
     final String todayKey = formatGalgameDate(DateTime.now());
     final Map<String, int> today = await _repo.dailySeconds(
@@ -143,8 +168,11 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   /// 查最近 [days] 天（含当天）的每日秒数。
   Future<Map<String, int>> _loadRange(String gameId, int days) {
     final DateTime today = DateTime.now();
-    final DateTime start = DateTime(today.year, today.month, today.day)
-        .subtract(Duration(days: days - 1));
+    final DateTime start = DateTime(
+      today.year,
+      today.month,
+      today.day,
+    ).subtract(Duration(days: days - 1));
     return _repo.dailySeconds(
       gameId,
       fromDateKey: formatGalgameDate(start),
@@ -171,13 +199,31 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     });
   }
 
+  /// 删除单条游玩会话。
+  ///
+  /// 2026-10 体验优化：原先垃圾桶一点即删、不可撤销，会话又直接参与总时长 /
+  /// 每日折线统计，误触就丢数据——先确认（标出是哪一次），删完给 Toast。
   Future<void> _deleteSession(GalgameSessionRow row) async {
+    final bool confirmed = await showFushiConfirmDialog(
+      context: context,
+      title: t.game_stat_delete_session,
+      message:
+          '${formatGalgameSessionRange(row)}'
+          ' · ${formatStatTime(row.durationSeconds * 1000)}',
+      icon: FushiIcons.delete,
+      confirmLabel: t.dialog_delete,
+      destructive: true,
+    );
+    if (!confirmed || !mounted) return;
     await _repo.deleteSession(row.id);
     await _load();
+    if (!mounted) return;
+    FushiToast.show(msg: t.storage_entry_delete_done);
   }
 
   /// 「加入合集」：mediaType=[MediaKind.game]、entryKey=`galgames.id`（本机局域
-  /// 身份），与库页卡片菜单同一 DAO 路径。
+  /// 身份），与库页卡片菜单同一 DAO 路径；成员数与游戏库同一可见判据
+  /// （[isGameCollectionMemberVisible]，BUG-3361 跨域补漏）。
   Future<void> _addToCollection(GalgameEntry game) async {
     await showAddToCollectionDialog(
       context: context,
@@ -185,6 +231,12 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
       mediaType: MediaKind.game,
       entryKey: game.id,
       defaultNewName: game.displayName,
+      isMemberVisible: (String mediaType, String entryKey) =>
+          isGameCollectionMemberVisible(
+            games: _repo.games,
+            mediaType: mediaType,
+            entryKey: entryKey,
+          ),
     );
   }
 
@@ -192,19 +244,26 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   Widget build(BuildContext context) {
     final GalgameEntry? game = _game;
     if (_loading) {
-      return Scaffold(
-        appBar: AppBar(),
-        body: buildLoading(),
-      );
+      return Scaffold(appBar: FushiAppBar(), body: buildLoading());
     }
     if (game == null) {
       return Scaffold(
-        appBar: AppBar(),
-        body: Center(child: Text(t.game_detail_missing)),
+        appBar: FushiAppBar(),
+        body: Center(
+          child: FushiPlaceholderMessage(
+            icon: FushiIcons.games,
+            message: t.game_detail_missing,
+          ),
+        ),
       );
     }
+    // 背景铺到窗口顶端：hero 的模糊 key art / 色晕从 y = 0 画起，浮动顶栏只是
+    // 几颗胶囊。曾经正文从顶栏下沿开始，hero 背景（左上角散开的色晕）在栏
+    // 下沿被齐刷刷切出一块发白的矩形色区（2026-10-06 用户截图）。hero 自己按
+    // MediaQuery 顶部 padding 让开顶栏；页签与正文不再让。
     return Scaffold(
-      appBar: AppBar(
+      extendBodyBehindAppBar: true,
+      appBar: FushiAppBar(
         title: Text(
           game.displayName,
           maxLines: 1,
@@ -213,136 +272,301 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
         actions: <Widget>[
           // 「加入合集」：与库页卡片菜单同一入口语义（mediaType='game'，entryKey=
           // galgames.id），落库同走 addToCollection DAO；库页返回后 _reload 刷新分组。
-          IconButton(
+          FushiIconButtonControl(
             tooltip: t.add_to_collection,
-            icon: const Icon(Icons.collections_bookmark_outlined),
+            icon: const FushiIcon(FushiIcons.collection),
             onPressed: () => unawaited(_addToCollection(game)),
           ),
         ],
       ),
-      body: Column(
-        children: <Widget>[
-          _buildHeader(context, game),
-          TabBar(
-            controller: _tabs,
-            tabs: <Widget>[
-              Tab(text: t.game_detail_tab_stats),
-              Tab(text: t.game_detail_tab_summary),
-              Tab(text: t.game_detail_tab_edit),
-            ],
-          ),
-          Expanded(
-            child: TabBarView(
-              controller: _tabs,
-              children: <Widget>[
-                _buildStatsTab(context, game),
-                _buildSummaryTab(context, game),
-                _GalgameEditTab(
-                  game: game,
-                  repo: _repo,
-                  onSaved: _load,
-                ),
+      // 与其它作品详情页同一套骨架（[MediaDetailLayout]）：窄屏 hero 在顶、页签
+      // 吃掉剩余高度；横屏 / 宽屏两栏，左栏 hero、右栏页签。
+      body: MediaDetailLayout(
+        backdrop: _coverImage(game),
+        header: _buildHero(context, game),
+        body: Column(
+          children: <Widget>[
+            // 页签轨道与正文同一条页边（trackInset: 0，轨道不再自己多缩 12）。
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: FushiDesignTokens.of(context).spacing.page,
+              ),
+              child: FushiTabBar(
+                controller: _tabs,
+                trackInset: 0,
+                tabs: <Widget>[
+                  Tab(text: t.game_detail_tab_stats),
+                  Tab(text: t.game_detail_tab_summary),
+                  Tab(text: t.game_detail_tab_edit),
+                ],
+              ),
+            ),
+            Expanded(
+              child: TabBarView(
+                controller: _tabs,
+                children: <Widget>[
+                  _buildStatsTab(context, game),
+                  _buildSummaryTab(context, game),
+                  _GalgameEditTab(game: game, repo: _repo, onSaved: _load),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// 本地封面文件（两栏时垫在整页背景里）；没有 / 不存在为 null。
+  ImageProvider? _coverImage(GalgameEntry game) {
+    final String? cover = game.coverPath;
+    if (cover == null || cover.isEmpty || !File(cover).existsSync()) {
+      return null;
+    }
+    return FileImage(File(cover));
+  }
+
+  /// Hero 头：与其它作品详情页同一套紧凑排法（[MediaDetailCompactHero]）——小封面
+  /// 旁放标题 / 开发商 / 状态·发行日·评分胶囊，按钮组（大号主按钮「启动游戏」+
+  /// 次按钮「管理标签」+ 更多）与两行简介占满整宽。单列时自己画模糊 key art
+  /// 背景（MD3 再叠一层 primaryContainer 色晕，墨水屏不画）；两栏左栏里背景由
+  /// [MediaDetailLayout] 铺在整页后面。
+  Widget _buildHero(BuildContext context, GalgameEntry game) {
+    final String? summary = game.metadata.summary?.trim();
+    final Widget content = Padding(
+      padding: EdgeInsets.fromLTRB(
+        16,
+        MediaDetailLayout.heroTopInset(context) + 12,
+        16,
+        12,
+      ),
+      child: MediaDetailCompactHero(
+        cover: _buildCover(context, game),
+        // 与游戏库同一个透明卡盒（1:1.6）；比原 3:4 稍高，紧凑 hero 的封面行
+        // 顶对齐、高度随内容，不撑破排版。
+        coverAspectRatio: kShelfGameCaseAspectRatio,
+        coverMaterial: ShelfCoverMaterial.gameCase,
+        heading: _heroInfo(context, game),
+        actions: _heroActions(context, game),
+        footer: summary == null || summary.isEmpty
+            ? null
+            : MediaDetailSynopsis(
+                key: const ValueKey<String>('galgame-hero-summary'),
+                text: summary,
+                selectable: true,
+              ),
+      ),
+    );
+    if (MediaDetailLayout.isSidePane(context)) return content;
+    return Stack(
+      children: <Widget>[
+        Positioned.fill(child: _heroBackdrop(context, game)),
+        content,
+      ],
+    );
+  }
+
+  /// Hero 背景：模糊封面（淡入）+ 融进页面底的渐变。树结构恒定——无封面 / 墨水屏
+  /// 只把不透明度压到 0，不增删层。
+  Widget _heroBackdrop(BuildContext context, GalgameEntry game) {
+    final Color page = fushiOpaquePageColor(context);
+    final String? cover = game.coverPath;
+    final bool show =
+        !isEinkTheme(context) &&
+        cover != null &&
+        cover.isNotEmpty &&
+        File(cover).existsSync();
+    final bool dark = Theme.of(context).brightness == Brightness.dark;
+    // M3E 饱和色晕：Material 设计系统在模糊 key art 上再叠一层 primaryContainer
+    // 从左上角散开的径向色块（无封面时它就是 hero 的底色）；Apple / 墨水屏透明。
+    // 只换颜色不增删层，树结构恒定。
+    final ColorScheme cs = Theme.of(context).colorScheme;
+    final bool tint = !isEinkTheme(context) && !isGlassDesign(context);
+    return Stack(
+      fit: StackFit.expand,
+      children: <Widget>[
+        DecoratedBox(
+          decoration: BoxDecoration(
+            gradient: RadialGradient(
+              center: Alignment.topLeft,
+              radius: 1.4,
+              colors: <Color>[
+                tint
+                    ? cs.primaryContainer.withValues(alpha: dark ? 0.55 : 0.7)
+                    : Colors.transparent,
+                tint
+                    ? cs.tertiaryContainer.withValues(alpha: 0.25)
+                    : Colors.transparent,
+                Colors.transparent,
               ],
+              stops: const <double>[0, 0.55, 1],
             ),
           ),
-        ],
-      ),
-    );
-  }
-
-  /// 头部常驻（契约 §2）：封面居左 + 右侧富信息列（元信息网格 / 评分行 / 标签区）。
-  /// 窄屏降级成封面在上、信息在下的单列。
-  Widget _buildHeader(BuildContext context, GalgameEntry game) {
-    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final Widget cover = _coverBlock(context, game);
-    final Widget info = _infoColumn(context, game);
-    return Padding(
-      padding: EdgeInsets.fromLTRB(
-        tokens.spacing.rowHorizontal,
-        tokens.spacing.rowVertical,
-        tokens.spacing.rowHorizontal,
-        tokens.spacing.gap,
-      ),
-      child: LayoutBuilder(
-        builder: (BuildContext ctx, BoxConstraints c) {
-          if (c.maxWidth < 560) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                Align(child: cover),
-                SizedBox(height: tokens.spacing.card),
-                info,
-              ],
-            );
-          }
-          return Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              cover,
-              const SizedBox(width: 24),
-              Expanded(child: info),
-            ],
-          );
-        },
-      ),
-    );
-  }
-
-  /// 封面块：max 宽 160 / max 高 260 / 圆角 / 大阴影（契约 §2）。
-  Widget _coverBlock(BuildContext context, GalgameEntry game) {
-    return Container(
-      constraints: const BoxConstraints(maxWidth: 160, maxHeight: 260),
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-        borderRadius: FushiBorderRadius.card,
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.28),
-            blurRadius: 18,
-            offset: const Offset(0, 8),
+        ),
+        TweenAnimationBuilder<double>(
+          tween: Tween<double>(begin: 0, end: show ? 1 : 0),
+          duration: fushiMotionDuration(context, FushiMotion.long),
+          curve: FushiMotion.enter,
+          builder: (BuildContext context, double value, Widget? child) =>
+              Opacity(opacity: value * (dark ? 0.6 : 0.5), child: child),
+          child: ClipRect(
+            child: ImageFiltered(
+              imageFilter: ui.ImageFilter.blur(sigmaX: 40, sigmaY: 40),
+              child: show
+                  ? ShelfFileCover(
+                      path: cover,
+                      placeholder: const SizedBox.shrink(),
+                    )
+                  : const SizedBox.shrink(),
+            ),
           ),
-        ],
-      ),
-      child: AspectRatio(
-        aspectRatio: 3 / 4,
-        child: _buildCover(context, game),
-      ),
+        ),
+        DecoratedBox(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: <Color>[
+                page.withValues(alpha: 0.15),
+                page.withValues(alpha: 0.7),
+                page,
+              ],
+              stops: const <double>[0, 0.62, 1],
+            ),
+          ),
+        ),
+      ],
     );
   }
 
-  /// 右侧信息列：标题 + 状态 chip + 元信息网格 + 评分行 + 启动 + 标签区。
-  Widget _infoColumn(BuildContext context, GalgameEntry game) {
+  /// Hero 封面旁的信息：标题 + 开发商 + 胶囊行（状态 / 发行日 / 站点评分 / 我的
+  /// 评分）。
+  Widget _heroInfo(BuildContext context, GalgameEntry game) {
     final ThemeData theme = Theme.of(context);
+    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
+    final String? developer = game.developer;
+    final String? release = game.effectiveReleaseDate;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text(
+        // 标题 / 开发商是刮削来的资料，要能复制去编辑 tab（反馈 2DmrXg-wtD）。
+        SelectableText(
           game.displayName,
-          style: theme.textTheme.headlineSmall,
+          key: const ValueKey<String>('galgame-hero-title'),
+          style: MediaDetailCompactHero.titleStyleOf(context),
           maxLines: 2,
-          overflow: TextOverflow.ellipsis,
         ),
-        const SizedBox(height: 6),
-        FushiTagChip(
-          label: galgamePlayStatusLabel(game.playStatus),
-          selected: true,
-        ),
-        const SizedBox(height: 12),
-        _metaGrid(context, game),
-        const SizedBox(height: 8),
-        _scoreRow(context, game),
-        if (widget.onLaunch != null) ...<Widget>[
-          const SizedBox(height: 12),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: FilledButton.icon(
-              onPressed: widget.onLaunch,
-              icon: const Icon(Icons.play_arrow),
-              label: Text(t.game_launch),
+        if (developer != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: SelectableText(
+              developer,
+              key: const ValueKey<String>('galgame-hero-developer'),
+              maxLines: 1,
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: tokens.surfaces.onVariant,
+              ),
             ),
           ),
+        const SizedBox(height: 10),
+        Wrap(
+          spacing: 6,
+          runSpacing: 6,
+          children: <Widget>[
+            FushiTagChip(
+              label: galgamePlayStatusLabel(game.playStatus),
+              selected: true,
+            ),
+            if (release != null) FushiTagChip(label: release),
+            ..._scoreChips(game),
+          ],
+        ),
+      ],
+    );
+  }
+
+  /// Hero 按钮组（共享 [MediaDetailActionBar]）：主按钮「启动游戏」（有
+  /// [GalgameDetailPage.onLaunch] 时，否则「管理标签」顶上）+ 次按钮「管理标签」+
+  /// 更多（刮削元数据 / 编辑 / 加入合集，放得下就平铺）。
+  Widget _heroActions(BuildContext context, GalgameEntry game) {
+    final VoidCallback? onLaunch = widget.onLaunch;
+    void editTags() => unawaited(_editUserTags(game));
+    return MediaDetailActionBar(
+      primary: onLaunch != null
+          ? MediaDetailPrimaryButton(
+              buttonKey: const ValueKey<String>('galgame_detail_launch'),
+              icon: FushiIcons.play,
+              label: t.game_launch,
+              onPressed: onLaunch,
+            )
+          : MediaDetailPrimaryButton(
+              icon: FushiIcons.tag,
+              label: t.tag_manage,
+              onPressed: editTags,
+            ),
+      secondary: <Widget>[
+        if (onLaunch != null)
+          MediaDetailSecondaryButton(
+            icon: FushiIcons.tag,
+            label: t.tag_manage,
+            onPressed: editTags,
+          ),
+      ],
+      more: MediaDetailMoreButton(
+        buttonKey: const ValueKey<String>('galgame_detail_more'),
+        tooltip: t.common_more_actions,
+        items: <MediaDetailMenuItem>[
+          MediaDetailMenuItem(
+            icon: FushiIcons.cloudDownload,
+            label: t.game_scrape,
+            onSelected: () => unawaited(_scrapeFromHero(game)),
+          ),
+          MediaDetailMenuItem(
+            icon: FushiIcons.edit,
+            label: t.game_detail_tab_edit,
+            onSelected: () => _tabs.animateTo(2),
+          ),
+          MediaDetailMenuItem(
+            icon: FushiIcons.collection,
+            label: t.add_to_collection,
+            onSelected: () => unawaited(_addToCollection(game)),
+          ),
         ],
-        _tagsSection(context, game),
+      ),
+    );
+  }
+
+  /// Hero「更多 › 刮削元数据」：与编辑 tab、库页卡菜单同一个统一刮削弹窗。
+  Future<void> _scrapeFromHero(GalgameEntry game) async {
+    final bool applied = await showGalgameScrapeDialog(
+      context: context,
+      game: game,
+      repo: _repo,
+    );
+    if (!applied || !mounted) return;
+    await _load();
+  }
+
+  /// 详情页内容分组：分组标题 + 内容层卡片（[FushiCard]：MD3 surfaceContainerLow
+  /// 16 圆角的 tonal 卡 / Apple secondarySystemGroupedBackground 的 inset grouped
+  /// 底）。两套设计系统同一棵树。
+  Widget _sectionCard(
+    BuildContext context, {
+    required Widget child,
+    String? title,
+    Widget? trailing,
+    EdgeInsetsGeometry padding = const EdgeInsets.all(16),
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        if (title != null)
+          FushiSectionTitle(
+            title,
+            trailing: trailing,
+            padding: const EdgeInsets.fromLTRB(4, 20, 4, 8),
+          ),
+        FushiCard(padding: padding, child: child),
       ],
     );
   }
@@ -364,7 +588,7 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
             ),
           FushiActionChip(
             label: t.tag_manage,
-            icon: Icons.sell_outlined,
+            icon: FushiIcons.tag,
             onPressed: () => unawaited(_editUserTags(game)),
           ),
         ],
@@ -373,18 +597,16 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   }
 
   Future<void> _editUserTags(GalgameEntry game) async {
-    await Navigator.push(
+    await showTagPicker(
       context,
-      adaptivePageRoute(
-        context: context,
-        builder: (_) => TagPickerPage(
-          media: MediaRef(kind: MediaKind.game, entryKey: game.id),
-        ),
+      targets: TagTargets(
+        media: <MediaRef>[MediaRef(kind: MediaKind.game, entryKey: game.id)],
       ),
     );
     if (!mounted) return;
-    final List<BookTagRow> tags =
-        await _appModel.database.getTagsForGame(game.id);
+    final List<BookTagRow> tags = await _appModel.database.getTagsForGame(
+      game.id,
+    );
     if (!mounted) return;
     setState(() => _userTags = tags);
     ref.invalidate(allTagsProvider);
@@ -406,12 +628,21 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
         ),
       if (game.effectiveReleaseDate != null)
         _metaTextCell(
-            context, t.game_summary_release_date, game.effectiveReleaseDate!),
+          context,
+          t.game_summary_release_date,
+          game.effectiveReleaseDate!,
+        ),
       _metaTextCell(
-          context, t.game_meta_added, formatGalgameDate(game.addedAt)),
+        context,
+        t.game_meta_added,
+        formatGalgameDate(game.addedAt),
+      ),
       if (meta.averageHours != null)
-        _metaTextCell(context, t.game_summary_average_hours,
-            '${meta.averageHours!.toStringAsFixed(1)} h'),
+        _metaTextCell(
+          context,
+          t.game_summary_average_hours,
+          '${meta.averageHours!.toStringAsFixed(1)} h',
+        ),
       if (meta.rank != null)
         _metaTextCell(context, t.game_meta_ranking, '#${meta.rank}'),
       _userTagsCell(context, game),
@@ -442,13 +673,13 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     );
   }
 
-  /// 文本值的网格单元。
+  /// 文本值的网格单元（值可选择复制，与简介 tab 的 `_summarySection` 一致）。
   Widget _metaTextCell(BuildContext context, String label, String value) {
     final ThemeData theme = Theme.of(context);
     return _metaCell(
       context,
       label,
-      Text(value, style: theme.textTheme.bodyMedium),
+      SelectableText(value, style: theme.textTheme.bodyMedium),
     );
   }
 
@@ -466,7 +697,7 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
             if (url == null) return FushiTagChip(label: label);
             return FushiActionChip(
               label: label,
-              icon: Icons.open_in_new,
+              icon: FushiIcons.openInNew,
               onPressed: () => unawaited(_openUrl(url)),
             );
           }(),
@@ -474,9 +705,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     );
   }
 
-  /// 评分行：`站点 X.X`（默认）+ `我的 X.X`（primary 选中态）两个 chip。
-  Widget _scoreRow(BuildContext context, GalgameEntry game) {
-    final List<Widget> chips = <Widget>[
+  /// 评分胶囊：`站点 X.X`（默认）+ `我的 X.X`（选中态），放进 Hero 胶囊行。
+  List<Widget> _scoreChips(GalgameEntry game) {
+    return <Widget>[
       if (game.siteScore != null)
         FushiTagChip(
           label: '${t.game_site_score} ${game.siteScore!.toStringAsFixed(1)}',
@@ -487,8 +718,6 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
           selected: true,
         ),
     ];
-    if (chips.isEmpty) return const SizedBox.shrink();
-    return Wrap(spacing: 8, runSpacing: 4, children: chips);
   }
 
   /// 标签区（契约 §2）：标题行（"游戏标签" + 选中计数 + 清空）+ flex-wrap 标签
@@ -498,10 +727,11 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     if (tags.isEmpty) return const SizedBox.shrink();
     final ThemeData theme = Theme.of(context);
     final bool overflowing = tags.length > _kTagLimit;
-    final List<String> shown =
-        (overflowing && !_tagsExpanded) ? tags.sublist(0, _kTagLimit) : tags;
+    final List<String> shown = (overflowing && !_tagsExpanded)
+        ? tags.sublist(0, _kTagLimit)
+        : tags;
     return Padding(
-      padding: const EdgeInsets.only(top: 16),
+      padding: EdgeInsets.zero,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -517,7 +747,7 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
               if (_selectedTags.isNotEmpty)
                 FushiActionChip(
                   label: t.game_tags_clear,
-                  icon: Icons.clear,
+                  icon: FushiIcons.close,
                   onPressed: () => setState(_selectedTags.clear),
                 ),
             ],
@@ -539,13 +769,16 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
           if (overflowing)
             Align(
               alignment: Alignment.centerLeft,
-              child: TextButton.icon(
+              child: FushiTextButton.icon(
                 onPressed: () => setState(() => _tagsExpanded = !_tagsExpanded),
-                icon:
-                    Icon(_tagsExpanded ? Icons.expand_less : Icons.expand_more),
-                label: Text(_tagsExpanded
-                    ? t.collection_collapse
-                    : '${t.collection_expand} +${tags.length - _kTagLimit}'),
+                icon: FushiIcon(
+                  _tagsExpanded ? FushiIcons.expandLess : FushiIcons.expandMore,
+                ),
+                label: Text(
+                  _tagsExpanded
+                      ? t.collection_collapse
+                      : '${t.collection_expand} +${tags.length - _kTagLimit}',
+                ),
               ),
             ),
         ],
@@ -553,9 +786,20 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     );
   }
 
+  /// 已绑定的 VNDB VN id（配音表的取数键）；没绑 VNDB 返回 null。
+  static String? _vndbIdOf(List<GalgameSourceRow> sources) {
+    for (final GalgameSourceRow row in sources) {
+      if (row.source != GalgameMetadataSource.vndb.key) continue;
+      final String? id = row.externalId?.trim();
+      if (id != null && id.isNotEmpty) return id;
+    }
+    return null;
+  }
+
   String? _externalUrl(GalgameSourceRow row) {
-    final GalgameMetadataSource? source =
-        GalgameMetadataSource.fromKey(row.source);
+    final GalgameMetadataSource? source = GalgameMetadataSource.fromKey(
+      row.source,
+    );
     final String? id = row.externalId;
     if (source == null || id == null || id.isEmpty) return null;
     return GalgameScrapeController.instance.externalUrl(source, id);
@@ -572,7 +816,7 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   /// [ShelfCoverPlaceholder]（保持原 overlay 底色 + 手柄图标 40）。
   Widget _buildCover(BuildContext context, GalgameEntry game) {
     final Widget placeholder = ShelfCoverPlaceholder(
-      icon: Icons.videogame_asset,
+      icon: FushiIcons.games,
       iconSize: 40,
       backgroundColor: FushiDesignTokens.of(context).surfaces.overlay,
     );
@@ -585,73 +829,110 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
 
   // ── 统计 tab ───────────────────────────────────────────────────────────
 
-  /// 四个 KPI + 按月每日柱状图 + 会话流水（可删单条）。
+  /// 统计 tab：KPI 统计卡 + 每日时长折线图（分组卡）+ 会话流水（分组列表，可删
+  /// 单条）。三段在进场窗口内错峰淡入（与库页网格同一套动效）。
   Widget _buildStatsTab(BuildContext context, GalgameEntry game) {
     final ThemeData theme = Theme.of(context);
-    return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
-      children: <Widget>[
-        Row(
-          children: <Widget>[
-            _kpi(theme, t.game_stat_total_time,
-                formatStatTime(game.totalPlaySeconds * 1000)),
-            _kpi(theme, t.game_stat_sessions, '${game.sessionCount}'),
-            _kpi(
-                theme, t.game_stat_today, formatStatTime(_todaySeconds * 1000)),
-            _kpi(
-              theme,
-              t.game_stat_last_played,
-              game.lastPlayedMs <= 0
-                  ? t.game_never_played
-                  : formatGalgameDate(
-                      DateTime.fromMillisecondsSinceEpoch(game.lastPlayedMs)),
+    final List<Widget> sections = <Widget>[
+      // 只读 Hook 状态：本游戏正在捕获会话里时才出现（不改任何 hook 逻辑）。
+      if (Platform.isWindows) _GalgameHookStatusCard(game: game),
+      _buildKpis(theme, game),
+      _sectionCard(
+        context,
+        title: t.game_stat_daily,
+        trailing: FushiSegmentedButton<int>(
+          showSelectedIcon: false,
+          // 2026-10 体验优化：原硬编码 '7D' / '30D' 不随语言变化。
+          segments: <ButtonSegment<int>>[
+            ButtonSegment<int>(value: 7, label: Text(t.stat_format_days(n: 7))),
+            ButtonSegment<int>(
+              value: 30,
+              label: Text(t.stat_format_days(n: 30)),
             ),
           ],
+          selected: <int>{_rangeDays},
+          onSelectionChanged: (Set<int> s) => unawaited(_setRange(s.first)),
         ),
-        const SizedBox(height: 20),
-        Row(
+        padding: const EdgeInsets.fromLTRB(12, 16, 16, 12),
+        child: _buildDailyLineChart(context, theme),
+      ),
+      // 会话流水：M3E 分段列表（组首尾 24 / 中间 4 圆角、行间 2px 缝，悬停 / 按下
+      // 形变；Apple = inset grouped），不再是卡内 Divider 行。
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          FushiSectionTitle(
+            t.game_stat_session_list,
+            padding: const EdgeInsets.fromLTRB(4, 20, 4, 8),
+          ),
+          _buildSessionList(context, theme),
+        ],
+      ),
+    ];
+    return FushiEntranceScope(
+      child: ListView(
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+        children: <Widget>[
+          for (int i = 0; i < sections.length; i++)
+            FushiStaggeredEntrance(index: i, child: sections[i]),
+        ],
+      ),
+    );
+  }
+
+  /// 会话流水：M3E 分段列表（[FushiGroupedList]）。每行行首是时钟形状底图标，
+  /// 标题是时间范围、副标题是时长（等宽数字），行尾删除钮。空态是一张中性卡。
+  Widget _buildSessionList(BuildContext context, ThemeData theme) {
+    if (_sessions.isEmpty) {
+      return FushiCard(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        child: Row(
           children: <Widget>[
+            FushiIcon(
+              FushiIcons.history,
+              size: 20,
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+            const SizedBox(width: 12),
             Expanded(
               child: Text(
-                t.game_stat_daily,
-                style: theme.textTheme.titleMedium,
+                t.game_stat_no_sessions,
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
+                ),
               ),
-            ),
-            SegmentedButton<int>(
-              showSelectedIcon: false,
-              segments: const <ButtonSegment<int>>[
-                ButtonSegment<int>(value: 7, label: Text('7D')),
-                ButtonSegment<int>(value: 30, label: Text('30D')),
-              ],
-              selected: <int>{_rangeDays},
-              onSelectionChanged: (Set<int> s) => unawaited(_setRange(s.first)),
             ),
           ],
         ),
-        const SizedBox(height: 8),
-        _buildDailyLineChart(context, theme),
-        const SizedBox(height: 20),
-        Text(t.game_stat_session_list, style: theme.textTheme.titleMedium),
-        const SizedBox(height: 8),
-        if (_sessions.isEmpty)
-          Text(
-            t.game_stat_no_sessions,
-            style: theme.textTheme.bodyMedium
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-          )
-        else
-          for (final GalgameSessionRow row in _sessions)
-            FushiListItem(
-              density: FushiListDensity.compact,
-              padding: EdgeInsets.zero,
-              title: Text(formatGalgameSessionRange(row)),
-              subtitle: Text(formatStatTime(row.durationSeconds * 1000)),
-              trailing: IconButton(
-                tooltip: t.game_stat_delete_session,
-                icon: const Icon(Icons.delete_outline),
-                onPressed: () => unawaited(_deleteSession(row)),
+      );
+    }
+    return FushiGroupedList(
+      // 分隔线（Apple）从文字起点开始：行内边距 16 + 图标 36 + 间距 16。
+      separatorIndent: 68,
+      children: <Widget>[
+        for (final GalgameSessionRow session in _sessions)
+          FushiListItem(
+            key: ValueKey<int>(session.id),
+            density: FushiListDensity.compact,
+            padding: const EdgeInsetsDirectional.only(start: 16, end: 4),
+            leading: const FushiListLeadingIcon(
+              FushiIcons.schedule,
+              size: 36,
+              iconSize: 20,
+            ),
+            title: Text(formatGalgameSessionRange(session)),
+            subtitle: Text(
+              formatStatTime(session.durationSeconds * 1000),
+              style: context.fushiType.bodyMedium.tabular.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
               ),
             ),
+            trailing: FushiIconButtonControl(
+              tooltip: t.game_stat_delete_session,
+              icon: const FushiIcon(FushiIcons.delete),
+              onPressed: () => unawaited(_deleteSession(session)),
+            ),
+          ),
       ],
     );
   }
@@ -661,8 +942,11 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   Widget _buildDailyLineChart(BuildContext context, ThemeData theme) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final ColorScheme colors = theme.colorScheme;
-    final List<StatDayData> points =
-        buildGalgameRangeChartData(DateTime.now(), _rangeDays, _dailyRange);
+    final List<StatDayData> points = buildGalgameRangeChartData(
+      DateTime.now(),
+      _rangeDays,
+      _dailyRange,
+    );
     final List<double> values = <double>[
       for (final StatDayData d in points) d.ms.toDouble(),
     ];
@@ -693,24 +977,129 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     );
   }
 
-  Widget _kpi(ThemeData theme, String label, String value) {
-    return Expanded(
+  /// 四个 KPI 统计卡（累计时长 / 游玩次数 / 今日时长 / 最后游玩）。
+  ///
+  /// 2026-10 游戏模块重设计：每格一张内容层卡片（[FushiCard]：MD3 tonal 统计卡 /
+  /// Apple inset grouped 统计格，像「健身」「屏幕使用时间」的摘要格），图标走强调色，
+  /// 大号数值。宽屏（≥480）一行四格；窄屏 2×2，值套 `FittedBox` 兜底不截断。
+  Widget _buildKpis(ThemeData theme, GalgameEntry game) {
+    final List<Widget> cells = <Widget>[
+      // M3E：首格（累计时长）是饱和 primary 色块 hero 格，其余中性。
+      _kpi(
+        theme,
+        FushiIcons.timer,
+        t.game_stat_total_time,
+        formatStatTime(game.totalPlaySeconds * 1000),
+        tone: FushiCardTone.primary,
+      ),
+      _kpi(
+        theme,
+        FushiIcons.replay,
+        t.game_stat_sessions,
+        '${game.sessionCount}',
+      ),
+      _kpi(
+        theme,
+        FushiIcons.calendar,
+        t.game_stat_today,
+        formatStatTime(_todaySeconds * 1000),
+      ),
+      _kpi(
+        theme,
+        FushiIcons.history,
+        t.game_stat_last_played,
+        game.lastPlayedMs <= 0
+            ? t.game_never_played
+            : formatGalgameDate(
+                DateTime.fromMillisecondsSinceEpoch(game.lastPlayedMs),
+              ),
+      ),
+    ];
+    const double gap = 12;
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        if (constraints.maxWidth >= 480) {
+          return Row(
+            children: <Widget>[
+              for (int i = 0; i < cells.length; i++) ...<Widget>[
+                if (i > 0) const SizedBox(width: gap),
+                Expanded(child: cells[i]),
+              ],
+            ],
+          );
+        }
+        return Column(
+          key: const ValueKey<String>('galgame_detail_kpi_grid'),
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Expanded(child: cells[0]),
+                const SizedBox(width: gap),
+                Expanded(child: cells[1]),
+              ],
+            ),
+            const SizedBox(height: gap),
+            Row(
+              children: <Widget>[
+                Expanded(child: cells[2]),
+                const SizedBox(width: gap),
+                Expanded(child: cells[3]),
+              ],
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  /// 一格 KPI：标签行 + Display 大数字（M3E displaySmall Emphasized、等宽数字，
+  /// 窄格 `FittedBox` 缩放兜底不截断）。[tone] 非 neutral 时整格是饱和 container
+  /// 色块，图标 / 文字取 onContainer。
+  Widget _kpi(
+    ThemeData theme,
+    IconData icon,
+    String label,
+    String value, {
+    FushiCardTone tone = FushiCardTone.neutral,
+  }) {
+    final Color? onTone = fushiCardToneColors(context, tone)?.onContainer;
+    return FushiCard(
+      tone: tone,
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
-            label,
-            style: theme.textTheme.bodySmall
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
+          Row(
+            children: <Widget>[
+              FushiIcon(
+                icon,
+                size: 18,
+                color: onTone ?? theme.colorScheme.primary,
+              ),
+              const SizedBox(width: 6),
+              Expanded(
+                child: Text(
+                  label,
+                  style: context.fushiType.labelLarge.copyWith(
+                    color: onTone ?? theme.colorScheme.onSurfaceVariant,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 2),
-          Text(
-            value,
-            style: theme.textTheme.titleMedium,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
+          const SizedBox(height: 10),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              value,
+              style: context.fushiType.displaySmallEmphasized.tabular.copyWith(
+                color: onTone,
+              ),
+              maxLines: 1,
+            ),
           ),
         ],
       ),
@@ -719,33 +1108,103 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
 
   // ── 简介 tab ───────────────────────────────────────────────────────────
 
+  /// 简介 tab：简介正文卡 + 别名 / 全部标题 / 我的评价卡 + 资料卡（数据来源 /
+  /// 开发商 / 发行日 / 添加时间 / 通关时长 / 排行 / 用户标签）+ 元数据标签卡。资料与
+  /// 标签原先常驻在头部，Hero 收窄后移到这里（功能不变）。
   Widget _buildSummaryTab(BuildContext context, GalgameEntry game) {
     final ThemeData theme = Theme.of(context);
     final GalgameMetadataDraft meta = game.metadata;
     final String? summary = meta.summary;
-    return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-      children: <Widget>[
-        Text(
-          summary ?? t.game_summary_none,
-          style: theme.textTheme.bodyMedium,
+    final List<Widget> details = <Widget>[
+      if (meta.aliases.isNotEmpty)
+        _summarySection(theme, t.game_summary_aliases, meta.aliases.join('、')),
+      if (meta.allTitles.isNotEmpty)
+        _summarySection(
+          theme,
+          t.game_summary_all_titles,
+          meta.allTitles.join('\n'),
         ),
-        if (meta.aliases.isNotEmpty)
-          _summarySection(
-              theme, t.game_summary_aliases, meta.aliases.join('、')),
-        if (meta.allTitles.isNotEmpty)
-          _summarySection(
-              theme, t.game_summary_all_titles, meta.allTitles.join('\n')),
-        if (game.effectiveReleaseDate != null)
-          _summarySection(
-              theme, t.game_summary_release_date, game.effectiveReleaseDate!),
-        if (meta.averageHours != null)
-          _summarySection(theme, t.game_summary_average_hours,
-              '${meta.averageHours!.toStringAsFixed(1)} h'),
-        if (game.customData.userReview != null)
-          _summarySection(
-              theme, t.game_edit_user_review, game.customData.userReview!),
-      ],
+      if (game.effectiveReleaseDate != null)
+        _summarySection(
+          theme,
+          t.game_summary_release_date,
+          game.effectiveReleaseDate!,
+        ),
+      if (meta.averageHours != null)
+        _summarySection(
+          theme,
+          t.game_summary_average_hours,
+          '${meta.averageHours!.toStringAsFixed(1)} h',
+        ),
+      if (game.customData.userReview != null)
+        _summarySection(
+          theme,
+          t.game_edit_user_review,
+          game.customData.userReview!,
+        ),
+    ];
+    final List<Widget> sections = <Widget>[
+      _sectionCard(
+        context,
+        // 刮削来的简介要能复制去编辑 tab 改写（反馈 2DmrXg-wtD）：用可选择文本。
+        child: summary == null
+            ? Text(
+                t.game_summary_none,
+                style: theme.textTheme.bodyMedium?.copyWith(height: 1.6),
+              )
+            : SelectableText(
+                summary,
+                key: const ValueKey<String>('galgame-summary-text'),
+                style: theme.textTheme.bodyMedium?.copyWith(height: 1.6),
+              ),
+      ),
+      if (details.isNotEmpty)
+        _sectionCard(
+          context,
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: details,
+          ),
+        ),
+      _sectionCard(
+        context,
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+        child: _metaGrid(context, game),
+      ),
+      if (game.tags.isNotEmpty)
+        _sectionCard(context, child: _tagsSection(context, game)),
+      // 配音（作品图谱 L5）：VNDB 角色 + 声优，点声优进人物聚合页。
+      GameVoiceCastSection(
+        database: _appModel.database,
+        gameId: game.id,
+        vndbId: _vndbIdOf(_sources),
+      ),
+      // 跨模块「同一作品」（作品图谱 media_links）：改编动画 / 原作小说…
+      MediaLinksSection(
+        database: _appModel.database,
+        self: (kind: MediaLinkKind.game, key: game.id),
+        onOpen: (MediaLinkEntry e) =>
+            openMediaLinkEntry(context: context, ref: ref, entry: e),
+        searchActionFor: (MediaLinkKind k) =>
+            mediaLinkSearchAction(context: context, ref: ref, kind: k),
+        onInfer: mediaLinkInferCallback(
+          ref: ref,
+          self: (kind: MediaLinkKind.game, key: game.id),
+        ),
+      ),
+    ];
+    return FushiEntranceScope(
+      child: ListView(
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+        children: <Widget>[
+          for (int i = 0; i < sections.length; i++)
+            Padding(
+              padding: EdgeInsets.only(top: i == 0 ? 0 : 12),
+              child: FushiStaggeredEntrance(index: i, child: sections[i]),
+            ),
+        ],
+      ),
     );
   }
 
@@ -757,11 +1216,122 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
         children: <Widget>[
           Text(
             label,
-            style: theme.textTheme.labelLarge
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.labelLarge?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
           const SizedBox(height: 4),
-          Text(value, style: theme.textTheme.bodyMedium),
+          SelectableText(value, style: theme.textTheme.bodyMedium),
+        ],
+      ),
+    );
+  }
+}
+
+/// 详情页统计 tab 顶部的**只读** Hook 会话状态卡（M3E 饱和色块）。
+///
+/// 只在 app 级捕获会话正在跑**这个游戏**（会话的启动 exe 与本条目 exe 同路径）时
+/// 出现：阶段 / 音频来源 / 是否已收到台词三枚 chip。纯展示——读
+/// [GalHookSessionController.state]、监听其通知，不调用任何会话方法、不改 hook /
+/// 注入 / 窗口逻辑。色块档：运行中 primary、降级 tertiary、其余（解析 / 启动 /
+/// 注入 / 等信号 / 停止中）secondary。出现 / 消失走弹簧尺寸动画。
+class _GalgameHookStatusCard extends StatelessWidget {
+  const _GalgameHookStatusCard({required this.game});
+
+  final GalgameEntry game;
+
+  static String _normPath(String path) =>
+      path.replaceAll(r'\', '/').toLowerCase();
+
+  bool _isThisGame(GalHookSessionState state) {
+    final String? exe = state.launchExe;
+    if (!state.isActive || exe == null || exe.isEmpty) return false;
+    return _normPath(exe) == _normPath(game.exePath);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final GalHookSessionController session = GalHookSessionController.instance;
+    final FushiMotionScheme motion = context.fushiMotion;
+    return ListenableBuilder(
+      listenable: session,
+      builder: (BuildContext context, Widget? _) {
+        final GalHookSessionState state = session.state;
+        final bool show = _isThisGame(state);
+        return AnimatedSize(
+          duration: motion.spatialDefault.duration,
+          curve: motion.spatialDefault.curve,
+          alignment: Alignment.topCenter,
+          child: show
+              ? Padding(
+                  padding: const EdgeInsets.only(bottom: 12),
+                  child: _buildCard(context, state),
+                )
+              : const SizedBox(width: double.infinity),
+        );
+      },
+    );
+  }
+
+  Widget _buildCard(BuildContext context, GalHookSessionState state) {
+    final FushiCardTone tone = switch (state.phase) {
+      GalHookSessionPhase.running => FushiCardTone.primary,
+      GalHookSessionPhase.degraded => FushiCardTone.tertiary,
+      _ => FushiCardTone.secondary,
+    };
+    final Color? onTone = fushiCardToneColors(context, tone)?.onContainer;
+    return FushiCard(
+      key: const ValueKey<String>('galgame_detail_hook_status'),
+      tone: tone,
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+      child: Row(
+        children: <Widget>[
+          FushiListLeadingIcon(
+            FushiIcons.hub,
+            shape: FushiLeadingShape.cookie,
+            tone: tone == FushiCardTone.primary
+                ? FushiCardTone.secondary
+                : FushiCardTone.primary,
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text(
+                  t.game_capture_running,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: context.fushiType.titleMediumEmphasized.copyWith(
+                    color: onTone,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Wrap(
+                  spacing: 6,
+                  runSpacing: 6,
+                  children: <Widget>[
+                    FushiTagChip(
+                      label: galHookSessionPhaseLabel(state.phase),
+                      selected: true,
+                    ),
+                    FushiTagChip(
+                      label:
+                          '${t.game_health_audio} · '
+                          '${galHookAudioBackendLabel(state.audioBackend)}',
+                      tone: FushiTagChipTone.surface,
+                    ),
+                    if (state.hasText)
+                      FushiTagChip(
+                        label: t.game_health_text,
+                        tone: FushiTagChipTone.surface,
+                      ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -780,8 +1350,9 @@ List<StatDayData> buildGalgameRangeChartData(
   return <StatDayData>[
     for (int i = days - 1; i >= 0; i--)
       () {
-        final String key =
-            formatGalgameDate(endDay.subtract(Duration(days: i)));
+        final String key = formatGalgameDate(
+          endDay.subtract(Duration(days: i)),
+        );
         return StatDayData(dateKey: key)..ms = (secondsByDay[key] ?? 0) * 1000;
       }(),
   ];
@@ -818,26 +1389,36 @@ class _GalgameEditTab extends StatefulWidget {
 }
 
 class _GalgameEditTabState extends State<_GalgameEditTab> {
-  late final TextEditingController _name =
-      TextEditingController(text: widget.game.customData.name ?? '');
-  late final TextEditingController _summary =
-      TextEditingController(text: widget.game.customData.summary ?? '');
-  late final TextEditingController _tags =
-      TextEditingController(text: widget.game.customData.tags.join(', '));
-  late final TextEditingController _developer =
-      TextEditingController(text: widget.game.customData.developer ?? '');
-  late final TextEditingController _releaseDate =
-      TextEditingController(text: widget.game.releaseDate ?? '');
+  late final TextEditingController _name = TextEditingController(
+    text: widget.game.customData.name ?? '',
+  );
+  late final TextEditingController _summary = TextEditingController(
+    text: widget.game.customData.summary ?? '',
+  );
+  late final TextEditingController _tags = TextEditingController(
+    text: widget.game.customData.tags.join(', '),
+  );
+  late final TextEditingController _developer = TextEditingController(
+    text: widget.game.customData.developer ?? '',
+  );
+  late final TextEditingController _releaseDate = TextEditingController(
+    text: widget.game.releaseDate ?? '',
+  );
   late final TextEditingController _rating = TextEditingController(
-      text: widget.game.customData.userRating?.toString() ?? '');
-  late final TextEditingController _review =
-      TextEditingController(text: widget.game.customData.userReview ?? '');
-  late final TextEditingController _exePath =
-      TextEditingController(text: widget.game.exePath);
-  late final TextEditingController _workdir =
-      TextEditingController(text: widget.game.workdir);
-  late final TextEditingController _launchArgs =
-      TextEditingController(text: widget.game.launchArgs);
+    text: widget.game.customData.userRating?.toString() ?? '',
+  );
+  late final TextEditingController _review = TextEditingController(
+    text: widget.game.customData.userReview ?? '',
+  );
+  late final TextEditingController _exePath = TextEditingController(
+    text: widget.game.exePath,
+  );
+  late final TextEditingController _workdir = TextEditingController(
+    text: widget.game.workdir,
+  );
+  late final TextEditingController _launchArgs = TextEditingController(
+    text: widget.game.launchArgs,
+  );
   late bool _nsfw = widget.game.customData.nsfw ?? false;
 
   @override
@@ -912,15 +1493,18 @@ class _GalgameEditTabState extends State<_GalgameEditTab> {
 
   /// 刮削：打开统一刮削弹窗（与库页卡菜单「刮削元数据」同一个入口，
   /// [showGalgameScrapeDialog]）。搜索/候选/落库/封面全部在弹窗内闭环；
-  /// 预填词取编辑框里的名字（用户可能刚改过），空则退回当前显示名。
+  /// 预填词取编辑框里的名字（用户可能刚改过）；没填或与当前显示名相同则不传，
+  /// 让弹窗按缺省规则取显示名并回退到 exe 路径认 DLsite 编号
+  /// （[galgameScrapeInitialQuery]）——显式传入的词会被当作用户手填、不再被覆盖。
   Future<void> _scrape() async {
+    final String typed = _name.text.trim();
     final bool applied = await showGalgameScrapeDialog(
       context: context,
       game: widget.game,
       repo: widget.repo,
-      initialQuery: _name.text.trim().isEmpty
-          ? widget.game.displayName
-          : _name.text.trim(),
+      initialQuery: typed.isEmpty || typed == widget.game.displayName
+          ? null
+          : typed,
     );
     if (!applied || !mounted) return;
     await widget.onSaved();
@@ -934,18 +1518,18 @@ class _GalgameEditTabState extends State<_GalgameEditTab> {
         Row(
           children: <Widget>[
             Expanded(
-              child: OutlinedButton.icon(
+              child: FushiFilledButton.tonalIcon(
                 // 再入守卫在统一弹窗内（每行「使用」行内转圈），按钮无需禁用态。
                 onPressed: () => unawaited(_scrape()),
-                icon: const Icon(Icons.cloud_download_outlined),
+                icon: const FushiIcon(FushiIcons.cloudDownload),
                 label: Text(t.game_scrape),
               ),
             ),
             const SizedBox(width: 12),
             Expanded(
-              child: FilledButton.icon(
+              child: FushiFilledButton.icon(
                 onPressed: () => unawaited(_save()),
-                icon: const Icon(Icons.save_outlined),
+                icon: const FushiIcon(FushiIcons.save),
                 label: Text(t.game_edit_save),
               ),
             ),
@@ -988,7 +1572,7 @@ class _GalgameEditTabState extends State<_GalgameEditTab> {
     return Padding(
       key: ValueKey<String>('galgame-edit-$fieldKey'),
       padding: const EdgeInsets.only(top: 12),
-      child: TextField(
+      child: FushiTextFieldControl(
         controller: controller,
         maxLines: maxLines,
         decoration: InputDecoration(

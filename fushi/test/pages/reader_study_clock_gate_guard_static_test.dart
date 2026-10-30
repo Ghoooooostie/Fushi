@@ -189,7 +189,8 @@ void main() {
       expect(
         dispose,
         contains('_studyClock?.detach();'),
-        reason: 'dispose 是同步的：在这里 stop() 就是无人 await 的事务，'
+        reason:
+            'dispose 是同步的：在这里 stop() 就是无人 await 的事务，'
             '会与随后的 db.close() 互等（与阅读器 / PDF 的 dispose 同律）',
       );
       expect(dispose, isNot(contains('_studyClock?.stop()')));
@@ -205,7 +206,8 @@ void main() {
       expect(
         body,
         isNot(contains('mediaKey: book.bookKey')),
-        reason: 'SRT 书源的 bookKey 是 srt_books.uid，'
+        reason:
+            'SRT 书源的 bookKey 是 srt_books.uid，'
             '记岔了同一本书在统计中心会裂成两条',
       );
       expect(body, contains('mediaKind: kActivityMediaBook,'));
@@ -231,7 +233,7 @@ void main() {
     test('_withStudyClockPaused 计数进出并 sync（finally 保证减计数）', () {
       final String body = _functionSource(
         corpus,
-        '  Future<T> _withStudyClockPaused<T>(Future<T> Function() body) async {',
+        '  Future<T?> _withStudyClockPaused<T>(Future<T?> Function() body) async {',
         '\n  }\n',
       );
       expect(body, contains('_studyClockModalDepth++;'));
@@ -245,15 +247,19 @@ void main() {
     });
 
     const List<String> entries = <String>[
-      '  Future<void> _showAppearanceSheet({String? initialSubPage}) async {',
       '  Future<void> _openStatisticsCenter() async {',
       '  Future<void> _openAlignmentImportDialog(',
       '  Future<void> _openAudioImportDialog() async {',
       '  Future<void> _openSrtBookReimport() async {',
-      '  void _openImageViewer(String imgUrl, {File? resolvedFile}) {',
-      '  void _openGallery() {',
+      '  Future<void> _openImageViewer(String imgUrl, {File? resolvedFile}) async {',
+      '  Future<void> _openGallery() async {',
       '  Future<void> _transcribeFromAudiobookPanel() async {',
       '  void _showLyricsModeHintIfNeeded() {',
+      // 歌词页面板：页面弹、压着期间停表（2026-10-25 用户：歌词模式计时要与阅读器
+      // 一致）。倍速面板此前由按钮自己 push，页面看不见，一直不停表。
+      '  Future<void> _showLyricsTypographyPanel(LyricsMenuAnchor anchor) async {',
+      '  Future<void> _showLyricsSpeedPanel(',
+      '  Future<void> _showLyricsControlLayoutEditor() async {',
     ];
     for (final String entry in entries) {
       test('入口经 _withStudyClockPaused：${entry.trim()}', () {
@@ -261,11 +267,54 @@ void main() {
         expect(
           body,
           contains('_withStudyClockPaused('),
-          reason: '外观 / 导航 / 搜索 / 统计中心 / 导入 / 看图 / 画廊都不是阅读，'
+          reason:
+              '外观 / 导航 / 搜索 / 统计中心 / 导入 / 看图 / 画廊都不是阅读，'
               '压住期间必须停表',
         );
       });
     }
+
+    test('从页面外推上来的整页路由（悬浮球的反馈中心等）盖住阅读器也停表', () {
+      // 这类路由不经任何 _withStudyClockPaused 入口：阅读器只能靠 RouteAware 看见。
+      // routeObserver 必须真挂进 MaterialApp，否则 subscribe 永远收不到通知。
+      final String main = maskComments(
+        File('lib/main.dart').readAsStringSync().replaceAll('\r\n', '\n'),
+      );
+      final String observers = _functionSource(
+        main,
+        'navigatorObservers: <NavigatorObserver>[',
+        '],',
+      );
+      expect(observers, contains('appModel.routeObserver'));
+      expect(corpus, contains('with WidgetsBindingObserver, RouteAware'));
+      expect(corpus, contains('routeObserver.unsubscribe(this)'));
+      expect(compactCode(corpus), contains('..subscribe(this,route)'));
+      final String pushed = _functionSource(
+        corpus,
+        '  void didPushNext() {',
+        '\n  }\n',
+      );
+      expect(pushed, contains('_studyClockCoveredByRoute = true;'));
+      expect(pushed, contains('_syncStudyClockRunState();'));
+      final String popped = _functionSource(
+        corpus,
+        '  void didPopNext() {',
+        '\n  }\n',
+      );
+      expect(popped, contains('_studyClockCoveredByRoute = false;'));
+      expect(popped, contains('_syncStudyClockRunState();'));
+      final String mayRun = _functionSource(
+        corpus,
+        '  bool get _studyClockMayRun =>',
+        ';\n',
+      );
+      expect(
+        compactCode(mayRun),
+        contains(
+          'modalDepth:_studyClockModalDepth+(_studyClockCoveredByRoute?1:0)',
+        ),
+      );
+    });
 
     test('书内统计侧栏（_openReadingStatistics）有意不停表——侧栏不遮正文', () {
       // 2026-09-13 chrome 重做：统计从 640px 居中对话框改成右侧侧栏，正文照常可读，
@@ -276,9 +325,42 @@ void main() {
         '  void _openReadingStatistics() {',
         '\n  }\n',
       );
-      expect(body, contains('_presentSideSheet('));
+      expect(body, contains('_openReaderPanel(_kReaderPanelStatistics)'));
+      final String content = methodBody(
+        corpus,
+        'Widget _buildReaderPanelContent(',
+      );
+      expect(
+        compactCode(content),
+        contains('case_kReaderPanelStatistics:return_buildStatisticsSheet();'),
+      );
+      final String statistics = methodBody(
+        corpus,
+        'Widget _buildStatisticsSheet(',
+      );
+      expect(statistics, contains('return ReaderStatisticsSheet('));
+      expect(
+        statistics,
+        contains('onTogglePause: _toggleStudyClockManualPause,'),
+      );
+      expect(statistics, isNot(contains('_withStudyClockPaused(')));
+      final String hold = compactCode(
+        methodBody(corpus, 'void _syncPanelClockHold('),
+      );
+      expect(hold, contains('kind!=null&&kind!=_kReaderPanelStatistics'));
+      expect(hold, contains('if(want==_panelHoldsClock)return;'));
+      expect(hold, contains('_studyClockModalDepth+=want?1:-1;'));
+      expect(hold, contains('_syncStudyClockRunState()'));
+      final String panel = methodBody(corpus, 'Future<void> _openReaderPanel(');
+      expect(panel, contains('_syncPanelClockHold(kind)'));
+      expect(panel, contains('_syncPanelClockHold(notifier.value)'));
+      expect(panel, contains('notifier.addListener(onKindChanged)'));
+      expect(panel, contains('notifier.removeListener(onKindChanged)'));
+      expect(
+        panel.substring(panel.indexOf('finally')),
+        contains('_syncPanelClockHold(null)'),
+      );
       expect(body, isNot(contains('_withStudyClockPaused(')));
-      expect(body, contains('onTogglePause: _toggleStudyClockManualPause,'));
     });
 
     test('查词浮窗 / Anki 制卡（mining.part）不停表——那是阅读的一部分', () {
@@ -298,8 +380,9 @@ void main() {
         '  Future<void> _refreshProgress() async {',
         '\n  }\n',
       );
+      // 2026-10-04 歌词覆盖层：正文在歌词层下面照常采样记账，门里不再有歌词态。
       const String gate =
-          'if (_controller == null || _lyricsMode || _restoreInFlight) return;';
+          'if (_controller == null || _restoreInFlight) return;';
       final int gateIdx = body.indexOf(gate);
       expect(gateIdx, isNonNegative, reason: '重载在飞时瞬态 atEnd 会把本章剩余计入');
       expect(
@@ -341,7 +424,7 @@ void main() {
     test('外观面板关闭时也刷一次', () {
       final String body = _functionSource(
         corpus,
-        '  Future<void> _showAppearanceSheet({String? initialSubPage}) async {',
+        '  Future<void> _openReaderPanel(',
         '\n  }\n',
       );
       expect(
@@ -403,7 +486,8 @@ void main() {
       expect(
         dispose,
         contains('_studyClock?.detach();'),
-        reason: 'dispose 是同步的：停表必须走 detach（零 IO，攒下的写交给 '
+        reason:
+            'dispose 是同步的：停表必须走 detach（零 IO，攒下的写交给 '
             'ExitFlushRegistry.defer）；在 dispose 里直接落库 = 无人 await 的事务，'
             '与随后的 db.close() 互等',
       );
@@ -427,7 +511,10 @@ void main() {
         contains('ExitFlushRegistry.instance.defer(_flushPosition);'),
       );
       // 进程退出登记 _flushForExit（只落盘）：桌面点 X 不触发 dispose。
-      expect(pdf, contains('ExitFlushRegistry.instance.register(_flushForExit);'));
+      expect(
+        pdf,
+        contains('ExitFlushRegistry.instance.register(_flushForExit);'),
+      );
       final String forExit = _functionSource(
         pdf,
         '  Future<void> _flushForExit() async {',

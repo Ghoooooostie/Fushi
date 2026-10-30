@@ -1,13 +1,14 @@
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_core/fushi_core.dart';
 
 import 'package:fushi/src/media/collections/collection_context_dialog.dart';
 import 'package:fushi/src/pages/implementations/media_item_dialog_page.dart'
-    show DialogListAction;
+    show DialogListAction, MediaItemDialogFrame;
 import 'package:fushi/utils.dart';
 
 /// 三库页统一合集上下文菜单的**行为**守卫（破坏性分支优先）。
@@ -26,8 +27,7 @@ void main() {
   Future<(FushiDatabase, MediaCollectionRow)> buildCollection({
     bool withMembers = true,
   }) async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final int id = await db.createMediaCollection('collection-a');
     if (withMembers) {
@@ -48,6 +48,7 @@ void main() {
     String? localFilesSubtitle,
     String? statisticsSubtitle,
     List<DialogListAction> extraListActions = const <DialogListAction>[],
+    ImageProvider? coverImage,
   }) async {
     final _Probe probe = _Probe();
     final GlobalKey<NavigatorState> navKey = GlobalKey<NavigatorState>();
@@ -84,6 +85,7 @@ void main() {
                   deleteMembersLocalFilesSubtitle: localFilesSubtitle,
                   deleteMembersStatisticsSubtitle: statisticsSubtitle,
                   extraListActions: extraListActions,
+                  coverImage: coverImage,
                 ),
                 child: const Text('open'),
               ),
@@ -97,17 +99,26 @@ void main() {
     return probe;
   }
 
-  /// 点菜单里的「删除合集」危险动作 → 进确认框。菜单项渲染成 TextButton，
-  /// 确认框的确认键是 isDestructiveAction 的 FilledButton，两者同文案不同控件，
-  /// 各自按控件类型定位就不会认错。
+  /// 点菜单里的「删除合集」危险动作 → 进确认框。菜单项渲染成分段分组行
+  /// （InkWell，2026-10-04 起危险动作与列表动作同一形态、error 色），确认框的
+  /// 确认键是 isDestructiveAction 的 FilledButton，两者同文案不同控件，各自按
+  /// 控件类型定位就不会认错。
   Future<void> tapDeleteAction(WidgetTester tester) async {
-    await tester.tap(find.widgetWithText(TextButton, t.delete_collection));
+    await tester.tap(find.widgetWithText(InkWell, t.delete_collection).first);
     await tester.pumpAndSettle();
   }
 
   /// 点确认框里的「删除合集」确认键（销毁按钮 = FilledButton）。
   Future<void> tapConfirm(WidgetTester tester) async {
-    await tester.tap(find.widgetWithText(FilledButton, t.delete_collection));
+    // 二级勾选展开后确认框比 800x600 默认窗口高：内容区可滚动，确认键在
+    // 滚动区底部，先滚到可见再点（与用户滑到底再确认同一路径）。
+    final Finder confirm = find.widgetWithText(
+      FilledButton,
+      t.delete_collection,
+    );
+    await tester.ensureVisible(confirm);
+    await tester.pumpAndSettle();
+    await tester.tap(confirm);
     await tester.pumpAndSettle();
   }
 
@@ -163,8 +174,9 @@ void main() {
   // 这两个决定必须分开落地。压成一行文案（旧实现「同时删除其中的视频（保留你的
   // 原始视频文件）」）等于替用户把后一个决定定死，用户没有任何入口删原件。
 
-  testWidgets('二级勾选未提供：勾主选也不出现「同时删除本地文件」，回调收到 false',
-      (WidgetTester tester) async {
+  testWidgets('二级勾选未提供：勾主选也不出现「同时删除本地文件」，回调收到 false', (
+    WidgetTester tester,
+  ) async {
     final (FushiDatabase db, MediaCollectionRow collection) =
         await buildCollection();
     final _Probe probe = await pumpAndOpen(
@@ -187,8 +199,9 @@ void main() {
     expect(probe.deleteLocalFiles, isFalse);
   });
 
-  testWidgets('「同时删除统计数据」同款纪律：主勾选之下才出现，默认不勾，勾了才回调 true',
-      (WidgetTester tester) async {
+  testWidgets('「同时删除统计数据」同款纪律：主勾选之下才出现，默认不勾，勾了才回调 true', (
+    WidgetTester tester,
+  ) async {
     final (FushiDatabase db, MediaCollectionRow collection) =
         await buildCollection();
     final _Probe probe = await pumpAndOpen(
@@ -215,8 +228,9 @@ void main() {
     expect(probe.deleteStatistics, isFalse);
   });
 
-  testWidgets('勾上「同时删除统计数据」→ 回调收到 deleteStatistics=true，且与删本地文件正交',
-      (WidgetTester tester) async {
+  testWidgets('勾上「同时删除统计数据」→ 回调收到 deleteStatistics=true，且与删本地文件正交', (
+    WidgetTester tester,
+  ) async {
     // 主勾选 + 两个二级勾选在 800x600 默认测试窗口里会溢出，点击落到被遮挡的行上。
     tester.view.physicalSize = const Size(1200, 2000);
     tester.view.devicePixelRatio = 1;
@@ -240,15 +254,12 @@ void main() {
     await tapConfirm(tester);
 
     expect(probe.deleteStatistics, isTrue);
-    expect(
-      probe.deleteLocalFiles,
-      isFalse,
-      reason: '两个二级勾选正交：删统计不代表删磁盘原件',
-    );
+    expect(probe.deleteLocalFiles, isFalse, reason: '两个二级勾选正交：删统计不代表删磁盘原件');
   });
 
-  testWidgets('二级勾选只在主勾选之下出现，勾上后回调收到 deleteLocalFiles=true',
-      (WidgetTester tester) async {
+  testWidgets('二级勾选只在主勾选之下出现，勾上后回调收到 deleteLocalFiles=true', (
+    WidgetTester tester,
+  ) async {
     final (FushiDatabase db, MediaCollectionRow collection) =
         await buildCollection();
     final _Probe probe = await pumpAndOpen(
@@ -361,6 +372,36 @@ void main() {
     expect(find.byType(Checkbox), findsNothing);
   });
 
+  // 2026-10-04：合集菜单此前没有封面块，一眼认不出是哪个合集。传入图源时画前景
+  // contain 封面卡；不传则不画封面块。2026-10-25 重设计起不再垫同图模糊（库页
+  // 定版「不要封面模糊背景」）。
+  testWidgets('coverImage：画出封面块，不传则没有封面块，且不垫模糊', (WidgetTester tester) async {
+    final (FushiDatabase db, MediaCollectionRow collection) =
+        await buildCollection();
+
+    await pumpAndOpen(
+      tester,
+      db: db,
+      collection: collection,
+      injectDeleteMembers: false,
+    );
+    expect(find.byType(Image), findsNothing);
+    Navigator.of(tester.element(find.byType(MediaItemDialogFrame))).pop();
+    await tester.pumpAndSettle();
+
+    await pumpAndOpen(
+      tester,
+      db: db,
+      collection: collection,
+      injectDeleteMembers: false,
+      coverImage: MemoryImage(Uint8List.fromList(const <int>[0])),
+    );
+    // 只有前景封面一张。
+    expect(find.byType(Image), findsOneWidget);
+    expect(find.byType(ImageFiltered), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('顶部主按钮 = 打开详情（不写库、不触发 onChanged）', (WidgetTester tester) async {
     final (FushiDatabase db, MediaCollectionRow collection) =
         await buildCollection();
@@ -382,8 +423,7 @@ void main() {
   testWidgets('一键整理「按名称」：重排落盘 sortIndex 并通知页面刷新', (WidgetTester tester) async {
     // 成员按 book-2 → book-1 的乱序加入；两本书无 epub 行 → 排序元数据按
     // (entryKey, 0) 兜底，标题即 entryKey，「按名称」应重排为 book-1 → book-2。
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final int id = await db.createMediaCollection('collection-sort');
     await db.addToCollection(id, MediaKind.epub, 'book-2');
@@ -411,8 +451,9 @@ void main() {
     expect(probe.changedCount, 1, reason: '排序落盘后必须通知页面重载合集行。');
   });
 
-  testWidgets('extraListActions：媒体特有项渲染、先关弹窗再执行、不触发 onChanged',
-      (WidgetTester tester) async {
+  testWidgets('extraListActions：媒体特有项渲染、先关弹窗再执行、不触发 onChanged', (
+    WidgetTester tester,
+  ) async {
     final (FushiDatabase db, MediaCollectionRow collection) =
         await buildCollection();
     bool ran = false;
@@ -489,7 +530,8 @@ void main() {
       expect(
         src,
         isNot(contains('repo.deleteVideoBookAndReclaimAssets(')),
-        reason: '合集删成员必须走 deleteVideoBooksWithDecision：勾了「删本地文件」时'
+        reason:
+            '合集删成员必须走 deleteVideoBooksWithDecision：勾了「删本地文件」时'
             '要先让播放器放句柄（Windows 上不放就是 errno 32，盘上文件一个没少）、'
             '把做种文件标 skip，删完再对账下载任务。裸仓库调用绕过这整条纪律。',
       );
@@ -507,7 +549,8 @@ void main() {
       expect(
         src,
         isNot(contains('onDeleteMembersMedia:')),
-        reason: '游戏合集删除只解散容器，绝不提供「连同游戏一起删」——游戏本体'
+        reason:
+            '游戏合集删除只解散容器，绝不提供「连同游戏一起删」——游戏本体'
             '是用户安装目录，从库移除走卡菜单「移除」（2026-07-28 拍板）。',
       );
       expect(src, isNot(contains('delete_collection_also_games')));

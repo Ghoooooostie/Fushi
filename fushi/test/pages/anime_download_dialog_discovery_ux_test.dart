@@ -2,12 +2,13 @@ import 'dart:convert';
 import 'dart:async';
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:fushi/i18n/strings.g.dart';
+import 'package:fushi_engine/media/torrent/bt_site_config.dart';
 import 'package:fushi_engine/media/torrent/anime_download_config.dart';
 import 'package:fushi/src/media/torrent/anime_download_plan.dart';
 import 'package:fushi_engine/media/torrent/nyaa_client.dart';
@@ -16,11 +17,13 @@ import 'package:fushi/src/media/video/anilist_client.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi_engine/media/video/jimaku_client.dart';
 import 'package:fushi/src/pages/implementations/anime_download_dialog.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/src/pages/implementations/jimaku_entry_picker.dart';
 import 'package:fushi/src/utils/components/fushi_material_components.dart';
 
 import '../helpers/test_platform_services.dart';
 import '../torrent/nyaa_html_fixture.dart';
+import '../helpers/glass_unwrap.dart';
 
 /// 番剧下载「发现」流 UX 回归：
 /// - Nyaa 搜索网络故障不再吞成「无结果」/统一文案：错误态展示真实异常串 +
@@ -78,7 +81,7 @@ class _MemPlanStore extends AnimeDownloadPlanStore {
   _MemPlanStore() : super(baseDir: Directory('unused-mem-store'));
 
   final Directory tempRoot = Directory.systemTemp.createTempSync(
-    'hibiki-subs-test',
+    'fushi-subs-test',
   );
 
   @override
@@ -150,6 +153,18 @@ class _FakeTorrentBackend implements TorrentBackend {
 class _FakeAppModel extends AppModel {
   _FakeAppModel(this._httpHandler) : super(testPlatformServices());
 
+  // Fushi 不内置 BT 站：番剧选种走用户添加的 Nyaa 式站点。
+  @override
+  List<BtSiteConfig> get btSites => <BtSiteConfig>[
+    BtSiteConfig(
+      id: 'test-anime-site',
+      baseUrl: Uri.parse('https://nyaa.si'),
+      format: BtSiteFormat.nyaa,
+      domains: const <BtSiteDomain>{BtSiteDomain.anime},
+      nyaaCategories: const <BtSiteDomain, String>{BtSiteDomain.anime: '1_0'},
+    ),
+  ];
+
   final Future<http.Response> Function(http.Request request) _httpHandler;
   final _MemPlanStore store = _MemPlanStore();
 
@@ -169,12 +184,24 @@ class _FakeAppModel extends AppModel {
   @override
   bool get torrentUploadIntroShown => true;
 
+  // BT 前的 P2P 说明不在这些用例的范围里。
+  @override
+  bool get p2pDownloadNoticeDismissed => true;
+
   @override
   AnimeDownloadPlanStore? get animeDownloadPlanStore => store;
 
   @override
   Future<http.Client> createDownloadHttpClient() async =>
       MockClient(_httpHandler);
+}
+
+/// 用户还没添加任何 BT 站。
+class _NoBtSiteAppModel extends _FakeAppModel {
+  _NoBtSiteAppModel(super.httpHandler);
+
+  @override
+  List<BtSiteConfig> get btSites => const <BtSiteConfig>[];
 }
 
 void main() {
@@ -197,6 +224,8 @@ void main() {
                 embedded: true,
                 debugInitialMedia: _kMedia,
                 debugInitialTorrent: torrent,
+                // 节流按真实时钟记在静态表里，连跑多条搜索用例会越排越远。
+                debugNyaaMinRequestInterval: Duration.zero,
               ),
             ),
           ),
@@ -248,6 +277,31 @@ void main() {
         <String>['ネイティブ'],
       );
     });
+  });
+
+  testWidgets('没有 BT 站：不发请求，结果区引导去添加 BT 站', (
+    WidgetTester tester,
+  ) async {
+    int requests = 0;
+    final _FakeAppModel appModel = _NoBtSiteAppModel((http.Request req) async {
+      requests++;
+      return http.Response(kNyaaNoResultsHtml, 200);
+    });
+    await pumpDialog(tester, appModel);
+    await tester.tap(find.byTooltip(t.anime_download_search).first);
+    await tester.pumpAndSettle();
+
+    expect(requests, 0, reason: 'Fushi 不内置任何 BT 站，没有站点就不发请求');
+    expect(
+      find.byKey(const ValueKey<String>('anime-download-bt-site-missing')),
+      findsOneWidget,
+    );
+    expect(find.text(t.bt_site_missing_status), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('anime-download-open-bt-sites')),
+      findsOneWidget,
+    );
+    expect(find.text(t.anime_download_no_results), findsNothing);
   });
 
   testWidgets('Nyaa 搜索网络错误：展示真实异常串 + 代理提示 + 去设置', (WidgetTester tester) async {
@@ -355,11 +409,11 @@ void main() {
     await tester.tap(find.byTooltip(t.anime_download_search).first);
     await tester.pumpAndSettle();
 
-    // 只收结果行（任务折叠区表头也是 ListTile，按已知标题过滤）。
+    // 只收结果行（结果行是分段卡里的 FushiListItem，按已知标题过滤）。
     const Set<String> known = <String>{'seeders-top', 'middle', 'size-top'};
     List<String> titles() => tester
-        .widgetList<ListTile>(find.byType(ListTile))
-        .map((ListTile tile) => tile.title)
+        .widgetList<FushiListItem>(find.byType(FushiListItem))
+        .map((FushiListItem tile) => tile.title)
         .whereType<Text>()
         .map((Text text) => text.data)
         .whereType<String>()
@@ -395,14 +449,14 @@ void main() {
           w is TextField && w.decoration?.labelText == t.video_jimaku_query,
     );
     expect(queryField, findsOneWidget);
-    expect(tester.widget<TextField>(queryField).controller!.text, 'Test Anime');
+    expect(tester.widget<TextField>(glassUnwrap<TextField>(queryField)).controller!.text, 'Test Anime');
 
     // 标题候选下拉：切到日文原名。
-    await tester.tap(find.byIcon(Icons.arrow_drop_down).first);
+    await tester.tap(find.byIcon(FushiIcons.dropDown).first);
     await tester.pumpAndSettle();
     await tester.tap(find.text('テスト・アニメ').last);
     await tester.pumpAndSettle();
-    expect(tester.widget<TextField>(queryField).controller!.text, 'テスト・アニメ');
+    expect(tester.widget<TextField>(glassUnwrap<TextField>(queryField)).controller!.text, 'テスト・アニメ');
 
     // BUG-1184：集号框宽度必须放得下 label，且**由 label 的实测宽度决定**。
     //
@@ -484,7 +538,7 @@ void main() {
     expect(searchCalls, 0);
     expect(find.text(t.anime_download_no_subs), findsOneWidget);
 
-    await tester.tap(find.byIcon(Icons.arrow_drop_down).first);
+    await tester.tap(find.byIcon(FushiIcons.dropDown).first);
     await tester.pumpAndSettle();
     await tester.tap(find.text('テスト・アニメ').last);
     await tester.pumpAndSettle();
@@ -564,7 +618,7 @@ void main() {
     expect(filesForEntry, <int>[11, 22]);
 
     // 换番剧名 → 触发重搜。手选那条仍在新结果里，必须继续选中它。
-    await tester.tap(find.byIcon(Icons.arrow_drop_down).first);
+    await tester.tap(find.byIcon(FushiIcons.dropDown).first);
     await tester.pumpAndSettle();
     await tester.tap(find.text('テスト・アニメ').last);
     await tester.pumpAndSettle();

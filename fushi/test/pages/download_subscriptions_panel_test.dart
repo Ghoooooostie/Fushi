@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fushi_engine/media/video/download/video_download_subscription_service.dart'
+    show kVideoSubscriptionBtSiteMissingError;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_core/fushi_core.dart';
 
@@ -13,6 +15,7 @@ import 'package:fushi/src/media/torrent/anime_download_subscription.dart';
 import 'package:fushi_engine/media/torrent/torrent_backend.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/module_id.dart';
+import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/pages/implementations/download_subscriptions_panel.dart';
 import 'package:fushi/src/utils/components/fushi_material_components.dart';
 import 'package:fushi/src/pages/implementations/browse_page.dart';
@@ -118,6 +121,10 @@ class _FakeAppModel extends AppModel {
   @override
   bool get torrentUploadIntroShown => true;
 
+  // BT 前的 P2P 说明不在这些用例的范围里。
+  @override
+  bool get p2pDownloadNoticeDismissed => true;
+
   // #794 起下载页任务 tab 直接读 appModel.database(VideoDownloadJobsPanel),
   // fake 懒建内存库,用到任务 tab 的用例负责 close。
   FushiDatabase? testDatabase;
@@ -125,6 +132,14 @@ class _FakeAppModel extends AppModel {
   @override
   FushiDatabase get database =>
       testDatabase ??= FushiDatabase.forTesting(NativeDatabase.memory());
+
+  /// M3E 任务中心（468ceed6a93）起浏览页 initState 读「下载执行设备」偏好给
+  /// 汇总卡的设备 chip；给一个落在同一内存库上的真偏好仓库（空库 = 本机）。
+  PreferencesRepository? testPrefsRepo;
+
+  @override
+  PreferencesRepository get prefsRepo =>
+      testPrefsRepo ??= PreferencesRepository(database);
 
   /// 发现排第一后，「下载」左邻在有小说在线源的平台上是「扩展」页签，它会建
   /// LNReader 管理器（根目录在数据库目录下）；给一个临时目录让它建得起来。
@@ -156,6 +171,7 @@ void main() {
     WidgetTester tester, {
     required Size size,
     bool withSubscription = true,
+    String? lastError,
   }) async {
     tester.view.physicalSize = size;
     tester.view.devicePixelRatio = 1;
@@ -182,6 +198,7 @@ void main() {
       ).copyWith(
         processedEpisodes: <int>{13},
         lastCheckedAtMs: DateTime.utc(2026, 7, 23).millisecondsSinceEpoch,
+        lastError: lastError,
       );
       store.values[subscription.id] = subscription;
     }
@@ -223,6 +240,25 @@ void main() {
         find.text('A Rather Long Example Anime Series Title'), findsOneWidget);
     expect(find.textContaining('A-Rather-Long-Release-Group'), findsOneWidget);
     expect(find.textContaining('Complete season pack'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+
+    service.checking.dispose();
+    appModel.store.revision.dispose();
+  });
+
+  // 没有可用 BT 站而暂停：不显示引擎的英文标记，显示本地化提示 + 去 BT 站设置。
+  testWidgets('BT-site-missing pause shows a localized hint with a settings link',
+      (WidgetTester tester) async {
+    final (_FakeAppModel appModel, AnimeDownloadSubscriptionService service) =
+        await pumpPanel(
+      tester,
+      size: const Size(1200, 800),
+      lastError: kVideoSubscriptionBtSiteMissingError,
+    );
+
+    expect(find.text(t.bt_site_missing_status), findsOneWidget);
+    expect(find.text(t.bt_site_open_settings_action), findsOneWidget);
+    expect(find.text(kVideoSubscriptionBtSiteMissingError), findsNothing);
     expect(tester.takeException(), isNull);
 
     service.checking.dispose();

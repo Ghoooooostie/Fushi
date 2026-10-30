@@ -24,7 +24,9 @@ extension _VideoMiniWindow on _VideoFushiPageState {
   /// 本机有没有小窗可用：桌面恒有（主窗自己变形）；移动端取决于系统画中画，
   /// 只有 Android 有、且要 API 26+（见 [AndroidPictureInPicture.isSupported]）。
   bool get _miniWindowAvailable =>
-      isDesktopPlatform || _pictureInPictureSupported;
+      // 网页档没有小窗：站点画面是 WebView2 子窗口，主窗缩成小窗塞不下站点布局，
+      // 系统画中画也拿不到这条画面。
+      !_webMode && (isDesktopPlatform || _pictureInPictureSupported);
 
   /// 当前画面宽高比；尺寸还没解析出来时退回 16:9（两个平台的小窗几何都要它，
   /// 且都不接受 0 / NaN）。
@@ -90,8 +92,9 @@ extension _VideoMiniWindow on _VideoFushiPageState {
   /// 系统画中画进出的唯一写入点。
   void _handlePictureInPictureChanged(bool active) {
     if (!mounted) return;
-    final VideoMiniSurface next =
-        active ? VideoMiniSurface.pictureInPicture : VideoMiniSurface.none;
+    final VideoMiniSurface next = active
+        ? VideoMiniSurface.pictureInPicture
+        : VideoMiniSurface.none;
     if (_miniSurface.value == next) return;
     _miniSurface.value = next;
     // 密度档随表面变，控制条 theme / 字幕避让都要按新几何重算一帧。
@@ -215,16 +218,34 @@ extension _VideoMiniWindow on _VideoFushiPageState {
     final Widget bar = SizedBox(
       height: height,
       child: DecoratedBox(
-        decoration: const BoxDecoration(
+        // Apple：只留很淡的顶部暗化（退出钮自带玻璃，不靠重渐变保证可读）。
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: <Color>[Color(0x73000000), Color(0x00000000)],
+            colors: <Color>[
+              _appleChrome ? const Color(0x33000000) : const Color(0x73000000),
+              const Color(0x00000000),
+            ],
           ),
         ),
         child: Row(
           children: <Widget>[
             const Spacer(),
+            // 原盘会话：mini 档不渲染常规顶栏，「主菜单 / 弹出菜单」只能挂在这里，
+            // 否则小窗里放正片时回不到原盘菜单（BUG-3229 审查）。
+            if (_controller?.isBlurayNavigationSession == true) ...<Widget>[
+              _miniWindowIconButton(
+                icon: FushiIcons.toc,
+                tooltip: t.video_disc_top_menu,
+                onPressed: () => unawaited(_runDiscNavigation('menu')),
+              ),
+              _miniWindowIconButton(
+                icon: FushiIcons.menu,
+                tooltip: t.video_disc_popup_menu,
+                onPressed: () => unawaited(_runDiscNavigation('popup')),
+              ),
+            ],
             _miniWindowIconButton(
               icon: Icons.close_fullscreen_rounded,
               tooltip: t.video_mini_window_exit,
@@ -367,7 +388,8 @@ extension _VideoMiniWindow on _VideoFushiPageState {
           _videoControlEditMode,
         ]),
         builder: (BuildContext context, _) {
-          final bool interactive = !_immersiveLocked.value &&
+          final bool interactive =
+              !_immersiveLocked.value &&
               _videoSidePanel.value == null &&
               !_episodeListVisible.value &&
               !_videoControlEditMode.value;
@@ -393,7 +415,7 @@ extension _VideoMiniWindow on _VideoFushiPageState {
                 hitTestHeight: 12 * _videoUiScale,
                 onSeekFraction: interactive
                     ? (double fraction) =>
-                        unawaited(_seekToProgressFraction(fraction))
+                          unawaited(_seekToProgressFraction(fraction))
                     : null,
               );
             },
@@ -408,8 +430,21 @@ extension _VideoMiniWindow on _VideoFushiPageState {
     required String tooltip,
     required VoidCallback onPressed,
   }) {
-    return IconButton(
-      icon: Icon(icon),
+    // Apple：小窗右上角的退出钮是一枚小号玻璃圆钮（与居中三键同材质）。
+    if (_appleChrome) {
+      return Padding(
+        padding: EdgeInsets.all(2 * _videoUiScale),
+        child: VideoGlassCircleButton(
+          icon: icon,
+          tooltip: tooltip,
+          onPressed: onPressed,
+          size: 28 * _videoUiScale,
+          iconSize: 14 * _videoUiScale,
+        ),
+      );
+    }
+    return FushiIconButtonControl(
+      icon: FushiIcon(icon),
       iconSize: 18 * _videoUiScale,
       color: videoChromeNeutralForeground,
       tooltip: tooltip,
@@ -427,7 +462,18 @@ extension _VideoMiniWindow on _VideoFushiPageState {
     bool primary = false,
   }) {
     final double size = (primary ? 56 : 40) * _videoUiScale;
-    return Tooltip(
+    // Apple：系统画中画 / AVKit 居中三键——无填充色的透明液态玻璃圆钮，SF 实心
+    // 字形（FushiIcon 换形），主播放键更大。
+    if (_appleChrome) {
+      return VideoGlassCircleButton(
+        icon: icon,
+        tooltip: tooltip,
+        onPressed: onPressed,
+        size: size,
+        iconSize: size * (primary ? 0.42 : 0.4),
+      );
+    }
+    return FushiTooltip(
       message: tooltip,
       child: Material(
         color: _osdSurfaceColor(colorScheme),
@@ -438,10 +484,11 @@ extension _VideoMiniWindow on _VideoFushiPageState {
           child: SizedBox(
             width: size,
             height: size,
-            child: Icon(
+            child: FushiIcon(
               icon,
               size: size * 0.5,
-              color: videoChromeNeutralForeground,
+              // 与圆底 [_osdSurfaceColor] 自配对（随 app 日间 / 深色模式）。
+              color: _osdTextColor(colorScheme),
             ),
           ),
         ),

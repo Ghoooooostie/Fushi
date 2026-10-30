@@ -41,6 +41,7 @@ class EmbeddedTorrentBackend
     TrackerSubscriptionService? trackerSubscriptionService,
     bool autoAddTrackerSubscription = false,
     String trackerSubscriptionUrl = '',
+    List<String> Function()? extraTrackers,
   }) : _session = session,
        _saveRoots = saveRoots,
        _closesSession = closesSession,
@@ -51,7 +52,8 @@ class EmbeddedTorrentBackend
        _metainfoTempDirectory = metainfoTempDirectory,
        _trackerSubscriptionService = trackerSubscriptionService,
        _autoAddTrackerSubscription = autoAddTrackerSubscription,
-       _trackerSubscriptionUrl = trackerSubscriptionUrl;
+       _trackerSubscriptionUrl = trackerSubscriptionUrl,
+       _extraTrackers = extraTrackers;
 
   final EmbeddedTorrentSession _session;
 
@@ -84,6 +86,11 @@ class EmbeddedTorrentBackend
   final bool _autoAddTrackerSubscription;
   final String _trackerSubscriptionUrl;
 
+  /// BUG-2950：宿主级附加 tracker 的读取口（[EmbeddedTorrentHost.setExtraTrackers]
+  /// 下发的 plain 字符串，fake-ip DNS 下是 DoH 解析出的真实 IP tracker）。
+  /// 每次 add 现读，适配器建好之后宿主再更新也能生效；null = 无附加 tracker。
+  final List<String> Function()? _extraTrackers;
+
   /// 已添加但 firstLastPiecePrio 尚未应用成功（等元数据）的种子。
   final Set<String> _pendingFirstLast = <String>{};
 
@@ -113,18 +120,39 @@ class EmbeddedTorrentBackend
     String? savePath,
     bool sequential = false,
     bool firstLastPiecePrio = false,
+  }) async =>
+      await addTorrentReturningId(
+        magnetOrUrl,
+        category: category,
+        savePath: savePath,
+        sequential: sequential,
+        firstLastPiecePrio: firstLastPiecePrio,
+      ) !=
+      null;
+
+  /// [addTorrent] 的形态之一：成功返回新种子的 infohash，失败返回 null。
+  ///
+  /// BUG-3577：工作 isolate 里的视图没有订阅服务（拉订阅要用 app 装配的代理感知
+  /// http client，带不过 isolate 边界），UI isolate 的代理拿这个 id 在 add
+  /// 之后补订阅 tracker——与本类自持订阅服务时的先 add 后拉订阅同序。
+  Future<String?> addTorrentReturningId(
+    String magnetOrUrl, {
+    required String category,
+    String? savePath,
+    bool sequential = false,
+    bool firstLastPiecePrio = false,
   }) async {
     // 显式落点优先（受管视频任务直落目标来源的暂存目录，BUG-2755）；
     // 没给才回退活动根下的分类目录。
     final String? targetPath = await _prepareSavePath(category, savePath);
-    if (targetPath == null) return false;
+    if (targetPath == null) return null;
     final bool isMagnet = magnetOrUrl.startsWith('magnet:');
     final bool isLocalTorrentFile =
         magnetOrUrl.toLowerCase().endsWith('.torrent') &&
         !magnetOrUrl.contains('://');
     if (!isMagnet && !isLocalTorrentFile) {
       // http(s) .torrent URL：内置引擎不支持（见类注释）。
-      return false;
+      return null;
     }
 
     final FtAddResult result;
@@ -146,18 +174,19 @@ class EmbeddedTorrentBackend
     } finally {
       _endNetworkWake?.call();
     }
-    if (!result.ok || result.id == null) return false;
-    final List<String> trackers = await _subscriptionTrackers();
+    final String? id = result.id;
+    if (!result.ok || id == null) return null;
+    final List<String> trackers = await _trackersForNewTorrent();
     if (trackers.isNotEmpty) {
-      _session.addTrackers(result.id!, trackers);
+      _session.addTrackers(id, trackers);
     }
     if (firstLastPiecePrio) {
       // 立即试一次（.torrent 文件路径元数据现成）；不成留待轮询补。
-      if (_session.applyFirstLastPriority(result.id!) != 1) {
-        _pendingFirstLast.add(result.id!);
+      if (_session.applyFirstLastPriority(id) != 1) {
+        _pendingFirstLast.add(id);
       }
     }
-    return true;
+    return id;
   }
 
   /// 解析并建好本次添加的保存目录；失败返回 null（与 [prepareCategory] 同契约）。
@@ -172,6 +201,14 @@ class EmbeddedTorrentBackend
     } on Object {
       return null;
     }
+  }
+
+  /// 新任务 add 后要追加的 tracker：订阅列表 + 宿主级附加 tracker（去重）。
+  Future<List<String>> _trackersForNewTorrent() async {
+    final List<String> subscribed = await _subscriptionTrackers();
+    final List<String> extra = _extraTrackers?.call() ?? const <String>[];
+    if (extra.isEmpty) return subscribed;
+    return <String>{...subscribed, ...extra}.toList(growable: false);
   }
 
   Future<List<String>> _subscriptionTrackers() async {
@@ -201,6 +238,23 @@ class EmbeddedTorrentBackend
     String? savePath,
     bool sequential = false,
     bool firstLastPiecePrio = false,
+  }) async =>
+      await addTorrentMetainfoReturningId(
+        payload,
+        category: category,
+        savePath: savePath,
+        sequential: sequential,
+        firstLastPiecePrio: firstLastPiecePrio,
+      ) !=
+      null;
+
+  /// [addTorrentMetainfo] 的返回 infohash 形态（理由见 [addTorrentReturningId]）。
+  Future<String?> addTorrentMetainfoReturningId(
+    TorrentMetainfoPayload payload, {
+    required String category,
+    String? savePath,
+    bool sequential = false,
+    bool firstLastPiecePrio = false,
   }) async {
     Directory? temporaryDirectory;
     try {
@@ -212,7 +266,7 @@ class EmbeddedTorrentBackend
         '${temporaryDirectory.path}${Platform.pathSeparator}$fileName',
       );
       await file.writeAsBytes(payload.bytes, flush: true);
-      return addTorrent(
+      return await addTorrentReturningId(
         file.path,
         category: category,
         savePath: savePath,
@@ -220,7 +274,7 @@ class EmbeddedTorrentBackend
         firstLastPiecePrio: firstLastPiecePrio,
       );
     } on FileSystemException {
-      return false;
+      return null;
     } finally {
       if (temporaryDirectory != null) {
         try {
@@ -237,8 +291,22 @@ class EmbeddedTorrentBackend
     TorrentMetainfoPayload payload, {
     required String category,
     String? savePath,
+  }) async =>
+      await addTorrentMetainfoPausedReturningId(
+        payload,
+        category: category,
+        savePath: savePath,
+      ) !=
+      null;
+
+  /// [addTorrentMetainfoPaused] 的返回 infohash 形态（理由见
+  /// [addTorrentReturningId]）。
+  Future<String?> addTorrentMetainfoPausedReturningId(
+    TorrentMetainfoPayload payload, {
+    required String category,
+    String? savePath,
   }) async {
-    if (!pauseControlAvailable) return false;
+    if (!pauseControlAvailable) return null;
     Directory? temporaryDirectory;
     String? addedTorrentId;
     try {
@@ -251,31 +319,31 @@ class EmbeddedTorrentBackend
       );
       await file.writeAsBytes(payload.bytes, flush: true);
       final String? targetPath = await _prepareSavePath(category, savePath);
-      if (targetPath == null) return false;
+      if (targetPath == null) return null;
       _beginNetworkWake?.call();
       final FtAddResult result;
       try {
         result = _session.addTorrentFile(file.path, savePath: targetPath);
-        if (!result.ok || result.id == null) return false;
+        if (!result.ok || result.id == null) return null;
         final bool paused =
             _pauseControl?.pause(result.id!) ??
             _session.pauseTorrent(result.id!, pause: true);
         if (!paused) {
           _session.removeTorrent(result.id!, deleteFiles: false);
-          return false;
+          return null;
         }
         addedTorrentId = result.id!;
         _localPaused.add(addedTorrentId.toLowerCase());
       } finally {
         _endNetworkWake?.call();
       }
-      final List<String> trackers = await _subscriptionTrackers();
+      final List<String> trackers = await _trackersForNewTorrent();
       if (trackers.isNotEmpty) {
         _session.addTrackers(addedTorrentId, trackers);
       }
-      return true;
+      return addedTorrentId;
     } on FileSystemException {
-      return false;
+      return null;
     } finally {
       if (temporaryDirectory != null) {
         try {

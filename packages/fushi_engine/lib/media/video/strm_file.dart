@@ -9,8 +9,12 @@
 /// 本文件只做字符串判定，不碰文件系统 / 网络，app 与服务端共用。
 library;
 
+import 'package:fushi_engine/media/video/dvd/dvd_title_path.dart'
+    show isDvdTitlePath;
 import 'package:fushi_engine/media/video/anime_source_video_path.dart'
     show isAnimeSourceVideoPath;
+import 'package:fushi_engine/media/video/media_server_video_path.dart'
+    show isMediaServerVideoPath;
 
 /// `.strm` 扩展名（小写，不带点）。
 const String kStrmExtension = 'strm';
@@ -38,6 +42,18 @@ const Set<String> kNetworkStreamSchemes = <String>{
   'udp',
 };
 
+/// 来源库 SFTP 视频条目的稳定地址协议：`sftp://<host>:<port><远端路径>`（app 侧
+/// `sftp_stream_source.dart` 扫描时写入，起播时经回环中继换成 http 地址）。
+///
+/// **不在** [kNetworkStreamSchemes] 里：播放内核不直接开它，必须经来源的播放期
+/// 解析器换地址——放进那个集合会让 `.strm` 里写的 `sftp://` 被原样交给内核。
+const String kSourceLibrarySftpScheme = 'sftp';
+
+/// 纯函数：[path] 是不是来源库 SFTP 视频条目地址（[kSourceLibrarySftpScheme]）。
+bool isSourceLibrarySftpVideoPath(String? path) =>
+    path != null &&
+    path.trim().toLowerCase().startsWith('$kSourceLibrarySftpScheme://');
+
 /// 纯函数：[url] 是否是 [kNetworkStreamSchemes] 里的网络流地址（host 非空）。
 ///
 /// 与 app 侧 `isPlayableStreamUrl`（只认 http(s)，导入对话框的输入校验）的区别：
@@ -58,13 +74,17 @@ bool isNetworkStreamUrl(String url) {
 /// 判据的用途是「别把它当本地路径去碰文件系统」，宁可多认。
 ///
 /// 在线视频源入库集（[isAnimeSourceVideoPath]，`anime-source://`，起播时向扩展
-/// 取流）同样没有本地文件，一并算在内——全仓唯一一份判据，
+/// 取流）、媒体服务器入库条目（[isMediaServerVideoPath]，`media-server://`，起播时
+/// 按服务器配置现建客户端取流）与来源库 SFTP 条目（[isSourceLibrarySftpVideoPath]，
+/// 起播时经回环中继取字节）同样没有本地文件，一并算在内——全仓唯一一份判据，
 /// `anime_source_video_path.dart` 只是转出它。`.strm` 不在其内：本地 `.strm` 是
 /// 磁盘上真实存在的文件（同目录 NFO / 海报 sidecar 照常可用），只是**没有媒体
 /// 字节**——需要媒体字节的门用 [lacksLocalMediaFile]。
 bool isNetworkOnlyVideoPath(String? path) {
   if (path == null) return false;
   if (isAnimeSourceVideoPath(path)) return true;
+  if (isMediaServerVideoPath(path)) return true;
+  if (isSourceLibrarySftpVideoPath(path)) return true;
   final String trimmed = path.trim();
   final int sep = trimmed.indexOf('://');
   if (sep <= 0) return false;
@@ -73,12 +93,14 @@ bool isNetworkOnlyVideoPath(String? path) {
 }
 
 /// 纯函数：这一行视频在本机**没有可读的媒体字节**——网络流
-/// （[isNetworkOnlyVideoPath]）或 `.strm` 流指针（[isStrmPath]，本地那份只是一行
-/// 地址）。ED2K 哈希、抽帧、规格探测、互联上传 / 下发视频文件这类要读媒体本体的
+/// （[isNetworkOnlyVideoPath]）、`.strm` 流指针（[isStrmPath]，本地那份只是一行
+/// 地址），或 DVD title（[isDvdTitlePath]：虚拟路径，媒体要经原生 libdvdnav 按 title
+/// 读，盘上没有「这一条」的媒体文件）。ED2K 哈希、抽帧、规格探测、互联上传 / 下发视频文件这类要读媒体本体的
 /// 门用它；只需要「本地目录里找 sidecar」的门（封面 / NFO）用
 /// [isNetworkOnlyVideoPath]。
 bool lacksLocalMediaFile(String? path) =>
-    path != null && (isNetworkOnlyVideoPath(path) || isStrmPath(path));
+    path != null &&
+    (isNetworkOnlyVideoPath(path) || isStrmPath(path) || isDvdTitlePath(path));
 
 /// Apple 平台（iOS / macOS）不放行的流协议：随包 libmpv 在 Apple 上的 TLS 走
 /// Mbed TLS，https 由应用内中继终结 TLS 规避了握手段错误，但 rtsps / rtmps / rtmpe

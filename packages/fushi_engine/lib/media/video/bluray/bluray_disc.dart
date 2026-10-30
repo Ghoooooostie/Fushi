@@ -31,7 +31,9 @@ import 'dart:typed_data';
 
 import 'package:path/path.dart' as p;
 
+import 'package:fushi_engine/media/video/bluray/bluray_disc_meta_files.dart';
 import 'package:fushi_engine/media/video/bluray/bluray_playlist.dart';
+import 'package:fushi_engine/media/video/disc/disc_title_selection.dart';
 
 /// 标题的绝对时长下限。低于此的几乎只可能是厂标、警告画面或菜单循环。
 const Duration kBlurayMinimumTitleDuration = Duration(seconds: 60);
@@ -83,6 +85,7 @@ class BlurayDisc {
     required this.name,
     required this.playlists,
     required this.titles,
+    this.extras = const <BlurayTitle>[],
   });
 
   /// 含 `BDMV` 的那一层目录。
@@ -96,6 +99,11 @@ class BlurayDisc {
 
   /// 筛选后的标题，按编号升序。
   final List<BlurayTitle> titles;
+
+  /// 这张盘的特典（制作特辑、PV、菜单里「特典映像」那一类），按编号升序：可独立
+  /// 播放、但没被选成标题的播放列表，已去掉厂标 / 警告、菜单背景循环、标题的重复
+  /// 与章节子集（[selectBlurayExtras]）。它们入库但不进盘合集，挂在正片作品下。
+  final List<BlurayTitle> extras;
 
   /// 最长标题在 [titles] 里的下标；[titles] 为空时为 null。
   int? get mainTitleIndex {
@@ -132,21 +140,23 @@ Iterable<String> blurayCollectionNameCandidates(
 /// [path] 指向一张盘时返回含 `BDMV` 的那层目录，否则返回 null。
 ///
 /// 同时接受「盘根」与「`BDMV` 目录本身」两种指法——用户拖进来的可能是任意一种。
-String? blurayDiscRootForDirectory(String path) {
+///
+/// 只走 async 文件 API：盘常放在网络盘上，同步 stat 一次就是秒级、冻结调用方所在
+/// isolate（互联 host 与 UI 同在 app 主 isolate，BUG-3756）。
+Future<String?> blurayDiscRootForDirectory(String path) async {
   final String normalized = p.normalize(path);
-  if (_looksLikeBlurayRoot(normalized)) return normalized;
+  if (await _looksLikeBlurayRoot(normalized)) return normalized;
   // 指的是 BDMV 目录本身：上跳一层（精确大小写，见 [blurayDiscRootForFile]）。
   if (p.basename(normalized) == 'BDMV') {
     final String parent = p.dirname(normalized);
-    if (_looksLikeBlurayRoot(parent)) return parent;
+    if (await _looksLikeBlurayRoot(parent)) return parent;
   }
   return null;
 }
 
-bool _looksLikeBlurayRoot(String dirPath) {
-  final String bdmv = p.join(dirPath, 'BDMV');
-  if (!Directory(bdmv).existsSync()) return false;
-  return Directory(p.join(bdmv, 'PLAYLIST')).existsSync();
+Future<bool> _looksLikeBlurayRoot(String dirPath) async {
+  // `BDMV/PLAYLIST` 是目录即隐含 `BDMV` 是目录，一次 stat 就够。
+  return FileSystemEntity.isDirectory(p.join(dirPath, 'BDMV', 'PLAYLIST'));
 }
 
 /// 从盘内**文件**路径反推盘根；不是盘内文件时返回 null。
@@ -215,13 +225,13 @@ bool isInsideBlurayDisc(String filePath, Set<String> discRoots) {
 
 /// 读入 [rootPath] 这张盘。不是盘、或一条标题都选不出来时返回 null。
 Future<BlurayDisc?> readBlurayDisc(String rootPath) async {
-  final String? root = blurayDiscRootForDirectory(rootPath);
+  final String? root = await blurayDiscRootForDirectory(rootPath);
   if (root == null) return null;
 
   final Directory playlistDir = Directory(p.join(root, 'BDMV', 'PLAYLIST'));
   final List<FileSystemEntity> entries;
   try {
-    entries = playlistDir.listSync(followLinks: false);
+    entries = await playlistDir.list(followLinks: false).toList();
   } on FileSystemException {
     return null;
   }
@@ -239,7 +249,7 @@ Future<BlurayDisc?> readBlurayDisc(String rootPath) async {
   final Directory streamDir = Directory(p.join(root, 'BDMV', 'STREAM'));
   Set<String>? presentClips = <String>{};
   try {
-    for (final FileSystemEntity entity in streamDir.listSync(
+    await for (final FileSystemEntity entity in streamDir.list(
       followLinks: false,
     )) {
       if (entity is! File) continue;
@@ -269,7 +279,89 @@ Future<BlurayDisc?> readBlurayDisc(String rootPath) async {
     name: name,
     playlists: List<BlurayPlaylist>.unmodifiable(playlists),
     titles: List<BlurayTitle>.unmodifiable(titles),
+    extras: List<BlurayTitle>.unmodifiable(
+      selectBlurayExtras(
+        playlists,
+        titles: titles,
+        discRootPath: root,
+        discName: name,
+        presentClipIds: presentClips,
+      ),
+    ),
   );
+}
+
+/// 盘上没被选成标题、但仍是一段可独立观看内容的播放列表在库里的名字：与标题的
+/// `<盘名> - NN` 同形，编号用 MPLS 号以免与标题序号撞名。
+String blurayMenuTitleName(String discName, String playlistId) =>
+    '$discName - $playlistId';
+
+/// 从一盘播放列表里挑出特典。纯函数。
+///
+/// 与 [selectBlurayTitles] 共用逐条判据（可播放类型、[minimumDuration] 绝对下限——
+/// 厂标 / 警告画面都在一分钟内、有视频流、片段都在），再去掉：
+/// - 菜单背景循环：同一段片段在一条播放列表里重复出现（实测菜单背景是同一个
+///   m2ts 连排 7 次）；
+/// - 标题的重复与章节子集：片段全被某条标题包含；
+/// - 特典之间的重复（同签名只留一条）与「全部播放」形状。
+List<BlurayTitle> selectBlurayExtras(
+  List<BlurayPlaylist> playlists, {
+  required List<BlurayTitle> titles,
+  required String discRootPath,
+  required String discName,
+  Set<String>? presentClipIds,
+  Duration minimumDuration = kBlurayMinimumTitleDuration,
+}) {
+  final int minimumTicks =
+      minimumDuration.inMilliseconds * kBlurayTimeScale ~/ 1000;
+  final Set<String> titleIds = <String>{
+    for (final BlurayTitle title in titles) title.playlist.id,
+  };
+  final List<Set<String>> titleClips = <Set<String>>[
+    for (final BlurayTitle title in titles) title.playlist.clipIds.toSet(),
+  ];
+  final Map<String, BlurayPlaylist> bySignature = <String, BlurayPlaylist>{};
+  for (final BlurayPlaylist playlist in playlists) {
+    if (titleIds.contains(playlist.id)) continue;
+    if (playlist.playbackType != 1) continue;
+    if (playlist.durationTicks < minimumTicks) continue;
+    if (playlist.videoStreams.isEmpty) continue;
+    if (presentClipIds != null &&
+        !playlist.clipIds.every(
+          (String id) => presentClipIds.contains(id.toUpperCase()),
+        )) {
+      continue;
+    }
+    final Set<String> clips = playlist.clipIds.toSet();
+    if (clips.length != playlist.clips.length) continue;
+    if (titleClips.any((Set<String> title) => title.containsAll(clips))) {
+      continue;
+    }
+    final String signature = _contentSignature(playlist);
+    final BlurayPlaylist? existing = bySignature[signature];
+    if (existing == null || _prefersOver(playlist, existing)) {
+      bySignature[signature] = playlist;
+    }
+  }
+  final List<BlurayPlaylist> unique = bySignature.values.toList();
+  final List<BlurayPlaylist> pool = <BlurayPlaylist>[
+    for (final BlurayTitle title in titles) title.playlist,
+    ...unique,
+  ];
+  final List<BlurayPlaylist> kept =
+      unique
+          .where((BlurayPlaylist playlist) => !_isPlayAllOf(playlist, pool))
+          .toList()
+        ..sort((BlurayPlaylist a, BlurayPlaylist b) => a.id.compareTo(b.id));
+  return <BlurayTitle>[
+    for (final BlurayPlaylist playlist in kept)
+      BlurayTitle(
+        playlist: playlist,
+        discRootPath: discRootPath,
+        name: blurayMenuTitleName(discName, playlist.id),
+        isMainFeature: false,
+      ),
+  ];
 }
 
 Future<BlurayPlaylist?> _readPlaylistFile(File file) async {
@@ -288,19 +380,25 @@ Future<BlurayPlaylist?> _readPlaylistFile(File file) async {
 /// 盘名：`BDMV/META/DL/bdmt_*.xml` 里的盘内标题，读不到就用目录名。
 ///
 /// META 是可选段，多数压制盘没有；有的时候它比目录名准得多（目录名常带压制组后缀）。
+///
+/// 选文件与盘面图（`readBlurayDiscArtwork`）同一个排序函数
+/// [orderBlurayDiscMetadataFiles]，但**不带界面语言偏好**：盘名是盘合集的自然键
+/// （合集按名对回、特典墓碑按名挂），跟着界面语言变，切一次语言重扫就会把同一张
+/// 盘拆成新合集。
 Future<String> readBlurayDiscName(String rootPath) async {
   final String fallback = p.basename(p.normalize(rootPath));
   final Directory metaDir = Directory(p.join(rootPath, 'BDMV', 'META', 'DL'));
   try {
-    if (!metaDir.existsSync()) return fallback;
-    final List<File> candidates =
-        metaDir
-            .listSync(followLinks: false)
-            .whereType<File>()
-            .where((File f) => p.extension(f.path).toLowerCase() == '.xml')
-            .toList()
-          ..sort((File a, File b) => a.path.compareTo(b.path));
-    for (final File file in candidates) {
+    if (!await metaDir.exists()) return fallback;
+    final List<String> names = <String>[
+      await for (final FileSystemEntity e in metaDir.list(followLinks: false))
+        if (e is File) p.basename(e.path),
+    ];
+    for (final String name in orderBlurayDiscMetadataFiles(
+      names,
+      preferredLanguages: const <String>[],
+    )) {
+      final File file = File(p.join(metaDir.path, name));
       if (await file.length() > kBlurayMaxPlaylistBytes) continue;
       final String? title = parseBlurayMetaTitle(await file.readAsString());
       if (title != null && title.isNotEmpty) return title;
@@ -385,16 +483,11 @@ List<BlurayTitle> selectBlurayTitles(
   // 的 NCOP / 预告 / 过场就漏网存活；若再拿它当锚，7 集以上的盘 0.15 × 总长就超过
   // 单集，各集全部出局、库里只剩一条几小时的 play-all。锚点退到「不是别人超集」的
   // 最长者，play-all 本身照旧按下限判（PR #1604 审查）。
-  int longest = 0;
-  for (final BlurayPlaylist playlist in unique) {
-    if (_supersetOfOthers(playlist, unique) >= 2) continue;
-    if (playlist.durationTicks > longest) longest = playlist.durationTicks;
-  }
-  if (longest == 0) {
-    for (final BlurayPlaylist playlist in unique) {
-      if (playlist.durationTicks > longest) longest = playlist.durationTicks;
-    }
-  }
+  final int longest = discRelativeFloorAnchor<BlurayPlaylist>(
+    unique,
+    _clipIdsOf,
+    (BlurayPlaylist playlist) => playlist.durationTicks,
+  );
   final int relativeFloor = (longest * relativeDurationFloor).round();
   final List<BlurayPlaylist> kept =
       unique
@@ -425,46 +518,20 @@ List<BlurayTitle> selectBlurayTitles(
 }
 
 /// 内容签名：片段多重集（排序后）+ 总时长。顺序被打乱的诱饵播放列表在这里与正片同签名。
-String _contentSignature(BlurayPlaylist playlist) {
-  final List<String> ids = playlist.clipIds.toList()..sort();
-  return '${ids.join(",")}@${playlist.durationTicks}';
-}
+String _contentSignature(BlurayPlaylist playlist) =>
+    discContentSignature(playlist.clipIds, playlist.durationTicks);
 
 /// 同签名里谁更可能是「真正那条」：章节多的优先，其次编号小的。
-bool _prefersOver(BlurayPlaylist candidate, BlurayPlaylist incumbent) {
-  if (candidate.chapters.length != incumbent.chapters.length) {
-    return candidate.chapters.length > incumbent.chapters.length;
-  }
-  return candidate.id.compareTo(incumbent.id) < 0;
-}
+bool _prefersOver(BlurayPlaylist candidate, BlurayPlaylist incumbent) =>
+    discPrefersOver(
+      candidateChapters: candidate.chapters.length,
+      candidateId: candidate.id,
+      incumbentChapters: incumbent.chapters.length,
+      incumbentId: incumbent.id,
+    );
 
-/// [pool] 里有几条别的播放列表的片段集合被 [playlist] 严格包住（集合比较）。
-int _supersetOfOthers(BlurayPlaylist playlist, List<BlurayPlaylist> pool) {
-  final Set<String> own = playlist.clipIds.toSet();
-  int count = 0;
-  for (final BlurayPlaylist other in pool) {
-    if (identical(other, playlist)) continue;
-    final Set<String> ids = other.clipIds.toSet();
-    if (ids.isEmpty || ids.length >= own.length) continue;
-    if (own.containsAll(ids)) count++;
-  }
-  return count;
-}
+List<String> _clipIdsOf(BlurayPlaylist playlist) => playlist.clipIds;
 
 /// [playlist] 是否只是把 [pool] 里另外两条及以上播放列表串起来的「全部播放」。
-bool _isPlayAllOf(BlurayPlaylist playlist, List<BlurayPlaylist> pool) {
-  if (playlist.clips.length < 2) return false;
-  final Set<String> own = playlist.clipIds.toSet();
-  if (own.length != playlist.clips.length) return false;
-
-  final Set<String> covered = <String>{};
-  int parts = 0;
-  for (final BlurayPlaylist other in pool) {
-    if (identical(other, playlist)) continue;
-    final Set<String> ids = other.clipIds.toSet();
-    if (ids.isEmpty || !own.containsAll(ids)) continue;
-    covered.addAll(ids);
-    parts++;
-  }
-  return parts >= 2 && covered.length == own.length;
-}
+bool _isPlayAllOf(BlurayPlaylist playlist, List<BlurayPlaylist> pool) =>
+    discIsPlayAllOf<BlurayPlaylist>(playlist, pool, _clipIdsOf);

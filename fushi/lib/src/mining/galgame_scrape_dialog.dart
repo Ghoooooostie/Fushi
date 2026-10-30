@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:fushi_core/fushi_core.dart' show GalgameSourceRow;
 
 import 'package:fushi/src/mining/galgame_cover_download.dart';
@@ -11,8 +11,12 @@ import 'package:fushi/src/mining/galgame_repository.dart';
 import 'package:fushi/src/mining/galgame_scrape_controller.dart';
 import 'package:fushi/src/mining/metadata/galgame_metadata_adapter.dart';
 import 'package:fushi/src/mining/metadata/galgame_metadata_draft.dart';
+import 'package:fushi_engine/media/metadata/dlsite/dlsite_client.dart';
 import 'package:fushi_engine/mining/metadata/galgame_metadata_source.dart';
 import 'package:fushi/utils.dart';
+import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
+import 'package:fushi/src/utils/components/fushi_search.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 
 /// 游戏「刮削元数据」统一弹窗。
 ///
@@ -53,6 +57,7 @@ Future<bool> showGalgameScrapeDialog({
 /// - Bangumi 条目页（`bgm.tv` / `bangumi.tv` / `chii.in` 的 `/subject/<数字>`，
 ///   允许尾随斜杠/多余路径段/query/fragment）→ 数字串裸 ID；
 /// - VNDB 条目页（`vndb.org` 的 `/v<数字>`，同样宽容尾随内容）→ `v<数字>`；
+/// - DLsite 作品页（`dlsite.com` 任意分站，路径里带 `product_id/<编号>`）→ 编号；
 /// - 其它输入（裸 ID、普通关键词、非条目 URL）**原样返回，零行为变化**。
 String normalizeGalgameScrapeQuery(String input) {
   final Uri? uri = _tryParseEntryUrl(input);
@@ -76,7 +81,29 @@ String normalizeGalgameScrapeQuery(String input) {
         RegExp(r'^v(\d+)$', caseSensitive: false).firstMatch(segments[0]);
     if (m != null) return 'v${m.group(1)!}';
   }
+  if (host == 'dlsite.com' || host.endsWith('.dlsite.com')) {
+    final DlsiteWorkId? id = DlsiteWorkId.findIn(uri.path);
+    if (id != null) return id.value;
+  }
   return input;
+}
+
+/// 纯函数：弹窗搜索框的预填词。
+///
+/// 预填词里带 DLsite 编号就只填编号——编号命中即按 ID 直取，比拿名字去搜准得多。
+///
+/// 调用方**显式给了** [initialQuery]（详情页编辑框里用户手填的名字）时，那就是
+/// 用户要搜的词：里面没编号就原样用，**不**再去 exe 路径里找编号覆盖它。只有没给
+/// 预填词（缺省 = 显示名）时，才回退到游戏 exe 路径（安装目录多以编号命名）认编号。
+String galgameScrapeInitialQuery(GalgameEntry game, String? initialQuery) {
+  final String explicit = initialQuery?.trim() ?? '';
+  if (explicit.isNotEmpty) {
+    return DlsiteWorkId.findIn(explicit)?.value ?? explicit;
+  }
+  final String query = game.displayName;
+  final DlsiteWorkId? id =
+      DlsiteWorkId.findIn(query) ?? DlsiteWorkId.findIn(game.exePath);
+  return id?.value ?? query;
 }
 
 /// 把输入解析成 http/https URL；解析不出（裸词/裸 ID/含空格）返回 null。
@@ -227,9 +254,7 @@ class GalgameScrapeDialog extends StatefulWidget {
 
 class _GalgameScrapeDialogState extends State<GalgameScrapeDialog> {
   late final TextEditingController _queryCtrl = TextEditingController(
-    text: (widget.initialQuery?.trim().isNotEmpty ?? false)
-        ? widget.initialQuery!.trim()
-        : widget.game.displayName,
+    text: galgameScrapeInitialQuery(widget.game, widget.initialQuery),
   );
 
   GalgameScrapeController get _controller =>
@@ -330,7 +355,7 @@ class _GalgameScrapeDialogState extends State<GalgameScrapeDialog> {
       scrollable: false,
       child: FushiModalSheetFrame(
         title: t.game_scrape,
-        leadingIcon: Icons.cloud_download_outlined,
+        leadingIcon: FushiIcons.cloudDownload,
         bodyPadding: EdgeInsets.fromLTRB(
           tokens.spacing.card,
           0,
@@ -377,18 +402,15 @@ class _GalgameScrapeDialogState extends State<GalgameScrapeDialog> {
     return Row(
       children: <Widget>[
         Expanded(
-          child: TextField(
+          // 共享 M3E 搜索栏：MD3 填充胶囊 / Apple 搜索胶囊，回车即搜。
+          child: FushiSearchBar(
             controller: _queryCtrl,
-            decoration: InputDecoration(
-              isDense: true,
-              hintText: t.game_scrape_query,
-              border: const OutlineInputBorder(),
-            ),
+            hintText: t.game_scrape_query,
             onSubmitted: (_) => _search(),
           ),
         ),
         const SizedBox(width: 8),
-        FilledButton(
+        FushiFilledButton(
           onPressed: _searching ? null : _search,
           child: Text(t.game_scrape_search),
         ),
@@ -398,36 +420,38 @@ class _GalgameScrapeDialogState extends State<GalgameScrapeDialog> {
 
   Widget _buildResults(ThemeData theme, FushiDesignTokens tokens) {
     if (_searching) {
-      return const Center(child: CircularProgressIndicator());
+      return const FushiLoadingView(compact: true);
     }
     if (_searchFailed) {
       // 搜索失败错误行：可见反馈 + 重试指引（搜索按钮此时已恢复可点）。
-      return Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Icon(Icons.error_outline, color: theme.colorScheme.error),
-            const SizedBox(height: 8),
-            Text(
-              t.game_scrape_search_failed,
-              textAlign: TextAlign.center,
-              style: theme.textTheme.bodyMedium
-                  ?.copyWith(color: theme.colorScheme.error),
-            ),
-          ],
-        ),
+      // 与下方「无结果」同走共享空状态件，只把图标与文案染成错误语义色
+      // （MD3 error / Apple systemRed / 墨水屏 onSurface）。
+      return FushiPlaceholderMessage(
+        icon: FushiIcons.error,
+        message: t.game_scrape_search_failed,
+        color: fushiStatusColor(context, FushiStatusTone.error),
       );
     }
     if (_searched && _candidates.isEmpty) {
       // 空态收进弹窗内（旧实现 toast 完就散场，用户无处改词重试）。
-      return Center(child: Text(t.game_scrape_no_result));
+      return FushiPlaceholderMessage(
+        icon: FushiIcons.searchOff,
+        message: t.game_scrape_no_result,
+      );
     }
-    return ListView.separated(
-      shrinkWrap: true,
-      itemCount: _candidates.length,
-      separatorBuilder: (_, __) => const Divider(height: 1),
-      itemBuilder: (BuildContext context, int index) =>
-          _buildCandidateTile(theme, tokens, _candidates[index]),
+    // 每次搜索出新结果都重开进场窗口（replayKey = 本次结果列表），候选行
+    // 错峰淡入；墨水屏 / 减弱动效下瞬间到位。
+    return FushiEntranceScope(
+      replayKey: _candidates,
+      child: ListView.separated(
+        shrinkWrap: true,
+        itemCount: _candidates.length,
+        separatorBuilder: (_, __) => const FushiDividerControl(height: 1),
+        itemBuilder: fushiStaggeredItemBuilder(
+          (BuildContext context, int index) =>
+              _buildCandidateTile(theme, tokens, _candidates[index]),
+        ),
+      ),
     );
   }
 
@@ -457,6 +481,9 @@ class _GalgameScrapeDialogState extends State<GalgameScrapeDialog> {
                   candidate.displayName,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.bodyLarge?.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 2),
@@ -473,14 +500,14 @@ class _GalgameScrapeDialogState extends State<GalgameScrapeDialog> {
             ),
           ),
           const SizedBox(width: 8),
-          FilledButton.tonal(
+          FushiFilledButton.tonal(
             onPressed:
                 _applyingCandidate != null ? null : () => _use(candidate),
             child: identical(_applyingCandidate, candidate)
                 ? const SizedBox(
                     width: 16,
                     height: 16,
-                    child: CircularProgressIndicator(strokeWidth: 2),
+                    child: FushiCircularProgressIndicator(strokeWidth: 2),
                   )
                 : Text(t.game_scrape_use),
           ),

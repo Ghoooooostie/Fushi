@@ -15,8 +15,9 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart' hide ModifierKey;
+import 'package:fushi/src/anki/mine_failure_notice.dart';
 import 'package:fushi/src/lookup/overlay_auto_read.dart';
 import 'package:fushi/src/lookup/effective_lookup_size.dart';
 import 'package:fushi/src/lookup/global_lookup_channel.dart';
@@ -312,6 +313,10 @@ class GlobalLookupController {
   // window-local for the host shell. 0 = native did not report a work area.
   double _cursorWorkX = 0;
   double _cursorWorkY = 0;
+  // BUG-2921 — the monitor dpr that converted the work area above to CSS px.
+  // [adoptGalDirectLayoutViewport] reuses it so the client-domain viewport the
+  // runner reports later lands in the SAME CSS scale the cards render in.
+  double _workDpr = 0;
 
   /// 让覆盖窗跟随查词模块：现在开着就起；会话中途才打开查词模块也沿同一条
   /// [start] 补起（此前只在启动时判一次，中途打开模块要等下次启动，桌面悬浮球
@@ -448,7 +453,29 @@ class GlobalLookupController {
             triggerSelectionLookup(source: 'hotkey'),
         // 相反的取舍：不取任何文本，把主窗唤到前台并落在查词页上。
         ShortcutAction.globalExternalOpenLookupPage: openLookupPageInMainWindow,
+        // 截屏识字：执行体在悬浮球宿主（与桌面应用外球的同名按钮共用）。
+        ShortcutAction.globalExternalScreenOcr: triggerScreenOcr,
       };
+
+  /// 桌面截屏识字的执行体，由常驻的 `AppFloatingBallHost` 装上 / 卸下（截屏、冻结
+  /// 层、点字查词的整套状态都在那边，与应用外悬浮球的「截屏识字」按钮同一条路径）。
+  /// 本控制器只负责把 [ShortcutAction.globalExternalScreenOcr] 的 OS 热键接过去。
+  Future<void> Function()? screenOcrHandler;
+
+  /// [ShortcutAction.globalExternalScreenOcr] 的执行体。宿主还没挂上（不该发生：
+  /// 它挂在 app 根上）时记一条错误日志而不是静默吞键。
+  Future<void> triggerScreenOcr() async {
+    final Future<void> Function()? handler = screenOcrHandler;
+    if (handler == null) {
+      ErrorLogService.instance.log(
+        'GlobalLookupController.screenOcr',
+        StateError('screen OCR hotkey pressed but no host is mounted'),
+        StackTrace.current,
+      );
+      return;
+    }
+    await handler();
+  }
 
   /// TODO-1066 — (un)registers the OS-level hotkeys from the current
   /// [_osHotKeyActions] bindings in the registry. Unregisters everything
@@ -550,7 +577,7 @@ class GlobalLookupController {
     }
   }
 
-  /// 用户请求：一个键把 Hibiki 主窗**唤到前台**并直接落在**查词页**上
+  /// 用户请求：一个键把 Fushi 主窗**唤到前台**并直接落在**查词页**上
   /// （[ShortcutAction.globalExternalOpenLookupPage] 的执行体）。
   ///
   /// 与 [triggerSelectionLookup] 是**相反**的产品取舍，别合并成一个动作：那条刻意
@@ -899,6 +926,56 @@ class GlobalLookupController {
         : (w: workWidth, h: workHeight, x: workOriginX, y: workOriginY);
   }
 
+  /// BUG-2921 — 游戏内查词卡直连上屏后，把嵌套子卡的布局视口换成**真实客户区**。
+  ///
+  /// [setPhysicalCap] 交来的视口与原点是**画布**域（位图回退按画布 1:1 贴卡，只能这么
+  /// 排）。直连路径的卡片却是屏幕物理 px 的真窗口，根卡由 runner 按字形在客户区里居中、
+  /// 零间隙地贴放：画布尺寸、画布里的根卡原点与真实画面在放大/缩小运行的游戏里都对不上。
+  /// 子卡按画布域排出的「上方空间」比真实的多，落到屏幕上就越出客户区顶边、标题栏被裁。
+  /// runner 在 present 回执里报回根卡在客户区里的真实左上角，这里把它和客户区尺寸换成
+  /// CSS px 写进级联布局域；之后的嵌套渲染就在真实画面里排版。
+  ///
+  /// 只对仍有效的 galCard route 生效；四个参数都是物理 px。
+  void adoptGalDirectLayoutViewport({
+    required GlobalLookupRoute route,
+    required int clientWidth,
+    required int clientHeight,
+    required int rootClientX,
+    required int rootClientY,
+  }) {
+    if (route.source != 'galCard' ||
+        !GlobalLookupChannel.isRouteValid(route) ||
+        clientWidth <= 0 ||
+        clientHeight <= 0 ||
+        _workDpr <= 0) {
+      return;
+    }
+    _screenWorkW = clientWidth / _workDpr;
+    _screenWorkH = clientHeight / _workDpr;
+    _cursorWorkX = rootClientX / _workDpr;
+    _cursorWorkY = rootClientY / _workDpr;
+  }
+
+  /// 嵌套布局当前使用的视口与根卡原点（CSS px）。
+  @visibleForTesting
+  ({double w, double h, double x, double y}) get debugCascadeLayoutDomain =>
+      (w: _screenWorkW, h: _screenWorkH, x: _cursorWorkX, y: _cursorWorkY);
+
+  @visibleForTesting
+  void debugSeedCascadeLayoutDomain({
+    required double workDpr,
+    required double width,
+    required double height,
+    required double originX,
+    required double originY,
+  }) {
+    _workDpr = workDpr;
+    _screenWorkW = width;
+    _screenWorkH = height;
+    _cursorWorkX = originX;
+    _cursorWorkY = originY;
+  }
+
   /// 把逻辑尺寸夹到 [_physicalCap]。等比缩小而不是各轴独立裁剪：独立裁剪会改变
   /// 卡片的宽高比，排版跟着变形；等比缩小只是变小。
   /// 当前 route 所属形态的「有效最大宽高」。
@@ -1031,6 +1108,12 @@ class GlobalLookupController {
     final GlobalLookupRoute route = GlobalLookupChannel.currentRoute;
     return route == _activeRoute && GlobalLookupChannel.isRouteValid(route);
   }
+
+  /// BUG-3652 续：制卡回包时「发起它的那张卡还在不在」——[origin] 是派发时捕获的
+  /// 查词 route；真正关窗（[_onOverlayHidden]）与下一次查词（[_activateRoute]）都会
+  /// 作废它，所以「仍是当前 route 且有效」就是这张卡还在屏上。
+  MineOriginOnScreen _mineOriginProbe(GlobalLookupRoute origin) =>
+      () => origin == _activeRoute && GlobalLookupChannel.isRouteValid(origin);
 
   void _notifyRevealed(
     int width,
@@ -1270,6 +1353,7 @@ class GlobalLookupController {
       // reserve-to-edge clamp invariant). Fall back to the main dpr when the
       // native monitor query failed (monitorDpr 0).
       final double workDpr = shown.monitorDpr > 0 ? shown.monitorDpr : dpr;
+      _workDpr = workDpr;
       if (anchorPhysical != null && _stack.frames.isNotEmpty) {
         // The existing root-frame layout chooses above/below the hit and fits
         // the card to that side. Its anchor is window-local CSS pixels; the
@@ -1818,6 +1902,9 @@ class GlobalLookupController {
       // sentence）。与句子横幅同一 `_currentSentence`（嵌套子查词无句 → ''）。
       sentenceContext: _currentSentence,
       miningHandler: _currentMiningHandler,
+      // BUG-3652 续：本消息在发起它的查词 route 的 zone 里派发；回包时这张卡还在屏上
+      // ⇔ 那条 route 仍是当前 route 且未作废（关窗、换词都会作废它）。
+      isOriginOnScreen: _mineOriginProbe(GlobalLookupChannel.currentRoute),
     )) {
       return;
     }
@@ -2383,6 +2470,11 @@ class GlobalLookupController {
       // viewport. Match the in-app child popup's above/below fitting there while
       // preserving the desktop global-lookup cascade.
       fitNestedHeightToAnchorSide: route.source == 'galCard',
+      // BUG-2921 — the game card's root is placed by the runner (glyph-anchored
+      // in the client area); the layout root is only the coordinate origin for
+      // the children and must not be nudged inside the window-local frame, or
+      // the runner's pinned root/bbox relationship would no longer hold.
+      clampRootShellToWorkArea: route.source != 'galCard',
       staticRevisions: _hostStaticRevisions,
       hostKey: hostKey,
     );
@@ -2507,6 +2599,7 @@ class GlobalLookupController {
           geometryEpoch: geometryEpoch,
           left: ratcheted.left,
           top: ratcheted.top,
+          rootHeight: rootHeight,
         ),
       );
       _notifyAfterResizeReady(
@@ -2550,6 +2643,7 @@ class GlobalLookupController {
           geometryEpoch: geometryEpoch,
           left: ratcheted.left,
           top: ratcheted.top,
+          rootHeight: rootHeight,
         ),
       );
       _notifyAfterResizeReady(
@@ -2876,7 +2970,7 @@ String _normalizeGlobalLookupMediaPath(String path) {
 
 /// Returns the image MIME type for [path]'s extension.
 ///
-/// 命名统一轮 G8：查 hibiki_core 单一 MIME 映射表 [mimeTypeForFilePath]（旧本地
+/// 命名统一轮 G8：查 fushi_core 单一 MIME 映射表 [mimeTypeForFilePath]（旧本地
 /// switch 副本之一），与 app 内 `dictionary_media_types.dart` 自动同源。
 String _globalLookupImageMime(String path) => mimeTypeForFilePath(path);
 

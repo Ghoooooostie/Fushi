@@ -7,17 +7,24 @@ import 'package:archive/archive_io.dart';
 import 'package:drift/drift.dart' show QueryRow, Variable;
 import 'package:flutter/foundation.dart';
 import 'package:fushi/src/models/audio_source_config.dart';
+import 'package:fushi_engine/media/video/video_member_file.dart';
 import 'package:fushi_engine/media/override_title_key.dart';
+import 'package:fushi_engine/utils/archive/native_zip.dart';
 import 'package:fushi_engine/media/video/strm_file.dart'
     show isNetworkOnlyVideoPath;
 import 'package:fushi/src/models/local_audio_manager.dart';
 import 'package:fushi/src/models/module_id.dart';
 import 'package:fushi/src/sync/backup_merge_engine.dart';
+import 'package:fushi/src/sync/backup_srs_tables.dart';
 import 'package:fushi/src/sync/pref_redaction_policy.dart';
+import 'package:fushi/src/srs/srs_media_store.dart' show SrsMediaStore;
 import 'package:fushi/src/sync/sync_repository.dart';
 import 'package:fushi_engine/utils/misc/fushi_time_format.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_dictionary/fushi_dictionary.dart';
+import 'package:fushi_engine/srs/srs_backup_merge.dart';
+import 'package:fushi_engine/srs/srs_storage.dart';
+import 'package:fushi_srs/fushi_srs.dart' show SrsCore;
 import 'package:path/path.dart' as p;
 import 'package:sqlite3/sqlite3.dart' as sqlite;
 import 'package:fushi_engine/media/video/anime_source_video_path.dart';
@@ -25,6 +32,7 @@ import 'package:fushi_engine/media/video/anime_source_video_path.dart';
 part 'backup_service/fs_retry.part.dart';
 part 'backup_service/path_rebase.part.dart';
 part 'backup_service/restore.part.dart';
+part 'backup_service/table_rules.part.dart';
 
 /// 本地备份导出物文件名口径。存储页与导出前清扫共用，避免一边展示、一边认不出。
 ///
@@ -72,7 +80,7 @@ enum BackupCategory {
   videos,
 
   /// Local audio pronunciation databases (`local_audio_*.db` + `-wal`/`-shm`),
-  /// stored flat in the support/database directory alongside `hibiki.db`. The
+  /// stored flat in the support/database directory alongside `fushi.db`. The
   /// `local_audio_dbs` preference stores their absolute paths, so without
   /// packing the files a restore points at databases that never crossed over
   /// and the local audio sources silently disappear (TODO-941). Packed under
@@ -88,6 +96,11 @@ enum BackupCategory {
   /// (`galgame_sessions`, game-kind `study_segments` / `activity_events`) are
   /// STATISTICS and follow that category, not this one. Included by default.
   games,
+
+  /// 音乐用户数据（音乐模块 §10）：歌单 + 条目、歌词缓存与编辑、MV 绑定、播放流。
+  /// 曲库目录本身（曲目 / 专辑 / 艺人 / 署名 / 光盘来源）是本机重扫出来的、装的是
+  /// 本机绝对路径，属设备本地、不随这个类别走；封面缓存同样不进备份。
+  music,
 
   /// Reading progress: where you left off in every book. Covers the
   /// `reader_positions` + `bookmarks` tables and the `audiobook_pos_*`
@@ -121,6 +134,22 @@ enum BackupCategory {
   /// copy when unticked; on import the LOCAL device's profiles are preserved
   /// instead of being wiped to empty. Included by default.
   profiles,
+
+  /// 复习（SRS）：Rust 的 `srs.db` 快照（zip 条目 `srs.db`，四张同步数据表随包、六张设备
+  /// 本地表在快照里清空）+ 媒体目录 `<support>/srs_media/`（按 profile 子目录原样打包，
+  /// 归档前缀 `srs_media/`，文件名 = 内容 sha1）。老形态备份（2026-10-23 之前）的 SRS 表在
+  /// `fushi.db` 条目里，恢复 / 合并照样认（见 backup_srs_tables.dart）。
+  ///
+  /// **依赖 `profiles` 的 uid**：SRS 行按 `profiles.uid` 归属。覆盖恢复时，配置档案
+  /// 若来自备份（勾了导入设置与配置档案），本机 srs.db 就整份换成备份的；否则本机配置档案被保留、
+  /// 备份的 uid 对不上任何本机档案，SRS 数据改走 SRS 专用合并（同 uid 并入 / 同名且
+  /// 无笔记未发布则采用 uid / 否则新建「（备份）」档案），不留孤儿。导出时不勾
+  /// `profiles` 但勾了本类别，仍保留拥有 SRS 数据的那几行 `profiles`（只有名字与 uid，
+  /// 档案设置照样剥离），否则恢复端无从得知这些数据该归到哪个档案。
+  ///
+  /// SRS 是默认关闭的模块：本机没有 SRS 数据（无用户笔记、媒体目录为空）时，导出 /
+  /// 导入界面都不显示这一项（见 [BackupContentSummary.present]）。
+  srs,
 }
 
 /// Rewrites an absolute [oldPath] that lives under [oldRoot] so it lives under
@@ -133,13 +162,25 @@ enum BackupCategory {
 /// Import rebases every stored path from the backup's recorded root to this
 /// device's matching root. Separators are normalized so `/` vs `\` differences
 /// between the compared strings don't defeat the prefix match.
+///
+/// Separator handling of the rebased sub-path follows the TARGET root:
+/// - a POSIX target ([newRoot] has no `\`) gets every `\` of the sub-path
+///   turned into `/`. On POSIX `\` is an ordinary file-name character, so
+///   keeping the source's separators turned a Windows backup merged on Android
+///   into `/data/.../audiobooks\<dir>\a.m4b` — ONE literal file name that never
+///   exists — and every imported audiobook / book / font path silently failed
+///   to resolve (BUG-3811, feedback XDtB1kYT0C).
+/// - a Windows target (`\` in [newRoot]) keeps the source sub-path verbatim:
+///   Windows accepts both separators, and leaving the bytes alone keeps
+///   same-device callers (`DataRootMigrator`) byte-for-byte unchanged.
+/// Derived from [newRoot] rather than `Platform`, so this stays a pure function
+/// with the same result on every host.
 String rebasePath(String oldPath, String oldRoot, String newRoot) {
   String stripTrailing(String s) =>
       (s.endsWith('/') || s.endsWith('\\')) ? s.substring(0, s.length - 1) : s;
-  // Normalize separators ONLY for the prefix comparison; the returned path
-  // keeps the source path's original separators (a POSIX backup restored on a
-  // POSIX host must not gain Windows separators just because p.join would, and
-  // vice-versa). So we slice the original oldPath rather than rebuild via join.
+  // Normalize separators for the prefix comparison. We slice the path rather
+  // than rebuild via p.join (which would apply the HOST's separator, not the
+  // target root's).
   final String nrOld = stripTrailing(oldRoot.replaceAll('\\', '/'));
   final String npOld = oldPath.replaceAll('\\', '/');
   if (npOld == nrOld) return stripTrailing(newRoot);
@@ -147,8 +188,11 @@ String rebasePath(String oldPath, String oldRoot, String newRoot) {
   // "/a/books". replaceAll preserves length, so nrOld.length indexes the
   // original oldPath correctly.
   if (!npOld.startsWith('$nrOld/')) return oldPath;
-  final String suffix = oldPath.substring(nrOld.length); // keeps leading sep
-  return stripTrailing(newRoot) + suffix;
+  final String target = stripTrailing(newRoot);
+  final bool posixTarget = !target.contains('\\');
+  final String suffix = (posixTarget ? npOld : oldPath)
+      .substring(nrOld.length); // keeps leading sep
+  return target + suffix;
 }
 
 /// Rebases every file-font `path` inside a persisted font-list JSON string
@@ -319,6 +363,8 @@ class BackupMeta {
     this.audiobookCount,
     this.gameCount,
     this.progressCount,
+    this.srsNoteCount,
+    this.musicCount,
   });
 
   final String appVersion;
@@ -357,6 +403,14 @@ class BackupMeta {
   /// never offered the toggle. Null for older backups → DB-blob peek.
   final int? progressCount;
 
+  /// 本备份里的 SRS 用户笔记数（kind = note 的身份记录；复习类别未勾时为 0——SRS 不随包）。与 [progressCount] 同一角色：让导入对话框
+  /// 不必窥探 DB 就知道是否该给「复习」开关。老备份为 null → 导入回退 DB 窥探。
+  final int? srsNoteCount;
+
+  /// 本备份 DB 里的音乐用户数据行数（[musicUserTables] 合计；类别未勾时为 0）。
+  /// 与 [srsNoteCount] 同一角色；老备份为 null → 导入回退 DB 窥探。
+  final int? musicCount;
+
   /// Absolute root of the extracted-books tree on the SOURCE device
   /// (`<appDoc>/hoshi_books`), captured so import can rebase stored book paths
   /// to this device's root. Null for legacy (db-only) backups → import skips
@@ -375,7 +429,7 @@ class BackupMeta {
 
   /// Absolute root of the support/database directory on the SOURCE device,
   /// where the local-audio pronunciation databases (`local_audio_*.db`) live
-  /// flat alongside `hibiki.db`. Captured so import can rebase the stored
+  /// flat alongside `fushi.db`. Captured so import can rebase the stored
   /// `local_audio_dbs` preference paths onto this device's root. Null when the
   /// local-audio category was not packed (or a legacy backup).
   final String? localAudioRoot;
@@ -419,6 +473,8 @@ class BackupMeta {
         if (audiobookCount != null) 'audiobookCount': audiobookCount,
         if (gameCount != null) 'gameCount': gameCount,
         if (progressCount != null) 'progressCount': progressCount,
+        if (srsNoteCount != null) 'srsNoteCount': srsNoteCount,
+        if (musicCount != null) 'musicCount': musicCount,
       };
 
   factory BackupMeta.fromJson(Map<String, dynamic> json) => BackupMeta(
@@ -444,6 +500,8 @@ class BackupMeta {
         audiobookCount: json['audiobookCount'] as int?,
         gameCount: json['gameCount'] as int?,
         progressCount: json['progressCount'] as int?,
+        srsNoteCount: json['srsNoteCount'] as int?,
+        musicCount: json['musicCount'] as int?,
       );
 
   static BackupMeta? tryParse(String source) {
@@ -506,6 +564,18 @@ const String _localAudioPrefix = 'localAudio';
 /// archive. Same name as the on-disk directory so the tree restores 1:1.
 const String _gameCoversPrefix = 'game_covers';
 
+/// 复习媒体（`<support>/srs_media/<profileUid>/<sha1>.<ext>`）在归档里的前缀。
+/// 与磁盘目录同名（[SrsMediaStore.mediaRootFor]），各 profile 子目录原样往返。
+const String _srsMediaPrefix = 'srs_media';
+
+/// 备份 zip 里的 SRS 事件库快照条目名（与磁盘上的 `srs.db` 同名）。新形态备份（2026-10-23 起）
+/// 勾「复习」时带它；老形态备份的 SRS 表在 `fushi.db` 条目里（见 backup_srs_tables.dart）。
+const String _srsDbName = kSrsDatabaseFileName;
+
+/// 媒体存储写入中途的临时文件（`<name>.<rand>.tmp`，见 [SrsMediaStore.store]）：
+/// 不打包、不计数。
+bool _isSrsMediaTempFile(String path) => path.endsWith('.tmp');
+
 /// Preference key (in the `preferences` table) whose JSON value is the
 /// local-audio library list `[{path, displayName, enabled, sources}]`. The
 /// `path` of each entry points at a `local_audio_*.db` file in the support
@@ -535,6 +605,8 @@ const List<String> _legacyFontPrefKeys = <String>[
   'src:reader_fushi:dict_fonts',
   'src:reader_fushi:video_sub_fonts',
   'src:reader_fushi:game_lookup_fonts',
+  'src:reader_fushi:floating_lyric_fonts',
+  'src:reader_fushi:srs_card_fonts',
 ];
 
 /// Preference key holding the favorite-sentence JSON list (mirrors
@@ -561,6 +633,8 @@ const String _favoriteSentencesPrefKey = 'favorite_sentences';
 ///     installation's backend fingerprint, local paths and source-library
 ///     ids. Sending them to another device could enqueue work against the
 ///     wrong backend. Their five-table FK graph is ordered explicitly below.
+///   - `clipboard_history`   — this device's copied text; a private usage
+///     trace like search history, but kept across an overwrite import.
 ///
 /// [_deviceLocalTables] is CHILD-first and is the only order allowed for a
 /// wipe. [_deviceLocalTablesParentFirst] is the inverse dependency order used
@@ -585,9 +659,43 @@ const List<String> _deviceLocalTables = <String>[
   'update_feed_entries',
   'manga_download_jobs',
   'pending_mine_queue',
+  // v137：字幕书与远端音频的绑定。指向本机设置里的服务器配置 id，别的设备上没有意义。
+  'remote_audio_bindings',
+  'clipboard_history',
+  // v124：AI 整理记录（子表先删）。描述「这台设备做过哪些整理」，撤销按合集名找，
+  // 恢复后对不上的记录只是撤销时找不到目标，不会误删。
+  'library_organize_changes',
+  'library_organize_runs',
+  // v136：AI 助手对话与操作记录，设备本地，见 2026-10-26 设计稿 §5.3。无外键（操作
+  // 记录的 session_id 是逻辑引用），删除 / 回灌顺序无约束。
+  'ai_agent_actions',
+  'ai_agent_sessions',
+  // v128：内置浏览器的标签页会话 / 最近关闭 / 下载记录（下载记录带本机落盘路径）。
+  'web_browser_session_tabs',
+  'web_browser_closed_tabs',
+  'web_browser_downloads',
+  // v130 音乐曲库目录：可由重扫重建、装的是本机绝对路径，设备本地（不出境，覆盖
+  // 恢复后从本机 bak 回灌）。歌单 / 歌词 / MV 绑定 / 播放流是 BackupCategory.music。
+  'music_track_credits',
+  'music_tracks',
+  'music_albums',
+  'music_artists',
+  'music_disc_sources',
+  // v131：OP / ED 声纹比对的按集缓存。纯缓存、可重算；本机文件的实测结果（另一台设备
+  // 可能是另一份片源，OP 位置不同），设备本地。无外键，删除 / 回灌顺序无约束。
+  'video_theme_song_spans',
+  // v135：游戏 VNDB 配音表缓存。纯缓存、可由 VNDB 重新取得，设备本地。无外键。
+  'game_voice_casts',
+  // v133：音乐刮削三表。键是 track_uid（含本机路径）、内容可由重刮重建，与曲库目录
+  // 同属设备本地。无外键。
+  'music_scrape_meta',
+  'music_metadata_raw_snapshots',
+  'music_locked_fields',
 ];
 
 const List<String> _deviceLocalTablesParentFirst = <String>[
+  'clipboard_history',
+  'remote_audio_bindings',
   'pending_mine_queue',
   'manga_download_jobs',
   'update_feed_entries',
@@ -605,6 +713,23 @@ const List<String> _deviceLocalTablesParentFirst = <String>[
   'video_download_job_files',
   'video_download_job_subtitles',
   'video_download_subscription_items',
+  'library_organize_runs',
+  'library_organize_changes',
+  'ai_agent_sessions',
+  'ai_agent_actions',
+  'web_browser_session_tabs',
+  'web_browser_closed_tabs',
+  'web_browser_downloads',
+  'music_disc_sources',
+  'music_artists',
+  'music_albums',
+  'music_tracks',
+  'music_track_credits',
+  'video_theme_song_spans',
+  'game_voice_casts',
+  'music_scrape_meta',
+  'music_metadata_raw_snapshots',
+  'music_locked_fields',
 ];
 
 /// Content tables stripped from the exported DB copy when the `statistics`
@@ -622,6 +747,15 @@ const List<String> _deviceLocalTablesParentFirst = <String>[
 /// v92 added `study_segments` (the ONLY study-time fact table the statistics
 /// pages read from since then) and its identity tombstones; both were missing
 /// here, so an "exclude statistics" export still leaked every study segment.
+/// 「音乐」类别的五张用户数据表（子表在前，删除顺序）。曲库目录表不在其中（设备本地）。
+const List<String> musicUserTables = <String>[
+  'music_playlist_entries',
+  'music_playlists',
+  'music_lyrics',
+  'music_videos',
+  'music_play_events',
+];
+
 const List<String> _statisticsTables = <String>[
   'reading_statistics',
   'reading_hourly_logs',
@@ -710,7 +844,14 @@ const String _notOverrideTitleSql =
 ///   ([settingsPrefPredicate]) — progress / favorites / content-registry /
 ///   sync prefs are deliberately preserved.
 /// - [stripProfiles]   : the four profile-layer tables (child-first so an
-///   enforced FK to `profiles` never blocks the sweep).
+///   enforced FK to `profiles` never blocks the sweep). 例外：[stripSrs] 为 false
+///   时保留拥有 SRS 数据的 `profiles` 行（只剩名字与 uid——子表照删），SRS 行按
+///   `profiles.uid` 归属，没有这几行恢复端就无从归位（见 [BackupCategory.srs]）。
+/// - [stripSrs]        : `srs` 类别未勾（不保留 SRS 归属档案；副本里老形态的 SRS 表删掉）。
+/// - [dropLegacySrs]   : 删掉副本里老形态的 SRS 表（[stripSrs]，或 SRS 另以 `srs.db` 快照随包）。
+///   新形态副本里本来就没有这些表，是空操作。默认随 [stripSrs]。
+/// - [keepSrsProfileUids]: [stripProfiles] 且不 [stripSrs] 时要留下的 SRS 归属档案 uid；null =
+///   从副本里老形态的 SRS 表读（SRS 仍在主库里的老形态）。
 ///
 /// A single VACUUM + checkpoint afterwards keeps the deleted rows out of the
 /// freelist pages so they cannot be recovered from the shared backup.
@@ -720,6 +861,9 @@ Future<void> _stripExcludedDataCategories(
   required bool stripStatistics,
   required bool stripSettings,
   required bool stripProfiles,
+  required bool stripSrs,
+  bool? dropLegacySrs,
+  Set<String>? keepSrsProfileUids,
 }) async {
   final FushiDatabase db = FushiDatabase(dbDirectory);
   try {
@@ -728,6 +872,13 @@ Future<void> _stripExcludedDataCategories(
       await db.customStatement('DELETE FROM bookmarks');
       await db.customStatement(
           "DELETE FROM preferences WHERE key LIKE 'audiobook_pos_%'");
+      // v128 内置浏览器历史 / 书签随「进度」走；它们的删除墓碑（逻辑键，不随表
+      // cascade）同样只在勾了进度时出境——否则「没导出浏览数据」的备份仍带着删过的网址。
+      await db.customStatement('DELETE FROM web_browser_history');
+      await db.customStatement('DELETE FROM web_browser_bookmarks');
+      await db.customStatement(
+          'DELETE FROM sync_deletion_tombstones WHERE media_type IN '
+          "('webhistory', 'webbookmark')");
     }
     if (stripStatistics) {
       for (final String table in _statisticsTables) {
@@ -738,8 +889,26 @@ Future<void> _stripExcludedDataCategories(
       await db.customStatement(
           'DELETE FROM preferences WHERE $settingsPrefPredicate');
     }
+    // 档案 uid 要在删老形态 SRS 表之前读（老形态下归属只记在那几张表里）。
+    final Set<String> keepUids = stripProfiles && !stripSrs
+        ? (keepSrsProfileUids ?? await srsProfileUids(db))
+        : const <String>{};
+    if (dropLegacySrs ?? stripSrs) await dropLegacySrsTables(db);
     if (stripProfiles) {
       for (final String table in _profilesLayerTablesChildFirst) {
+        if (table == 'profiles' && !stripSrs) {
+          // SRS 随包走：留下 SRS 数据的归属档案（只有身份行，设置已随子表剥离）。
+          // uid 集合来自 srs.db（新形态）或副本里的老 SRS 表，在 Dart 里拼参数。
+          final List<String> uids = keepUids.toList()..sort();
+          await db.customStatement(
+            uids.isEmpty
+                ? 'DELETE FROM profiles'
+                : 'DELETE FROM profiles WHERE uid IS NULL OR uid NOT IN '
+                      '(${List<String>.filled(uids.length, '?').join(', ')})',
+            uids,
+          );
+          continue;
+        }
         await db.customStatement('DELETE FROM $table');
       }
     }
@@ -927,18 +1096,24 @@ class BackupService {
     String? audiobooksRootDirectory,
     String? fontsRootDirectory,
     String? gameCoversRootDirectory,
-  })  : _db = db,
-        _dbDirectory = dbDirectory,
-        _dictionaryResourceDirectory = dictionaryResourceDirectory,
-        _booksRootDirectory = booksRootDirectory,
-        _audiobooksRootDirectory = audiobooksRootDirectory,
-        _fontsRootDirectory = fontsRootDirectory,
-        _gameCoversRootDirectory = gameCoversRootDirectory,
-        _appVersion = appVersion;
+    Future<SrsStorage?> Function()? srsStorage,
+  }) : _db = db,
+       _dbDirectory = dbDirectory,
+       _srsStorage = srsStorage,
+       _dictionaryResourceDirectory = dictionaryResourceDirectory,
+       _booksRootDirectory = booksRootDirectory,
+       _audiobooksRootDirectory = audiobooksRootDirectory,
+       _fontsRootDirectory = fontsRootDirectory,
+       _gameCoversRootDirectory = gameCoversRootDirectory,
+       _appVersion = appVersion;
 
   final FushiDatabase _db;
   final String _dbDirectory;
   final String? _dictionaryResourceDirectory;
+
+  /// 本机 SRS 存储（`srs.db`）；null 或返回 null = 本机没有可读的 srs.db（复习从没用过 /
+  /// 非主进程）。SRS 仍在主库老表里（还没搬迁）时由主库副本按老形态带走。
+  final Future<SrsStorage?> Function()? _srsStorage;
 
   /// Root of the extracted-books tree (`<appDoc>/hoshi_books`). When provided,
   /// the full book content (epub + extracted html/images/fonts + covers) is
@@ -1048,6 +1223,10 @@ class BackupService {
     final int games = await _countRows('galgames');
     final int progress = await _countProgressRows();
     final int statistics = await _countStatisticsRows();
+    // 复习：用户笔记数 + 媒体文件数（预览计数 = 实际打包内容）。两者都为 0 时
+    // 不进 present，导出界面不显示这一项（SRS 是默认关闭的模块）。
+    final int srs = await _countSrsNotes() + (await _srsMediaFiles()).length;
+    final int music = await _countMusicRows();
     final Map<BackupCategory, int> counts = <BackupCategory, int>{
       BackupCategory.dictionary: dictionaries,
       BackupCategory.books: books,
@@ -1058,6 +1237,8 @@ class BackupService {
       BackupCategory.games: games,
       BackupCategory.progress: progress,
       BackupCategory.statistics: statistics,
+      BackupCategory.srs: srs,
+      BackupCategory.music: music,
     };
     return BackupContentSummary(
       counts: counts,
@@ -1140,6 +1321,61 @@ class BackupService {
     }
   }
 
+  /// SRS 用户笔记数（本机 srs.db；还没搬迁时读主库里的老表）。
+  Future<int> _countSrsNotes() async {
+    final SrsStorage? srs = await _srsStorage?.call();
+    return srsUserNoteCount(srs?.db ?? _db);
+  }
+
+  /// 音乐用户数据行数（活库）：[musicUserTables] 合计。
+  Future<int> _countMusicRows() async {
+    int total = 0;
+    for (final String table in musicUserTables) {
+      total += await _countRows(table);
+    }
+    return total;
+  }
+
+  /// 用 Rust 把本机 srs.db `VACUUM INTO` 到 [path]（必须不存在），并清空快照里的 6 张设备本地表。
+  /// 在后台 isolate 跑（库大时要几百毫秒）；句柄线程安全。
+  static Future<void> _snapshotSrs(SrsStorage srs, String path) {
+    final int address = srs.core.address;
+    final String? libraryPath = srs.core.libraryPath;
+    return Isolate.run<void>(
+      () => SrsCore.fromAddress(
+        address,
+        libraryPath: libraryPath,
+      ).snapshotInto(path, stripDeviceLocal: true),
+    );
+  }
+
+  /// 复习媒体根（`<support>/srs_media`）。支持目录即 [_dbDirectory]（活库所在目录，
+  /// 与 `AppPaths.supportRootDirectory` 同一个根），规则与
+  /// [SrsMediaStore.directoryFor] 共用 [SrsMediaStore.mediaRootFor]。
+  Directory get _srsMediaRoot =>
+      SrsMediaStore.mediaRootFor(Directory(_dbDirectory));
+
+  /// `srs_media/` 下要打包的文件（绝对路径），跳过写入中途的临时文件。
+  Future<List<String>> _srsMediaFiles() async {
+    final Directory root = _srsMediaRoot;
+    if (!await root.exists()) return const <String>[];
+    final List<String> out = <String>[];
+    await for (final FileSystemEntity e in root.list(recursive: true)) {
+      if (e is File && !_isSrsMediaTempFile(e.path)) out.add(e.path);
+    }
+    return out;
+  }
+
+  /// 把 [_srsMediaFiles] 按相对媒体根的路径收进 [into]（前缀 `srs_media/`，
+  /// 与 [_collectTreeFiles] 同一键法，profile 子目录原样保留）。
+  Future<void> _collectSrsMediaFiles(Map<String, String> into) async {
+    final String root = _srsMediaRoot.path;
+    for (final String abs in await _srsMediaFiles()) {
+      final String rel = p.relative(abs, from: root).replaceAll(r'\', '/');
+      into[p.posix.join(_srsMediaPrefix, rel)] = abs;
+    }
+  }
+
   Future<int> _countLocalAudioDbs() async {
     final Directory root = Directory(_dbDirectory);
     if (!await root.exists()) return 0;
@@ -1157,7 +1393,7 @@ class BackupService {
   /// all-in export, so existing callers are unchanged. A non-null set packs
   /// ONLY the listed trees; an omitted tree is skipped (its root treated as if
   /// it carried no content), exactly the same as constructing the service
-  /// without that root. The database (`hibiki.db`) is always included
+  /// without that root. The database (`fushi.db`) is always included
   /// regardless, since it holds every table's metadata. [BackupMeta] still
   /// records the source roots of the trees that were actually packed so import
   /// can rebase them; an omitted tree's root is left null in the meta.
@@ -1190,7 +1426,7 @@ class BackupService {
   }) async {
     bool wants(BackupCategory c) =>
         categories == null || categories.contains(c);
-    final tmpDir = await Directory.systemTemp.createTemp('hibiki_backup_');
+    final tmpDir = await Directory.systemTemp.createTemp('fushi_backup_');
     try {
       final cleanDbPath = p.join(tmpDir.path, _dbName);
       try {
@@ -1212,6 +1448,19 @@ class BackupService {
         await _db.customStatement('PRAGMA wal_checkpoint(TRUNCATE)');
         await _db.customStatement('PRAGMA wal_checkpoint(PASSIVE)');
         await File(_dbPath).copy(cleanDbPath);
+      }
+
+      // 复习：SRS 事件在 Rust 的 srs.db 里，另由 Rust 出一份快照（设备本地表已清空）作为
+      // zip 里的 `srs.db` 条目；主库副本里不带 SRS（老形态的残表在下面剥掉）。本机还没有
+      // srs.db（SRS 仍在主库老表里）时没有快照，老表照旧随主库副本走。
+      final bool includeSrs = wants(BackupCategory.srs);
+      final SrsStorage? srs = includeSrs ? await _srsStorage?.call() : null;
+      String? srsSnapshotPath;
+      Set<String>? srsProfileUidSet;
+      if (srs != null) {
+        srsSnapshotPath = p.join(tmpDir.path, _srsDbName);
+        await _snapshotSrs(srs, srsSnapshotPath);
+        srsProfileUidSet = await srsProfileUids(srs.db);
       }
 
       // Strip sync credentials from the copy before it leaves the device.
@@ -1312,16 +1561,25 @@ class BackupService {
       final bool includeStatistics = wants(BackupCategory.statistics);
       final bool includeSettings = wants(BackupCategory.settings);
       final bool includeProfiles = wants(BackupCategory.profiles);
+      // 复习：srs.db 快照 + srs_media/ 文件树，一起随勾选走。主库副本里老形态的 SRS 表只在
+      // 「勾了复习、本机还没有 srs.db」时保留（那时它们就是 SRS 数据本身）。
+      final bool stripLegacySrs = !includeSrs || srsSnapshotPath != null;
       if (!includeProgress ||
           !includeStatistics ||
           !includeSettings ||
-          !includeProfiles) {
+          !includeProfiles ||
+          stripLegacySrs) {
         await _stripExcludedDataCategories(
           tmpDir.path,
           stripProgress: !includeProgress,
           stripStatistics: !includeStatistics,
           stripSettings: !includeSettings,
           stripProfiles: !includeProfiles,
+          // 勾了复习：按 srs.db（或副本里老表）的 uid 保留 SRS 归属档案；有快照时副本里的
+          // 老形态残表一并删掉。
+          stripSrs: !includeSrs,
+          dropLegacySrs: stripLegacySrs,
+          keepSrsProfileUids: srsProfileUidSet,
         );
       }
 
@@ -1339,6 +1597,17 @@ class BackupService {
         includeBooks: includeBooks,
         includeVideos: includeVideos,
         includeStatistics: includeStatistics,
+      );
+
+      // 统一兜底：schema 里每张表都在 [backupTableRules] 登记了归属，归属类别全没
+      // 勾的表整表清空。以前没被任何剥离逻辑点名的表（剪贴板历史、最近打开流、
+      // 视频刮削缓存与本地路径……）无论勾什么都随包出境。
+      await _stripTablesOfExcludedCategories(
+        tmpDir.path,
+        <BackupCategory>{
+          for (final BackupCategory c in BackupCategory.values)
+            if (wants(c)) c,
+        },
       );
 
       // BUG-816: content-registry preference rows follow their OWNING content
@@ -1368,6 +1637,7 @@ class BackupService {
       // the UI isolate — that froze the app (ANR) on any non-trivial library.
       final Map<String, String> files = <String, String>{
         _dbName: cleanDbPath,
+        if (srsSnapshotPath != null) _srsDbName: srsSnapshotPath,
       };
       Map<String, String> videoFiles = const <String, String>{};
       if (includeVideos) {
@@ -1421,6 +1691,10 @@ class BackupService {
       final int blobGameCount = includeGames ? await _countRows('galgames') : 0;
       final int blobProgressCount =
           includeProgress ? await _countProgressRows() : 0;
+      final int blobSrsNoteCount = includeSrs ? await _countSrsNotes() : 0;
+      // 音乐用户表的导出裁剪走 backupTableRules 的统一兜底（follows music）。
+      final int blobMusicCount =
+          wants(BackupCategory.music) ? await _countMusicRows() : 0;
 
       // Record the SOURCE-device content roots so import can rebase the stored
       // absolute paths (epubPath/extractDir/coverPath/audioRoot/...) onto the
@@ -1448,6 +1722,8 @@ class BackupService {
         audiobookCount: blobAudiobookCount,
         gameCount: blobGameCount,
         progressCount: blobProgressCount,
+        srsNoteCount: blobSrsNoteCount,
+        musicCount: blobMusicCount,
         // Record every unticked category by enum name so import knows a layer is
         // empty BY CHOICE (vs a genuinely empty DB). Only settings/profiles are
         // acted on at import; the rest is diagnostic / future-proofing.
@@ -1486,6 +1762,9 @@ class BackupService {
       if (_gameCoversRootDirectory != null && includeGames) {
         await _collectTreeFiles(
             Directory(_gameCoversRootDirectory), _gameCoversPrefix, files);
+      }
+      if (includeSrs) {
+        await _collectSrsMediaFiles(files);
       }
 
       final String metaJson =
@@ -1541,7 +1820,7 @@ class BackupService {
   /// `_applyPreservedConfig` 在导入后写回，两侧绝不各写一份清单。
   static bool _isDeviceLocalPrefKey(String key) =>
       PrefRedactionPolicy.isDeviceLocalOrCredential(key) ||
-      ModuleId.allPrefKeys.contains(key);
+      ModuleId.devicePrefKeys.contains(key);
 
   /// Strips device-local config and credentials from the standalone DB copy in
   /// [dbDirectory] before it leaves the device. Opened via [FushiDatabase]
@@ -1562,7 +1841,7 @@ class BackupService {
   /// `profile_settings` as `category='pref'` rows, and `profiles` is ticked by
   /// default on export (`defaultBackupExportCategories()`). So on any device
   /// that ever switched profiles, the credentials deleted from `preferences`
-  /// were still sitting in the exported `hibiki.db` under `profile_settings`.
+  /// were still sitting in the exported `fushi.db` under `profile_settings`.
   /// The snapshot writer/reader now applies the same policy
   /// ([ProfileKeys.isExcludedPref]) so no NEW credential rows are produced, but
   /// pre-existing snapshots on an upgrading device still carry them — this
@@ -1589,6 +1868,9 @@ class BackupService {
       for (final String table in _deviceLocalTables) {
         await db.customStatement('DELETE FROM $table');
       }
+      // 老形态（SRS 表还在主库里）的 SRS 本机状态 / 缓存：同样不离开本机。新形态由 Rust
+      // 快照时清空（[_snapshotSrs]）。
+      await clearLegacySrsDeviceLocalTables(db);
       await db.customStatement('VACUUM');
       await db.customStatement('PRAGMA wal_checkpoint(TRUNCATE)');
     } finally {
@@ -1803,6 +2085,21 @@ class BackupService {
         'DELETE FROM book_tags WHERE id NOT IN ('
         'SELECT tag_id FROM tag_assignments)',
       );
+      // v122 私密标记：同一套宿主逻辑外键，同口径收敛（不随包导出别人看不到的
+      // 内容的标记）。
+      await db.customStatement(
+        'DELETE FROM media_privacy_flags WHERE '
+        "(media_kind = 'epub' AND entry_key NOT IN "
+        '(SELECT book_key FROM epub_books)) '
+        "OR (media_kind = 'srt' AND entry_key NOT IN "
+        '(SELECT uid FROM srt_books)) '
+        "OR (media_kind = 'video' AND entry_key NOT IN "
+        '(SELECT book_uid FROM video_books)) '
+        "OR (media_kind = 'collection' AND entry_key NOT IN "
+        '(SELECT CAST(id AS TEXT) FROM media_collections)) '
+        "OR (media_kind = 'game' AND entry_key NOT IN "
+        '(SELECT id FROM galgames))',
+      );
 
       // (3) Category-gated deletion tombstones.
       if (!includeBooks) {
@@ -2011,7 +2308,7 @@ class BackupService {
   /// Adds every local-audio pronunciation database file (`local_audio_*.db`
   /// plus its `-wal`/`-shm` siblings) from the support/database directory to
   /// [into], keyed by its zip path (`localAudio/<filename>`). Only files
-  /// matching [_localAudioFileName] are packed, so `hibiki.db`, sidecars and
+  /// matching [_localAudioFileName] are packed, so `fushi.db`, sidecars and
   /// every other support file stay out of the backup (TODO-941).
   Future<void> _collectLocalAudioFiles(Map<String, String> into) async {
     final Directory root = Directory(_dbDirectory);
@@ -2042,8 +2339,8 @@ class BackupService {
             sourcePathToArchiveRelative.containsKey(videoPath)) {
           continue;
         }
-        final File videoFile = File(videoPath);
-        if (!await videoFile.exists()) continue;
+        // 打包的是这个路径上的文件本身（本地 .strm 指针照打）；DVD title 是虚拟路径，没有可打包的文件。
+        if (!await videoPathFileExists(videoPath)) continue;
         final String relativePath = _videoArchiveRelativePath(
           bookUid: row.bookUid,
           sourcePath: videoPath,
@@ -2181,14 +2478,13 @@ class BackupService {
       encoder.create(outputPath);
       try {
         final List<int> metaBytes = utf8.encode(metaJson);
-        encoder
-            .addArchiveFile(ArchiveFile(metaName, metaBytes.length, metaBytes));
+        encoder.addArchiveFile(nativeDeflatedArchiveFile(metaName, metaBytes));
         for (final MapEntry<String, String> entry
             in archivePathToSource.entries) {
           final File file = File(entry.value);
           if (!file.existsSync()) continue;
           final int size = file.lengthSync();
-          await encoder.addFile(file, entry.key, ZipFileEncoder.STORE);
+          addFileStored(encoder, file, entry.key);
           sendPort?.send(size);
         }
         encoder.closeSync();

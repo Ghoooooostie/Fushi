@@ -19,10 +19,17 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
   /// 重读本视频的待制卡数（待写入 + 写入失败）。best-effort：未初始化的最小宿主
   /// （smoke / widget 测试没有 AppModel）直接当 0。
   Future<void> _refreshStagedMineCount() async {
+    // 网页档的待制卡是 web_mine_queue（等内置档重放），不是看完再制卡的暂存。
+    if (_webMode) {
+      final int pending = await _webMineQueue.pendingCount(_activeBookUid);
+      if (mounted) _stagedMineCount.value = pending;
+      return;
+    }
     try {
       final VideoMineQueue queue = await _videoMineQueue();
-      final int count = (await queue.pending(widget.bookUid)).length +
-          (await queue.failed(widget.bookUid)).length;
+      final int count =
+          (await queue.pending(_activeBookUid)).length +
+          (await queue.failed(_activeBookUid)).length;
       if (mounted) _stagedMineCount.value = count;
     } catch (_) {}
   }
@@ -42,18 +49,24 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
   void _trackBackgroundMine(Future<void> job) {
     _minesInFlight.value++;
     late final Future<void> tracked;
-    tracked = job.catchError((Object error, StackTrace stack) {
-      try {
-        ErrorLogService.instance.log('mineVideoCard.background', error, stack);
-      } catch (_) {}
-      _showOsd(
-        t.card_export_failed_detail(reason: '$error'),
-        severity: ToastSeverity.error,
-      );
-    }).whenComplete(() {
-      _backgroundMineJobs.remove(tracked);
-      if (mounted && _minesInFlight.value > 0) _minesInFlight.value--;
-    });
+    tracked = job
+        .catchError((Object error, StackTrace stack) {
+          try {
+            ErrorLogService.instance.log(
+              'mineVideoCard.background',
+              error,
+              stack,
+            );
+          } catch (_) {}
+          _showOsd(
+            t.card_export_failed_detail(reason: '$error'),
+            severity: ToastSeverity.error,
+          );
+        })
+        .whenComplete(() {
+          _backgroundMineJobs.remove(tracked);
+          if (mounted && _minesInFlight.value > 0) _minesInFlight.value--;
+        });
     _backgroundMineJobs.add(tracked);
   }
 
@@ -63,10 +76,11 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
   }) async {
     final VideoMineQueue queue = await _videoMineQueue();
     // 跨了 async gap：页面可能已经关了，不能再 `ref.read`（见 [_providerContainer]）。
-    final BaseAnkiRepository repo =
-        _providerContainer.read(ankiRepositoryProvider);
+    final BaseAnkiRepository repo = _providerContainer.read(
+      ankiRepositoryProvider,
+    );
     final VideoMineCommitSummary summary = await queue.commitAll(
-      bookUid: widget.bookUid,
+      bookUid: _activeBookUid,
       repo: repo,
       onProgress: onProgress,
     );
@@ -84,7 +98,7 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
     final VideoMineCommitSummary? summary = await showVideoMineQueueDialog(
       context: context,
       queue: queue,
-      bookUid: widget.bookUid,
+      bookUid: _activeBookUid,
       commit: (void Function(int done, int total) onProgress) =>
           _commitStagedMines(onProgress: onProgress),
       onChanged: () => unawaited(_refreshStagedMineCount()),
@@ -96,10 +110,13 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
   void _showCommitSummary(VideoMineCommitSummary summary) {
     _showOsd(
       t.video_mine_queue_committed(
-          ok: summary.succeeded, failed: summary.failed),
+        ok: summary.succeeded,
+        failed: summary.failed,
+      ),
       prominent: true,
-      severity:
-          summary.failed == 0 ? ToastSeverity.success : ToastSeverity.warning,
+      severity: summary.failed == 0
+          ? ToastSeverity.success
+          : ToastSeverity.warning,
     );
   }
 
@@ -110,10 +127,13 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
   /// 后面的异步链不再碰本页状态，结果由 [commitStagedVideoMinesAfterExit] 报（OSD 随
   /// 页面没了）。什么都没有就什么都不做。
   void _flushStagedMinesOnExit() {
-    final List<Future<void>> inFlight =
-        List<Future<void>>.of(_backgroundMineJobs);
+    final List<Future<void>> inFlight = List<Future<void>>.of(
+      _backgroundMineJobs,
+    );
     if (_stagedMineCount.value == 0 && inFlight.isEmpty) return;
-    final String bookUid = widget.bookUid;
+    // 网页档的角标数是重放队列（留给内置档），退页不提交任何东西。
+    if (_webMode) return;
+    final String bookUid = _activeBookUid;
     final BaseAnkiRepository repo;
     try {
       repo = _providerContainer.read(ankiRepositoryProvider);
@@ -135,6 +155,46 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
   /// 点开列表。两者都没有时零尺寸。只有角标本身吃点击（外层 [Align] 不命中空白处），
   /// 且不抢键盘焦点——播放页的快捷键焦点归属不因它变化。窗口与全屏共用（监听 notifier，
   /// 与 OSD 同源）。
+  /// 「循环当前句」常驻标记（Ix4j5SKUth）：右上角、与制卡队列角标同一锚点，角标在时
+  /// 让到它下面一格。点它关闭循环。
+  Widget _buildLoopCueBadgeOverlay(VideoPlayerController controller) {
+    return Positioned.fill(
+      child: SafeArea(
+        child: AnimatedBuilder(
+          animation: Listenable.merge(<Listenable>[
+            controller.loopCurrentCueListenable,
+            _minesInFlight,
+            _stagedMineCount,
+          ]),
+          builder: (BuildContext context, _) {
+            final bool mineBadgeShown =
+                _minesInFlight.value > 0 || _stagedMineCount.value > 0;
+            final ColorScheme cs = _videoChromeColorScheme(context);
+            return Align(
+              alignment: Alignment.topRight,
+              child: Padding(
+                padding: EdgeInsets.only(
+                  right: 16,
+                  top:
+                      _videoButtonBarHeight +
+                      (mineBadgeShown ? 48 : 8) * _videoUiScale,
+                ),
+                child: VideoLoopCueBadge(
+                  active: controller.loopCurrentCue,
+                  label: t.video_loop_cue_badge_label,
+                  tooltip: t.video_loop_cue_badge_tooltip,
+                  onTap: () => controller.setLoopCurrentCue(false),
+                  surfaceColor: _osdSurfaceColor(cs),
+                  textColor: _osdTextColor(cs),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
   Widget _buildMineQueueBadgeOverlay() {
     return Positioned.fill(
       child: SafeArea(
@@ -167,7 +227,12 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
                     customBorder: const StadiumBorder(),
                     canRequestFocus: false,
                     onTap: staged > 0
-                        ? () => unawaited(_openVideoMineQueue())
+                        ? () => unawaited(
+                            // 网页档：切到可捕获的内置档逐句重放落卡。
+                            _webMode
+                                ? _runWebMineQueue()
+                                : _openVideoMineQueue(),
+                          )
                         : null,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
@@ -180,13 +245,13 @@ extension _VideoMineQueuePart on _VideoFushiPageState {
                           if (inFlight > 0)
                             SizedBox.square(
                               dimension: 14,
-                              child: CircularProgressIndicator(
+                              child: FushiCircularProgressIndicator(
                                 strokeWidth: 2,
                                 color: textColor,
                               ),
                             )
                           else
-                            Icon(
+                            FushiIcon(
                               Icons.playlist_add_check,
                               size: 16,
                               color: textColor,

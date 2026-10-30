@@ -1,6 +1,9 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:fushi/src/pages/implementations/home_video_page.dart'
+    show videoLibraryNeedsHeaderRefresh;
 
 /// 根因守卫（BUG-894：互联远端视频看完返回即重拉列表）。
 ///
@@ -19,7 +22,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   final String src = File(
     'lib/src/pages/implementations/home_video_page.dart',
-  ).readAsStringSync();
+  ).readAsStringSync().replaceAll('\r\n', '\n');
 
   test('_refresh 带 remote 开关且默认关（本地刷新不重拉远端）', () {
     expect(
@@ -104,7 +107,8 @@ void main() {
   // 「进影片页时自动列出」时，就彻底卡在空库上，正是用户报的「电脑版刷新不了」。
 
   test('页头有刷新按钮，且走的是下拉刷新同一条路径', () {
-    final int start = src.indexOf('Widget _buildPageHeader() {');
+    // 只锚到签名开头：参数表会随页头需求增减（#2379 加了 tags），守卫不管它。
+    final int start = src.indexOf('Widget _buildPageHeader(');
     expect(start, isNonNegative, reason: '找不到 _buildPageHeader');
     final int end = src.indexOf('\n  /// 长按 / 桌面右键远端视频卡', start);
     expect(end, greaterThan(start), reason: '_buildPageHeader 方法体定位失败');
@@ -125,6 +129,14 @@ void main() {
       isTrue,
       reason: '全库枚举动辄几十秒，不标 busy 就是「按了没反应、于是连按五次」',
     );
+  });
+
+  test('页头刷新按钮只给桌面平台（触屏下拉即入口，反馈 #7m1x-R3yOn）', () {
+    expect(videoLibraryNeedsHeaderRefresh(TargetPlatform.windows), isTrue);
+    expect(videoLibraryNeedsHeaderRefresh(TargetPlatform.macOS), isTrue);
+    expect(videoLibraryNeedsHeaderRefresh(TargetPlatform.linux), isTrue);
+    expect(videoLibraryNeedsHeaderRefresh(TargetPlatform.android), isFalse);
+    expect(videoLibraryNeedsHeaderRefresh(TargetPlatform.iOS), isFalse);
   });
 
   test('_refreshFromHeader 只是 _pullToRefresh 加一层 busy 记账，不另写刷新逻辑', () {

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:fushi/i18n/strings.g.dart';
@@ -9,6 +9,9 @@ import 'package:fushi/src/media/manga/cookie/manga_cookie_jar.dart';
 import 'package:fushi/src/media/manga/mihon/mihon_cookie_jar.dart';
 import 'package:fushi/src/media/manga/mihon/mihon_runtime.dart';
 import 'package:fushi/src/media/manga/mihon/mihon_web_login_page.dart';
+import 'package:fushi/src/utils/components/glass/fushi_glass_buttons.dart'
+    show FushiTextButton;
+import '../../helpers/glass_unwrap.dart';
 
 /// BUG-2425：桌面端在真实浏览器里登录源站，把会话交给宿主的 jar。
 void main() {
@@ -96,8 +99,9 @@ void main() {
     bool settled() {
       final Iterable<Element> hits = done.evaluate();
       if (hits.isEmpty) return true; // 页已经 pop
+      // 「完成」是设计系统分派按钮（FushiTextButton），onPressed 挂在它自身上。
       final Widget widget = hits.first.widget;
-      return widget is TextButton && widget.onPressed != null;
+      return widget is FushiTextButton && widget.onPressed != null;
     }
 
     final Stopwatch clock = Stopwatch()..start();
@@ -313,7 +317,11 @@ void main() {
       },
     );
 
-    await tester.tap(find.byIcon(Icons.close));
+    // M3E 浮动页头的关闭按钮改用 FushiIcons.close（Material Symbols），按它
+    // 的语义 tooltip 定位，不绑定具体码点。
+    await tester.tap(
+      find.byTooltip(const DefaultMaterialLocalizations().closeButtonTooltip),
+    );
     await tester.pumpAndSettle();
 
     expect(read, isFalse);
@@ -378,7 +386,11 @@ void main() {
     ]) {
       final Finder finder = find.byKey(ValueKey<String>(key));
       expect(finder, findsOneWidget, reason: key);
-      expect(tester.widget<IconButton>(finder).onPressed, isNull, reason: key);
+      expect(
+        tester.widget<IconButton>(glassUnwrap<IconButton>(finder)).onPressed,
+        isNull,
+        reason: key,
+      );
     }
     // 地址栏显示当前地址。
     expect(find.text('https://bookwalker.jp'), findsOneWidget);
@@ -418,16 +430,23 @@ void main() {
           BrowserCookieImportGate.pending;
       expect(request, isNotNull);
       expect(request!.host, 'bookwalker.jp');
-      // 按钮变禁用（不能重复登记），状态文字先是「还没收到」。
+      // 按钮变禁用（不能重复登记），下方是共用的可取消等待状态条。
       expect(
         tester
             .widget<OutlinedButton>(
-              find.byKey(const ValueKey<String>('mihon_login_import_browser')),
+              glassUnwrap<OutlinedButton>(
+                find.byKey(
+                  const ValueKey<String>('mihon_login_import_browser'),
+                ),
+              ),
             )
             .onPressed,
         isNull,
       );
-      expect(find.text(t.mihon_source_login_import_none), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey<String>('browser-login-import-waiting')),
+        findsOneWidget,
+      );
 
       // 扩展回传（含一条第三方域，必须被挡）。送达 → 写 jar 是真实文件 IO，
       // 整段放进 runAsync，fake zone 里等不到 dart:io 的完成事件。
@@ -446,6 +465,20 @@ void main() {
                   .toList(),
         );
         expect(accepted, isTrue);
+        // 一次登记只导一次：收下第一批就撤登记，同一 nonce 再送被拒。
+        expect(BrowserCookieImportGate.pending, isNull);
+        expect(
+          BrowserCookieImportGate.deliver(
+            nonce: request.nonce,
+            host: 'bookwalker.jp',
+            cookies: <BrowserSiteCookie>[
+              BrowserSiteCookie.fromJson(
+                _browserCookie('session', '.bookwalker.jp'),
+              )!,
+            ],
+          ),
+          isFalse,
+        );
       });
       // 写 jar 的每一步 IO 续体都排在 fake zone 里：与 tapDone 同一节奏，
       // 真实等待 + pump 交替，直到状态文字出现。

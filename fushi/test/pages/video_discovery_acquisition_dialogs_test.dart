@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi_core/fushi_core.dart';
@@ -15,6 +15,7 @@ import 'package:fushi_engine/media/video/download/video_subtitle_registry.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart';
 import 'package:fushi_engine/media/video/subtitle/video_subtitle_provider.dart';
 import 'package:fushi/src/pages/implementations/video_discovery_acquisition_dialogs.dart';
+import '../helpers/glass_unwrap.dart';
 
 /// 一个「答了但没有匹配」的来源：successfulProviderCount=1、items 为空。
 /// 与「一个来源都没有」必须是两种空态（BUG-1713）。
@@ -383,9 +384,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    final TextField query = tester.widget<TextField>(
-      find.byKey(const ValueKey<String>('video-resource-query')),
-    );
+    final TextField query = tester.widget<TextField>(glassUnwrap<TextField>(find.byKey(const ValueKey<String>('video-resource-query'))),);
     expect(query.controller!.text, 'Test Anime');
     expect(find.widgetWithText(ActionChip, 'Test Anime'), findsOneWidget);
     expect(find.widgetWithText(ActionChip, 'テストアニメ'), findsOneWidget);
@@ -471,6 +470,12 @@ void main() {
       findsOneWidget,
     );
     expect(find.text(t.video_resource_no_provider_title), findsOneWidget);
+    expect(find.text(t.bt_site_empty_hint), findsOneWidget);
+    // Fushi 不内置 BT 站：空态直接给去添加 BT 站的入口。
+    expect(
+      find.byKey(const ValueKey<String>('video-resource-open-bt-sites')),
+      findsOneWidget,
+    );
     expect(find.text(t.video_discovery_empty), findsNothing);
   });
 

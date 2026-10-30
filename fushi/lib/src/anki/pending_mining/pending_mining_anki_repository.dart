@@ -63,8 +63,9 @@ bool isUndeliveredMineFailure(MineOutcome outcome) =>
 ///
 /// * 批量模式（[AnkiSettings.batchMiningEnabled]）：制卡一律冻结进队列，返回
 ///   [MineOutcome.queued]。
-/// * 否则照常交给 [inner]；若结果是「确定没送到」（[isUndeliveredMineFailure]），
-///   把这张卡冻结进队列，返回 [MineOutcome.queued] 而不是让它丢掉。
+/// * 否则照常交给 [inner]；若结果是「确定没送到」（[isUndeliveredMineFailure]）
+///   且用户打开了 [AnkiSettings.queueUndeliveredMinesEnabled]（默认关），把这张卡
+///   冻结进队列，返回 [MineOutcome.queued] 而不是让它丢掉；开关关着就原样报失败。
 /// * 一次直接制卡成功说明后端此刻可达，顺手触发一轮自动补发。
 ///
 /// 冻结必须在 [mineEntry] 返回前完成：调用方在它返回后就清理临时封面 / 句子音频。
@@ -113,7 +114,8 @@ class PendingMiningAnkiRepository extends DelegatingAnkiRepository {
       rawPayloadJson: rawPayloadJson,
       context: context,
     );
-    if (isUndeliveredMineFailure(outcome)) {
+    if (settings.queueUndeliveredMinesEnabled &&
+        isUndeliveredMineFailure(outcome)) {
       return _enqueueOr(
         rawPayloadJson: rawPayloadJson,
         context: context,
@@ -180,11 +182,67 @@ class PendingMiningAnkiRepository extends DelegatingAnkiRepository {
   /// 一张——之后由 AnkiMobile 的 `x-success` 回跳（[confirmAnkiMobileDelivery]）确认
   /// 这张、再发下一张。回前台等自动触发对它一律跳过：用户只是切回 Fushi，不该被
   /// 拉去 AnkiMobile。
-  Future<PendingFlushReport> flush({bool interactive = false}) => _serialized(
-    () => inner.switchesAppPerNote
-        ? _startAnkiMobileSend(interactive: interactive)
-        : _flushAll(),
-  );
+  ///
+  /// 批量制卡模式（[AnkiSettings.batchMiningEnabled]）下，非 [interactive] 的补发
+  /// （回前台 / 启动 / 收到别的设备转来的卡 / 直接制卡成功后的顺手补发）一律跳过：
+  /// 批量制卡的语义是「先存在本机，用户点了才一次性发送」。此前自动补发不看这个开关，
+  /// 桌面上切出再切回窗口就算回前台，攒下的卡在用户看到之前就被发走、出队，
+  /// 「待发卡片」于是显示为空（反馈 _eqP_ypmq8）。
+  Future<PendingFlushReport> flush({bool interactive = false}) =>
+      _serialized(() async {
+        if (!interactive && await _batchHoldsAutoFlush()) {
+          return PendingFlushReport(
+            remaining: (await _store.sendable()).length,
+            skipped: true,
+          );
+        }
+        return inner.switchesAppPerNote
+            ? _startAnkiMobileSend(interactive: interactive)
+            : _flushAll();
+      });
+
+  /// 批量模式下自动补发要不要停手：读的是与 [mineEntry] 入队判据同一份设置。
+  Future<bool> _batchHoldsAutoFlush() async =>
+      (await inner.loadSettings()).batchMiningEnabled;
+
+  /// 只补发队列里的一张（控制通道 `anki pending send <id>` / `retry`）。
+  ///
+  /// 与 [flush] 同一把串行锁、同一个 [_sendOne]，所以 `failed` 的卡（[flush] 不碰）也能
+  /// 单独重发：[_sendOne] 的 `markSending` 只拒绝已落地 / 已上传给落地设备的卡。
+  /// 每张卡都要切 app 的后端（AnkiMobile）时和 [flush] 一样只在 [interactive] 下拉起。
+  Future<PendingFlushReport> flushOne(String id, {bool interactive = false}) =>
+      _serialized(() async {
+        final PendingMineRow? row = await _store.byId(id);
+        if (row == null ||
+            (!interactive &&
+                (inner.switchesAppPerNote || await _batchHoldsAutoFlush()))) {
+          return const PendingFlushReport(skipped: true);
+        }
+        final _SendResult result = await _sendOne(row);
+        final int remaining = (await _store.sendable()).length;
+        return switch (result) {
+          _SendResult.delivered => PendingFlushReport(
+            delivered: 1,
+            remaining: remaining,
+          ),
+          _SendResult.failed => PendingFlushReport(
+            failed: 1,
+            remaining: remaining,
+          ),
+          _SendResult.unreachable => PendingFlushReport(
+            remaining: remaining,
+            unreachable: true,
+          ),
+          _SendResult.opened => PendingFlushReport(
+            remaining: remaining,
+            awaitingConfirmation: true,
+          ),
+          _SendResult.skipped => PendingFlushReport(
+            remaining: remaining,
+            skipped: true,
+          ),
+        };
+      });
 
   /// AnkiMobile 加完卡回跳（`fushi://ankiSuccess?expression=…`）：确认那张已进 Anki、
   /// 出队；还有就拉起下一张。连发链到此为止（发完了，或下一张没能拉起）时请 AnkiMobile

@@ -11,13 +11,6 @@ import 'dart:convert';
 /// 偏好键：可视化样式规则表（JSON）。
 const String dictStyleRulesPrefKey = 'dict_style_rules';
 
-/// 偏好键：规则表的 CSS 编译产物缓存。
-///
-/// 冗余数据，但这是**平台边界**决定的必要冗余：Android 独立弹窗 Activity 直接读
-/// prefs 表（`PopupDbReader.kt`），跑不了 Dart 编译器。保存规则是唯一写入点，
-/// 在那里同步落盘即可收口。
-const String dictStyleRulesCssPrefKey = 'dict_style_rules_css';
-
 /// 查词结果里可被单独调样式的部位。
 ///
 /// 每个值对应一个**实测存在**的稳定选择器（见 [dictStylePartSelector]）。不提供
@@ -265,6 +258,59 @@ class DictStyleRule {
         if (dictionaryName != null) 'dictionaryName': dictionaryName,
         'props': props.toJson(),
       };
+}
+
+/// 一条规则的身份：部位 + 作用域（同一身份在表里至多一条，见 [dictStyleRulesWith]）。
+String dictStyleRuleKey(DictStyleRule rule) =>
+    '${rule.part.name}@${rule.dictionaryName ?? ''}';
+
+/// 规则表快照：身份 → 属性编码。编辑器拿它当「上次与磁盘对齐时」的基线，
+/// 判断哪几条是本地改过的。
+Map<String, String> dictStyleRulesSnapshot(List<DictStyleRule> rules) =>
+    <String, String>{
+      for (final DictStyleRule rule in rules)
+        if (!rule.props.isEmpty) dictStyleRuleKey(rule): jsonEncode(rule.props),
+    };
+
+/// 以 [persisted]（磁盘当前表）为底，叠上 [draft] 里**相对 [baseline] 改过**的
+/// 那几条：本地改了属性的用草稿值，本地新加的补上，本地删掉的（基线里有、草稿
+/// 里没有）去掉；本地没碰过的一律取磁盘值——它可能刚被别处（`fushi_cli`）改过。
+///
+/// 编辑器开着时收到磁盘变更（未改动的草稿跟随刷新）与保存（按条合并、只写本地
+/// 改过的）是同一个运算：结果都是「磁盘现状 + 本地改动」。
+List<DictStyleRule> overlayDirtyDictStyleRules({
+  required List<DictStyleRule> draft,
+  required Map<String, String> baseline,
+  required List<DictStyleRule> persisted,
+}) {
+  final Map<String, DictStyleRule> draftByKey = <String, DictStyleRule>{
+    for (final DictStyleRule rule in draft)
+      if (!rule.props.isEmpty) dictStyleRuleKey(rule): rule,
+  };
+  bool dirty(String key) {
+    final DictStyleRule? local = draftByKey[key];
+    final String? localValue = local == null ? null : jsonEncode(local.props);
+    return localValue != baseline[key];
+  }
+
+  final List<DictStyleRule> out = <DictStyleRule>[];
+  final Set<String> seen = <String>{};
+  for (final DictStyleRule rule in persisted) {
+    if (rule.props.isEmpty) continue;
+    final String key = dictStyleRuleKey(rule);
+    seen.add(key);
+    if (!dirty(key)) {
+      out.add(rule);
+    } else if (draftByKey[key] case final DictStyleRule local) {
+      out.add(local);
+    }
+    // 本地删掉的（dirty 且草稿里没有）：不加。
+  }
+  for (final MapEntry<String, DictStyleRule> entry in draftByKey.entries) {
+    if (seen.contains(entry.key) || !dirty(entry.key)) continue;
+    out.add(entry.value);
+  }
+  return out;
 }
 
 /// 从偏好原始串解码规则表。

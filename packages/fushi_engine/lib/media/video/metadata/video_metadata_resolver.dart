@@ -12,6 +12,7 @@ import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_provider.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_transport.dart';
 import 'package:fushi_engine/media/video/scraper/filename_parser.dart';
+import 'package:fushi_engine/media/video/scraper/scraper_types.dart';
 import 'package:fushi_engine/media/video/scraper/title_normalizer.dart';
 import 'package:fushi_engine/foundation/engine_paths.dart';
 import 'package:fushi_engine/media/video/metadata/anidb_video_metadata_provider.dart';
@@ -344,8 +345,10 @@ class VideoMetadataResolver {
       if (title.isEmpty) continue;
       final Set<String> normalizedTitles = _normalizedTitles(title);
       if (normalizedTitles.isEmpty) continue;
+      final VideoMetadataResolveRequest titleRequest =
+          _requestForTitle(request, title);
       final List<VideoMetadataWork> searched =
-          await _searchGated(provider, request, title);
+          await _searchGated(provider, titleRequest, title);
       final Map<String, VideoMetadataWork> exact =
           <String, VideoMetadataWork>{};
       for (final VideoMetadataWork candidate in searched) {
@@ -370,13 +373,25 @@ class VideoMetadataResolver {
             ? fetchedDetails[lookupKey]
             : await provider.fetchWork(lookup);
         if (details != null) {
-          details = await _validatedDetails(provider, lookup, details, request);
+          details =
+              await _validatedDetails(provider, lookup, details, titleRequest);
         }
         fetchedDetails[lookupKey] = details;
         if (details == null) {
           continue;
         }
         final VideoMetadataWork validated = details;
+        // AniDB HTTP 详情不可用时 fetchWork 退回标题目录摘要：类型照抄请求、没有
+        // 年份，上面的类型 / 年份门对它恒放行——「劇場版 X～副标题～」剥成 X 后
+        // 会唯一精确命中 X 的 TV 第一季并被自动绑上。没有类型与年份证据的摘要
+        // 不能当自动命中，只进待确认（自动路径是离线标题索引阶段，那里按 Fribb
+        // 的作品类型过门）。
+        if (validated.rawPayload?[
+                AniDbVideoMetadataProvider.catalogOnlyPayloadKey] ==
+            true) {
+          reviewCandidates.putIfAbsent(lookupKey, () => validated);
+          continue;
+        }
         // 搜索摘要常常只带当前语言标题。真正详情会带原名/别名；MoviePilot
         // 同样用 title/original/alias/translation 做严格清洗后比较，因此必须在
         // detail gate 之后再做一次标题判定，不能在摘要阶段把罗马字别名丢掉。
@@ -471,6 +486,33 @@ class VideoMetadataResolver {
       work: work,
       lookup: _lookupForWork(work, provider.providerKind) ?? lookup,
       providerKind: provider.providerKind,
+    );
+  }
+
+  /// 这条标题候选适用的请求：候选以**裸年份**结尾、且请求年份正是它（`Death Race
+  /// 2000` + year 2000）时，这个「年份」就是从候选自己的片名尾巴上剥下来的，不是
+  /// 独立证据——按它过年份门会把 1975 年的《Death Race 2000》拒掉（BUG-3266）。
+  /// 此时该候选不带年份搜、不过年份门；其余候选照常。
+  static VideoMetadataResolveRequest _requestForTitle(
+    VideoMetadataResolveRequest request,
+    String title,
+  ) {
+    final int? year = request.year;
+    if (year == null) return request;
+    final ParsedMediaName parsed = FilenameParser.parse(title);
+    if (parsed.titleWithTrailingYear == null || parsed.year != year) {
+      return request;
+    }
+    return VideoMetadataResolveRequest(
+      selectedProvider: request.selectedProvider,
+      fallbackProvider: request.fallbackProvider,
+      mediaKind: request.mediaKind,
+      titleCandidates: request.titleCandidates,
+      seasonNumber: request.seasonNumber,
+      episodeCount: request.episodeCount,
+      confirmedLookup: request.confirmedLookup,
+      includeAdult: request.includeAdult,
+      identityHints: request.identityHints,
     );
   }
 

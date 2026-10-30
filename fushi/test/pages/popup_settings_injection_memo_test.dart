@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart' hide ModifierKey;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
@@ -17,6 +17,7 @@ import 'package:fushi/src/shortcuts/input_binding.dart';
 import 'package:fushi/src/shortcuts/shortcut_action.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_platform.dart'
     show FushiEinkTheme;
+import 'package:fushi/src/utils/components/glass/fushi_apple_palette.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_dictionary/fushi_dictionary.dart';
 
@@ -291,6 +292,45 @@ void main() {
     });
   });
 
+  // 「调整上下文」按钮的 Apple 口径挂在 html.fushi-glass-host.fushi-apple 上：设计系统
+  // 只能从主题的 FushiAppleColors 扩展读出来，注入串必须真 toggle 这个 class。
+  group('fushi-apple class 注入', () {
+    test('Apple 主题（带 FushiAppleColors）→ toggle 成 true', () {
+      final MemoAppModel appModel = MemoAppModel();
+      final PopupStaticSettingsJs js = build(
+        appModel,
+        theme: ThemeData(
+          brightness: Brightness.light,
+          extensions: <ThemeExtension<dynamic>>[
+            FushiAppleColors.of(Brightness.light, const Color(0xFF0A84FF)),
+          ],
+        ),
+      );
+      expect(js.head, contains("classList.toggle('fushi-apple', true)"));
+    });
+
+    test('MD3 主题（无 Apple 色板）→ toggle 成 false', () {
+      final MemoAppModel appModel = MemoAppModel();
+      final PopupStaticSettingsJs js = build(appModel);
+      expect(js.head, contains("classList.toggle('fushi-apple', false)"));
+    });
+
+    test('墨水屏不是玻璃宿主 → 即使是 Apple 主题也 false', () {
+      final MemoAppModel appModel = MemoAppModel();
+      final PopupStaticSettingsJs js = build(
+        appModel,
+        theme: ThemeData(
+          brightness: Brightness.light,
+          extensions: <ThemeExtension<dynamic>>[
+            const FushiEinkTheme(true),
+            FushiAppleColors.of(Brightness.light, const Color(0xFF0A84FF)),
+          ],
+        ),
+      );
+      expect(js.head, contains("classList.toggle('fushi-apple', false)"));
+    });
+  });
+
   group('memo invalidation', () {
     test('改偏好：flipping a window.* pref rebuilds with a new revision', () {
       final MemoAppModel appModel = MemoAppModel();
@@ -401,6 +441,11 @@ void main() {
             name: 'dictionaryFontSize（词典字号 → zoom）',
             mutate: (MemoAppModel m) => m.dictionaryFontSizeValue = 24,
             marker: 'window.__fushiPopupFontSize = 24.0',
+          ),
+          (
+            name: 'librarySentencesEnabled（「我库里的例句」开关，作品图谱 L4）',
+            mutate: (MemoAppModel m) => m.librarySentencesEnabledValue = false,
+            marker: 'window.__fushiLibrarySentencesEnabled = false',
           ),
           (
             name: 'popupWheelSpeed（BUG-1026 滚轮速度）',
@@ -602,7 +647,7 @@ void main() {
 
     test('memo 键字段失效：lookupAudioVolume（查词发音音量）', () async {
       final Directory tempDir = await Directory.systemTemp.createTemp(
-        'hibiki_volmemo',
+        'fushi_volmemo',
       );
       final FushiDatabase db = FushiDatabase.forTesting(
         NativeDatabase.memory(),
@@ -737,7 +782,7 @@ void main() {
     late File fontFile;
 
     setUp(() async {
-      tempDir = await Directory.systemTemp.createTemp('hibiki_fontmemo');
+      tempDir = await Directory.systemTemp.createTemp('fushi_fontmemo');
       final Directory fontsDir = await Directory(
         '${tempDir.path}/custom_fonts',
       ).create();
@@ -836,12 +881,15 @@ class MemoAppModel extends AppModel {
   double popupInstantScrollWheelStepValue = 0.5;
   double popupInstantScrollTouchStepValue = 0.25;
   bool compactGlossariesValue = false;
+  bool librarySentencesEnabledValue = true;
   List<Dictionary> dictionariesValue = <Dictionary>[];
   Map<String, String> customDictCSSValue = <String, String>{};
   String globalDictCSSValue = '';
   List<String> enabledAudioSourcesValue = const <String>[];
   Directory? appDirectoryOverride;
 
+  @override
+  bool get librarySentencesEnabled => librarySentencesEnabledValue;
   @override
   double get appUiScale => appUiScaleValue;
   @override
@@ -868,6 +916,8 @@ class MemoAppModel extends AppModel {
   double get popupInstantScrollTouchStep => popupInstantScrollTouchStepValue;
   @override
   bool get compactGlossaries => compactGlossariesValue;
+  @override
+  bool get dictionaryUnifiedStyle => true;
   @override
   List<Dictionary> get dictionaries => dictionariesValue;
   @override

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
@@ -12,6 +12,7 @@ import 'package:fushi/src/utils/misc/swipe_dismiss_wrapper.dart';
 import 'package:fushi_dictionary/fushi_dictionary.dart';
 
 import '../helpers/test_platform_services.dart';
+import '../helpers/popup_mining_target_overrides.dart';
 
 /// TODO-951 — app 外查词弹窗（独立 PopupDictionaryPage 表面）四症状修复守卫。
 /// 症状 A（点父弹窗关一层）/ C（关后代 helper）的精确路由由 source guard
@@ -27,6 +28,12 @@ class _PopupTestAppModel extends AppModel {
 
   @override
   double get popupMaxWidth => 400;
+
+  @override
+  double get dictionaryFontSize => 16;
+
+  @override
+  double get appUiScale => 1.0;
 
   @override
   List<String> get enabledAudioSources => const <String>[];
@@ -54,7 +61,10 @@ class _PopupTestAppModel extends AppModel {
 
 Widget _wrap(AppModel appModel, Widget home) {
   return ProviderScope(
-    overrides: <Override>[appProvider.overrideWith((ref) => appModel)],
+    overrides: <Override>[
+      appProvider.overrideWith((ref) => appModel),
+      ...popupMiningTargetTestOverrides(),
+    ],
     child: TranslationProvider(
       child: MaterialApp(
         navigatorKey: appModel.navigatorKey,

@@ -66,25 +66,26 @@ void main() {
     expect(view, contains('if (mounted) unawaited(_load());'));
   });
 
-  test('视频添加来源走本地/网络选择器（网络仅可原地流播的 transport），扫描收尾通知媒体库变化',
-      () {
+  test('视频添加来源走本地/网络选择器（网络仅可原地流播的 transport），扫描收尾通知媒体库变化', () {
     // 网络来源三域开放后，视频不再短路直选文件夹：与书/漫画共用同一个
     // 本地/网络选择对话框，只是 transport 集收窄到能原地流播的那几种
-    // （WebDAV；PR #1557 起加 AList 签名直链），sftp/ftp 不进视频域。
+    // （WebDAV；PR #1557 起加 AList 签名直链；SFTP 经回环中继按偏移读），
+    // ftp 读不了区间、不进视频域。
     final String source = File(
       'lib/src/pages/implementations/media_sources_view.dart',
     ).readAsStringSync();
     expect(source, contains('showAppDialog<_AddSourceChoice>'));
     expect(source, contains('await addLocalFolder();'));
     expect(
-        source,
-        contains(
-            "widget.mediaKind == 'video'\n      ? const <String>['webdav', 'alist']"),
-        reason: '视频网络 transport 必须收窄到可原地流播的 webdav + alist');
+      source,
+      contains("'video' => const <String>['sftp', 'webdav', 'alist']"),
+      reason: '视频网络 transport 必须收窄到可原地流播的 sftp + webdav + alist',
+    );
     expect(
-        source,
-        isNot(contains("? const <String>['sftp'")),
-        reason: 'sftp/ftp 不能原地流播，不得进视频域');
+      source,
+      isNot(contains(RegExp(r"'video' => const <String>\[[^\]]*'ftp'"))),
+      reason: 'ftp 不能按偏移读、拖不了进度条，不得进视频域',
+    );
     expect(source, contains('onLibraryChanged?.call();'));
   });
 
@@ -105,12 +106,16 @@ void main() {
     }
     expect(view, contains('t.video_source_scrape_action'));
     expect(
-        view, contains("enabled: !busy && row.videoGroupingMode != 'folder'"));
+      view,
+      contains("enabled: !busy && row.videoGroupingMode != 'folder'"),
+    );
     expect(view, contains('tooltip: t.video_source_scrape_settings'));
     expect(view, contains("widget.mediaKind == 'video'"));
     expect(view, contains('controller.runSourceScan(row.id, scan)'));
     expect(
-        view, contains('await onVideoScanCompleted(updated ?? row, summary)'));
+      view,
+      contains('await onVideoScanCompleted(updated ?? row, summary)'),
+    );
     expect(view, contains('nfoPolicy: Value<String>(draft.nfoPolicy)'));
     expect(view, contains('imagePolicy: Value<String>(draft.imagePolicy)'));
     expect(view, contains('allowExternalOverwrite:'));

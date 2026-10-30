@@ -35,7 +35,7 @@ void main() {
     final String helper = _functionSource(
       source,
       'File? _readerImageFileForUrl(String imgUrl)',
-      'void _openImageViewer(String imgUrl',
+      'Future<void> _openImageViewer(String imgUrl',
     );
     expect(helper, contains('ReaderFushiSource.kHost'));
     expect(helper, contains("uri.path.startsWith('/epub/')"));
@@ -46,23 +46,35 @@ void main() {
 
     final String viewer = _functionSource(
       source,
-      'void _openImageViewer(String imgUrl',
+      'Future<void> _openImageViewer(String imgUrl',
       '),',
     );
     expect(viewer, contains('_readerImageFileForUrl(imgUrl)'));
   });
 
-  test('reader exposes desktop copy and mobile share image handlers', () {
+  test('reader exposes desktop copy and mobile image action handlers', () {
     final String source = readReaderPageSource();
 
     expect(source, contains("handlerName: 'onImageContextMenu'"));
     expect(source, contains("handlerName: 'onImageLongPress'"));
     expect(source, contains('Future<void> _showReaderImageContextMenu('));
-    expect(source, contains('Future<void> _shareReaderImage(String imgUrl)'));
+    expect(source,
+        contains('Future<void> _showReaderImageActions(String imgUrl)'));
     expect(source, contains('Future<void> _copyReaderImageToClipboard('));
+    // 长按图片：全局图片动作面板（保存 / 分享），阅读器只解析文件再委派。
+    expect(source,
+        contains('await _showReaderImageActions(args[0] as String);'));
+    expect(
+        source, contains('await showImageActionsSheet(context, file: file);'));
+    expect(source, contains('onSave: () => _saveReaderImage(imgUrl),'));
+    final String sheet = read('lib/src/reader/image_actions_sheet.dart');
+    expect(
+        sheet, contains('ImageAction.save => saveImageFileWithFeedback(file)'));
+    expect(sheet, contains('ImageAction.share => shareImageFile(file)'));
+    expect(
+        sheet, contains('ImageAction.copy => copyImageFileToClipboard(file)'));
     // BUG-2589：动作本体抽到 illustration_zoom_viewer.dart，与书架端插图册共用；
     // 阅读器只解析文件再委派，不得再长出第二份 channel 调用。
-    expect(source, contains('await shareImageFile(file);'));
     expect(source, contains('await copyImageFileToClipboard(file);'));
     expect(source, isNot(contains('FushiChannels.clipboardImage')));
     final String shared = read('lib/src/reader/illustration_zoom_viewer.dart');
@@ -148,7 +160,7 @@ void main() {
     final String source = readReaderPageSource();
     final String viewer = _functionSource(
       source,
-      'void _openImageViewer(String imgUrl',
+      'Future<void> _openImageViewer(String imgUrl',
       'void _toggleChrome(',
     );
 

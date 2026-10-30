@@ -15,12 +15,17 @@ class _FakeBackend implements BaseAnkiRepository {
   _FakeBackend({
     List<MineOutcome>? outcomes,
     this.batchMining = false,
+    this.queueUndelivered = true,
     this.switchesApp = false,
     this.throwFor = const <String>{},
   }) : outcomes = outcomes ?? <MineOutcome>[];
 
   final List<MineOutcome> outcomes;
   final bool batchMining;
+
+  /// 「连不上 Anki 时暂存」开关；默认关的产品行为由单独的用例钉住，其余用例
+  /// 测的是开着时的队列语义。
+  final bool queueUndelivered;
   final bool switchesApp;
 
   /// 收到这些词时违约抛异常（MineOutcome 契约本是永不抛）。
@@ -36,8 +41,10 @@ class _FakeBackend implements BaseAnkiRepository {
   final List<String?> coverContents = <String?>[];
 
   @override
-  Future<AnkiSettings> loadSettings() async =>
-      AnkiSettings(batchMiningEnabled: batchMining);
+  Future<AnkiSettings> loadSettings() async => AnkiSettings(
+    batchMiningEnabled: batchMining,
+    queueUndeliveredMinesEnabled: queueUndelivered,
+  );
 
   @override
   bool get switchesAppPerNote => switchesApp;
@@ -140,6 +147,25 @@ void main() {
     expect(utf8.decode(payload!.coverBytes!), 'cover-a');
   });
 
+  test('「连不上时暂存」默认关：拒绝连接原样报失败，不入队', () async {
+    expect(const AnkiSettings().queueUndeliveredMinesEnabled, isFalse);
+    expect(
+      AnkiSettings.fromJson(
+        const <String, Object?>{},
+      ).queueUndeliveredMinesEnabled,
+      isFalse,
+    );
+    final _FakeBackend backend = _FakeBackend(
+      outcomes: <MineOutcome>[_refused()],
+      queueUndelivered: false,
+    );
+    final MineOutcome outcome = await mine(repoOver(backend), 'off');
+
+    expect(outcome.result, MineResult.error);
+    expect(outcome.errorCode, AnkiErrorCode.connectionRefused);
+    expect(await store.count(), 0);
+  });
+
   test('请求可能已送达的失败（超时 / 未知）不入队，原样报失败', () async {
     for (final String code in <String>[
       AnkiErrorCode.connectionTimeout,
@@ -161,6 +187,42 @@ void main() {
     expect(outcome.result, MineResult.queued);
     expect(backend.expressions, isEmpty);
     expect(await store.count(), 1);
+  });
+
+  // 反馈 _eqP_ypmq8：批量制卡攒的卡被「回前台」的自动补发发走，待发卡片显示为空。
+  test('批量模式：自动补发（非交互）不发送，用户点「全部发送」才发', () async {
+    final _FakeBackend backend = _FakeBackend(batchMining: true);
+    final PendingMiningAnkiRepository repo = repoOver(backend);
+    await mine(repo, 'p');
+    await mine(repo, 'q');
+    expect(await store.count(), 2);
+
+    final PendingFlushReport auto = await repo.flush();
+    expect(auto.skipped, isTrue);
+    expect(auto.remaining, 2);
+    expect(backend.expressions, isEmpty, reason: '回前台 / 启动的自动补发不得发走批量攒的卡');
+    expect(await store.count(), 2);
+
+    final PendingMineRow first = (await store.all()).first;
+    final PendingFlushReport autoOne = await repo.flushOne(first.id);
+    expect(autoOne.skipped, isTrue);
+    expect(backend.expressions, isEmpty);
+
+    final PendingFlushReport manual = await repo.flush(interactive: true);
+    expect(manual.delivered, 2);
+    expect(backend.expressions, <String>['p', 'q']);
+    expect(await store.count(), 0);
+  });
+
+  test('非批量模式：自动补发照常发送', () async {
+    final PendingMiningAnkiRepository offlineRepo = repoOver(
+      _FakeBackend(outcomes: <MineOutcome>[_refused()]),
+    );
+    await mine(offlineRepo, 'n');
+    final _FakeBackend online = _FakeBackend();
+    final PendingFlushReport report = await repoOver(online).flush();
+    expect(report.skipped, isFalse);
+    expect(online.expressions, <String>['n']);
   });
 
   test('补发：按入队顺序重放、媒体还原；送达出队，不可达就停下', () async {

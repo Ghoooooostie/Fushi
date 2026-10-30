@@ -134,7 +134,9 @@ function loadPanel(opts) {
       },
     },
   };
-  vm.runInNewContext(src, sandbox, { filename: 'subtitle-panel.js' });
+  vm.createContext(sandbox);
+  vm.runInContext(fs.readFileSync(path.join(__dirname, 'subtitle-adapters.js'), 'utf8'), sandbox, { filename: 'subtitle-adapters.js' }); // manifest：先于 subtitle-panel.js（共享轨判据）
+  vm.runInContext(src, sandbox, { filename: 'subtitle-panel.js' });
   function message(payload) {
     let response;
     for (const listener of runtimeListeners) {
@@ -234,4 +236,23 @@ test('快捷键执行端：上一句/下一句/重播/复制/偏移', () => {
   h.message({ type: 'fushiSubtitleSidePanelSeek', ms: state.cues[0].startMs });
   assert.strictEqual(h.video.currentTime, 1.2);
   assert.ok(h.toasts.some((t) => t.indexOf('+0.2s') >= 0), '偏移量应有 toast 反馈');
+});
+
+test('Dbd86l4kA-：暂停时按「重播本句」起播，上一句 / 下一句保持暂停', () => {
+  const h = loadPanel({ stored: { netflixSubtitlePanel: true }, store: jaStore() });
+  h.video.paused = true;
+  h.video.currentTime = 4.5;
+  assert.strictEqual(h.shortcut('prev-cue'), true);
+  assert.strictEqual(h.video.paused, true, '上一句只跳不播');
+  assert.strictEqual(h.shortcut('next-cue'), true);
+  assert.strictEqual(h.video.paused, true, '下一句只跳不播');
+  h.video.currentTime = 1.8;
+  assert.strictEqual(h.shortcut('replay-cue'), true);
+  assert.strictEqual(h.video.currentTime, 1);
+  assert.strictEqual(h.video.paused, false, '重播本句一律起播');
+  assert.strictEqual(h.video.playCount, 1);
+  // 本来就在播：不重复调 play()。
+  h.video.currentTime = 1.5;
+  assert.strictEqual(h.shortcut('replay-cue'), true);
+  assert.strictEqual(h.video.playCount, 1);
 });

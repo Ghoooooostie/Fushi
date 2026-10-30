@@ -1,6 +1,7 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/src/anki/sync_client/anki_sync_host.dart';
 import 'package:fushi/src/anki/anki_view_model.dart';
 import 'package:fushi/src/anki/ankimobile_mined_ledger.dart'
@@ -9,6 +10,10 @@ import 'package:fushi/src/pages/implementations/anki_settings_page.dart';
 import 'package:fushi/src/models/module_registry.dart';
 import 'package:fushi/src/settings/settings_context.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
+import 'package:fushi/src/models/module_id.dart';
+import 'package:fushi/src/srs/srs_mining_target.dart';
+import 'package:fushi/src/srs/srs_providers.dart'
+    show srsMiningToReviewProvider;
 import 'package:fushi/utils.dart';
 
 SettingsDestination buildCardCreationDestination() {
@@ -20,56 +25,14 @@ SettingsDestination buildCardCreationDestination() {
     ),
     title: t.settings_destination_card_creation,
     summary: t.anki_settings_label,
-    icon: Icons.style_outlined,
+    icon: FushiIcons.ankiCard,
     body: (_) => const AnkiSettingsBody(),
     bodyBeforeSections: true,
     sections: <SettingsSection>[
-      SettingsSection(
-        id: 'card_creation.connection',
-        title: 'AnkiConnect',
-        presentation: Platform.isAndroid || Platform.isIOS
-            ? SettingsSectionPresentation.collapsed
-            : SettingsSectionPresentation.alwaysExpanded,
-        items: <SettingsItem>[
-          SettingsNavigationItem(
-            id: 'card_creation.connection.open',
-            title: 'AnkiConnect',
-            subtitleBuilder: (SettingsContext c) {
-              final settings = c.ref.watch(ankiViewModelProvider).settings;
-              return '${settings.ankiConnectHost}:${settings.ankiConnectPort}';
-            },
-            child: () =>
-                _buildAnkiPanel(AnkiSettingsPanel.connection, 'AnkiConnect'),
-          ),
-        ],
-      ),
+      // 两种目标都生效：截图 / 动图 / 音频片段参数（SRS 制卡走同一条采集链路）。
       SettingsSection(
         id: 'card_creation.configuration',
         items: <SettingsItem>[
-          SettingsNavigationItem(
-            id: 'card_creation.fields.open',
-            title: t.anki_field_mappings,
-            visible: (SettingsContext c) =>
-                c.ref.watch(ankiViewModelProvider).isConfigured,
-            subtitleBuilder: (SettingsContext c) => c.ref
-                .watch(ankiViewModelProvider)
-                .settings
-                .selectedNoteTypeName,
-            child: () => _buildAnkiPanel(
-              AnkiSettingsPanel.fields,
-              t.anki_field_mappings,
-            ),
-          ),
-          SettingsNavigationItem(
-            id: 'card_creation.lapis.open',
-            title: t.anki_lapis_section,
-            visible: (SettingsContext c) => c.ref
-                .read(ankiViewModelProvider.notifier)
-                .supportsNoteTypeEditing,
-            subtitle: t.anki_lapis_visual_editor_hint,
-            child: () =>
-                _buildAnkiPanel(AnkiSettingsPanel.lapis, t.anki_lapis_section),
-          ),
           SettingsNavigationItem(
             id: 'card_creation.media.open',
             title: t.settings_anki_media,
@@ -77,36 +40,66 @@ SettingsDestination buildCardCreationDestination() {
             child: () =>
                 _buildAnkiPanel(AnkiSettingsPanel.media, t.settings_anki_media),
           ),
-          SettingsNavigationItem(
-            id: 'card_creation.maintenance.open',
-            title: t.anki_dedup_section,
-            subtitle: t.anki_dedup_run_hint,
-            visible: (SettingsContext c) =>
-                c.ref.watch(ankiViewModelProvider).mediaMaintenanceAvailable ??
-                c.ref
-                    .read(ankiViewModelProvider.notifier)
-                    .supportsMediaMaintenance,
-            child: () => _buildAnkiPanel(
-              AnkiSettingsPanel.maintenance,
-              t.anki_dedup_section,
-            ),
-          ),
         ],
       ),
+      // 「Anki」分组：全部 Anki 专属设置，只在目标为 Anki 时出现（目标切换在正文顶部
+      // 的分段条里；发往 Fushi 复习时非空的待发队列在「Fushi 复习」分组末尾）。
+      _ankiSection(),
     ],
     bodySearchEntries: <SettingsBodySearchEntry>[
+      // 挖词目标（Anki / Fushi 复习，二选一）：只在复习模块开着时存在。目标为
+      // Fushi 复习时，下面只作用于 Anki 发送链路的条目（_ankiOnly）不进索引。
+      // 「Fushi 复习」分组首行：复习模块开着时是目标单选行，关着时是「开启 Fushi
+      // 复习」入口——两种形态都在这个 reveal target 上。
+      SettingsBodySearchEntry(
+        id: 'card_creation.anki.srs_mining_target',
+        title: t.srs_mining_target_title,
+        subtitle: t.srs_mining_target_hint,
+        hasRevealTarget: true,
+      ),
+      SettingsBodySearchEntry(
+        id: 'card_creation.srs.card_look',
+        visible: _toReview,
+        title: t.srs_card_appearance_title,
+        subtitle: t.srs_mining_target_srs,
+        hasRevealTarget: true,
+      ),
+      // 目标为 Fushi 复习时替代 Anki 牌组 / 笔记类型的两行。
+      SettingsBodySearchEntry(
+        id: 'card_creation.srs.deck',
+        visible: _toReview,
+        title: t.anki_deck,
+        subtitle: t.srs_mining_target_srs,
+        hasRevealTarget: true,
+      ),
+      SettingsBodySearchEntry(
+        id: 'card_creation.srs.note_type',
+        visible: _toReview,
+        title: t.anki_note_type,
+        subtitle: t.srs_mining_target_srs,
+        hasRevealTarget: true,
+      ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.batch_mining',
+        visible: _ankiOnly(),
         title: t.anki_batch_mining_title,
         hasRevealTarget: true,
       ),
       SettingsBodySearchEntry(
+        id: 'card_creation.anki.queue_undelivered_mines',
+        visible: _ankiOnly(),
+        title: t.anki_queue_undelivered_mines_title,
+        hasRevealTarget: true,
+      ),
+      SettingsBodySearchEntry(
         id: 'card_creation.anki.pending_mine_landing',
+        visible: _ankiOnly(),
         title: t.anki_pending_mine_landing_title,
         hasRevealTarget: true,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.pending_mines',
+        visible: _ankiOnly(),
         title: t.anki_pending_mines_title,
         hasRevealTarget: true,
       ),
@@ -114,58 +107,64 @@ SettingsDestination buildCardCreationDestination() {
         id: 'card_creation.anki.duplicate_scope',
         title: t.anki_duplicate_scope,
         hasRevealTarget: true,
-        visible: (SettingsContext c) =>
-            c.ref.watch(ankiViewModelProvider).isConfigured,
+        visible: _ankiOnly(
+          (SettingsContext c) =>
+              c.ref.watch(ankiViewModelProvider).isConfigured,
+        ),
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.reposition',
         title: t.anki_reposition_title,
         hasRevealTarget: true,
-        visible: (SettingsContext c) =>
-            c.ref.watch(ankiViewModelProvider).isConfigured,
+        // 两种目标都有：Anki 目标在「Anki」分组（要 Anki 已配置），Fushi 复习目标在
+        // 「Fushi 复习」分组（复习层自己读写新卡位置）。
+        visible: _repositionVisible,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.reposition_auto',
         title: t.anki_reposition_auto_title,
         hasRevealTarget: true,
-        visible: (SettingsContext c) =>
-            c.ref.watch(ankiViewModelProvider).isConfigured,
+        // 只有 Anki 目标有：Fushi 复习出卡直接按词频名次排，不需要制卡后改写位置。
+        visible: _ankiOnly(
+          (SettingsContext c) =>
+              c.ref.watch(ankiViewModelProvider).isConfigured,
+        ),
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.profile',
+        visible: _ankiOnly(),
         hasRevealTarget: true,
         title: t.profile_label,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.fetch',
+        visible: _ankiOnly(),
         hasRevealTarget: true,
         title: t.anki_fetch,
         subtitle: t.anki_refresh_hint,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.create_lapis',
+        visible: _ankiOnly(),
         hasRevealTarget: true,
         title: t.anki_create_lapis,
         subtitle: t.anki_create_lapis_hint,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.deck',
-        visible: (SettingsContext c) =>
-            c.ref.watch(ankiViewModelProvider).isConfigured,
+        visible: _ankiOnly(_ankiDecksLoaded),
         hasRevealTarget: true,
         title: t.anki_deck,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.note_type',
-        visible: (SettingsContext c) =>
-            c.ref.watch(ankiViewModelProvider).isConfigured,
+        visible: _ankiOnly(_ankiDecksLoaded),
         hasRevealTarget: true,
         title: t.anki_note_type,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.allow_duplicates',
-        visible: (SettingsContext c) =>
-            c.ref.watch(ankiViewModelProvider).isConfigured,
+        // 「卡片内容」分组：两种目标都生效、不看 Anki 连没连上。
         hasRevealTarget: true,
         title: t.anki_allow_duplicates,
         subtitle: t.anki_allow_duplicates_hint,
@@ -174,6 +173,7 @@ SettingsDestination buildCardCreationDestination() {
         id: 'card_creation.anki.backup_import',
         visible: (SettingsContext c) =>
             Platform.isIOS &&
+            !_toReview(c) &&
             c.ref.watch(ankiViewModelProvider).isConfigured &&
             ankiMobileLedgerIsDuplicateSource(
               useAnkiConnectOnMobile: c.ref
@@ -187,19 +187,36 @@ SettingsDestination buildCardCreationDestination() {
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.overwrite_scope',
-        visible: (SettingsContext c) =>
-            c.ref.watch(ankiViewModelProvider).isConfigured,
+        // 复习覆写同样按它决定 ✓ 能不能改更早的卡（全部 = 按查重找到的复习笔记）。
         hasRevealTarget: true,
         title: t.anki_overwrite_scope,
         subtitle: t.anki_overwrite_scope_hint,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.compact_glossaries',
-        visible: (SettingsContext c) =>
-            c.ref.watch(ankiViewModelProvider).isConfigured,
+        // 「卡片内容」分组：两种目标都生效、不看 Anki 连没连上。
         hasRevealTarget: true,
         title: t.anki_compact_glossaries,
         subtitle: t.anki_compact_glossaries_hint,
+      ),
+      // 「制卡提示」分组：两种目标都生效。
+      SettingsBodySearchEntry(
+        id: 'card_creation.notice.success',
+        hasRevealTarget: true,
+        title: t.card_creation_notice_success,
+        subtitle: t.card_creation_notice_success_hint,
+      ),
+      SettingsBodySearchEntry(
+        id: 'card_creation.notice.duplicate',
+        hasRevealTarget: true,
+        title: t.card_creation_notice_duplicate,
+        subtitle: t.card_creation_notice_duplicate_hint,
+      ),
+      SettingsBodySearchEntry(
+        id: 'card_creation.anki.global_tags',
+        hasRevealTarget: true,
+        title: t.anki_tags_global,
+        subtitle: t.anki_tag_default_section,
       ),
       SettingsBodySearchEntry(
         id: 'card_creation.anki.tags',
@@ -239,7 +256,7 @@ SettingsDestination _buildAnkiPanel(AnkiSettingsPanel panel, String title) {
   return SettingsDestination(
     id: SettingsDestinationId.cardCreation,
     title: title,
-    icon: Icons.style_outlined,
+    icon: FushiIcons.ankiCard,
     sections: const <SettingsSection>[],
     body: (_) => AnkiSettingsBody(panel: panel),
     bodySearchEntries: <SettingsBodySearchEntry>[
@@ -319,11 +336,39 @@ SettingsDestination _buildAnkiPanel(AnkiSettingsPanel panel, String title) {
           hasRevealTarget: true,
           visible: (_) => Platform.isWindows,
         ),
+        SettingsBodySearchEntry(
+          id: 'card_creation.anki.desktop_auto_launch',
+          title: t.anki_desktop_auto_launch,
+          subtitle: t.anki_desktop_auto_launch_hint,
+          hasRevealTarget: true,
+          visible: (_) =>
+              Platform.isWindows || Platform.isMacOS || Platform.isLinux,
+        ),
+        SettingsBodySearchEntry(
+          id: 'card_creation.anki.desktop_executable',
+          title: t.anki_desktop_executable,
+          hasRevealTarget: true,
+          visible: (_) =>
+              Platform.isWindows || Platform.isMacOS || Platform.isLinux,
+        ),
+        SettingsBodySearchEntry(
+          id: 'card_creation.anki.desktop_launch',
+          title: t.anki_desktop_launch,
+          hasRevealTarget: true,
+          visible: (_) =>
+              Platform.isWindows || Platform.isMacOS || Platform.isLinux,
+        ),
       ],
       if (panel == AnkiSettingsPanel.media) ...[
         SettingsBodySearchEntry(
           id: 'card_creation.anki.video_mining_animated_format',
           title: t.video_mining_animated_format,
+          hasRevealTarget: true,
+        ),
+        SettingsBodySearchEntry(
+          id: 'card_creation.anki.mining_animated_play_once',
+          title: t.mining_animated_play_once,
+          subtitle: t.mining_animated_play_once_hint,
           hasRevealTarget: true,
         ),
         SettingsBodySearchEntry(
@@ -444,3 +489,137 @@ SettingsDestination _buildAnkiPanel(AnkiSettingsPanel panel, String title) {
     ],
   );
 }
+
+/// 制卡此刻发往 Fushi 复习：只作用于 Anki 发送链路的项不显示、不进搜索索引。
+/// 与正文 [AnkiSettingsBody] 的 [srsMiningToReviewProvider] 同一判据，但直接读
+/// [SettingsContext.appModel]（宿主 watch 着它，目标一改就重建；搜索索引在没有
+/// 平台服务装配的宿主里也能求值）。
+bool _toReview(SettingsContext c) =>
+    c.appModel.moduleVisibility.isEnabled(ModuleId.srs) &&
+    c.appModel.srsMiningTarget == SrsMiningTarget.srs;
+
+/// 只作用于 Anki 的项：目标为 Fushi 复习时隐藏，否则再看 [inner]（默认恒可见）。
+SettingsVisibility _ankiOnly([SettingsVisibility? inner]) =>
+    (SettingsContext c) => !_toReview(c) && (inner?.call(c) ?? true);
+
+/// 「按词频重排新卡」：目标为 Fushi 复习时恒在（「Fushi 复习」分组），否则跟着
+/// 「Anki」分组里的条件（Anki 已配置）。
+bool _repositionVisible(SettingsContext c) =>
+    _toReview(c) ||
+    _ankiOnly(
+      (SettingsContext c) => c.ref.watch(ankiViewModelProvider).isConfigured,
+    )(c);
+
+/// Anki 牌组 / 笔记类型已从 Anki 拉到（或已选好）：牌组 / 笔记类型两行可选。还没
+/// 加载到任何东西时只给「点刷新加载」提示。
+bool _ankiDecksLoaded(SettingsContext c) {
+  final AnkiUiState s = c.ref.watch(ankiViewModelProvider);
+  return s.isConfigured || s.settings.availableDecks.isNotEmpty;
+}
+
+/// 「Anki」分组里此刻出现的行（顺序即显示顺序）。
+@visibleForTesting
+List<AnkiSectionRow> ankiSectionRowsFor(SettingsContext c) {
+  final bool review = _toReview(c);
+  final AnkiUiState s = c.ref.watch(ankiViewModelProvider);
+  final bool loaded = _ankiDecksLoaded(c);
+  return <AnkiSectionRow>[
+    if (!review) ...<AnkiSectionRow>[
+      AnkiSectionRow.profile,
+      AnkiSectionRow.fetch,
+      AnkiSectionRow.createLapis,
+      if (s.errorMessage != null || !loaded) AnkiSectionRow.notice,
+      if (loaded) ...<AnkiSectionRow>[
+        AnkiSectionRow.deck,
+        AnkiSectionRow.noteType,
+      ],
+      if (s.isConfigured) ...<AnkiSectionRow>[
+        AnkiSectionRow.reposition,
+        AnkiSectionRow.autoReposition,
+        AnkiSectionRow.duplicateScope,
+        if (Platform.isIOS &&
+            ankiMobileLedgerIsDuplicateSource(
+              useAnkiConnectOnMobile: s.settings.useAnkiConnectOnMobile,
+              mineToServer: c.appModel.mineToServerEnabled,
+            ))
+          AnkiSectionRow.backupImport,
+      ],
+      AnkiSectionRow.batchMining,
+      AnkiSectionRow.queueUndelivered,
+      AnkiSectionRow.pendingLanding,
+    ],
+    AnkiSectionRow.pendingMines,
+  ];
+}
+
+/// 「Anki」分组（目标为 Fushi 复习时整组不显示）。
+SettingsSection _ankiSection() => SettingsSection(
+  id: 'card_creation.anki',
+  title: t.srs_mining_target_anki,
+  visible: (SettingsContext c) => !_toReview(c),
+  presentation: SettingsSectionPresentation.expanded,
+  items: <SettingsItem>[
+    SettingsCustomItem.rows(
+      id: 'card_creation.anki.rows',
+      rowsBuilder: (SettingsContext c) => <Widget>[
+        for (final AnkiSectionRow row in ankiSectionRowsFor(c))
+          AnkiSettingsBody(
+            key: ValueKey<String>('anki-row-${row.name}'),
+            row: row,
+          ),
+      ],
+    ),
+    SettingsNavigationItem(
+      id: 'card_creation.connection.open',
+      title: 'AnkiConnect',
+      icon: FushiIcons.link,
+      showIcon: true,
+      visible: _ankiOnly(),
+      subtitleBuilder: (SettingsContext c) {
+        final settings = c.ref.watch(ankiViewModelProvider).settings;
+        return '${settings.ankiConnectHost}:${settings.ankiConnectPort}';
+      },
+      child: () => _buildAnkiPanel(AnkiSettingsPanel.connection, 'AnkiConnect'),
+    ),
+    SettingsNavigationItem(
+      id: 'card_creation.fields.open',
+      title: t.anki_field_mappings,
+      icon: FushiIcons.swap,
+      showIcon: true,
+      visible: _ankiOnly(
+        (SettingsContext c) => c.ref.watch(ankiViewModelProvider).isConfigured,
+      ),
+      subtitleBuilder: (SettingsContext c) =>
+          c.ref.watch(ankiViewModelProvider).settings.selectedNoteTypeName,
+      child: () =>
+          _buildAnkiPanel(AnkiSettingsPanel.fields, t.anki_field_mappings),
+    ),
+    SettingsNavigationItem(
+      id: 'card_creation.lapis.open',
+      title: t.anki_lapis_section,
+      icon: FushiIcons.appearance,
+      showIcon: true,
+      visible: _ankiOnly(
+        (SettingsContext c) =>
+            c.ref.read(ankiViewModelProvider.notifier).supportsNoteTypeEditing,
+      ),
+      subtitle: t.anki_lapis_visual_editor_hint,
+      child: () =>
+          _buildAnkiPanel(AnkiSettingsPanel.lapis, t.anki_lapis_section),
+    ),
+    SettingsNavigationItem(
+      id: 'card_creation.maintenance.open',
+      title: t.anki_dedup_section,
+      subtitle: t.anki_dedup_run_hint,
+      icon: FushiIcons.deleteSweep,
+      showIcon: true,
+      visible: _ankiOnly(
+        (SettingsContext c) =>
+            c.ref.watch(ankiViewModelProvider).mediaMaintenanceAvailable ??
+            c.ref.read(ankiViewModelProvider.notifier).supportsMediaMaintenance,
+      ),
+      child: () =>
+          _buildAnkiPanel(AnkiSettingsPanel.maintenance, t.anki_dedup_section),
+    ),
+  ],
+);

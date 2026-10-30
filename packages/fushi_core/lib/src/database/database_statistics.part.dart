@@ -61,12 +61,67 @@ const String kActiveProfileIdPrefKey = 'active_profile_id';
 /// （fushi 层 `ProfileKeys` / `SyncRepository.deviceLocalPrefKeys` 各排除一次）。
 const String kStatLegacyProfileIdPrefKey = 'stats_legacy_profile_id';
 
+/// BUG-3644：同步落地时「对端 Profile 名字 → 本机 Profile」的回退别名。对端某个
+/// Profile 名在本机没有同名 Profile 时，它的段落进当时激活的 Profile；这里记下
+/// `本机 Profile id → {对端名字}`，导出时该 Profile 的碑再以这些名字各发一份，碑
+/// 才能在对端压到当初那批段（否则名字对不上的碑在对端被丢弃，两端永久分叉）。
+/// JSON：`{"<profileId>": ["名字", ...]}`。
+///
+/// 设备本地键：值是本库自增 id，同 [kStatLegacyProfileIdPrefKey] 一样绝不出境。
+const String kStudyProfileNameAliasesPrefKey = 'stats_profile_name_aliases';
+
 mixin _FushiDbStatistics
     on
         _$FushiDatabase,
         _FushiDbPrefsMedia,
         _FushiDbContentMisc,
         _FushiDbTagsSync {
+  /// 读 [kStudyProfileNameAliasesPrefKey]：本机 Profile id → 落进它的对端名字。
+  /// 坏值当空（只影响碑的别名副本，不影响数据本身）。
+  Future<Map<int, Set<String>>> getStudyProfileNameAliases() async {
+    final String? raw = await getPref(kStudyProfileNameAliasesPrefKey);
+    if (raw == null || raw.isEmpty) return <int, Set<String>>{};
+    final Object? decoded;
+    try {
+      decoded = jsonDecode(raw);
+    } on FormatException {
+      return <int, Set<String>>{};
+    }
+    if (decoded is! Map<String, Object?>) return <int, Set<String>>{};
+    final Map<int, Set<String>> out = <int, Set<String>>{};
+    for (final MapEntry<String, Object?> e in decoded.entries) {
+      final int? id = int.tryParse(e.key);
+      final Object? names = e.value;
+      if (id == null || names is! List<Object?>) continue;
+      out[id] = <String>{
+        for (final Object? n in names)
+          if (n is String && n.isNotEmpty) n,
+      };
+    }
+    return out;
+  }
+
+  /// 并入别名（只增不减；没有新名字时不写）。
+  Future<void> addStudyProfileNameAliases(Map<int, Set<String>> added) async {
+    if (added.isEmpty) return;
+    final Map<int, Set<String>> current = await getStudyProfileNameAliases();
+    bool changed = false;
+    for (final MapEntry<int, Set<String>> e in added.entries) {
+      final Set<String> names = current.putIfAbsent(e.key, () => <String>{});
+      for (final String n in e.value) {
+        if (n.isNotEmpty && names.add(n)) changed = true;
+      }
+    }
+    if (!changed) return;
+    await setPref(
+      kStudyProfileNameAliasesPrefKey,
+      jsonEncode(<String, List<String>>{
+        for (final MapEntry<int, Set<String>> e in current.entries)
+          '${e.key}': (e.value.toList()..sort()),
+      }),
+    );
+  }
+
   // ── reading statistics ──────────────────────────────────────────
   /// OVERWRITE semantics: sets the row for (title, dateKey) to the absolute
   /// values in [stat]. Use this when the caller already holds the final total
@@ -481,6 +536,23 @@ mixin _FushiDbStatistics
     return tomb != null && row.startAt.value < tomb.deletedAt;
   }
 
+  /// [_isStudySegmentTombstoned] 的批量形态：墓碑表已一次读进
+  /// `(profileId, mediaKind, mediaKey) → deletedAt`，判据逐字相同。
+  static bool _isStudySegmentTombstonedIn(
+    Map<(int, String, String), int> tombstones,
+    StudySegmentsCompanion row,
+  ) {
+    if (!row.mediaKind.present ||
+        !row.mediaKey.present ||
+        !row.startAt.present) {
+      return false;
+    }
+    final int profileId = row.profileId.present ? row.profileId.value : 0;
+    final int? deletedAt =
+        tombstones[(profileId, row.mediaKind.value, row.mediaKey.value)];
+    return deletedAt != null && row.startAt.value < deletedAt;
+  }
+
   /// 闭区间 [fromDateKey, toDateKey]（`yyyy-MM-dd` 字典序即时间序）内的全部段；
   /// 任一端 null = 不设界。
   ///
@@ -540,24 +612,48 @@ mixin _FushiDbStatistics
   ///
   /// v105：新行的 profile_id 由调用方按对端 Profile **名字**解析好传进来（缺席盖
   /// 当前激活）；已有行的归属不随 LWW 改（段第一次落到哪个 Profile 就是哪个）。
+  ///
+  /// 批量形态（聚合同步首轮要落上万段）：墓碑表与激活 Profile 在事务内各读一次，
+  /// upsert 走一次 [batch]，不再逐行跨 isolate 查碑 + 插入。事务内只写段、不写碑，
+  /// 所以一次读出的墓碑集合与逐行查询看到的完全相同。
   Future<void> upsertStudySegmentsIfNewer(
     Iterable<StudySegmentsCompanion> rows,
   ) =>
       transaction(() async {
-        for (final StudySegmentsCompanion input in rows) {
-          final StudySegmentsCompanion row =
-              await _stampStudySegmentProfile(input);
-          if (await _isStudySegmentTombstoned(row)) continue;
-          await into(studySegments).insert(
-            row,
-            onConflict: DoUpdate(
-              (old) => row.copyWith(profileId: const Value.absent()),
-              target: [studySegments.uid],
-              where: (old) =>
-                  old.updatedAt.isSmallerThanValue(row.updatedAt.value),
-            ),
-          );
-        }
+        final List<StudySegmentsCompanion> inputs = rows.toList();
+        if (inputs.isEmpty) return;
+        final int? activeProfileId =
+            inputs.any((StudySegmentsCompanion r) => !r.profileId.present)
+                ? await resolveActiveProfileId()
+                : null;
+        final Map<(int, String, String), int> tombstones =
+            <(int, String, String), int>{
+          for (final StudySegmentTombstoneRow t
+              in await select(studySegmentTombstones).get())
+            (t.profileId, t.mediaKind, t.mediaKey): t.deletedAt,
+        };
+        final List<StudySegmentsCompanion> writable = <StudySegmentsCompanion>[
+          for (final StudySegmentsCompanion input in inputs)
+            input.profileId.present
+                ? input
+                : input.copyWith(profileId: Value(activeProfileId!)),
+        ]..removeWhere((StudySegmentsCompanion row) =>
+            _isStudySegmentTombstonedIn(tombstones, row));
+        if (writable.isEmpty) return;
+        await batch((Batch b) {
+          for (final StudySegmentsCompanion row in writable) {
+            b.insert(
+              studySegments,
+              row,
+              onConflict: DoUpdate<$StudySegmentsTable, StudySegmentRow>(
+                (old) => row.copyWith(profileId: const Value.absent()),
+                target: [studySegments.uid],
+                where: (old) =>
+                    old.updatedAt.isSmallerThanValue(row.updatedAt.value),
+              ),
+            );
+          }
+        });
       });
 
   // zeroStudySegmentsOnDays / deleteStatFactsOnDays 住 _FushiDbContentMisc（同
@@ -722,6 +818,12 @@ mixin _FushiDbStatistics
               .write(GalgameSessionsCompanion(gameTitle: Value(fallback)));
         }
         await deleteTagAssignmentsForHost(TagHostKind.game, id);
+        // v135 配音表缓存（设备本地、无外键）同事务清掉。
+        await (delete(gameVoiceCasts)..where((t) => t.gameId.equals(id))).go();
+        // v134 游戏台词跟游戏走：外键 cascade 之外显式删一遍（连接没开 foreign_keys 的
+        // 场合——测试替身 / 临时连接——也不留悬空台词）。
+        await (delete(galgameTextLines)..where((t) => t.gameId.equals(id)))
+            .go();
         return (delete(galgames)..where((t) => t.id.equals(id))).go();
       });
 
@@ -988,6 +1090,11 @@ mixin _FushiDbStatistics
             // reader_positions 后，首页「继续」不刷新、要重启 app 才生效——
             // 同步回灌与本机关书是同一张表的写入，理应同一条失效通道。
             readerPositions,
+            // BUG-2918：读完标记 `completedAt` 的真相源。「继续」区按它剔除读完
+            // 的书（末页位置永远 < duration，不能只看进度），手动标记 / 阅读器
+            // 自动置完成 / 同步回灌都写这张表，必须同一条失效通道。写入都是低频
+            // 的元数据编辑（导入、改名、完成标记），不随翻页触发。
+            epubBooks,
           ]),
         ).listen((_) {
           if (!controller.isClosed) controller.add(null);
@@ -1542,8 +1649,16 @@ mixin _FushiDbStatistics
   // ── mined sentences ──────────────────────────────────────────────
 
   /// 记录一次成功制卡：插入一条历史，并在事务内 trim 掉超额的最旧行。
-  /// 定位列（[bookKey]/[sectionIndex]/[normCharOffset]/[normCharLength]）按来源可空——
-  /// 独立查词页 / 首页词典制卡无书无章，传 null（展示为不可跳转条目）。
+  /// 定位列按来源可空——独立查词页 / 首页词典制卡无书无章，传 null（展示为不可跳转
+  /// 条目）。v132 起每种定位各占一列、不再一列两义：
+  /// - 书 / 有声书 / 歌词模式：[sectionIndex] + [normCharOffset] / [normCharLength]；
+  /// - 视频：[sectionIndex]（集下标）+ [positionMs] / [durationMs]；
+  /// - 音乐：[positionMs] / [durationMs]（[bookKey] = track uid）；
+  /// - 漫画：[pageIndex]；
+  /// - 游戏：只有 [bookKey]（`galgames.id`），台词在文本钩子历史里。
+  ///
+  /// 时间轴来源误传字符偏移会被断言拦下（[source] 为 video / music 时
+  /// [normCharOffset] / [normCharLength] 必须为 null）。
   Future<void> addMinedSentence({
     required String source,
     required String dateKey,
@@ -1557,9 +1672,18 @@ mixin _FushiDbStatistics
     int? sectionIndex,
     int? normCharOffset,
     int? normCharLength,
+    int? positionMs,
+    int? durationMs,
+    int? pageIndex,
     int? noteId,
-  }) =>
-      transaction(() async {
+  }) {
+    assert(
+      !((source == 'video' || source == 'music') &&
+          (normCharOffset != null || normCharLength != null)),
+      'time-axis mined sentences carry positionMs / durationMs, '
+      'not character offsets',
+    );
+    return transaction(() async {
         await into(minedSentences).insert(
           MinedSentencesCompanion.insert(
             source: source,
@@ -1574,12 +1698,16 @@ mixin _FushiDbStatistics
             sectionIndex: Value(sectionIndex),
             normCharOffset: Value(normCharOffset),
             normCharLength: Value(normCharLength),
+            positionMs: Value(positionMs),
+            durationMs: Value(durationMs),
+            pageIndex: Value(pageIndex),
             noteId: Value(noteId),
             createdAt: DateTime.now().millisecondsSinceEpoch,
           ),
         );
         await _trimMinedSentences();
       });
+  }
 
   /// 取全部制卡历史，按 createdAt 倒序（最近在前），供收藏夹页展示。
   Future<List<MinedSentenceRow>> getAllMinedSentences() =>

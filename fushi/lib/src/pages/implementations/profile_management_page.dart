@@ -1,14 +1,19 @@
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi_core/fushi_core.dart' show ProfileMediaKind;
 import 'package:fushi/pages.dart';
 import 'package:fushi/utils.dart';
 import 'package:fushi/src/models/app_model.dart';
+import 'package:fushi/src/profile/profile_deletion_cascade.dart';
 import 'package:fushi/src/profile/profile_repository.dart';
 import 'package:fushi/src/profile/profile_view_model.dart';
+import 'package:fushi/src/settings/settings_schema_widgets.dart'
+    show SettingsSectionFooter;
 import 'package:fushi/src/utils/misc/collection_exporter.dart';
 import 'package:fushi/src/media/import/real_path_directory_picker.dart';
 import 'package:path/path.dart' as p;
@@ -52,6 +57,18 @@ class ProfileManagementBody extends ConsumerStatefulWidget {
 
 class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
   @override
+  void initState() {
+    super.initState();
+    // 一次性存量扫描：以前删 Profile 只删 profiles 行，留在 srs.db 里的无主复习数据在这里先备份再清掉
+    // （扫完记标记，之后进来是空操作）。失败进错误日志，下次进来再扫。
+    final ProfileViewModel vm = ref.read(profileViewModelProvider.notifier);
+    vm.sweepOrphanProfileData().catchError((Object e, StackTrace stack) {
+      ErrorLogService.instance.log('ProfileManagement.sweepOrphans', e, stack);
+      return 0;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final uiState = ref.watch(profileViewModelProvider);
@@ -60,16 +77,8 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
     if (uiState.isLoading) {
       return Padding(
         padding: EdgeInsets.symmetric(vertical: tokens.spacing.page * 3),
-        child: Center(
-          child: SizedBox(
-            width: 36,
-            height: 36,
-            child: adaptiveIndicator(
-              context: context,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-          ),
-        ),
+        // 统一加载占位（MD3 Expressive 指示器 / Apple 系统菊花）。
+        child: const FushiLoadingView(),
       );
     }
 
@@ -144,14 +153,15 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
         AdaptiveSettingsSection(
           title: t.profile_language_bindings,
           children: [
-            AdaptiveSettingsRow(
-              title: t.profile_language_bindings_hint,
-              titleMaxLines: 4,
-            ),
             for (final String tag in _languageBindingTags(uiState))
               _buildLanguageRow(tag, uiState, vm),
           ],
         ),
+        // 说明不再伪装成分组里的第一行（标题被截断、还带行高 / 分隔线语义），
+        // 改成与 schema section footer 同款的分组脚注（样式按设计系统由
+        // SettingsSectionFooter 自己取：Apple footnote 灰字 / MD3 bodySmall
+        // onVariant）。
+        SettingsSectionFooter(t.profile_language_bindings_hint),
       ],
     );
   }
@@ -163,7 +173,7 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
   Widget _buildCreateRow(ProfileViewModel vm) {
     final bool cupertino = isCupertinoPlatform(context);
     return AdaptiveSettingsRow(
-      icon: cupertino ? CupertinoIcons.add : Icons.add,
+      icon: cupertino ? CupertinoIcons.add : FushiIcons.add,
       showIcon: true,
       title: t.profile_create,
       onTap: () => _showCreateDialog(vm),
@@ -173,9 +183,7 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
   Widget _buildImportRow(ProfileViewModel vm) {
     final bool cupertino = isCupertinoPlatform(context);
     return AdaptiveSettingsRow(
-      icon: cupertino
-          ? CupertinoIcons.square_arrow_down
-          : Icons.file_download_outlined,
+      icon: cupertino ? CupertinoIcons.square_arrow_down : FushiIcons.download,
       showIcon: true,
       title: t.profile_import,
       onTap: () => _importProfile(vm),
@@ -199,8 +207,11 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
           icon: profile.id == uiState.activeProfileId
               ? (cupertino
                   ? CupertinoIcons.check_mark_circled_solid
-                  : Icons.check_circle)
-              : (cupertino ? CupertinoIcons.circle : Icons.circle_outlined),
+                  : FushiIcons.filled(FushiIcons.success))
+              : (cupertino ? CupertinoIcons.circle : FushiIcons.profiles),
+          // 行首的实心 / 空心圆就是「当前激活」的唯一信号——不 showIcon 的话
+          // 共享行根本不画它，列表里看不出哪个方案在用。
+          showIcon: true,
           title: profile.name,
           onTap: () {
             if (profile.id != uiState.activeProfileId) {
@@ -211,21 +222,21 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
             mainAxisSize: MainAxisSize.min,
             children: [
               _ProfileActionButton(
-                materialIcon: Icons.file_upload_outlined,
+                materialIcon: FushiIcons.upload,
                 cupertinoIcon: CupertinoIcons.square_arrow_up,
                 tooltip: t.profile_export,
                 onPressed: () => _exportProfile(vm, profile.id, profile.name),
               ),
               SizedBox(width: tokens.spacing.gap / 2),
               _ProfileActionButton(
-                materialIcon: Icons.copy_outlined,
+                materialIcon: FushiIcons.copy,
                 cupertinoIcon: CupertinoIcons.doc_on_doc,
                 tooltip: t.profile_copy,
                 onPressed: () => _showCopyDialog(vm, profile.id, profile.name),
               ),
               SizedBox(width: tokens.spacing.gap / 2),
               _ProfileActionButton(
-                materialIcon: Icons.edit_outlined,
+                materialIcon: FushiIcons.rename,
                 cupertinoIcon: CupertinoIcons.pencil,
                 tooltip: t.profile_rename,
                 onPressed: () =>
@@ -234,7 +245,7 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
               if (!isOnly) ...[
                 SizedBox(width: tokens.spacing.gap / 2),
                 _ProfileActionButton(
-                  materialIcon: Icons.delete_outline,
+                  materialIcon: FushiIcons.delete,
                   cupertinoIcon: CupertinoIcons.delete,
                   tooltip: t.profile_delete,
                   destructive: true,
@@ -386,15 +397,43 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
     int id,
     String name,
   ) async {
+    // 确认框写明会连带删掉的复习数据（srs.db 不在主库外键级联里，删 Profile 时由 Rust 一并清掉）。
+    final ProfileDeletionImpact impact = await vm.deletionImpact(id);
+    if (!mounted) return;
     final confirmed = await showAppDialog<bool>(
       context: context,
       builder: (ctx) => ProfileDeleteDialog(
         profileName: name,
+        impact: impact,
         onConfirm: () => Navigator.pop(ctx, true),
       ),
     );
-    if (confirmed == true) {
-      await vm.deleteProfile(id);
+    if (confirmed != true) return;
+    final ProfileDeletionOutcome? outcome;
+    try {
+      outcome = await vm.deleteProfile(id);
+    } on ProfileDeletionBackupException catch (e, stack) {
+      ErrorLogService.instance.log('ProfileManagement.deleteBackup', e, stack);
+      FushiToast.show(
+        msg: t.profile_delete_srs_backup_failed,
+        severity: ToastSeverity.error,
+      );
+      return;
+    } catch (e, stack) {
+      ErrorLogService.instance.log('ProfileManagement.delete', e, stack);
+      FushiToast.show(
+        msg: t.profile_delete_failed,
+        severity: ToastSeverity.error,
+      );
+      return;
+    }
+    final String? backup = outcome?.backupPath;
+    if (backup != null) {
+      FushiToast.show(
+        msg: t.profile_delete_srs_backed_up(path: backup),
+        toastLength: Toast.LENGTH_LONG,
+        severity: ToastSeverity.success,
+      );
     }
   }
 
@@ -405,7 +444,7 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
   void _notify(String message) {
     if (!mounted) return;
     ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(message)));
+        .showSnackBar(FushiSnackBar(content: Text(message)));
   }
 
   /// 文件名安全化：去掉路径分隔符与控制字符，保证可落盘。
@@ -488,13 +527,20 @@ class _ProfileActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool cupertino = isCupertinoPlatform(context);
+    // Apple：行内操作字形是强调色（iOS 列表行里的可点图标口径），删除用系统
+    // destructive 红；MD3 维持中性 onSurfaceVariant / error。
+    final bool glass = !cupertino && isGlassDesign(context);
     final Color color = destructive
         ? (cupertino
             ? CupertinoColors.destructiveRed.resolveFrom(context)
-            : Theme.of(context).colorScheme.error)
+            : glass
+                ? appleColorsOf(context).destructive
+                : Theme.of(context).colorScheme.error)
         : (cupertino
             ? CupertinoTheme.of(context).primaryColor
-            : Theme.of(context).colorScheme.onSurfaceVariant);
+            : glass
+                ? appleColorsOf(context).accent
+                : Theme.of(context).colorScheme.onSurfaceVariant);
 
     if (cupertino) {
       return CupertinoButton(
@@ -504,7 +550,7 @@ class _ProfileActionButton extends StatelessWidget {
         child: Semantics(
           button: true,
           label: tooltip,
-          child: Icon(cupertinoIcon, size: 20, color: color),
+          child: FushiIcon(cupertinoIcon, size: 20, color: color),
         ),
       );
     }
@@ -526,11 +572,15 @@ class ProfileDeleteDialog extends StatelessWidget {
   const ProfileDeleteDialog({
     required this.profileName,
     required this.onConfirm,
+    this.impact = const ProfileDeletionImpact.none(),
     super.key,
   });
 
   final String profileName;
   final VoidCallback onConfirm;
+
+  /// 会连带删掉的复习数据；有数据时正文多一段写明卡数、复习记录数与自动备份。
+  final ProfileDeletionImpact impact;
 
   @override
   Widget build(BuildContext context) {
@@ -546,6 +596,7 @@ class ProfileDeleteDialog extends StatelessWidget {
       scrollable: false,
       child: FushiModalSheetFrame(
         title: t.profile_delete,
+        leadingIcon: FushiIcons.delete,
         scrollable: true,
         bodyPadding: EdgeInsets.fromLTRB(
           tokens.spacing.card,
@@ -559,9 +610,26 @@ class ProfileDeleteDialog extends StatelessWidget {
           tokens.spacing.card,
           tokens.spacing.card,
         ),
-        body: Text(
-          t.profile_confirm_delete(name: profileName),
-          style: tokens.type.listSubtitle,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              t.profile_confirm_delete(name: profileName),
+              style: tokens.type.listSubtitle,
+            ),
+            if (impact.hasSrsData) ...[
+              SizedBox(height: tokens.spacing.gap),
+              Text(
+                t.profile_delete_srs_impact(
+                  cards: impact.srsCards,
+                  reviews: impact.srsReviews,
+                ),
+                key: const ValueKey<String>('profile_delete_srs_impact'),
+                style: tokens.type.listSubtitle,
+              ),
+            ],
+          ],
         ),
         footer: Wrap(
           alignment: WrapAlignment.end,
@@ -632,6 +700,7 @@ class _ProfileNameDialogState extends State<ProfileNameDialog> {
       scrollable: false,
       child: FushiModalSheetFrame(
         title: widget.title,
+        leadingIcon: FushiIcons.profiles,
         bodyPadding: EdgeInsets.fromLTRB(
           tokens.spacing.card,
           0,

@@ -18,13 +18,15 @@ ModuleVisibility _visibility({
   bool lookup = true,
   bool browserExtension = false,
 }) => ModuleVisibility(<ModuleId>{
+  // 首页 2026-10-09 起是可关模块；这些用例的语义是「首页开着」。
+  ModuleId.home,
   if (books) ModuleId.books,
   if (manga) ModuleId.manga,
   if (video) ModuleId.video,
   if (games) ModuleId.games,
   if (downloads) ModuleId.browse,
   if (lookup) ModuleId.lookup,
-  if (browserExtension) ModuleId.browserExtension,
+  if (browserExtension) ModuleId.web,
 });
 
 /// 守卫「游戏」tab（galgame 库）在首页顶层导航中的可见性与位置。galgame UX 统一后 games

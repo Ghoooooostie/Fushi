@@ -124,6 +124,11 @@ class CollectionManifestEntry {
     this.members = const <CollectionManifestMember>[],
     this.memberTombstones = const <CollectionMemberTombstone>[],
     this.tagNames = const <String>[],
+    this.episodeOrdered = false,
+    this.origin,
+    this.organizeKey,
+    this.organizeAliases = const <String>[],
+    this.organizeMerged = false,
   });
 
   /// 自然键：合集名（跨端身份，同 backup 合并的 (name, collection_type) 对齐）。
@@ -153,6 +158,28 @@ class CollectionManifestEntry {
   /// 合集标签（按名跨端传递；BookTags.id 各端不一致故用名）。只增不删并集，
   /// 无墓碑（合集标签同步不消费墓碑，见 collection-tags 设计 §5）。
   final List<String> tagNames;
+
+  /// 成员序由集号派生（下载管理的合集，BUG-2941）。两端都没手动排过序
+  /// （[orderUpdatedAt] 均为 0）时，合并按成员键里的季/集重排视频成员，而不是
+  /// 「平手取远端」——远端序只是另一端的下载到达顺序。只要有一端知道就随清单
+  /// 传播（合并 / 折叠取或），没有下载任务的设备也据此收敛到同一顺序。
+  final bool episodeOrdered;
+
+  /// 合集来源 wire 值（`CollectionOrigin.dbValue`，schema v124 AI 整理库 spec §5.4）；
+  /// null = 这份清单没说（旧对端 / 旧文件）。合并按秩取大，缺省是**未知**而不是
+  /// 「用户」：所有份清单都没说时才当用户的（`CollectionOrigin.parse(null)`）。
+  final String? origin;
+
+  /// 整理分组键（spec §6）。活合集上是它的身份；死条目上是被删合集的键（拒绝 /
+  /// 合并去向，见 `getRejectedOrganizeKeys`）。null = 未知（同 [origin]，不是清空）。
+  final String? organizeKey;
+
+  /// 吸收过的其它分组键（spec §8.3），只增不删，合并取并集。
+  final List<String> organizeAliases;
+
+  /// 死条目：这次删除是整理器把它并进了别的合集（不是用户删的）。两端说法不一时
+  /// 以「用户删的」为准（取与）。活条目恒 false。
+  final bool organizeMerged;
 
   factory CollectionManifestEntry.fromJson(Object? json) {
     if (json is! Map<String, dynamic>) {
@@ -201,8 +228,23 @@ class CollectionManifestEntry {
                 if (t is String && t.isNotEmpty) t,
             ]
           : const <String>[],
+      // additive 字段：旧清单缺它即 false。
+      episodeOrdered: json['episodeOrdered'] == true,
+      // v124 additive 字段（AI 整理库）：缺 / 非法一律 null / 空——未知而非清空。
+      origin: _nonEmptyString(json['origin']),
+      organizeKey: _nonEmptyString(json['organizeKey']),
+      organizeAliases: json['organizeAliases'] is List
+          ? <String>[
+              for (final Object? a in (json['organizeAliases'] as List))
+                if (a is String && a.isNotEmpty) a,
+            ]
+          : const <String>[],
+      organizeMerged: json['organizeMerged'] == true,
     );
   }
+
+  static String? _nonEmptyString(Object? raw) =>
+      raw is String && raw.isNotEmpty ? raw : null;
 
   Map<String, dynamic> toJson() {
     // 跳过非法条目（空 mediaType / 空 entryKey）：本地脏行绝不原样发布毒害对端
@@ -247,13 +289,25 @@ class CollectionManifestEntry {
       ],
       // 空时不写 key：无标签合集 JSON 与加特性前逐字节相同，维持 canonicalJson 幂等。
       if (sortedTags.isNotEmpty) 'tagNames': sortedTags,
+      // 同上：false 时不写 key，非下载合集的 JSON 与加特性前逐字节相同。
+      if (episodeOrdered) 'episodeOrdered': true,
+      // v124：同上，缺省不写 key。别名去重排序，内容相等 ⇒ 字节相等。
+      if (origin != null) 'origin': origin,
+      if (organizeKey != null) 'organizeKey': organizeKey,
+      if (organizeAliases.isNotEmpty)
+        'organizeAliases': (<String>{
+          for (final String a in organizeAliases)
+            if (a.isNotEmpty) a,
+        }.toList()
+          ..sort()),
+      if (organizeMerged) 'organizeMerged': true,
     };
   }
 }
 
 /// 清单里的一个合集成员。
 ///
-/// 命名统一 Phase 3.3：[mediaType] / [entryKey] 与 hibiki_core 的 [MediaRef]
+/// 命名统一 Phase 3.3：[mediaType] / [entryKey] 与 fushi_core 的 [MediaRef]
 /// 同构，但**存储保持裸字符串**——wire 契约要求原样透传对端未来新增的未知
 /// 种类（强类型化会在 [fromJson] 丢值）；需要类型化身份时走 [mediaRef] 委托。
 class CollectionManifestMember {

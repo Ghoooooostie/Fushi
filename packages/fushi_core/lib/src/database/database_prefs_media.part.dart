@@ -135,6 +135,41 @@ mixin _FushiDbPrefsMedia
     });
   }
 
+  /// Inserts [key] only when no row exists yet; returns whether it wrote.
+  ///
+  /// One-shot migrations that seed a preference from an external source (e.g.
+  /// the Anki settings moving out of SharedPreferences) run in every entry
+  /// point, including the separate Android `:popup` process, so two processes
+  /// can race on first launch. A read-then-[setPref] pair would let the loser
+  /// overwrite the winner's value (and, in WAL, a deferred read transaction
+  /// that later upgrades to a write fails with a stale snapshot). The insert is
+  /// therefore a single `INSERT OR IGNORE` — the transaction's FIRST statement
+  /// is the write, so it takes the write lock (honouring busy_timeout) before
+  /// looking at anything, and the existence check is the primary-key conflict
+  /// itself. The prefs-version bump rides the same transaction only when a row
+  /// actually landed, so other processes reload exactly when something changed.
+  Future<bool> insertPrefIfAbsent(String key, String value) {
+    return transaction(() async {
+      final int inserted = await customUpdate(
+        'INSERT OR IGNORE INTO preferences (key, value, updated_at) '
+        'VALUES (?, ?, ?)',
+        variables: <Variable<Object>>[
+          Variable<String>(key),
+          Variable<String>(value),
+          // BUG-1502: a local write stamps `now`, same as [setPref].
+          Variable<int>(DateTime.now().millisecondsSinceEpoch),
+        ],
+        updates: <TableInfo<Table, Object?>>{preferences},
+        updateKind: UpdateKind.insert,
+      );
+      if (inserted != 1) return false;
+      if (key != FushiDatabase.prefsVersionKey) {
+        await _bumpPrefsVersion();
+      }
+      return true;
+    });
+  }
+
   /// Atomically increment the persisted prefs-version directly in the DB so the
   /// next cross-process read observes a strictly larger value. Encoded as a
   /// PrefCodec int (`i:N`) so it round-trips identically to every other int
@@ -142,8 +177,9 @@ mixin _FushiDbPrefsMedia
   /// [setPref]) to avoid re-entering the recursion guard above.
   ///
   /// BUG-906 (A): this read-modify-write is NOT atomic on its own. It MUST be
-  /// called from within an enclosing transaction — which its only two callers
-  /// ([setPref] and [compareAndSetPref]) now both provide — so that drift's
+  /// called from within an enclosing transaction — which every caller
+  /// ([setPref] / [setPrefs] / [compareAndSetPref] / [setPrefIfNewer] /
+  /// [insertPrefIfAbsent]) provides — so that drift's
   /// single-writer transaction lock serializes the read+write against every
   /// other pref write. Called bare (outside a transaction) it can lose
   /// increments under concurrency; do not add such a caller.
@@ -221,6 +257,26 @@ mixin _FushiDbPrefsMedia
 
   Future<void> setPrefTyped<T>(String key, T value) =>
       setPref(key, PrefCodec.encode(value));
+
+  /// 「比较后写入」（BUG-3537）：仅当 int 偏好 [stampKey]（缺省按 0 读）仍等于
+  /// [expectedStamp] 时执行 [write]，返回是否执行。
+  ///
+  /// 给「位置 + 时间戳」成对存在偏好里的播放断点（视频 / 有声书）用：出站同步在
+  /// 「读本地 → 等网络 → 写本地」之间，本机作为互联 host 的对端 PUT 或本机播放器
+  /// 可能已写进更新的断点；时间戳一变，旧决策即作废，放弃这次落地交给下一轮。
+  /// 重读与 [write] 同在一个事务里（[write] 内的 drift 写自动落进同一事务），
+  /// 中间不会有写者插队。
+  Future<bool> runIfIntPrefUnchanged({
+    required String stampKey,
+    required int expectedStamp,
+    required Future<void> Function() write,
+  }) =>
+      transaction(() async {
+        final int current = await getPrefTyped<int>(stampKey, 0);
+        if (current != expectedStamp) return false;
+        await write();
+        return true;
+      });
 
   Future<void> deletePref(String key) async {
     await (delete(preferences)..where((t) => t.key.equals(key))).go();
@@ -448,9 +504,20 @@ mixin _FushiDbPrefsMedia
       });
 
   // ── video_books ─────────────────────────────────────────────────
+  /// v118：`localAddedAt`（本机开始拥有的时刻）插入时未携带 → now；冲突转更新
+  /// （同 bookUid 重复登记、互联重下覆盖同一副本）时**永不改写**——那不是重新
+  /// 拥有。互联下载登记把 `importedAt` 镜像成 host 值（BUG-2463），本列仍记本机
+  /// 落地时刻（语义见 [FushiDatabase.insertEpubBook]）。
   Future<void> upsertVideoBook(VideoBooksCompanion vb) async {
-    await into(videoBooks).insert(vb,
-        onConflict: DoUpdate((_) => vb, target: [videoBooks.bookUid]));
+    await into(videoBooks).insert(
+        vb.localAddedAt.present
+            ? vb
+            : vb.copyWith(
+                localAddedAt:
+                    Value<int?>(DateTime.now().millisecondsSinceEpoch)),
+        onConflict: DoUpdate(
+            (_) => vb.copyWith(localAddedAt: const Value<int?>.absent()),
+            target: [videoBooks.bookUid]));
     // 删除传播：重新加入同 bookUid 的视频清除其 sync 删除墓碑（防误判待删）。
     if (vb.bookUid.present) {
       await clearSyncDeletionTombstone('video', vb.bookUid.value);

@@ -11,7 +11,9 @@
 library;
 
 import 'dart:convert';
+import 'dart:math' as math;
 
+import 'package:fushi_engine/ai/ai_model_pricing.dart';
 import 'package:fushi_engine/media/torrent/torznab_client.dart'
     show isSafeExternalProviderEndpoint;
 
@@ -61,6 +63,32 @@ enum AiReasoningEffort {
   }
 }
 
+/// 用户对「这家提供商能不能走原生 tool calling」的覆盖。
+///
+/// 预设的 [AiProviderPreset.supportsTools] 只是厂商公开能力的保守判断：本地模型、
+/// 中转站、部分国产兼容端点的工具调用时好时坏，用户实测后可以强制开 / 关。
+enum AiToolCallingOverride {
+  /// 跟随预设（默认；旧数据没有这个字段时也是它）。
+  followPreset,
+
+  /// 强制走原生 tool calling。
+  forceOn,
+
+  /// 强制不走（降级为「只回一个 JSON 动作」的提示词约束）。
+  forceOff;
+
+  String get storageKey => name;
+
+  static AiToolCallingOverride fromStorageKey(String? key) {
+    for (final AiToolCallingOverride o in AiToolCallingOverride.values) {
+      if (o.storageKey == key) {
+        return o;
+      }
+    }
+    return AiToolCallingOverride.followPreset;
+  }
+}
+
 /// 一个内置提供商预设：把「地址 + 协议 + 一个能用的起点模型」打包好，用户加一家
 /// 提供商时只需要填 API Key。
 ///
@@ -75,6 +103,7 @@ class AiProviderPreset {
     this.suggestedModel = '',
     this.requiresApiKey = true,
     this.isLocal = false,
+    this.supportsTools = false,
   });
 
   /// 稳定身份，进持久化。
@@ -89,6 +118,14 @@ class AiProviderPreset {
 
   /// 跑在本机、默认地址是 loopback HTTP。
   final bool isLocal;
+
+  /// 这家的 chat 端点稳定支持原生 tool calling（OpenAI `tools` / Anthropic
+  /// `tool_use` / Gemini `functionDeclarations`）。
+  ///
+  /// 默认 false（保守）：只给主流云端、文档明确支持的厂商开；本地推理服务与拿不准的
+  /// 兼容端点（工具调用依赖具体模型）关，用户可在提供商上覆盖
+  /// （[AiProviderConfig.toolCallingOverride]）。
+  final bool supportsTools;
 }
 
 /// 自定义提供商的预设 id——用户自己填地址和协议。
@@ -105,6 +142,7 @@ const List<AiProviderPreset> kAiProviderPresets = <AiProviderPreset>[
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://api.openai.com/v1',
     suggestedModel: 'gpt-4o-mini',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'anthropic',
@@ -112,6 +150,7 @@ const List<AiProviderPreset> kAiProviderPresets = <AiProviderPreset>[
     protocol: AiWireProtocol.anthropicMessages,
     baseUrl: 'https://api.anthropic.com',
     suggestedModel: 'claude-sonnet-5',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'gemini',
@@ -119,6 +158,7 @@ const List<AiProviderPreset> kAiProviderPresets = <AiProviderPreset>[
     protocol: AiWireProtocol.geminiGenerateContent,
     baseUrl: 'https://generativelanguage.googleapis.com/v1beta',
     suggestedModel: 'gemini-2.5-flash',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'deepseek',
@@ -126,6 +166,7 @@ const List<AiProviderPreset> kAiProviderPresets = <AiProviderPreset>[
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://api.deepseek.com/v1',
     suggestedModel: 'deepseek-chat',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'qwen',
@@ -133,6 +174,7 @@ const List<AiProviderPreset> kAiProviderPresets = <AiProviderPreset>[
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
     suggestedModel: 'qwen-plus',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'zhipu',
@@ -140,12 +182,14 @@ const List<AiProviderPreset> kAiProviderPresets = <AiProviderPreset>[
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://open.bigmodel.cn/api/paas/v4',
     suggestedModel: 'glm-4-flash',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'moonshot',
     displayName: 'Moonshot Kimi',
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://api.moonshot.cn/v1',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'volcengine',
@@ -176,6 +220,7 @@ const List<AiProviderPreset> kAiProviderPresets = <AiProviderPreset>[
     displayName: 'xAI Grok',
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://api.x.ai/v1',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'mistral',
@@ -183,18 +228,21 @@ const List<AiProviderPreset> kAiProviderPresets = <AiProviderPreset>[
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://api.mistral.ai/v1',
     suggestedModel: 'mistral-small-latest',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'groq',
     displayName: 'Groq',
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://api.groq.com/openai/v1',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'openrouter',
     displayName: 'OpenRouter',
     protocol: AiWireProtocol.openAiCompatible,
     baseUrl: 'https://openrouter.ai/api/v1',
+    supportsTools: true,
   ),
   AiProviderPreset(
     id: 'ollama',
@@ -233,6 +281,42 @@ AiProviderPreset? aiProviderPresetById(String? id) {
   return null;
 }
 
+/// 一家提供商名下的一把 API Key。
+///
+/// 同一家可以配多把（有序）：请求按顺序挑一把**没在冷却**的用，被拒 / 限流 /
+/// 额度用尽就换下一把重试（见 `ai_key_rotation.dart`）。冷却状态是运行时健康
+/// 记录，不在这里——这里只存用户的配置（值 + 启用开关）。
+class AiApiKey {
+  const AiApiKey(this.value, {this.enabled = true});
+
+  final String value;
+
+  /// 用户手动停用的 key 不参与请求，但留在列表里（不必删了再重新粘贴）。
+  final bool enabled;
+
+  /// 请求里真正发出去的值：两端空白一律去掉（粘贴常带换行）。
+  String get trimmed => value.trim();
+
+  /// 参与请求：启用且非空。
+  bool get isActive => enabled && trimmed.isNotEmpty;
+
+  /// 界面上辨认这把 key 用的末 4 位（不足 4 位就全是它自己）。
+  String get tail {
+    final String v = trimmed;
+    return v.length <= 4 ? v : v.substring(v.length - 4);
+  }
+
+  AiApiKey copyWith({String? value, bool? enabled}) =>
+      AiApiKey(value ?? this.value, enabled: enabled ?? this.enabled);
+
+  @override
+  bool operator ==(Object other) =>
+      other is AiApiKey && other.value == value && other.enabled == enabled;
+
+  @override
+  int get hashCode => Object.hash(value, enabled);
+}
+
 /// 一家已配置的 AI 提供商。
 class AiProviderConfig {
   AiProviderConfig({
@@ -240,13 +324,27 @@ class AiProviderConfig {
     required this.presetId,
     required this.name,
     required this.baseUrl,
-    this.apiKey = '',
+    String apiKey = '',
+    List<AiApiKey>? apiKeys,
     this.model = '',
     this.protocol = AiWireProtocol.openAiCompatible,
     this.reasoningEffort = AiReasoningEffort.none,
     this.enabled = true,
     this.allowInsecureHttp = false,
-  }) {
+    this.requestsPerMinute = 0,
+    this.toolCallingOverride = AiToolCallingOverride.followPreset,
+    this.pricing = const AiModelPricing(),
+    this.acceptsImages = false,
+  }) : apiKeys = List<AiApiKey>.unmodifiable(
+         apiKeys ??
+             (apiKey.isEmpty
+                 ? const <AiApiKey>[]
+                 : <AiApiKey>[AiApiKey(apiKey)]),
+       ) {
+    assert(
+      apiKeys == null || apiKey.isEmpty,
+      'pass either apiKey (single) or apiKeys (list), not both',
+    );
     if (id.trim().isEmpty) {
       throw ArgumentError.value(id, 'id', 'AI provider id must not be empty');
     }
@@ -291,21 +389,12 @@ class AiProviderConfig {
     if (url == null) {
       throw const FormatException('AI provider entry has no usable base URL');
     }
-    final Object? rawKey = json['apiKeyB64'];
-    String apiKey = '';
-    if (rawKey is String && rawKey.isNotEmpty) {
-      try {
-        apiKey = utf8.decode(base64Decode(rawKey));
-      } on FormatException {
-        apiKey = '';
-      }
-    }
     return AiProviderConfig(
       id: (json['id'] as String? ?? '').trim(),
       presetId: json['presetId'] as String? ?? kAiCustomPresetId,
       name: json['name'] as String? ?? '',
       baseUrl: url,
-      apiKey: apiKey,
+      apiKeys: _decodeApiKeys(json),
       model: json['model'] as String? ?? '',
       protocol: AiWireProtocol.fromStorageKey(json['protocol'] as String?),
       reasoningEffort: AiReasoningEffort.fromStorageKey(
@@ -313,6 +402,16 @@ class AiProviderConfig {
       ),
       enabled: json['enabled'] as bool? ?? true,
       allowInsecureHttp: json['allowInsecureHttp'] as bool? ?? false,
+      requestsPerMinute: math.max(0, (json['rpm'] as num?)?.toInt() ?? 0),
+      toolCallingOverride: AiToolCallingOverride.fromStorageKey(
+        json['toolCalling'] as String?,
+      ),
+      pricing: json['pricing'] is Map
+          ? AiModelPricing.fromJson(
+              Map<String, Object?>.from(json['pricing'] as Map),
+            )
+          : const AiModelPricing(),
+      acceptsImages: json['images'] as bool? ?? false,
     );
   }
 
@@ -325,7 +424,25 @@ class AiProviderConfig {
 
   final String name;
   final Uri baseUrl;
-  final String apiKey;
+
+  /// 这家的全部 key（有序，含停用的与空白草稿）。
+  final List<AiApiKey> apiKeys;
+
+  /// 参与请求的 key（启用且非空），按用户排的顺序，值已去空白。
+  List<String> get activeApiKeys => <String>[
+    for (final AiApiKey key in apiKeys)
+      if (key.isActive) key.trimmed,
+  ];
+
+  /// 第一把参与请求的 key；一把都没有时为空串。
+  ///
+  /// 单 key 时代的读口（服务端配置、旧调用方）。多 key 轮换只在调用层
+  /// （`AiChatClient`）里做，别处要「这家能不能发请求」一律问 [isUsable]。
+  String get apiKey {
+    final List<String> active = activeApiKeys;
+    return active.isEmpty ? '' : active.first;
+  }
+
   final String model;
   final AiWireProtocol protocol;
   final AiReasoningEffort reasoningEffort;
@@ -334,6 +451,30 @@ class AiProviderConfig {
   /// 明文 HTTP 的显式放行。本地推理服务（Ollama / LM Studio）跑在
   /// `http://localhost`，不给这个开关等于把本地模型挡在门外。
   final bool allowInsecureHttp;
+
+  /// 每分钟最多发几次请求（这家所有功能合计，见 `AiRateLimiter`）；0 = 不限。
+  /// 免费档 / 低档 API 有速率上限，超了会被 429 拦下、整批作废。
+  final int requestsPerMinute;
+
+  /// 用户对原生 tool calling 的覆盖；判据一律问 [supportsToolCalling]。
+  final AiToolCallingOverride toolCallingOverride;
+
+  /// 用户自填的模型单价（AI 助手按它累计对话费用）；没填 = 只显示 token 数。
+  final AiModelPricing pricing;
+
+  /// 这家实际走不走原生 tool calling：用户强制开 / 关优先，否则跟随预设
+  /// （[AiProviderPreset.supportsTools]）。presetId 认不出（来自更新的版本）时
+  /// 按不支持处理——宁可降级成 JSON 动作，也不往不认识 `tools` 的端点上发。
+  bool get supportsToolCalling => switch (toolCallingOverride) {
+    AiToolCallingOverride.forceOn => true,
+    AiToolCallingOverride.forceOff => false,
+    AiToolCallingOverride.followPreset => preset?.supportsTools ?? false,
+  };
+
+  /// 用户标明所配模型能收图（视觉模型）。能不能收图取决于具体模型而不是哪一家，
+  /// 预设猜不准，所以只认用户勾选；默认关——往纯文本模型发图会被直接拒。
+  /// AI 助手据此决定「附上屏幕」时要不要连截图一起发。
+  final bool acceptsImages;
 
   String get displayName => name.trim().isNotEmpty ? name.trim() : baseUrl.host;
 
@@ -349,32 +490,49 @@ class AiProviderConfig {
       return false;
     }
     final bool needsKey = preset?.requiresApiKey ?? true;
-    return !needsKey || apiKey.trim().isNotEmpty;
+    return !needsKey || activeApiKeys.isNotEmpty;
   }
 
+  /// [apiKey] 是单 key 时代的写口：给了就把整份列表换成这一把（空串 = 清空）；
+  /// 与 [apiKeys] 二选一。
   AiProviderConfig copyWith({
     String? name,
     Uri? baseUrl,
     String? apiKey,
+    List<AiApiKey>? apiKeys,
     String? model,
     AiWireProtocol? protocol,
     AiReasoningEffort? reasoningEffort,
     bool? enabled,
     bool? allowInsecureHttp,
+    int? requestsPerMinute,
+    AiToolCallingOverride? toolCallingOverride,
+    AiModelPricing? pricing,
+    bool? acceptsImages,
   }) => AiProviderConfig(
     id: id,
     presetId: presetId,
     name: name ?? this.name,
     baseUrl: baseUrl ?? this.baseUrl,
-    apiKey: apiKey ?? this.apiKey,
+    apiKeys:
+        apiKeys ??
+        (apiKey == null
+            ? this.apiKeys
+            : <AiApiKey>[if (apiKey.isNotEmpty) AiApiKey(apiKey)]),
     model: model ?? this.model,
     protocol: protocol ?? this.protocol,
     reasoningEffort: reasoningEffort ?? this.reasoningEffort,
     enabled: enabled ?? this.enabled,
     allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
+    requestsPerMinute: requestsPerMinute ?? this.requestsPerMinute,
+    toolCallingOverride: toolCallingOverride ?? this.toolCallingOverride,
+    pricing: pricing ?? this.pricing,
+    acceptsImages: acceptsImages ?? this.acceptsImages,
   );
 
-  /// API Key 在 JSON 里 base64 存放。
+  /// API Key 在 JSON 里 base64 存放：`apiKeys` 是完整有序列表（空白草稿不落盘），
+  /// 另把第一把参与请求的 key 照旧写进单 key 时代的 `apiKeyB64`——降级回旧版本时
+  /// 旧解码器只认那一个字段，这样旧版至少还能用第一把 key 继续工作。
   ///
   /// 说清楚：这是**遮蔽不是加密**——能解码回来的东西挡不住拿到设备的人。本仓没有
   /// secure storage，既有做法（OPDS 密码、同步服务器密码）同样是 base64。真正被
@@ -385,14 +543,72 @@ class AiProviderConfig {
     'presetId': presetId,
     'name': name,
     'baseUrl': baseUrl.toString(),
-    if (apiKey.isNotEmpty) 'apiKeyB64': base64Encode(utf8.encode(apiKey)),
+    if (apiKey.isNotEmpty) 'apiKeyB64': _b64(apiKey),
+    if (apiKeys.any((AiApiKey k) => k.trimmed.isNotEmpty))
+      'apiKeys': <Map<String, Object?>>[
+        for (final AiApiKey key in apiKeys)
+          if (key.trimmed.isNotEmpty)
+            <String, Object?>{
+              'keyB64': _b64(key.trimmed),
+              if (!key.enabled) 'enabled': false,
+            },
+      ],
     'model': model,
     'protocol': protocol.storageKey,
     if (reasoningEffort != AiReasoningEffort.none)
       'reasoningEffort': reasoningEffort.storageKey,
     'enabled': enabled,
     if (allowInsecureHttp) 'allowInsecureHttp': true,
+    if (requestsPerMinute > 0) 'rpm': requestsPerMinute,
+    // 跟随预设时不落盘：旧数据缺字段 = 跟随预设，两者同一口径。
+    if (toolCallingOverride != AiToolCallingOverride.followPreset)
+      'toolCalling': toolCallingOverride.storageKey,
+    if (!pricing.isEmpty) 'pricing': pricing.toJson(),
+    if (acceptsImages) 'images': true,
   };
+}
+
+String _b64(String value) => base64Encode(utf8.encode(value));
+
+String _unb64(Object? raw) {
+  if (raw is! String || raw.isEmpty) {
+    return '';
+  }
+  try {
+    return utf8.decode(base64Decode(raw));
+  } on FormatException {
+    return '';
+  }
+}
+
+/// 读 key 列表：有 `apiKeys` 就以它为准；没有（单 key 时代写下的记录）就把
+/// `apiKeyB64` 无损迁移成一元素列表。同值的 key 只留第一把（重复的 key 轮换时
+/// 只会把同一个失败多吃一遍）。
+List<AiApiKey> _decodeApiKeys(Map<String, Object?> json) {
+  final Object? list = json['apiKeys'];
+  final List<AiApiKey> keys = <AiApiKey>[];
+  if (list is List) {
+    for (final Object? entry in list) {
+      if (entry is! Map) {
+        continue;
+      }
+      final String value = _unb64(entry['keyB64']).trim();
+      if (value.isEmpty) {
+        continue;
+      }
+      keys.add(AiApiKey(value, enabled: entry['enabled'] as bool? ?? true));
+    }
+  } else {
+    final String legacy = _unb64(json['apiKeyB64']);
+    if (legacy.isNotEmpty) {
+      keys.add(AiApiKey(legacy));
+    }
+  }
+  final Set<String> seen = <String>{};
+  return <AiApiKey>[
+    for (final AiApiKey key in keys)
+      if (seen.add(key.trimmed)) key,
+  ];
 }
 
 /// 整份清单编码成一个偏好值。

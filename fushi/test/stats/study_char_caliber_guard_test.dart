@@ -33,36 +33,80 @@ void main() {
   // 每个域一条，路径写死是**故意**的：这四条就是全部的记账入口，新增第五条属于设计
   // 变更，应该由改动者显式把它加进这张表（顺带被 B 组的全仓兜底逼着表态）。
   // 文件不存在直接红（重命名不许静默放行）。
-  const Map<String, String> studyCharWritePaths = <String, String>{
-    'EPUB 阅读器（每章 characters）': '../packages/fushi_engine/lib/epub/epub_book.dart',
-    '漫画（每页 charsRead）': 'lib/src/media/manga/manga_reading_stats.dart',
-    '视频字幕（StudyClock.addChars）': 'lib/src/media/video/video_watch_tracker.dart',
-    'galgame（活动累加器）': 'lib/src/mining/galgame_char_count.dart',
-  };
+  //
+  // 值是（路径，该路径必须出现的同源计数调用）。EPUB 的每章字数在原生章节扫描里算
+  // （`ffc_parse_epub_chapter` 的 `studyChars`，与 `countStudyChars` 背后的
+  // `ffc_parse_study_chars_utf16` 是同一个 `StudyCharState` 内核，组末另有断言钉住），
+  // 所以它认的是扫描结果字段，不是 Dart 函数名。
+  const Map<String, (String, String)> studyCharWritePaths =
+      <String, (String, String)>{
+        'EPUB 阅读器（每章 characters）': (
+          '../packages/fushi_engine/lib/epub/epub_book.dart',
+          '.studyChars!',
+        ),
+        '漫画（每页 charsRead）': (
+          'lib/src/media/manga/manga_reading_stats.dart',
+          'countStudyChars(',
+        ),
+        '视频字幕（StudyClock.addChars）': (
+          'lib/src/media/video/video_watch_tracker.dart',
+          'countStudyChars(',
+        ),
+        'galgame（活动累加器）': (
+          'lib/src/mining/galgame_char_count.dart',
+          'countStudyChars(',
+        ),
+      };
 
   group('A. 四条学习字数写入路径同源', () {
-    studyCharWritePaths.forEach((String domain, String path) {
+    studyCharWritePaths.forEach((String domain, (String, String) entry) {
+      final (String path, String sameSourceCall) = entry;
       test('[$domain] 走 countStudyChars，且自己不再裸数码点', () {
         final File f = File(path);
-        expect(f.existsSync(), isTrue,
-            reason: '$path 不在了。学习字数写入路径重命名/删除必须同步改这张表，'
-                '否则守卫会静默退化成零断言。');
+        expect(
+          f.existsSync(),
+          isTrue,
+          reason:
+              '$path 不在了。学习字数写入路径重命名/删除必须同步改这张表，'
+              '否则守卫会静默退化成零断言。',
+        );
         // 剥注释：video_watch_tracker.dart 的注释里就写着「此前是裸 runes.length」，
         // 不剥的话反向断言会被自己的迁移说明命中。
         final String src = maskComments(f.readAsStringSync());
-        expect(src.contains('countStudyChars('), isTrue,
-            reason: '$path 不再调 countStudyChars —— $domain 这一条又自己算了一套口径。\n'
-                '四个域的字数进的是同一列（study_segments.chars），口径不同源时'
-                '跨媒体的每日目标与热力图本身就不成立。');
+        expect(
+          src.contains(sameSourceCall),
+          isTrue,
+          reason:
+              '$path 不再调 $sameSourceCall —— $domain 这一条又自己算了一套口径。\n'
+              '四个域的字数进的是同一列（study_segments.chars），口径不同源时'
+              '跨媒体的每日目标与热力图本身就不成立。',
+        );
         for (final String naked in const <String>[
           '.runes.length',
           '.characters.length',
         ]) {
-          expect(src.contains(naked), isFalse,
-              reason: '$path 里出现了 $naked —— 学习字数写入路径不许裸数码点/字素，'
-                  '一律走 countStudyChars（../packages/fushi_engine/lib/stats/study_char_count.dart）。');
+          expect(
+            src.contains(naked),
+            isFalse,
+            reason:
+                '$path 里出现了 $naked —— 学习字数写入路径不许裸数码点/字素，'
+                '一律走 countStudyChars（../packages/fushi_engine/lib/stats/study_char_count.dart）。',
+          );
         }
       });
+    });
+
+    test('[EPUB 阅读器] 原生章节扫描的字数与 countStudyChars 同一个内核', () {
+      // countStudyChars → ffc_parse_study_chars_utf16 → StudyCharState（parse.rs）；
+      // 章节扫描必须用同一个状态机数纯文本，不许在 epub.rs 里另写一套判定。
+      const String scan = '../native/fushi_compute/src/parse/epub.rs';
+      final String src = File(scan).readAsStringSync();
+      expect(
+        src.contains('StudyCharState::default()') &&
+            src.contains('add_utf16(&pt.text)'),
+        isTrue,
+        reason: '$scan 的每章字数不再走 StudyCharState —— 与其它三个域口径不同源。',
+      );
     });
   });
 
@@ -76,18 +120,41 @@ void main() {
       // 路径（正斜杠、相对本测试的扫描根）→ 允许出现的**次数**。数量也钉住：同一文件
       // 里多冒出一处同样要表态，这正是「漏改一个」的形状。
       const Map<String, int> allowed = <String, int>{
-        // OCR 字符词表校验：只对单个 Unicode 字母/数字施加重复生成上限，非学习计数。
-        'packages/fushi_engine/lib/ocr/baberu_ocr_recognizer.dart': 1,
         // BUG-2767 切片 OCR 合并：重叠区重复行去重时按文本码点长度排序（长行先
         // 占位、短行若被包含就丢），比较器两侧各一处，是排序键不是学习计数。
         'packages/fushi_engine/lib/ocr/ocr_page_tiling.dart': 2,
+        // AI 整理库：新合集名的长度上限（80 个码点），是校验判据不是学习计数。
+        'packages/fushi_engine/lib/media/collections/library_organize/library_organize_plan.dart':
+            1,
+        // PDF 文字层：一页文字层字素数是否达到「整页正文就是文字层」门槛
+        // （kPdfTextLayerCompletePageMinChars），是覆盖判据不是学习计数。
+        'packages/fushi_engine/lib/media/manga/manga_pdf_text_layer.dart': 1,
+        // 作品图谱 L5 人物同名建议：归一化后的名字短于 2 个码点不出建议键（单字名
+        // 撞名太多），是匹配判据不是学习计数。
+        'packages/fushi_engine/lib/media/people/person_identity.dart': 1,
+        // 视频字幕 AI 校对（spec 2026-10-19）：S4 片假名名字编辑距离 1 的长度比较
+        // （与基准 consistency.py 的 len() 同口径），是匹配判据不是学习计数。
+        'packages/fushi_engine/lib/media/video/subtitle/asr_proofread/subtitle_consistency_pass.dart':
+            1,
+        // 专名表身份校验：人名分段长度、「≥2 字才算听到」「≥3 字高频词」的门槛，
+        // 是校验判据不是学习计数。
+        'packages/fushi_engine/lib/media/video/subtitle/asr_proofread/subtitle_glossary_builder.dart':
+            4,
+        // 校对费用预估：按提示词 / 回复字符数估 token，是费用估算不是学习计数。
+        'packages/fushi_engine/lib/media/video/subtitle/asr_proofread/video_subtitle_pipeline.dart':
+            2,
         // 排行榜昵称长度校验（与服务端「1–24 个码点」同口径），是表单校验不是记账。
-        'lib/src/pages/implementations/leaderboard/leaderboard_account_page.dart': 1,
-        'lib/src/pages/implementations/leaderboard/leaderboard_sign_in_page.dart': 1,
+        'lib/src/pages/implementations/leaderboard/leaderboard_account_page.dart':
+            1,
+        'lib/src/pages/implementations/leaderboard/leaderboard_sign_in_page.dart':
+            1,
         // galgame 校准 OCR：判断一个 CTC token / 墨迹单元是否恰好是单个码点（能否
         // 与源文本逐字对齐），是对齐校验不是记账。
         'lib/src/ocr/gal_lookup_calibration_ocr.dart': 1,
         'lib/src/ocr/gal_lookup_ocr_ink_geometry.dart': 1,
+        // 媒体库全景：「像一个日语单词」的长度上限（≤12 码点）与展示词截断（16 码点），
+        // 是展示判据不是学习计数。
+        'lib/src/media/panorama/panorama_library.dart': 2,
         // 超时兜底日志里报文本长度，不进统计。
         'lib/src/media/audiobook/audiobook_clip_text_render.dart': 1,
         // 有声书片段排版：决定字号/换行的文本长度，不进统计。
@@ -97,6 +164,10 @@ void main() {
         // 从上面那个面板抽出来的共享整句渲染器：字素数是**键盘光标在句内左右移动
         // 的边界**（_handleKey 里 count == 0 就不接键），是导航不是记账。
         'lib/src/media/video/subtitle_transcript_text.dart': 1,
+        // 玻璃输入框的字数计数器（maxLength 显示），是表单 UI 不是记账。
+        'lib/src/utils/components/glass/fushi_glass_inputs.dart': 1,
+        // 源文本条是否被查词高亮完整覆盖：字素坐标范围比较，不写学习统计。
+        'lib/src/utils/components/clipboard_lookup_text_panel.dart': 1,
         // BUG-442：词典查询输入长度上限保护，是校验不是记账。
         'lib/src/models/app_model.dart': 1,
         // galgame 文本线程记忆：按最近预览行码点长度的中位数（典型行长）区分同一
@@ -107,8 +178,9 @@ void main() {
         'lib/src/pages/implementations/video_fushi_page.dart': 1,
         // 词典查词高亮索引带（indexTape）构建时的码点遍历。
         'packages/fushi_dictionary/lib/src/language/language.dart': 1,
-        // 字幕富文本 span 的 grapheme 偏移区间计算。
-        'packages/fushi_audio/lib/src/parsers/subtitle_markup.dart': 1,
+        // 复习卡面点词查词：点击位置的码元偏移折成字素下标（查词高亮定位），以及
+        // 查词串的长度上限（100 字素）保护；是定位 / 校验不是记账。
+        'lib/src/pages/implementations/srs/srs_card_lookup.dart': 2,
       };
 
       final RegExp naked = RegExp(r'\.(runes|characters)\.length\b');
@@ -131,17 +203,22 @@ void main() {
 
       scan(Directory('lib'), '');
       final Directory pkgs = Directory('../packages');
-      expect(pkgs.existsSync(), isTrue,
-          reason: '../packages 不存在——测试的工作目录不是 fushi/，扫描面塌了');
+      expect(
+        pkgs.existsSync(),
+        isTrue,
+        reason: '../packages 不存在——测试的工作目录不是 fushi/，扫描面塌了',
+      );
       for (final FileSystemEntity pkg in pkgs.listSync()) {
         if (pkg is! Directory) continue;
         final String name = pkg.path.replaceAll(r'\', '/').split('/').last;
         scan(Directory('${pkg.path}/lib'), 'packages/$name/');
       }
-      expectScanScale(scanned,
-          what: 'fushi/lib + packages/*/lib 下的 .dart',
-          atLeast: 900,
-          measured: 1210);
+      expectScanScale(
+        scanned,
+        what: 'fushi/lib + packages/*/lib 下的 .dart',
+        atLeast: 900,
+        measured: 1210,
+      );
 
       final List<String> offenders = <String>[];
       found.forEach((String path, int n) {
@@ -159,13 +236,17 @@ void main() {
           offenders.add('$path: 白名单登记了但一处都没扫到（白名单该清了）');
         }
       }
-      expect(offenders, isEmpty,
-          reason: '`.runes.length` / `.characters.length` 的白名单对不上：\n'
-              '${offenders.join('\n')}\n\n'
-              '如果它是**学习字数**，改用 countStudyChars'
-              '（../packages/fushi_engine/lib/stats/study_char_count.dart）；\n'
-              '如果它是普通字符串长度（日志/排版/校验/索引），把它登记进本测试的白名单'
-              '并写清用途。');
+      expect(
+        offenders,
+        isEmpty,
+        reason:
+            '`.runes.length` / `.characters.length` 的白名单对不上：\n'
+            '${offenders.join('\n')}\n\n'
+            '如果它是**学习字数**，改用 countStudyChars'
+            '（../packages/fushi_engine/lib/stats/study_char_count.dart）；\n'
+            '如果它是普通字符串长度（日志/排版/校验/索引），把它登记进本测试的白名单'
+            '并写清用途。',
+      );
     });
   });
 
@@ -192,31 +273,31 @@ void main() {
   const Map<String, List<String>> countingFns = <String, List<String>>{
     '$paginationPath|countChars: function(text) {': <String>['fushiStudyUnits'],
     '$paginationPath|countCharsBeforeViewport: function(': <String>[
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     '$paginationPath|countCharsBeforeViewportPaged: function(': <String>[
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     // 分页 shell（2512）与连续 shell（3080）各一份，两份都自己数。
     '$paginationPath|getFirstVisibleCharOffset: function() {': <String>[
       'fushiStudyUnits',
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     // 分页版自己数；连续版转发给 collapsedRangeAtCharOffset（下一条已钉）。
     '$paginationPath|scrollToCharOffset: function(': <String>[
       'fushiStudyUnits',
-      'collapsedRangeAtCharOffset'
+      'collapsedRangeAtCharOffset',
     ],
     '$paginationPath|collapsedRangeAtCharOffset: function(': <String>[
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     '$selectionPath|getNormalizedOffset: function(': <String>[
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     // 87 行是真实现；143 行是 ReaderVnContentStream 里的转发。
     '$vnPath|countChars(text) {': <String>[
       'fushiStudyUnits',
-      'textSemantics().countChars'
+      'textSemantics().countChars',
     ],
     '$vnPath|textItems: function() {': <String>['fushiStudyUnits'],
   };
@@ -263,9 +344,13 @@ void main() {
         }
         body.writeln(lines[j]);
       }
-      expect(closed, isTrue,
-          reason: '取不到 `$header` 的函数体收口行（缩进 ${indent.length} 空格）。'
-              '缩进变了就换锚点，别把守卫留在恒不匹配的状态上——那等于零断言。');
+      expect(
+        closed,
+        isTrue,
+        reason:
+            '取不到 `$header` 的函数体收口行（缩进 ${indent.length} 空格）。'
+            '缩进变了就换锚点，别把守卫留在恒不匹配的状态上——那等于零断言。',
+      );
       bodies.add(body.toString());
     }
     return bodies;
@@ -281,25 +366,39 @@ void main() {
         expect(f.existsSync(), isTrue, reason: '$path 不在了');
         // Dart 注释 + 三引号串内的 JS 注释一起掩（等长掩码，下标不漂移）。
         final List<String> bodies = jsFunctionBodies(
-            maskCommentsAndScriptLines(f.readAsStringSync()), header);
-        expect(bodies.length, evidence.length,
-            reason: '$path 里 `$header` 有 ${bodies.length} 份实现，本表登记了 '
-                '${evidence.length} 份。\n'
-                '多出来的那份没被任何断言盯着 —— 这正是「调用点漏改一个」的形状；'
-                '少了则是函数改名/删除，同步改表。');
+          maskCommentsAndScriptLines(f.readAsStringSync()),
+          header,
+        );
+        expect(
+          bodies.length,
+          evidence.length,
+          reason:
+              '$path 里 `$header` 有 ${bodies.length} 份实现，本表登记了 '
+              '${evidence.length} 份。\n'
+              '多出来的那份没被任何断言盯着 —— 这正是「调用点漏改一个」的形状；'
+              '少了则是函数改名/删除，同步改表。',
+        );
         for (int i = 0; i < bodies.length; i++) {
           final String body = bodies[i];
-          expect(body.contains(evidence[i]), isTrue,
-              reason: '$path 的 `$header`（第 ${i + 1} 处）里找不到 '
-                  '`${evidence[i]}`。\n'
-                  '这是**计数/偏移**函数，口径必须与 Dart countStudyChars 同源'
-                  '（自己数就走 window.fushiStudyUnits，转发就转给本表里的另一条）；'
-                  '换回逐码点判据会让 charOffset 用错口径写进 DB —— '
-                  '续读位置静默偏移，不崩不报错。');
-          expect(body.contains('isMatchableChar'), isFalse,
-              reason: '$path 的 `$header`（第 ${i + 1} 处）里出现了 isMatchableChar。\n'
-                  'isMatchableChar 是**有声书 cue 匹配/归一化**的白名单判据，'
-                  '不是学习单位判据；拿它做计数就是「调用点漏改一个」的形状。');
+          expect(
+            body.contains(evidence[i]),
+            isTrue,
+            reason:
+                '$path 的 `$header`（第 ${i + 1} 处）里找不到 '
+                '`${evidence[i]}`。\n'
+                '这是**计数/偏移**函数，口径必须与 Dart countStudyChars 同源'
+                '（自己数就走 window.fushiStudyUnits，转发就转给本表里的另一条）；'
+                '换回逐码点判据会让 charOffset 用错口径写进 DB —— '
+                '续读位置静默偏移，不崩不报错。',
+          );
+          expect(
+            body.contains('isMatchableChar'),
+            isFalse,
+            reason:
+                '$path 的 `$header`（第 ${i + 1} 处）里出现了 isMatchableChar。\n'
+                'isMatchableChar 是**有声书 cue 匹配/归一化**的白名单判据，'
+                '不是学习单位判据；拿它做计数就是「调用点漏改一个」的形状。',
+          );
         }
       });
     });
@@ -311,31 +410,47 @@ void main() {
         final File f = File(path);
         expect(f.existsSync(), isTrue, reason: '$path 不在了');
         final List<String> bodies = jsFunctionBodies(
-            maskCommentsAndScriptLines(f.readAsStringSync()), header);
+          maskCommentsAndScriptLines(f.readAsStringSync()),
+          header,
+        );
         expect(bodies, isNotEmpty, reason: '$path 里找不到 `$header`');
         for (final String body in bodies) {
-          expect(body.contains('isMatchableChar'), isTrue,
-              reason: '$path 的 `$header` 丢了 isMatchableChar。\n'
-                  '这是有声书 cue 与 DOM 文本的**归一化匹配**，口径必须与音频侧的'
-                  'AudioTextNormalizer 一致，不是学习单位口径。');
-          expect(body.contains('fushiStudyUnits'), isFalse,
-              reason: '$path 的 `$header` 改用了 fushiStudyUnits。\n'
-                  '把 cue 匹配也一刀切换成学习单位判据，会让有声书高亮与音频对不上。');
+          expect(
+            body.contains('isMatchableChar'),
+            isTrue,
+            reason:
+                '$path 的 `$header` 丢了 isMatchableChar。\n'
+                '这是有声书 cue 与 DOM 文本的**归一化匹配**，口径必须与音频侧的'
+                'AudioTextNormalizer 一致，不是学习单位口径。',
+          );
+          expect(
+            body.contains('fushiStudyUnits'),
+            isFalse,
+            reason:
+                '$path 的 `$header` 改用了 fushiStudyUnits。\n'
+                '把 cue 匹配也一刀切换成学习单位判据，会让有声书高亮与音频对不上。',
+          );
         }
       });
     }
 
     test('取函数体的锚点自身可信（不会把相邻函数一起吞进来）', () {
-      final String src =
-          maskCommentsAndScriptLines(File(selectionPath).readAsStringSync());
-      final List<String> bodies =
-          jsFunctionBodies(src, 'getNormalizedOffset: function(');
+      final String src = maskCommentsAndScriptLines(
+        File(selectionPath).readAsStringSync(),
+      );
+      final List<String> bodies = jsFunctionBodies(
+        src,
+        'getNormalizedOffset: function(',
+      );
       expect(bodies.length, 1);
       final String body = bodies.single;
       expect(body.contains('fushiStudyUnits.isUnitEnd'), isTrue);
       // 紧邻的下一个函数不得被吞进来——否则「这个函数里有没有 X」的断言就没意义了。
-      expect(body.contains('clearHighlightWrappers: function'), isFalse,
-          reason: '函数体收口失败，把下一个方法也吞进来了');
+      expect(
+        body.contains('clearHighlightWrappers: function'),
+        isFalse,
+        reason: '函数体收口失败，把下一个方法也吞进来了',
+      );
     });
   });
 }

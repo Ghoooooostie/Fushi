@@ -1,14 +1,26 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart' show ValueNotifier;
+import 'package:fushi/src/models/preference_keys.dart'
+    show kAnkiSettingsPrefKey;
+import 'package:fushi/src/web_browser/web_browser_prefs.dart';
 import 'package:fushi/src/models/preferences_repository.dart'
-    show kDownloadExecutionHostPrefKey, kGameStreamRemoteLaunchPrefKey;
+    show
+        kDownloadExecutionHostPrefKey,
+        kFloatingLyricWindowRectPrefKey,
+        kGameStreamLookupLayoutPrefKey,
+        kGameStreamRemoteLaunchPrefKey,
+        PreferencesRepository;
+import 'package:fushi_engine/media/torrent/bt_site_legacy_migration.dart'
+    show kBtSitesLegacyMigrationPref;
 import 'package:fushi_engine/sync/fushi_sync_server.dart';
 import 'package:fushi/src/media/video/media_server/media_server_config.dart';
 import 'package:fushi/src/media/video/media_server/media_server_registry.dart';
 import 'package:fushi/src/sync/jellyfin_video_client.dart'
     show JellyfinServerConfig, JellyfinVideoClient;
 import 'package:fushi/src/sync/sync_backend.dart';
+import 'package:fushi/src/sync/interconnect_peer_addresses.dart'
+    show applyIssuedInterconnectToken;
 import 'package:fushi_engine/sync/tls/fushi_pinning_http.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_engine/sync/interconnect_host_addresses.dart'
@@ -19,11 +31,15 @@ import 'package:fushi_engine/sync/interconnect_p2p.dart'
         kInterconnectP2pRelayUrlsPref,
         kInterconnectP2pSecretPref;
 import 'package:fushi_engine/sync/interconnect_transcode_prefs.dart';
+import 'package:fushi_engine/sync/pairing/interconnect_device_key.dart';
 import 'package:fushi_engine/sync/sync_channel_scope.dart';
 import 'package:fushi_engine/sync/collection_sync_baseline.dart';
-export 'package:fushi_engine/sync/sync_channel_scope.dart' show SyncChannelScope;
+import 'package:fushi_engine/sync/aggregate_sync_service.dart'
+    show kSyncWebHistoryPrefKey, readWebHistorySyncEnabled;
+export 'package:fushi_engine/sync/sync_channel_scope.dart'
+    show SyncChannelScope;
 
-/// 触达一台 Hibiki 同步服务器的一个候选地址。
+/// 触达一台 Fushi 同步服务器的一个候选地址。
 ///
 /// 同一台服务器通常可经多条路由触达（局域网、外网），按列表顺序尝试、第一个
 /// 可达者胜出。
@@ -82,26 +98,26 @@ class FushiClientUrl {
   final String? addressKind;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'url': url,
-        'enabled': enabled,
-        if (fingerprintSha256 != null) 'fingerprintSha256': fingerprintSha256,
-        if (deviceName != null) 'deviceName': deviceName,
-        if (token != null && token!.isNotEmpty) 'token': token,
-        if (hostId != null) 'hostId': hostId,
-        if (learned) 'learned': true,
-        if (addressKind != null) 'kind': addressKind,
-      };
+    'url': url,
+    'enabled': enabled,
+    if (fingerprintSha256 != null) 'fingerprintSha256': fingerprintSha256,
+    if (deviceName != null) 'deviceName': deviceName,
+    if (token != null && token!.isNotEmpty) 'token': token,
+    if (hostId != null) 'hostId': hostId,
+    if (learned) 'learned': true,
+    if (addressKind != null) 'kind': addressKind,
+  };
 
   factory FushiClientUrl.fromJson(Map<String, dynamic> json) => FushiClientUrl(
-        url: json['url'] as String,
-        enabled: json['enabled'] as bool? ?? true,
-        fingerprintSha256: json['fingerprintSha256'] as String?,
-        deviceName: json['deviceName'] as String?,
-        token: json['token'] as String?,
-        hostId: json['hostId'] as String?,
-        learned: json['learned'] as bool? ?? false,
-        addressKind: json['kind'] as String?,
-      );
+    url: json['url'] as String,
+    enabled: json['enabled'] as bool? ?? true,
+    fingerprintSha256: json['fingerprintSha256'] as String?,
+    deviceName: json['deviceName'] as String?,
+    token: json['token'] as String?,
+    hostId: json['hostId'] as String?,
+    learned: json['learned'] as bool? ?? false,
+    addressKind: json['kind'] as String?,
+  );
 
   /// 复制并覆盖部分字段（不可变更新）。`null` 入参保留原值；要显式清空请直接构造。
   FushiClientUrl copyWith({
@@ -113,17 +129,16 @@ class FushiClientUrl {
     String? hostId,
     bool? learned,
     String? addressKind,
-  }) =>
-      FushiClientUrl(
-        url: url ?? this.url,
-        enabled: enabled ?? this.enabled,
-        fingerprintSha256: fingerprintSha256 ?? this.fingerprintSha256,
-        deviceName: deviceName ?? this.deviceName,
-        token: token ?? this.token,
-        hostId: hostId ?? this.hostId,
-        learned: learned ?? this.learned,
-        addressKind: addressKind ?? this.addressKind,
-      );
+  }) => FushiClientUrl(
+    url: url ?? this.url,
+    enabled: enabled ?? this.enabled,
+    fingerprintSha256: fingerprintSha256 ?? this.fingerprintSha256,
+    deviceName: deviceName ?? this.deviceName,
+    token: token ?? this.token,
+    hostId: hostId ?? this.hostId,
+    learned: learned ?? this.learned,
+    addressKind: addressKind ?? this.addressKind,
+  );
 }
 
 /// BUG-1550：解析某个候选地址该用哪份凭据——地址行自带的 [FushiClientUrl.token]
@@ -160,7 +175,6 @@ class FushiFingerprintMismatchException implements Exception {
       'incoming=$incomingFingerprint)';
 }
 
-
 /// 同步配置和缓存的持久化层（基于 Preferences 表）。
 ///
 /// 桌面 OAuth 凭据（refresh token, client secret）存储在用户级 SQLite 数据库中，
@@ -187,6 +201,12 @@ class SyncRepository {
   static const _keySyncAudioBookFiles = 'sync_audiobook_files_enabled';
   static const _keySyncVideoFiles = 'sync_video_files_enabled';
   static const _keyAutoSync = 'sync_auto_enabled';
+  // 互联通道专属的自动同步开关（反馈 5nWEirdCs2）；迁移规则见
+  // [isInterconnectAutoSyncEnabled]。与 [_keyAutoSync] 同为行为开关，随备份恢复。
+  static const _keyInterconnectAutoSync = 'interconnect_sync_auto';
+  // 复习（SRS）数据的自动同步开关（反馈 VNz9dsLeIy，默认开）；见 [isSrsAutoSyncEnabled]。
+  // 行为开关，随备份恢复（与上面两个自动同步开关同类）。
+  static const _keySrsAutoSync = 'srs_sync_auto';
   static const _keyLastSyncMs = 'sync_last_sync_ms';
   static const _keyCollectionsBaselineMs = 'sync_collections_baseline_ms';
   // 删除墓碑消费的因果基线：描述「本设备见过远端删除标记到什么时刻」。远端墓碑
@@ -196,8 +216,7 @@ class SyncRepository {
       'sync_deletion_tombstones_baseline_ms';
   // 7c 视频刮削元数据增量拉取基线：本设备从该通道见过的最大 host updatedAt。
   // 设备本地：随备份到新设备会让它以为已见过、永远不全量拉。
-  static const _keyVideoMetadataSyncSinceMs =
-      'sync_video_metadata_since_ms';
+  static const _keyVideoMetadataSyncSinceMs = 'sync_video_metadata_since_ms';
   // 删除墓碑**推送**的因果基线（互联通道专用，与上面的消费基线镜像对称）：描述
   // 「本设备已把删除推给对端 host 到什么时刻」。deletedAt 晚于它的墓碑才需要推。
   //
@@ -216,6 +235,9 @@ class SyncRepository {
   // ttu-reader-data + 完整 drive scope（[GoogleDriveSyncSpace]）。属设备本地（改的是
   // 本机 Drive 存储空间/scope），不随备份导入覆盖。
   static const _keySyncContent = 'sync_content_enabled';
+  // 「上传漫画文件」（所有者 2026-10-21：书籍和漫画分开）。从未设置过时继承同通道
+  // 「上传书籍文件」的当前值，升级后行为不变；设置过就按自己的值。
+  static const _keySyncMangaContent = 'sync_manga_content_enabled';
   // BUG-988：互联通道专属的「上传内容到互联对端」开关，独立于云备份的
   // sync_*_enabled（那套只管云通道）。互联解耦(PR#223)后互联通道曾复用云备份的
   // 共享开关，用户失去「只对互联单独控制上不上传」的能力；这几个键把互联通道的内容
@@ -223,6 +245,10 @@ class SyncRepository {
   // 词典原本也有一个（`interconnect_sync_dictionary`），BUG-2762 删掉了：互联词典只由
   // 设置页的显式上传 / 下载动作搬，库里残留的旧行不再有读取方。
   static const _keyInterconnectSyncContent = 'interconnect_sync_content';
+  // 互联通道的「上传漫画文件」，继承规则同 [_keySyncMangaContent]（继承的是
+  // [_keyInterconnectSyncContent]）。
+  static const _keyInterconnectSyncMangaContent =
+      'interconnect_sync_manga_content';
   static const _keyInterconnectSyncAudioBookFiles =
       'interconnect_sync_audiobook_files';
   static const _keyInterconnectSyncVideoFiles = 'interconnect_sync_video_files';
@@ -231,6 +257,36 @@ class SyncRepository {
   // （BUG-988 立过的规矩），出站也一样：整份 Profile 比四个内容上传开关更敏感。
   static const _keyInterconnectProfileTransfer =
       'interconnect_profile_transfer';
+  // 「允许已配对设备自动登录我的 Fushi 账户」的 **host 侧**开关（所有者 2026-10-16 拍板：
+  // 默认开——已配对本身就是信任凭据）。关掉时 `/api/interconnect/leaderboard-link` 403。
+  // 对端只交来它自己的公钥，本机私钥 / 恢复码从不外传。
+  static const _keyInterconnectLeaderboardLinkHost =
+      'interconnect_leaderboard_link_host';
+  // **client 侧**开关「跟随已配对设备自动登录」（默认开）：本机没有 Fushi 账户、且连上已
+  // 登录账户的已配对 host 时，后台自动把本机新生成的设备钥匙挂到同一账户。
+  static const _keyLeaderboardFollowPairedLogin =
+      'leaderboard_follow_paired_login';
+  // host 侧「我的设备」标记（所有者 2026-10-16 拍板）：被标记的已配对 peer 才能跟随本机
+  // 账户自动登录。JSON 字符串数组，元素是 `fushi_paired_peers.peerId`。每次（重新）配对
+  // 落库都按审批时的选择**显式**重写这台 peer 的标记（选「仅互联」/ 扫码票据配对 = 去掉），
+  // 吊销时删掉——所以残留在这里的旧 peerId 永远碰不到一台没经过本次审批的 peer。升级前
+  // 配对过的 peer 不在集合里 = 「仅互联」，不追溯授权。
+  static const _keyInterconnectOwnerDevicePeers =
+      'interconnect_owner_device_peers';
+  // host 侧：已配对 peer 在配对时**验签通过**的互联设备公钥指纹（JSON 对象
+  // `{peerId: fingerprint}`，见 `interconnect_device_key.dart`）。「我的设备」资格只给
+  // 出现在这里的 peer——配对里自报的 deviceId 谁都能冒报，设备私钥签名冒不了（PR #2258
+  // 审查）。每次（重新）配对按本次是否验签通过显式重写，吊销时删掉。设备本地。
+  static const _keyInterconnectPeerDeviceKeys = 'interconnect_peer_device_keys';
+  // client 侧：本机互联设备私钥（base64url P-256 标量）。配对时签 host 下发的会话
+  // nonce，证明「这个 deviceId 真是我」。设备本地 + 名字命中凭据红线（`private_key`），
+  // 不进备份 / Profile 快照 / 导出；私钥外带 = 两台设备共用一个身份。
+  static const _keyInterconnectDevicePrivateKey =
+      'sync_interconnect_device_private_key';
+  // 互联「远程更新本机」的 **host 侧**开关（反馈 Pp8XPyve0N）：允许已配对设备查看并
+  // 触发本机 app 更新。默认 false —— 让别的设备在本机下载安装可执行文件，必须是主机
+  // 主人的显式意愿（Never break userspace：升级后什么都不会自己发生）。
+  static const _keyInterconnectRemoteUpdate = 'interconnect_remote_update';
   // 互联通道专属的「共享统计 / 共享收藏夹」开关。此前互联的聚合同步（统计 + 收藏
   // 词句）无条件复用云备份的 sync_stats_enabled，用户在互联页既看不到这两类数据
   // 正在跨设备流动，也没法只对互联单独关掉——与 BUG-988 拆四个上传开关时修掉的
@@ -263,9 +319,10 @@ class SyncRepository {
   // 故读写一律带 [SyncChannelScope]。
 
   Future<String?> getRootFolderId(SyncChannelScope scope) async {
-    final row = await (_db.select(_db.preferences)
-          ..where((t) => t.key.equals(scope.key(_keyRootFolderId))))
-        .getSingleOrNull();
+    final row =
+        await (_db.select(_db.preferences)
+              ..where((t) => t.key.equals(scope.key(_keyRootFolderId))))
+            .getSingleOrNull();
     return row?.value;
   }
 
@@ -275,34 +332,45 @@ class SyncRepository {
       await (_db.delete(_db.preferences)..where((t) => t.key.equals(key))).go();
       return;
     }
-    await _db.into(_db.preferences).insertOnConflictUpdate(
+    await _db
+        .into(_db.preferences)
+        .insertOnConflictUpdate(
           PreferencesCompanion.insert(key: key, value: id),
         );
   }
 
   Future<Map<String, String>> getFolderCache(SyncChannelScope scope) async {
-    final row = await (_db.select(_db.preferences)
-          ..where((t) => t.key.equals(scope.key(_keyFolderCache))))
-        .getSingleOrNull();
+    final row =
+        await (_db.select(_db.preferences)
+              ..where((t) => t.key.equals(scope.key(_keyFolderCache))))
+            .getSingleOrNull();
     if (row == null) return {};
     return Map<String, String>.from(
-        jsonDecode(row.value) as Map<String, dynamic>);
+      jsonDecode(row.value) as Map<String, dynamic>,
+    );
   }
 
   Future<void> setFolderCache(
-      SyncChannelScope scope, Map<String, String> cache) async {
-    await _db.into(_db.preferences).insertOnConflictUpdate(
+    SyncChannelScope scope,
+    Map<String, String> cache,
+  ) async {
+    await _db
+        .into(_db.preferences)
+        .insertOnConflictUpdate(
           PreferencesCompanion.insert(
-              key: scope.key(_keyFolderCache), value: jsonEncode(cache)),
+            key: scope.key(_keyFolderCache),
+            value: jsonEncode(cache),
+          ),
         );
   }
 
   Future<void> clearFolderCache(SyncChannelScope scope) async {
-    await (_db.delete(_db.preferences)
-          ..where((t) => t.key.isIn(<String>[
-                scope.key(_keyRootFolderId),
-                scope.key(_keyFolderCache),
-              ])))
+    await (_db.delete(_db.preferences)..where(
+          (t) => t.key.isIn(<String>[
+            scope.key(_keyRootFolderId),
+            scope.key(_keyFolderCache),
+          ]),
+        ))
         .go();
   }
 
@@ -334,9 +402,9 @@ class SyncRepository {
   ///
   /// 幂等：键已不存在时是 no-op。
   Future<void> migrateFolderCacheToPerChannel() async {
-    await (_db.delete(_db.preferences)
-          ..where(
-              (t) => t.key.isIn(<String>[_keyRootFolderId, _keyFolderCache])))
+    await (_db.delete(_db.preferences)..where(
+          (t) => t.key.isIn(<String>[_keyRootFolderId, _keyFolderCache]),
+        ))
         .go();
   }
 
@@ -378,10 +446,56 @@ class SyncRepository {
   Future<void> setSyncVideoFilesEnabled(bool v) =>
       _db.setPrefTyped<bool>(_keySyncVideoFiles, v);
 
+  /// **云同步通道**的自动同步开关（默认关：云盘流量 / 配额由用户显式 opt-in）。
+  ///
+  /// 反馈 5nWEirdCs2 起它只管云通道；互联通道读自己的
+  /// [isInterconnectAutoSyncEnabled]。
   Future<bool> isAutoSyncEnabled() =>
       _db.getPrefTyped<bool>(_keyAutoSync, false);
-  Future<void> setAutoSyncEnabled(bool v) =>
-      _db.setPrefTyped<bool>(_keyAutoSync, v);
+
+  /// 写云通道开关前先把互联开关落成显式值（[isInterconnectAutoSyncEnabled] 的
+  /// 一次性迁移）：否则一个从没碰过两个开关的用户此刻关掉云同步，互联开关的「继承
+  /// 旧值」判据就会把这次写入当成历史意愿，把互联也跟着关掉——两个开关从此不再独立。
+  Future<void> setAutoSyncEnabled(bool v) async {
+    await isInterconnectAutoSyncEnabled();
+    await _db.setPrefTyped<bool>(_keyAutoSync, v);
+  }
+
+  /// **互联通道**的自动同步开关（反馈 5nWEirdCs2）。默认开：互联页向用户承诺统计 /
+  /// 收藏「与已配对设备双向合并、默认开启」，而合并只发生在同步轮次里；互联通道的
+  /// 重内容上传开关又全默认关，自动轮次只搬进度、统计、收藏、合集这类轻量数据。
+  ///
+  /// 迁移（只迁一次，读即落盘）：本键缺行时按旧的全局开关 [_keyAutoSync]
+  /// （拆开关前它同时管两条通道）**是否存在**决定——
+  /// - 旧键缺行 = 用户从没动过自动同步 → 取新默认 true；
+  /// - 旧键有行 = 用户显式设过 → 继承它的值（关过的老用户升级后不被静默打开）。
+  ///
+  /// 判据只看「偏好行是否存在」，不看值是否等于默认。结论当场写进本键，此后旧键再怎么
+  /// 写（用户只想关云同步）都不再影响互联；[setAutoSyncEnabled] 写旧键前也先调本方法
+  /// 落盘，堵住「迁移还没发生就先写了旧键」的窗口。
+  Future<bool> isInterconnectAutoSyncEnabled() async {
+    if (await _db.getPref(_keyInterconnectAutoSync) != null) {
+      return _db.getPrefTyped<bool>(_keyInterconnectAutoSync, true);
+    }
+    final bool migrated = await _db.getPref(_keyAutoSync) == null
+        ? true
+        : await isAutoSyncEnabled();
+    await _db.setPrefTyped<bool>(_keyInterconnectAutoSync, migrated);
+    return migrated;
+  }
+
+  Future<void> setInterconnectAutoSyncEnabled(bool v) =>
+      _db.setPrefTyped<bool>(_keyInterconnectAutoSync, v);
+
+  /// 复习（SRS）数据的自动同步（反馈 VNz9dsLeIy，默认开）。关掉后复习数据不再在后台同步：常规同步
+  /// 通道之后的复习步骤、本机写入后的推送、互联快速通道（已配对设备有新数据立刻同步）、本机作为主机
+  /// 收到写入后的同步都不跑；只剩牌组列表「立即同步」、AnkiConnect `sync` 与进入复习页的节流同步
+  /// （`srs_sync_scheduler.dart`）。只管复习数据，书 / 视频进度等常规同步不受影响。
+  Future<bool> isSrsAutoSyncEnabled() =>
+      _db.getPrefTyped<bool>(_keySrsAutoSync, true);
+
+  Future<void> setSrsAutoSyncEnabled(bool v) =>
+      _db.setPrefTyped<bool>(_keySrsAutoSync, v);
 
   /// 「与 Hoshi/ッツ 共享 Google Drive」开关。默认关（老用户云端数据留在隐藏
   /// appDataFolder 原地不动）。
@@ -395,7 +509,8 @@ class SyncRepository {
   /// 迁移：本槽位无值时回落解耦前的全局键（升级后第一轮不会因为「新键为空」而把
   /// 刚同步过的通道当成从未同步、立刻再跑一轮）。写侧只写本槽位。
   Future<int?> getLastSyncMs(SyncChannelScope scope) async {
-    final s = await _getStringOrNull(scope.key(_keyLastSyncMs)) ??
+    final s =
+        await _getStringOrNull(scope.key(_keyLastSyncMs)) ??
         await _getStringOrNull(_keyLastSyncMs);
     return s == null ? null : int.tryParse(s);
   }
@@ -426,8 +541,9 @@ class SyncRepository {
   /// 7c 视频刮削元数据增量拉取基线：上次从该通道见过的最大 host `updatedAt`
   /// （毫秒）。0 = 从未拉过（全量）。设备本地、按通道分槽。
   Future<int> getVideoMetadataSyncSinceMs(SyncChannelScope scope) async {
-    final String? s =
-        await _getStringOrNull(scope.key(_keyVideoMetadataSyncSinceMs));
+    final String? s = await _getStringOrNull(
+      scope.key(_keyVideoMetadataSyncSinceMs),
+    );
     return s == null ? 0 : int.tryParse(s) ?? 0;
   }
 
@@ -450,13 +566,14 @@ class SyncRepository {
   Future<int> getDeletionTombstonesBaselineMs(SyncChannelScope scope) async {
     final String? s =
         await _getStringOrNull(scope.key(_keyDeletionTombstonesBaselineMs)) ??
-            await _getStringOrNull(_keyDeletionTombstonesBaselineMs);
+        await _getStringOrNull(_keyDeletionTombstonesBaselineMs);
     return s == null ? 0 : int.tryParse(s) ?? 0;
   }
 
   Future<void> setDeletionTombstonesBaselineMs(
-          SyncChannelScope scope, int ms) =>
-      _setString(scope.key(_keyDeletionTombstonesBaselineMs), ms.toString());
+    SyncChannelScope scope,
+    int ms,
+  ) => _setString(scope.key(_keyDeletionTombstonesBaselineMs), ms.toString());
 
   /// 删除墓碑**推送**的因果基线（毫秒，互联通道专用）。本地墓碑 deletedAt 晚于它才
   /// 推给对端 host；早于它视为本设备已推过、不再重复请求。0 = 从未推送过。
@@ -466,8 +583,9 @@ class SyncRepository {
   /// （[getDeletionTombstonesBaselineMs]）也是同样的全局口径，两侧保持一致。
   /// 设备本地（[deviceLocalPrefKeys]），理由见键定义处注释。
   Future<int> getDeletionTombstonesPushBaselineMs() async {
-    final String? s =
-        await _getStringOrNull(_keyDeletionTombstonesPushBaselineMs);
+    final String? s = await _getStringOrNull(
+      _keyDeletionTombstonesPushBaselineMs,
+    );
     return s == null ? 0 : int.tryParse(s) ?? 0;
   }
 
@@ -483,18 +601,18 @@ class SyncRepository {
 
   Future<void> setDesktopCredentials(String? json) async {
     if (json == null) {
-      await (_db.delete(_db.preferences)
-            ..where((t) => t.key.equals(_keyDesktopCredentials)))
-          .go();
+      await (_db.delete(
+        _db.preferences,
+      )..where((t) => t.key.equals(_keyDesktopCredentials))).go();
       return;
     }
     await _setString(_keyDesktopCredentials, _encodeSecret(json));
   }
 
   Future<void> clearDesktopSession() async {
-    await (_db.delete(_db.preferences)
-          ..where((t) => t.key.equals(_keyDesktopCredentials)))
-        .go();
+    await (_db.delete(
+      _db.preferences,
+    )..where((t) => t.key.equals(_keyDesktopCredentials))).go();
   }
 
   // ── Backend type ───────────────────────────────────────────────────
@@ -534,8 +652,11 @@ class SyncRepository {
         // 的 URL，于是「云已配置」为真 → `hasDeletionPropagationChannel` 放行
         // 「从所有设备删除」→ 用户以为删干净了，实际没有任何云通道去发布墓碑。
         return present(await getDesktopCredentials()) ||
-            present(await getRootFolderId(
-                SyncChannelScope.forBackendType(SyncBackendType.googleDrive)));
+            present(
+              await getRootFolderId(
+                SyncChannelScope.forBackendType(SyncBackendType.googleDrive),
+              ),
+            );
       case SyncBackendType.webDav:
         return present(await getWebDavUrl());
       case SyncBackendType.ftp:
@@ -634,6 +755,17 @@ class SyncRepository {
   Future<void> setSyncContentEnabled(bool v) =>
       _db.setPrefTyped<bool>(_keySyncContent, v);
 
+  /// 云通道「上传漫画文件」。键从未写过时继承 [isSyncContentEnabled]。
+  Future<bool> isSyncMangaContentEnabled() async {
+    if (await _db.getPref(_keySyncMangaContent) == null) {
+      return isSyncContentEnabled();
+    }
+    return _db.getPrefTyped<bool>(_keySyncMangaContent, false);
+  }
+
+  Future<void> setSyncMangaContentEnabled(bool v) =>
+      _db.setPrefTyped<bool>(_keySyncMangaContent, v);
+
   // ── 互联通道专属上传开关（BUG-988） ────────────────────────────────
   // 只作用于互联通道（[_runSyncChannel] 的 isInterconnect==true），与上面的云备份
   // sync_*_enabled 完全解耦；默认 false，让用户独立控制「要不要把本设备内容上传到
@@ -645,6 +777,18 @@ class SyncRepository {
       _db.getPrefTyped<bool>(_keyInterconnectSyncContent, false);
   Future<void> setInterconnectSyncContentEnabled(bool v) =>
       _db.setPrefTyped<bool>(_keyInterconnectSyncContent, v);
+
+  /// 互联通道「上传漫画文件」。键从未写过时继承
+  /// [isInterconnectSyncContentEnabled]。
+  Future<bool> isInterconnectSyncMangaContentEnabled() async {
+    if (await _db.getPref(_keyInterconnectSyncMangaContent) == null) {
+      return isInterconnectSyncContentEnabled();
+    }
+    return _db.getPrefTyped<bool>(_keyInterconnectSyncMangaContent, false);
+  }
+
+  Future<void> setInterconnectSyncMangaContentEnabled(bool v) =>
+      _db.setPrefTyped<bool>(_keyInterconnectSyncMangaContent, v);
 
   Future<bool> isInterconnectSyncAudioBookFilesEnabled() =>
       _db.getPrefTyped<bool>(_keyInterconnectSyncAudioBookFiles, false);
@@ -664,6 +808,123 @@ class SyncRepository {
   Future<void> setInterconnectProfileTransferEnabled(bool v) =>
       _db.setPrefTyped<bool>(_keyInterconnectProfileTransfer, v);
 
+  /// host 侧：是否允许已配对设备跟随本机账户自动登录（默认开）。
+  Future<bool> isInterconnectLeaderboardLinkHostEnabled() =>
+      _db.getPrefTyped<bool>(_keyInterconnectLeaderboardLinkHost, true);
+  Future<void> setInterconnectLeaderboardLinkHostEnabled(bool v) =>
+      _db.setPrefTyped<bool>(_keyInterconnectLeaderboardLinkHost, v);
+
+  /// host 侧：被标记为「我的设备」的已配对 peer（peerId 集合）。
+  Future<Set<String>> getOwnerDevicePeerIds() async {
+    final String? raw = await _getStringOrNull(
+      _keyInterconnectOwnerDevicePeers,
+    );
+    if (raw == null || raw.isEmpty) return <String>{};
+    try {
+      final Object? decoded = jsonDecode(raw);
+      if (decoded is! List) return <String>{};
+      return <String>{
+        for (final Object? e in decoded)
+          if (e is String) e,
+      };
+    } on FormatException {
+      return <String>{};
+    }
+  }
+
+  /// 标记 / 取消一台已配对 peer 为「我的设备」。返回最终是否为「我的设备」。
+  ///
+  /// 标记要求这台 peer 配对时证明过设备钥匙（[getPeerDeviceKeyFingerprints] 里有它）；
+  /// 没证明过的（旧版 client / 没上报设备钥匙）标不上，返回 false。
+  Future<bool> setOwnerDevicePeer(String peerId, bool owner) async {
+    if (owner && !(await getPeerDeviceKeyFingerprints()).containsKey(peerId)) {
+      owner = false;
+    }
+    final Set<String> ids = await getOwnerDevicePeerIds();
+    final bool changed = owner ? ids.add(peerId) : ids.remove(peerId);
+    if (!changed) return owner;
+    if (ids.isEmpty) {
+      await _deleteKey(_keyInterconnectOwnerDevicePeers);
+    } else {
+      await _setString(
+        _keyInterconnectOwnerDevicePeers,
+        jsonEncode(ids.toList()..sort()),
+      );
+    }
+    return owner;
+  }
+
+  /// host 侧：配对时验签通过的设备公钥指纹（peerId → fingerprint）。
+  Future<Map<String, String>> getPeerDeviceKeyFingerprints() async {
+    final String? raw = await _getStringOrNull(_keyInterconnectPeerDeviceKeys);
+    if (raw == null || raw.isEmpty) return <String, String>{};
+    try {
+      final Object? decoded = jsonDecode(raw);
+      if (decoded is! Map) return <String, String>{};
+      return <String, String>{
+        for (final MapEntry<Object?, Object?> e in decoded.entries)
+          if (e.key is String && e.value is String)
+            e.key! as String: e.value! as String,
+      };
+    } on FormatException {
+      return <String, String>{};
+    }
+  }
+
+  /// 记下 / 清掉一台 peer 的已验签设备公钥指纹（null = 本次配对没证明设备钥匙）。
+  Future<void> setPeerDeviceKeyFingerprint(
+    String peerId,
+    String? fingerprint,
+  ) async {
+    final Map<String, String> keys = await getPeerDeviceKeyFingerprints();
+    if (keys[peerId] == fingerprint) return;
+    if (fingerprint == null) {
+      keys.remove(peerId);
+    } else {
+      keys[peerId] = fingerprint;
+    }
+    if (keys.isEmpty) {
+      await _deleteKey(_keyInterconnectPeerDeviceKeys);
+    } else {
+      final List<String> ids = keys.keys.toList()..sort();
+      await _setString(
+        _keyInterconnectPeerDeviceKeys,
+        jsonEncode(<String, String>{
+          for (final String id in ids) id: keys[id]!,
+        }),
+      );
+    }
+  }
+
+  /// 持 [token] 的已配对 peer 是否被标记为「我的设备」（token 不属于任何现存 peer = false）。
+  /// 同时要求这台 peer 有已验签的设备钥匙记录：标记集合里的 peerId 不能单独生效。
+  Future<bool> isOwnerDevicePeerToken(String token) async {
+    final Set<String> owners = await getOwnerDevicePeerIds();
+    if (owners.isEmpty) return false;
+    final Map<String, String> keys = await getPeerDeviceKeyFingerprints();
+    for (final FushiPairedPeerRow peer in await _db.getPairedPeers()) {
+      if (peer.token == token) {
+        return owners.contains(peer.peerId) && keys.containsKey(peer.peerId);
+      }
+    }
+    return false;
+  }
+
+  /// client 侧：本机无账户时是否跟随已配对设备自动登录（默认开）。
+  Future<bool> isLeaderboardFollowPairedLoginEnabled() =>
+      _db.getPrefTyped<bool>(_keyLeaderboardFollowPairedLogin, true);
+  Future<void> setLeaderboardFollowPairedLoginEnabled(bool v) =>
+      _db.setPrefTyped<bool>(_keyLeaderboardFollowPairedLogin, v);
+
+  /// host 侧：是否允许已配对设备远程更新本机 app（`/api/host/update`）。
+  ///
+  /// 端点另有已配对 peer token + 局域网信任区 + 一次性 nonce 几道门；本开关是
+  /// **用户意图**那一道，默认关。
+  Future<bool> isInterconnectRemoteUpdateEnabled() =>
+      _db.getPrefTyped<bool>(_keyInterconnectRemoteUpdate, false);
+  Future<void> setInterconnectRemoteUpdateEnabled(bool v) =>
+      _db.setPrefTyped<bool>(_keyInterconnectRemoteUpdate, v);
+
   /// 互联通道「共享统计」：阅读/观看时长、字数、逐时桶、查词与制卡计数。关掉后本设备
   /// 既不把统计推给对端，也不把对端统计折进本地——两个方向一起停，否则「关了还在收」
   /// 会让本地统计继续被对端撑大，用户看到的仍是没关掉。
@@ -678,6 +939,14 @@ class SyncRepository {
       _interconnectAggregateFlag(_keyInterconnectSyncStats);
   Future<void> setInterconnectSyncStatsEnabled(bool v) =>
       _db.setPrefTyped<bool>(_keyInterconnectSyncStats, v);
+
+  /// 设备级「同步浏览历史」：浏览器历史（及清除历史的墓碑）是否进聚合快照，云备份
+  /// 与互联两条通道共用；host 侧也按它决定是否发出 / 接收历史。**缺行 = 关**——历史
+  /// 不跟「共享收藏夹」走（书签仍跟收藏走），已开共享收藏的存量用户升级后不会零操作
+  /// 就把整份浏览轨迹推出去。设备本地键（见 [deviceLocalPrefKeys]）。
+  Future<bool> isWebHistorySyncEnabled() => readWebHistorySyncEnabled(_db);
+  Future<void> setWebHistorySyncEnabled(bool v) =>
+      _db.setPrefTyped<bool>(kSyncWebHistoryPrefKey, v);
 
   /// 互联通道「共享收藏夹」：收藏词 + 收藏句（以及它们的删除墓碑，取消收藏要能
   /// 跨端传播）。与统计同为聚合快照的一半，但语义不同——收藏是用户挑出来的内容，
@@ -720,9 +989,9 @@ class SyncRepository {
   Future<String?> getWebDavUrl() => _getStringOrNull(_keyWebDavUrl);
   Future<void> setWebDavUrl(String? url) async {
     if (url == null) {
-      await (_db.delete(_db.preferences)
-            ..where((t) => t.key.equals(_keyWebDavUrl)))
-          .go();
+      await (_db.delete(
+        _db.preferences,
+      )..where((t) => t.key.equals(_keyWebDavUrl))).go();
       return;
     }
     await _setString(_keyWebDavUrl, url);
@@ -731,9 +1000,9 @@ class SyncRepository {
   Future<String?> getWebDavUsername() => _getStringOrNull(_keyWebDavUsername);
   Future<void> setWebDavUsername(String? username) async {
     if (username == null) {
-      await (_db.delete(_db.preferences)
-            ..where((t) => t.key.equals(_keyWebDavUsername)))
-          .go();
+      await (_db.delete(
+        _db.preferences,
+      )..where((t) => t.key.equals(_keyWebDavUsername))).go();
       return;
     }
     await _setString(_keyWebDavUsername, username);
@@ -746,9 +1015,9 @@ class SyncRepository {
 
   Future<void> setWebDavPassword(String? password) async {
     if (password == null) {
-      await (_db.delete(_db.preferences)
-            ..where((t) => t.key.equals(_keyWebDavPassword)))
-          .go();
+      await (_db.delete(
+        _db.preferences,
+      )..where((t) => t.key.equals(_keyWebDavPassword))).go();
       return;
     }
     await _setString(_keyWebDavPassword, _encodeSecret(password));
@@ -874,7 +1143,7 @@ class SyncRepository {
     await _setString(_keySftpPrivateKey, _encodeSecret(v));
   }
 
-  // ── Hibiki Server config ────────────────────────────────────────
+  // ── Fushi Server config ─────────────────────────────────────────
 
   static const _keyInterconnectEnabled = 'sync_interconnect_enabled';
 
@@ -910,7 +1179,7 @@ class SyncRepository {
   static const _keyInterconnectP2pSecret = kInterconnectP2pSecretPref;
   static const _keyInterconnectP2pRelayUrls = kInterconnectP2pRelayUrlsPref;
 
-  /// Single source of truth for the default Hibiki sync-server port.
+  /// Single source of truth for the default Fushi sync-server port.
   /// 38765 is in the IANA User Ports range (1024–49151) but unassigned and
   /// clear of the crowded 8xxx dev-server band and the 49152+ ephemeral range,
   /// so initial bind conflicts are unlikely. Referenced everywhere the default
@@ -1061,6 +1330,32 @@ class SyncRepository {
     return id;
   }
 
+  /// client 侧：本机互联设备钥匙（首次使用时生成并落设备本地偏好）。配对时用它签
+  /// host 下发的会话 nonce（`interconnect_device_key.dart`）。存的值坏了就换一把新的：
+  /// 只影响之后的配对能否被标成「我的设备」，已配对关系（per-peer token）不受影响。
+  ///
+  /// 存储取舍：与 iroh P2P 私钥同样落 app 私有目录下的偏好表，靠设备本地清单 + 凭据红线挡住
+  /// 备份 / 导出外带。仓内现在有 flutter_secure_storage（2026-10-29 为音乐插件凭据保险库的数据
+  /// 密钥引入，见 `media/music/plugin/music_plugin_vault_key.dart`），这两把钥匙尚未迁过去。
+  Future<InterconnectDeviceKey> getOrCreateInterconnectDeviceKey() async {
+    final String? encoded = await _getStringOrNull(
+      _keyInterconnectDevicePrivateKey,
+    );
+    if (encoded != null && encoded.isNotEmpty) {
+      try {
+        return InterconnectDeviceKey.decodePrivateKey(_decodeSecret(encoded));
+      } on FormatException {
+        // 坏值：落到下面重新生成。
+      }
+    }
+    final InterconnectDeviceKey key = InterconnectDeviceKey.generate();
+    await _setString(
+      _keyInterconnectDevicePrivateKey,
+      _encodeSecret(key.encodePrivateKey()),
+    );
+    return key;
+  }
+
   // ── 媒体服务器（Jellyfin / Emby / Plex） ─────────────────────────────
 
   /// v1 单服务器键（一条 [JellyfinServerConfig] JSON）。只在 [getJellyfinServers]
@@ -1181,10 +1476,9 @@ class SyncRepository {
   Future<void> removeJellyfinServer({
     required String serverUrl,
     required String userId,
-  }) =>
-      removeMediaServer(
-        JellyfinVideoClient.sourceIdFor(serverUrl: serverUrl, userId: userId),
-      );
+  }) => removeMediaServer(
+    JellyfinVideoClient.sourceIdFor(serverUrl: serverUrl, userId: userId),
+  );
 
   /// 过渡口径：**列表第一项**（多服务器化之前只有一台，「第一台」就是那一台）。
   /// 单远端源架构的消费端（home_video_page `_resolveJellyfinVideoClient`）在改成
@@ -1236,11 +1530,19 @@ class SyncRepository {
     return null;
   }
 
-  // ── Hibiki Client (connect to another Hibiki instance) ─────────
+  // ── Fushi Client (connect to another Fushi instance) ───────────
 
   static const _keyFushiClientUrl = 'sync_hibiki_client_url';
   static const _keyFushiClientUrls = 'sync_hibiki_client_urls';
   static const _keyFushiClientToken = 'sync_hibiki_client_token';
+  // 视频模块遥控按钮上次选中的 host（hostId）。指向本设备配对的那台电脑，
+  // 随备份到别的设备只会指错，属设备本地。
+  static const _keyVideoRemoteLastHostId = 'video_remote_last_host_id';
+
+  Future<String?> getVideoRemoteLastHostId() =>
+      _getStringOrNull(_keyVideoRemoteLastHostId);
+  Future<void> setVideoRemoteLastHostId(String? hostId) =>
+      _setOrDelete(_keyVideoRemoteLastHostId, hostId);
 
   /// 旧的单地址 API，仅为向后兼容保留；新代码请用 [getFushiClientUrls]。
   @Deprecated('Use getFushiClientUrls / setFushiClientUrls')
@@ -1269,8 +1571,9 @@ class SyncRepository {
   /// 下一次用户编辑就会把刚学到的地址整份覆盖掉。bump 放在**唯一的写方法**
   /// [setFushiClientUrls] 里（与 [interconnectEnabledRevision] 同一范式），消费方
   /// 收到后重读真值。
-  static final ValueNotifier<int> fushiClientUrlsRevision =
-      ValueNotifier<int>(0);
+  static final ValueNotifier<int> fushiClientUrlsRevision = ValueNotifier<int>(
+    0,
+  );
 
   /// 候选列表「读-改-写」的进程级串行化：后台地址学习、链接配对各自读-改-写，
   /// 并发时后写者会把前者的结果（甚至用户刚删掉的 host 连同 token）写回来
@@ -1280,8 +1583,7 @@ class SyncRepository {
   Future<List<FushiClientUrl>> updateFushiClientUrls(
     List<FushiClientUrl> Function(List<FushiClientUrl> current) transform,
   ) {
-    final Future<List<FushiClientUrl>> result =
-        _urlsWriteChain.then((_) async {
+    final Future<List<FushiClientUrl>> result = _urlsWriteChain.then((_) async {
       final List<FushiClientUrl> before = await getFushiClientUrls();
       final List<FushiClientUrl> after = transform(before);
       if (!identical(after, before)) await setFushiClientUrls(after);
@@ -1318,13 +1620,15 @@ class SyncRepository {
     String? fingerprint,
     String? deviceName,
   }) {
-    final String? incomingFp =
-        (fingerprint != null && fingerprint.isNotEmpty) ? fingerprint : null;
+    final String? incomingFp = (fingerprint != null && fingerprint.isNotEmpty)
+        ? fingerprint
+        : null;
     // 读改写在 [updateFushiClientUrls] 的串行链里做：与后台地址学习、链接配对、
     // 设置页编辑互斥，谁都不会拿过期快照覆盖别人刚写的条目。
     return updateFushiClientUrls((List<FushiClientUrl> urls) {
-      final int existingIdx =
-          urls.indexWhere((FushiClientUrl u) => u.url == url);
+      final int existingIdx = urls.indexWhere(
+        (FushiClientUrl u) => u.url == url,
+      );
       if (existingIdx < 0) {
         return <FushiClientUrl>[
           ...urls,
@@ -1350,8 +1654,9 @@ class SyncRepository {
       }
       // 指纹处理：已存非空（且与新值归一化相等，否则上面已抛）→ 保留原存值，
       // 不被新写法（大小写/冒号差异）改写；已存为空 → 首次写入新指纹（http→https 升级）。
-      final String? nextFp =
-          (storedFp != null && storedFp.isNotEmpty) ? storedFp : incomingFp;
+      final String? nextFp = (storedFp != null && storedFp.isNotEmpty)
+          ? storedFp
+          : incomingFp;
       final FushiClientUrl upgraded = existing.copyWith(
         fingerprintSha256: nextFp,
         deviceName: deviceName,
@@ -1389,12 +1694,23 @@ class SyncRepository {
   ///
   /// [url] 不在列表里时只写全局键（配对流程会在此之前把地址 append 进去，正常路径
   /// 不会走到；防御性处理避免凭据丢失）。
-  Future<void> setFushiClientTokenForUrl(String url, String token) async {
-    await updateFushiClientUrls((List<FushiClientUrl> urls) {
-      final int idx = urls.indexWhere((FushiClientUrl u) => u.url == url);
-      if (idx < 0 || urls[idx].token == token) return urls;
-      return <FushiClientUrl>[...urls]..[idx] = urls[idx].copyWith(token: token);
-    });
+  ///
+  /// 53NT7G_tSO：host 按设备只认一份 token（重新配对即作废旧的），所以新 token 同时
+  /// 写到**同一台 host 的全部地址**；[hostId]（配对时 ping 回报的身份）让还没归组的
+  /// 新地址先按指纹判据归组，见 [applyIssuedInterconnectToken]。
+  Future<void> setFushiClientTokenForUrl(
+    String url,
+    String token, {
+    String? hostId,
+  }) async {
+    await updateFushiClientUrls(
+      (List<FushiClientUrl> urls) => applyIssuedInterconnectToken(
+        urls,
+        url: url,
+        token: token,
+        hostId: hostId,
+      ),
+    );
     await setFushiClientToken(token);
   }
 
@@ -1448,7 +1764,8 @@ class SyncRepository {
       if (fp == null || fp.isEmpty) return urls;
       cleared = true;
       // 显式构造而非 copyWith：copyWith 的 `?? this.x` 语义根本清不掉字段。
-      return <FushiClientUrl>[...urls]..[idx] = FushiClientUrl(
+      return <FushiClientUrl>[...urls]
+        ..[idx] = FushiClientUrl(
           url: existing.url,
           enabled: existing.enabled,
           deviceName: existing.deviceName,
@@ -1464,11 +1781,11 @@ class SyncRepository {
   // ── Device-local key catalog ──────────────────────────────────────
 
   /// 导入备份时必须保留在本设备、不能被备份覆盖的 preference key：后端选择 +
-  /// 全部凭据/令牌 + 本机服务器配置 + Hibiki 客户端地址/令牌（含旧单地址键）。
+  /// 全部凭据/令牌 + 本机服务器配置 + 互联客户端地址/令牌（含旧单地址键）。
   ///
   /// 故意排除：
   /// - 行为开关 `sync_auto_enabled`/`sync_stats_enabled`/`sync_audiobook_enabled`/
-  ///   `sync_content_enabled` —— 当作用户设置，随备份恢复。
+  ///   `sync_content_enabled`/`sync_manga_content_enabled` —— 当作用户设置，随备份恢复。
   /// - 内容 `audiobook_pos_*` —— 随备份恢复。
   /// - folder cache `sync_root_folder_id`/`sync_folder_cache` —— 不还原，下次同步重建。
   ///
@@ -1479,9 +1796,25 @@ class SyncRepository {
   /// 编译错误而是静默泄漏——基线会随备份跨设备携带，正是拆键前就有的老毛病。
   static final List<String> deviceLocalPrefKeys = <String>[
     ..._deviceLocalFixedKeys,
+    ...installScopedPrefKeys,
     for (final String base in _perChannelDeviceLocalBases)
       for (final SyncChannelScope scope in SyncChannelScope.all)
         scope.key(base),
+  ];
+
+  /// 设备本地键里更严的一类：描述**本次安装**的一次性判定 / 迁移结论。
+  ///
+  /// 和其余设备本地键一样导出时剔除、不进 Profile 快照 / 分享。导入侧更严：导入
+  /// 设置的覆盖恢复（含崩溃恢复重放）会把它们**清掉**——外来值是别的机器的结论，
+  /// 本机旧值依据的是恢复前的数据，两者都不留，下次启动按恢复后的数据重新判定
+  /// （见 `BackupRestoreService._clearInstallScopedPrefs`）。不导入设置的恢复把设置层
+  /// 整层写回本机，判定随之保留。旧版本导出的、还带着这些键的包也靠这一步兜住。
+  ///
+  /// - `srs_mining_target_install_default`：挖词目标出厂默认（'anki' / 'srs'），兼
+  ///   一次性判定标记。维护者用装了新版的机器打推荐包，包里会是 'anki'；新用户一导入
+  ///   就会被当成老 Anki 用户（复习模块关、挖词发 Anki）。
+  static const List<String> installScopedPrefKeys = <String>[
+    PreferencesRepository.srsMiningTargetInstallDefaultKey,
   ];
 
   /// 按通道分槽、且属设备本地的键基名（展开进 [deviceLocalPrefKeys]）。
@@ -1496,9 +1829,23 @@ class SyncRepository {
   ];
 
   static const List<String> _deviceLocalFixedKeys = <String>[
+    // 「同步浏览历史」是这台设备的隐私许可：从另一台设备恢复备份不得替这台设备
+    // 打开浏览轨迹外流。
+    kSyncWebHistoryPrefKey,
+    // app 内浏览器的版式 / 行为偏好（标签页样式、侧边栏开合……）：
+    // 按这台设备的屏幕与习惯调，唯一清单在 web_browser_prefs.dart。
+    ...kWebBrowserDeviceLocalPrefKeys,
     // v105 统计按 Profile 隔离：legacy 统计归属 Profile 的值是本库自增 id，
     // 换一台设备就指向别的 Profile，绝不随备份 / Profile 分享出境。
     kStatLegacyProfileIdPrefKey,
+    // 复习同步 v2 的文件夹存储位置：路径是这台设备的磁盘 / 挂载点，换设备恢复带过去没有意义。
+    PreferencesRepository.srsFolderLocationsKey,
+    // 首次 v2 同步的确认是这台设备做的：别的设备恢复备份带过来不能替它确认。
+    PreferencesRepository.srsSync2MergeConfirmedKey,
+    // 复习同步 v2 存储位置的加密密钥：凭据，绝不随备份 / Profile 出境（换设备时重新输入口令）。
+    PreferencesRepository.srsLocationKeysKey,
+    // BUG-3644 统计同步的 Profile 名字别名：键是本库自增 id，同上。
+    kStudyProfileNameAliasesPrefKey,
     _keyBackendType,
     // 「新下载任务交给哪台互联 host 执行」指向的是本设备配的 host 地址，随备份
     // 到别的设备只会指错（PC 恢复手机的备份后把任务投给它自己）。
@@ -1506,9 +1853,17 @@ class SyncRepository {
     // 「允许配对设备远程启动游戏」是本机安全开关：从另一台电脑恢复备份不得替
     // 这台电脑打开远程起进程的门。
     kGameStreamRemoteLaunchPrefKey,
+    // 串流查词栏尺寸按这台设备的屏幕调：平板上调大的值恢复到手机上只会不合身。
+    kGameStreamLookupLayoutPrefKey,
+    // Windows 悬浮字幕窗口矩形存的是本机物理像素坐标：换一台显示器布局 / DPI
+    // 不同的设备恢复，窗口会落到屏幕外或尺寸错位。
+    kFloatingLyricWindowRectPrefKey,
     // 「本机作为制卡落地设备」：换设备恢复备份若把它带过去，就会同时有两台落地设备，
     // 同一张卡被两边各落一次。
     _keyPendingMineLandingClaimedAt,
+    // Anki 制卡设置：AnkiConnect 地址 / apiKey（明文）/ 本机 Anki 路径都是这台设备的
+    // 事实，迁 Drift 之前它活在 SharedPreferences 里，本来就不随备份 / 同步出境。
+    kAnkiSettingsPrefKey,
     // （旧键 google_drive_hoshi_compat 已由 fushi_core v72 迁移清行：Hoshi 共享
     // 空间功能删除后它无任何读写方；导入的旧备份库开库时同样被清，故无需再列。）
     _keyDesktopCredentials,
@@ -1538,9 +1893,15 @@ class SyncRepository {
     _keyInterconnectP2pEnabled,
     _keyInterconnectP2pSecret,
     _keyInterconnectP2pRelayUrls,
+    // 互联设备钥匙与「我的设备」：私钥外带 = 两台设备共用一个身份；host 侧的标记 /
+    // 指纹描述的是**本机**配对表里的 peer，搬到别的设备上毫无意义（还会串号）。
+    _keyInterconnectDevicePrivateKey,
+    _keyInterconnectOwnerDevicePeers,
+    _keyInterconnectPeerDeviceKeys,
     _keyFushiClientUrls,
     _keyFushiClientToken,
     _keyFushiClientUrl,
+    _keyVideoRemoteLastHostId,
     // Jellyfin 服务器绑定含访问令牌，属设备本地凭据，绝不随备份跨设备。旧单值键
     // 与新列表键都列：旧键在迁移前的备份里仍可能存在。
     _keyJellyfinServer,
@@ -1570,16 +1931,43 @@ class SyncRepository {
     // 都描述本机能力。跨设备恢复会携带明文凭据、无效绝对路径或错误 source id。
     'video_resource_torznab_config',
     'video_subtitle_opensubtitles_config',
+    // 用户 BT 站清单：与 Torznab 同类（第三方 indexer 地址，可能带 passkey）。
+    'resource_bt_sites',
+    // 旧内置 BT 站迁移的已跑标记：描述本安装的一次性判定，随备份漂到新装设备会让
+    // 新设备跳过判定、漂回老设备会让它重跑，都不对。
+    kBtSitesLegacyMigrationPref,
     // 用户自配的 AI 提供商：条目里带 base64 的 API key，且本地推理服务（Ollama /
     // LM Studio）的地址是 `http://localhost:11434` 这种只对本机成立的端点。跨设备
     // 恢复既泄付费凭据又指向一台并不在跑的服务。功能映射按 provider id 指向它们，
     // 单独漂过去只会变成一堆悬空 id，故一并设备本地。
     'ai_providers',
     'ai_feature_providers',
+    // 多 key 轮换的冷却记录：按本机 key 的指纹索引，换台设备全是悬空记录。
+    'ai_key_health',
+    // 「允许已配对设备远程使用 AI 助手」：授权的是这台机器的 AI 指派与操作目录，
+    // 只对点它的那台设备成立；漂过去会让另一台设备静默对配对设备开放。
+    'ai_agent_for_peers',
+    // 音乐输出设备与独占模式描述的是这台机器的声卡 / DAC：别的设备上同名设备不存在，
+    // 独占在另一台机器上会让别的程序静默无声。
+    'music_audio_device',
+    'music_exclusive_output',
     // 漫画 OCR 大模型档位：开了就是「上传漫画页 + 按量计费」，这种同意只对点它的
     // 那台设备成立，漂过去会让另一台配了 AI 的设备静默开始上传。
     'manga_ocr_ai_mode',
-    // 查词自动按句意挑词条：同理，每次查词一个计费请求。
+    // 视频日语字幕的 AI 校对开关与「会发送什么」的同意：与上一条同理，只对点它的
+    // 那台设备成立。分段方式 / MOSS 后端取决于这台机器的显卡，换设备没有意义。
+    'video_subtitle_ai_proofread',
+    'video_subtitle_ai_consented',
+    // AI 整理库：自动整理开关、开关时刻与「会发送什么」的同意——与上两条同理只对
+    // 点它的那台设备成立（只在一台设备上开就够，结果靠合集同步传播）。
+    'library_organize_allowed_keys',
+    'library_organize_auto',
+    'library_organize_auto_since',
+    'library_organize_consented',
+    'video_subtitle_segmenter',
+    'video_subtitle_moss_backend',
+    // 已删除的「查词自动按句意挑词条」开关（2026-10-09 移除）：存量值仍是
+    // 设备本地的计费同意，留在清单里免得旧备份把它漂到别的设备。
     'lookup_ai_context_auto',
     // 用户自配的 OPDS 书目服务器：条目里带 base64 密码，且服务器地址多是
     // 局域网 IP（`http://192.168.x.x:8080`），跨设备恢复既泄凭据又指向一台
@@ -1587,9 +1975,41 @@ class SyncRepository {
     'discovery_opds_servers',
     // 同形：AList / OpenList 站点清单，条目里带 base64 密码。
     'discovery_alist_sites',
+    // 同形：Kavita 服务器清单，条目里带 base64 长期 API key，服务器地址多是局域网 IP。
+    'kavita_servers',
+    // Kavita 漫画每章「上次成功同步」时刻：只对这台设备的本地进度有意义，漂到别的
+    // 设备会让进度决策的基线错位（把别处的推进误判成冲突或被覆盖）。
+    'kavita_manga_sync_state',
+    // 同形：Audiobookshelf 服务器清单，条目里带 base64 令牌（refresh token 会轮换，
+    // 两台设备共用一枚只会互相把对方挤下线）。
+    'discovery_audiobookshelf_servers',
+    // 同形：OpenSubsonic 服务器清单（服务器曲库），条目里带 base64 密码 / API key；
+    // 混排开关按这些服务器的 id 记，跟着一起设备本地。
+    'music_subsonic_servers',
+    'music_server_library_mix',
     'video_download_backend_path_mappings',
     'video_download_target_source_id',
     'video_download_embedded_installation_id',
+    // 安装统计（updates/usage_heartbeat.dart）：回退种子 / PoW 缓存随备份漂到另一台设备，
+    // 两台设备就可能被算成同一个安装；发不发统计是这台设备上的同意，上次心跳时刻也只对本机有意义。
+    'usage_stats_enabled',
+    'usage_stats_install_id',
+    'usage_stats_install_pow',
+    'usage_stats_last_ping_at',
+    // 书架「仅从本机移除」的远端书：语义就是只对这台设备成立，随备份漂到另一台
+    // 设备会让那边的同一份远端书也莫名消失。
+    'hidden_remote_books',
+    // 朗读声音预设：带 base64 的 API key，地址多是本机 / 局域网的 GPT-SoVITS
+    // 服务（`http://127.0.0.1:9880`），跨设备带过去只会指向一台不存在的服务。
+    // 当前预设 id 指向的就是这份清单里的条目，一起留在本机。
+    'tts_voice_presets',
+    'tts_active_preset_id',
+    // 制卡单词音频的 TTS 兜底声音：可能是上面清单里某份预设的 id，一起留在本机。
+    'mining_tts_fallback_voice',
+    // 本机 GPT-SoVITS 整合包的磁盘路径与端口：换一台设备毫无意义。
+    'tts_gpt_sovits_local',
+    // 本机 Irodori-TTS-Server 的专属目录与端口：同上。
+    'tts_irodori_local',
   ];
 
   // ── Helpers ───────────────────────────────────────────────────────
@@ -1607,14 +2027,16 @@ class SyncRepository {
   }
 
   Future<String?> _getStringOrNull(String key) async {
-    final row = await (_db.select(_db.preferences)
-          ..where((t) => t.key.equals(key)))
-        .getSingleOrNull();
+    final row = await (_db.select(
+      _db.preferences,
+    )..where((t) => t.key.equals(key))).getSingleOrNull();
     return row?.value;
   }
 
   Future<void> _setString(String key, String value) async {
-    await _db.into(_db.preferences).insertOnConflictUpdate(
+    await _db
+        .into(_db.preferences)
+        .insertOnConflictUpdate(
           PreferencesCompanion.insert(key: key, value: value),
         );
   }

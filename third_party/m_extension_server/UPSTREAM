@@ -18,10 +18,10 @@ directory instead of being cloned at build time.
 Layout
 ------
 upstream_src/               pristine upstream tree at the pinned commit,
-                            byte-for-byte, no Hibiki edits.
-overlay/                    Hibiki-modified source files; copied over
+                            byte-for-byte, no Fushi edits.
+overlay/                    Fushi-modified source files; copied over
                             upstream_src after the patch is applied.
-server-build.gradle.patch   Hibiki changes to upstream files that are too
+server-build.gradle.patch   Fushi changes to upstream files that are too
                             small to justify a full-file overlay.
 LICENSE / NOTICE            MPL-2.0 text and the modification notice.
 
@@ -87,7 +87,7 @@ ABI package override `hosterListParse` / the parsed selector pair?) whether to
 issue the lib-16 hoster request or wrap the legacy video list in a
 NO_HOSTER_LIST hoster -- never by issuing a request and watching it fail.
 
-overlay/.../animesource/host/AnimeVideoLoader.kt is Hibiki's (not part of any
+overlay/.../animesource/host/AnimeVideoLoader.kt is Fushi's (not part of any
 lib): the one entry point both hosts call for `getVideoList` -- hosters ->
 sortHosters -> per hoster `videoList ?: getVideoList(hoster)` -> sortVideos ->
 per video `resolveVideo` (when not initialized) -> lib-14 `getVideoUrl` (when
@@ -97,11 +97,43 @@ nothing at all survives. DalvikHandler routes `getVideoList` here instead of
 MihonInvoker.invokeGetVideoList (which returned the raw legacy list), and
 projects the lib-16 fields (videoTitle / resolution / bitrate / preferred /
 mpvArgs) next to the lib-14 ones on the wire. InspectHandler accepts anime
-lib 14 / 15 / 16.
+lib 14 / 15 / 16 / 17.
 
-Compatibility ceiling: the Aniyomi main line has since added HttpServer /
-ThumbnailInfo / SAnimeEpisodeUpdate / AnimeRelation (lib 17 territory); those
-are not vendored and such an APK is refused at inspect time.
+extensions-lib 17 (2026-10-23, aniyomiorg/extensions-lib 971ce96e "v17",
+released 2026-09-14; feedback gRSPNbJjqT was a lib-17 APK refused at inspect):
+  model/Video.kt        no longer a data class: lib 17 appended `memo:
+                        JsonObject` to the primary constructor, and real lib-16
+                        APKs call the 14-parameter `copy$default`, so both
+                        constructors, both `copy` overloads and component1..15
+                        are spelled out by hand
+  model/Hoster.kt       overlay copy of upstream's with `memo` + the lib-16
+                        constructor kept
+  SAnime / SEpisode     + `memo` (not serialised; not carried across bridge
+                        calls -- the wire format has no slot for it)
+  AnimeSource           + getAnimeEpisodeUpdate / getAnimeSeasonUpdate,
+                        supportsRelatedAnime, getRelatedAnimeList(anime)
+  AnimeHttpSource       request / parse helpers abstract -> open (lib 17 made
+                        them optional); getAnimeDetails / getEpisodeList /
+                        getSeasonList route onto the combined calls when the
+                        extension implements only those (reflection, same as
+                        the hoster switch), the combined defaults fall back to
+                        the legacy overrides without looping through `super`;
+                        + getHomeUrl / getVideoThumbnails / getImageTile /
+                        createHttpServer
+  model/HttpServer.kt   NanoHTTPD bound to loopback; AnimeVideoLoader rebases
+                        `http://localhost:1` urls onto it, the sidecar's
+                        ExtensionHttpServers owns the lifecycle. The Android
+                        app compiles its own NanoHTTPD-free HttpServer and
+                        reports such videos as unplayable.
+  AnimeRelation / SAnimeEpisodeUpdate / SAnimeSeasonUpdate / ThumbnailInfo,
+  torrentutils/**       new classes; TorrentUtils is Java because the
+                        komikku-app lib links a plain and lib 17 a `suspend`
+                        getTorrentInfo, which Kotlin cannot declare together.
+  InspectHandler        also reads lib 17's `aniyomix.extensionLib` /
+                        `aniyomix.name` metadata keys.
+AnimeExtensionAbiTest resolves every host member that real lib 14 / 16 / 17
+APKs link against (src/test/resources/anime-extension-abi-refs.txt, extracted
+from their dex tables without running them).
 
 upstream_src/ excludes exactly two things from the upstream commit:
   .git/       clone metadata, not source
@@ -110,7 +142,7 @@ Everything else is vendored verbatim, including the Gradle wrapper JAR, the
 AndroidCompat Noto font resources (loaded by the static initialiser in
 AndroidCompat/src/main/java/android/graphics/Typeface.java, so dropping them
 would change the shipped JAR's behaviour) and upstream's own .gitattributes
-(same EOL policy as Hibiki's, so no normalisation drift).
+(same EOL policy as Fushi's, so no normalisation drift).
 
 Build
 -----
@@ -139,7 +171,7 @@ tree. Both scripts therefore set upstream's own `ProductRevision` escape
 hatch to the pinned commit's short SHA (ee55c65), so the produced JAR name
 and manifest point straight at the commit recorded above.
 
-Hibiki modifications
+Fushi modifications
 --------------------
 overlay/.../animesource/** (full-file replacements + FetchType.kt + host/):
   The lib 14 + lib 16 union anime ABI and the shared host video loader; see
@@ -171,9 +203,13 @@ overlay/.../DexAllocationRepair.kt:
   exactAllocationReader (wired into PackageTools.dex2jar by the patch) applies
   the same receiver proof *before* dex2jar: dex2jar takes the NEW type from the
   <init> owner, so a proven `invoke-direct Super.<init>` on a `new-instance X`
-  register is pointed at X (Super must be X's direct superclass, X must not
-  already declare that descriptor, Super's constructor must be accessible) and
-  X gets the forwarding constructor R8 erased. Without it, constructor-less
+  register is pointed at X and every class from X up to (excluding) Super gets
+  the forwarding constructor R8 erased (each layer a non-interface DEX class
+  whose parent constructor is accessible; a layer that already declares the
+  descriptor is reused only if its body is exactly `super.<init>(args);
+  return`, otherwise the site is left alone). R8 can erase several layers at
+  once: SpeedBinb's `a0 extends t0` invokes Object.<init> directly (BUG-3364,
+  `Bad type on operand stack in putfield` in u0.intercept). Without it, constructor-less
   subclasses such as every suspend function's continuation all matched the
   generalized NEW and upstream BytecodeEditor.repairAllocation handed them out
   by iteration order (BUG-2826: mokuro 1.6.6 getPageList,
@@ -256,14 +292,26 @@ server-build.gradle.patch:
                                    authenticated APK inspection route;
                                    version string 1.0.4.10 -> 1.0.5.0 (upstream
                                    forgot to bump it when tagging v1.0.5.0)
+  .../Main.kt                      the <appDir> argument sets
+                                   suwayomi.tachidesk.config.server.rootDir,
+                                   the property ApplicationRootDir reads
+                                   (upstream set "ts.server.rootDir", read by
+                                   nothing, so settings/, android-compat/ and
+                                   server.conf of every Fushi data root landed
+                                   in the shared AppDirs "Tachidesk" directory,
+                                   the one Suwayomi uses too; BUG-3520)
   .../impl/MihonInvoker.kt         preserve the catalogue identity
                                    (url/title/...) that legacy detail parsers
-                                   drop; chapters cross the bridge as JChapter
+                                   drop; chapters cross the bridge as JChapter;
+                                   applyPreferences writes the host snapshot
+                                   through HostPreferenceSnapshot (see below)
   .../model/DataBody.kt            JGroupFilter.stateString
   .../util/BytecodeEditor.kt       emit INVOKEINTERFACE when the replacement
                                    owner is an interface (dex2jar writes a
                                    Methodref where an InterfaceMethodref is
-                                   required)
+                                   required); raise converted classes from
+                                   dex2jar's major 50 to exactly 52 (BUG-3522,
+                                   see "Class file version" below)
   two upstream tests updated to match
 
 overlay/ (full-file replacements):
@@ -281,7 +329,11 @@ overlay/ (full-file replacements):
                                                 the extension's own client,
                                                 buffered with a hard ceiling
   .../controller/SourceDataHandler.kt           new: clear per-source
-                                                preferences, cookies and cache
+                                                preferences (and their host
+                                                snapshot ledger), cookies and
+                                                cache
+  .../impl/HostPreferenceSnapshot.kt            new: host preference snapshot
+                                                rule (see below)
   .../AppModule.kt                              ProtoBuf registered in the
                                                 Injekt container next to Json
   .../network/interceptor/CloudflareInterceptor.kt
@@ -301,17 +353,17 @@ Security boundary (must not be weakened)
 - Every request is checked against a per-process Bearer token before routing;
   the check sits in the single NanoHTTPD dispatch entry point, so no route can
   bypass it. The token is 256 bits from Dart's Random.secure(), handed to the
-  child only through the HIBIKI_MIHON_TOKEN environment variable, and the
+  child only through the FUSHI_MIHON_TOKEN environment variable, and the
   server refuses to start without it.
 - The child, not the host, chooses the listening port. It is started with port
-  0 and prints "HIBIKI_MIHON_READY port=<n>" on stdout once NanoHTTPD has
+  0 and prints "FUSHI_MIHON_READY port=<n>" on stdout once NanoHTTPD has
   bound; the host parses that line and only then sends its first authenticated
   request. Letting the host bind/close/hand over a port number instead is a
   TOCTOU: any local process can take the port in between, and the host would
   hand it the Bearer token. Both ends of this contract are guarded by
   fushi/test/build/mihon_vendored_server_guard_test.dart.
-- /inspect never loads the APK. It is called *before* Hibiki shows the "third
-  party extensions execute code with Hibiki permissions" trust dialog, so it
+- /inspect never loads the APK. It is called *before* Fushi shows the "third
+  party extensions execute code with Fushi permissions" trust dialog, so it
   stays on apksig plus PackageTools.getPackageInfo (zip + binary manifest
   parsing) and never touches MExtensionServerLoader, whose path runs dex2jar,
   Class.forName + newInstance on the extension main class and
@@ -330,12 +382,62 @@ Security boundary (must not be weakened)
   the size, not the destination: the URL is chosen by the source site, exactly
   as in upstream's own /image/<uuid> page path, which is inherent to Mihon's
   "the site tells the client where the image is" contract.
-- The upstream process identity is retained: Main.kt, ServerWindow.kt and
-  MExtensionServerLoader are untouched; MihonImageProxy has a response-lifetime
-  overlay described above. The Hibiki
+- The upstream process identity is retained: ServerWindow.kt and
+  MExtensionServerLoader are untouched, Main.kt only has the one-line rootDir
+  property fix (argument contract, port handling and lifecycle unchanged); MihonImageProxy has a response-lifetime
+  overlay described above. The Fushi
   host only ever terminates the Process handle it started (never a port or
   process-name scan). The upstream wire key __mangatan_bridge_context__ is
   deliberately kept; only the capability identifier is renamed to
   fushiMihonBridge.
 - Shutdown stays explicit: POST /stop, itself authenticated, with the host
   falling back to killing its own child only on timeout.
+
+Class file version (2026-10-19, BUG-3522)
+-----------------------------------------
+dex2jar writes every class as major 50 (Java 6). DEX has no such ceiling, and
+two things current extensions compile to are illegal below major 52:
+  - invokestatic / invokespecial on an InterfaceMethodref (JVMS 4.9.1):
+    current kotlinx-coroutines compiles e.g. `Job.cancel$default` as an
+    interface static method, so a coroutine-using extension class fails
+    verification with "Illegal type at constant pool entry N" (keiyoushi Komga
+    1.6.73: Komga.r(...); MangaFire, BatCave, InfinityScans, MangaCloud,
+    SpyFakku, Ono, SoftKomik, ComX: their invokeSuspend continuations);
+  - non-abstract (default) methods in an interface: ClassFormatError "Method
+    x in class y has illegal modifiers: 0x1" (yuzono Jellyfin 16.32, Stremio
+    16.11, YFantasy 16.3, Hanime 14.24).
+BytecodeEditor.transform therefore writes major 52 for anything below it.
+Not higher: from 53 on putfield/putstatic on a final field is only legal in
+the initialiser, which DEX code does not obey. 52 drops the JVM's silent
+fallback to the inference verifier, so it relies on the StackMapTable that
+ClassWriter.COMPUTE_FRAMES (with ClassReader.SKIP_FRAMES and the
+ClassHierarchy-backed getCommonSuperClass, which reads class bytes and never
+loads a class) already rebuilds for every class. Measured over the whole
+keiyoushi index (1400 APKs) and yuzono anime repo (250 APKs) by converting
+each APK with PackageTools.dex2jar and linking every class
+(Class.getDeclaredMethods, which verifies without initialising): before, 13
+APKs had classes HotSpot rejects; after, none -- no class that verified at
+50 fails at 52. Pinned by ConvertedClassVersionTest.
+
+Host preference snapshot (2026-10-19, BUG-3520)
+-----------------------------------------------
+Fushi's database (Drift manga_source_preferences) is the host's record of a
+source's preferences and travels with every bridge request. Upstream wrote a
+snapshot value only when the JVM store did not contain the key yet, so a
+value already on disk -- from another data root that shared the Tachidesk
+directory, from Suwayomi, from before a backup restore -- could never be
+replaced. overlay/.../impl/HostPreferenceSnapshot.kt writes a snapshot value
+whenever it differs from the snapshot value last written for that key,
+recorded in a ledger store `source_<id>_fushi_host_snapshot` next to the
+source store: a database change always reaches the extension, a value the
+extension wrote itself after the last database change survives the same
+snapshot arriving again. SourceDataHandler clears the ledger with the store.
+The ledger records a SHA-256 digest of the type-tagged value
+("sha256:<hex>"), never the value itself: editText preferences are often
+passwords or tokens, and a plaintext ledger would be a second copy of them.
+A ledger entry still in the earlier plaintext form ("s:<value>") is
+recognised once and rewritten as a digest without touching the store.
+Nothing is imported from the old shared Tachidesk directory: it may belong
+to Suwayomi, may carry another data root's values (the bug being fixed), and
+everything the user set in Fushi is already in the database snapshot. The
+directory is left untouched.

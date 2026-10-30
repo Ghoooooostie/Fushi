@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'package:archive/archive_io.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart' show debugPrint;
+import 'package:flutter/foundation.dart' show debugPrint, visibleForTesting;
+import 'package:fushi/src/pages/implementations/font_preview/font_file_metadata.dart'
+    show readFontFamilyNameSync;
 import 'package:fushi/src/utils/misc/error_log_service.dart';
 import 'package:fushi_engine/utils/misc/safe_file_name.dart';
 import 'package:fushi_engine/utils/net/app_http.dart';
@@ -35,15 +37,44 @@ class FontDownloadResult {
     this.files = const <ImportedFontFile>[],
     this.error,
     this.cancelled = false,
+    this.unreachable = false,
   });
 
   final List<ImportedFontFile> files;
   final String? error;
   final bool cancelled;
 
+  /// 所有下载源都在传输层失败（连不上 / 超时 / TLS），没有一个源真正答复过。
+  /// 这是「网络到不了下载源」，UI 据此提示配置网络代理或手动导入字体文件，而不是
+  /// 只报一个失败计数（反馈 f4ybrMM0mP「要自己配置，也没提醒」）。
+  final bool unreachable;
+
   int get importedCount => files.length;
 
   bool get succeeded => error == null && !cancelled && files.isNotEmpty;
+}
+
+/// 这次失败是不是「请求根本没送到 / 没拿到答复」的传输层失败（连接超时、连接
+/// 错误、收发超时、证书失败，或底层是 socket / TLS 异常）。服务端已经答复的
+/// 4xx/5xx 不算——那不是网络到不了，换代理也没用。
+@visibleForTesting
+bool isFontDownloadTransportFailure(DioError e) {
+  switch (e.type) {
+    case DioErrorType.connectionTimeout:
+    case DioErrorType.sendTimeout:
+    case DioErrorType.receiveTimeout:
+    case DioErrorType.connectionError:
+    case DioErrorType.badCertificate:
+      return true;
+    case DioErrorType.unknown:
+      final Object? cause = e.error;
+      return cause is SocketException ||
+          cause is TlsException ||
+          cause is HttpException;
+    case DioErrorType.badResponse:
+    case DioErrorType.cancel:
+      return false;
+  }
 }
 
 /// 字体文件的下载 / 导入执行体：从 `CustomFontsPage` 里搬出来的纯文件层——
@@ -171,7 +202,8 @@ class FontDownloadService {
   /// - zip（按魔数判）→ 解出其中所有字体条目；给了 [overrideName] 时只挑一个
   ///   （优先 `regular` / `[wght]` 那一份）并以 [overrideName] 命名。
   /// - 字体文件（按 [fileName] 扩展名或魔数判）→ 复制为
-  ///   `<name>_<epochMs><ext>`，name 取 [overrideName] 或去扩展名的 [fileName]。
+  ///   `<name>_<epochMs><ext>`，name 取 [overrideName]，否则取字体 `name` 表里的
+  ///   家族名（[importedFontDisplayName]），读不出才退回去扩展名的 [fileName]。
   /// - 都不是（如 7z/rar 或坏 zip）→ 抛 [FormatException]，由调用方决定怎么提示。
   ///
   /// 只动文件，不写目录偏好。
@@ -205,13 +237,33 @@ class FontDownloadService {
     String ext, {
     String? overrideName,
   }) async {
-    final String name = overrideName ?? p.basenameWithoutExtension(fileName);
+    final String name = overrideName ??
+        importedFontDisplayName(
+          src.path,
+          fallback: p.basenameWithoutExtension(fileName),
+        );
     final String destPath = p.join(
       _ensureFontsDir().path,
-      '${name}_${DateTime.now().millisecondsSinceEpoch}$ext',
+      '${safeWindowsFileName(name)}_${DateTime.now().millisecondsSinceEpoch}$ext',
     );
     await src.copy(destPath);
     return ImportedFontFile(name: name, path: destPath);
+  }
+
+  /// 导入字体文件的目录名：文件 `name` 表里的家族名（Typographic Family 优先），
+  /// 读不出（WOFF2、坏文件）才用 [fallback]（去扩展名的文件名，旧行为）。
+  ///
+  /// 用真实家族名的意义：同一家族的多个字重文件（`KleeOne-Regular.ttf` +
+  /// `KleeOne-SemiBold.ttf`）落成**同名**条目，CSS 生成器把同名条目合成一个家族、
+  /// 每个文件按真实字重各出一条 `@font-face`，粗体请求就会选中粗体文件，而不是把
+  /// 常规字面合成加粗。按文件名命名时两份永远是两个互不相干的家族。
+  @visibleForTesting
+  static String importedFontDisplayName(
+    String path, {
+    required String fallback,
+  }) {
+    final String? family = readFontFamilyNameSync(path);
+    return family == null || family.isEmpty ? fallback : family;
   }
 
   Future<List<ImportedFontFile>> _extractFontsFromArchive(
@@ -249,7 +301,12 @@ class FontDownloadService {
       final String ext = p.extension(entry.name);
       final String destPath = p.join(dir.path, '${baseName}_$ts$ext');
       File(destPath).writeAsBytesSync(entry.content as List<int>);
-      imported.add(ImportedFontFile(name: baseName, path: destPath));
+      // 家族包（Google Fonts 的 zip 里 Regular + SemiBold …）按真实家族名落成同名
+      // 条目，自动合成一个多字重家族。
+      imported.add(ImportedFontFile(
+        name: importedFontDisplayName(destPath, fallback: baseName),
+        path: destPath,
+      ));
     }
     return imported;
   }
@@ -277,6 +334,11 @@ class FontDownloadService {
 
       String? downloadedUrl;
       Object? lastError;
+      // 每个源的失败原因（全部失败时整段写进错误日志——以前只走 debugPrint，
+      // 用户附带的日志里看不到任何字体下载记录，无从诊断）。
+      final List<String> attempts = <String>[];
+      // 是否每个源都败在传输层（没有任何一个源真正答复过）。
+      bool allUnreachable = true;
       for (int i = 0; i < urls.length; i++) {
         final String currentUrl = urls[i];
         debugPrint(
@@ -301,6 +363,8 @@ class FontDownloadService {
             lastError = Exception(
               'Downloaded file is not a valid font or archive',
             );
+            allUnreachable = false;
+            attempts.add('$currentUrl -> not a font or archive');
             await tempFile.delete();
             continue;
           }
@@ -309,16 +373,31 @@ class FontDownloadService {
         } on DioError catch (e) {
           if (e.type == DioErrorType.cancel) rethrow;
           lastError = e;
+          if (!isFontDownloadTransportFailure(e)) allUnreachable = false;
+          final int? status = e.response?.statusCode;
+          attempts.add(
+            '$currentUrl -> ${e.type.name}'
+            '${status == null ? '' : ' $status'}'
+            '${e.error == null ? '' : ' (${e.error})'}',
+          );
           debugPrint('[fushi-fonts] source ${i + 1} failed: ${e.type.name}');
           await discardTemp();
         }
       }
 
       if (downloadedUrl == null) {
-        final Object err = lastError ?? Exception('All sources failed');
-        if (err is Exception) throw err;
-        if (err is Error) throw err;
-        throw Exception(err.toString());
+        ErrorLogService.instance.log(
+          'FontDownloadService.download',
+          Exception(
+            'all ${urls.length} font sources failed:\n${attempts.join('\n')}',
+          ),
+        );
+        await discardTemp();
+        final Object? err = lastError;
+        return FontDownloadResult(
+          error: err is DioError ? err.type.name : '${err ?? 'no source'}',
+          unreachable: allUnreachable && urls.isNotEmpty,
+        );
       }
 
       final List<ImportedFontFile> files = await importFile(

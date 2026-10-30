@@ -4,11 +4,16 @@ import 'dart:math';
 
 import 'package:drift/drift.dart';
 import 'package:flutter/foundation.dart';
+import 'package:fushi_engine/sync/fushi_library_host_service.dart'
+    show audiobookPositionAtPrefKey;
 import 'package:fushi_engine/sync/manga_sync_package.dart';
+import 'package:fushi_engine/sync/sync_asset_store.dart' show AssetEntry;
 import 'package:fushi_engine/sync/online_novel_book.dart';
+import 'package:fushi/src/sync/cloud_book_content_names.dart';
 import 'package:fushi/src/sync/position_converter.dart';
 import 'package:fushi/src/sync/sync_backend.dart';
 import 'package:fushi/src/sync/sync_remote_listing.dart';
+import 'package:fushi/src/sync/paged_book_sync_position.dart';
 import 'package:fushi/src/sync/sync_progress_resolver.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
 import 'package:fushi_engine/sync/ttu_filename.dart';
@@ -70,12 +75,18 @@ class SyncBookResult {
     this.conflictDimension,
     this.conflictLocalVersion,
     this.conflictRemoteVersion,
+    this.contentError,
   });
 
   final SyncResult direction;
   final String title;
   final int? characterCount;
   final String? error;
+
+  /// 进度已判定（[direction] 照实）之后，补传书文件 / 元数据失败的原因。与 [error]
+  /// 分开：内容失败不能把已落地的导入 / 导出改判成失败（[classifySyncApply] 不看它），
+  /// 由编排器单独计入报告的错误。
+  final String? contentError;
 
   // Populated only when `direction == SyncResult.conflict`. The local/remote
   // versions are the diverging progress timestamps; downstream UI uses them
@@ -84,7 +95,31 @@ class SyncBookResult {
   final String? conflictDimension;
   final int? conflictLocalVersion;
   final int? conflictRemoteVersion;
+
+  SyncBookResult withContentError(String message) => SyncBookResult(
+    direction: direction,
+    title: title,
+    characterCount: characterCount,
+    error: error,
+    conflictAssetKey: conflictAssetKey,
+    conflictDimension: conflictDimension,
+    conflictLocalVersion: conflictLocalVersion,
+    conflictRemoteVersion: conflictRemoteVersion,
+    contentError: message,
+  );
 }
+
+/// 本书生效的「上传文件」开关：漫画（[BookFormat.manga]）看 [syncMangaContent]，
+/// 其它格式看 [syncContent]（所有者 2026-10-21：书籍和漫画分开）。云盘补缺路径与互联
+/// live 上传共用这一个判据。
+bool isBookContentSyncEnabled(
+  EpubBookRow book, {
+  required bool syncContent,
+  required bool syncMangaContent,
+}) =>
+    BookFormat.parseOrEpub(book.format) == BookFormat.manga
+        ? syncMangaContent
+        : syncContent;
 
 /// 单本书一次同步的归类结果：成功应用 / 真失败 / 良性空操作。
 ///
@@ -106,7 +141,7 @@ SyncApplyOutcome classifySyncApply(SyncBookResult result) {
     case SyncResult.synced:
     case SyncResult.skipped:
     case SyncResult.conflict:
-      // 冲突被自动同步跳过、不写任何数据，属良性无操作；交由 compare 对话框裁决。
+      // 进度冲突不应用位置变更；书文件可独立补传，进度仍交由 compare 对话框裁决。
       return SyncApplyOutcome.noop;
   }
 }
@@ -139,9 +174,10 @@ class SyncManager {
   bool get _fileBoxIsClientOwned =>
       _scope == SyncChannelScope.forBackendType(SyncBackendType.fushiServer);
 
-  /// Reports content-file (EPUB/audio) transfer progress as a fraction 0..1.
+  /// Reports content-file (EPUB/audio) transfer progress as a fraction 0..1,
+  /// plus the bytes done when the transport counts them.
   /// Only fires when content sync is enabled and a file is being transferred.
-  final void Function(double fraction)? onContentProgress;
+  final SyncTransferProgress? onContentProgress;
 
   /// 同步单本书。返回同步结果。
   Future<SyncBookResult> syncBook({
@@ -151,9 +187,30 @@ class SyncManager {
     required StatisticsSyncMode statsSyncMode,
     required bool syncAudioBook,
     bool syncContent = false,
+    bool syncMangaContent = false,
     bool importOnly = false,
     RemoteListingSnapshot? listing,
   }) async {
+    // 书籍与漫画各有自己的「上传文件」开关：这里一次定下本书生效的那个，下游补缺 /
+    // 导出 sidecar 的门一律只看它（漫画开关关时这本漫画的书文件与 sidecar 都不碰）。
+    final bool contentEnabled = isBookContentSyncEnabled(
+      book,
+      syncContent: syncContent,
+      syncMangaContent: syncMangaContent,
+    );
+    SyncBookResult? progressResult;
+    // 进度已判定后才失败 = 失败的是补传书文件 / 元数据：保留已落地的进度结果（导入 /
+    // 导出 / 冲突都照实上报），失败原因记进 contentError；进度判定前就失败才是整本失败。
+    SyncBookResult failure(String error) {
+      final SyncBookResult? decided = progressResult;
+      if (decided != null) return decided.withContentError(error);
+      return SyncBookResult(
+        direction: SyncResult.skipped,
+        title: book.title,
+        error: error,
+      );
+    }
+
     try {
       final result = await _syncBookOnce(
         book: book,
@@ -161,9 +218,10 @@ class SyncManager {
         syncStats: syncStats,
         statsSyncMode: statsSyncMode,
         syncAudioBook: syncAudioBook,
-        syncContent: syncContent,
+        syncContent: contentEnabled,
         importOnly: importOnly,
         listing: listing,
+        onProgressResult: (SyncBookResult result) => progressResult = result,
       );
       await _persistDriveCache();
       return result;
@@ -181,35 +239,28 @@ class SyncManager {
             syncStats: syncStats,
             statsSyncMode: statsSyncMode,
             syncAudioBook: syncAudioBook,
-            syncContent: syncContent,
+            syncContent: contentEnabled,
             importOnly: importOnly,
             // 重试是因为一次瞬时后端错误；此时快照多半已经陈旧，不再复用它，
             // 老老实实逐本列举拿最新状态。
             listing: null,
+            onProgressResult: (SyncBookResult result) => progressResult = result,
           );
           await _persistDriveCache();
           return result;
         } on SyncBackendError catch (retryError) {
-          return SyncBookResult(
-            direction: SyncResult.skipped,
-            title: book.title,
-            error: retryError.message,
-          );
+          return failure(retryError.message);
+        } on SyncAuthError {
+          rethrow;
+        } catch (retryError) {
+          return failure(retryError.toString());
         }
       }
-      return SyncBookResult(
-        direction: SyncResult.skipped,
-        title: book.title,
-        error: e.message,
-      );
+      return failure(e.message);
     } on SyncAuthError {
       rethrow;
     } catch (e) {
-      return SyncBookResult(
-        direction: SyncResult.skipped,
-        title: book.title,
-        error: e.toString(),
-      );
+      return failure(e.toString());
     }
   }
 
@@ -224,6 +275,7 @@ class SyncManager {
     required StatisticsSyncMode statsSyncMode,
     required bool syncAudioBook,
     bool syncContent = false,
+    bool syncMangaContent = false,
     bool importOnly = false,
     RemoteListingSnapshot? listing,
     void Function(int done, int total, String title)? onBookProgress,
@@ -246,6 +298,7 @@ class SyncManager {
         statsSyncMode: statsSyncMode,
         syncAudioBook: syncAudioBook,
         syncContent: syncContent,
+        syncMangaContent: syncMangaContent,
         importOnly: importOnly,
         listing: listing,
       );
@@ -271,11 +324,12 @@ class SyncManager {
     bool syncContent = false,
     bool importOnly = false,
     RemoteListingSnapshot? listing,
+    required void Function(SyncBookResult result) onProgressResult,
   }) async {
     // BUG-619 / TODO-1329: an empty sanitized title has no unique bookKey and no
     // per-book folder — `ensureBookFolder('')` collapses onto the sync root and
     // scatters this book's progress_/statistics_/audioBook_ JSON (plus cover /
-    // epub) straight into `hibiki-data/` next to real book folders. Mirror the
+    // epub) straight into `fushi-data/` next to real book folders. Mirror the
     // LAN audiobook sweep, which already filters empty keys via
     // audiobookKeyFromPositionPrefKey — such a book is not syncable, skip it.
     if (sanitizeTtuFilename(book.title).isEmpty) {
@@ -306,18 +360,79 @@ class SyncManager {
     // 这本书单独问一次。两条路给出的是**同一批文件名**（快照的 trioFor 与各后端的
     // listSyncFiles 共用同一个 canonical matcher），所以下面的方向判定一个字都不用
     // 改，也不存在「快照说没变就跳过」这种需要被信任的中间结论。
-    final SyncFileTrio syncFiles = listing != null
-        ? listing.trioFor(assetKey)
+    //
+    // BUG-3743：快照只在**明确列出了这本书的文件夹**时才采信。快照按远端返回的
+    // 文件夹名逐字比对，而逐本列举是按路径去问——大小写不敏感（Windows host /
+    // Drive）或 Unicode 规范化不同的文件系统上，路径能问到、名字却对不上；把这种
+    // 「对不上」当成「远端没有任何文件」会按本地旧进度覆盖远端。查不到就回落逐本
+    // 列举：新书本就要付这一次（文件夹刚由 ensureBookFolder 建出），稳态仍是 O(1)。
+    final RemoteListingSnapshot? folderListing =
+        listing != null && listing.hasFolder(assetKey) ? listing : null;
+    final SyncFileTrio syncFiles = folderListing != null
+        ? folderListing.trioFor(assetKey)
         : await _backend.listSyncFiles(folderId);
 
+    final SyncBookResult result = await _syncBookProgress(
+      book: book,
+      assetKey: assetKey,
+      folderId: folderId,
+      syncFiles: syncFiles,
+      direction: direction,
+      syncStats: syncStats,
+      statsSyncMode: statsSyncMode,
+      syncAudioBook: syncAudioBook,
+      syncContent: syncContent,
+      importOnly: importOnly,
+    );
+
+    // 内容失败仍须上报已判定的进度冲突，不能被外层错误包装成普通 skipped。
+    onProgressResult(result);
+
+    // 阅读进度与书文件是独立维度：未读 / 同进度 / 进度冲突都不能证明远端
+    // 已有 EPUB。只补缺失的文件，不改进度、不覆盖已有 sidecar；仅导入模式禁止上传。
+    // 放在进度落地之后，文件上传失败也不会阻断已确定的进度与基线更新。
+    // 互联文件箱只有本 client 写、host 从不读回：书内容走 live 端点，这里一律不传
+    // （单本同步路径 —— 退出书 / 对比弹窗 —— 也传 syncContent，门必须在这里）。
+    if (syncContent && !importOnly && !_fileBoxIsClientOwned) {
+      await _exportContentIfMissing(
+        book: book,
+        folderId: folderId,
+        remoteFileNames: folderListing
+            ?.entriesOf(assetKey)
+            .where((AssetEntry entry) => !entry.isFolder)
+            .map((AssetEntry entry) => entry.name)
+            .toSet(),
+      );
+    }
+    return result;
+  }
+
+  Future<SyncBookResult> _syncBookProgress({
+    required EpubBookRow book,
+    required String assetKey,
+    required String folderId,
+    required SyncFileTrio syncFiles,
+    required SyncDirection? direction,
+    required bool syncStats,
+    required StatisticsSyncMode statsSyncMode,
+    required bool syncAudioBook,
+    required bool syncContent,
+    required bool importOnly,
+  }) async {
     // v82：子表键 = 书稳定 uid（wire/assetKey 仍是 title 派生键，不动）。
     final localPosition = await _db.getReaderPosition(book.uid);
+    // BUG-3537：有声书断点随本书进度方向一起导入，它的「决策时快照」就在这里取，
+    // 落地时据此比较后写入（中间可能有互联对端 PUT 进更新的断点）。
+    final int audiobookStamp = syncAudioBook
+        ? await _db.getPrefTyped<int>(
+            audiobookPositionAtPrefKey(book.bookKey), 0)
+        : 0;
     final chapters = parseChaptersJson(book.chaptersJson);
 
     // HBK-AUDIT-047: compute the local progress fraction so a timestamp tie
     // can be broken by actual content instead of silently declaring 'synced'.
     final double? localProgress = localPosition != null
-        ? _localProgressFraction(localPosition, chapters)
+        ? _localProgressFraction(book, localPosition, chapters)
         : null;
 
     final int? remoteTimestamp = syncFiles.progress != null
@@ -410,6 +525,9 @@ class SyncManager {
         return await _handleImport(
           book: book,
           assetKey: assetKey,
+          // BUG-3537：决策所依据的本地时间戳（无行 = 0）。落地时比较后写入。
+          expectedLocalUpdatedAt: localPosition?.updatedAt ?? 0,
+          expectedAudiobookStamp: audiobookStamp,
           folderId: folderId,
           chapters: chapters,
           progressFileId: progressFileId,
@@ -525,9 +643,17 @@ class SyncManager {
   /// `(sectionIndex, normCharOffset)` 换算（旧的 ttuCharOffset 精确缓存列已删，合并到
   /// 单一阅读位置列；同步精度退化为 normCharOffset 的 0-10000 粒度，可接受）。
   double? _localProgressFraction(
+    EpubBookRow book,
     ReaderPositionRow localPosition,
     List<ChapterCharInfo> chapters,
   ) {
+    // 页式书（漫画 / PDF）没有字符表，按页折算（见 paged_book_sync_position）。
+    if (isPagedSyncBook(book)) {
+      return pagedProgressFraction(
+        pageIndex: localPosition.sectionIndex,
+        pageCount: pagedSyncPageCount(book),
+      );
+    }
     final int total = totalCharacterCount(chapters);
     if (total <= 0) return null;
     final int exploredChars = toExploredCharCount(
@@ -555,6 +681,8 @@ class SyncManager {
   Future<SyncBookResult> _handleImport({
     required EpubBookRow book,
     required String assetKey,
+    required int expectedLocalUpdatedAt,
+    required int expectedAudiobookStamp,
     required String folderId,
     required List<ChapterCharInfo> chapters,
     required String? progressFileId,
@@ -575,16 +703,37 @@ class SyncManager {
 
     // Import progress → (sectionIndex, normCharOffset)。BUG-162: 不再缓存精确
     // exploredCharCount（ttuCharOffset 列已删）；下次导出由 normCharOffset 重算。
-    final pos = fromExploredCharCount(
-      exploredCharCount: remoteProgress.exploredCharCount,
-      chapters: chapters,
+    // 页式书（漫画 / PDF）的 exploredCharCount 是 0-based 页码：走字符表换算会恒得
+    // 第 1 页，把读到一半的漫画重置回开头。
+    final pos = isPagedSyncBook(book)
+        ? (
+            sectionIndex: clampPagedSyncPageIndex(
+              remoteProgress.exploredCharCount,
+              pagedSyncPageCount(book),
+            ),
+            normCharOffset: 0,
+          )
+        : fromExploredCharCount(
+            exploredCharCount: remoteProgress.exploredCharCount,
+            chapters: chapters,
+          );
+    // BUG-3537：比较后写入。决策（_syncBookOnce 读本地）与这里之间隔着网络
+    // `getProgressFile`；这期间本机作为互联 host 可能已落下对端 PUT 的更新进度
+    // （host PUT 只持同步状态窄锁，不再排在整轮同步锁后），本机阅读器也可能刚存过
+    // 进度。本地时间戳一变，这次导入的决策就作废：放弃落地、不记基线，下一轮按
+    // 新的本地事实重新判定——绝不能用远端旧值盖掉它。
+    final bool landed = await _db.upsertReaderPositionIfUnchanged(
+      ReaderPositionsCompanion(
+        bookUid: Value(book.uid),
+        sectionIndex: Value(pos.sectionIndex),
+        normCharOffset: Value(pos.normCharOffset),
+        updatedAt: Value(remoteProgress.lastBookmarkModified),
+      ),
+      expectedUpdatedAt: expectedLocalUpdatedAt,
     );
-    await _db.upsertReaderPosition(ReaderPositionsCompanion(
-      bookUid: Value(book.uid),
-      sectionIndex: Value(pos.sectionIndex),
-      normCharOffset: Value(pos.normCharOffset),
-      updatedAt: Value(remoteProgress.lastBookmarkModified),
-    ));
+    if (!landed) {
+      return SyncBookResult(direction: SyncResult.skipped, title: book.title);
+    }
 
     // BUG-201: the authoritative progress transfer is the upsert above — after
     // it, local.updatedAt == remoteProgress.lastBookmarkModified == the remote
@@ -612,7 +761,12 @@ class SyncManager {
     if (syncAudioBook && audioBookFileId != null) {
       final remoteAudio = await _backend.getAudioBookFile(audioBookFileId);
       final posMs = (remoteAudio.playbackPositionSec * 1000).round();
-      await _repo.setAudiobookPosition(book.bookKey, posMs);
+      // BUG-3537：同上，比较后写入——断点时间戳已被别的写者推进就放弃。
+      await _db.runIfIntPrefUnchanged(
+        stampKey: audiobookPositionAtPrefKey(book.bookKey),
+        expectedStamp: expectedAudiobookStamp,
+        write: () => _repo.setAudiobookPosition(book.bookKey, posMs),
+      );
     }
 
     return SyncBookResult(
@@ -644,14 +798,26 @@ class SyncManager {
     if (localPosition != null) {
       // BUG-162: 由 (sectionIndex, normCharOffset) 直接换算（精确缓存列 ttuCharOffset
       // 已删，合并为单一阅读位置列）。
-      exploredChars = toExploredCharCount(
-        sectionIndex: localPosition.sectionIndex,
-        normCharOffset: localPosition.normCharOffset,
-        chapters: chapters,
-      );
-
-      final total = totalCharacterCount(chapters);
-      final progress = total > 0 ? exploredChars / total : 0.0;
+      // 页式书（漫画 / PDF）：exploredCharCount 写 0-based 页码、progress 写按页
+      // 分数（见 paged_book_sync_position）；字符表换算对它们恒为 0。
+      final double progress;
+      if (isPagedSyncBook(book)) {
+        exploredChars =
+            localPosition.sectionIndex < 0 ? 0 : localPosition.sectionIndex;
+        progress = pagedProgressFraction(
+              pageIndex: exploredChars,
+              pageCount: pagedSyncPageCount(book),
+            ) ??
+            0.0;
+      } else {
+        exploredChars = toExploredCharCount(
+          sectionIndex: localPosition.sectionIndex,
+          normCharOffset: localPosition.normCharOffset,
+          chapters: chapters,
+        );
+        final total = totalCharacterCount(chapters);
+        progress = total > 0 ? exploredChars / total : 0.0;
+      }
       final timestampMs = localPosition.updatedAt;
 
       final wireProgress = TtuProgress(
@@ -719,9 +885,10 @@ class SyncManager {
       // BUG-162: 导出不再回写精确缓存（ttuCharOffset 列已删）；本地阅读位置不变，无需写库。
     }
 
-    // Export EPUB file if content sync is enabled
-    if (syncContent) {
-      await _exportContentIfMissing(book: book, folderId: folderId);
+    // 权威 sidecar 只随导出覆盖写入；补传路径只补缺失的（见 [_exportContentIfMissing]），
+    // 不能覆盖冲突 / 导入方向的元数据。互联文件箱无人读，不写。
+    if (syncContent && !_fileBoxIsClientOwned) {
+      await _exportBookMetadata(book: book, folderId: folderId);
     }
 
     return SyncBookResult(
@@ -733,10 +900,26 @@ class SyncManager {
 
   // ── Content file sync ─────────────────────────────────────────────
 
+  /// 补齐远端书文件夹里缺失的书文件与元数据 sidecar（与阅读进度无关）。
+  ///
+  /// [remoteFileNames] 是本轮列举快照里这本书文件夹的文件名；`null` = 没有快照（WebDAV /
+  /// FTP / 单本同步路径），此时在确有东西要补时列一次目录，而不是逐个文件探针。快照
+  /// 说缺的书文件上传前再实时确认一次（快照可能早于同轮的并发上传 / 重试，避免传出
+  /// 两份）。书文件夹里只放书内容资产（EPUB `<title>.epub` / 漫画包
+  /// `<title>.manga.zip`，命名见 `cloud_book_content_names.dart`）与 sidecar：读取方
+  /// （`importRemoteBookFolder` / 对比弹窗）只认这两种内容名与 `.fushiaudio`，有声书
+  /// 音频由 `.fushiaudio` 包负责，原始音频文件不往这里传。
   Future<void> _exportContentIfMissing({
     required EpubBookRow book,
     required String folderId,
+    required Set<String>? remoteFileNames,
   }) async {
+    Set<String>? names = remoteFileNames;
+    Future<Set<String>> remoteNames() async => names ??= <String>{
+      for (final AssetEntry e in await _backend.listChildren(folderId))
+        if (!e.isFolder) e.name,
+    };
+
     // Export EPUB. There is NO standalone .epub on disk — books are stored
     // extracted, and book.epubPath is only the original filename (it never
     // resolves to a real file, so the old `File(book.epubPath).existsSync()`
@@ -745,19 +928,36 @@ class SyncManager {
     final BookFormat format = BookFormat.parseOrEpub(book.format);
     // PDF 无内容同步通道（与互联侧 _syncBooksContentLive 同判据）：不打包、不上传。
     // 在线小说占位书（LNReader）不上传：对端拿到的会是一本补不全的书。
-    if (format != BookFormat.pdf &&
+    // 漫画先判本地有没有可导出的页（在线漫画占位书没有）再问远端，否则这类书每轮
+    // 白发一次探针（与互联 books.part 同顺序）。
+    final bool exportable =
+        format != BookFormat.pdf &&
         !isLnReaderOnlineBookMetadata(book.sourceMetadata) &&
         book.extractDir.isNotEmpty &&
-        Directory(book.extractDir).existsSync()) {
-      // 漫画包与 EPUB 共用同一个资产名 `<title>.epub`——与互联通道同契约（扩展名
-      // 不参与判定，内容即真相，导入侧 isMangaPackage 嗅探分流）。云盘侧因此不需
-      // 要第二套命名：内容探针 / getRemoteBook / 对比弹窗的「远端有无内容」判据
-      // 全部零改。
-      final fileName = '${sanitizeTtuFilename(book.title)}.epub';
-      final existing = await _backend.findContentFile(folderId, fileName);
-      if (existing == null) {
+        Directory(book.extractDir).existsSync() &&
+        (format != BookFormat.manga ||
+            hasExportableMangaContent(book.extractDir));
+    if (exportable) {
+      // 漫画包用漫画专属名 `<title>.manga.zip`（所有者 2026-10-21：书籍和漫画分开），
+      // EPUB 仍是 `<title>.epub`。旧版本把漫画包也传成 `<title>.epub`：远端已有那份
+      // 旧名就算已有，不再传第二份（读取方新旧名都认，导入一律按内容嗅探分流）。
+      final bool isManga = format == BookFormat.manga;
+      final String fileName = isManga
+          ? cloudMangaContentFileName(book.title)
+          : cloudEpubContentFileName(book.title);
+      final List<String> presentNames = <String>[
+        fileName,
+        if (isManga) cloudEpubContentFileName(book.title),
+      ];
+      final Set<String> listed = await remoteNames();
+      bool present = presentNames.any(listed.contains);
+      for (final String name in presentNames) {
+        if (present) break;
+        present = await _backend.findContentFile(folderId, name) != null;
+      }
+      if (!present) {
         final Directory tmpDir =
-            Directory.systemTemp.createTempSync('hibiki_epub_export');
+            Directory.systemTemp.createTempSync('fushi_epub_export');
         final File epubTmp = File(p.join(tmpDir.path, fileName));
         try {
           // 漫画 → 书目录整树 zip（manga.json 标记 + 页图）；EPUB → 既有重打包。
@@ -782,6 +982,27 @@ class SyncManager {
       }
     }
 
+    // 书文件夹元数据：只补远端缺的，已有的绝不覆盖（覆盖写只归导出方向，见
+    // [_exportBookMetadata]）。此前它们只随导出写：未读的书 EPUB 补上了，下载端
+    // （importRemoteBookFolder）却永远读不到标签 / 自定义 CSS / 漫画阅读设置。
+    await _exportBookMetadata(
+      book: book,
+      folderId: folderId,
+      skip: (String assetName) async =>
+          (await remoteNames()).contains(assetName),
+    );
+  }
+
+  /// 只在已决定导出时发布可变元数据；缺失文件修复不拥有这些 sidecar。
+  ///
+  /// [skip] 非空时逐个 sidecar 问一次：返回 true 就不写（补缺路径用它跳过远端已有的）。
+  Future<void> _exportBookMetadata({
+    required EpubBookRow book,
+    required String folderId,
+    Future<bool> Function(String assetName)? skip,
+  }) async {
+    Future<bool> wanted(String assetName) async =>
+        skip == null || !await skip(assetName);
     // TODO-1165 / tags 稳健档：书标签 sidecar（LWW-element-set v2）。标签每设备本地，
     // 跨设备按名带、落地端按名归一。与内容同属「书文件夹元数据」，同受 syncContent 门控
     // （本方法仅在 syncContent 开时被 _handleExport 调用）。putJsonAsset 覆盖写权威全量
@@ -792,7 +1013,8 @@ class SyncManager {
         await _db.bookTagAddedAtByName(book.bookKey);
     final Map<String, int> tagTombstones =
         await _db.tagTombstonesByName(book.bookKey, MediaKind.epub);
-    if (tagAddedAt.isNotEmpty || tagTombstones.isNotEmpty) {
+    if ((tagAddedAt.isNotEmpty || tagTombstones.isNotEmpty) &&
+        await wanted(kSyncBookTagsAssetName)) {
       await _backend
           .putJsonAsset(folderId, kSyncBookTagsAssetName, <String, Object?>{
         'schemaVersion': 2,
@@ -805,7 +1027,7 @@ class SyncManager {
     // per-book 自定义 CSS sidecar（LWW by updatedAt）。用户改写的书内 CSS 存 book_css.json
     // 权威全量快照（含重置墓碑 deleted），供他端按 updatedAt 取较新落地。有行才写。
     final List<BookCustomCssRow> cssRows = await _db.getBookCssRows(book.uid);
-    if (cssRows.isNotEmpty) {
+    if (cssRows.isNotEmpty && await wanted(kSyncBookCssAssetName)) {
       await _backend
           .putJsonAsset(folderId, kSyncBookCssAssetName, <String, Object?>{
         'schemaVersion': 1,
@@ -822,7 +1044,7 @@ class SyncManager {
 
     final MangaReaderOverrideRow? readerOverride =
         await _db.getMangaReaderOverride(book.uid);
-    if (readerOverride != null) {
+    if (readerOverride != null && await wanted(kSyncMangaReaderAssetName)) {
       await _backend.putJsonAsset(
         folderId,
         kSyncMangaReaderAssetName,
@@ -834,73 +1056,6 @@ class SyncManager {
         },
       );
     }
-
-    // Export audio files
-    final audioPaths = await _resolveAudioPaths(book.bookKey);
-    for (final audioPath in audioPaths) {
-      final audioFile = File(audioPath);
-      if (!audioFile.existsSync()) continue;
-      final audioName = p.basename(audioPath);
-      final existing = await _backend.findContentFile(folderId, audioName);
-      if (existing != null) continue;
-      await _backend.uploadContentFile(
-        folderId: folderId,
-        fileName: audioName,
-        file: audioFile,
-        onProgress: onContentProgress,
-      );
-    }
-  }
-
-  static const _audioExtensions = {
-    '.mp3',
-    '.m4a',
-    '.m4b',
-    '.aac',
-    '.ogg',
-    '.opus',
-    '.flac',
-    '.wav',
-    '.wma',
-    '.ac3',
-    '.eac3',
-    '.mp4',
-  };
-
-  Future<List<String>> _resolveAudioPaths(String bookKey) async {
-    final row = await _db.getAudiobookByBookKey(bookKey);
-    if (row == null) return const [];
-
-    if (row.audioPathsJson != null) {
-      // HBK-AUDIT-138: a malformed audioPathsJson row must not throw an
-      // unguarded Format/CastError that aborts content sync for the book.
-      // Parse defensively and fall through to the audioRoot scan on failure.
-      try {
-        final dynamic decoded = jsonDecode(row.audioPathsJson!);
-        if (decoded is List) {
-          return decoded.whereType<String>().toList();
-        }
-      } on FormatException catch (e) {
-        debugPrint('[sync] audioPathsJson decode failed for book $bookKey: $e');
-      }
-    }
-
-    if (row.audioRoot != null) {
-      final dir = Directory(row.audioRoot!);
-      if (dir.existsSync()) {
-        final paths = dir
-            .listSync()
-            .whereType<File>()
-            .where((f) =>
-                _audioExtensions.contains(p.extension(f.path).toLowerCase()))
-            .map((f) => f.path)
-            .toList()
-          ..sort();
-        return paths;
-      }
-    }
-
-    return const [];
   }
 
   // ── Statistics merge ──────────────────────────────────────────────

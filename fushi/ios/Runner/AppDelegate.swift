@@ -1,6 +1,94 @@
 import CoreText
+import MetricKit
 import UIKit
+import UserNotifications
 import Flutter
+import workmanager_apple
+
+/// 「开发者回复了你的反馈」的 APNs 远程推送（Dart 侧 lib/src/feedback/feedback_push.dart，
+/// 服务端 services/leaderboard/src/feedback_push.js）。
+///
+/// 不引入推送插件：FlutterAppDelegate 已经把 APNs 注册回调与 UNUserNotificationCenter
+/// 委托转发出来，这里只做三件事——注册拿 device token、认出自己的推送（载荷
+/// `fushi.feedback` = 反馈 id）、把点击 / 前台到达交给 Dart。别的通知（本地通知等）一律
+/// 原样交还 super，由 flutter_local_notifications 处理。
+///
+/// 没有 aps-environment entitlement（未签名侧载包、描述文件没开 Push）时系统走
+/// didFailToRegister，Dart 拿到 nil 就不登记——缺能力时安全空转。
+final class FushiRemotePush {
+  static let shared = FushiRemotePush()
+  static let channelName = "app.fushi.reader/remote_push"
+
+  private var channel: FlutterMethodChannel?
+  /// 等 didRegister / didFail 的 Dart 调用（并发的 register 合并成一次系统注册）。
+  private var pendingTokenResults: [FlutterResult] = []
+  /// Dart 还没就绪时点到的反馈（冷启动由推送拉起）。
+  private var launchFeedbackId: String?
+  /// Dart 调过 takeLaunchFeedbackId 之后，事件直接投给 Dart。
+  private var dartReady = false
+
+  func install(binaryMessenger: FlutterBinaryMessenger) {
+    let channel = FlutterMethodChannel(name: Self.channelName, binaryMessenger: binaryMessenger)
+    channel.setMethodCallHandler { [weak self] (call, result) in
+      guard let self = self else {
+        result(nil)
+        return
+      }
+      switch call.method {
+      case "register":
+        self.pendingTokenResults.append(result)
+        if self.pendingTokenResults.count == 1 {
+          UIApplication.shared.registerForRemoteNotifications()
+        }
+      case "takeLaunchFeedbackId":
+        self.dartReady = true
+        result(self.launchFeedbackId)
+        self.launchFeedbackId = nil
+      default:
+        result(FlutterMethodNotImplemented)
+      }
+    }
+    self.channel = channel
+  }
+
+  func didRegister(deviceToken: Data) {
+    finishToken(deviceToken.map { String(format: "%02x", $0) }.joined())
+  }
+
+  func didFail(error: Error) {
+    NSLog("FushiRemotePush: registerForRemoteNotifications failed: %@", error.localizedDescription)
+    finishToken(nil)
+  }
+
+  private func finishToken(_ token: String?) {
+    let results = pendingTokenResults
+    pendingTokenResults = []
+    for result in results {
+      result(token)
+    }
+  }
+
+  /// 本 app 的反馈推送载荷 → 反馈 id；别的通知返回 nil。
+  static func feedbackId(_ userInfo: [AnyHashable: Any]) -> String? {
+    guard let fushi = userInfo["fushi"] as? [String: Any],
+      let id = fushi["feedback"] as? String, !id.isEmpty
+    else { return nil }
+    return id
+  }
+
+  func tapped(_ id: String) {
+    if dartReady, let channel = channel {
+      channel.invokeMethod("onTap", arguments: id)
+    } else {
+      launchFeedbackId = id
+    }
+  }
+
+  func foreground(_ id: String) {
+    guard dartReady else { return }
+    channel?.invokeMethod("onForegroundPush", arguments: id)
+  }
+}
 
 @main
 @objc class AppDelegate: FlutterAppDelegate, FlutterStreamHandler, FlutterImplicitEngineDelegate {
@@ -14,6 +102,10 @@ import Flutter
   private var challengeBrowser: FushiChallengeBrowser?
   /// 强引用：channel handler 只弱持有它，且它自己是文档选择器的 delegate（UIKit 弱引用）。
   private var directoryImport: FushiDirectoryImport?
+  /// 系统「降低透明度」订阅（`app.fushi/system_transparency`）。强引用 channel 与
+  /// observer token，进程内只装一次。
+  private var systemTransparencyChannel: FlutterMethodChannel?
+  private var systemTransparencyObserver: NSObjectProtocol?
 
   // TODO-057: brightness override applied during a video session. We snapshot
   // the user's brightness the first time the player asks (getBrightness) and
@@ -23,11 +115,85 @@ import Flutter
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
+    // 「反馈有新回复时通知我」的后台检查（BGAppRefreshTask；Dart 侧
+    // lib/src/feedback/feedback_reply_background.dart）。UIScene 生命周期下插件在
+    // didFinishLaunching 返回之后才注册，系统在后台拉起 app 时要求 launch handler
+    // 已经登记——所以必须在这里、在 super 之前登记。identifier 与 Info.plist 的
+    // BGTaskSchedulerPermittedIdentifiers、Dart 的 kFeedbackReplyTaskName 逐字一致。
+    // 后台引擎里的插件（path_provider 解数据根、flutter_local_notifications 发通知）
+    // 经 GeneratedPluginRegistrant 注册。
+    WorkmanagerPlugin.setPluginRegistrantCallback { registry in
+      GeneratedPluginRegistrant.register(with: registry)
+    }
+    WorkmanagerPlugin.registerPeriodicTask(
+      withIdentifier: "app.fushi.feedback-reply-check",
+      earliestBeginInSeconds: NSNumber(value: 15 * 60))
+    // 通知点击 / 前台到达的委托：FlutterAppDelegate 把它转发给插件
+    // （flutter_local_notifications 的本地通知），我们的远程推送在下面两个 override 里
+    // 先认领。必须在 didFinishLaunching 返回前设好，冷启动的那次点击才收得到。
+    UNUserNotificationCenter.current().delegate = self
+    // MetricKit 崩溃诊断：系统在下次启动后交付上次的 MXCrashDiagnostic，落盘给 Dart
+    // previous_exit_log.dart 摘要进错误日志（Dart 接不到的原生崩溃 / 被系统杀）。
+    FushiCrashDiagnostics.shared.start()
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+
+  override func application(
+    _ application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+  ) {
+    FushiRemotePush.shared.didRegister(deviceToken: deviceToken)
+    super.application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
+  }
+
+  override func application(
+    _ application: UIApplication,
+    didFailToRegisterForRemoteNotificationsWithError error: Error
+  ) {
+    FushiRemotePush.shared.didFail(error: error)
+    super.application(application, didFailToRegisterForRemoteNotificationsWithError: error)
+  }
+
+  /// 前台收到反馈推送：照常弹系统横幅（被推送覆盖的反馈不再弹应用内提示，见
+  /// feedback_reply_notifier.dart），同时让 Dart 立刻刷新一次进度。
+  override func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    if let id = FushiRemotePush.feedbackId(notification.request.content.userInfo) {
+      FushiRemotePush.shared.foreground(id)
+      completionHandler([.banner, .list, .sound])
+      return
+    }
+    super.userNotificationCenter(
+      center, willPresent: notification, withCompletionHandler: completionHandler)
+  }
+
+  /// 点了反馈推送 → Dart 打开那条反馈（冷启动先暂存，Dart 就绪后取走）。
+  override func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    didReceive response: UNNotificationResponse,
+    withCompletionHandler completionHandler: @escaping () -> Void
+  ) {
+    if let id = FushiRemotePush.feedbackId(response.notification.request.content.userInfo) {
+      if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
+        FushiRemotePush.shared.tapped(id)
+      }
+      completionHandler()
+      return
+    }
+    super.userNotificationCenter(
+      center, didReceive: response, withCompletionHandler: completionHandler)
   }
 
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
+    // 查词浮层的真模糊背衬：WebView 下方的 UIVisualEffectView 平台视图
+    // （apple/FushiNativeMaterialView.swift，Dart 侧 fushi_native_material.dart）。
+    if let registrar = engineBridge.pluginRegistry.registrar(forPlugin: "FushiNativeMaterial") {
+      FushiNativeMaterial.register(with: registrar)
+    }
     installChannels(binaryMessenger: engineBridge.applicationRegistrar.messenger())
   }
 
@@ -53,12 +219,19 @@ import Flutter
     // 系统语音转录（iOS 26 的 SpeechAnalyzer）。老系统上原生侧应答「不支持」，
     // Dart 侧据此不把这个引擎放进下拉。
     FushiSpeechTranscriber.register(binaryMessenger: binaryMessenger)
+    // 系统语音（AVSpeechSynthesizer 合成到 WAV）：朗读声音的「系统语音」与制卡发音
+    // 兜底。只实现 ttsToFile / getVoices，见 FushiSystemTts.swift。
+    FushiSystemTts.register(binaryMessenger: binaryMessenger)
     // 复制图片到剪贴板（视频截图 / 阅读器内联图）。与 macOS 同一份实现，
     // 方法名与入参逐字对齐 Windows 那份 CF_DIB 实现。
     FushiClipboardImage.register(binaryMessenger: binaryMessenger)
     // 全局悬浮球的 iOS 半边：截本 app 窗口给 OCR + App Intent 查词投递
     // （docs/specs/2026-09-28-floating-ball.md）。
     FushiFloatingBall.register(binaryMessenger: binaryMessenger)
+    // 音乐输出：AVAudioSession 首选采样率（Dart 契约 music_platform_output.dart）。
+    MusicOutputChannel.register(binaryMessenger: binaryMessenger)
+    // 反馈回复的 APNs 远程推送（见文件顶部 FushiRemotePush）。
+    FushiRemotePush.shared.install(binaryMessenger: binaryMessenger)
     // 查词输入框的输入法语言。install 必须在任何输入框成为第一响应者之前完成——
     // `textInputMode` 是在 becomeFirstResponder **之前**被读的。
     let imeInstalled = LookupImeLanguage.install()
@@ -248,6 +421,36 @@ import Flutter
       default:
         result(FlutterMethodNotImplemented)
       }
+    }
+
+    installSystemTransparencyChannel(binaryMessenger: binaryMessenger)
+  }
+
+  /// 系统设置「辅助功能 → 显示与文字大小 → 降低透明度」：Dart 侧 `SystemTransparency`
+  /// 经 `getReduceTransparency` 读一次，之后由这里在状态变化时推
+  /// `reduceTransparencyChanged`（与 Windows / macOS 同一契约）。
+  private func installSystemTransparencyChannel(binaryMessenger: FlutterBinaryMessenger) {
+    guard systemTransparencyChannel == nil else { return }
+    let channel = FlutterMethodChannel(
+      name: "app.fushi/system_transparency",
+      binaryMessenger: binaryMessenger)
+    channel.setMethodCallHandler { (call, result) in
+      switch call.method {
+      case "getReduceTransparency":
+        result(UIAccessibility.isReduceTransparencyEnabled)
+      default:
+        result(FlutterMethodNotImplemented)
+      }
+    }
+    systemTransparencyChannel = channel
+    systemTransparencyObserver = NotificationCenter.default.addObserver(
+      forName: UIAccessibility.reduceTransparencyStatusDidChangeNotification,
+      object: nil,
+      queue: .main
+    ) { [weak self] _ in
+      self?.systemTransparencyChannel?.invokeMethod(
+        "reduceTransparencyChanged",
+        arguments: UIAccessibility.isReduceTransparencyEnabled)
     }
   }
 
@@ -454,5 +657,66 @@ import Flutter
     let task = ankiMobileMediaBackgroundTask
     ankiMobileMediaBackgroundTask = .invalid
     UIApplication.shared.endBackgroundTask(task)
+  }
+}
+
+/// MetricKit 崩溃诊断订阅（iOS 14+；本工程最低 15.1，iOS 15 起系统在下次启动后交付上次
+/// 的诊断）。每条 `MXCrashDiagnostic` 的 JSON 落到 `Documents/metrickit/`（与 path_provider
+/// 的 getApplicationDocumentsDirectory 同一目录），由 Dart `previous_exit_log.dart` 摘要
+/// （异常类型 / 信号 / 终止原因 / 崩溃线程前若干帧）进错误日志后删除。单条截到 256 KB，
+/// 目录只留最近 10 条，不让诊断无界堆积。
+final class FushiCrashDiagnostics: NSObject, MXMetricManagerSubscriber {
+  static let shared = FushiCrashDiagnostics()
+
+  private static let maxBytes = 256 * 1024
+  private static let maxFiles = 10
+
+  func start() {
+    MXMetricManager.shared.add(self)
+  }
+
+  func didReceive(_ payloads: [MXDiagnosticPayload]) {
+    guard
+      let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+    else { return }
+    let dir = docs.appendingPathComponent("metrickit", isDirectory: true)
+    try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+    for payload in payloads {
+      for crash in payload.crashDiagnostics ?? [] {
+        var data = crash.jsonRepresentation()
+        if data.count > FushiCrashDiagnostics.maxBytes {
+          // 调用树太大：只留元数据（异常类型 / 码 / 信号 / 终止原因），仍是合法 JSON。
+          let meta: [String: Any] = [
+            "appVersion": crash.applicationVersion,
+            "exceptionType": crash.exceptionType?.intValue ?? -1,
+            "exceptionCode": crash.exceptionCode?.intValue ?? -1,
+            "signal": crash.signal?.intValue ?? -1,
+            "terminationReason": crash.terminationReason ?? "",
+            "virtualMemoryRegionInfo": crash.virtualMemoryRegionInfo ?? "",
+            "callStackTreeDropped": data.count,
+          ]
+          data =
+            (try? JSONSerialization.data(withJSONObject: ["diagnosticMetaData": meta]))
+            ?? Data()
+        }
+        let stamp = Int(payload.timeStampEnd.timeIntervalSince1970 * 1000)
+        let name = "crash-\(stamp)-\(UUID().uuidString.prefix(8)).json"
+        try? data.write(to: dir.appendingPathComponent(name), options: .atomic)
+      }
+    }
+    prune(dir)
+  }
+
+  private func prune(_ dir: URL) {
+    guard
+      let files = try? FileManager.default.contentsOfDirectory(
+        at: dir, includingPropertiesForKeys: nil)
+    else { return }
+    let sorted = files.filter { $0.pathExtension == "json" }
+      .sorted { $0.lastPathComponent < $1.lastPathComponent }
+    if sorted.count <= FushiCrashDiagnostics.maxFiles { return }
+    for url in sorted.prefix(sorted.count - FushiCrashDiagnostics.maxFiles) {
+      try? FileManager.default.removeItem(at: url)
+    }
   }
 }

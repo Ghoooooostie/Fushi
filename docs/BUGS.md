@@ -7,9 +7,13 @@
 > 这样并发 agent 各写各的文件，永不在同一处产生 git 冲突；撞号也只是两个不同文件名，
 > 改个名即可，不再有冲突标记手术。
 >
-> 新建一条：`dart run tool/bug.dart new <slug> [标题...]`（跨本地+远端分支取下一个空号、生成骨架、重建索引）。
-> 撞号了：`dart run tool/bug.dart renumber <old> <new>`（文件名 + 正文 H2 + 代码/测试引用一把改 + 自校验；
-> 别手改——只改文件名不改正文 H2 会让 `bugs_per_file_guard_test` 变红）。
+> 新建一条：`dart run tool/bug.dart new <slug> [标题...]`（取「本地 + origin/develop」已占最大号 + 1、生成骨架、重建索引；
+> 不 fetch、不遍历其它分支）。并发分支撞号不用提前防：把 develop 合进来 / rebase 之后跑
+> `dart run tool/bug.dart settle`，每组同号文件里**最早进入 develop 首父链**的那份保留原号，develop 上没有的
+> 那一份改到下一个空号并重建索引；develop 收到 push 时 CI（`bug-number-settle.yml`）在最新的 develop 尖端上
+> 跑同一判据并提交（推送被拒就整轮重算），被取消 / 乱序的 run 留下的撞号由下一次一并收口。
+> 手动改号用 `dart run tool/bug.dart renumber <old> <new>`
+> （文件名 + 正文 H2 + 代码/测试引用一把改 + 自校验；别手改——只改文件名不改正文 H2 会让 `bugs_per_file_guard_test` 变红）。
 > 改完某条 bug 文件后：`dart run tool/bug.dart reindex` 重建下面的索引表。
 >
 > 每条 bug 文件里：
@@ -29,15 +33,826 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2676 条。点号进各自文件。
+> 共 3490 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-3886](bugs/BUG-3886-eink-highlight-line-clipped-at-ruby-emphasis.md) | ✅ | ✅ | 墨水屏跟读线在注音 / 着重号处断开、字形被切（VN） |
+| [BUG-3885](bugs/BUG-3885-music-player-no-volume-and-bar-close.md) | ✅ | ✅ | music-player-no-volume-and-bar-close |
+| [BUG-3884](bugs/BUG-3884-maximize-button-hover-hides-caption.md) | ✅ | ✅ | maximize-button-hover-hides-caption |
+| [BUG-3883](bugs/BUG-3883-media-pages-caption-bar-wastes-space.md) | ✅ | ✅ | media-pages-caption-bar-wastes-space |
+| [BUG-3882](bugs/BUG-3882-video-continue-card-hover-clipped.md) | ✅ | ✅ | video-continue-card-hover-clipped |
+| [BUG-3881](bugs/BUG-3881-music-library-top-bar-inconsistent.md) | ✅ | ✅ | music-library-top-bar-inconsistent |
+| [BUG-3880](bugs/BUG-3880-music-source-cannot-remove.md) | ✅ | ✅ | music-source-cannot-remove |
+| [BUG-3879](bugs/BUG-3879-web-mine-replay-cover-only.md) | ✅ | ✅ | web-mine-replay-cover-only |
+| [BUG-3878](bugs/BUG-3878-video-remote-web-video-uncontrollable.md) | ✅ | ✅ | video-remote-web-video-uncontrollable |
+| [BUG-3877](bugs/BUG-3877-srs-sync-review-lag.md) | ✅ | ✅ | srs-sync-review-lag |
+| [BUG-3876](bugs/BUG-3876-srs-webview-card-lookup-gate-never-sent.md) | ✅ | ✅ | srs-webview-card-lookup-gate-never-sent |
+| [BUG-3875](bugs/BUG-3875-interconnect-lists-unstreamable-videos.md) | ✅ | ✅ | interconnect-lists-unstreamable-videos |
+| [BUG-3874](bugs/BUG-3874-android-debug-apk-extra-abis.md) | ✅ | ✅ | android-debug-apk-extra-abis |
+| [BUG-3873](bugs/BUG-3873-kavita-pull-ignored-after-push.md) | ✅ | ✅ | Kavita→Fushi 进度拉取失效（时间基线 + 容差吞掉服务器改动） |
+| [BUG-3872](bugs/BUG-3872-lyrics-narrow-illustration-entry.md) | ✅ | ✅ | lyrics-narrow-illustration-entry |
+| [BUG-3871](bugs/BUG-3871-webview2-host-toplevel-steals-activation.md) | ✅ | ✅ | 应用内浏览器真鼠标点 YouTube 设置二级项仍打不开（WebView2 宿主是 owned 顶层窗口，抢走激活） |
+| [BUG-3870](bugs/BUG-3870-reader-floating-leading-overflow.md) | ✅ | ✅ | reader-floating-leading-overflow |
+| [BUG-3869](bugs/BUG-3869-sync-stuck-preparing-drive-listing.md) | ✅ | ✅ | sync-stuck-preparing-drive-listing |
+| [BUG-3868](bugs/BUG-3868-sync-progress-stuck-on-pending-mines.md) | ✅ | ✅ | sync-progress-stuck-on-pending-mines |
+| [BUG-3867](bugs/BUG-3867-host-shelf-progress-stale-after-peer-push.md) | ✅ | ✅ | host-shelf-progress-stale-after-peer-push |
+| [BUG-3866](bugs/BUG-3866-bluray-menu-aacs-win-file-callback-size.md) | ✅ | ✅ | Windows 加密原盘菜单又打不开（fushi_aacs 文件回调把 seek 返回值当文件大小） |
+| [BUG-3865](bugs/BUG-3865-srs-media-sync-sync-stat-freezes-ui.md) | ✅ | ✅ | 复习同步「同步卡片媒体」阶段逐个同步 stat 本机文件，UI 卡死到 ANR |
+| [BUG-3864](bugs/BUG-3864-srs-review-space-dead-on-reveal.md) | 🚧 | 🚧 | 复习页空格翻到答案面后键盘失灵（Windows，未复现） |
+| [BUG-3863](bugs/BUG-3863-srs-auto-reposition-freeze.md) | ✅ | ✅ | 制卡后自动重排卡死白屏、同步也卡 |
+| [BUG-3862](bugs/BUG-3862-srs-profile-link-silent-keep.md) | ✅ | ✅ | 多台设备同名 profile 静默不关联、冲突只闪 toast |
+| [BUG-3861](bugs/BUG-3861-srs-media-sync-full-reconcile-every-round.md) | ✅ | ✅ | 复习媒体同步每轮全量对账（媒体同步慢） |
+| [BUG-3860](bugs/BUG-3860-srs-sync-self-wake-loop.md) | ✅ | ✅ | 复习同步自己唤醒自己无限循环（同步时卡顿、一直在重载） |
+| [BUG-3859](bugs/BUG-3859-superseded-navigation-error-covers-page.md) | ✅ | ✅ | superseded-navigation-error-covers-page |
+| [BUG-3858](bugs/BUG-3858-webview2-click-steals-focus-closes-yt-menu.md) | ✅ | ✅ | Windows 应用内浏览器点网页会把焦点抢回 Flutter，YouTube 设置菜单的二级项打不开 |
+| [BUG-3857](bugs/BUG-3857-collection-long-press-waits-release.md) | ✅ | ✅ | collection-long-press-waits-release |
+| [BUG-3856](bugs/BUG-3856-macos-appdelegate-super-selectors.md) | ✅ | ✅ | macOS 导入时打开访达面板后切到别的 app 再切回来必崩（AppDelegate 对 FlutterAppDelegate 没实现的 NSApplicationDelegate 方法调 super） |
+| [BUG-3855](bugs/BUG-3855-emby-waf-dart-user-agent-404.md) | ✅ | ✅ | 部分 Emby 服务器的 CDN/WAF 前置按 UA 拦 Dart 默认 UA，全站回裸 404，添加服务器与登录必失败 |
+| [BUG-3854](bugs/BUG-3854-ai-cannot-link-works.md) | ✅ | ✅ | 内置 AI 助手怎么都做不到「关联作品」 |
+| [BUG-3853](bugs/BUG-3853-collection-longpress-haptic.md) | ✅ | ✅ | collection-longpress-haptic |
+| [BUG-3852](bugs/BUG-3852-web-browser-tab-strip-caption-row-and-exit.md) | ✅ | ✅ | web-browser-tab-strip-caption-row-and-exit |
+| [BUG-3851](bugs/BUG-3851-qbittorrent-52-session-cookie.md) | ✅ | ✅ | qBittorrent 5.2+ 会话 cookie 改名后外接登录失败 |
+| [BUG-3850](bugs/BUG-3850-video-theme-song-hints-removed.md) | ✅ | ✅ | 已删的「跳过片头」按钮换了个实现又回来了，外加 OP 期间「♪ 曲名 · 在音乐库打开」角标，按用户决定两个提示都删 |
+| [BUG-3849](bugs/BUG-3849-srs-outbox-batched-resume.md) | ✅ | ✅ | SRS 同步 v2 发件一次性全量进内存、断点整份重传、推送失败不退避 |
+| [BUG-3848](bugs/BUG-3848-srs-apkg-reimport-after-delete.md) | ✅ | ✅ | 删牌组与笔记类型后重导 apkg：0 new / restored / updated 但浏览、复习、笔记类型页全为空 |
+| [BUG-3847](bugs/BUG-3847-srs-rate-next-card-frame-drops.md) | ✅ | ✅ | SRS 评分后下一张卡掉帧：评分叫醒被盖住的牌组列表 + 卡面无关重建 |
+| [BUG-3846](bugs/BUG-3846-desktop-drop-forbidden-after-video.md) | 🚧 | ✅ | Windows 看完视频后拖书进窗口显示禁止光标 |
+| [BUG-3845](bugs/BUG-3845-manga-epub-import-rejection-silent.md) | 🚧 | ✅ | 漫画导入 EPUB 失败且不留原因 |
+| [BUG-3844](bugs/BUG-3844-epub-svg-cover-page.md) | ✅ | ✅ | EPUB 封面声明指向 XHTML / SVG 封面页时书架没有封面 |
+| [BUG-3843](bugs/BUG-3843-torrent-ratio-limit-lifetime.md) | ✅ | ✅ | BT 分享率上限只在做种阶段截停，下载中上传不受限 |
+| [BUG-3842](bugs/BUG-3842-video-loop-current-line-toggle.md) | ✅ | ✅ | 视频页没有「循环当前句」开关，精听只能反复按重播 |
+| [BUG-3841](bugs/BUG-3841-video-copy-current-line-shortcut.md) | ✅ | ✅ | 视频页没有「复制当前台词」快捷键，只能开字幕列表逐行点 |
+| [BUG-3840](bugs/BUG-3840-video-subtitle-list-remember-tab.md) | ✅ | ✅ | 视频字幕栏每次都从「全部」页签打开，不记得上次停在「收藏」 |
+| [BUG-3839](bugs/BUG-3839-video-replay-cue-autoplay.md) | ✅ | ✅ | 视频暂停时「重播当前句 / 重播上一句」只跳到句首不起播 |
+| [BUG-3838](bugs/BUG-3838-video-jump-pill-hover-flicker.md) | ✅ | ✅ | Windows 视频页「返回跳转前位置」胶囊在鼠标停在边缘时持续闪烁、上下抖动 |
+| [BUG-3837](bugs/BUG-3837-video-seek-thumbnail-under-subtitle.md) | ✅ | ✅ | 进度条悬停缩略图被字幕挡住 |
+| [BUG-3836](bugs/BUG-3836-video-long-press-speed-badge-stuck.md) | ✅ | ✅ | 长按倍速后徽章一直停在画面上，直到重开视频 |
+| [BUG-3835](bugs/BUG-3835-leaderboard-avatar-blank-on-cold-start.md) | ✅ | ✅ | iOS 冷启动首页左上头像空白，打开排行榜 / 反馈页后才出现 |
+| [BUG-3834](bugs/BUG-3834-mine-notice-switch-bypassed.md) | ✅ | ✅ | 关掉制卡成功 / 重复提示后，阅读器、弹窗就地提示与视频 OSD 仍在弹 |
+| [BUG-3833](bugs/BUG-3833-lookup-page-pull-clear-and-keyboard-toggles.md) | ✅ | ✅ | 查词页：结果顶部下拉回到历史、进入自动弹键盘不可关，键盘无收起手段 |
+| [BUG-3832](bugs/BUG-3832-srs-interconnect-sync-crash.md) | ✅ | ✅ | 小米设备 SRS 互联同步 / 复习记录 / 导入卡片时闪退（Dart 日志无栈） |
+| [BUG-3831](bugs/BUG-3831-native-exit-reason-logging.md) | ✅ | ✅ | 原生崩溃 / 被系统杀的进程没有任何日志（反馈分诊约一半闪退卡在 Dart 日志无栈） |
+| [BUG-3830](bugs/BUG-3830-audiobook-paused-explicit-skip-no-follow.md) | ✅ | ✅ | 有声书暂停时显式跳句阅读器视口不跟随 |
+| [BUG-3829](bugs/BUG-3829-audiobook-jump-pill-threshold-and-lyrics-placement.md) | ✅ | ✅ | 有声书返回原位置胶囊阈值过小且歌词模式压住歌词 |
+| [BUG-3828](bugs/BUG-3828-srs-macos-space-after-card-click.md) | ✅ | ✅ | macOS 点过卡面后空格不翻面（键盘桥可被卡片脚本截走 + 加取证） |
+| [BUG-3827](bugs/BUG-3827-srs-card-face-webview-recreated-per-flip.md) | ✅ | ✅ | macOS 复习每次翻面 / 换卡都重建卡面 WebView（installLookup 打进死通道、卡顿） |
+| [BUG-3826](bugs/BUG-3826-srs-native-audio-queue-blocks-stop.md) | ✅ | ✅ | 复习换卡后上一张音频不停（原生 just_audio play() 占住串行队列） |
+| [BUG-3825](bugs/BUG-3825-lyrics-follow-breaks-without-touch.md) | ✅ | ✅ | 歌词模式没碰屏幕也会自动对齐中断、弹出「跟随音频」 |
+| [BUG-3824](bugs/BUG-3824-srs-auto-sync-toggle.md) | ✅ | ✅ | 设置 › 同步加「自动同步复习数据」开关（复习数据后台同步无法单独关闭） |
+| [BUG-3823](bugs/BUG-3823-srs-sync-pull-triggers-push.md) | ✅ | ✅ | 复习同步拉入的变更又触发一轮本机推送，库页横幅反复弹出、内容上下挪 |
+| [BUG-3822](bugs/BUG-3822-emby-auth-header-legacy-brand.md) | ✅ | ✅ | Emby/Jellyfin 认证头仍报旧品牌 Hibiki，添加服务器失败日志无请求轨迹 |
+| [BUG-3821](bugs/BUG-3821-media-server-episode-version-pick.md) | ✅ | ✅ | 媒体服务器：继续观看卡要能去详情，非续播集播放前要能选版本 |
+| [BUG-3820](bugs/BUG-3820-english-ordinal-season-dirs.md) | ✅ | ✅ | 视频解析器不认 Second Season / Season Two 等英文序数季名，合集包续季目录判不出季号 |
+| [BUG-3819](bugs/BUG-3819-cloud-tombstone-per-marker-round-trips.md) | ✅ | ✅ | 云同步删除墓碑阶段逐条 GET 全部远端标记，单阶段 200 s+ |
+| [BUG-3818](bugs/BUG-3818-profile-delete-srs-cascade.md) | ✅ | ✅ | 删 Profile 后 srs.db 里该 uid 的复习数据与媒体目录残留（无主副本） |
+| [BUG-3817](bugs/BUG-3817-video-delete-work-leaves-extras.md) | ✅ | ✅ | 删除动漫只删正片：特典与其余下载资源残留在目录 |
+| [BUG-3816](bugs/BUG-3816-download-organize-multi-work-pack-collision.md) | ✅ | ✅ | 下载整理：多作品合集包续作目录无季号撞名整任务失败 |
+| [BUG-3815](bugs/BUG-3815-interconnect-push-resurrects-host-deleted-book.md) | ✅ | ✅ | 互联客户端把主机「从所有设备删除」的书推回主机并清掉删除墓碑 |
+| [BUG-3814](bugs/BUG-3814-advanced-mining-preview-button-stuck-after-end.md) | ✅ | ✅ | 高级制卡试听播完后按钮停在「停止」，下一次点击只是停止 |
+| [BUG-3813](bugs/BUG-3813-cloud-audiobook-sync-iterates-all-books.md) | ✅ | ✅ | 云同步有声书阶段逐本遍历全部书（含漫画）且收尾阶段无进度，最后一本像卡死 |
+| [BUG-3812](bugs/BUG-3812-feedback-attach-shot-shows-failed-while-uploading.md) | ✅ | ✅ | 反馈详情追加截图上传中就显示「没上传成功+重试」，反馈人以为第一下必定失败 |
+| [BUG-3811](bugs/BUG-3811-cross-platform-merge-audiobook-backslash-paths.md) | ✅ | ✅ | Windows 备份合并到 Android 后，EPUB 配对有声书不跟字幕、进度归零 |
+| [BUG-3810](bugs/BUG-3810-remote-audio-direct-url-treated-as-json.md) | ✅ | ✅ | 英语查词时直接返回音频的自定义 URL 音源（uapis.cn / GPT-SoVITS /tts）没有声音 |
+| [BUG-3809](bugs/BUG-3809-srs-cross-profile-field-edit-id-collision.md) | 🚧 | ✅ | 空 Profile 导入 APKG 撞 srs_field_edits.id 主键；删 Profile 后 SRS 数据残留 |
+| [BUG-3808](bugs/BUG-3808-mdx-placeholder-title-collision.md) | ✅ | ✅ | 无标题 mdx 都被当成同一本「Title (No HTML code allowed)」 |
+| [BUG-3807](bugs/BUG-3807-stale-ctrl-wheel-zoom.md) | ✅ | ✅ | Ctrl 抬起落在 WebView2 后字幕列表滚轮变成缩放字号 |
+| [BUG-3806](bugs/BUG-3806-settings-textfield-stale-after-profile-switch.md) | ✅ | ✅ | 切换 Profile 后设置输入框仍显示上一个 Profile 的值 |
+| [BUG-3805](bugs/BUG-3805-reader-arrow-reversed-binding-overridden.md) | ✅ | ✅ | 方向键改绑成相反翻页方向仍被阅读方向校正覆盖 |
+| [BUG-3804](bugs/BUG-3804-remote-collection-subtitle-episode-index.md) | ✅ | ✅ | 互联合集连播第 2 集起拿不到主机选定的外挂字幕 |
+| [BUG-3803](bugs/BUG-3803-browser-ext-popup-wheel-bubbles.md) | ✅ | ✅ | 扩展查词弹窗里滚轮冒泡到宿主页（b 站调音量） |
+| [BUG-3802](bugs/BUG-3802-feedback-reply-notice-persists.md) | ✅ | ✅ | 反馈回复提示条常驻不消失、遮挡提交按钮 |
+| [BUG-3801](bugs/BUG-3801-netflix-browser-blackscreen-relogin.md) | ✅ | ✅ | Windows 浏览器里看 Netflix 黑屏卡顿，「用 Fushi 播放」要重新登录且要点两次 |
+| [BUG-3800](bugs/BUG-3800-floating-ball-switch-profile-label.md) | ✅ | ✅ | 悬浮球切换配置按钮文案被换成配置名 |
+| [BUG-3799](bugs/BUG-3799-kavita-cache-download-semantics-empty.md) | ✅ | ✅ | Kavita 缓存 / 下载两态是空的：阅读即永久入库、移除下载只翻标记 |
+| [BUG-3798](bugs/BUG-3798-audiobook-chapter-transition-receipt-lost.md) | ✅ | ✅ | audiobook-chapter-transition-receipt-lost |
+| [BUG-3797](bugs/BUG-3797-srs-deleted-tagged-note-stuck-pending.md) | ✅ | ✅ | 带标签的已删笔记一直挂在「等你决定的笔记」里，确认删除也消不掉 |
+| [BUG-3796](bugs/BUG-3796-windows-nav-switch-freeze-a11y-reparent.md) | ✅ | ✅ | windows-nav-switch-freeze-a11y-reparent |
+| [BUG-3795](bugs/BUG-3795-web-browser-overflow-menu-gap.md) | ✅ | ✅ | web-browser-overflow-menu-gap |
+| [BUG-3794](bugs/BUG-3794-web-video-site-floating-ball-unclickable.md) | ✅ | ✅ | web-video-site-floating-ball-unclickable |
+| [BUG-3793](bugs/BUG-3793-web-video-site-backdrop-covers-underlay.md) | ✅ | ✅ | web-video-site-backdrop-covers-underlay |
+| [BUG-3792](bugs/BUG-3792-reader-shrinks-under-ui-scale-below-1.md) | ✅ | ✅ | reader-shrinks-under-ui-scale-below-1 |
+| [BUG-3791](bugs/BUG-3791-audiobook-prev-cue-restarts-long-cue.md) | ✅ | ✅ | 有声书「上一句」在长句中后段只回到本句开头 |
+| [BUG-3790](bugs/BUG-3790-mined-card-viewer-anki-label-on-fushi-review.md) | ✅ | ✅ | mined-card-viewer-anki-label-on-fushi-review |
+| [BUG-3789](bugs/BUG-3789-srs-card-frequency-not-aggregated.md) | ✅ | ✅ | srs-card-frequency-not-aggregated |
+| [BUG-3788](bugs/BUG-3788-srs-template-preview-slow.md) | ✅ | ✅ | srs-template-preview-slow |
+| [BUG-3787](bugs/BUG-3787-srs-two-pane-header-back-lost.md) | ✅ | ✅ | srs-two-pane-header-back-lost |
+| [BUG-3786](bugs/BUG-3786-lnreader-uninstall-wipes-plugin-storage.md) | ✅ | ✅ | lnreader-uninstall-wipes-plugin-storage |
+| [BUG-3785](bugs/BUG-3785-remove-source-orphans-music-tracks.md) | ✅ | ✅ | remove-source-orphans-music-tracks |
+| [BUG-3784](bugs/BUG-3784-profile-default-ensure-race.md) | ✅ | ✅ | profile-default-ensure-race |
+| [BUG-3783](bugs/BUG-3783-subtitle-backfill-race-reports-installed.md) | ✅ | ✅ | subtitle-backfill-race-reports-installed |
+| [BUG-3782](bugs/BUG-3782-popup-headword-clipped-eink.md) | ✅ | ✅ | 墨水屏 / Apple 设计系统窄弹窗词头右侧被裁 |
+| [BUG-3781](bugs/BUG-3781-floating-ball-tap-leaks-to-reader.md) | ✅ | ✅ | 小说阅读器里点应用内悬浮球会唤出顶栏 / 底栏 |
+| [BUG-3780](bugs/BUG-3780-tts-emphasis-dot-ruby-reads-dots.md) | ✅ | ✅ | TTS 朗读把傍点 ruby（`・・` / `﹅`）当读音，着重的词整个读丢 |
+| [BUG-3779](bugs/BUG-3779-chrome-harness-fushi-local-mdns-stall.md) | ✅ | ✅ | chrome-harness-fushi-local-mdns-stall |
+| [BUG-3778](bugs/BUG-3778-vn-reveal-ruby-jitter.md) | ✅ | ✅ | VN 逐字显现推进到注音词时整屏抖动 |
+| [BUG-3777](bugs/BUG-3777-audiobook-background-stop-and-lyrics-desync.md) | ✅ | ✅ | 有声书后台久播会停；歌词模式后台播放回前台歌词与声音对不上 |
+| [BUG-3776](bugs/BUG-3776-vn-highlight-clips-emphasis-marks.md) | ✅ | ✅ | vn-highlight-clips-emphasis-marks |
+| [BUG-3775](bugs/BUG-3775-popup-header-layout-flicker.md) | ✅ | ✅ | 查词弹窗词头区在两种布局之间每帧来回切（一直闪） |
+| [BUG-3774](bugs/BUG-3774-epub-import-title-shows-filename.md) | ✅ | ✅ | epub-import-title-shows-filename |
+| [BUG-3773](bugs/BUG-3773-subtitle-delay-float-bar-blank-panel.md) | ✅ | ✅ | subtitle-delay-float-bar-blank-panel |
+| [BUG-3772](bugs/BUG-3772-srs-stats-full-log-decode.md) | ✅ | ✅ | SRS 统计页每次全量读复习日志逐条 jsonDecode，随日志量线性变慢 |
+| [BUG-3771](bugs/BUG-3771-stats-overview-missing-srs-review-time.md) | ✅ | ✅ | 统计中心总览看不到 SRS 复习时长（含导入的 Anki 复习时长） |
+| [BUG-3770](bugs/BUG-3770-srs-clock-skew-false-alarm-long-sync.md) | ✅ | ✅ | srs-clock-skew-false-alarm-long-sync |
+| [BUG-3769](bugs/BUG-3769-browser-windows-cert-error-interstitial.md) | ✅ | ✅ | Windows 浏览器证书错误停在 WebView2 自带拦截页，app 失败页不出现 |
+| [BUG-3768](bugs/BUG-3768-win-hidden-test-window-pulled-onscreen.md) | ✅ | ✅ | Windows 隐藏测试模式（FUSHI_TEST_HIDDEN）的主窗口被 Dart 启动定位挪回屏内 |
+| [BUG-3767](bugs/BUG-3767-video-audio-output-lost-never-recovers.md) | ✅ | ✅ | 播放中音频设备失效后视频永久没声音，只能重启 app |
+| [BUG-3766](bugs/BUG-3766-scrape-summary-hides-pending-backlog.md) | ✅ | ✅ | scrape-summary-hides-pending-backlog |
+| [BUG-3765](bugs/BUG-3765-dictionary-content-network-egress.md) | ✅ | ✅ | dictionary-content-network-egress |
+| [BUG-3764](bugs/BUG-3764-tmdb-parent-series-year-leaks.md) | ✅ | ✅ | tmdb-parent-series-year-leaks |
+| [BUG-3763](bugs/BUG-3763-android-youtube-system-proxy.md) | ✅ | ✅ | Android 上 YouTube「用 Fushi 播放」报无法获取视频流（Dart 出站没走 Wi-Fi 系统代理） |
+| [BUG-3762](bugs/BUG-3762-dictionary-content-runs-js-with-native-bridge.md) | ✅ | ✅ | dictionary-content-runs-js-with-native-bridge |
+| [BUG-3761](bugs/BUG-3761-anidb-catalog-only-auto-matches-wrong-kind.md) | ✅ | ✅ | anidb-catalog-only-auto-matches-wrong-kind |
+| [BUG-3760](bugs/BUG-3760-srs-backup-holds-db-connection.md) | ✅ | ✅ | SRS 自动备份读快照时占着主数据库连接；备份媒体池整份复制 |
+| [BUG-3759](bugs/BUG-3759-browser-android-fullscreen-frozen.md) | ✅ | ✅ | 应用内浏览器 Android 上网页全屏冻结、退不出（YouTube 画质菜单点不开） |
+| [BUG-3758](bugs/BUG-3758-recommended-pack-fallback-unverified.md) | ✅ | ✅ | recommended-pack-fallback-unverified |
+| [BUG-3757](bugs/BUG-3757-movie-keyword-single-file-scraped-as-tv.md) | ✅ | ✅ | movie-keyword-single-file-scraped-as-tv |
+| [BUG-3756](bugs/BUG-3756-host-list-videos-sync-stat-blocks-isolate.md) | ✅ | ✅ | 网络盘上的视频让 Fushi 主 isolate 卡数秒（互联 host 列表与 UI 一起冻结） |
+| [BUG-3755](bugs/BUG-3755-srs-review-card-images-too-small.md) | ✅ | ✅ | 复习卡里的图片太小（Anki 导入卡没有任何放大手段） |
+| [BUG-3754](bugs/BUG-3754-lapis-reminder-dismiss-pruned-by-profile-switch.md) | ✅ | ✅ | lapis-reminder-dismiss-pruned-by-profile-switch |
+| [BUG-3753](bugs/BUG-3753-system-tts-engine-invisible.md) | ✅ | ✅ | system-tts-engine-invisible |
+| [BUG-3752](bugs/BUG-3752-browser-new-window-blank.md) | ✅ | ✅ | 应用内浏览器里新窗口（target=_blank / window.open）打不开 |
+| [BUG-3751](bugs/BUG-3751-macos-hidden-test-mode-engine-never-starts.md) | ✅ | ✅ | macOS 设了 FUSHI_TEST_HIDDEN 后主窗口从不入屏，Flutter 引擎不启动 |
+| [BUG-3750](bugs/BUG-3750-tts-read-along-drops-on-online-voice-hiccup.md) | ✅ | ✅ | TTS 朗读用微软 / 谷歌在线语音经常中断 |
+| [BUG-3749](bugs/BUG-3749-manga-webtoon-seam-and-scroll-jank.md) | ✅ | ✅ | manga-webtoon-seam-and-scroll-jank |
+| [BUG-3748](bugs/BUG-3748-sync-package-manifest-name-path-escape.md) | ✅ | ✅ | sync-package-manifest-name-path-escape |
+| [BUG-3747](bugs/BUG-3747-jimaku-movie-subtitle-search-429.md) | ✅ | ✅ | jimaku-movie-subtitle-search-429 |
+| [BUG-3746](bugs/BUG-3746-srs-ankiconnect-whole-library-per-request.md) | ✅ | ✅ | Fushi SRS 的 AnkiConnect 兼容层每个请求都整库处理，大库下加卡 / 查重 / 搜索秒级 |
+| [BUG-3745](bugs/BUG-3745-srs-optimizer-prefix-json-quadratic.md) | ✅ | ✅ | srs-optimizer-prefix-json-quadratic |
+| [BUG-3744](bugs/BUG-3744-cli-candidates-provider-only-filters.md) | ✅ | ✅ | cli-candidates-provider-only-filters |
+| [BUG-3743](bugs/BUG-3743-interconnect-sync-slow.md) | ✅ | ✅ | 互联同步一轮要几分钟（局域网 / 全部客户端） |
+| [BUG-3742](bugs/BUG-3742-host-mining-ignores-srs-target.md) | ✅ | ✅ | 互联主机替对端制卡仍写 Anki，不遵守 Fushi 复习挖词目标 |
+| [BUG-3741](bugs/BUG-3741-vn-audiobook-highlight-relayout.md) | ✅ | ✅ | VN 模式有声书高亮推进时排版变化 |
+| [BUG-3740](bugs/BUG-3740-local-audio-menu-one-subsource.md) | ✅ | ✅ | 「选择音频源」菜单里本地音频库（android.db）只露出一个子来源 |
+| [BUG-3739](bugs/BUG-3739-srs-starter-decks-kaishi.md) | ✅ | ✅ | srs-starter-decks-kaishi |
+| [BUG-3738](bugs/BUG-3738-vn-middle-click-seek-sentence.md) | ✅ | ✅ | VN 模式中键跳到点击句无反应 |
+| [BUG-3737](bugs/BUG-3737-lookup-audio-ignores-tts-fallback.md) | ✅ | ✅ | 查词 ♪ 不走已配置的 TTS 兜底，制卡却走 |
+| [BUG-3736](bugs/BUG-3736-lyrics-mode-ball-theme-and-frame-rate.md) | ✅ | ✅ | lyrics-mode-ball-theme-and-frame-rate |
+| [BUG-3735](bugs/BUG-3735-macos-coreaudio-no-sound.md) | ✅ | ✅ | macos-coreaudio-no-sound |
+| [BUG-3734](bugs/BUG-3734-srs-apkg-export-memory-reimport-batching.md) | ✅ | ✅ | srs-apkg-export-memory-reimport-batching |
+| [BUG-3733](bugs/BUG-3733-srs-expanded-clip-error-box-covers-video.md) | ✅ | ✅ | 复习卡片段「放大查看」被错误盒整块盖住，关闭键缺失 |
+| [BUG-3732](bugs/BUG-3732-srs-note-editor-preview-not-native-fushi-card.md) | ✅ | ✅ | 笔记编辑页实时预览与复习页不是同一张卡（Fushi 卡片退回整面 WebView，片段 / 图片画法不同） |
+| [BUG-3731](bugs/BUG-3731-popup-mining-target-switch-hidden-on-base-layer.md) | ✅ | ✅ | 应用外查词窗基础层不显示「制卡目标」切换按钮 |
+| [BUG-3730](bugs/BUG-3730-srs-anki-import-drops-new-card-position.md) | ✅ | ✅ | 从 Anki 迁移 / 导入不带新卡位置，新卡按笔记创建时刻出、丢了 Anki 里排好的顺序 |
+| [BUG-3729](bugs/BUG-3729-srs-stats-miss-inherited-history-after-type-change.md) | ✅ | ✅ | 旧 Lapis 迁到 Fushi 卡片（或换笔记类型）后，牌组统计里复习记录全空 |
+| [BUG-3728](bugs/BUG-3728-srs-rwkv-purged-card-scores-not-evicted.md) | ✅ | ✅ | 永久清除的卡仍留在 RWKV 常驻分数表里 |
+| [BUG-3727](bugs/BUG-3727-srs-rwkv-score-requery-counts-cache-hits.md) | ✅ | ✅ | RWKV 分数表「每 50 次」刷新数的是部分命中的查询，不是作答 |
+| [BUG-3726](bugs/BUG-3726-srs-purge-media-delete-race.md) | ✅ | ✅ | 墓碑清除回收媒体时，扫描与删除之间新加的引用照样被删 |
+| [BUG-3725](bugs/BUG-3725-srs-sync-snapshot-freezes-ui.md) | ✅ | ✅ | 复习模块开着时大库同步快照与媒体引用在主线程整库处理，全 app 卡死 |
+| [BUG-3724](bugs/BUG-3724-anki-settings-stale-in-popup-process.md) | ✅ | ✅ | 应用外查词制卡用旧牌组/配置，且无法在应用外切换 |
+| [BUG-3723](bugs/BUG-3723-anki-non-lapis-note-type-empty-mappings.md) | ✅ | ✅ | 选非 Lapis 笔记类型后字段映射为空，制卡全部被拒为空卡 |
+| [BUG-3722](bugs/BUG-3722-srs-anki-migration-no-switch-to-srs.md) | ✅ | ✅ | 从 Anki 迁移后制卡仍走 Anki，无切换到 Fushi SRS 选项 |
+| [BUG-3721](bugs/BUG-3721-srs-editor-no-preview-visual-ai.md) | ✅ | ✅ | 编辑卡片缺预览与可视化编辑，字段名无翻译说明，编辑与模板无 AI |
+| [BUG-3720](bugs/BUG-3720-srs-deck-delete-never-purged.md) | ✅ | ✅ | 删除牌组（含连卡片删除）只写墓碑，永不物理清除 |
+| [BUG-3719](bugs/BUG-3719-srs-undo-slow-and-downgrades-fsrs7.md) | ✅ | ✅ | Ctrl+Z 撤回极慢且撤回后降级成 FSRS-7 |
+| [BUG-3718](bugs/BUG-3718-srs-rwkv-full-rescore-per-answer.md) | ✅ | ✅ | RWKV 每评一张卡全量重算分数 |
+| [BUG-3717](bugs/BUG-3717-srs-browse-loads-all-fields.md) | ✅ | ✅ | SRS 浏览把整个集合所有卡全部字段加载进内存 |
+| [BUG-3716](bugs/BUG-3716-srs-host-remote-mining-ignores-srs-target.md) | ✅ | 🚧 | 互联主机替其它设备制卡时无视「制卡目标 = Fushi 复习」 |
+| [BUG-3715](bugs/BUG-3715-srs-colpkg-import-out-of-memory.md) | ✅ | ✅ | Android 导入 .colpkg 报 Out of Memory |
+| [BUG-3714](bugs/BUG-3714-srs-interconnect-sync-not-shared.md) | ✅ | ✅ | Fushi SRS 通过互联同步不互通 |
+| [BUG-3713](bugs/BUG-3713-srs-card-fonts-need-toggle.md) | ✅ | ✅ | SRS 卡片字体需关掉再打开字体设置才生效 |
+| [BUG-3712](bugs/BUG-3712-srs-open-note-editor-no-lock-slow.md) | ✅ | ✅ | 跳转卡片无防重入锁且加载慢、编辑页无法删卡 |
+| [BUG-3711](bugs/BUG-3711-srs-popup-duplicate-open-card-buttons.md) | ✅ | ✅ | 查词弹窗「新卡」与「跳转」去同一页面 |
+| [BUG-3710](bugs/BUG-3710-srs-jump-to-card-autoplays-video.md) | ✅ | ✅ | 从查词弹窗跳转到卡片视频自动播放 |
+| [BUG-3709](bugs/BUG-3709-srs-replay-buttons-same-row-as-grades.md) | ✅ | ✅ | 复习页音频按钮与评分按钮同一行 |
+| [BUG-3708](bugs/BUG-3708-srs-card-links-not-clickable.md) | ✅ | ✅ | 卡片内超链接无法点击 |
+| [BUG-3707](bugs/BUG-3707-srs-review-extra-audio-buttons.md) | ✅ | ✅ | 只有一句例句却出 5 个音频按钮、未开自动播放全播 |
+| [BUG-3706](bugs/BUG-3706-srs-clip-and-sentence-double-audio.md) | ✅ | ✅ | 卡上视频不能放大、与例句按钮重复出声，重播导致重音 |
+| [BUG-3705](bugs/BUG-3705-srs-sentence-target-word-not-highlighted.md) | ✅ | ✅ | 例句中目标词不高亮 |
+| [BUG-3704](bugs/BUG-3704-srs-review-space-dead-after-grading.md) | ✅ | ✅ | 评分后下一张卡「显示答案」空格失灵 |
+| [BUG-3703](bugs/BUG-3703-srs-review-gif-not-synced-with-sentence.md) | ✅ | ✅ | 复习卡动图不与例句音频联动 |
+| [BUG-3702](bugs/BUG-3702-local-audio-dangling-after-profile-import.md) | ✅ | ✅ | 导入别的设备的配置方案后，本地发音库成了悬空引用，互联同步也修不好 |
+| [BUG-3701](bugs/BUG-3701-manga-series-volume-folders-flattened.md) | ✅ | ✅ | manga-series-volume-folders-flattened |
+| [BUG-3700](bugs/BUG-3700-moved-seeds-hidden-from-download-list.md) | ✅ | ✅ | 整理后挪到来源根的做种种子从下载页消失，总速度上传恒为 0、「做种中」恒空 |
+| [BUG-3699](bugs/BUG-3699-nested-popup-occluder-see-through.md) | ✅ | ✅ | nested-popup-occluder-see-through |
+| [BUG-3698](bugs/BUG-3698-interconnect-download-unmanageable-without-browse.md) | ✅ | ✅ | interconnect-download-unmanageable-without-browse |
+| [BUG-3697](bugs/BUG-3697-ios-source-folder-bookmark.md) | ✅ | ✅ | ios-source-folder-bookmark |
+| [BUG-3696](bugs/BUG-3696-mokuro-legacy-html-import-dropped-ocr.md) | ✅ | ✅ | mokuro-legacy-html-import-dropped-ocr |
+| [BUG-3695](bugs/BUG-3695-video-subtitle-kana-kanji-baseline.md) | ✅ | ✅ | video-subtitle-kana-kanji-baseline |
+| [BUG-3694](bugs/BUG-3694-remote-collection-continue-duplicate-cards.md) | ✅ | ✅ | 首页「继续」远端合集每集一张同名卡 |
+| [BUG-3693](bugs/BUG-3693-model-download-concurrent-writers-416.md) | ✅ | ✅ | 识别模型 / MOSS 下载挂在弹层上：关掉再开会起第二条写者，`.part` 写坏后永远 HTTP 416 |
+| [BUG-3692](bugs/BUG-3692-aniyomi-extensions-lib-17-refused.md) | ✅ | ✅ | 视频源扩展（Aniyomi extensions-lib 17）装不上：Unsupported extension-lib version |
+| [BUG-3691](bugs/BUG-3691-video-lookup-highlight-multi-layer-ass.md) | ✅ | ✅ | 视频字幕查词高亮在多层 ASS 同文本事件上重复画、压住下层字形 |
+| [BUG-3690](bugs/BUG-3690-onedrive-large-upload-restarts-every-sync.md) | ✅ | ✅ | onedrive-large-upload-restarts-every-sync |
+| [BUG-3689](bugs/BUG-3689-paginated-audio-lane-drops-wrapped-lines.md) | ✅ | ✅ | 翻页模式当前句高亮只亮第一行，折行部分全丢 |
+| [BUG-3688](bugs/BUG-3688-book-series-trailing-label-dropped.md) | ✅ | ✅ | 结尾 `<系列名>` 被当出版标签丢掉，日文轻小说整套散在书架上 |
+| [BUG-3687](bugs/BUG-3687-system-ball-yields-to-in-app-ball-without-buttons.md) | ✅ | ✅ | 本场景按钮全取消时应用外球仍给（不画的）应用内球让位，Fushi 里一颗球都没有 |
+| [BUG-3686](bugs/BUG-3686-browser-address-bar-local-hosts-searched.md) | ✅ | ✅ | 应用内浏览器地址栏把本机 / 局域网网址当成搜索，站点也不能手动添加编辑 |
+| [BUG-3685](bugs/BUG-3685-video-lookup-overlay-over-later-routes.md) | ✅ | ✅ | 视频页查词浮层压在之后推入的页面之上，点击被 barrier 吃掉并续播 |
+| [BUG-3684](bugs/BUG-3684-interconnect-repair-leaves-sibling-addresses-revoked-token.md) | ✅ | ✅ | interconnect-repair-leaves-sibling-addresses-revoked-token |
+| [BUG-3683](bugs/BUG-3683-video-home-filtered-by-hidden-tag.md) | ✅ | ✅ | video-home-filtered-by-hidden-tag |
+| [BUG-3682](bugs/BUG-3682-manga-double-tap-zoom-window-measured-on-up.md) | ✅ | ✅ | 漫画双击缩放很难触发，总是切出悬浮栏（只有快速三击偶尔成功） |
+| [BUG-3681](bugs/BUG-3681-bilibili-mining-412-anonymous-api.md) | ✅ | ✅ | bilibili-mining-412-anonymous-api |
+| [BUG-3680](bugs/BUG-3680-recommended-fonts-unreachable-in-china.md) | ✅ | ✅ | 中国大陆网络下推荐字体下载失败，且失败时不说原因 |
+| [BUG-3679](bugs/BUG-3679-source-root-unreadable-scans-silently-empty.md) | ✅ | ✅ | 常驻来源的扫描根读不到时静默记成「0 个媒体、无错误」 |
+| [BUG-3678](bugs/BUG-3678-android-system-ball-ignores-show-labels.md) | ✅ | ✅ | Android 应用外悬浮球不认「显示按钮文字」，「打开 Fushi」关不掉 |
+| [BUG-3677](bugs/BUG-3677-emby-public-endpoints-all-404.md) | ✅ | ✅ | 部分 Emby 服务器公开端点全 404，添加服务器失败 |
+| [BUG-3676](bugs/BUG-3676-video-generated-subtitle-not-applied-after-leaving-page.md) | ✅ | ✅ | video-generated-subtitle-not-applied-after-leaving-page |
+| [BUG-3675](bugs/BUG-3675-interconnect-session-pinned-on-dead-address.md) | ✅ | ✅ | interconnect-session-pinned-on-dead-address |
+| [BUG-3674](bugs/BUG-3674-button-group-squeeze-wraps-neighbour.md) | ✅ | ✅ | button-group-squeeze-wraps-neighbour |
+| [BUG-3673](bugs/BUG-3673-manga-chrome-clipped-into-ios-popup.md) | ✅ | ✅ | 漫画 chrome 开着时查词，chrome 被「画进」查词弹窗（iOS）且弹窗开着仍能点到 chrome |
+| [BUG-3672](bugs/BUG-3672-batch-mining-auto-flush.md) | ✅ | ✅ | batch-mining-auto-flush |
+| [BUG-3671](bugs/BUG-3671-asr-unpunctuated-card-sentence-whole-paragraph.md) | ✅ | ✅ | asr-unpunctuated-card-sentence-whole-paragraph |
+| [BUG-3670](bugs/BUG-3670-srt-book-cannot-attach-epub.md) | ✅ | ✅ | 下载并自动转录的有声书无法再配上对应的 EPUB |
+| [BUG-3669](bugs/BUG-3669-system-tts-japanese-only-silent.md) | ✅ | ✅ | 系统语音写死日语，失败时静默无音频 |
+| [BUG-3668](bugs/BUG-3668-interconnect-auto-sync-default-off.md) | ✅ | ✅ | interconnect-auto-sync-default-off |
+| [BUG-3667](bugs/BUG-3667-extension-grammar-tooltip-no-background.md) | ✅ | ✅ | extension-grammar-tooltip-no-background |
+| [BUG-3666](bugs/BUG-3666-extension-popup-columns-use-page-width.md) | ✅ | ✅ | extension-popup-columns-use-page-width |
+| [BUG-3665](bugs/BUG-3665-lookup-anchor-spans-split-word-fragments.md) | ✅ | ✅ | lookup-anchor-spans-split-word-fragments |
+| [BUG-3664](bugs/BUG-3664-hyphen-compound-tap-looks-up-front-half.md) | ✅ | ✅ | hyphen-compound-tap-looks-up-front-half |
+| [BUG-3663](bugs/BUG-3663-popup-local-audio-channel-missing.md) | ✅ | ✅ | popup-local-audio-channel-missing |
+| [BUG-3662](bugs/BUG-3662-popup-dictionary-metadata-stale.md) | ✅ | ✅ | popup-dictionary-metadata-stale |
+| [BUG-3661](bugs/BUG-3661-leaderboard-deploy-red-on-zone-routes-permission.md) | ✅ | ✅ | leaderboard-deploy-red-on-zone-routes-permission |
+| [BUG-3660](bugs/BUG-3660-popup-window-double-empty-state.md) | ✅ | ✅ | popup-window-double-empty-state |
+| [BUG-3659](bugs/BUG-3659-srs-rwkv-rebuild-loop-while-reviewing.md) | ✅ | ✅ | srs-rwkv-rebuild-loop-while-reviewing |
+| [BUG-3658](bugs/BUG-3658-srs-subdecks-not-inheriting-parent-settings.md) | ✅ | ✅ | srs-subdecks-not-inheriting-parent-settings |
+| [BUG-3657](bugs/BUG-3657-dashboard-volume-badge-uses-collection-position.md) | ✅ | ✅ | dashboard-volume-badge-uses-collection-position |
+| [BUG-3656](bugs/BUG-3656-android-notification-small-icon-headset.md) | ✅ | ✅ | android-notification-small-icon-headset |
+| [BUG-3655](bugs/BUG-3655-srs-reimport-deleted-notes-not-restored.md) | ✅ | ✅ | srs-reimport-deleted-notes-not-restored |
+| [BUG-3654](bugs/BUG-3654-video-dissolved-series-cannot-regroup.md) | ✅ | ✅ | 整批解散合集后系列永久散成单集，重扫无法恢复 |
+| [BUG-3653](bugs/BUG-3653-srs-anki-migration-silent-options.md) | ✅ | ✅ | srs-anki-migration-silent-options |
+| [BUG-3652](bugs/BUG-3652-anki-mine-all-fields-empty-reported-twice-clipped.md) | ✅ | ✅ | anki-mine-all-fields-empty-reported-twice-clipped |
+| [BUG-3651](bugs/BUG-3651-paged-restore-page-first-after-stop-previous-page.md) | ✅ | ✅ | 页首字紧跟上一页末行的「。」时，存→取退回前一页（学习单位逆映射停在分隔符上） |
+| [BUG-3650](bugs/BUG-3650-paged-restore-page-first-caret-previous-page.md) | ✅ | ✅ | 翻页模式页首字在禁则换行处时重开退一页（分页 scrollToCharOffset 用塌缩光标锚） |
+| [BUG-3649](bugs/BUG-3649-manga-detected-epub-no-force-book-import.md) | ✅ | ✅ | manga-detected-epub-no-force-book-import |
+| [BUG-3648](bugs/BUG-3648-subscription-ops-split-ui-ctl.md) | ✅ | ✅ | 视频订阅操作在订阅页与 host 各写一份、语义分叉；经 host 重新启用已完成 oneShot 撞 CHECK；CLI 没有订阅命令 |
+| [BUG-3647](bugs/BUG-3647-srs-deck-delete-no-delete-cards-option.md) | ✅ | ✅ | srs-deck-delete-no-delete-cards-option |
+| [BUG-3646](bugs/BUG-3646-epub-manga-duplicate-pages-kcc-panel-view.md) | ✅ | ✅ | 纯图 EPUB 转漫画重页（KCC Panel View 每页出 5 份） |
+| [BUG-3645](bugs/BUG-3645-pause-ocr-resume-delay.md) | ✅ | ✅ | 开了暂停 OCR 后，暂停 → 继续播放有明显延迟 |
+| [BUG-3644](bugs/BUG-3644-study-tombstone-profile-mismatch-diverges.md) | ✅ | ✅ | study-tombstone-profile-mismatch-diverges |
+| [BUG-3643](bugs/BUG-3643-manga-cbz-avif-pages.md) | ✅ | ✅ | CBZ 漫画内含 AVIF 页图时导入失败（Manga archive has no images） |
+| [BUG-3642](bugs/BUG-3642-epub-zip-extra-field-padding-range-error.md) | ✅ | ✅ | EPUB 导入报 RangeError (length) 0..36: 37（zip extra field 尾部填充越界读） |
+| [BUG-3641](bugs/BUG-3641-unread-epub-content-sync.md) | ✅ | ✅ | 未读 EPUB 因无阅读进度被同步跳过，云端只有元数据 |
+| [BUG-3640](bugs/BUG-3640-scrape-ledger-plaintext-credentials.md) | ✅ | ✅ | 补刮账本把含凭据的配置指纹明文落盘 |
+| [BUG-3639](bugs/BUG-3639-interconnect-online-manga-undownloaded-hidden.md) | ✅ | ✅ | interconnect-online-manga-undownloaded-hidden |
+| [BUG-3638](bugs/BUG-3638-collection-hero-cover-dangling-path.md) | ✅ | ✅ | 系列封面路径悬空时详情页 hero 不回落到刮削封面 |
+| [BUG-3637](bugs/BUG-3637-pdf-manga-text-layer-drift.md) | ✅ | ✅ | pdf-manga-text-layer-drift |
+| [BUG-3636](bugs/BUG-3636-android-ort-sme2-sigill.md) | ✅ | ✅ | Android 本地推理在骁龙 8 Elite Gen 5 上 SIGILL 闪退（ORT 1.23 误用 KleidiAI SME2 内核） |
+| [BUG-3635](bugs/BUG-3635-gal-text-process-quotes-drops-narration.md) | ✅ | ✅ | gal-text-process-quotes-drops-narration |
+| [BUG-3634](bugs/BUG-3634-manga-zoomed-tap-zone-turns-page.md) | ✅ | ✅ | manga-zoomed-tap-zone-turns-page |
+| [BUG-3633](bugs/BUG-3633-manga-spread-last-page-not-completed.md) | ✅ | ✅ | 漫画双页展开读到最后一页不标读完，卷一直留在首页继续阅读 |
+| [BUG-3632](bugs/BUG-3632-waveform-probe-tail-overrun-shifts-waveform.md) | ✅ | ✅ | waveform-probe-tail-overrun-shifts-waveform |
+| [BUG-3631](bugs/BUG-3631-apple-segmented-overflow.md) | ✅ | ✅ | iPhone 上 Apple 分段条放不下时右侧被裁、横拖滚不动 |
+| [BUG-3630](bugs/BUG-3630-mining-sentence-truncated.md) | ✅ | ✅ | 视觉小说模式制卡句子被切屏截断成半句 |
+| [BUG-3624](bugs/BUG-3624-manga-swipe-follow-bound-to-page-animation.md) | ✅ | ✅ | manga-swipe-follow-bound-to-page-animation |
+| [BUG-3623](bugs/BUG-3623-manga-turn-queue-silent-stall.md) | 🚧 | 🚧 | manga-turn-queue-silent-stall |
+| [BUG-3622](bugs/BUG-3622-airing-calendar-romaji-and-empty-related.md) | ✅ | ✅ | 放送日历标题全是罗马字 + 关掉「显示本季全部」后为空 |
+| [BUG-3621](bugs/BUG-3621-shortcut-row-hides-other-device-bindings.md) | ✅ | ✅ | 快捷键列表当前设备无绑定时只显示点按分配，隐藏其它设备上的绑定 |
+| [BUG-3619](bugs/BUG-3619-gamepad-press-recorded-as-keyboard.md) | ✅ | ✅ | Android 手柄按键在键盘分段录成键盘绑定，绕过手柄冲突检测 |
+| [BUG-3618](bugs/BUG-3618-online-video-hls-backward-seek-lands-late.md) | ✅ | ✅ | 在线源视频往回跳（上一句 / 固定秒数后退）有时跳不动 |
+| [BUG-3617](bugs/BUG-3617-srs-browse-orphan-deck-cards.md) | ✅ | ✅ | 复习卡片浏览：牌组已不存在的卡不归默认牌组，deck:Default 筛不到 |
+| [BUG-3616](bugs/BUG-3616-game-stream-study-duration.md) | ✅ | ✅ | 串流游玩时游戏留在主机后台，游玩时长整场记 0 |
+| [BUG-3615](bugs/BUG-3615-interconnect-remote-host-downloaded-subtitle.md) | ✅ | ✅ | iPad 经互联流播用不了电脑上已下载的字幕 |
+| [BUG-3614](bugs/BUG-3614-interconnect-remote-danmaku.md) | ✅ | ✅ | iPad 经互联流播没有弹幕，下载到本机才有 |
+| [BUG-3613](bugs/BUG-3613-interconnect-remote-season-and-detail.md) | ✅ | ✅ | iPad 经互联：刮削后剧集不分季、独立作品点开直接播放无资料页 |
+| [BUG-3612](bugs/BUG-3612-remote-lookup-card-missing-host-dict-styles.md) | ✅ | ✅ | 瘦客户端经远端查词制卡缺少 host 词典自带样式（看电脑媒体库视频） |
+| [BUG-3611](bugs/BUG-3611-interconnect-continue-watching-collection.md) | ✅ | ✅ | 互联子端「继续观看」远端视频不按合集归并、看完的集仍在 |
+| [BUG-3610](bugs/BUG-3610-video-library-progress-refresh.md) | ✅ | ✅ | 视频媒体库页从详情页退回后观看进度不刷新 |
+| [BUG-3609](bugs/BUG-3609-ass-bilingual-overlap-width.md) | 🚧 | 🚧 | 简日内封双语 ASS 重叠、纯日字幕字宽不对（缺原片未定根因） |
+| [BUG-3608](bugs/BUG-3608-ass-plain-mode-pos-order.md) | ✅ | ✅ | 纯字幕模式下 \pos 排成上下的同时间戳 ASS 两行被上下颠倒 |
+| [BUG-3606](bugs/BUG-3606-vertical-quote-orientation-mixed.md) | ✅ | ✅ | 竖排引号方向不一致（有的竖有的横） |
+| [BUG-3605](bugs/BUG-3605-ocr-progress-double-run.md) | ✅ | ✅ | 漫画远程 OCR 右上角进度走两遍（上传段与识别段共用一条进度） |
+| [BUG-3604](bugs/BUG-3604-manga-lookup-popup-offscreen.md) | ✅ | ✅ | 漫画查词弹窗在整句并集放不下时被压成 0 高挤出屏幕 |
+| [BUG-3603](bugs/BUG-3603-floating-ball-screen-ocr-launch-dropped.md) | ✅ | ✅ | Android 应用外悬浮球截屏查词点了没反应（宿主 Activity 被 ROM 静默拦下） |
+| [BUG-3602](bugs/BUG-3602-floating-ball-in-app-hidden-after-screen-ocr.md) | ✅ | ✅ | Android 应用内悬浮球不显示（截屏 OCR 回调丢失后一直藏着） |
+| [BUG-3601](bugs/BUG-3601-app-icon-switch-crash.md) | ✅ | ✅ | Android 换应用图标（自定义图标）闪退 |
+| [BUG-3581](bugs/BUG-3581-srs-sync-now-failure-says-unconfigured.md) | ✅ | ✅ | 复习「立即同步」失败时提示「还没有配置同步服务」 |
+| [BUG-3580](bugs/BUG-3580-srs-new-card-reposition.md) | ✅ | ✅ | 制卡目标为「Fushi 复习」时「新卡按词频重排」（手动 + 制卡后自动）不可用 |
+| [BUG-3579](bugs/BUG-3579-srs-deck-open-slow.md) | ✅ | ✅ | SRS 打开大牌组很慢（eggrolls 首张卡要等十几秒），首张卡出来前退出复习页时 State 卡成僵尸 |
+| [BUG-3578](bugs/BUG-3578-ios-stroke-sweep-last-line-sliver.md) | ✅ | ✅ | iOS 竖排笔触高亮落笔动画：跨三栏的句子最后一栏只剩右侧一窄条 |
+| [BUG-3577](bugs/BUG-3577-embedded-torrent-ui-isolate-hang.md) | ✅ | ✅ | embedded-torrent-ui-isolate-hang |
+| [BUG-3576](bugs/BUG-3576-interconnect-srs-writer-dir-hash-propfind-404.md) | ✅ | ✅ | 互联客户端复习同步第二轮起 PROPFIND 404（写入者目录名带 `#`） |
+| [BUG-3575](bugs/BUG-3575-gal-long-line-voice-truncated.md) | ✅ | ✅ | gal-long-line-voice-truncated |
+| [BUG-3574](bugs/BUG-3574-manga-source-scan-skips-cbz-zip.md) | ✅ | ✅ | 漫画来源扫描跳过 .cbz / .zip 卷（显示 0 卷），漫画来源里的 .epub / .pdf 卷也被丢掉 |
+| [BUG-3573](bugs/BUG-3573-mixed-dict-kanji-section-missing.md) | ✅ | ✅ | mixed-dict-kanji-section-missing |
+| [BUG-3572](bugs/BUG-3572-extension-asb-anki-dialog-no-lookup.md) | ✅ | ✅ | 浏览器扩展：asbplayer Mining History「Export to Anki」对话框的字段里查不了词 |
+| [BUG-3571](bugs/BUG-3571-extension-netflix-no-subtitle-tracks.md) | ✅ | ✅ | 浏览器扩展：网飞播放页「字幕轨」显示「这个视频还没有字幕轨」，同页 asbplayer 能拿到轨 |
+| [BUG-3570](bugs/BUG-3570-web-browser-embedded-under-nav.md) | ✅ | ✅ | 浏览器嵌在模块页里：主导航底栏与「阅读本章」FAB 叠在网页上互相遮挡，顶部还有「浏览器」标题 |
+| [BUG-3569](bugs/BUG-3569-lookup-shell-title-md3-compact.md) | ✅ | ✅ | 查词页（MD3 手机）顶部仍有一整行「查词」大标题 |
+| [BUG-3568](bugs/BUG-3568-root-page-back-button-on-popup.md) | ✅ | ✅ | 根页打开弹出菜单 / 对话框后重建会凭空长出返回键（浏览器页点「⋯」左上角出现返回） |
+| [BUG-3567](bugs/BUG-3567-update-install-dir-needs-elevation.md) | ✅ | ✅ | update-install-dir-needs-elevation |
+| [BUG-3566](bugs/BUG-3566-srs-host-not-in-srs-sync.md) | ✅ | ✅ | 互联 host 自己不参与复习（SRS）同步：立即同步提示没配置、对端看不到它的卡 |
+| [BUG-3565](bugs/BUG-3565-srs-multi-channel-shared-state.md) | ✅ | ✅ | 云盘 + 互联同时开着时复习同步状态全局一份：批次只到先跑的目录、另一个目录每轮换化身 |
+| [BUG-3564](bugs/BUG-3564-srs-template-preview-field-name-unescaped.md) | ✅ | ✅ | 复习模板预览：没有样例时的占位值 `(字段名)` 未转义，字段名里的 HTML 会在卡面 WebView 里生效 |
+| [BUG-3563](bugs/BUG-3563-srs-delete-field-visual-rewrite-not-atomic.md) | ✅ | ✅ | 复习笔记类型：删字段时可视化模板的改写与字段删除分两次写入，删不掉时模板已被改 |
+| [BUG-3562](bugs/BUG-3562-srs-review-top-band-and-phone-dict-tabs.md) | ✅ | ✅ | srs-review-top-band-and-phone-dict-tabs |
+| [BUG-3561](bugs/BUG-3561-video-pause-ocr-capture-null-never-retried.md) | ✅ | ✅ | video-pause-ocr-capture-null-never-retried |
+| [BUG-3560](bugs/BUG-3560-video-pause-ocr-all-skips-when-text-subtitle-on-screen.md) | ✅ | ✅ | video-pause-ocr-all-skips-when-text-subtitle-on-screen |
+| [BUG-3559](bugs/BUG-3559-srs-lapis-backfill-count-full-scan.md) | ✅ | ✅ | 复习：旧 Lapis 补迁角标每次全量物化 Fushi 卡片笔记且逐条重建内置笔记类型，1 万条笔记打开笔记类型页要 60 秒以上 |
+| [BUG-3558](bugs/BUG-3558-node-test-missing-runtime-inconsistent.md) | ✅ | ✅ | 测试：真跑 node / Chrome 的测试缺运行时时行为不一致，srs_card_design_skin_test 在 CI 上缺依赖静默跳过 |
+| [BUG-3557](bugs/BUG-3557-srs-card-autoplay-gate-bypass.md) | ✅ | ✅ | 复习：牌组关了自动播放，卡面脚本插入后再设 autoplay / 不进页面的 Audio / shadow DOM / iframe 的 play 仍会出声（BUG-3546 修得不完整） |
+| [BUG-3556](bugs/BUG-3556-srs-anki-media-sync-io-on-ui-isolate.md) | ✅ | ✅ | 复习：从本机 Anki 迁移时媒体目录枚举与媒体文件在 UI isolate 上同步读，卡帧 |
+| [BUG-3555](bugs/BUG-3555-srs-anki-snapshot-size-mtime-fingerprint.md) | ✅ | ✅ | 复习：本机 Anki 集合快照的一致性只看大小 + 修改时刻，拷贝期间原位覆盖可能检测不出 |
+| [BUG-3554](bugs/BUG-3554-srs-reimport-reverts-user-card-moves.md) | ✅ | ✅ | 复习：重新导入 / 迁移 Anki 把用户在 Fushi 里挪过牌组 / 暂停过的卡改回 Anki 的状态 |
+| [BUG-3553](bugs/BUG-3553-srs-import-report-counts-unlanded-notes.md) | ✅ | ✅ | 复习：导入报告把落库时已存在的笔记也算作新增 |
+| [BUG-3552](bugs/BUG-3552-srs-import-deck-preset-not-atomic.md) | ✅ | ✅ | 复习：导入 Anki 包时牌组与牌组设置分两轮写，中途失败或被杀后设置永远不写 |
+| [BUG-3551](bugs/BUG-3551-srs-delete-deck-late-cards-left-in-deleted-deck.md) | ✅ | ✅ | 复习：删牌组期间放进来的卡 / 新建的子牌组留在已删除的牌组下 |
+| [BUG-3550](bugs/BUG-3550-srs-legacy-lapis-migration-drops-fields.md) | ✅ | ✅ | 旧 Lapis 迁到 Fushi 卡片时部分字段内容没跟过去，导入 / 改名的 Lapis 无法一键迁移 |
+| [BUG-3549](bugs/BUG-3549-srs-apkg-import-slow-blocking.md) | ✅ | ✅ | 复习：Anki 包导入慢且阻塞在模态对话框里，不能后台导入 |
+| [BUG-3548](bugs/BUG-3548-srs-deck-create-slow-list-stale.md) | ✅ | ✅ | 复习：新建牌组慢、列表不立即出现新牌组 |
+| [BUG-3547](bugs/BUG-3547-srs-review-deck-settings-not-live.md) | ✅ | ✅ | 复习中改牌组设置返回后不立即生效（间隔预览/计数/下一张仍按旧设置） |
+| [BUG-3546](bugs/BUG-3546-srs-autoplay-off-inline-media-still-plays.md) | ✅ | ✅ | SRS 牌组关了自动播放音频，卡面内嵌片段/音频仍自己播放，且时播时不播 |
+| [BUG-3545](bugs/BUG-3545-srs-local-seq-allocated-before-landing.md) | ✅ | ✅ | 复习：本机修改记录的序号在落库前分配，并发写入时发件箱乱序、因果上下文声称看见了不存在的记录 |
+| [BUG-3544](bugs/BUG-3544-srs-bulk-ops-per-item-roundtrips.md) | ✅ | ✅ | 复习：作用于多张卡 / 多条笔记的批量操作逐条往返，规模一大就慢（批量改卡、重置、换类型、导出、同步、恢复…） |
+| [BUG-3543](bugs/BUG-3543-srs-deck-delete-slow.md) | ✅ | ✅ | 复习：删除牌组奇慢无比（几千张卡几十秒），删除期间无任何反馈 |
+| [BUG-3542](bugs/BUG-3542-data-root-move-job-observed-save-path-stale.md) | ✅ | ✅ | 数据根迁移后下载任务 observed_save_path 仍指向旧默认下载根 |
+| [BUG-3541](bugs/BUG-3541-data-root-move-embedded-fast-resume-stale-save-path.md) | ✅ | ✅ | 数据根迁移后内置引擎 fast-resume 里的 save_path 仍指向旧目录，种子指向已搬空的位置 |
+| [BUG-3540](bugs/BUG-3540-download-job-records-stale-after-move.md) | ✅ | ✅ | 移动/改名/整理后下载任务行的保存位置与相对路径不跟着更新 |
+| [BUG-3539](bugs/BUG-3539-download-remote-qb-backend-path-as-local.md) | ✅ | ✅ | 外接远端 qBittorrent：改名/移动、任务删除与打开位置把后端坐标的保存路径当本机路径用 |
+| [BUG-3538](bugs/BUG-3538-download-relocate-subtitle-remapped-not-moved.md) | ✅ | ✅ | 移动下载后库里外挂字幕路径被改到没有字幕文件的新位置 |
+| [BUG-3537](bugs/BUG-3537-outbound-progress-landing-overwrites-host-put.md) | ✅ | ✅ | 出站同步落地无条件写本地进度，盖掉刚到的互联对端 PUT（进度倒退） |
+| [BUG-3536](bugs/BUG-3536-subtitle-null-text-color-follows-theme.md) | ✅ | ✅ | 关掉「尊重字幕自带样式」后字幕文字色随 App 主题忽白忽黑 |
+| [BUG-3535](bugs/BUG-3535-opds-cover-401-missing-headers.md) | ✅ | ✅ | OPDS：私有目录（Komga）封面无凭据请求回 401，发现页封面全是占位 |
+| [BUG-3534](bugs/BUG-3534-signin-bad-code-error-off-screen.md) | ✅ | ✅ | signin-bad-code-error-off-screen |
+| [BUG-3533](bugs/BUG-3533-reader-lazy-illustrations-premature-chapter-advance.md) | ✅ | ✅ | reader-lazy-illustrations-premature-chapter-advance |
+| [BUG-3532](bugs/BUG-3532-srt-vtt-multiline-merged-one-row.md) | ✅ | ✅ | 双语 SRT / VTT 多行字幕在屏上并成一排 |
+| [BUG-3531](bugs/BUG-3531-lyrics-mode-drops-dashes.md) | ✅ | ✅ | lyrics-mode-drops-dashes |
+| [BUG-3530](bugs/BUG-3530-matcher-short-cue-far-jump.md) | ✅ | ✅ | matcher-short-cue-far-jump |
+| [BUG-3529](bugs/BUG-3529-host-progress-put-waits-whole-sync-lock.md) | ✅ | ✅ | 互联 host 的书进度 PUT 排在本机整轮自动同步后面，对端超时却已落库 → 下一轮误报进度冲突 |
+| [BUG-3528](bugs/BUG-3528-interconnect-lost-ack-phantom-conflict.md) | ✅ | ✅ | 互联进度推送「写入落地、确认丢失」被误判成冲突（远端是本机自己的旧写入） |
+| [BUG-3527](bugs/BUG-3527-pdf-reader-chrome-cannot-hide.md) | ✅ | ✅ | pdf-reader-chrome-cannot-hide |
+| [BUG-3526](bugs/BUG-3526-opds-catalog-url-root-or-html.md) | ✅ | ✅ | OPDS：填服务器根地址/网页地址/带结尾斜杠时报「不是可读的 OPDS 目录」或 404，Komga 只认 /opds/v2/catalog |
+| [BUG-3525](bugs/BUG-3525-popup-trackpad-scroll-no-inertia.md) | ✅ | ✅ | Windows 触控板滚动查词弹窗松手即停（无惯性） |
+| [BUG-3524](bugs/BUG-3524-updater-same-build-picks-stable-for-debug.md) | ✅ | ✅ | updater-same-build-picks-stable-for-debug |
+| [BUG-3523](bugs/BUG-3523-email-code-digits-run-together.md) | ✅ | ✅ | email-code-digits-run-together |
+| [BUG-3522](bugs/BUG-3522-mihon-sidecar-java6-interface-static-verifyerror.md) | ✅ | ✅ | 桌面 sidecar 加载 keiyoushi Komga 扩展 VerifyError（dex2jar 产出 Java 6 类不能 invokestatic 接口方法），整个扩展装不上 |
+| [BUG-3521](bugs/BUG-3521-opds-komga-api-key.md) | ✅ | ✅ | OPDS：Komga 只认 X-API-Key 头，配置只有用户名/密码；Basic 用户名须为登录邮箱 |
+| [BUG-3520](bugs/BUG-3520-mihon-sidecar-prefs-root-tachidesk.md) | ✅ | ✅ | 桌面 sidecar 来源偏好写到 %LOCALAPPDATA%\Tachidesk\settings，不在 Fushi 数据根；已有值永远盖不过 Drift 快照 |
+| [BUG-3519](bugs/BUG-3519-epub-image-index-cache-windows-replace-race.md) | ✅ | ✅ | Windows 上多个 isolate 同时读写同一本书的插图表缓存：读撞 errno 32、替换撞 errno 5 |
+| [BUG-3518](bugs/BUG-3518-ios-audio-lane-page-bleed.md) | ✅ | ✅ | iOS 竖排翻页：有声书当前句窄条越出页尾、画进下一页页顶 |
+| [BUG-3517](bugs/BUG-3517-video-chrome-double-click-fullscreen.md) | ✅ | ✅ | video-chrome-double-click-fullscreen |
+| [BUG-3516](bugs/BUG-3516-collection-member-touch-longpress-no-menu.md) | ✅ | ✅ | 合集详情页触屏长按成员只进多选，拿不到库页同一份卡片菜单 |
+| [BUG-3515](bugs/BUG-3515-collection-episode-menu-download-on-local-file.md) | ✅ | ✅ | 合集详情集卡菜单对本机已有文件的集仍显示「下载本集」 |
+| [BUG-3514](bugs/BUG-3514-manga-ipad-pinch-zoom-broken.md) | ✅ | ✅ | iPad 漫画阅读器双指缩放失灵、大滑动后突然放大到上限并卡死 |
+| [BUG-3513](bugs/BUG-3513-collection-detail-duplicate-tag-button.md) | ✅ | ✅ | 合集详情页顶栏标签按钮与 hero「编辑标签」功能重复 |
+| [BUG-3512](bugs/BUG-3512-collection-overall-progress-and-continue-target.md) | ✅ | ✅ | 合集「整体进度」2/4 读完显示 100%，读完第二卷「继续」回到第一卷 |
+| [BUG-3511](bugs/BUG-3511-video-mining-audio-follows-stale-track.md) | ✅ | ✅ | video-mining-audio-follows-stale-track |
+| [BUG-3510](bugs/BUG-3510-manga-local-ocr-boxes-misaligned.md) | ✅ | ✅ | manga-local-ocr-boxes-misaligned |
+| [BUG-3509](bugs/BUG-3509-manga-volume-opens-other-volume-cached-pages.md) | ✅ | ✅ | manga-volume-opens-other-volume-cached-pages |
+| [BUG-3508](bugs/BUG-3508-deleted-book-returns-as-remote-placeholder.md) | ✅ | ✅ | deleted-book-returns-as-remote-placeholder |
+| [BUG-3507](bugs/BUG-3507-video-mpv-sync-getproperty-ui-stall.md) | ✅ | ✅ | Windows 视频播放偶发冻帧：UI 线程同步读写 mpv 排内核锁 |
+| [BUG-3506](bugs/BUG-3506-ios-stroke-highlight-stall.md) | ✅ | ✅ | iOS 笔触样式高亮停住不跟随、查词无高亮 |
+| [BUG-3505](bugs/BUG-3505-anki-crossref-deeplink-includes-furigana.md) | ✅ | ✅ | anki-crossref-deeplink-includes-furigana |
+| [BUG-3504](bugs/BUG-3504-ffmpeg-min-missing-decoders-tls-pin.md) | ✅ | ✅ | 桌面捆绑 ffmpeg-min 缺一批可导入格式的解码器 / muxer，且没打证书钉扎补丁（-tls_pin_sha256 不认） |
+| [BUG-3503](bugs/BUG-3503-dash-mpd-mining-demuxer.md) | ✅ | ✅ | 在线视频源给 DASH 清单（manifest.mpd）时制卡失败：捆绑 ffmpeg 缺 dash demuxer（required audio missing / Invalid data） |
+| [BUG-3502](bugs/BUG-3502-srs-deck-count-rollup.md) | ✅ | ✅ | 复习牌组列表：父牌组新卡/到期数没按子牌组截断后自底向上汇总 |
+| [BUG-3501](bugs/BUG-3501-settings-row-dialog-intrinsic-layout.md) | ✅ | ✅ | settings-row-dialog-intrinsic-layout |
+| [BUG-3500](bugs/BUG-3500-snapshot-mkv-video-missing-dts.md) | ✅ | ✅ | 在线视频同步片段画面花屏（缓冲副本丢掉 Matroska B 帧视频包） |
+| [BUG-3499](bugs/BUG-3499-snapshot-laced-opus-audio-truncated.md) | ✅ | ✅ | 在线视频同步片段的音频只剩 0.2～0.4 秒且断续（缓冲副本丢音频包） |
+| [BUG-3498](bugs/BUG-3498-seekbar-click-toggles-pause.md) | ✅ | ✅ | seekbar-click-toggles-pause |
+| [BUG-3497](bugs/BUG-3497-reader-open-fushi-local-dns.md) | ✅ | ✅ | Windows 开书/跨章白屏约 2 秒：WebView2 每次导航解析 fushi.local 走组播名称解析 |
+| [BUG-3496](bugs/BUG-3496-audio-first-play-jumps-book-start.md) | ✅ | ✅ | 有声书首次播放载入窗口位置为 0 致正文跳回书首 |
+| [BUG-3495](bugs/BUG-3495-video-remote-row-toggle-tint.md) | ✅ | ✅ | 视频遥控：开关类按钮放进主控制行时没有着色 |
+| [BUG-3494](bugs/BUG-3494-goldens-windows-red-triage.md) | ✅ | ✅ | Windows 本机 test/goldens 18 张基准图过期（CI 排除 golden，M3E 改版后无人重生成） |
+| [BUG-3493](bugs/BUG-3493-srs-deck-list-names-hidden.md) | ✅ | ✅ | 复习牌组列表：子牌组名字被行首图标与整格缩进挤没、空默认牌组删不掉又常驻 |
+| [BUG-3492](bugs/BUG-3492-mining-overwrite-same-popup.md) | ✅ | ✅ | 在线视频后台制卡后，同一查词弹窗里点 ✓ / 高级制卡确认没反应、不覆盖 |
+| [BUG-3491](bugs/BUG-3491-video-episode-progress-refresh.md) | ✅ | ✅ | 视频剧集进度返回不刷新、重看已看集续播跳下一集、自动标记看完判定不一致 |
+| [BUG-3490](bugs/BUG-3490-card-clip-review-stream.md) | ✅ | ✅ | 卡片片段回看远端视频被要求先下载 |
+| [BUG-3489](bugs/BUG-3489-feedback-video-compress-locks-form.md) | ✅ | ✅ | 反馈视频压缩中附件 × 与文字框都点不动 |
+| [BUG-3488](bugs/BUG-3488-video-paused-sentence-skip-stuck.md) | ✅ | ✅ | 视频暂停时上/下一句跳不动，字幕约 2 秒后弹回原句 |
+| [BUG-3487](bugs/BUG-3487-screen-ocr-mine-full-sentence.md) | ✅ | ✅ | 截屏识字制卡句子只有被点字所在一行，竖排/折行长句只剩半句 |
+| [BUG-3485](bugs/BUG-3485-android-gamepad-b-focus-ring.md) | ✅ | ✅ | Android 手柄 B 在触摸模式下变系统返回 + 屏幕外缘系统焦点框 |
+| [BUG-3484](bugs/BUG-3484-reader-text-justify.md) | ✅ | ✅ | 两端对齐开关开启时正文不对齐（Standard Ebooks EPUB） |
+| [BUG-3483](bugs/BUG-3483-detail-section-header-trailing-misaligned.md) | ✅ | ✅ | 详情页分区头 trailing 按钮不贴右缘（剧集多选 ✕ 位置歪） |
+| [BUG-3482](bugs/BUG-3482-ios-continuous-cross-axis-drag.md) | ✅ | ✅ | iOS 滚动模式交叉轴能被拖动（竖排上下 / 横排左右） |
+| [BUG-3481](bugs/BUG-3481-audiobook-gap-fill-skipped-text.md) | ✅ | ✅ | 有声书 ASR 漏转后半句时合缝切点落空、整句无人认领 |
+| [BUG-3480](bugs/BUG-3480-screen-ocr-hdr-capture.md) | ✅ | ✅ | Windows 截屏识字在系统开 HDR 时截图发白过曝 |
+| [BUG-3455](bugs/BUG-3455-srs-apkg-proto3-zero-defaults.md) | ✅ | ✅ | srs-apkg-proto3-zero-defaults |
+| [BUG-3454](bugs/BUG-3454-hidden-term-dict-still-in-lookup-engine.md) | ✅ | ✅ | hidden-term-dict-still-in-lookup-engine |
+| [BUG-3453](bugs/BUG-3453-reader-cue-gap-glues-last-word.md) | ✅ | ✅ | reader-cue-gap-glues-last-word |
+| [BUG-3452](bugs/BUG-3452-peer-book-download-followups.md) | ✅ | ✅ | 对端书下载后多出未下载卡、合集册数翻倍、跳回顶部、最近阅读排序错位 |
+| [BUG-3451](bugs/BUG-3451-video-bar-menu-hides-controls.md) | ✅ | ✅ | 视频控制条「⋯」只有一项仍弹菜单、点开菜单时控制条消失 |
+| [BUG-3450](bugs/BUG-3450-browser-ext-subtitle-positioning.md) | ✅ | ✅ | 浏览器扩展字幕底板在全屏下与屏幕同高、缩放后整块上移飞出屏幕 |
+| [BUG-3449](bugs/BUG-3449-video-fullscreen-esc-skips-panel-ladder.md) | ✅ | ✅ | video-fullscreen-esc-skips-panel-ladder |
+| [BUG-3448](bugs/BUG-3448-popup-nowrap-group-overflows-card.md) | ✅ | ✅ | 查词卡里词典 nowrap 词组整组画到卡片外 |
+| [BUG-3447](bugs/BUG-3447-rail-toggle-right-edge-flicker.md) | ✅ | ✅ | rail-toggle-right-edge-flicker |
+| [BUG-3446](bugs/BUG-3446-reader-background-transient-position-persisted.md) | ✅ | ✅ | 安卓切后台时临时排版的页首字被落库，进程被回收后重开退一页 |
+| [BUG-3445](bugs/BUG-3445-subtitle-color-picker-compact.md) | ✅ | ✅ | 手机字幕取色器被裁且描边关不掉、全局设置缺颜色项 |
+| [BUG-3444](bugs/BUG-3444-book-collection-continue-next-volume.md) | ✅ | ✅ | book-collection-continue-next-volume |
+| [BUG-3443](bugs/BUG-3443-adopted-online-manga-delete-not-propagated.md) | ✅ | ✅ | 互联收下的在线漫画收不到对端从所有设备删除 |
+| [BUG-3442](bugs/BUG-3442-inline-video-word-audio-overlap.md) | ✅ | ✅ | 视频片段（WebM 内嵌）制卡翻面时单词音频与句子片段同时播放 |
+| [BUG-3441](bugs/BUG-3441-remote-series-volumes-not-in-collection.md) | ✅ | ✅ | 远端占位分卷不进本地同系列合集 |
+| [BUG-3440](bugs/BUG-3440-subtitle-delay-readout-focus-ring.md) | ✅ | ✅ | 字幕调轴读数胶囊的焦点环四角残缺 |
+| [BUG-3439](bugs/BUG-3439-android-local-audio-lost-after-activity-recreate.md) | ✅ | ✅ | Android 查词本地音频库「某时起」失效，重启才恢复 |
+| [BUG-3438](bugs/BUG-3438-watermelon-avatar-blurry.md) | ✅ | ✅ | 「超级大西瓜」页头像清晰度太低 |
+| [BUG-3437](bugs/BUG-3437-remote-download-delete-files-ignored.md) | ✅ | ✅ | 远端代下载任务删除时「同时删除已下载文件」勾选被丢弃 |
+| [BUG-3436](bugs/BUG-3436-galgame-skip-backlog-chars-counted.md) | ✅ | ✅ | galgame-skip-backlog-chars-counted |
+| [BUG-3435](bugs/BUG-3435-reader-highlight-lane-latin-ink.md) | ✅ | ✅ | 小说高亮条瘦身后西文上伸 / 下延字母没被包住 |
+| [BUG-3434](bugs/BUG-3434-lyrics-mining-context-sentences.md) | ✅ | ✅ | 歌词模式高级制卡无法前后加句 |
+| [BUG-3433](bugs/BUG-3433-lyrics-illustrations-scan-on-ui-isolate.md) | ✅ | ✅ | 歌词模式 / 插图册每次打开都在 UI isolate 上整书扫插图 |
+| [BUG-3432](bugs/BUG-3432-audiobook-long-chapter-open-timeout.md) | ✅ | ✅ | 长章有声书开书白屏、「内容加载超时」 |
+| [BUG-3431](bugs/BUG-3431-continuous-reopen-column-drift-and-follow-zero-save.md) | ✅ | ✅ | 滚动模式每次重开回退一列 + 跟读时视口首字 0 与句位交替落库 |
+| [BUG-3430](bugs/BUG-3430-reader-open-audio-live-position-and-play-before-seek.md) | ✅ | ✅ | 带有声书开书只信播放器实时位置 + 播放不等恢复 seek：先跳到书首句再跳回 |
+| [BUG-3429](bugs/BUG-3429-downloaded-book-key-mismatch-delete-lost.md) | ✅ | ✅ | 从对端下载的书落地键不同导致跨设备删除丢失 |
+| [BUG-3428](bugs/BUG-3428-srs-apkg-unicase.md) | ✅ | ✅ | 安卓导入新格式 Anki 包报 no such collation sequence: unicase |
+| [BUG-3427](bugs/BUG-3427-srs-ios-kernel-unlinked.md) | ✅ | ✅ | iOS 复习页报排程内核不可用：Runner 未链入 fushi_fsrs |
+| [BUG-3426](bugs/BUG-3426-nav-order-move-buttons-hit-area-below-48dp.md) | ✅ | ✅ | nav-order-move-buttons-hit-area-below-48dp |
+| [BUG-3425](bugs/BUG-3425-game-stream-card-missing-host-dict-styles.md) | ✅ | ✅ | game-stream-card-missing-host-dict-styles |
+| [BUG-3424](bugs/BUG-3424-feedback-ticket-store-concurrent-write-tmp-race.md) | ✅ | ✅ | feedback-ticket-store-concurrent-write-tmp-race |
+| [BUG-3423](bugs/BUG-3423-stream-subtitle-align-probe-too-long.md) | ✅ | ✅ | 媒体服务器 / 在线源视频字幕波形调轴要等太久（流只需前 3 分钟） |
+| [BUG-3422](bugs/BUG-3422-anime-download-seed-year-suffix.md) | ✅ | ✅ | anime-download-seed-year-suffix |
+| [BUG-3421](bugs/BUG-3421-reader-highlight-lanes-under-book-paragraph-background.md) | ✅ | ✅ | 书自带段落底色盖住高亮窄条 |
+| [BUG-3420](bugs/BUG-3420-reader-font-baseline-flag-uncached-ui-isolate.md) | ✅ | ✅ | 阅读器字体请求每次都在 UI isolate 上同步清竖排基线位、无缓存 |
+| [BUG-3419](bugs/BUG-3419-manga-failed-page-tap-swallows-paging.md) | ✅ | ✅ | 在线漫画失败页吞掉点击翻页，读者卡在失败页翻不走 |
+| [BUG-3418](bugs/BUG-3418-anki-jump-remote-video-not-found.md) | ✅ | ✅ | 从 Anki 卡片跳回视频提示「此设备没有对应来源」，但互联 host / 服务端上有 |
+| [BUG-3417](bugs/BUG-3417-recommended-pack-schema.md) | ✅ | ✅ | 推荐包重新导出抬高schema导致旧版强制更新 |
+| [BUG-3416](bugs/BUG-3416-ios-lyrics-vertical-first-blank.md) | ✅ | ✅ | iOS竖排进入歌词模式不显示且切横排无法恢复 |
+| [BUG-3415](bugs/BUG-3415-lyrics-popup-dict-header-tap-closes.md) | 🚧 | 🚧 | 歌词模式点查词弹窗词典折叠标题后弹窗整个关闭 |
+| [BUG-3414](bugs/BUG-3414-lyrics-speed-chip-press-wrap.md) | ✅ | ✅ | 歌词模式倍速键点击时文字折行跳动 |
+| [BUG-3413](bugs/BUG-3413-video-chrome-brightness.md) | ✅ | ✅ | 视频播放器 chrome 与面板不跟随日间/深色模式 |
+| [BUG-3412](bugs/BUG-3412-lookup-toolbar-size.md) | ✅ | ✅ | 阅读器查词框顶栏三组按钮尺寸不统一 |
+| [BUG-3411](bugs/BUG-3411-ios-landscape-subtitle-list-safe-area.md) | ✅ | ✅ | iOS 横屏视频字幕列表侧栏右侧整条安全区空着 |
+| [BUG-3410](bugs/BUG-3410-manga-crop-done-capsule.md) | ✅ | ✅ | 手机漫画高级制卡全屏框选页右上角「完成」在动作胶囊里偏左 |
+| [BUG-3395](bugs/BUG-3395-vn-merged-image-hides-sentence.md) | ✅ | ✅ | VN 图文合并屏插图铺满整屏，同屏句子被挤出屏外 |
+| [BUG-3389](bugs/BUG-3389-floating-lyric-quick-font-size-resets-style.md) | ✅ | ✅ | 阅读器快捷设置改悬浮字幕字号会清空圆角与窗宽 |
+| [BUG-3388](bugs/BUG-3388-floating-lyric-context-outline-dim.md) | ✅ | ✅ | 悬浮字幕多句时上下文行描边被降亮字色覆盖 |
+| [BUG-3387](bugs/BUG-3387-manga-ai-ocr-drops-lens-columns.md) | ✅ | ✅ | 大模型OCR回写丢失Lens列几何致查词错位 |
+| [BUG-3386](bugs/BUG-3386-android-mihon-image-url-unresolved.md) | ✅ | 🚧 | Android在线漫画不解析逐页图片地址 |
+| [BUG-3385](bugs/BUG-3385-manga-online-failed-page-never-retried.md) | ✅ | ✅ | 在线直读取页失败后该页永久白屏 |
+| [BUG-3371](bugs/BUG-3371-sync-compare-manga-zero-progress.md) | ✅ | ✅ | sync-compare-manga-zero-progress |
+| [BUG-3370](bugs/BUG-3370-video-home-next-up-skips-open-only-episode.md) | ✅ | ✅ | video-home-next-up-skips-open-only-episode |
+| [BUG-3369](bugs/BUG-3369-reader-highlight-one-em-lanes.md) | ✅ | ✅ | 阅读器高亮条太粗：所有字体都要一个字高 |
+| [BUG-3368](bugs/BUG-3368-lyrics-ruby-selection-highlight.md) | ✅ | ✅ | 歌词模式查词高亮漏掉带注音的字 |
+| [BUG-3367](bugs/BUG-3367-interconnect-playback-position-lww-no-conflict.md) | ✅ | ✅ | 互联视频/有声书播放位置纯 LWW 无冲突判定：两端各自看过后晚同步的一端被静默覆盖 |
+| [BUG-3366](bugs/BUG-3366-ios-lyrics-vertical-sweep-column-order.md) | ✅ | ✅ | iOS 竖排歌词扫过高亮不按阅读顺序跨列 |
+| [BUG-3365](bugs/BUG-3365-floating-ball-media-defaults.md) | ✅ | ✅ | 漫画等媒体页悬浮球出厂带一长列应用外按钮 |
+| [BUG-3364](bugs/BUG-3364-mihon-speedbinb-grandparent-ctor.md) | ✅ | ✅ | Mihon 桌面 sidecar：SpeedBinb 系日漫源搜索报 VerifyError（R8 内联两层构造器） |
+| [BUG-3363](bugs/BUG-3363-onboarding-back-arrow-duplicates-skip.md) | ✅ | ✅ | 新手引导左上返回箭头与「暂时跳过」重复且被误认为上一步 |
+| [BUG-3362](bugs/BUG-3362-galgame-summary-not-selectable.md) | ✅ | ✅ | galgame 详情简介不能选择复制 |
+| [BUG-3361](bugs/BUG-3361-collection-picker-count.md) | ✅ | ✅ | 「加入合集」弹窗的合集成员数与合集里实际显示的数量不一致 |
+| [BUG-3360](bugs/BUG-3360-dashboard-video-cover-placeholder.md) | ✅ | ✅ | 首页继续区视频作品海报文件不在时直接显示占位，不回落到集封面 |
+| [BUG-3359](bugs/BUG-3359-dropdown-menu-scroll-leak.md) | ✅ | ✅ | 下拉选择框（漫画源等）滚轮滚不动、页面顶栏反而跟着收起 |
+| [BUG-3358](bugs/BUG-3358-webview-hwheel-sign-trackpad-page-turn.md) | ✅ | ✅ | WebView横向滚轮符号反了致触控板翻页方向反 |
+| [BUG-3357](bugs/BUG-3357-persistent-snackbar-no-close.md) | ✅ | ✅ | 带动作的提示条常驻且没有关闭按钮，只能横滑关 |
+| [BUG-3356](bugs/BUG-3356-ios-reader-edge-swipe-webview-history.md) | ✅ | ✅ | iOS 阅读器边缘侧滑触发 WKWebView 历史后退，正文位置被跳走 |
+| [BUG-3355](bugs/BUG-3355-detail-backdrop-contained.md) | ✅ | ✅ | 两栏详情页模糊背景只画成窗口中间一块竖条（像莫名的毛玻璃） |
+| [BUG-3354](bugs/BUG-3354-swipe-seek-hud-resets-on-release.md) | ✅ | ✅ | 横滑跳转松手瞬间 HUD 显示回滑动起始进度 |
+| [BUG-3353](bugs/BUG-3353-ui-jank-theme-rail.md) | ✅ | ✅ | 设置开关与侧栏收展掉帧 |
+| [BUG-3352](bugs/BUG-3352-wgc-pump-rate.md) | ✅ | ✅ | Windows WebView popup scroll capped near 32 fps by WGC pump timer |
+| [BUG-3351](bugs/BUG-3351-home-swipe-settings-dead-end.md) | ✅ | ✅ | 移动端横滑切模块滑到设置页后滑不回去 |
+| [BUG-3350](bugs/BUG-3350-video-preview-padding.md) | ✅ | ✅ | 视频句子音频试听不含首尾留白，与写卡区间不一致 |
+| [BUG-3349](bugs/BUG-3349-popup-imported-font-synthetic-bold.md) | ✅ | ✅ | 查词弹窗导入字体只有常规字重时词头被合成加粗、字形中空 |
+| [BUG-3348](bugs/BUG-3348-manga-drop-epub-multi.md) | ✅ | ✅ | 漫画库拖入 EPUB 先走书籍导入、多选拖入只导一本 |
+| [BUG-3347](bugs/BUG-3347-shelf-name-sort-display-title.md) | ✅ | ✅ | 书架/漫画库按名称排序与显示名不一致、全角数字不按数值排 |
+| [BUG-3346](bugs/BUG-3346-ios-lyrics-vertical-long-cue-sweep-vanish.md) | ✅ | ✅ | iOS 竖排歌词播放时长句整列消失（BUG-3280 修复无效） |
+| [BUG-3345](bugs/BUG-3345-popup-trackpad-slow-scroll-locked-as-pinch.md) | ✅ | ✅ | 查词弹窗触控板慢滑被锁成捏合滑不动 |
+| [BUG-3344](bugs/BUG-3344-online-source-bridge-error-raw.md) | ✅ | ✅ | AI 下载漫画失败时把 BRIDGE_HTTP_500 原始异常甩给用户 |
+| [BUG-3343](bugs/BUG-3343-blink-vertical-highlight-misplaced.md) | ✅ | ✅ | Android 旧 WebView（Blink 105–119）竖排查词高亮错位 / 不可见 |
+| [BUG-3342](bugs/BUG-3342-video-pause-ocr-opt-in.md) | ✅ | ✅ | 视频暂停 OCR 默认自动运行并弹漫画文案的 Lens 同意框 |
+| [BUG-3341](bugs/BUG-3341-manga-card-menu-ocr.md) | ✅ | ✅ | 漫画卡菜单显示「导入有声书」而没有 OCR，多选也没有批量 OCR |
+| [BUG-3340](bugs/BUG-3340-pill-equal-height.md) | ✅ | ✅ | 库页工具行按钮组胶囊比搜索框高 |
+| [BUG-3339](bugs/BUG-3339-gamepad-prev-subtitle-degrades.md) | ✅ | ✅ | 手柄「上一句字幕」退化成固定秒数回退 |
+| [BUG-3338](bugs/BUG-3338-floating-chrome-scrim-seam.md) | ✅ | ✅ | 库页外壳页签胶囊下方横穿一条细线（浮动工具区两层遮罩接缝叠加） |
+| [BUG-3337](bugs/BUG-3337-peer-book-concurrent-download.md) | ✅ | ✅ | 同时下载多本对端书籍崩溃 / 合集内进度不实时 / 多选合集下载无效 / 下载完成书架跳顶 |
+| [BUG-3336](bugs/BUG-3336-ext-scroll-follow.md) | ✅ | ✅ | 浏览器扩展查词后滚动页面，高亮与弹窗停在原位 |
+| [BUG-3335](bugs/BUG-3335-startup-idle-wavy-ticker.md) | ✅ | ✅ | 启动后持续卡顿：静止的确定态波浪进度条常驻 ticker 每帧重绘 |
+| [BUG-3334](bugs/BUG-3334-log-upload-no-retry.md) | ✅ | ✅ | 日志上传遇瞬时网络故障直接失败 |
+| [BUG-3333](bugs/BUG-3333-manga-ocr-stale-regions-dropped.md) | ✅ | ✅ | 漫画 OCR 覆盖层字级区域对不上文字时逐个丢弃，部分字无可点区域 |
+| [BUG-3332](bugs/BUG-3332-remote-video-mining-work-tag.md) | ✅ | ✅ | 在线视频制卡标签只有「Episode 2」，缺作品名 |
+| [BUG-3331](bugs/BUG-3331-anime-source-download-mining-uid.md) | ✅ | ✅ | 扩展下载到本地的集制卡失败：Invalid library UID |
+| [BUG-3330](bugs/BUG-3330-gamepad-hold-speed-toggles.md) | ✅ | ✅ | 手柄「按住临时倍速」变成点按切换，长按也只算一次点按 |
+| [BUG-3329](bugs/BUG-3329-emby-movie-detail.md) | ✅ | ✅ | 媒体服务器电影点卡直接播放，没有详情页与版本选择 |
+| [BUG-3328](bugs/BUG-3328-favorite-removal-drops-lookup-selection.md) | ✅ | ✅ | 阅读器删除收藏 / 标注高亮后查词选区丢失 |
+| [BUG-3327](bugs/BUG-3327-plex-paused-heartbeat.md) | ✅ | ✅ | Plex心跳把已暂停条目重新标成播放中 |
+| [BUG-3326](bugs/BUG-3326-ruby-sentence-highlight-joints.md) | ✅ | ✅ | 有声书当前句高亮在振假名处断开、长注音处叠色 |
+| [BUG-3325](bugs/BUG-3325-lua-subtitle-scripts.md) | ✅ | ✅ | Lua 脚本读不到字幕：字幕结束自动暂停脚本在 Fushi 无效 |
+| [BUG-3324](bugs/BUG-3324-reader-copy-menu-after-lookup-swipe.md) | 🚧 | 🚧 | iOS 阅读器查词关闭后滑动自动弹出复制框并卡顿（未复现） |
+| [BUG-3323](bugs/BUG-3323-webkit-highlight-anonymous-block.md) | ✅ | ✅ | iOS/macOS 分页阅读器拖选与查词高亮不可见（页顶注音预留的块级 p::after 让正文进匿名块） |
+| [BUG-3322](bugs/BUG-3322-jellyfin-paused-heartbeats.md) | ✅ | ✅ | Jellyfin 延迟位置心跳覆盖暂停状态 |
+| [BUG-3321](bugs/BUG-3321-win-folder-picker-crash.md) | ✅ | ✅ | Windows 选文件夹后崩溃（comdlg32 CFileOpenSave 释放已释放的 IShellItem） |
+| [BUG-3320](bugs/BUG-3320-lookup-header-buttons-overlap.md) | ✅ | ✅ | 查词弹窗窄宽时按钮组压住词头 |
+| [BUG-3319](bugs/BUG-3319-graphic-subtitle-mining-black-frame.md) | ✅ | ✅ | 图形字幕制卡只有黑色静图、无同步视频和句子音频 |
+| [BUG-3318](bugs/BUG-3318-graphic-ocr-card-no-apple-surface.md) | ✅ | ✅ | 图形字幕OCR进度卡在Apple与墨水屏下不走播放器浮层表面 |
+| [BUG-3317](bugs/BUG-3317-bitmap-subtitle-oversize-oom.md) | ✅ | ✅ | 位图字幕对象声明超大尺寸时一次分配数GB平面 |
+| [BUG-3316](bugs/BUG-3316-libmpv-probe-tests-release-backend.md) | ✅ | ✅ | media_kit 热重启探针预编译后实际测的是 release 后端 |
+| [BUG-3315](bugs/BUG-3315-windows-hi10p-h264-software-decode.md) | ✅ | ✅ | Windows 播放 H.264 High 10 走 CPU 软解掉帧；诊断默认不采 mpv 掉帧统计 |
+| [BUG-3314](bugs/BUG-3314-graphic-subtitle-ocr-ruby-tap-duplicate.md) | ✅ | ✅ | 图片字幕OCR点击位置偏移、振假名混入正文、转录出重复字幕 |
+| [BUG-3313](bugs/BUG-3313-ass-seek-animation-stale-clock.md) | ✅ | ✅ | ASS 字幕跳转后位置/淡入淡出时间错乱（动画读滞后的原始播放位置） |
+| [BUG-3312](bugs/BUG-3312-audio-cd-cda-import.md) | ✅ | ✅ | 音频 CD 导入视频库一条不收：需先抓轨成 FLAC（Windows .cda / macOS .aiff 挂载） |
+| [BUG-3311](bugs/BUG-3311-android-lookup-audio-duck.md) | ✅ | ✅ | android-video-lookup-word-audio-ducks-video |
+| [BUG-3310](bugs/BUG-3310-double-tap-pause-gated-by-synced-click-switch.md) | ✅ | ✅ | 移动端双击暂停被跨设备同步的「点击画面播放/暂停」开关静默关掉 |
+| [BUG-3309](bugs/BUG-3309-ios-md3-adaptive-cupertino-leak.md) | ✅ | ✅ | iOS 上 MD3 设计系统的 .adaptive 控件仍渲染 Cupertino 外观（来源顺序对话框绿开关） |
+| [BUG-3308](bugs/BUG-3308-popup-round-button-press-square.md) | ✅ | ✅ | 查词弹窗点「+」制卡按钮时闪出完全直角的方块 |
+| [BUG-3307](bugs/BUG-3307-feedback-screenshot-platform-view.md) | ✅ | ✅ | 反馈自动截图缺 WebView 等平台视图（iOS 查词卡整块空白） |
+| [BUG-3306](bugs/BUG-3306-lookup-clear-x-not-working.md) | 🚧 | 🚧 | 查词页搜索框 X 清不掉结果（反馈 DUiNPr1J10，未复现） |
+| [BUG-3305](bugs/BUG-3305-sync-exit-warning-on-lookup-back.md) | ✅ | ✅ | 查词页有查询时侧滑返回弹出「同步进行中」（同步全关） |
+| [BUG-3304](bugs/BUG-3304-feedback-attachment-no-retry.md) | ✅ | ✅ | 反馈附件上传失败后无法重试 |
+| [BUG-3303](bugs/BUG-3303-leaderboard-register-forces-consent.md) | ✅ | ✅ | 排行榜注册强制同意公开且绑定启用上传 |
+| [BUG-3302](bugs/BUG-3302-collection-continue-stale-snapshot.md) | ✅ | ✅ | 合集详情「继续阅读」停在进页快照，不随阅读更新 |
+| [BUG-3301](bugs/BUG-3301-audiobook-panel-nested-scroll.md) | ✅ | ✅ | 有声书面板矮视口外层滚动套固定高度内层章节列表，滚不到底 |
+| [BUG-3300](bugs/BUG-3300-press-scale-release-after-dispose.md) | ✅ | ✅ | FushiPressScale 松手路径读已销毁 State.context（文件选择器闪退） |
+| [BUG-3299](bugs/BUG-3299-profile-binding-sticky.md) | ✅ | ✅ | 绑定配置切换后无绑定条目不回到用户自选配置 |
+| [BUG-3298](bugs/BUG-3298-episode-switch-reentry.md) | ✅ | ✅ | 视频换集 _switchEpisode 无防重入 |
+| [BUG-3297](bugs/BUG-3297-subtitle-list-open-remeasure.md) | ✅ | ✅ | 视频字幕列表每次打开都把当前句之前的行重新排版两遍 |
+| [BUG-3296](bugs/BUG-3296-video-enhance-off-vertical-squash.md) | ✅ | ✅ | Windows 关闭画质增强后画面纵向被压扁约 0.74% |
+| [BUG-3295](bugs/BUG-3295-ios-popup-m3e-color.md) | 🚧 | 🚧 | iOS 查词框没有上 M3E 着色（未复现） |
+| [BUG-3294](bugs/BUG-3294-popup-mine-button-blue-box.md) | 🚧 | 🚧 | 点制卡按钮出现蓝色方框背景（未复现） |
+| [BUG-3293](bugs/BUG-3293-popup-loading-spinner-lingers.md) | ✅ | ✅ | 查词加载指示器在结果出来后仍压着结果转 |
+| [BUG-3292](bugs/BUG-3292-reader-popup-under-floating-chrome.md) | ✅ | ✅ | 阅读器悬浮底栏/迷你播放条盖住查词弹窗 |
+| [BUG-3291](bugs/BUG-3291-clip-export-drops-ass-style.md) | ✅ | ✅ | 片段导出烧字幕丢失原字幕颜色与加粗 |
+| [BUG-3290](bugs/BUG-3290-bluray-menu-unconsumed-input-error.md) | ✅ | ✅ | 原盘菜单方向键 / 点击没被原盘接收时报「未能执行菜单操作」 |
+| [BUG-3289](bugs/BUG-3289-emby-short-query-zero-count.md) | ✅ | ✅ | Emby 短查询 TotalRecordCount 清零，搜索把整页命中丢弃 |
+| [BUG-3288](bugs/BUG-3288-popup-headword-wheel-scroll.md) | ✅ | ✅ | 查词弹窗词头放得下仍可被滚轮纵向滚动 |
+| [BUG-3287](bugs/BUG-3287-video-subtitle-highlight-stroke.md) | ✅ | ✅ | 视频字幕查词高亮底色盖不住 .ass 描边 |
+| [BUG-3286](bugs/BUG-3286-video-fullscreen-file-dialog-hidden.md) | ✅ | ✅ | 视频全屏时系统文件对话框被压在全屏窗口下 |
+| [BUG-3285](bugs/BUG-3285-video-skip-cue-stale-subtitle-stack.md) | ✅ | ✅ | 上/下一句跳转旧字幕残留、新句被顶高 |
+| [BUG-3284](bugs/BUG-3284-android-torrent-libcxx-shared.md) | ✅ | ✅ | Android 内置下载引擎 dlopen 失败被判缺少运行库 |
+| [BUG-3283](bugs/BUG-3283-floating-scrim-nested-hardedge-after-collapse.md) | ✅ | ✅ | 库页工具区收起后内容中间残留浅色横带（嵌套遮罩按恒定 inset 起画） |
+| [BUG-3282](bugs/BUG-3282-lyrics-scroll-layer-explosion.md) | ✅ | ✅ | 歌词滚动帧率低 |
+| [BUG-3281](bugs/BUG-3281-lyrics-punctuation-latin-font.md) | ✅ | ✅ | 歌词模式标点与引号字形与正文不一致 |
+| [BUG-3280](bugs/BUG-3280-lyrics-vertical-sweep-webkit-columns-vanish.md) | ✅ | ✅ | iOS竖排歌词播放时长句后几列消失 |
+| [BUG-3279](bugs/BUG-3279-lyrics-vertical-popup-squeezed.md) | ✅ | ✅ | 竖排歌词查词弹窗被压扁且上下乱跳 |
+| [BUG-3278](bugs/BUG-3278-video-continue-row-hover-side-clip.md) | ✅ | ✅ | 视频库继续观看横滚行悬停放大被视口左右裁剪 |
+| [BUG-3277](bugs/BUG-3277-zip-unicode-path-extra.md) | ✅ | ✅ | Yomitan zip 的 Info-ZIP Unicode Path(0x7075) 文件名被忽略，大辞林 24 张图缺失 |
+| [BUG-3276](bugs/BUG-3276-bitmap-subs-remote-timing-ocr.md) | ✅ | ✅ | VobSub/DVB 图形字幕与远程播放没有逐句时间与整轨 OCR |
+| [BUG-3275](bugs/BUG-3275-graphic-subtitle-ocr-duplicate-slow.md) | ✅ | ✅ | 图形字幕整轨OCR文字重复且极慢 |
+| [BUG-3274](bugs/BUG-3274-popup-switch-word-false-empty.md) | ✅ | ✅ | 视频页换词时查词弹窗先闪「未找到」、滑动掉帧 |
+| [BUG-3273](bugs/BUG-3273-ocr-progress-card-contrast.md) | ✅ | ✅ | 图形字幕转文字进度卡浅色主题下文字看不清且无法收起 |
+| [BUG-3272](bugs/BUG-3272-anki-auto-reposition-failure-reason-lost.md) | ✅ | ✅ | 自动重排失败原因被吞且整牌组请求走交互超时 |
+| [BUG-3271](bugs/BUG-3271-expansion-tile-pagestorage-collision.md) | ✅ | ✅ | 视频设置面板字幕分类下方整片灰（展开区与滚动视图 PageStorage 槽冲突） |
+| [BUG-3270](bugs/BUG-3270-anki-dict-media-dangling-placeholder.md) | ✅ | ✅ | 制卡缺词典媒体时卡片残留 fushi_dict_N 占位图，AnkiDroid 报加载失败 |
+| [BUG-3269](bugs/BUG-3269-local-audio-reference-internal-name.md) | ✅ | ✅ | 本地发音库引用文件名像内部副本时被重挂到不存在的路径 |
+| [BUG-3268](bugs/BUG-3268-oauth-mobile-redirect-registration.md) | ✅ | ✅ | 移动端云同步改名回调未同步云端登记 |
+| [BUG-3267](bugs/BUG-3267-lookup-highlight-two-colors.md) | ✅ | ✅ | 查词窗源文本条与结果卡命中高亮两种颜色 |
+| [BUG-3266](bugs/BUG-3266-scrape-title-ending-in-year.md) | ✅ | ✅ | 片名以年份结尾时被当裸年份剥掉，刮削查无 |
+| [BUG-3265](bugs/BUG-3265-anki-css-open-attribute-pruned.md) | ✅ | ✅ | 制卡词典 CSS 裁剪把 details[open] 等交互态属性规则裁掉 |
+| [BUG-3264](bugs/BUG-3264-feedback-dev-list-stale-request.md) | ✅ | ✅ | 反馈处理台列表被取代的旧请求仍清加载中并写错误 |
+| [BUG-3263](bugs/BUG-3263-pill-segmented-width-estimate.md) | ✅ | ✅ | MD3 胶囊分段估宽与绘制不同源导致段被钳窄截断 |
+| [BUG-3262](bugs/BUG-3262-hdr-compositor-failure-cached.md) | ✅ | ✅ | HDR合成器一次失败就整个进程记成不支持 |
+| [BUG-3261](bugs/BUG-3261-mixed-kana-idiom-lookup.md) | ✅ | ✅ | 汉字假名混写的惯用句（棚にあげる）查不到 |
+| [BUG-3260](bugs/BUG-3260-emby-subtitle-player-fallback-url.md) | ✅ | ✅ | 外挂字幕解析为空时交给 libmpv 的是失效的 DeliveryUrl |
+| [BUG-3259](bugs/BUG-3259-feedback-reopen-cap-race.md) | ✅ | ✅ | 反馈重新提交次数上限先 COUNT 再 INSERT 并发可超、重新提交跳过同来源判重 |
+| [BUG-3258](bugs/BUG-3258-little-busters-luca-no-text.md) | ✅ | ✅ | Little Busters!（LucaSystem 引擎）连文本都抓不到 |
+| [BUG-3257](bugs/BUG-3257-ctl-shortcuts-wheel-display-format.md) | ✅ | ✅ | 桌面CLI快捷键列表滚轮绑定在macOS输出显示格式 |
+| [BUG-3256](bugs/BUG-3256-home-tab-notifier-stale-after-module-off.md) | ✅ | ✅ | 当前 tab 被非设置页途径关掉时外壳 tab 通知残留旧值 |
+| [BUG-3255](bugs/BUG-3255-ext-offset-negative-zero.md) | ✅ | ✅ | 浏览器扩展字幕偏移绝对值小于5ms时显示-0 |
+| [BUG-3254](bugs/BUG-3254-video-delay-float-bar-stale.md) | ✅ | ✅ | 视频调轴浮条开着时快捷键改延迟，读数不跟且 ± 以旧值覆盖 |
+| [BUG-3253](bugs/BUG-3253-game-stream-narrow-panel-overflow.md) | ✅ | ✅ | 串流窄布局面板最小高度 200 在软键盘弹出时溢出 |
+| [BUG-3252](bugs/BUG-3252-hidden-remote-books-pref-cast.md) | 🚧 | 🚧 | 远端书隐藏列表偏好读取假定一定是字符串 |
+| [BUG-3251](bugs/BUG-3251-audiobook-live-cue-replace-encoding.md) | ✅ | ✅ | 播放中换字幕后周期写入仍按旧 cue 编码，被杀则断点错位 |
+| [BUG-3250](bugs/BUG-3250-shell-inline-title-unbounded.md) | ✅ | ✅ | 库页宽窗标题胶囊不限宽长页面名挤压页签 |
+| [BUG-3249](bugs/BUG-3249-home-avatar-profile-name-stale.md) | ✅ | ✅ | 首页头像只在初始化读一次 Profile 名且吞掉排行榜刷新异常 |
+| [BUG-3248](bugs/BUG-3248-audiobook-stale-token-sidecar.md) | ✅ | ✅ | 互联更新字幕后旧逐 token sidecar 残留 |
+| [BUG-3247](bugs/BUG-3247-top-bar-follow-leading-budget.md) | ✅ | ✅ | 顶栏动作紧跟返回键时自适应溢出少算 8px 提前收进溢出菜单 |
+| [BUG-3246](bugs/BUG-3246-manga-direct-open-ignores-resume-target.md) | ✅ | ✅ | 首页继续等直接打开在线漫画不按重新打开位置偏好选章 |
+| [BUG-3245](bugs/BUG-3245-hidden-remote-books-probe-creates-root.md) | ✅ | ✅ | 打开已从本机移除的远端书设置页会在云盘建同步根目录 |
+| [BUG-3244](bugs/BUG-3244-hidden-remote-books-count-i18n.md) | ✅ | ✅ | 已从本机移除的远端书设置项副标题硬拼条数未走 i18n |
+| [BUG-3243](bugs/BUG-3243-feedback-relation-chip-dead-tap.md) | ✅ | ✅ | 反馈人详情页关联 chip 对方不在本机时可点但没反应 |
+| [BUG-3242](bugs/BUG-3242-feedback-reopen-shot-fail-silent.md) | ✅ | ✅ | 重新提交带原截图时单张取回失败不提示 |
+| [BUG-3241](bugs/BUG-3241-feedback-draft-rewrite-on-blur.md) | ✅ | ✅ | 反馈草稿在桌面主窗每次失焦都整份重写（含截图） |
+| [BUG-3240](bugs/BUG-3240-feedback-draft-restore-drops-autoshot.md) | ✅ | ✅ | 反馈提交页恢复草稿时丢掉本次打开自动截的图 |
+| [BUG-3239](bugs/BUG-3239-feedback-detail-shot-no-retry.md) | ✅ | ✅ | 反馈详情页截图下载失败后本次打开期间不再重试 |
+| [BUG-3238](bugs/BUG-3238-settings-slider-rejected-value.md) | ✅ | ✅ | 设置滑条松手后被拒绝的拖动值一直挂在滑块上 |
+| [BUG-3237](bugs/BUG-3237-transcode-hls-seek-late-audio.md) | ✅ | ✅ | 互联转码 HLS：音轨比画面晚起的片子一 seek 就黑屏 EOF |
+| [BUG-3236](bugs/BUG-3236-interconnect-bluray-title-unplayable.md) | ✅ | ✅ | 互联客户端打不开蓝光标题（host 把 .mpls 当视频直传） |
+| [BUG-3235](bugs/BUG-3235-video-library-staged-first-paint.md) | ✅ | ✅ | 视频库首屏一块块加载 |
+| [BUG-3234](bugs/BUG-3234-android-dict-import-oom-native-kill.md) | ✅ | ✅ | Android 导入英语大词典时原生进程被杀（low_ram 写死 false + MDX-in-zip 整条目解压进堆） |
+| [BUG-3233](bugs/BUG-3233-bluray-disc-extras-missing-from-work-page.md) | ✅ | ✅ | 原盘菜单里的特典映像在作品资料页看不到 |
+| [BUG-3232](bugs/BUG-3232-bluray-disc-extras-scraped-as-movie.md) | ✅ | ✅ | 电影盘上的特辑与菜单特典被各自当成整部电影刮削 |
+| [BUG-3231](bugs/BUG-3231-bluray-menu-title-not-scraped.md) | ✅ | ✅ | 原盘菜单进入的标题建出无来源孤儿行，刮削永远刮不到 |
+| [BUG-3230](bugs/BUG-3230-bluray-menu-hover-collapses.md) | ✅ | ✅ | 原盘菜单鼠标点击展开后移开鼠标菜单收起 |
+| [BUG-3229](bugs/BUG-3229-bluray-menu-chrome-never-hides.md) | ✅ | ✅ | 原盘菜单左上角退出不自动隐藏且菜单栏不符合 M3E / Apple 规范 |
+| [BUG-3228](bugs/BUG-3228-leaderboard-summary-stuck-loading.md) | ✅ | ✅ | 排行榜总字数卡加载失败后永远停在加载条 |
+| [BUG-3225](bugs/BUG-3225-android-global-lookup-black-panel.md) | ✅ | ✅ | Android app 外查词窗词条区整块黑底、浅色主题文字看不见 |
+| [BUG-3224](bugs/BUG-3224-anki-card-css-size.md) | ✅ | ✅ | 制卡把整份词典 CSS 内联进每个释义字段，AnkiDroid 预览 TransactionTooLargeException 打不开 |
+| [BUG-3223](bugs/BUG-3223-video-fullscreen-episode-list-hang.md) | ✅ | ✅ | 全屏下从剧集列表换下一集：原生全屏中途掉线（反馈「点剧集列表就卡住了」） |
+| [BUG-3222](bugs/BUG-3222-manga-prev-chapter-flash-first-page.md) | ✅ | ✅ | 翻回上一章先闪上一章开头再跳到末尾 |
+| [BUG-3221](bugs/BUG-3221-manga-chapter-switch-queued-turns.md) | ✅ | ✅ | 换章装载期间多滑的几下在新章装好后被逐页消费 |
+| [BUG-3220](bugs/BUG-3220-ios-ankimobile-no-return.md) | 🚧 | 🚧 | iOS 制卡后不跳回 Fushi，已制卡打勾不见 |
+| [BUG-3219](bugs/BUG-3219-manga-swipe-not-following.md) | ✅ | ✅ | 漫画横滑翻页不跟手：拖动中页面不动，松手才翻 |
+| [BUG-3218](bugs/BUG-3218-video-skip-intro-removed.md) | ✅ | ✅ | 跳过片头/片尾按钮无法关闭，按用户决定移除该功能 |
+| [BUG-3217](bugs/BUG-3217-dict-style-radius-collapses-layout.md) | ✅ | ✅ | 词典样式开圆角后释义塌成一字一行 |
+| [BUG-3216](bugs/BUG-3216-dictionary-page-mining-sentence.md) | ✅ | ✅ | 查词页制卡卡片没有句子 |
+| [BUG-3215](bugs/BUG-3215-lapis-ipad-audio-buttons.md) | 🚧 | 🚧 | iPad 上 Lapis 卡片播放按钮孤零零落在左下角 |
+| [BUG-3214](bugs/BUG-3214-video-graphic-ocr-mining.md) | 🚧 | 🚧 | 视频暂停 OCR 出的文字无法制卡 |
+| [BUG-3213](bugs/BUG-3213-android-selection-range.md) | 🚧 | 🚧 | Android 长按选词高亮范围与实际不符 |
+| [BUG-3212](bugs/BUG-3212-kansai-ta-deinflection.md) | ✅ | ✅ | もらうた 被推断成 もらう + 关西方言 -た |
+| [BUG-3211](bugs/BUG-3211-dialog-hero-icon-stretched.md) | ✅ | ✅ | 对话框 hero 图标底板被撑成满宽横条（选择句子上下文顶部的 99） |
+| [BUG-3210](bugs/BUG-3210-stale-popup-selection-text.md) | ✅ | ✅ | SelectionText 写入上一次查词的旧选区 |
+| [BUG-3203](bugs/BUG-3203-macos-shortcut-display.md) | ✅ | ✅ | macOS 快捷键显示写死 Ctrl/Alt，引导键帽横向撑满 |
+| [BUG-3202](bugs/BUG-3202-onboarding-hero-overlap.md) | ✅ | ✅ | 新手引导步骤 hero 压到页头进度条上 |
+| [BUG-3201](bugs/BUG-3201-floating-ball-dedupe.md) | ✅ | ✅ | Fushi 在前台时应用内与应用外两颗悬浮球并排出现 |
+| [BUG-3200](bugs/BUG-3200-feedback-reporter-attachments-hidden.md) | ✅ | ✅ | 反馈人在自己的反馈详情里看不到提交的截图和日志 |
+| [BUG-3199](bugs/BUG-3199-media-server-subtitle-search-original-title.md) | ✅ | ✅ | 媒体服务器在线观看搜字幕用的是中文显示标题 |
+| [BUG-3198](bugs/BUG-3198-emby-view-all-shows-folders.md) | ✅ | ✅ | Emby「查看全部」显示文件夹而不是剧 |
+| [BUG-3197](bugs/BUG-3197-audiobook-reimport-keeps-progress.md) | ✅ | ✅ | 重新导入字幕后有声书音频进度被重置 |
+| [BUG-3196](bugs/BUG-3196-host-tls-cn-non-ascii.md) | ✅ | ✅ | 计算机名含中文时主机服务开不起来（自签证书 CN/SAN 只收 ASCII） |
+| [BUG-3195](bugs/BUG-3195-video-paused-seek-buffering-spinner.md) | ✅ | ✅ | 暂停状态下拖进度条后加载圈和 0 B/s 一直挂着 |
+| [BUG-3194](bugs/BUG-3194-subtitle-list-actions-cover-text.md) | ✅ | ✅ | 字幕列表行尾动作按钮压住句尾、被压的词点不了查词 |
+| [BUG-3193](bugs/BUG-3193-home-video-progress.md) | ✅ | ✅ | 首页继续栏视频缺进度显示 |
+| [BUG-3192](bugs/BUG-3192-scrape-year-folder.md) | ✅ | ✅ | 带年份文件夹的番没刮上：裸年份未剥离 |
+| [BUG-3191](bugs/BUG-3191-emby-external-ass-subtitle.md) | ✅ | ✅ | Emby 外挂 ASS 字幕加载失败 |
+| [BUG-3190](bugs/BUG-3190-collection-detail-skeleton-dup-actions.md) | ✅ | ✅ | 作品资料页骨架旧样式、背景海报看不见、右上角与左侧按钮重复 |
+| [BUG-3176](bugs/BUG-3176-ios-appbar-scroll-edge-line.md) | ✅ | ✅ | iOS详情页下拉时顶栏下沿露出一条线 |
+| [BUG-3175](bugs/BUG-3175-page-header-scroll-jitter.md) | ✅ | ✅ | 页头随滚动收起来回跳 |
+| [BUG-3174](bugs/BUG-3174-settings-slider-not-tracking.md) | ✅ | ✅ | 设置数值滑条拖动不跟手松手才变 |
+| [BUG-3173](bugs/BUG-3173-theme-switch-window-flash.md) | ✅ | ✅ | 切主题或切深色时整页连闪 |
+| [BUG-3149](bugs/BUG-3149-settings-jump-bar-follow.md) | ✅ | ✅ | 设置页分组跳转条不跟随当前分组横向滚动 |
+| [BUG-3148](bugs/BUG-3148-profile-list-stale-after-import.md) | ✅ | ✅ | 互联下载/入站配置后配置管理列表不刷新，需重启才看到 |
+| [BUG-3147](bugs/BUG-3147-interconnect-profile-stale-session.md) | ✅ | ✅ | 互联配置传输复用未重载的会话，重新配对后仍报「配对凭据被拒」 |
+| [BUG-3146](bugs/BUG-3146-browser-ext-fullscreen-lookup-offline.md) | ✅ | ✅ | 浏览器扩展切全屏后查词连不上并误报 API 未开启 |
+| [BUG-3145](bugs/BUG-3145-browser-ext-import-gate.md) | ✅ | ✅ | 浏览器扩展导入本地字幕后不显示，要拨一下 Fushi 字幕开关 |
+| [BUG-3144](bugs/BUG-3144-browser-ext-floating-button.md) | ✅ | ✅ | 浏览器扩展悬浮按钮在非 YouTube 站点乱飞 |
+| [BUG-3143](bugs/BUG-3143-browser-ext-fullscreen-subtitle.md) | ✅ | ✅ | 浏览器扩展全屏下字幕拖动贴底、把手点不着、切全屏后飞出屏幕 |
+| [BUG-3142](bugs/BUG-3142-browser-ext-resize-relayout.md) | ✅ | ✅ | 浏览器扩展拖右下角改弹窗大小后词条不重排 |
+| [BUG-3141](bugs/BUG-3141-browser-ext-favorite.md) | ✅ | ✅ | 浏览器扩展查词弹窗收藏按钮无反应 |
+| [BUG-3140](bugs/BUG-3140-ext-min-downloads-any-label.md) | ✅ | ✅ | 扩展页最低下载量首档显示成「全部语言」 |
+| [BUG-3139](bugs/BUG-3139-popup-columns-coarse-landscape.md) | ✅ | ✅ | 安卓横屏视频查词设最多三列也只出一列 |
+| [BUG-3138](bugs/BUG-3138-asr-sheet-finished-locked.md) | ✅ | ✅ | 转录完成状态下选项锁死、加速按钮点了没反应 |
+| [BUG-3137](bugs/BUG-3137-emby-probe-404-system-info.md) | ✅ | ✅ | 部分 Emby 服务器添加失败 404 System/Info/Public |
+| [BUG-3133](bugs/BUG-3133-video-chrome-lost-after-shrink.md) | ✅ | ✅ | 删视频后列表缩短，收起的顶部工具区回不来 |
+| [BUG-3132](bugs/BUG-3132-video-chrome-scrim-nested.md) | ✅ | ✅ | 视频库页滚动时内容透到顶栏与页签下面 |
+| [BUG-3131](bugs/BUG-3131-mac-lookup-input-focus-loss.md) | 🚧 | 🚧 | macOS 查词页手动输入框查到词后退出输入框、清空后再触发（未复现） |
+| [BUG-3105](bugs/BUG-3105-lyrics-vertical-sweep.md) | ✅ | ✅ | 歌词模式竖排不逐字推进、暂停或查词时当前句被纯色块盖住 |
+| [BUG-3104](bugs/BUG-3104-graphic-subtitle-seek-mid-cue.md) | ✅ | ✅ | 往回跳到图形字幕一句中间时不显示，要等下一句 |
+| [BUG-3103](bugs/BUG-3103-graphic-subtitle-restore-lost.md) | ✅ | ✅ | 选中图形字幕后重开视频被取消选中（库里残留文本 cue 时恢复分支丢掉图形轨） |
+| [BUG-3102](bugs/BUG-3102-graphic-subtitle-extract-timeout.md) | ✅ | ✅ | 图形字幕整轨转文字抽轨按体积估总超时，慢盘上误杀仍在推进的 ffmpeg |
+| [BUG-3101](bugs/BUG-3101-srt-book-delete-false-error.md) | ✅ | ✅ | 有声书书架条目删除总提示删除书籍失败 |
+| [BUG-3100](bugs/BUG-3100-reader-first-page-uncounted.md) | ✅ | ✅ | 翻页后开始计时模式下打开时那一页不计字数 |
+| [BUG-3099](bugs/BUG-3099-mihon-update-no-uninstall.md) | ✅ | ✅ | 扩展页「有更新」状态没有卸载按钮 |
+| [BUG-3098](bugs/BUG-3098-audiobook-reimport-unique-uid.md) | ✅ | ✅ | 重复导入同一有声书包撞 SrtBooks UNIQUE uid |
+| [BUG-3097](bugs/BUG-3097-feedback-shot-mid-transition.md) | ✅ | ✅ | 反馈自动截图截到页面转场中途的半透明叠画 |
+| [BUG-3096](bugs/BUG-3096-popup-android-expand-blue-flash.md) | ✅ | ✅ | 安卓展开词典先闪一下蓝光 |
+| [BUG-3095](bugs/BUG-3095-popup-zoom-columns-overflow.md) | ✅ | ✅ | 弹窗缩放后词典条目横向溢出 |
+| [BUG-3094](bugs/BUG-3094-popup-pitch-tooltip-residue.md) | ✅ | ✅ | 视频查词弹窗词典名提示框残留关不掉 |
+| [BUG-3093](bugs/BUG-3093-feedback-snackbar-transition-race.md) | ✅ | ✅ | 反馈提交测试在提交页退场动画中断言提示条数，CI 慢时数到两条 |
+| [BUG-3092](bugs/BUG-3092-espeak-kana-only-symbols.md) | ✅ | ✅ | isKanaOnlyText 拒收〜…等读音常见符号、却放行 espeak-ng 读不了的・与小片假名扩展 |
+| [BUG-3091](bugs/BUG-3091-linux-tts-real-engine-test-skip.md) | ✅ | ✅ | Linux 真引擎 TTS 测试只判 open_jtalk 在 PATH，缺辞书或声音时误红 |
+| [BUG-3090](bugs/BUG-3090-source-open-folder-symlink-silent.md) | ✅ | ✅ | 来源「打开文件夹」：根目录是符号链接/联接点时被当文件选中，打不开时无提示 |
+| [BUG-3089](bugs/BUG-3089-linux-external-open-before-handler.md) | ✅ | ✅ | Linux 二次启动参数在 Dart 处理器注册前到达被静默丢弃、首帧前 present 出黑窗 |
+| [BUG-3088](bugs/BUG-3088-linux-tts-process-hang.md) | ✅ | ✅ | Linux 制卡 TTS 子进程卡住无上界、stdin EPIPE 跳过 espeak-ng 兜底 |
+| [BUG-3087](bugs/BUG-3087-linux-second-launch-during-exit.md) | ✅ | ✅ | Linux 首实例退出途中二次启动：参数转交给将死进程、隐藏窗口被重新显示，文件丢失 |
+| [BUG-3086](bugs/BUG-3086-video-word-sweep-grapheme-misalign.md) | ✅ | ✅ | 视频整句扫词：分词碎片劈开代理对/组合字符导致后续词首字下标整体错位 |
+| [BUG-3085](bugs/BUG-3085-scrape-sweep-deferred-depends-on-page.md) | ✅ | ✅ | 补刮被挡下的请求只靠视频页忙到闲兑现，页面未挂载或在飞闸门时丢失 |
+| [BUG-3084](bugs/BUG-3084-subtitle-anidb-movie-english-release.md) | 🚧 | 🚧 | AniDB 主源电影无 tmdb/imdb 时 OpenSubtitles 英文发布名被拒（核查别名是否带英文名） |
+| [BUG-3083](bugs/BUG-3083-subtitle-backfill-global-default-hard-filter.md) | ✅ | ✅ | 补字幕在无作品语言证据时把全局默认内容语言当硬过滤，英语片的英文字幕被拒 |
+| [BUG-3082](bugs/BUG-3082-subtitle-id-confirmed-edition-suffix.md) | ✅ | ✅ | OpenSubtitles 候选 id 已确认、发布名带 Extended Cut 等版本修饰时被判别作 |
+| [BUG-3081](bugs/BUG-3081-settings-jank.md) | ✅ | ✅ | 设置页多处掉帧 |
+| [BUG-3080](bugs/BUG-3080-subtitle-preview-overlap.md) | ✅ | ✅ | 字幕样式预览字号调大后主副字幕串行 |
+| [BUG-3079](bugs/BUG-3079-online-hls-nonstandard-mime-split.md) | ✅ | ✅ | 在线视频源进度条被切成三四秒一段（HLS 播放列表被当普通列表逐分片播放） |
+| [BUG-3078](bugs/BUG-3078-video-tab-visible.md) | ✅ | ✅ | 视频库导入动作挤窄页签条后选中项不可见 |
+| [BUG-3077](bugs/BUG-3077-android-reader-system-bars-flutter347.md) | ✅ | ✅ | Android 阅读器顶部留白变大：Flutter 3.47 的 edgeToEdge 清掉沉浸标志，状态栏回来并计入正文顶部 inset |
+| [BUG-3076](bugs/BUG-3076-audiobook-sheet-open-top.md) | ✅ | ✅ | 有声书面板打开时滚离顶部且底部进场过冲 |
+| [BUG-3075](bugs/BUG-3075-floating-appbar-scrim-cuts-shadow.md) | ✅ | ✅ | M3E 悬浮顶栏的栏下沿遮罩盖住胶囊投影 |
+| [BUG-3074](bugs/BUG-3074-bluray-menu-aacs-black.md) | ✅ | ✅ | 加密原盘进入原盘菜单纯黑（libbluray 找不到 libaacs） |
+| [BUG-3073](bugs/BUG-3073-download-identity-locks-unreachable-provider.md) | ✅ | ✅ | 下载任务身份被当用户锁定：那家资料源连不上就永远providerUnavailable，不换任务里的TMDB id |
+| [BUG-3072](bugs/BUG-3072-sweep-retry-storm.md) | ✅ | ✅ | 补刮批次自己的写入触发下一轮+临时失败清账，同一作品每分钟重刮十几次 |
+| [BUG-3071](bugs/BUG-3071-stored-tmdb-tv-id-rescrape.md) | ✅ | ✅ | BUG-2828存量未修：重刮仍复用存成movie的TMDB tv id，リズと青い鳥仍是挪威电影 |
+| [BUG-3070](bugs/BUG-3070-devconsole-bad-origin.md) | ✅ | ✅ | 反馈处理台网页登录一律 403 bad_origin |
+| [BUG-3069](bugs/BUG-3069-subtitle-backfill-other-language.md) | ✅ | ✅ | 自动补字幕在原语言无候选时装上其它语言的字幕 |
+| [BUG-3068](bugs/BUG-3068-subtitle-backfill-wrong-work.md) | ✅ | ✅ | 自动补字幕把重制版/TV集/无关剧集的字幕装到电影上 |
+| [BUG-3067](bugs/BUG-3067-acquisition-quality-fallback-upscale.md) | ✅ | ✅ | AI video download quality fallback prefers upscales and DVD over the requested 1080p tier |
+| [BUG-3066](bugs/BUG-3066-acquisition-ignores-original-language.md) | ✅ | ✅ | AI video download picks dubbed or hardsubbed releases when original language was requested |
+| [BUG-3065](bugs/BUG-3065-acquisition-sibling-work-releases.md) | ✅ | ✅ | AI video download picks remake or sequel releases as the target work |
+| [BUG-3064](bugs/BUG-3064-lookup-bottom-bar-scroll.md) | ✅ | ✅ | 移动端查词页往下滑底部栏不收起 |
+| [BUG-3063](bugs/BUG-3063-collection-continue-btn-overflow.md) | ✅ | ✅ | 合集详情 hero「继续」按钮图标溢出左边缘、内边距不对称 |
+| [BUG-3062](bugs/BUG-3062-video-chapter-markers-off-track.md) | ✅ | ✅ | 移动端视频章节刻度没落在进度条轨道上 |
+| [BUG-3061](bugs/BUG-3061-ctx-remove-middle-sentence.md) | ✅ | ✅ | 制卡上下文无法删除中间的旁白句 |
+| [BUG-3060](bugs/BUG-3060-apple-button-group-overflow.md) | ✅ | ✅ | Apple 设计下标准按钮组窄屏横向溢出（自定义主题 hero） |
+| [BUG-3059](bugs/BUG-3059-fab-menu-keyboard-focus.md) | ✅ | ✅ | FushiFabMenu 键盘展开后焦点留在 FAB：首帧菜单项不在树里，后帧回调 requestFocus 落空 |
+| [BUG-3058](bugs/BUG-3058-press-morph-deactivated-lookup.md) | ✅ | ✅ | FushiPressMorph 停用后仍响应按钮状态回调，在已停用元素上查 Theme 断言 |
+| [BUG-3057](bugs/BUG-3057-vertical-slider-fills-width.md) | ✅ | ✅ | 竖直 FushiSlider（MD3）横向吃满父级宽度：Slider 在有界高度下撑满、旋转后成一大块 |
+| [BUG-3056](bugs/BUG-3056-fushi-spring-no-snap.md) | ✅ | ✅ | FushiSpring 弹簧落定不吸附终值：浮动工具条停在离目标约 1e-3 处（亚像素偏移） |
+| [BUG-3055](bugs/BUG-3055-glass-menu-over-webview.md) | ✅ | ✅ | 有声书歌词模式「⋯」菜单玻璃背景压在 WebView 上成灰块与白斑 |
+| [BUG-3054](bugs/BUG-3054-search-capsule-symbol-icon.md) | ✅ | ✅ | 搜索框图标迁到 FushiIcons.search 后不再被认成搜索框：MD3 丢全胶囊、Apple 丢 36 高胶囊 |
+| [BUG-3053](bugs/BUG-3053-theme-compact-preview-too-tall.md) | ✅ | ✅ | MD3 窄屏自定义主题吸顶预览超过视口三分之一（示意开关挤成三行） |
+| [BUG-3052](bugs/BUG-3052-theme-role-picker-sheet-overflow.md) | ✅ | ✅ | 自定义主题角色选色 sheet 在矮窗口底部溢出、推荐色点不到 |
+| [BUG-3051](bugs/BUG-3051-collection-menu-binding.md) | ✅ | ✅ | 合集详情非拖排网格和列表右键菜单绕过快捷键绑定 |
+| [BUG-3050](bugs/BUG-3050-reader-selection-toolbar-grip-overlap.md) | ✅ | ✅ | 竖排选择操作条遮挡选择球，视口边缘手柄难以抓取 |
+| [BUG-3049](bugs/BUG-3049-reader-selection-overlay-lifecycle.md) | ✅ | ✅ | 阅读器选中时打开导航、插图、统计或有声书，选择控件残留在覆盖页面上 |
+| [BUG-3048](bugs/BUG-3048-reader-selection-persists-across-page-turn.md) | ✅ | ✅ | 移动端划词后翻页，选择高亮与两端手柄留在新页面上 |
+| [BUG-3047](bugs/BUG-3047-reader-selection-drag-gap-freeze.md) | ✅ | ✅ | 移动端 EPUB 拖选/拖手柄落到字缝·行尾·行距·段间空白就卡住 |
+| [BUG-3046](bugs/BUG-3046-reader-selection-handle-covers-glyph.md) | 🚧 | 🚧 | 页边缘选择手柄避让回归：触控盒和选择球遮挡选中字 |
+| [BUG-3045](bugs/BUG-3045-asr-truncated-audio-finished.md) | ✅ | ✅ | ASR 转录把解不完的音频当文件末尾，残卷标成完成 |
+| [BUG-3044](bugs/BUG-3044-video-cover-black-frame.md) | ✅ | ✅ | 视频自动抽帧封面落在黑场，首页「继续」卡显示纯黑块 |
+| [BUG-3042](bugs/BUG-3042-library-blur-scroll-jank.md) | ✅ | ✅ | 游戏库/视频库滚动掉帧：卡片封面背景渲染期实时模糊 |
+| [BUG-3041](bugs/BUG-3041-manga-page-full-decode-per-request.md) | ✅ | ✅ | 漫画阅读器每次页图请求都整张解码取宽高，大图页拖慢阅读与查词 |
+| [BUG-3040](bugs/BUG-3040-reader-shortcut-hint-raw-token.md) | ✅ | ✅ | 阅读器工具栏/溢出菜单快捷键提示显示原始键名 Ctrl+KeyF，触屏也显示 |
+| [BUG-3039](bugs/BUG-3039-md3-large-app-bar-title.md) | ✅ | ✅ | MD3 大标题顶栏展开态被主题钉成 titleLarge 小字（设置页标题上方大片空白） |
+| [BUG-3038](bugs/BUG-3038-md3-settings-search-capsule.md) | ✅ | ✅ | MD3 设置页搜索栏被压成 12 圆角方框（胶囊判据认不出包了 Padding 的放大镜） |
+| [BUG-3037](bugs/BUG-3037-shared-animated-size-zero-duration.md) | ✅ | ✅ | 共享尺寸动画在减弱动态效果下布局重入且切换偏好可能丢子树状态 |
+| [BUG-3035](bugs/BUG-3035-destructive-confirm-footer.md) | ✅ | ✅ | 通用删除确认框勾选披露后动作区滚出矮窗口 |
+| [BUG-3034](bugs/BUG-3034-home-first-load-slow.md) | ✅ | ✅ | 首页首屏加载慢：合集成员表全表物化 + 串行读 |
+| [BUG-3033](bugs/BUG-3033-pending-ai-outcome-scroll.md) | ✅ | ✅ | AI识别长结论在待确认清空或刷新时溢出 |
+| [BUG-3032](bugs/BUG-3032-control-layout-chip-overflow.md) | ✅ | ✅ | 阅读器按钮布局编辑器长文案胶囊撑破窄槽 |
+| [BUG-3031](bugs/BUG-3031-manual-download-reduced-motion.md) | ✅ | ✅ | 手动下载切换输入时零时长尺寸动画在布局中触发重入 |
+| [BUG-3029](bugs/BUG-3029-settings-search-reveal-floating-header.md) | ✅ | ✅ | 设置搜索跳转定位被浮动页头首帧后让位推偏、高亮被重建拆掉 |
+| [BUG-3028](bugs/BUG-3028-delete-confirm-footer-scrolls.md) | ✅ | ✅ | 删除确认框的「删除」按钮在矮窗口里被滚出可视区 |
+| [BUG-3027](bugs/BUG-3027-indexedstack-keyboard-scroll-hidden-pane.md) | ✅ | ✅ | 键盘翻页滚到 IndexedStack 隐藏子区（Flutter 3.47 IndexedStack 不再包 Visibility） |
+| [BUG-3026](bugs/BUG-3026-gal-capture-empty-state-overflow.md) | ✅ | ✅ | 采集设置线程栏 M3E 空态在 1400x900 窗口溢出 |
+| [BUG-3025](bugs/BUG-3025-manga-settings-zero-duration-animated-size.md) | ✅ | ✅ | 漫画阅读设置面板减弱动效下切换作用域断言 RenderAnimatedSize |
+| [BUG-3024](bugs/BUG-3024-settings-reset-narrow-row.md) | ✅ | ✅ | 设置恢复默认按钮挤压窄面板标题导致溢出 |
+| [BUG-3023](bugs/BUG-3023-audio-missing-notice-squeezed.md) | ✅ | ✅ | 音频来源弹窗：丢失文件提示把说明挤成一列字、重新选择按钮被推出视口 |
+| [BUG-3022](bugs/BUG-3022-ocr-settings-zero-duration-animated-size.md) | ✅ | ✅ | 漫画 OCR 设置在减弱动态效果下 AnimatedSize 零时长断言 |
+| [BUG-3021](bugs/BUG-3021-tag-picker-video-counter.md) | ✅ | ✅ | 统一标签面板对视频批量操作仍显示本书 |
+| [BUG-3020](bugs/BUG-3020-placeholder-short-viewport.md) | ✅ | ✅ | 紧凑错误状态图标与说明高度超过可用视口 |
+| [BUG-3019](bugs/BUG-3019-settings-stepper-touch-width.md) | ✅ | ✅ | 设置步进器迁移后声明宽度少算触控区导致标题挤压 |
+| [BUG-3018](bugs/BUG-3018-smoke-navigation-destinations.md) | ✅ | ✅ | 桌面 smoke 把侧栏菜单图标算成首个导航目的地 |
+| [BUG-3015](bugs/BUG-3015-reorder-feedback-entrance-replay.md) | ✅ | ✅ | 开页进场期间拖动列表行时反馈副本重新变透明 |
+| [BUG-3014](bugs/BUG-3014-isolated-startup-legacy-support-migration.md) | ✅ | ✅ | 隔离集成测试启动仍可能迁移用户真实支持目录 |
+| [BUG-3013](bugs/BUG-3013-dictionary-popup-route-residue.md) | ✅ | ✅ | 首页查词浮层跨不透明路由持续残留 |
+| [BUG-3012](bugs/BUG-3012-apple-empty-tooltip-bubble.md) | ✅ | ✅ | 共享Tooltip在Apple分支把空消息变成可显示的空玻璃气泡 |
+| [BUG-3011](bugs/BUG-3011-horizontal-filter-mouse-drag.md) | ✅ | ✅ | 新增横向筛选与导航区未启用桌面鼠标拖动 |
+| [BUG-3010](bugs/BUG-3010-tag-reorder-scaled-handle.md) | ✅ | ✅ | 标签管理重排使用SDK浮层导致非默认界面缩放下拖拽错位 |
+| [BUG-3009](bugs/BUG-3009-raw-component-guard-empty-scan.md) | ✅ | ✅ | 组件棘轮守卫路径替换空串导致零文件扫描并静默通过 |
+| [BUG-3008](bugs/BUG-3008-reader-settings-live-theme.md) | ✅ | ✅ | 阅读设置侧栏保持打开切换主题后仍显示旧颜色 |
+| [BUG-3007](bugs/BUG-3007-jimaku-archive-language.md) | ✅ | ✅ | Jimaku 混合语言字幕包忽略请求语言与批量语言偏好 |
+| [BUG-3006](bugs/BUG-3006-jimaku-single-archive-episode.md) | ✅ | ✅ | Jimaku 单文件字幕包忽略明确集号冲突，给其他集安装错误字幕 |
+| [BUG-3005](bugs/BUG-3005-nav-more-spring-range.md) | ✅ | ✅ | 导航底栏更多菜单弹簧过冲导致打开时断言 |
+| [BUG-3003](bugs/BUG-3003-windows-media-hot-restart.md) | ✅ | ✅ | Windows 视频页热重启调用已销毁的 Dart 回调导致原生崩溃 |
+| [BUG-3002](bugs/BUG-3002-popup-document-reload-blank.md) | ✅ | ✅ | 视频查词弹窗文档重载后保留旧渲染账本导致内容空白 |
+| [BUG-3001](bugs/BUG-3001-reader-live-hooks-cleared.md) | ✅ | ✅ | 阅读器按钮布局等实时设置在切卷/叠开阅读器后改了不生效，须退出重进 |
+| [BUG-3000](bugs/BUG-3000-jimaku-key-not-found.md) | ✅ | ✅ | Jimaku 字幕搜索：已填 key 仍报未填、取文件失败被显示成找不到字幕 |
+| [BUG-2999](bugs/BUG-2999-video-cover-online-search.md) | ✅ | ✅ | 视频设置封面只能选本地文件，在线搜索封面入口丢失 |
+| [BUG-2998](bugs/BUG-2998-popup-dictionary-disclosure-reflow.md) | ✅ | ✅ | 查词同词条展开收起辞典后不按当前空间重新分列 |
+| [BUG-2997](bugs/BUG-2997-lookup-hidden-dict-empty-popup.md) | ✅ | ✅ | 查词只命中已隐藏词典时弹窗画页面自己的 emoji「未找到」并铺满最大尺寸 |
+| [BUG-2996](bugs/BUG-2996-pending-mines-load-error-skeleton.md) | ✅ | ✅ | 待发卡片页首次读表失败时骨架屏永不结束且无重试 |
+| [BUG-2995](bugs/BUG-2995-yomitan-nested-root-empty-zip.md) | ✅ | ✅ | 整合包父目录与嵌套 Yomitan 根同时存在时子词典被重打包为空 |
+| [BUG-2994](bugs/BUG-2994-import-dialog-busy-dismiss.md) | ✅ | ✅ | 漫画/视频导入进行中对话框可被返回键/点遮罩关闭 |
+| [BUG-2993](bugs/BUG-2993-download-menu-stale-index.md) | ✅ | ✅ | 下载任务菜单实时刷新后旧「删除」被重映射成「补对齐」 |
+| [BUG-2992](bugs/BUG-2992-lyrics-more-settings-tab.md) | ✅ | ✅ | 歌词更多设置入口被上次标签页记忆覆盖 |
+| [BUG-2991](bugs/BUG-2991-navigation-semantics-tap.md) | ✅ | ✅ | 自适应导航按钮未提供读屏激活动作 |
+| [BUG-2990](bugs/BUG-2990-audiobook-mini-follow-action.md) | ✅ | ✅ | MD3 迷你播放条缺失跟随音频入口 |
+| [BUG-2989](bugs/BUG-2989-reader-panel-session-lifetime.md) | ✅ | ✅ | 阅读器设置面板换侧及宽窄切换销毁会话 |
+| [BUG-2988](bugs/BUG-2988-custom-theme-preview-consistency.md) | ✅ | ✅ | 自定义主题色卡及编辑预览与实际应用配色不一致 |
+| [BUG-2987](bugs/BUG-2987-custom-theme-system-accent-notify.md) | ✅ | ✅ | 自定义主题跟随系统强调色后不通知界面 |
+| [BUG-2986](bugs/BUG-2986-md3-search-autofocus.md) | ✅ | ✅ | MD3 默认尺寸搜索框忽略自动聚焦 |
+| [BUG-2985](bugs/BUG-2985-apple-search-leading-action.md) | ✅ | ✅ | Apple 搜索框丢弃显式前缀操作按钮 |
+| [BUG-2984](bugs/BUG-2984-apple-menu-route-order.md) | ✅ | ✅ | Apple 菜单回调打开的新路由被随后关闭 |
+| [BUG-2983](bugs/BUG-2983-ext-popup-empty-glass-first.md) | ✅ | ✅ | 浏览器扩展查词先露空毛玻璃底板、内容晚到 |
+| [BUG-2982](bugs/BUG-2982-style-redesign-contracts.md) | ✅ | ✅ | 漫画章节列表以下载状态作身份导致重复 sibling key |
+| [BUG-2981](bugs/BUG-2981-settings-search-local-width.md) | ✅ | ✅ | 设置搜索回车使用全窗宽度导致窄内容区无法打开结果 |
+| [BUG-2980](bugs/BUG-2980-scroll-away-first-drag.md) | ✅ | ✅ | 悬浮页头从顶部连续拖动越过阈值仍不收起 |
+| [BUG-2979](bugs/BUG-2979-video-moved-file-duplicate-row.md) | ✅ | 🚧 | 视频文件搬家后重扫来源再建一行致分集重复 |
+| [BUG-2978](bugs/BUG-2978-collection-episode-local-remote-duplicate.md) | ✅ | ✅ | 视频作品详情页同一集本地与远端成员各出一张卡 |
+| [BUG-2977](bugs/BUG-2977-floating-title-capsule-clipped.md) | ✅ | ✅ | M3E 浮动页头标题胶囊下半截被裁、返回圆底部被切 |
+| [BUG-2976](bugs/BUG-2976-home-tab-switch-jank.md) | ✅ | ✅ | 切到视频首页与回到 app 首页卡顿 |
+| [BUG-2975](bugs/BUG-2975-floating-chrome-scroll-bounce.md) | ✅ | ✅ | 视频库滚轮上下滚动回弹滚不动 |
+| [BUG-2974](bugs/BUG-2974-collection-picker-cross-domain.md) | ✅ | ✅ | 书的加入合集列表里出现视频合集（合集未按媒体库隔离） |
+| [BUG-2973](bugs/BUG-2973-text-field-vertical-center.md) | ✅ | ✅ | 输入框文字垂直不居中（自定义主题页 AI 输入框与名称框） |
+| [BUG-2972](bugs/BUG-2972-lyrics-highlight-color.md) | ✅ | ✅ | 歌词模式高亮颜色无法修改 |
+| [BUG-2971](bugs/BUG-2971-subtitle-blur-respect-ass-off.md) | 🚧 | ✅ | 视频字幕遮蔽模糊在关闭尊重ASS样式时不生效 |
+| [BUG-2970](bugs/BUG-2970-emby-short-query-search.md) | ✅ | ✅ | Emby 媒体服务器搜索少于四个字搜不到 |
+| [BUG-2969](bugs/BUG-2969-collection-member-menu-mismatch.md) | ✅ | ✅ | 合集详情页成员右键菜单与书架不一致且没有标签 |
+| [BUG-2968](bugs/BUG-2968-tag-filter-hides-collection-members.md) | ✅ | ✅ | 标签筛选时合集内打了标签的书找不到 |
+| [BUG-2967](bugs/BUG-2967-android-first-lookup-after-idle-anki-main-thread.md) | ✅ | ✅ | Android 空闲后首次查词卡顿：AnkiDroid 制卡态探测在主线程冷启动 AnkiDroid |
+| [BUG-2966](bugs/BUG-2966-home-ja-untranslated.md) | ✅ | ✅ | 日文 UI 首页 Daily Goal / Set Goal / Nothing to continue yet 漏翻译 |
+| [BUG-2965](bugs/BUG-2965-movie-pack-numbered-files-become-extras.md) | ✅ | ✅ | 剧场版合集包Movie 01…25被误判带集号，只入库一部其余进Extras |
+| [BUG-2964](bugs/BUG-2964-hdr-passthrough-top-line.md) | ✅ | ✅ | HDR 直通全屏顶部一条主题色横线 + 底色叠加到视频上 |
+| [BUG-2963](bugs/BUG-2963-ai-acquire-anime-movie-category-movie.md) | ✅ | ✅ | 全部哆啦A梦剧场版被解析成category=movie，作品搜索只剩TMDB直接失败 |
+| [BUG-2962](bugs/BUG-2962-mal-unreachable-every-request-full-retries.md) | ✅ | ✅ | Jikan停摆时每条MAL请求都吃满3次超时，整套下载核对卡一两个小时 |
+| [BUG-2961](bugs/BUG-2961-audiobook-background-desync-and-stall.md) | ✅ | ✅ | 后台挂有声书：切回来高亮/视口与音频不同步，挂久了音频断掉且点不起来 |
+| [BUG-2960](bugs/BUG-2960-franchise-web-fallback-anchor-title.md) | ✅ | ✅ | 整套下载资料源不可用时联网补全拿单部剧场版标题搜维基列不出系列 |
+| [BUG-2959](bugs/BUG-2959-server-port-conflict-masked.md) | ✅ | ✅ | 服务端端口被占时只报drift Bad state No element |
+| [BUG-2958](bugs/BUG-2958-ai-acquire-alt-version-details.md) | ✅ | ✅ | AI下视频备选版本chip缺做种来源集数编码 |
+| [BUG-2957](bugs/BUG-2957-android-liquid-glass-bar.md) | ✅ | ✅ | Android 设计系统 Apple（液态玻璃）底栏渲染成灰色矩形 |
+| [BUG-2956](bugs/BUG-2956-game-stream-rejection-shown-as-outdated.md) | ✅ | ✅ | 串流主机拒绝原因一律显示成主机版本过旧 |
+| [BUG-2955](bugs/BUG-2955-game-stream-library-lost-after-restart.md) | ✅ | ✅ | 主机重启互联服务后串流显示主机版本过旧并且离开报未能通知主机 |
+| [BUG-2954](bugs/BUG-2954-game-stream-call-audio-channel.md) | ✅ | ✅ | 串流音频走通话通道而不是媒体通道 |
+| [BUG-2953](bugs/BUG-2953-video-context-menu-behind-popup.md) | ✅ | ✅ | 视频页右键菜单被查词弹窗遮挡 |
+| [BUG-2952](bugs/BUG-2952-dict-import-native-crash.md) | ✅ | ✅ | 词典导入导致 native 崩溃（磁盘写满 SIGBUS / 汉字词典 / 整合包） |
+| [BUG-2951](bugs/BUG-2951-hdr-subtitle-white.md) | ✅ | ✅ | HDR直通下字幕比画面白更亮颜色发怪 |
+| [BUG-2950](bugs/BUG-2950-torrent-fakeip-udp.md) | ✅ | ✅ | 内置 torrent 在 Clash TUN fake-ip 下 DHT 零节点、UDP tracker 不通，任务永远 0 peer 且无任何提示 |
+| [BUG-2949](bugs/BUG-2949-download-delete-slow.md) | ✅ | ✅ | 下载任务删除文件极慢 |
+| [BUG-2948](bugs/BUG-2948-macos-shortcut-key-identity.md) | ✅ | ✅ | macOS 上 Shift+符号键与系统保留默认键导致快捷键无法识别 |
+| [BUG-2947](bugs/BUG-2947-mobile-ffmpeg-kit-av1-hwaccel-only.md) | ✅ | ✅ | 移动端 AV1 视频制卡截帧/动图失败：ffmpeg-kit 缺 libdav1d |
+| [BUG-2946](bugs/BUG-2946-youtube-watchpage-spof.md) | ✅ | ✅ | YouTube 制卡/播放：watch 页被降级时 5 个 client 全部报「视频不可用」 |
+| [BUG-2945](bugs/BUG-2945-host-delete-book-no-tombstone.md) | ✅ | ✅ | 互联「从所有设备删除」对书/有声书不生效：host 删除不写墓碑 |
+| [BUG-2944](bugs/BUG-2944-interconnect-download-progress-jank.md) | ✅ | ✅ | 下载互联书时 iOS 掉帧：进度回报每次整页重建书架/媒体库 |
+| [BUG-2943](bugs/BUG-2943-reader-lock-inset-page-hint.md) | ✅ | ✅ | 阅读器 inset 往返重锚丢失原字符锚 |
+| [BUG-2942](bugs/BUG-2942-collection-delete-orphans-subscriptions.md) | ✅ | ✅ | 删除合集后下载订阅仍启用并继续下载；任务页无法整组删除 |
+| [BUG-2941](bugs/BUG-2941-download-collection-sync-order.md) | ✅ | ✅ | 下载合集选集乱序：同步平手取远端冲掉按集号排序 |
+| [BUG-2940](bugs/BUG-2940-synced-clip-silent-audio.md) | ✅ | ✅ | 同步片段导出放过 0 音频包的 webm（#1951） |
+| [BUG-2939](bugs/BUG-2939-mobile-libmpv-no-muxer.md) | ✅ | ✅ | Android/iOS/macOS 随包 libmpv 无 muxer，dump-cache 恒失败（#1953） |
+| [BUG-2938](bugs/BUG-2938-desktop-ffmpeg-filters-probe-stdout.md) | ✅ | ✅ | 桌面端片段导出滤镜探测丢 stdout，硬字幕恒不烧 |
+| [BUG-2937](bugs/BUG-2937-franchise-walk-batched.md) | ✅ | ✅ | AI下视频整套：系列查不完时按预算截断交半张清单·应分批续查到走完 |
+| [BUG-2936](bugs/BUG-2936-franchise-movies-silent-truncation.md) | ✅ | ✅ | AI下视频「全部哆啦A梦大电影」MAL系列遍历静默截断丢新剧场版·失败时静默降级成下单部TV·短片混进剧场版 |
+| [BUG-2935](bugs/BUG-2935-mal-franchise-silent-truncation.md) | ✅ | ✅ | 「整套下载」MAL 关联链走到上限静默截断，哆啦A梦等长寿系列可能漏收作品 |
+| [BUG-2934](bugs/BUG-2934-coreaudio-release-date-hidden.md) | ✅ | ✅ | CoreAudio 发现页把纸书初版日期当有声书日期展示 |
+| [BUG-2933](bugs/BUG-2933-ai-acquire-which-is-best.md) | ✅ | ✅ | AI下视频问「哪个最好」被判没听懂（意图缺候选上下文） |
+| [BUG-2932](bugs/BUG-2932-cmvs-voice-sfx-paired-as-voice.md) | ✅ | ✅ | CMVS 语音只走通用 PCM：点击音效被配成台词语音、真实语音丢失 |
+| [BUG-2931](bugs/BUG-2931-catsystem2-2016-voice-sites.md) | ✅ | ✅ | CatSystem2 2016 版语音站点因编译形态不同而全部未解析 |
+| [BUG-2930](bugs/BUG-2930-catsystem2-bootmenu-launcher-handoff.md) | ✅ | ✅ | CatSystem2 体验版启动器（WCBOOTMENU）被当成游戏，data\cs2.exe 不被跟随 |
+| [BUG-2929](bugs/BUG-2929-linebreak-strict-pushes-char.md) | ✅ | ✅ | 正文 line-break strict 让「たった」「コート」把前一个字推到下一列 |
+| [BUG-2928](bugs/BUG-2928-vn-ruby-small-kana-skip.md) | ✅ | ✅ | 有声书 VN 模式跳过三段正文：ruby 並字读音让 cue 匹配越过中间句子 |
+| [BUG-2927](bugs/BUG-2927-kogado-hy-row-split.md) | ✅ | ✅ | Symphonic Rain（工画堂 Hy 引擎）一句台词按画面行被拆成多条 |
+| [BUG-2926](bugs/BUG-2926-leaderboard-sync-timeout-local-network.md) | ✅ | ✅ | 排行榜后台同步 GET /v1/me 30 秒超时（本机网络间歇丢新 TCP 连接） |
+| [BUG-2925](bugs/BUG-2925-android-video-exit-system-bars.md) | ✅ | ✅ | Android 视频退出后沉浸模式残留，启动状态栏被隐藏 |
+| [BUG-2924](bugs/BUG-2924-sync-compare-dict-local-presence.md) | ✅ | ✅ | 同步对比词典行不显示本地是否存在 |
+| [BUG-2923](bugs/BUG-2923-kiku-release-template-probe.md) | ✅ | ✅ | Kiku 发布模板预渲染字段导致同步视频兼容探测误判 |
+| [BUG-2922](bugs/BUG-2922-gal-mine-card-flicker.md) | ✅ | ✅ | 游戏内查词卡点制卡时卡片消失一下 |
+| [BUG-2921](bugs/BUG-2921-gal-nested-card-root-jump.md) | ✅ | ✅ | 游戏内查词卡嵌套查词时根卡跳位、子卡标题被裁 |
+| [BUG-2920](bugs/BUG-2920-shelf-read-status-filter-reset.md) | ✅ | ✅ | 书架阅读状态筛选每次打开软件都重置 |
+| [BUG-2919](bugs/BUG-2919-reader-longpress-steals-swipe.md) | ✅ | ✅ | 阅读器长按选择太容易触发，慢滑翻页被抢成选区 |
+| [BUG-2918](bugs/BUG-2918-dashboard-continue-shows-completed-book.md) | ✅ | ✅ | 首页继续面板仍显示已读完的书 |
+| [BUG-2917](bugs/BUG-2917-vn-audio-highlight-ruby-gap.md) | ✅ | ✅ | 视觉小说模式有声书逐句高亮在注音字处断开 |
 | [BUG-2916](bugs/BUG-2916-ios-reader-open-codec-oom-crash.md) | ✅ | ✅ | iOS 打开/阅读书时主线程 CFAutorelease(NULL) 崩溃（解码超大方法调用字符串失败） |
 | [BUG-2915](bugs/BUG-2915-ios-video-connect-chunked-crash.md) | ✅ | ✅ | iOS 播放 WebDAV/Emby 等 https 视频必崩：本地中继对 CONNECT 回了 transfer-encoding: chunked |
 | [BUG-2914](bugs/BUG-2914-ios-scene-super-crash.md) | ✅ | ✅ | iOS 2.9.0 crashes on launch: SceneDelegate calls super for a scene callback FlutterSceneDelegate does not implement |
+| [BUG-2913](bugs/BUG-2913-fullscreen-episode-list-switch-exit.md) | ✅ | ✅ | 全屏下从剧集列表换集会退出原生全屏 |
 | [BUG-2912](bugs/BUG-2912-manga-settings-sheet-clipped.md) | ✅ | ✅ | 漫画阅读设置侧栏显示不全 |
 | [BUG-2911](bugs/BUG-2911-ios-landscape-ball-edge.md) | ✅ | ✅ | iOS 横屏应用内悬浮球不吸附屏幕侧边 |
+| [BUG-2910](bugs/BUG-2910-aacs-relay-orphan-readers.md) | ✅ | ✅ | AACS 解密中继：客户端放弃的 Range 请求继续读盘到文件尾，光驱被抢读导致只能播开头 |
 | [BUG-2909](bugs/BUG-2909-game-stream-wgc-lock-order.md) | ✅ | ✅ | 游戏串流停止时主线程 join 捕获线程死锁（WGC 设备锁与 frame_mutex_ 锁序反转） |
 | [BUG-2908](bugs/BUG-2908-manga-zoom-reset.md) | ✅ | ✅ | 漫画缩小后无法回到正常比例 |
 | [BUG-2907](bugs/BUG-2907-sentence-audio-punct-ownership.md) | ✅ | ✅ | 有声书当前句高亮不含句末标点与句首括号 |
@@ -49,6 +864,9 @@
 | [BUG-2901](bugs/BUG-2901-screen-ocr-one-shot-selection.md) | ✅ | ✅ | 截屏识字选取层一次性：查一个词就销毁，下个词要重新截屏重新授权 |
 | [BUG-2900](bugs/BUG-2900-external-lookup-mine-empty-sentence.md) | ✅ | ✅ | 外部查词窗制卡句子字段为空 |
 | [BUG-2899](bugs/BUG-2899-external-lookup-loses-source-line.md) | ✅ | ✅ | 外部查词窗（截屏识字/悬浮字幕点字）原句条只剩切出的词，整行上下文丢失 |
+| [BUG-2898](bugs/BUG-2898-catsystem2-2016-lookup-layout.md) | ✅ | ✅ | CatSystem2 2016 版内嵌查词从不安装（result=3，「定向渲染」代码布局未识别） |
+| [BUG-2897](bugs/BUG-2897-luna-ellipsis-line-artifact.md) | ✅ | ✅ | 省略号台词被 Luna 伪影过滤器当逐字双写丢弃 |
+| [BUG-2896](bugs/BUG-2896-catsystem2-voice-reread-republished.md) | ✅ | ✅ | CatSystem2 2016 版同一次播放的二次读取被当成新语音重复发布 |
 | [BUG-2893](bugs/BUG-2893-kirikiri-kag-page-swap-anchor.md) | ✅ | ✅ | KiriKiri KAG 换页 backlay+trans 后查词锚点失效 |
 | [BUG-2892](bugs/BUG-2892-sgre-typewriter-prefix-lines.md) | ✅ | ✅ | SGRE 打字机逐字显示的半句被当成独立台词 |
 | [BUG-2891](bugs/BUG-2891-x64-locale-claimed-applied.md) | ✅ | ✅ | 64位游戏转区落空仍报已转日文区 |
@@ -76,7 +894,7 @@
 | [BUG-2859](bugs/BUG-2859-lookup-bridge-reply-dropped.md) | ✅ | ✅ | 查词卡路由作废后丢弃晚到的 bridge 应答，该词条整个会话无法制卡 |
 | [BUG-2858](bugs/BUG-2858-gal-thread-history-order.md) | ✅ | ✅ | 选定线程后的历史回捞与轮询抢先后，当前台词变成旧句 |
 | [BUG-2857](bugs/BUG-2857-artemis-hover-tooltip-joins-line.md) | ✅ | ✅ | Artemis hover tooltip text is appended to the current line |
-| [BUG-2856](bugs/BUG-2856-artemis-touch-tap-ignored.md) | 🚧 | 🚧 | Artemis 触屏点按：引擎不认触摸提升的单击，游戏内点字查词与推进都不响应 |
+| [BUG-2856](bugs/BUG-2856-artemis-touch-tap-ignored.md) | ✅ | ✅ | Artemis 触屏点按：引擎不认触摸提升的单击，游戏内点字查词与推进都不响应 |
 | [BUG-2855](bugs/BUG-2855-update-prerelease-r2-candidate-always-404.md) | ✅ | ✅ | 预发布自动更新每次先撞 fushi.moe 404 再换 GitHub |
 | [BUG-2854](bugs/BUG-2854-ai-acquire-latin-aliases.md) | ✅ | ✅ | AI 下视频只用搜索列表项身份搜资源，漏掉详情里的罗马字/英文名致 Nyaa 0 条 |
 | [BUG-2853](bugs/BUG-2853-en-yomitan-redirect-phrase.md) | ✅ | ✅ | 英语短语（instead of / in fact / brush off）命中词典重定向记录后不跟随，弹窗只剩单词 |

@@ -2,7 +2,7 @@
 // ① TMDB 卡片没有罗马字别名时，页面先经宿主端口补齐别名，再搜——搜索框预填词
 //    随之换成罗马字，Nyaa 同时补查日文原名；
 // ② 结果上方逐源显示「N 条（查询词 …）/ 失败原因」，成功但 0 条的源也在。
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
@@ -20,6 +20,11 @@ import 'package:fushi_engine/media/video/download/video_resource_registry.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart';
 
 import '../torrent/nyaa_html_fixture.dart';
+import '../helpers/glass_unwrap.dart';
+
+// 用户 BT 站（测试数据）：provider id = `nyaa:<siteId>`。
+const String _nyaaSiteId = 'nyaa-test';
+const String _nyaaProviderId = '$kNyaaResourceProviderId:$_nyaaSiteId';
 
 class _TimeoutProvider implements VideoResourceProvider {
   @override
@@ -73,33 +78,41 @@ VideoDiscoveryItem _tmdbCard() => VideoDiscoveryItem(
   ),
 );
 
-VideoResourceRegistry _registry(List<String> queries) =>
-    VideoResourceRegistry(<VideoResourceProvider>[
-      NyaaVideoResourceProvider(
-        client: NyaaClient(
-          minRequestInterval: Duration.zero,
-          client: MockClient((http.Request request) async {
-            final String query = request.url.queryParameters['q']!;
-            queries.add(query);
-            if (!query.contains('Frieren')) {
-              return http.Response(kNyaaNoResultsHtml, 200);
-            }
-            return http.Response(
-              nyaaSearchHtml(<NyaaHtmlRow>[
-                NyaaHtmlRow(
-                  title: '[SubsPlease] Sousou no Frieren - 01 (1080p)',
-                  infoHash: 'a' * 40,
-                  id: '1',
-                  seeders: 30,
-                ),
-              ]),
-              200,
-            );
-          }),
-        ),
-      ),
-      _TimeoutProvider(),
-    ]);
+VideoResourceRegistry _registry(
+  List<String> queries, {
+  String? siteName = 'Nyaa',
+}) => VideoResourceRegistry(<VideoResourceProvider>[
+  NyaaVideoResourceProvider(
+    siteId: _nyaaSiteId,
+    displayName: siteName,
+    categoryByDomain: const <VideoDiscoveryCategory, String>{
+      VideoDiscoveryCategory.anime: '1_0',
+    },
+    client: NyaaClient(
+      baseUrl: 'https://nyaa.si',
+      minRequestInterval: Duration.zero,
+      client: MockClient((http.Request request) async {
+        final String query = request.url.queryParameters['q']!;
+        queries.add(query);
+        if (!query.contains('Frieren')) {
+          return http.Response(kNyaaNoResultsHtml, 200);
+        }
+        return http.Response(
+          nyaaSearchHtml(<NyaaHtmlRow>[
+            NyaaHtmlRow(
+              title: '[SubsPlease] Sousou no Frieren - 01 (1080p)',
+              infoHash: 'a' * 40,
+              id: '1',
+              seeders: 30,
+            ),
+          ]),
+          200,
+        );
+      }),
+    ),
+  ),
+  _TimeoutProvider(),
+]);
 
 Future<void> _pump(
   WidgetTester tester, {
@@ -160,12 +173,14 @@ void main() {
     expect(resolveCalls, 1);
     // 预填词跟着换成补齐后的首选罗马字。
     final TextField field = tester.widget<TextField>(
-      find.byKey(const ValueKey<String>('video-resource-query')),
+      glassUnwrap<TextField>(
+        find.byKey(const ValueKey<String>('video-resource-query')),
+      ),
     );
     expect(field.controller!.text, 'Sousou no Frieren');
     expect(queries, <String>['Sousou no Frieren', '葬送のフリーレン']);
     expect(
-      _statusText(tester, kNyaaResourceProviderId),
+      _statusText(tester, _nyaaProviderId),
       t.video_resource_source_result(
         name: 'Nyaa',
         n: 1,
@@ -200,7 +215,7 @@ void main() {
 
     expect(queries, <String>['葬送のフリーレン']);
     expect(
-      _statusText(tester, kNyaaResourceProviderId),
+      _statusText(tester, _nyaaProviderId),
       t.video_resource_source_result(name: 'Nyaa', n: 0, queries: '葬送のフリーレン 0'),
     );
   });
@@ -239,5 +254,67 @@ void main() {
     await tester.pumpAndSettle();
     expect(resolveCalls, 0);
     expect(queries, <String>['Sousou no Frieren', '葬送のフリーレン']);
+  });
+
+  testWidgets('回执带 displayName（用户 BT 站名）时状态行显示该名字', (
+    WidgetTester tester,
+  ) async {
+    final List<String> queries = <String>[];
+    await _pump(
+      tester,
+      registry: _registry(queries, siteName: '我的镜像站'),
+      resolveAliases: (VideoDiscoveryItem item) async => item,
+    );
+
+    expect(
+      _statusText(tester, _nyaaProviderId),
+      t.video_resource_source_result(
+        name: '我的镜像站',
+        n: 0,
+        queries: '葬送のフリーレン 0',
+      ),
+    );
+  });
+
+  testWidgets('站点没起名：状态行用站点主机名（从不显示整串地址）', (WidgetTester tester) async {
+    final List<String> queries = <String>[];
+    await _pump(
+      tester,
+      registry: _registry(queries, siteName: null),
+      resolveAliases: (VideoDiscoveryItem item) async => item,
+    );
+
+    expect(
+      _statusText(tester, _nyaaProviderId),
+      t.video_resource_source_result(
+        name: 'nyaa.si',
+        n: 0,
+        queries: '葬送のフリーレン 0',
+      ),
+    );
+  });
+
+  test('回执的 displayName 优先；缺省时 Torznab 叫 Torznab、其余按 id', () {
+    expect(
+      videoResourceSourceStatusText(
+        VideoResourceSourceReport(
+          providerId: _nyaaProviderId,
+          displayName: '我的镜像站',
+        ),
+      ),
+      t.video_resource_source_skipped(name: '我的镜像站'),
+    );
+    expect(
+      videoResourceSourceStatusText(
+        VideoResourceSourceReport(providerId: _nyaaProviderId),
+      ),
+      t.video_resource_source_skipped(name: _nyaaProviderId),
+    );
+    expect(
+      videoResourceSourceStatusText(
+        VideoResourceSourceReport(providerId: 'torznab', displayName: '  '),
+      ),
+      t.video_resource_source_skipped(name: 'Torznab'),
+    );
   });
 }

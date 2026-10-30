@@ -10,31 +10,32 @@
 library;
 
 import 'package:fushi_asr_core/asr_core.dart';
+import 'package:fushi_engine/asr/cloud_whisper_transcription_service.dart'
+    show kCloudWhisperEngineId;
 
 import 'package:fushi/src/asr_host/apple_speech_transcription_service.dart';
 import 'package:fushi/src/asr_host/asr_model_catalog.dart';
 
 /// 下拉里的一项。
 class AsrEngineOption {
-  const AsrEngineOption({
-    required this.id,
-    required this.label,
-    this.pack,
-  });
+  const AsrEngineOption({required this.id, required this.label, this.pack});
 
-  /// [AsrModelPack.id]，或系统语音的保留 id [kAppleSpeechEngineId]。
+  /// [AsrModelPack.id]，或保留 id：系统语音 [kAppleSpeechEngineId]、云端转录
+  /// [kCloudWhisperEngineId]。
   final String id;
 
   /// 给用户看的名字。
   final String label;
 
-  /// ONNX 包（系统语音项为 null）。
+  /// ONNX 包（系统语音 / 云端转录项为 null）。
   final AsrModelPack? pack;
 
-  bool get isSystemSpeech => pack == null;
+  bool get isSystemSpeech => id == kAppleSpeechEngineId;
+
+  bool get isCloud => id == kCloudWhisperEngineId;
 }
 
-/// 这门语言能选哪些引擎。
+/// 这门语言在这种素材上能选哪些引擎。
 ///
 /// 顺序即展示顺序：**ONNX 包在前、系统语音在后**。理由是默认不能变——系统语音在
 /// 支持它的机器上是「另一个可选项」，不是新的默认；而 [selectedAsrEngineId] 在没有
@@ -42,32 +43,55 @@ class AsrEngineOption {
 ///
 /// [systemSpeechAvailable] 为 false（OS < 26、非 Apple 平台、原生侧没实现）时那一项
 /// **整个不出现**——出现一个点了就报错的选项比没有更糟。
+///
+/// [profile]：弹层服务的素材（视频 / 有声书）。只服务另一种素材的包不列出来——
+/// 列出来就是一个选了也不会生效的项。
+///
+/// [cloudLabel] 非 null 时最后多一项云端转录（宿主接了云端服务才传；没在 AI 设置里
+/// 指派提供商时仍列出，选中后弹层说清去哪里配，而不是让这条路无从发现）。
 List<AsrEngineOption> asrEngineOptions({
   required AsrLanguage language,
   required AsrModelRegistry registry,
   required bool systemSpeechAvailable,
   required String systemSpeechLabel,
+  AsrAudioProfile profile = AsrAudioProfile.cleanSpeech,
+  String? cloudLabel,
 }) {
   return <AsrEngineOption>[
-    for (final AsrModelPack pack in asrModelChoicesFor(language, registry))
-      AsrEngineOption(id: pack.id, label: pack.displayName, pack: pack),
+    for (final AsrModelPack pack in asrModelChoicesFor(
+      language,
+      registry,
+      profile: profile,
+    ))
+      AsrEngineOption(
+        id: pack.id,
+        // 非宽松许可（Kitsune 是 CC BY-NC）直接写进选项名，选之前就看得见。
+        label: pack.license == null
+            ? pack.displayName
+            : '${pack.displayName} · ${pack.license}',
+        pack: pack,
+      ),
     if (systemSpeechAvailable)
       AsrEngineOption(id: kAppleSpeechEngineId, label: systemSpeechLabel),
+    if (cloudLabel != null)
+      AsrEngineOption(id: kCloudWhisperEngineId, label: cloudLabel),
   ];
 }
 
-/// 当前这门语言选中的是哪一项。
+/// 当前这门语言在这种素材上选中的是哪一项。
 ///
-/// 判据顺序：目录里记着的选择 → 命中就用它；没有记录、或记的那项已经不在列表里
-/// （用户移除了自带包、换了台没有系统语音的机器）→ 回落第一项。**不回落 null**：
-/// 下拉必须有个选中值，而「第一项」正是 `asrModelPackFor` 的判据。
+/// 判据顺序：目录里记着的选择（键见 [asrChoiceKey]）→ 命中就用它；没有记录、或
+/// 记的那项已经不在列表里（用户移除了自带包、换了台没有系统语音的机器）→ 回落
+/// 第一项。**不回落 null**：下拉必须有个选中值，而「第一项」正是 `asrModelPackFor`
+/// 的判据。
 String? selectedAsrEngineId({
   required AsrLanguage language,
   required AsrModelCatalog catalog,
   required List<AsrEngineOption> options,
+  AsrAudioProfile profile = AsrAudioProfile.cleanSpeech,
 }) {
   if (options.isEmpty) return null;
-  final String? remembered = catalog.choices[language.tag];
+  final String? remembered = catalog.choices[asrChoiceKey(language, profile)];
   if (remembered != null) {
     for (final AsrEngineOption option in options) {
       if (option.id == remembered) return option.id;

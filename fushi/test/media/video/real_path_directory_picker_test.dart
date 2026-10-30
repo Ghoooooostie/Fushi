@@ -41,19 +41,38 @@ void main() {
       final int end = src.indexOf('Future<', idx + 10);
       expect(end, isNonNegative, reason: 'addLocalFolder 之后必须还有下一个方法声明作切片终点');
       final String body = src.substring(idx, end);
+      // BUG-3697：选目录收口到 `_pickSourceFolder`（iOS 建安全作用域书签，其它平台
+      // 走统一真实路径入口），addLocalFolder 只调它。
       expect(
-        body.contains('pickRealDirectoryPath('),
+        body.contains('_pickSourceFolder('),
         isTrue,
-        reason: 'addLocalFolder 本体必须调统一真实路径入口',
+        reason: 'addLocalFolder 本体必须经 _pickSourceFolder 选目录',
       );
       expect(
         body.contains('FilePicker.platform.getDirectoryPath'),
         isFalse,
         reason: 'addLocalFolder 不得再直接调 getDirectoryPath',
       );
+      final int pickIdx = src.indexOf(
+          'Future<({String path, String? bookmark})?> _pickSourceFolder(');
+      expect(pickIdx, isNonNegative,
+          reason: '来源视图必须保留 _pickSourceFolder（选目录的唯一出口）');
+      final int pickEnd = src.indexOf('Future<', pickIdx + 10);
+      final String pickBody =
+          src.substring(pickIdx, pickEnd < 0 ? src.length : pickEnd);
+      expect(
+        pickBody.contains('pickRealDirectoryPath('),
+        isTrue,
+        reason: '非 iOS 选目录必须调统一真实路径入口',
+      );
+      expect(
+        pickBody.contains('FilePicker.platform.getDirectoryPath'),
+        isFalse,
+        reason: '_pickSourceFolder 不得直接调 getDirectoryPath',
+      );
     });
 
-    test('video addSource offers local/network chooser (network = WebDAV only)',
+    test('video addSource offers local/network chooser (network = no FTP)',
         () {
       // 网络来源三域开放后，视频不再短路直选文件夹：与书/漫画共用同一个
       // 本地/网络选择对话框；本地文件夹入口仍在对话框内可达。
@@ -64,8 +83,8 @@ void main() {
       expect(body, isNotEmpty, reason: '来源视图必须保留公开的 addSource 入口');
       expect(body, contains('showAppDialog<_AddSourceChoice>'));
       expect(body, contains('await addLocalFolder()'));
-      expect(src, contains("const <String>['webdav', 'alist']"),
-          reason: '视频网络 transport 必须收窄到 WebDAV/AList');
+      expect(src, contains("const <String>['sftp', 'webdav', 'alist']"),
+          reason: '视频网络 transport 必须收窄到可原地流播的 SFTP/WebDAV/AList');
     });
 
     test('android branch uses native SAF channel, no custom browser', () {

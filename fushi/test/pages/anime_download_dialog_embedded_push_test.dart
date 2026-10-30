@@ -1,9 +1,10 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
+import 'package:fushi_engine/media/torrent/bt_site_config.dart';
 import 'package:fushi_engine/media/torrent/anime_download_config.dart';
 import 'package:fushi/src/media/torrent/anime_download_plan.dart';
 import 'package:fushi/src/media/torrent/anime_download_service.dart';
@@ -12,7 +13,9 @@ import 'package:fushi/src/media/video/anilist_client.dart';
 import 'package:fushi_engine/media/torrent/nyaa_client.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/pages/implementations/anime_download_dialog.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/src/utils/components/fushi_icon_button.dart';
+import 'package:fushi/src/utils/components/glass/fushi_glass_feedback.dart';
 
 import '../helpers/test_platform_services.dart';
 
@@ -139,6 +142,18 @@ class _FakeAppModel extends AppModel {
     );
   }
 
+  // Fushi 不内置 BT 站：番剧选种走用户添加的 Nyaa 式站点。
+  @override
+  List<BtSiteConfig> get btSites => <BtSiteConfig>[
+    BtSiteConfig(
+      id: 'test-anime-site',
+      baseUrl: Uri.parse('https://nyaa.si'),
+      format: BtSiteFormat.nyaa,
+      domains: const <BtSiteDomain>{BtSiteDomain.anime},
+      nyaaCategories: const <BtSiteDomain, String>{BtSiteDomain.anime: '1_0'},
+    ),
+  ];
+
   final _MemPlanStore store = _MemPlanStore();
   final _FakeBackend backend = _FakeBackend();
   late final AnimeDownloadService service;
@@ -154,6 +169,10 @@ class _FakeAppModel extends AppModel {
 
   @override
   bool get torrentUploadIntroShown => true;
+
+  // BT 前的 P2P 说明不在这些用例的范围里。
+  @override
+  bool get p2pDownloadNoticeDismissed => true;
 
   @override
   AnimeDownloadPlanStore? get animeDownloadPlanStore => store;
@@ -286,7 +305,7 @@ void main() {
               widget.tooltip == t.anime_download_delete,
         ),
       );
-      expect(deleteButton.icon, Icons.delete_outline);
+      expect(deleteButton.icon, FushiIcons.delete);
       expect(deleteButton.onTap, isNotNull);
 
       await tester.pumpWidget(const SizedBox.shrink());
@@ -335,8 +354,8 @@ void main() {
     );
     expect(
       tester
-          .widget<CircularProgressIndicator>(
-            find.byType(CircularProgressIndicator),
+          .widget<FushiCircularProgressIndicator>(
+            find.byType(FushiCircularProgressIndicator),
           )
           .value,
       0.55,

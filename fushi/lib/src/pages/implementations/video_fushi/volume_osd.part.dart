@@ -48,9 +48,23 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
     );
   }
 
+  /// 制卡结果的 OSD 出口：先过「制卡提示」开关（[MineNotices.shown]，与底部制卡
+  /// toast 同一个裁决点），再按结果语义着色、突出显示
+  /// （TODO-971：制卡成功居中放大、停留更久）。视频页所有制卡结果（成功 / 重复 /
+  /// 待发）都从这里出，不许直接 [_showOsd]（守卫
+  /// `test/anki/mine_notice_single_exit_guard_test.dart`）。
+  void _showMineOsd(String message, MineToastStatus status) {
+    if (!MineNotices.shown(status)) return;
+    _showOsd(message, prominent: true, severity: mineToastSeverity(status));
+  }
+
+  /// 音量上限（百分比）：随 controller 的 [VideoPlayerController.maxVolume]（mpv 配置
+  /// 「音量上限」100 / 150 / 200；网页后端恒 100）。滑条、HUD、手势与持久化同一口径。
+  double get _maxVideoVolume => _controller?.maxVolume ?? 100.0;
+
   /// 滑条拖动写音量：即时写 controller + OSD + 同步显示真相源（TODO-377）。
   void _setVolumeFromSlider(double value) {
-    final double next = value.clamp(0.0, 100.0).toDouble();
+    final double next = value.clamp(0.0, _maxVideoVolume).toDouble();
     unawaited(_applyUserVideoVolume(next));
   }
 
@@ -66,7 +80,7 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
   /// 同步音量显示真相源（[_volumeDisplay]）→ 驱动音量图标与浮层滑条重建。
   /// 所有改音量入口（滑条 / 滚轮 / 键盘音量键 / 静音切换 / media_kit 移动竖滑）统一调它。
   void _syncVolumeDisplay(double volume) {
-    _volumeDisplay.value = volume.clamp(0.0, 100.0).toDouble();
+    _volumeDisplay.value = volume.clamp(0.0, _maxVideoVolume).toDouble();
   }
 
   /// 应用一次用户真实音量变化。默认持久化；M 静音传 [persist]=false，只更新显示和 HUD。
@@ -77,7 +91,7 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
   }) async {
     final VideoPlayerController? controller = _controller;
     if (controller == null) return;
-    final double clamped = volume.clamp(0.0, 100.0).toDouble();
+    final double clamped = volume.clamp(0.0, controller.maxVolume).toDouble();
     _syncVolumeDisplay(clamped);
     if (mounted) _showVolumeOsd(clamped);
     if (applyToController) {
@@ -90,7 +104,7 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
   }
 
   void _queuePersistVideoVolume(double volume) {
-    _pendingVolumePersist = volume.clamp(0.0, 100.0).toDouble();
+    _pendingVolumePersist = volume.clamp(0.0, _maxVideoVolume).toDouble();
     _volumePersistDebounce?.cancel();
     _volumePersistDebounce = Timer(const Duration(milliseconds: 350), () {
       unawaited(_flushPersistedVideoVolume());
@@ -134,7 +148,9 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
 
   void _showLevelHud(_VideoLevelHudKind kind, double value) {
     if (!mounted) return;
-    final double clamped = value.clamp(0.0, 100.0).toDouble();
+    final double max =
+        kind == _VideoLevelHudKind.rightVolume ? _maxVideoVolume : 100.0;
+    final double clamped = value.clamp(0.0, max).toDouble();
     _levelHudNotifier.value = _VideoLevelHudState(
       kind: kind,
       value: clamped,
@@ -156,13 +172,13 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
 
   /// media_kit 移动控制条的「右半区竖滑调音量」回调（TODO-057）。media_kit
   /// 已做好区域判定、逐帧累积与 clamp，传入 [value] 为 0..1。我们只把它转成现有
-  /// 音量通道的 0..100 并复用 [VideoPlayerController.setVolume]——与 TODO-044 方向键
+  /// 音量通道的 0..[_maxVideoVolume]（满程 = 音量上限）并复用 [VideoPlayerController.setVolume]——与 TODO-044 方向键
   /// 音量、音量条 UI 同一条 setter，不另开并行状态。可见反馈由页面级 level HUD 接管；
   /// media_kit 内部 indicator builder 仅返回空占位，避免 200ms 内部动画与页面 HUD 叠影。
   void _onMediaKitVolumeChanged(double value) {
     final VideoPlayerController? controller = _controller;
     if (controller == null) return;
-    final double pct = (value.clamp(0.0, 1.0) * 100.0).toDouble();
+    final double pct = (value.clamp(0.0, 1.0) * _maxVideoVolume).toDouble();
     unawaited(_applyUserVideoVolume(pct));
   }
 
@@ -191,12 +207,14 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
 
   Widget _buildRightVolumeIndicator(double volume) {
     final ColorScheme cs = _videoChromeColorScheme(context);
-    final double clamped = volume.clamp(0.0, 100.0).toDouble();
+    final double max = _maxVideoVolume;
+    final double clamped = volume.clamp(0.0, max).toDouble();
     final Color textColor = _osdTextColor(cs);
     final double scale = _videoUiScale;
     return IgnorePointer(
       child: VideoLevelHudCard(
         value: clamped,
+        maximum: max,
         uiScale: scale,
         icon: _volumeIconFor(clamped),
         alignment: Alignment.centerRight,
@@ -337,11 +355,17 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
     // 观感，OSD 压在画面上，实心色块会挡视线。
     final ({Color background, Color foreground, IconData icon})? palette =
         toastSeverityPalette(osd.severity);
+    final bool apple = _appleChrome;
     final Color surfaceColor = palette == null
         ? _osdSurfaceColor(cs)
         : palette.background.withValues(alpha: 0.88);
-    final Color textColor =
-        palette == null ? _osdTextColor(cs) : palette.foreground;
+    final Color textColor = apple
+        ? videoChromeNeutralForeground
+        : palette == null
+        ? _osdTextColor(cs)
+        : palette.foreground;
+    final Color iconColor =
+        apple && palette != null ? palette.background : textColor;
     final double fontSize = prominent ? 18 : 14;
     final double iconSize = prominent ? 24 : 18;
     final EdgeInsets cardPadding = prominent
@@ -356,6 +380,58 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
       left: 16,
       top: _videoButtonBarHeight + 8 * _videoUiScale,
     );
+    final Widget content = Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        if (osd.icon != null) ...<Widget>[
+          FushiIcon(osd.icon, size: iconSize, color: iconColor),
+          SizedBox(width: prominent ? 12 : 8),
+        ] else if (palette != null) ...<Widget>[
+          // 语义图标：e-ink / 灰阶下颜色会塌掉，形状是唯一区分手段。
+          FushiIcon(palette.icon, size: iconSize, color: iconColor),
+          SizedBox(width: prominent ? 12 : 8),
+        ] else if (prominent) ...<Widget>[
+          FushiIcon(
+            Icons.check_circle,
+            size: iconSize,
+            color: iconColor,
+          ),
+          const SizedBox(width: 12),
+        ],
+        Flexible(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                osd.message,
+                style: TextStyle(
+                  color: textColor,
+                  fontSize: fontSize,
+                  fontWeight:
+                      prominent ? FontWeight.w600 : FontWeight.normal,
+                  height: 1.2,
+                ),
+              ),
+              if (osd.progress != null) ...<Widget>[
+                const SizedBox(height: 6),
+                SizedBox(
+                  width: 112,
+                  child: FushiLinearProgressIndicator(
+                    value: osd.progress,
+                    minHeight: 3,
+                    backgroundColor:
+                        textColor.withValues(alpha: 0.25),
+                    valueColor:
+                        AlwaysStoppedAnimation<Color>(textColor),
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
+      ],
+    );
     return Align(
       alignment: alignment,
       child: Padding(
@@ -365,76 +441,30 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
           constraints: BoxConstraints(
             maxWidth: MediaQuery.sizeOf(context).width - 32,
           ),
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              color: surfaceColor,
-              borderRadius: radius,
-              boxShadow: prominent
-                  ? <BoxShadow>[
-                      BoxShadow(
-                        color: cs.shadow.withValues(alpha: 0.4),
-                        blurRadius: 16,
-                        offset: const Offset(0, 4),
-                      ),
-                    ]
-                  : null,
-            ),
-            child: Padding(
-              padding: cardPadding,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  if (osd.icon != null) ...<Widget>[
-                    Icon(osd.icon, size: iconSize, color: textColor),
-                    SizedBox(width: prominent ? 12 : 8),
-                  ] else if (palette != null) ...<Widget>[
-                    // 语义图标：e-ink / 灰阶下颜色会塌掉，形状是唯一区分手段。
-                    Icon(palette.icon, size: iconSize, color: textColor),
-                    SizedBox(width: prominent ? 12 : 8),
-                  ] else if (prominent) ...<Widget>[
-                    Icon(
-                      Icons.check_circle,
-                      size: iconSize,
-                      color: textColor,
-                    ),
-                    const SizedBox(width: 12),
-                  ],
-                  Flexible(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          osd.message,
-                          style: TextStyle(
-                            color: textColor,
-                            fontSize: fontSize,
-                            fontWeight:
-                                prominent ? FontWeight.w600 : FontWeight.normal,
-                            height: 1.2,
-                          ),
-                        ),
-                        if (osd.progress != null) ...<Widget>[
-                          const SizedBox(height: 6),
-                          SizedBox(
-                            width: 112,
-                            child: LinearProgressIndicator(
-                              value: osd.progress,
-                              minHeight: 3,
-                              backgroundColor:
-                                  textColor.withValues(alpha: 0.25),
-                              valueColor:
-                                  AlwaysStoppedAnimation<Color>(textColor),
+          child: apple
+              // Apple：通知是一枚深色液态玻璃胶囊（iOS 26 系统 HUD），白字；语义色只
+              // 上在图标上（玻璃本身不着色），突出变体更大的圆角与内边距不变。
+              ? VideoGlassHud(
+                  radius: prominent ? 20 : 16,
+                  padding: cardPadding,
+                  child: content,
+                )
+              : DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: surfaceColor,
+                    borderRadius: radius,
+                    boxShadow: prominent
+                        ? <BoxShadow>[
+                            BoxShadow(
+                              color: cs.shadow.withValues(alpha: 0.4),
+                              blurRadius: 16,
+                              offset: const Offset(0, 4),
                             ),
-                          ),
-                        ],
-                      ],
-                    ),
+                          ]
+                        : null,
                   ),
-                ],
-              ),
-            ),
-          ),
+                  child: Padding(padding: cardPadding, child: content),
+                ),
         ),
       ),
     );

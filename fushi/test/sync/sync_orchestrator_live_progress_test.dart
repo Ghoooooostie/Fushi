@@ -5,6 +5,7 @@
 /// live host-apply + bidirectional + full-sweep fix with a real server/host/client/local.
 library;
 
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:drift/drift.dart' hide isNull, isNotNull;
@@ -12,6 +13,7 @@ import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_engine/sync/local_library_host_service.dart';
 import 'package:fushi/src/sync/interconnect_book_progress_sync.dart';
+import 'package:fushi/src/sync/interconnect_playback_position_sync.dart';
 import 'package:fushi/src/sync/interconnect_sync_backend.dart';
 import 'package:fushi_engine/sync/fushi_library_host_service.dart';
 import 'package:fushi_engine/sync/fushi_sync_server.dart';
@@ -141,6 +143,7 @@ SyncOrchestrator _orchestrator({
       syncStats: false,
       syncAudioBookPosition: false,
       syncContent: false,
+      syncMangaContent: false,
       syncAudioBookFiles: false,
       syncDictionary: false,
     );
@@ -541,6 +544,9 @@ void main() {
       ));
       await localDb.setPrefTyped<int>(
           videoRemotePositionAtPrefKey('video/v2'), 2000);
+      // BUG-3367：上次两端对齐在本机这个位置，之后只有 host 动了。
+      await localDb.setSyncBaseline(
+          'video/v2', kInterconnectVideoPositionDimension, 100000);
 
       final Directory tmp = Directory(p.join(work.path, 'tv2'))..createSync();
       final InterconnectSyncBackend backend =
@@ -599,6 +605,8 @@ void main() {
           videoRemotePositionPrefKey('video/stream2'), 100000);
       await localDb.setPrefTyped<int>(
           videoRemotePositionAtPrefKey('video/stream2'), 2000);
+      await localDb.setSyncBaseline(
+          'video/stream2', kInterconnectVideoPositionDimension, 100000);
 
       final Directory tmp = Directory(p.join(work.path, 'tvs2'))..createSync();
       final InterconnectSyncBackend backend =
@@ -709,6 +717,212 @@ void main() {
           await hostDb.getPrefTyped<int>(
               audiobookPositionAtPrefKey('srt-uid-1'), 0),
           7000);
+    });
+  });
+
+  group('BUG-3875: 网络流书 / .strm 两端都有时进度与偏好仍同步', () {
+    test('host 照常列出（标不可播），host 较新的进度与调轴回灌本地', () async {
+      // host：一本 Netflix 网页视频书 + 一个 .strm 流指针（都没有媒体字节）。
+      final File strm = File(p.join(work.path, 'live.strm'))
+        ..writeAsStringSync('https://example.com/live.m3u8\n');
+      const String webUid = 'video/netflix-wild-robot';
+      const String strmUid = 'video/live';
+      await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: webUid,
+        title: 'The Wild Robot',
+        videoPath: 'https://www.netflix.com/watch/81731212',
+      ));
+      await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: strmUid,
+        title: 'Live',
+        videoPath: strm.path,
+      ));
+      for (final String uid in <String>[webUid, strmUid]) {
+        await hostDb.setPrefTyped<int>(videoRemotePositionPrefKey(uid), 900000);
+        await hostDb.setPrefTyped<int>(
+            videoRemotePositionAtPrefKey(uid), 9000);
+        await hostDb.setPrefTyped<int>(videoRemoteDelayPrefKey(uid), 700);
+        await hostDb.setPrefTyped<int>(videoRemoteDelayAtPrefKey(uid), 9000);
+      }
+
+      // client：同一条也在本机书架上（同 bookUid），进度落后。
+      final FushiDatabase localDb = _memDb();
+      addTearDown(localDb.close);
+      await localDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: webUid,
+        title: 'The Wild Robot',
+        videoPath: 'https://www.netflix.com/watch/81731212',
+        lastPositionMs: const Value(100000),
+      ));
+      await localDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: strmUid,
+        title: 'Live',
+        videoPath: '/tmp/live.strm',
+        lastPositionMs: const Value(100000),
+      ));
+      for (final String uid in <String>[webUid, strmUid]) {
+        await localDb.setPrefTyped<int>(
+            videoRemotePositionAtPrefKey(uid), 2000);
+        await localDb.setSyncBaseline(
+            uid, kInterconnectVideoPositionDimension, 100000);
+      }
+
+      final Directory tmp = Directory(p.join(work.path, 't3875'))
+        ..createSync();
+      final InterconnectSyncBackend backend =
+          await _buildClientBackend(base: base, token: token);
+
+      // 经真实 wire：两条都在清单里，且都标了对端不可播。
+      final Map<String, RemoteVideoInfo> listed = <String, RemoteVideoInfo>{
+        for (final RemoteVideoInfo v in await backend.listRemoteVideos())
+          v.id: v,
+      };
+      expect(listed.keys.toSet(), <String>{webUid, strmUid});
+      expect(listed[webUid]!.peerPlayable, isFalse);
+      expect(listed[strmUid]!.peerPlayable, isFalse);
+      expect(peerPlayableRemoteVideos(listed.values.toList()), isEmpty,
+          reason: '展示层不给它们出远端占位卡');
+
+      final SyncOrchestrator orch =
+          _orchestrator(db: localDb, backend: backend, tmp: tmp);
+      await orch.syncVideoProgressLiveForTest(SyncRunReport(), backend);
+
+      for (final String uid in <String>[webUid, strmUid]) {
+        final VideoBookRow? row = await localDb.getVideoBookByBookUid(uid);
+        expect(row!.lastPositionMs, 900000,
+            reason: '$uid：两端都有的条目进度必须照常同步');
+        expect(row.delayMs, 700, reason: '$uid：播放偏好必须照常同步');
+        expect(
+            await localDb.getPrefTyped<int>(videoRemoteDelayAtPrefKey(uid), 0),
+            9000);
+      }
+    });
+
+    test('本地较新的进度推回 host（网络流书 / .strm，report 无错误）', () async {
+      final File strm = File(p.join(work.path, 'pos.strm'))
+        ..writeAsStringSync('https://example.com/live.m3u8\n');
+      const String webUid = 'video/netflix-push';
+      const String strmUid = 'video/strm-push';
+      await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: webUid,
+        title: 'Web',
+        videoPath: 'https://www.netflix.com/watch/81731212',
+      ));
+      await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: strmUid,
+        title: 'Strm',
+        videoPath: strm.path,
+      ));
+      final FushiDatabase localDb = _memDb();
+      addTearDown(localDb.close);
+      for (final String uid in <String>[webUid, strmUid]) {
+        await localDb.setPrefTyped<int>(videoRemotePositionPrefKey(uid), 654000);
+        await localDb.setPrefTyped<int>(
+            videoRemotePositionAtPrefKey(uid), 7000);
+      }
+
+      final Directory tmp = Directory(p.join(work.path, 't3875pos'))
+        ..createSync();
+      final InterconnectSyncBackend backend =
+          await _buildClientBackend(base: base, token: token);
+      final SyncOrchestrator orch =
+          _orchestrator(db: localDb, backend: backend, tmp: tmp);
+      final SyncRunReport report = SyncRunReport();
+      await orch.syncVideoProgressLiveForTest(report, backend);
+
+      expect(report.errors, isEmpty,
+          reason: '旧闸门用 resolveVideoFile，这两条推进度恒 404');
+      for (final String uid in <String>[webUid, strmUid]) {
+        expect(
+            await hostDb.getPrefTyped<int>(videoRemotePositionPrefKey(uid), 0),
+            654000,
+            reason: '$uid：client 较新的进度必须落到 host');
+        expect(
+            await hostDb.getPrefTyped<int>(
+                videoRemotePositionAtPrefKey(uid), 0),
+            7000);
+      }
+    });
+
+    test('/position 闸门：未知 id 与越界集下标仍 404，界内集下标可写', () async {
+      final File ep0 = File(p.join(work.path, 'ep0.mp4'))
+        ..writeAsBytesSync(<int>[0]);
+      await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: 'video/series',
+        title: 'Series',
+        videoPath: ep0.path,
+        // 第 2 集在 host 本机也只是个地址：闸门只认 DB 行，不认媒体字节。
+        playlistJson: Value<String?>(jsonEncode(<Map<String, Object?>>[
+          <String, Object?>{'title': 'E1', 'path': ep0.path},
+          <String, Object?>{
+            'title': 'E2',
+            'path': 'https://example.com/e2.m3u8',
+          },
+        ])),
+      ));
+      final String auth =
+          'Basic ${base64Encode(utf8.encode('hibiki:$token'))}';
+      Future<int> put(String encodedId, {int? episode}) async {
+        final HttpClient c = HttpClient();
+        try {
+          final HttpClientRequest req = await c.putUrl(Uri.parse(
+              '$base/api/library/videos/$encodedId/position'
+              '${episode == null ? '' : '?episode=$episode'}'));
+          req.headers.set('authorization', auth);
+          req.headers.set('content-type', 'application/json');
+          req.write(jsonEncode(<String, Object?>{
+            'positionMs': 1000,
+            'positionUpdatedAtMs': 1000,
+          }));
+          final HttpClientResponse res = await req.close();
+          await res.drain<void>();
+          return res.statusCode;
+        } finally {
+          c.close();
+        }
+      }
+
+      expect(await put('video%2Fno-such'), 404);
+      expect(await put('video%2Fseries', episode: 5), 404);
+      expect(await hostDb.getPrefTyped<int>(
+          videoRemotePositionEpisodePrefKey('video/series', 5), 0), 0,
+          reason: '越界集不得写脏 prefs');
+      expect(await put('video%2Fseries'), 200);
+      expect(await put('video%2Fseries', episode: 1), 200);
+      expect(await hostDb.getPrefTyped<int>(
+          videoRemotePositionEpisodePrefKey('video/series', 1), 0), 1000);
+    });
+
+    test('本地较新的播放偏好推到 host（两端都有的 .strm）', () async {
+      final File strm = File(p.join(work.path, 'push.strm'))
+        ..writeAsStringSync('https://example.com/live.m3u8\n');
+      const String uid = 'video/push-strm';
+      await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: uid,
+        title: 'Push',
+        videoPath: strm.path,
+      ));
+      final FushiDatabase localDb = _memDb();
+      addTearDown(localDb.close);
+      await localDb.setPrefTyped<int>(videoRemotePositionPrefKey(uid), 1000);
+      await localDb.setPrefTyped<int>(videoRemotePositionAtPrefKey(uid), 1000);
+      await localDb.setPrefTyped<int>(videoRemoteDelayPrefKey(uid), -1200);
+      await localDb.setPrefTyped<int>(videoRemoteDelayAtPrefKey(uid), 5000);
+
+      final Directory tmp = Directory(p.join(work.path, 't3875p'))
+        ..createSync();
+      final InterconnectSyncBackend backend =
+          await _buildClientBackend(base: base, token: token);
+      final SyncOrchestrator orch =
+          _orchestrator(db: localDb, backend: backend, tmp: tmp);
+      await orch.syncVideoProgressLiveForTest(SyncRunReport(), backend);
+
+      expect(
+          await hostDb.getPrefTyped<int>(videoRemoteDelayPrefKey(uid), 0),
+          -1200);
+      expect(
+          await hostDb.getPrefTyped<int>(videoRemoteDelayAtPrefKey(uid), 0),
+          5000);
     });
   });
 
@@ -823,6 +1037,8 @@ void main() {
       addTearDown(localDb.close);
       await localDb.setPrefTyped<int>(audiobookPositionPrefKey('AB2'), 100000);
       await localDb.setPrefTyped<int>(audiobookPositionAtPrefKey('AB2'), 2000);
+      await localDb.setSyncBaseline(
+          'AB2', kInterconnectAudiobookPositionDimension, 100000);
 
       final Directory tmp = Directory(p.join(work.path, 'ta2'))..createSync();
       final InterconnectSyncBackend backend =
@@ -849,6 +1065,8 @@ void main() {
       addTearDown(localDb.close);
       await localDb.setPrefTyped<int>(audiobookPositionPrefKey('AB3'), 700000);
       await localDb.setPrefTyped<int>(audiobookPositionAtPrefKey('AB3'), 9000);
+      await localDb.setSyncBaseline(
+          'AB3', kInterconnectAudiobookPositionDimension, 1000);
 
       final Directory tmp = Directory(p.join(work.path, 'ta3'))..createSync();
       final InterconnectSyncBackend backend =
@@ -892,6 +1110,183 @@ void main() {
           await hostDb.getPrefTyped<int>(
               audiobookPositionPrefKey('AB_local_only'), 0),
           0);
+    });
+  });
+
+  // BUG-3367：两端在上次同步后都看 / 听过同一条目 → 报冲突、两端都不动；此前是纯
+  // 「取较新时间戳」LWW，晚同步的一端被静默盖掉。
+  group('playback position fork is a conflict, not a silent overwrite', () {
+    test('video: both moved off the baseline -> conflict, neither side written',
+        () async {
+      await _seedHostVideo(hostDb, work, 'video/fork', 'Fork Episode');
+      await hostDb.setPrefTyped<int>(
+          videoRemotePositionPrefKey('video/fork'), 300000);
+      await hostDb.setPrefTyped<int>(
+          videoRemotePositionAtPrefKey('video/fork'), 9000);
+      final FushiDatabase localDb = _memDb();
+      addTearDown(localDb.close);
+      await localDb.upsertVideoBook(VideoBooksCompanion.insert(
+        bookUid: 'video/fork',
+        title: 'Fork Episode',
+        videoPath: '/tmp/fork.mp4',
+        lastPositionMs: const Value(800000),
+      ));
+      await localDb.setPrefTyped<int>(
+          videoRemotePositionAtPrefKey('video/fork'), 5000);
+      await localDb.setSyncBaseline(
+          'video/fork', kInterconnectVideoPositionDimension, 100000);
+
+      final Directory tmp = Directory(p.join(work.path, 'tvf'))..createSync();
+      final InterconnectSyncBackend backend =
+          await _buildClientBackend(base: base, token: token);
+      final SyncOrchestrator orch =
+          _orchestrator(db: localDb, backend: backend, tmp: tmp);
+      final SyncRunReport report = SyncRunReport();
+      await orch.syncVideoProgressLiveForTest(report, backend);
+
+      expect(report.errors, isEmpty, reason: '${report.errors}');
+      expect(report.conflicts, hasLength(1));
+      final SyncConflict c = report.conflicts.single;
+      expect(c.assetKey, 'video/fork');
+      expect(c.dimension, kInterconnectVideoPositionDimension);
+      expect(c.title, 'Fork Episode');
+      expect(
+          (await localDb.getVideoBookByBookUid('video/fork'))!.lastPositionMs,
+          800000,
+          reason: 'host 时间戳更新也不能盖掉本机的新进度');
+      expect(
+          await hostDb.getPrefTyped<int>(
+              videoRemotePositionPrefKey('video/fork'), 0),
+          300000,
+          reason: '冲突时也不能把本机进度推上 host');
+    });
+
+    // 升级前从没记过基线：无基线时退回旧 LWW 一次并记下基线，不能把每条只有一端
+    // 动过的条目都弹成冲突。
+    test(
+        'video: no baseline and positions differ -> legacy LWW once '
+        '(newer host wins), baseline recorded, no conflict', () async {
+      await _seedHostVideo(hostDb, work, 'video/nobase', 'NoBase');
+      await hostDb.setPrefTyped<int>(
+          videoRemotePositionPrefKey('video/nobase'), 300000);
+      await hostDb.setPrefTyped<int>(
+          videoRemotePositionAtPrefKey('video/nobase'), 9000);
+      final FushiDatabase localDb = _memDb();
+      addTearDown(localDb.close);
+      await localDb.setPrefTyped<int>(
+          videoRemotePositionPrefKey('video/nobase'), 800000);
+      await localDb.setPrefTyped<int>(
+          videoRemotePositionAtPrefKey('video/nobase'), 5000);
+
+      final Directory tmp = Directory(p.join(work.path, 'tvn'))..createSync();
+      final InterconnectSyncBackend backend =
+          await _buildClientBackend(base: base, token: token);
+      final SyncOrchestrator orch =
+          _orchestrator(db: localDb, backend: backend, tmp: tmp);
+      final SyncRunReport report = SyncRunReport();
+      await orch.syncVideoProgressLiveForTest(report, backend);
+
+      expect(report.errors, isEmpty, reason: '${report.errors}');
+      expect(report.conflicts, isEmpty);
+      expect(
+          await localDb.getPrefTyped<int>(
+              videoRemotePositionPrefKey('video/nobase'), 0),
+          300000);
+      expect(
+          await localDb.getSyncBaseline(
+              'video/nobase', kInterconnectVideoPositionDimension),
+          300000);
+    });
+
+    test(
+        'video: same position, different stamps -> aligned + baseline, '
+        'no conflict', () async {
+      await _seedHostVideo(hostDb, work, 'video/same', 'Same');
+      await hostDb.setPrefTyped<int>(
+          videoRemotePositionPrefKey('video/same'), 420000);
+      await hostDb.setPrefTyped<int>(
+          videoRemotePositionAtPrefKey('video/same'), 9000);
+      final FushiDatabase localDb = _memDb();
+      addTearDown(localDb.close);
+      await localDb.setPrefTyped<int>(
+          videoRemotePositionPrefKey('video/same'), 420000);
+      await localDb.setPrefTyped<int>(
+          videoRemotePositionAtPrefKey('video/same'), 5000);
+
+      final Directory tmp = Directory(p.join(work.path, 'tvsm'))..createSync();
+      final InterconnectSyncBackend backend =
+          await _buildClientBackend(base: base, token: token);
+      final SyncOrchestrator orch =
+          _orchestrator(db: localDb, backend: backend, tmp: tmp);
+      final SyncRunReport report = SyncRunReport();
+      await orch.syncVideoProgressLiveForTest(report, backend);
+
+      expect(report.conflicts, isEmpty);
+      expect(
+          await localDb.getPrefTyped<int>(
+              videoRemotePositionAtPrefKey('video/same'), 0),
+          9000);
+      expect(
+          await localDb.getSyncBaseline(
+              'video/same', kInterconnectVideoPositionDimension),
+          420000);
+    });
+
+    test('audiobook: both moved off the baseline -> conflict', () async {
+      await _seedHostAudiobook(hostDb, 'ABFork');
+      await hostDb.setPrefTyped<int>(
+          audiobookPositionPrefKey('ABFork'), 200000);
+      await hostDb.setPrefTyped<int>(
+          audiobookPositionAtPrefKey('ABFork'), 9000);
+      final FushiDatabase localDb = _memDb();
+      addTearDown(localDb.close);
+      await localDb.setPrefTyped<int>(
+          audiobookPositionPrefKey('ABFork'), 700000);
+      await localDb.setPrefTyped<int>(
+          audiobookPositionAtPrefKey('ABFork'), 5000);
+      await localDb.setSyncBaseline(
+          'ABFork', kInterconnectAudiobookPositionDimension, 50000);
+
+      final Directory tmp = Directory(p.join(work.path, 'taf'))..createSync();
+      final InterconnectSyncBackend backend =
+          await _buildClientBackend(base: base, token: token);
+      final SyncOrchestrator orch =
+          _orchestrator(db: localDb, backend: backend, tmp: tmp);
+      final SyncRunReport report = SyncRunReport();
+      await orch.syncAudiobookProgressLiveForTest(report, backend);
+
+      expect(report.conflicts, hasLength(1));
+      expect(report.conflicts.single.dimension,
+          kInterconnectAudiobookPositionDimension);
+      expect(
+          await localDb.getPrefTyped<int>(
+              audiobookPositionPrefKey('ABFork'), 0),
+          700000);
+      expect(
+          await hostDb.getPrefTyped<int>(audiobookPositionPrefKey('ABFork'), 0),
+          200000);
+    });
+
+    test('push records the agreed position as the new baseline', () async {
+      await _seedHostAudiobook(hostDb, 'ABBase');
+      final FushiDatabase localDb = _memDb();
+      addTearDown(localDb.close);
+      await localDb.setPrefTyped<int>(
+          audiobookPositionPrefKey('ABBase'), 480000);
+      await localDb.setPrefTyped<int>(
+          audiobookPositionAtPrefKey('ABBase'), 3000);
+
+      final Directory tmp = Directory(p.join(work.path, 'tab'))..createSync();
+      final InterconnectSyncBackend backend =
+          await _buildClientBackend(base: base, token: token);
+      final SyncOrchestrator orch =
+          _orchestrator(db: localDb, backend: backend, tmp: tmp);
+      await orch.syncAudiobookProgressLiveForTest(SyncRunReport(), backend);
+
+      expect(
+          await localDb.getSyncBaseline(
+              'ABBase', kInterconnectAudiobookPositionDimension),
+          480000);
     });
   });
 

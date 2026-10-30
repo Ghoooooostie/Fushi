@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:isolate';
 
 import 'package:drift/drift.dart';
 import 'package:flutter/foundation.dart';
@@ -21,10 +22,9 @@ class DictionaryRepository {
     bool Function()? isLowMemory,
   })  : _onCacheRebuild = onCacheRebuild,
         _isLowMemory = isLowMemory ?? _neverLowMemory {
-    // 查词历史持久化改为 debounce 写穿后，进程退出前必须 flush pending 变更
-    // （桌面点 X 快杀 / Android 退后台的保留式 flush 都走这条注册表）。
-    _historyExitFlush =
-        ExitFlushRegistry.instance.register(flushDictionaryHistoryNow);
+    // 退出前结算尚未进入 Drift 的 metadata 队列和 debounce 查词历史；
+    // 否则 db.close 可能先于 metadata 队列里的第二笔写入。
+    _exitFlush = ExitFlushRegistry.instance.register(flushPendingWritesNow);
   }
 
   final FushiDatabase _db;
@@ -33,7 +33,7 @@ class DictionaryRepository {
   /// 低内存模式信号（读 pref，惰性求值：主进程构造发生在 prefs 加载之前，
   /// 只能在每次缓存写入时现查）。未接线（旧调用点/测试）时视为非低内存。
   final bool Function() _isLowMemory;
-  late final ExitFlushCallback _historyExitFlush;
+  late final ExitFlushCallback _exitFlush;
 
   static bool _neverLowMemory() => false;
 
@@ -42,6 +42,9 @@ class DictionaryRepository {
   /// 2000 保留作兜底；低内存模式收紧到 8MB，并在写入时随开关动态生效。
   static const int searchCacheMaxBytes = 32 << 20; // 32 MB
   static const int searchCacheMaxBytesLowMemory = 8 << 20; // 8 MB
+
+  /// 原始引擎结果缓存（住在后台查词 isolate 里，见 `FushiDicts.lookupInBackground`）
+  /// 的字节上限；由查词请求带过去，低内存开关随时生效。
   static const int ffiLookupCacheMaxBytes = 32 << 20; // 32 MB
   static const int ffiLookupCacheMaxBytesLowMemory = 8 << 20; // 8 MB
   // popupJson 已是可直接渲染的紧凑结果；单独给较小预算，避免与完整结果/raw FFI
@@ -50,18 +53,27 @@ class DictionaryRepository {
   static const int popupSearchCacheMaxBytesLowMemory = 2 << 20; // 2 MB
 
   List<Dictionary> _dictionariesCache = [];
+
+  /// 查词热路径要的两样派生数据（被关掉的词典名、term 词典顺序）的缓存；null =
+  /// 需要重算。凡是改动 [_dictionariesCache] 的地方都经 [_dictionariesChanged] 清掉它。
+  ///
+  /// 以前每次查词都经 [dictionaries] / [termDictionaries] 把全部词典深拷贝两三遍
+  /// （那两个 getter 为了不外借已提交对象必须拷贝），只为了取名字。
+  DictionaryLookupFilters? _lookupFilters;
+
+  /// 查词结果缓存的代次：[clearDictionaryResultsCache] 每清一次 +1。
+  ///
+  /// 查词现在是异步的（后台 isolate）：一次查询在飞期间词典集合可能已经变了、缓存
+  /// 已经清过。调用方在发起前记下代次，回来时代次没变才把结果写进缓存——否则清缓存
+  /// 之后又被旧词典集合的结果写回来。
+  int _resultsCacheEpoch = 0;
+  Future<void> _metadataWrites = Future<void>.value();
   final List<DictionarySearchResult> _dictionaryHistoryResults = [];
   final LruCache<String, DictionarySearchResult> _dictionarySearchCache =
       LruCache<String, DictionarySearchResult>(
     2000,
     maxBytes: searchCacheMaxBytes,
     sizeOf: estimateDictionarySearchResultBytes,
-  );
-  final LruCache<String, List<FushiLookupResult>> _ffiLookupCache =
-      LruCache<String, List<FushiLookupResult>>(
-    2000,
-    maxBytes: ffiLookupCacheMaxBytes,
-    sizeOf: estimateFushiLookupResultsBytes,
   );
   final LruCache<String, DictionaryPopupCacheEntry> _popupSearchCache =
       LruCache<String, DictionaryPopupCacheEntry>(
@@ -72,7 +84,9 @@ class DictionaryRepository {
 
   // ── getters ──────────────────────────────────────────────────────────
 
-  List<Dictionary> get dictionaries => List.unmodifiable(_dictionariesCache);
+  // Dictionary is mutable. Never lend the committed objects to callers: even
+  // a failed save must leave these synchronous getters at the last DB commit.
+  List<Dictionary> get dictionaries => List.unmodifiable(_dictionariesCache.map(_copyDictionary));
 
   /// 改名投影（真名 -> 显示名，只含改过名的）。推导在
   /// [dictionaryDisplayNameOverridesOf] 单点完成。
@@ -80,30 +94,63 @@ class DictionaryRepository {
       dictionaryDisplayNameOverridesOf(_dictionariesCache);
 
   List<Dictionary> get termDictionaries =>
-      _dictionariesCache.where((d) => d.type == DictionaryType.term).toList();
+      _dictionariesCache.where((d) => d.type == DictionaryType.term).map(_copyDictionary)
+      .toList();
 
   List<Dictionary> get freqDictionaries => _dictionariesCache
       .where((d) => d.type == DictionaryType.frequency)
+      .map(_copyDictionary)
       .toList();
 
   List<Dictionary> get pitchDictionaries =>
-      _dictionariesCache.where((d) => d.type == DictionaryType.pitch).toList();
+      _dictionariesCache.where((d) => d.type == DictionaryType.pitch).map(_copyDictionary)
+      .toList();
 
   List<Dictionary> get kanjiDictionaries =>
-      _dictionariesCache.where((d) => d.type == DictionaryType.kanji).toList();
+      _dictionariesCache.where((d) => d.type == DictionaryType.kanji).map(_copyDictionary)
+      .toList();
+
+  /// 词典管理「汉字」分区：纯 kanji 词典 + 混合词典的汉字部分，按分区顺序。
+  /// 成员与顺序的推导在 [kanjiSectionDictionariesOf]，引擎汉字桶用的是同一份。
+  List<Dictionary> get kanjiSectionDictionaries =>
+      kanjiSectionDictionariesOf(_dictionariesCache)
+          .map(_copyDictionary)
+          .toList();
 
   List<DictionarySearchResult> get dictionaryHistory =>
       List.unmodifiable(_dictionaryHistoryResults);
+
+  /// 查词用的过滤与排序快照（不拷贝 [Dictionary] 对象，按需重算一次后复用）。
+  ///
+  /// 被关掉的词典与管理页「显示 / 隐藏」开关同一个判据：
+  /// `isHidden(JapaneseLanguage.instance)`（与 `AppModel.hiddenDictionaryNames` 一致）。
+  DictionaryLookupFilters get lookupFilters =>
+      _lookupFilters ??= DictionaryLookupFilters(
+        hiddenDictionaryNames: Set<String>.unmodifiable(<String>{
+          for (final Dictionary d in _dictionariesCache)
+            if (d.isHidden(JapaneseLanguage.instance)) d.name,
+        }),
+        termDictionaryOrder: List<String>.unmodifiable(<String>[
+          for (final Dictionary d in _dictionariesCache)
+            if (d.type == DictionaryType.term) d.name,
+        ]),
+      );
+
+  /// 见 [_resultsCacheEpoch]。
+  int get resultsCacheEpoch => _resultsCacheEpoch;
+
+  /// [_dictionariesCache] 的任何改动之后调用：作废由它派生的查词快照。
+  void _dictionariesChanged() {
+    _lookupFilters = null;
+  }
 
   // ── loadFromDb ───────────────────────────────────────────────────────
 
   Future<void> loadFromDb() async {
     // 历史落库是 debounce 写穿：重载（启动 no-op / Profile 切换 TODO-1077）前
     // 先 flush pending 变更，保持「变更先于重载落库」的旧语义，防旧快照复活。
-    await flushDictionaryHistoryNow();
-    final dictRows = await _db.getAllDictionaryMetadata();
-    _dictionariesCache = dictRows.map(_rowToDictionary).toList()
-      ..sort((a, b) => a.order.compareTo(b.order));
+    await flushPendingWritesNow();
+    _applyMetadataRows(await _db.getAllDictionaryMetadata());
 
     _dictionaryHistoryResults.clear();
     final histRows = await _db.getAllDictionaryHistory();
@@ -116,6 +163,47 @@ class DictionaryRepository {
         debugPrint('[Fushi] skipping corrupted dictionary history: $e');
       }
     }
+  }
+
+  /// 上一次从 DB 整表装载 dictionary_metadata 时读到的行（按 name 排序），供
+  /// [reloadMetadataIfChangedInDb] 判断「别的进程改过没有」。null = 还没装载过。
+  List<DictionaryMetaRow>? _loadedMetadataRows;
+
+  void _applyMetadataRows(List<DictionaryMetaRow> rows) {
+    final List<DictionaryMetaRow> sorted = List<DictionaryMetaRow>.of(rows)
+      ..sort((DictionaryMetaRow a, DictionaryMetaRow b) =>
+          a.name.compareTo(b.name));
+    _loadedMetadataRows = sorted;
+    _dictionariesCache = sorted.map(_rowToDictionary).toList()
+      ..sort((a, b) => a.order.compareTo(b.order));
+    _dictionariesChanged();
+  }
+
+  /// BUG-3662：Android app 外查词跑在独立的 `:popup` 进程里，它的词典缓存只在进程
+  /// 冷启动时 [loadFromDb] 一次；主进程在「词典管理」里改顺序 / 启用 / 折叠 / 改名
+  /// 只写 `dictionary_metadata` 表（不抬 `prefs_version`），常驻的热进程永远看不见，
+  /// 用户只能杀掉 app 才生效。
+  ///
+  /// 本方法在每次热复用查词前读一遍这张小表（几十行），与上次装载的快照逐行比较
+  /// （drift 行类型自带值相等），变了才换缓存并返回 true——调用方据此重载引擎、
+  /// 清查词缓存。先排空本进程自己在途的元数据写，免得把自己写到一半的状态当成外部
+  /// 改动读回来。
+  Future<bool> reloadMetadataIfChangedInDb() async {
+    Future<void> pending;
+    do {
+      pending = _metadataWrites;
+      await pending;
+    } while (!identical(pending, _metadataWrites));
+    final List<DictionaryMetaRow> rows = await _db.getAllDictionaryMetadata();
+    final List<DictionaryMetaRow> sorted = List<DictionaryMetaRow>.of(rows)
+      ..sort((DictionaryMetaRow a, DictionaryMetaRow b) =>
+          a.name.compareTo(b.name));
+    if (_loadedMetadataRows != null &&
+        listEquals(sorted, _loadedMetadataRows)) {
+      return false;
+    }
+    _applyMetadataRows(sorted);
+    return true;
   }
 
   // ── row conversion ───────────────────────────────────────────────────
@@ -188,6 +276,84 @@ class DictionaryRepository {
 
   // ── dictionary metadata CRUD ─────────────────────────────────────────
 
+  /// Drain from lifecycle/exit boundaries, never from inside a metadata write.
+  /// A rebuild callback may enqueue a migration, so one captured tail is not
+  /// sufficient. The stable-tail check includes those follow-up commits.
+  Future<void> flushPendingWritesNow() async {
+    Future<void> pending;
+    do {
+      pending = _metadataWrites;
+      await pending;
+    } while (!identical(pending, _metadataWrites));
+    await flushDictionaryHistoryNow();
+  }
+
+  static Dictionary _copyDictionary(Dictionary dictionary) =>
+      dictionary.copyWith(metadata: Map<String, String>.of(dictionary.metadata))
+        ..hiddenLanguages = List<String>.of(dictionary.hiddenLanguages)
+        ..collapsedLanguages = List<String>.of(dictionary.collapsedLanguages)
+        ..expandedLanguages = List<String>.of(dictionary.expandedLanguages);
+
+  Future<void> _writeMetadata(Future<void> Function() write) {
+    final Future<void> result = _metadataWrites.then((_) => write());
+    // A failed operation is still returned to its caller, but must not poison
+    // later writes. Rebuild callbacks may enqueue another write; never await
+    // those callbacks' work from inside the current operation.
+    _metadataWrites = result.then<void>(
+      (_) {},
+      onError: (Object _, StackTrace __) {},
+    );
+    return result;
+  }
+
+  void _publishDictionaries(List<Dictionary> dictionaries) {
+    final Set<String> names = dictionaries.map((d) => d.name).toSet();
+    _dictionariesCache = <Dictionary>[
+      ..._dictionariesCache.where((d) => !names.contains(d.name)),
+      ...dictionaries,
+    ]..sort((a, b) => a.order.compareTo(b.order));
+    _dictionariesChanged();
+    try {
+      _onCacheRebuild?.call();
+    } finally {
+      clearDictionaryResultsCache();
+    }
+  }
+
+  Future<void> _commitDictionaries(List<Dictionary> dictionaries) async {
+    if (dictionaries.isEmpty) return;
+    await _db.transaction(() async {
+      for (final Dictionary dictionary in dictionaries) {
+        await _db.upsertDictionaryMeta(_dictionaryToCompanion(dictionary));
+      }
+    });
+    _publishDictionaries(dictionaries);
+  }
+
+  Future<void> _editDictionary(
+    Dictionary dictionary,
+    void Function(Dictionary) edit,
+  ) => _writeMetadata(() async {
+    final Dictionary current = _dictionariesCache.firstWhere(
+      (d) => d.name == dictionary.name,
+      orElse: () => throw StateError(
+        'Dictionary is no longer installed: ${dictionary.name}',
+      ),
+    );
+    final Dictionary updated = _copyDictionary(current);
+    edit(updated);
+    await _commitDictionaries(<Dictionary>[updated]);
+    // Existing controls may still hold their snapshot until the next rebuild.
+    // Reflect a successful edit there only; failed writes never mutate it.
+    dictionary
+      ..order = updated.order
+      ..displayName = updated.displayName
+      ..languageOverride = updated.languageOverride
+      ..hiddenLanguages = List<String>.of(updated.hiddenLanguages)
+      ..collapsedLanguages = List<String>.of(updated.collapsedLanguages)
+      ..expandedLanguages = List<String>.of(updated.expandedLanguages);
+  });
+
   /// BUG-1492：写词典元数据 = 引擎里的词典集合变了。**引擎重载与查词缓存失效必须
   /// 同时发生**，否则新装/重导的词典虽然进了引擎，之前缓存的查询结果仍会被原样重放
   /// ——用户表现为「更新完这本词典就查不到词了，重新导入才好」（重新导入之所以「治
@@ -195,53 +361,113 @@ class DictionaryRepository {
   ///
   /// 缓存失效收在这里而不是留给每个调用方各自补：调用点已有 3 个（导入、
   /// hidden 切换、类型自愈迁移），少补一个就是一条静默的陈旧结果通路。
-  Future<void> persistDictionary(Dictionary dictionary) async {
-    final idx = _dictionariesCache.indexWhere((d) => d.name == dictionary.name);
-    if (idx >= 0) {
-      _dictionariesCache[idx] = dictionary;
-    } else {
-      _dictionariesCache.add(dictionary);
-      _dictionariesCache.sort((a, b) => a.order.compareTo(b.order));
-    }
-    _onCacheRebuild?.call();
-    clearDictionaryResultsCache();
-    await _db.upsertDictionaryMeta(_dictionaryToCompanion(dictionary));
+  Future<void> persistDictionary(Dictionary dictionary) {
+    final Dictionary snapshot = _copyDictionary(dictionary);
+    return _writeMetadata(() => _commitDictionaries(<Dictionary>[snapshot]));
   }
 
   /// 批量版 [persistDictionary]：一次缓存替换 + **一次**引擎重载 + 一次缓存失效。
   /// 启动期批量回填元数据用——逐本 [persistDictionary] 会让引擎连重载 N 次。
-  Future<void> persistDictionaries(List<Dictionary> dictionaries) =>
-      updateDictionaryOrder(dictionaries);
-
-  Future<void> updateDictionaryOrder(List<Dictionary> newDictionaries) async {
-    final updatedNames = newDictionaries.map((d) => d.name).toSet();
-    final others =
-        _dictionariesCache.where((d) => !updatedNames.contains(d.name));
-    _dictionariesCache = [...others, ...newDictionaries]
-      ..sort((a, b) => a.order.compareTo(b.order));
-    _onCacheRebuild?.call();
-    // Reordering changes the effective merge order of search results, so any
-    // previously cached lookup would replay the stale order on the next
-    // (cache-hit) query. Drop the search caches here — single source of truth
-    // so no caller can forget — mirroring the delete/hidden paths (BUG-355,
-    // BUG-171/BUG-177). The native engine itself is already reloaded via the
-    // _onCacheRebuild callback above.
-    clearDictionaryResultsCache();
-    for (final dictionary in newDictionaries) {
-      await _db.upsertDictionaryMeta(_dictionaryToCompanion(dictionary));
-    }
+  Future<void> persistDictionaries(List<Dictionary> dictionaries) {
+    final List<Dictionary> snapshots =
+        dictionaries.map(_copyDictionary).toList();
+    return _writeMetadata(() => _commitDictionaries(snapshots));
   }
+
+  /// Apply startup metadata migrations to the latest committed dictionaries,
+  /// rather than overwriting edits with snapshots captured before async IO.
+  /// Returning null skips an already-migrated dictionary. Callbacks are
+  /// synchronous and receive independent copies of the committed values.
+  Future<void> updateDictionaryMetadata(
+    Map<String, Dictionary? Function(Dictionary)> updates,
+  ) {
+    final changes = Map<String, Dictionary? Function(Dictionary)>.of(updates);
+    return _writeMetadata(() async {
+      final List<Dictionary> updated = <Dictionary>[];
+      for (final Dictionary current in _dictionariesCache) {
+        final change = changes[current.name];
+        if (change == null) continue;
+        final Dictionary? candidate = change(_copyDictionary(current));
+        if (candidate != null) {
+          if (candidate.name != current.name) {
+            throw ArgumentError(
+              'Metadata updates cannot rename dictionary keys',
+            );
+          }
+          updated.add(_copyDictionary(candidate));
+        }
+      }
+      await _commitDictionaries(updated);
+    });
+  }
+
+  Future<void> updateDictionaryOrder(List<Dictionary> newDictionaries) {
+    final Map<String, int> orders = {
+      for (final Dictionary dictionary in newDictionaries)
+        dictionary.name: dictionary.order,
+    };
+    return _writeMetadata(
+      () => _commitDictionaries(<Dictionary>[
+        for (final Dictionary current in _dictionariesCache)
+          if (orders.containsKey(current.name))
+            _copyDictionary(current)..order = orders[current.name]!,
+      ]),
+    );
+  }
+
+  /// 「汉字」分区的重排写入：[newDictionaries] 是该分区的新顺序。纯 kanji 词典写
+  /// [Dictionary.order]；混合词典只写汉字部分自己的 [kDictKanjiOrderKey]，不动它在
+  /// 「术语」分区的 order（见 [kDictKanjiHiddenKey] 的说明）。
+  Future<void> updateKanjiSectionOrder(List<Dictionary> newDictionaries) {
+    final Map<String, int> positions = <String, int>{
+      for (int i = 0; i < newDictionaries.length; i++)
+        newDictionaries[i].name: i,
+    };
+    return _writeMetadata(
+      () => _commitDictionaries(<Dictionary>[
+        for (final Dictionary current in _dictionariesCache)
+          if (positions.containsKey(current.name))
+            current.hasEmbeddedKanji
+                ? _copyDictionary(current).copyWith(
+                    metadata: <String, String>{
+                      ...current.metadata,
+                      kDictKanjiOrderKey: '${positions[current.name]!}',
+                    },
+                  )
+                : (_copyDictionary(current)..order = positions[current.name]!),
+      ]),
+    );
+  }
+
+  /// 开关混合词典的汉字部分（[kDictKanjiHiddenKey]）。术语部分的开关不受影响。
+  Future<void> setDictionaryKanjiPartHidden(
+    Dictionary dictionary,
+    bool hidden,
+  ) =>
+      updateDictionaryMetadata(<String, Dictionary? Function(Dictionary)>{
+        dictionary.name: (Dictionary current) {
+          final Map<String, String> metadata =
+              Map<String, String>.of(current.metadata);
+          if (hidden) {
+            metadata[kDictKanjiHiddenKey] = 'true';
+          } else {
+            metadata.remove(kDictKanjiHiddenKey);
+          }
+          return current.copyWith(metadata: metadata);
+        },
+      });
 
   /// 用户手动指定这本词典的内容语言（BCP-47），null / 空串 = 恢复「自动」。
   ///
   /// 写完必须清查词结果缓存：词典语言只影响渲染（字体链 + structured content 的
   /// lang 标注），但那份 HTML 是缓存过的——不清的话用户改了语言要等缓存自然过期
   /// 才看得到变化（与 toggleDictionaryHidden 同款理由，BUG-171/BUG-177）。
-  void setDictionaryLanguageOverride(Dictionary dictionary, String? language) {
+  Future<void> setDictionaryLanguageOverride(
+      Dictionary dictionary, String? language) {
     final String trimmed = language?.trim() ?? '';
-    dictionary.languageOverride = trimmed.isEmpty ? null : trimmed;
-    persistDictionary(dictionary);
-    clearDictionaryResultsCache();
+    return _editDictionary(dictionary, (updated) {
+      updated.languageOverride = trimmed.isEmpty ? null : trimmed;
+    });
   }
 
   /// 折叠三态的**唯一写入点**（BUG-2158）。两个名单在这里保持互斥。
@@ -251,7 +477,16 @@ class DictionaryRepository {
   /// 自动展开窗口之外的词典点「展开」就等于什么都没做。老那个双态入口已**删除**
   /// 而不是与本方法并存——留着它就等于留着一条能写出「两个名单都不含」却自称
   /// 「已展开」的路径。
-  void setDictionaryCollapseState(
+  Future<void> setDictionaryCollapseState(
+    Dictionary dictionary,
+    String languageCode,
+    DictionaryCollapseState state,
+  ) => _editDictionary(
+    dictionary,
+    (updated) => _applyCollapseState(updated, languageCode, state),
+  );
+
+  static void _applyCollapseState(
     Dictionary dictionary,
     String languageCode,
     DictionaryCollapseState state,
@@ -266,7 +501,6 @@ class DictionaryRepository {
         if (code != languageCode) code,
       if (state == DictionaryCollapseState.expanded) languageCode,
     ];
-    persistDictionary(dictionary);
   }
 
   /// 改词典显示名。空 / 与真名相同 → 存 null（回到「没改过」，避免留一行等值
@@ -278,19 +512,20 @@ class DictionaryRepository {
   ///
   /// 仍清查词缓存：弹窗 HTML 是缓存产物，里面的词典名标题已经渲染进去了，不清
   /// 的话改完名要等缓存自然失效才看得到新名。
-  void setDictionaryDisplayName(Dictionary dictionary, String? displayName) {
+  Future<void> setDictionaryDisplayName(
+      Dictionary dictionary, String? displayName) {
     final String trimmed = displayName?.trim() ?? '';
-    dictionary.displayName =
-        (trimmed.isEmpty || trimmed == dictionary.name) ? null : trimmed;
-    persistDictionary(dictionary);
-    clearDictionaryResultsCache();
+    return _editDictionary(dictionary, (updated) {
+      updated.displayName =
+          (trimmed.isEmpty || trimmed == updated.name) ? null : trimmed;
+    });
   }
 
   /// 设置页那个一键按钮：继承 → 显式展开 → 显式折叠 → 继承。
   ///
   /// 起点是「继承」而不是「展开」，因为存量用户的每一本都是继承态；第一次点下去
   /// 得到「显式展开」，正是他们本来以为自己在做的那件事。
-  void cycleDictionaryCollapseState(
+  Future<void> cycleDictionaryCollapseState(
       Dictionary dictionary, String languageCode) {
     const Map<DictionaryCollapseState, DictionaryCollapseState> next =
         <DictionaryCollapseState, DictionaryCollapseState>{
@@ -298,24 +533,33 @@ class DictionaryRepository {
       DictionaryCollapseState.expanded: DictionaryCollapseState.collapsed,
       DictionaryCollapseState.collapsed: DictionaryCollapseState.inherit,
     };
-    setDictionaryCollapseState(
-      dictionary,
-      languageCode,
-      next[dictionary.collapseStateForCode(languageCode)]!,
-    );
+    return _editDictionary(dictionary, (updated) {
+      final DictionaryCollapseState state =
+          next[updated.collapseStateForCode(languageCode)]!;
+      _applyCollapseState(updated, languageCode, state);
+    });
   }
 
-  void toggleDictionaryHidden(Dictionary dictionary, String languageCode) {
-    if (dictionary.hiddenLanguages.contains(languageCode)) {
-      dictionary.hiddenLanguages = [...dictionary.hiddenLanguages]
-        ..remove(languageCode);
-    } else {
-      dictionary.hiddenLanguages = [
-        ...dictionary.hiddenLanguages,
-        languageCode,
-      ];
-    }
-    persistDictionary(dictionary);
+  Future<void> toggleDictionaryHidden(
+      Dictionary dictionary, String languageCode) => _editDictionary(dictionary, (updated) {
+    _applyHiddenState(updated, languageCode,
+        !updated.hiddenLanguages.contains(languageCode));
+  });
+
+  Future<void> setDictionaryHidden(
+    Dictionary dictionary,
+    String languageCode,
+    bool hidden,
+  ) => _editDictionary(dictionary,
+      (updated) => _applyHiddenState(updated, languageCode, hidden));
+
+  static void _applyHiddenState(
+      Dictionary dictionary, String languageCode, bool hidden) {
+    dictionary.hiddenLanguages = <String>[
+      for (final String code in dictionary.hiddenLanguages)
+        if (code != languageCode) code,
+      if (hidden) languageCode,
+    ];
   }
 
   bool hasDictionaryNamed(String name) =>
@@ -335,7 +579,7 @@ class DictionaryRepository {
     if (newBase.isEmpty) return null;
     for (final Dictionary d in _dictionariesCache) {
       if (d.name == newName) continue;
-      if (baseName(d.name) == newBase) return d;
+      if (baseName(d.name) == newBase) return _copyDictionary(d);
     }
     return null;
   }
@@ -348,12 +592,21 @@ class DictionaryRepository {
   /// publish 到位，中间隔着一次整包落盘：这段窗口里引擎的 in-memory 索引还指着**已
   /// 被删除的目录**，此时任何一次查词都会拿到残缺结果并把它写进缓存。窗口本身由这里
   /// 的重载消除，窗口内被污染的缓存由收尾的 [persistDictionary] 清掉。
-  Future<void> deleteDictionaryMeta(String name) async {
+  Future<void> deleteDictionaryMeta(String name) => _writeMetadata(() async {
+    await _db.deleteDictionaryMeta(name);
     _dictionariesCache.removeWhere((d) => d.name == name);
+    _dictionariesChanged();
     _onCacheRebuild?.call();
     clearDictionaryResultsCache();
-    await _db.deleteDictionaryMeta(name);
-  }
+  });
+
+  Future<void> clearDictionaryMetadata() => _writeMetadata(() async {
+    await _db.clearAllDictionaryMeta();
+    _dictionariesCache = <Dictionary>[];
+    _dictionariesChanged();
+    _onCacheRebuild?.call();
+    clearDictionaryResultsCache();
+  });
 
   /// 按当前 cache 重建 native 引擎（= 触发 `onCacheRebuild`）。
   /// 给 [deleteDictionaryDirectory] 当 `reloadEngine`：删目录前要把引擎清空以释放
@@ -362,18 +615,23 @@ class DictionaryRepository {
 
   void removeDictionaryFromCache(String name) {
     _dictionariesCache.removeWhere((d) => d.name == name);
+    _dictionariesChanged();
   }
 
   void clearDictionariesCache() {
     _dictionariesCache.clear();
+    _dictionariesChanged();
   }
 
   // ── search cache ─────────────────────────────────────────────────────
 
   void clearDictionaryResultsCache() {
+    _resultsCacheEpoch++;
     _dictionarySearchCache.clear();
-    _ffiLookupCache.clear();
     _popupSearchCache.clear();
+    // 原始引擎结果缓存住在后台查词 isolate 里，已按引擎实例代次失效；这里对称地
+    // 一并清掉，不让「清查词缓存」只清了一半。
+    FushiDicts.clearBackgroundLookupCache();
   }
 
   DictionarySearchResult? getCachedSearch(String searchTerm) =>
@@ -387,17 +645,9 @@ class DictionaryRepository {
     _dictionarySearchCache[searchTerm] = result;
   }
 
-  /// [cacheKey] 由 `buildFfiLookupCacheKey` 生成，**含引擎结果上限**——不是裸
-  /// searchTerm。上限进了键，load-more 的更大上限才不会命中上一轮的短结果集。
-  List<FushiLookupResult>? getCachedFfiLookup(String cacheKey) =>
-      _ffiLookupCache[cacheKey];
-
-  void cacheFfiLookup(String cacheKey, List<FushiLookupResult> results) {
-    _ffiLookupCache.maxBytes = _isLowMemory()
-        ? ffiLookupCacheMaxBytesLowMemory
-        : ffiLookupCacheMaxBytes;
-    _ffiLookupCache[cacheKey] = results;
-  }
+  /// 后台查词 isolate 里原始引擎结果缓存此刻该用的字节上限（低内存开关现查）。
+  int get ffiLookupCacheBudgetBytes =>
+      _isLowMemory() ? ffiLookupCacheMaxBytesLowMemory : ffiLookupCacheMaxBytes;
 
   DictionaryPopupCacheEntry? getCachedPopupSearch(String cacheKey) =>
       _popupSearchCache[cacheKey];
@@ -422,11 +672,17 @@ class DictionaryRepository {
 
   Timer? _historyPersistTimer;
   DateTime? _historyDirtySince;
+  Future<void>? _historyWrite;
+  int _historyGeneration = 0;
 
   /// 逐条序列化 memo（对象身份键，弱引用不阻回收）：历史 10 条里通常 9 条对象
   /// 与上次完全相同，flush 时只需序列化新增那条。就地变更字段（scrollPosition）
   /// 必须失效对应 memo。
   final Expando<String> _historyJsonMemo = Expando<String>('dictHistoryJson');
+
+  /// [clearDictionaryHistory] / [dispose] 每次 +1。flush 的序列化在后台 isolate
+  /// 里异步进行，回来时若期间清过历史，这份旧快照不得再写回（否则把已清的历史复活）。
+  int _historyClearEpoch = 0;
 
   void addHistoryResult(DictionarySearchResult result, int maximumItems) {
     if (result.entries.isEmpty || result.searchTerm.isEmpty) return;
@@ -452,8 +708,19 @@ class DictionaryRepository {
     _schedulePersistDictionaryHistory();
   }
 
+  /// 从查词历史里移除一条（按查询串）。与 [addHistoryResult] 同一条防抖落库。
+  void removeHistoryResult(String searchTerm) {
+    final int before = _dictionaryHistoryResults.length;
+    _dictionaryHistoryResults.removeWhere((r) => r.searchTerm == searchTerm);
+    if (_dictionaryHistoryResults.length != before) {
+      _schedulePersistDictionaryHistory();
+    }
+  }
+
   Future<void> clearDictionaryHistory() async {
-    // 先取消 pending flush：清空之后再触发的旧快照写回会把已清历史复活。
+    // 先取消 pending flush：清空之后再触发的旧快照写回会把已清历史复活。正在后台
+    // 序列化、还没进 SQLite 的那份快照靠清除代次拦下（见 [_flushDictionaryHistory]）。
+    _historyClearEpoch++;
     _cancelPendingHistoryPersist();
     await _db.clearDictionaryHistory();
     _dictionaryHistoryResults.clear();
@@ -462,6 +729,7 @@ class DictionaryRepository {
   /// Trailing debounce：连续查词只落库一次；[_historyPersistMaxDelay] 封顶，
   /// 防止 <300ms 间隔的连续查词把 flush 无限推迟（强杀丢整段）。
   void _schedulePersistDictionaryHistory() {
+    _historyGeneration++;
     final DateTime now = DateTime.now();
     _historyDirtySince ??= now;
     _historyPersistTimer?.cancel();
@@ -469,11 +737,18 @@ class DictionaryRepository {
         now.difference(_historyDirtySince!) >= _historyPersistMaxDelay;
     _historyPersistTimer = Timer(
       capReached ? Duration.zero : _historyPersistDebounce,
-      () => unawaited(_flushDictionaryHistory()),
+      () => unawaited(flushDictionaryHistoryNow().catchError(
+        (Object error, StackTrace stack) {
+          // Keep dirty state for the next explicit flush or lookup. The timer
+          // has no caller to receive a failure; lifecycle flushes still throw.
+          ErrorLogService.instance.log('DictRepo.historyPersist', error, stack);
+        },
+      )),
     );
   }
 
   void _cancelPendingHistoryPersist() {
+    _historyGeneration++;
     _historyPersistTimer?.cancel();
     _historyPersistTimer = null;
     _historyDirtySince = null;
@@ -482,34 +757,92 @@ class DictionaryRepository {
   /// 立即写穿 pending 的历史变更；无 pending 时 no-op。退出 flush
   /// （[ExitFlushRegistry]）与 [loadFromDb] 重载前对齐用。
   Future<void> flushDictionaryHistoryNow() async {
-    if (_historyPersistTimer == null && _historyDirtySince == null) return;
-    await _flushDictionaryHistory();
+    while (_historyWrite != null || _historyDirtySince != null) {
+      await (_historyWrite ?? _flushDictionaryHistory());
+    }
   }
 
-  Future<void> _flushDictionaryHistory() async {
-    _cancelPendingHistoryPersist();
-    final items = <DictionaryHistoryCompanion>[];
-    for (int i = 0; i < _dictionaryHistoryResults.length; i++) {
-      final DictionarySearchResult r = _dictionaryHistoryResults[i];
-      items.add(DictionaryHistoryCompanion.insert(
-        position: i,
-        resultJson: _historyJsonMemo[r] ??= r.toJson(),
-      ));
+  Future<void> _flushDictionaryHistory() {
+    // One in-flight snapshot at a time. A close must wait for it even after
+    // the debounce timer fired, and failure must leave the snapshot retryable.
+    _historyPersistTimer?.cancel();
+    _historyPersistTimer = null;
+    final int generation = _historyGeneration;
+    final int clearEpoch = _historyClearEpoch;
+    final List<DictionarySearchResult> snapshot =
+        List<DictionarySearchResult>.of(_dictionaryHistoryResults);
+    final List<String?> jsons = <String?>[
+      for (final DictionarySearchResult r in snapshot) _historyJsonMemo[r],
+    ];
+    late final Future<void> writing;
+    writing = _writeHistorySnapshot(snapshot, jsons, clearEpoch)
+        .then<void>((bool written) {
+          // A newer lookup, clear, or dispose supersedes this snapshot.
+          if (written && _historyGeneration == generation) {
+            _historyDirtySince = null;
+          }
+        })
+        .whenComplete(() {
+          if (identical(_historyWrite, writing)) _historyWrite = null;
+        });
+    _historyWrite = writing;
+    return writing;
+  }
+
+  /// 序列化 [snapshot] 里还没有 memo 的条目并整表写入。返回是否真的写了。
+  ///
+  /// 序列化放在后台 isolate（[encodeDictionaryHistoryResults]）：真实词典上单条
+  /// [DictionarySearchResult.toJson] 实测 0.26-1.5 MB、p50 28 ms / p90 44 ms（entries
+  /// 是逐条 jsonEncode 后再整体 jsonEncode 的双层格式，持久化格式不能改），以前在
+  /// UI isolate 上于查词后约 300 ms 跑一次，正好压在弹窗渲染 / 滚动上。
+  Future<bool> _writeHistorySnapshot(
+    List<DictionarySearchResult> snapshot,
+    List<String?> jsons,
+    int clearEpoch,
+  ) async {
+    final List<int> missing = <int>[
+      for (int i = 0; i < snapshot.length; i++)
+        if (jsons[i] == null) i,
+    ];
+    if (missing.isNotEmpty) {
+      // 记下序列化时的 scrollPosition：后台序列化期间它被就地改了（已失效 memo、
+      // 也已重新标脏），算出来的 JSON 照样写进这一份快照，但不能再记成 memo。
+      final List<int> scrolls = <int>[
+        for (final int i in missing) snapshot[i].scrollPosition,
+      ];
+      final List<String> encoded = await encodeDictionaryHistoryResults(<
+          DictionarySearchResult>[for (final int i in missing) snapshot[i]]);
+      for (int k = 0; k < missing.length; k++) {
+        final DictionarySearchResult r = snapshot[missing[k]];
+        jsons[missing[k]] = encoded[k];
+        if (r.scrollPosition == scrolls[k]) {
+          _historyJsonMemo[r] ??= encoded[k];
+        }
+      }
     }
-    // 序列化段与上面的取消/快照在同一同步区间内完成；此后 clear 等竞态由
-    // drift 单连接 FIFO 保序（本次写先入队，后续 clear 的 DELETE 后到后赢）。
+    // 序列化期间清过历史 / 已 dispose：这份快照作废，不写（写了就是把已清的历史复活）。
+    if (_historyClearEpoch != clearEpoch) return false;
+    final List<DictionaryHistoryCompanion> items = <DictionaryHistoryCompanion>[
+      for (int i = 0; i < snapshot.length; i++)
+        DictionaryHistoryCompanion.insert(position: i, resultJson: jsons[i]!),
+    ];
+    // 从这里起与旧实现相同：本次写先入 drift 单连接 FIFO，后续 clear 的 DELETE
+    // 后到后赢。
     await _db.replaceAllDictionaryHistory(items);
+    return true;
   }
 
   /// Release in-memory caches. Replaces the inherited ChangeNotifier.dispose
   /// that AppModel.dispose still calls (HBK-AUDIT-065).
   void dispose() {
     _cancelPendingHistoryPersist();
-    ExitFlushRegistry.instance.unregister(_historyExitFlush);
+    ExitFlushRegistry.instance.unregister(_exitFlush);
     _dictionariesCache = const [];
+    _dictionariesChanged();
     _dictionaryHistoryResults.clear();
+    _historyClearEpoch++;
+    _resultsCacheEpoch++;
     _dictionarySearchCache.clear();
-    _ffiLookupCache.clear();
     _popupSearchCache.clear();
   }
 }
@@ -523,6 +856,34 @@ class DictionaryRepository {
 const int _kObjectOverheadBytes = 64;
 
 typedef DictionaryPopupCacheEntry = ({String popupJson, int bestLength});
+
+/// 在一次性后台 isolate 里把 [results] 逐条 `toJson()`（查词历史落库用）。
+///
+/// 顶层函数：交给 `Isolate.run` 的闭包只捕获 [results]，不把仓库实例（持着数据库
+/// 连接）拖过 isolate 边界。结果经 `Isolate.exit` 回传，不再拷贝。
+Future<List<String>> encodeDictionaryHistoryResults(
+  List<DictionarySearchResult> results,
+) =>
+    Isolate.run(
+      () => <String>[
+        for (final DictionarySearchResult r in results) r.toJson(),
+      ],
+      debugName: 'fushi-dict-history-json',
+    );
+
+/// 查词热路径要的词典过滤与排序快照（[DictionaryRepository.lookupFilters]）。
+class DictionaryLookupFilters {
+  const DictionaryLookupFilters({
+    required this.hiddenDictionaryNames,
+    required this.termDictionaryOrder,
+  });
+
+  /// 被用户关掉的词典名。
+  final Set<String> hiddenDictionaryNames;
+
+  /// term 词典的管理页顺序（真名）。
+  final List<String> termDictionaryOrder;
+}
 
 int estimateDictionaryPopupCacheEntryBytes(DictionaryPopupCacheEntry entry) =>
     entry.popupJson.length * 2 + _kObjectOverheadBytes;
@@ -550,46 +911,6 @@ int estimateDictionarySearchResultBytes(DictionarySearchResult result) {
       chars += meaning.length;
     }
     overhead += _kObjectOverheadBytes;
-  }
-  return chars * 2 + overhead;
-}
-
-/// 粗估一次 FFI lookup 结果列表（[FushiLookupResult]，已 marshal 成 Dart
-/// 对象）的常驻字节数：把所有可得字符串长度按 UTF-16 累加 + 对象开销。
-int estimateFushiLookupResultsBytes(List<FushiLookupResult> results) {
-  int chars = 0;
-  int overhead = _kObjectOverheadBytes; // 外层列表本身。
-  for (final FushiLookupResult result in results) {
-    overhead += _kObjectOverheadBytes;
-    chars += result.matched.length + result.deinflected.length;
-    for (final FushiTransformGroup group in result.trace) {
-      overhead += _kObjectOverheadBytes;
-      chars += group.name.length + group.description.length;
-    }
-    final FushiTermResult term = result.term;
-    chars += term.expression.length + term.reading.length + term.rules.length;
-    for (final FushiGlossaryEntry glossary in term.glossaries) {
-      overhead += _kObjectOverheadBytes;
-      chars += glossary.dictName.length +
-          glossary.glossary.length +
-          glossary.definitionTags.length +
-          glossary.termTags.length;
-    }
-    for (final FushiFrequencyEntry freq in term.frequencies) {
-      overhead += _kObjectOverheadBytes;
-      chars += freq.dictName.length;
-      for (final FushiFrequency f in freq.frequencies) {
-        overhead += _kObjectOverheadBytes;
-        chars += f.displayValue.length;
-      }
-    }
-    for (final FushiPitchEntry pitch in term.pitches) {
-      overhead += _kObjectOverheadBytes + pitch.pitchPositions.length * 8;
-      chars += pitch.dictName.length;
-      for (final String transcription in pitch.transcriptions) {
-        chars += transcription.length;
-      }
-    }
   }
   return chars * 2 + overhead;
 }

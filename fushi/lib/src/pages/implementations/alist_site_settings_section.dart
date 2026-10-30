@@ -7,14 +7,15 @@ library;
 
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi_engine/media/discovery/discovery_models.dart';
 import 'package:fushi/src/media/discovery/alist_site_config.dart';
 import 'package:fushi/src/media/discovery/discovery_labels.dart';
-import 'package:fushi/src/media/discovery/sources/alist_discovery_source.dart';
-import 'package:fushi_engine/media/external_provider.dart';
+import 'package:fushi/src/media/discovery/discovery_server_probes.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/pages/implementations/source_toggle_section.dart';
 import 'package:fushi/utils.dart';
@@ -73,12 +74,24 @@ class _AListSiteSettingsSectionState
           SourceSectionHeading(
             title: t.discovery_alist_settings_title,
             hint: t.discovery_alist_settings_hint,
-            icon: Icons.folder_shared_outlined,
+            icon: FushiIcons.cloud,
+          ),
+          // 「显示在」只有书 / 有声书 / 游戏 / 漫画：这里配的站点是发现页的下载源，
+          // 视频不走下载，而是视频库的 AList 来源原地流播（media_sources_view
+          // 的 'alist' transport）。用户在这里找不到视频就以为不支持
+          // （3-enoE7FpS），所以把入口写在这里。
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: FushiInlineNotice(
+              key: const ValueKey<String>('alist-site-video-hint'),
+              icon: FushiIcons.video,
+              message: t.discovery_alist_video_hint,
+            ),
           ),
           for (int index = 0; index < _drafts.length; index++) _card(index),
           Align(
             alignment: Alignment.centerLeft,
-            child: OutlinedButton.icon(
+            child: FushiOutlinedButton.icon(
               key: const ValueKey<String>('alist-site-add'),
               onPressed: () => setState(
                 () => _drafts.add(
@@ -87,7 +100,7 @@ class _AListSiteSettingsSectionState
                   ),
                 ),
               ),
-              icon: const Icon(Icons.add),
+              icon: const FushiIcon(FushiIcons.add),
               label: Text(t.discovery_alist_add),
             ),
           ),
@@ -109,7 +122,7 @@ class _AListSiteSettingsSectionState
           Row(
             children: <Widget>[
               Expanded(
-                child: SwitchListTile.adaptive(
+                child: FushiSwitchListTile.adaptive(
                   key: ValueKey<String>('alist-site-$index-enabled'),
                   contentPadding: EdgeInsets.zero,
                   dense: true,
@@ -119,7 +132,7 @@ class _AListSiteSettingsSectionState
                       _update(index, draft.copyWith(enabled: value)),
                 ),
               ),
-              IconButton(
+              FushiIconButtonControl(
                 key: ValueKey<String>('alist-site-$index-remove'),
                 tooltip: t.discovery_alist_remove,
                 onPressed: () {
@@ -129,7 +142,7 @@ class _AListSiteSettingsSectionState
                   });
                   unawaited(_saveValidDrafts());
                 },
-                icon: const Icon(Icons.remove_circle_outline),
+                icon: const FushiIcon(FushiIcons.delete),
               ),
             ],
           ),
@@ -179,7 +192,7 @@ class _AListSiteSettingsSectionState
             runSpacing: 4,
             children: <Widget>[
               for (final DiscoveryMediaKind kind in DiscoveryMediaKind.values)
-                FilterChip(
+                FushiFilterChip(
                   key: ValueKey<String>('alist-site-$index-kind-${kind.name}'),
                   label: Text(discoveryMediaKindLabel(kind)),
                   selected: draft.kinds.contains(kind),
@@ -206,7 +219,7 @@ class _AListSiteSettingsSectionState
               style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
-          SwitchListTile.adaptive(
+          FushiSwitchListTile.adaptive(
             key: ValueKey<String>('alist-site-$index-allow-http'),
             contentPadding: EdgeInsets.zero,
             dense: true,
@@ -218,7 +231,7 @@ class _AListSiteSettingsSectionState
           ),
           Row(
             children: <Widget>[
-              OutlinedButton.icon(
+              FushiOutlinedButton.icon(
                 key: ValueKey<String>('alist-site-$index-test'),
                 onPressed: draft.toConfig() == null || probe?.running == true
                     ? null
@@ -227,22 +240,21 @@ class _AListSiteSettingsSectionState
                     ? const SizedBox(
                         width: 16,
                         height: 16,
-                        child: CircularProgressIndicator(strokeWidth: 2),
+                        child: FushiCircularProgressIndicator(strokeWidth: 2),
                       )
-                    : const Icon(Icons.network_check_outlined),
+                    : const FushiIcon(FushiIcons.wifi),
                 label: Text(t.discovery_alist_test),
               ),
               if (probe != null && !probe.running) ...<Widget>[
                 const SizedBox(width: 12),
+                // 探测结论走 M3E tonal 提示条（成功 / 失败语义图标）。
                 Expanded(
-                  child: Text(
-                    probe.message,
+                  child: FushiInlineNotice(
                     key: ValueKey<String>('alist-site-$index-probe-result'),
-                    style: TextStyle(
-                      color: probe.ok
-                          ? Theme.of(context).colorScheme.primary
-                          : Theme.of(context).colorScheme.error,
-                    ),
+                    severity: probe.ok
+                        ? FushiNoticeSeverity.success
+                        : FushiNoticeSeverity.error,
+                    message: probe.message,
                   ),
                 ),
               ],
@@ -280,34 +292,17 @@ class _AListSiteSettingsSectionState
     final AListSiteConfig? config = draft.toConfig();
     if (config == null) return;
     setState(() => _probes[draft.id] = const _ProbeState.running());
-    // 统一出站装配点（代理/超时），也是 outbound_http_discipline 守卫的要求。
-    final AListDiscoverySource source = AListDiscoverySource.fromConfig(
-      config,
-      client: createAppHttpIoClient(),
-    );
+    // 请求与结论文案在 [probeAListSite]（控制通道共用同一份）。
     _ProbeState result;
     try {
-      final ProviderBatchResult<DiscoveryResultPage> page = await source.browse(
-        DiscoveryRequest(kind: config.kinds.first),
-      );
-      final int count =
-          page.items.isEmpty ? 0 : page.items.single.entries.length;
-      result = _ProbeState.done(
-        ok: true,
-        message: t.discovery_alist_test_ok(count: count),
-      );
-    } on ExternalProviderFailure catch (failure) {
-      result = _ProbeState.done(
-        ok: false,
-        message: t.discovery_alist_test_failed(reason: failure.message),
-      );
-    } catch (_) {
+      final DiscoveryProbeOutcome outcome = await probeAListSite(config);
+      result = _ProbeState.done(ok: outcome.ok, message: outcome.message);
+    } catch (error, stack) {
+      ErrorLogService.instance.log('AListSiteSettings.probe', error, stack);
       result = _ProbeState.done(
         ok: false,
         message: t.discovery_alist_test_failed(reason: ''),
       );
-    } finally {
-      source.close();
     }
     if (!mounted) return;
     setState(() => _probes[draft.id] = result);

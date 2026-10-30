@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_core/fushi_core.dart';
@@ -20,6 +20,7 @@ import 'package:fushi/src/pages/implementations/stat_shared.dart'
 import 'package:fushi/utils.dart';
 
 import '../helpers/test_platform_services.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 
 /// galgame 详情页守卫（契约 §4.2）：三个 tab 渲染 + 统计 KPI 由会话事实表现算。
 void main() {
@@ -29,13 +30,13 @@ void main() {
   });
 
   Future<AppModel> buildModel({bool withSessions = true}) async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final PreferencesRepository prefsRepo = PreferencesRepository(db);
     await prefsRepo.loadFromDb();
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_game_detail_');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'fushi_game_detail_',
+    );
     addTearDown(() {
       try {
         tmpDir.deleteSync(recursive: true);
@@ -43,7 +44,9 @@ void main() {
     });
     final AppModel appModel = AppModel(testPlatformServices())
       ..wireLocalAudioForTesting(
-          prefsRepo: prefsRepo, databaseDirectory: tmpDir)
+        prefsRepo: prefsRepo,
+        databaseDirectory: tmpDir,
+      )
       ..wireDatabaseForTesting(db);
 
     await appModel.setGalgames(<GalgameEntry>[
@@ -100,9 +103,9 @@ void main() {
 
   /// 编辑 tab 的字段定位：按 key 而不是按标签文案（文案随 17 语言翻译漂移）。
   Finder editField(String fieldKey) => find.descendant(
-        of: find.byKey(ValueKey<String>('galgame-edit-$fieldKey')),
-        matching: find.byType(TextField),
-      );
+    of: find.byKey(ValueKey<String>('galgame-edit-$fieldKey')),
+    matching: find.byType(TextField),
+  );
 
   Future<void> pumpPage(
     WidgetTester tester,
@@ -143,12 +146,13 @@ void main() {
     // 折线图与会话流水都在（流水在折叠线以下，先滚上来）。
     expect(
       find.byWidgetPredicate(
-          (Widget w) => w is CustomPaint && w.painter is StatLineChartPainter),
+        (Widget w) => w is CustomPaint && w.painter is StatLineChartPainter,
+      ),
       findsOneWidget,
     );
     await tester.drag(find.byType(ListView), const Offset(0, -400));
     await tester.pumpAndSettle();
-    expect(find.byIcon(Icons.delete_outline), findsNWidgets(2));
+    expect(find.byIcon(FushiIcons.delete), findsNWidgets(2));
   });
 
   testWidgets('无会话时给空态而不是崩', (WidgetTester tester) async {
@@ -161,9 +165,51 @@ void main() {
 
   testWidgets('简介 tab 展示 summary / 别名 / 发行日', (WidgetTester tester) async {
     await pumpPage(tester, await buildModel(), initialTab: 1);
-    expect(find.text('这是简介。'), findsOneWidget);
+    // 紧凑 hero 也垫一份折叠简介（galgame-hero-summary），这里只认简介 tab 那份。
+    expect(
+      find.descendant(
+        of: find.byKey(const ValueKey<String>('galgame-summary-text')),
+        matching: find.text('这是简介。'),
+      ),
+      findsOneWidget,
+    );
     expect(find.text(t.game_summary_aliases), findsOneWidget);
     expect(find.text('アルファ'), findsOneWidget);
+    // 简介与资料值可选择复制（反馈 2DmrXg-wtD）。
+    expect(
+      find.byWidgetPredicate(
+        (Widget w) =>
+            w is SelectableText &&
+            w.data == '这是简介。' &&
+            w.key == const ValueKey<String>('galgame-summary-text'),
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.byWidgetPredicate(
+        (Widget w) => w is SelectableText && w.data == 'アルファ',
+      ),
+      findsOneWidget,
+    );
+    // Hero 标题 / 开发商与资料网格文本值同样可选择复制（反馈 2DmrXg-wtD 补漏）。
+    final SelectableText heroTitle = tester.widget<SelectableText>(
+      find.byKey(const ValueKey<String>('galgame-hero-title')),
+    );
+    expect(heroTitle.data, isNotEmpty);
+    expect(
+      tester
+          .widget<SelectableText>(
+            find.byKey(const ValueKey<String>('galgame-hero-developer')),
+          )
+          .data,
+      'Studio A',
+    );
+    expect(
+      find.byWidgetPredicate(
+        (Widget w) => w is SelectableText && w.data == '2026-01-01',
+      ),
+      findsOneWidget,
+    );
     // 发行日标签现在同时出现在常驻头部的元信息网格与简介 tab（富头部改造后），
     // 故断言放宽为 findsWidgets（原为 findsOneWidget）。
     expect(find.text(t.game_summary_release_date), findsWidgets);
@@ -189,6 +235,8 @@ void main() {
       find.byType(ListView),
       const Offset(0, 120),
     );
+    // ensureVisible 的跳转要下一帧才落到布局上，先 settle 再点。
+    await tester.pumpAndSettle();
     await tester.tap(find.text(t.game_edit_save));
     await tester.pumpAndSettle();
 
@@ -221,16 +269,18 @@ void main() {
       find.byType(ListView),
       const Offset(0, 120),
     );
+    // ensureVisible 的跳转要下一帧才落到布局上，先 settle 再点。
+    await tester.pumpAndSettle();
     await tester.tap(find.text(t.game_edit_save));
     await tester.pumpAndSettle();
 
     final GalgameEntry saved = appModel.galgameRepo.byId('g1')!;
     expect(saved.launchArgs, r'-windowed --save="Z:\My Saves"');
     // 原样存的一行，拆出来才是 argv（injector 侧一个 token 一个 --arg）。
-    expect(
-      saved.launchArgumentTokens,
-      <String>['-windowed', r'--save=Z:\My Saves'],
-    );
+    expect(saved.launchArgumentTokens, <String>[
+      '-windowed',
+      r'--save=Z:\My Saves',
+    ]);
     // 逐字段重建的其余字段一个都不能丢。
     expect(saved.exePath, r'Z:\a\alpha.exe');
     expect(saved.workdir, r'Z:\a');
@@ -251,6 +301,8 @@ void main() {
       find.byType(ListView),
       const Offset(0, 120),
     );
+    // ensureVisible 的跳转要下一帧才落到布局上，先 settle 再点。
+    await tester.pumpAndSettle();
     await tester.tap(find.text(t.game_edit_save));
     await tester.pumpAndSettle();
 
@@ -276,6 +328,8 @@ void main() {
       find.byType(ListView),
       const Offset(0, 120),
     );
+    // ensureVisible 的跳转要下一帧才落到布局上，先 settle 再点。
+    await tester.pumpAndSettle();
     await tester.tap(find.text(t.game_edit_save));
     await tester.pumpAndSettle();
 
@@ -301,6 +355,8 @@ void main() {
       find.byType(ListView),
       const Offset(0, 120),
     );
+    // ensureVisible 的跳转要下一帧才落到布局上，先 settle 再点。
+    await tester.pumpAndSettle();
     await tester.tap(find.text(t.game_edit_save));
     await tester.pumpAndSettle();
 

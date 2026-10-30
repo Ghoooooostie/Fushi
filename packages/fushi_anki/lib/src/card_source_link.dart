@@ -5,7 +5,13 @@ import 'dart:math';
 /// manga UIDs are machine-local (`book_<time>` minted at import), so those
 /// links also carry the cross-device `bookKey` that sync/backup/interconnect
 /// align on; a card mined on one device still finds the synced copy.
-enum CardSourceKind { book, manga, video }
+///
+/// [game] (`galgames.id`, no position: hook lines live in the game's text-hook
+/// history) and [music] (`music_tracks.track_uid` + the lyric line's time
+/// range) were added for 「回到出处」(2026-10-24). Builds before that reject the
+/// unknown `kind`, so on those devices such a link renders as plain title text
+/// and is not clickable — the card itself is unaffected.
+enum CardSourceKind { book, manga, video, game, music }
 
 /// Versioned, portable source locator embedded in a mined Anki note.
 /// Character offsets use the reader's chapter anchor convention; all indices
@@ -28,6 +34,43 @@ class CardSourceLink {
     String? bookKey,
   }) : bookKey = _portableBookKey(bookKey) {
     _validate();
+  }
+
+  /// A galgame card's origin (`galgames.id`). Returns null when [gameId] is not
+  /// a portable library identity (empty / path-shaped legacy ids), so mining
+  /// never fails because the origin cannot be linked.
+  static CardSourceLink? tryGame({required String gameId, String? sourceId}) {
+    try {
+      return CardSourceLink(
+        kind: CardSourceKind.game,
+        uid: gameId,
+        sourceId: sourceId ?? newSourceId(),
+      );
+    } on FormatException {
+      return null;
+    }
+  }
+
+  /// A music-lyric card's origin: the track identity (`music_tracks.track_uid`)
+  /// and the lyric line's `[startMs, endMs]` on the track timeline. Null when the
+  /// identity / range is not representable (same contract as [tryGame]).
+  static CardSourceLink? tryMusic({
+    required String trackUid,
+    required int startMs,
+    required int endMs,
+    String? sourceId,
+  }) {
+    try {
+      return CardSourceLink(
+        kind: CardSourceKind.music,
+        uid: trackUid,
+        sourceId: sourceId ?? newSourceId(),
+        startMs: startMs,
+        endMs: endMs,
+      );
+    } on FormatException {
+      return null;
+    }
   }
 
   /// [bookKey] is only a fallback identity next to [uid]. A key that cannot be
@@ -59,8 +102,18 @@ class CardSourceLink {
   final String? chapterId;
 
   /// SHA-256 of the complete source file; mandatory for video identities,
-  /// whose existing library UID can otherwise collide across devices.
+  /// whose existing library UID can otherwise collide across devices — except
+  /// [isContentAddressedVideoUid] ones, which name the online content itself.
   final String? fingerprint;
+
+  /// BUG-3490: library identities minted from the online content they play
+  /// rather than from a local file name — URL / YouTube stream rows
+  /// (`video/stream/<yt:id | url digest>`) and online-video-source episodes
+  /// (`anime-source:<package>:<source>:<episode url>`). There are no local
+  /// bytes to fingerprint, and the UID itself cannot collide with a different
+  /// work, so a video link with such a UID may omit [fingerprint].
+  static bool isContentAddressedVideoUid(String uid) =>
+      uid.startsWith('video/stream/') || uid.startsWith('anime-source:');
 
   /// Cross-device library identity of a book/manga (the title-derived key
   /// shared by sync, backup and interconnect). Resolvers try [uid] first and
@@ -94,8 +147,9 @@ class CardSourceLink {
     final List<int> bytes = List<int>.generate(16, (_) => random.nextInt(256));
     bytes[6] = (bytes[6] & 15) | 64;
     bytes[8] = (bytes[8] & 63) | 128;
-    final String hex =
-        bytes.map((int b) => b.toRadixString(16).padLeft(2, '0')).join();
+    final String hex = bytes
+        .map((int b) => b.toRadixString(16).padLeft(2, '0'))
+        .join();
     return '${hex.substring(0, 8)}-${hex.substring(8, 12)}-${hex.substring(12, 16)}-${hex.substring(16, 20)}-${hex.substring(20)}';
   }
 
@@ -119,21 +173,21 @@ class CardSourceLink {
       'sourceId=${validateSourceId(sourceId)}';
 
   CardSourceLink withSourceId(String value) => CardSourceLink(
-        kind: kind,
-        uid: uid,
-        sourceId: value,
-        chapterIndex: chapterIndex,
-        charOffset: charOffset,
-        charLength: charLength,
-        pageIndex: pageIndex,
-        episodeIndex: episodeIndex,
-        startMs: startMs,
-        endMs: endMs,
-        audioFileIndex: audioFileIndex,
-        chapterId: chapterId,
-        fingerprint: fingerprint,
-        bookKey: bookKey,
-      );
+    kind: kind,
+    uid: uid,
+    sourceId: value,
+    chapterIndex: chapterIndex,
+    charOffset: charOffset,
+    charLength: charLength,
+    pageIndex: pageIndex,
+    episodeIndex: episodeIndex,
+    startMs: startMs,
+    endMs: endMs,
+    audioFileIndex: audioFileIndex,
+    chapterId: chapterId,
+    fingerprint: fingerprint,
+    bookKey: bookKey,
+  );
 
   /// Reads only quoted source hrefs generated for note fields. The locator
   /// parser still validates every parameter after HTML attribute unescaping.
@@ -158,20 +212,35 @@ class CardSourceLink {
     }
     // Existing video identities contain a relative namespace and the original
     // sanitized title (for example video/夏目友人帳 第1話 (2)). Treat them as
-    // opaque database keys; never turn them into filenames or URI destinations.
+    // opaque database keys; never turn them into filenames or URI destinations
+    // (the only consumer is a `bookUid` equality lookup).
+    //
+    // BUG-3331: a `scheme:` prefix is NOT rejected. Online-video-source episodes
+    // keep their row identity when downloaded, and that identity is
+    // `anime-source:<package>:<source>:<episode url>` — rejecting URI-shaped
+    // UIDs made every card mined from a downloaded extension episode abort with
+    // "Invalid library UID". Rejecting a shape the library itself mints is a
+    // wrong model of the identity space, not a safety boundary: the UID is
+    // never resolved as a URI. What IS rejected is any UID naming a location on
+    // this machine's filesystem (absolute path, drive letter, `file:` URI): card
+    // links travel with shared decks, so those would leak private local paths.
     if (uid.trim().isEmpty ||
         uid.length > 1024 ||
         uid.startsWith('/') ||
+        RegExp(r'^[A-Za-z]:').hasMatch(uid) ||
+        uid.toLowerCase().startsWith('file:') ||
         RegExp(r'[\x00-\x1f\x7f\\]').hasMatch(uid) ||
-        RegExp(r'^[A-Za-z][A-Za-z0-9+.-]*:').hasMatch(uid) ||
         uid
             .split('/')
             .any((String segment) => segment == '.' || segment == '..')) {
       throw const FormatException('Invalid library UID');
     }
     // Content problems were already dropped by [_portableBookKey]; a book key on
-    // a video identity is a malformed link (video identity is the fingerprint).
-    if (bookKey != null && kind == CardSourceKind.video) {
+    // a video / game / music identity is a malformed link (only books and manga
+    // have the title-derived cross-device key).
+    if (bookKey != null &&
+        kind != CardSourceKind.book &&
+        kind != CardSourceKind.manga) {
       throw const FormatException('Invalid library book key');
     }
     for (final int? value in <int?>[
@@ -221,7 +290,7 @@ class CardSourceLink {
           throw const FormatException('Manga requires a page anchor');
         }
       case CardSourceKind.video:
-        if (fingerprint == null ||
+        if ((fingerprint == null && !isContentAddressedVideoUid(uid)) ||
             episodeIndex == null ||
             startMs == null ||
             chapterIndex != null ||
@@ -234,30 +303,55 @@ class CardSourceLink {
             'Video requires a file fingerprint, episode and time range',
           );
         }
+      case CardSourceKind.game:
+        if (chapterIndex != null ||
+            charOffset != null ||
+            charLength != null ||
+            pageIndex != null ||
+            episodeIndex != null ||
+            startMs != null ||
+            audioFileIndex != null ||
+            chapterId != null ||
+            fingerprint != null) {
+          throw const FormatException(
+            'Game links carry only the game identity',
+          );
+        }
+      case CardSourceKind.music:
+        if (startMs == null ||
+            chapterIndex != null ||
+            charOffset != null ||
+            charLength != null ||
+            pageIndex != null ||
+            episodeIndex != null ||
+            audioFileIndex != null ||
+            chapterId != null) {
+          throw const FormatException('Music requires a track time range');
+        }
     }
   }
 
   Uri toUri() => Uri(
-        scheme: 'fushi',
-        host: 'source',
-        queryParameters: <String, String>{
-          'v': '1',
-          'kind': kind.name,
-          'uid': uid,
-          'sourceId': sourceId,
-          if (chapterIndex != null) 'chapterIndex': '$chapterIndex',
-          if (charOffset != null) 'charOffset': '$charOffset',
-          if (charLength != null) 'charLength': '$charLength',
-          if (pageIndex != null) 'pageIndex': '$pageIndex',
-          if (episodeIndex != null) 'episodeIndex': '$episodeIndex',
-          if (startMs != null) 'startMs': '$startMs',
-          if (endMs != null) 'endMs': '$endMs',
-          if (audioFileIndex != null) 'audioFileIndex': '$audioFileIndex',
-          if (chapterId != null) 'chapterId': chapterId!,
-          if (fingerprint != null) 'fingerprint': fingerprint!,
-          if (bookKey != null) 'bookKey': bookKey!,
-        },
-      );
+    scheme: 'fushi',
+    host: 'source',
+    queryParameters: <String, String>{
+      'v': '1',
+      'kind': kind.name,
+      'uid': uid,
+      'sourceId': sourceId,
+      if (chapterIndex != null) 'chapterIndex': '$chapterIndex',
+      if (charOffset != null) 'charOffset': '$charOffset',
+      if (charLength != null) 'charLength': '$charLength',
+      if (pageIndex != null) 'pageIndex': '$pageIndex',
+      if (episodeIndex != null) 'episodeIndex': '$episodeIndex',
+      if (startMs != null) 'startMs': '$startMs',
+      if (endMs != null) 'endMs': '$endMs',
+      if (audioFileIndex != null) 'audioFileIndex': '$audioFileIndex',
+      if (chapterId != null) 'chapterId': chapterId!,
+      if (fingerprint != null) 'fingerprint': fingerprint!,
+      if (bookKey != null) 'bookKey': bookKey!,
+    },
+  );
 
   String toHtml({String label = '↗ Fushi'}) =>
       '<a href="${const HtmlEscape(HtmlEscapeMode.attribute).convert(toUri().toString())}">${const HtmlEscape(HtmlEscapeMode.element).convert(label)}</a>';
@@ -298,6 +392,8 @@ class CardSourceLink {
       'book' => CardSourceKind.book,
       'manga' => CardSourceKind.manga,
       'video' => CardSourceKind.video,
+      'game' => CardSourceKind.game,
+      'music' => CardSourceKind.music,
       _ => throw const FormatException('Unknown source kind'),
     };
     int? number(String key) {

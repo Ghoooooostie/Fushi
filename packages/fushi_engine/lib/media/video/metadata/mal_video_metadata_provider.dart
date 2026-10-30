@@ -10,6 +10,10 @@ import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_provider.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_transport.dart';
 
+/// [MalVideoMetadataProvider.maxCharacterDetailFetches] 的默认值：每部作品最多给
+/// 8 个主要角色取 Jikan 角色详情（日文原名）。
+const int kMalMaxCharacterDetailFetches = 8;
+
 /// Endpoints whose optional credits could not be loaded for this work.
 const String malIncompleteCreditEndpointsKey =
     'mal_incomplete_credit_endpoints';
@@ -41,6 +45,17 @@ class MalRelation {
   final int malId;
 }
 
+/// MAL 上一部动画的原作条目（漫画 / 轻小说，Jikan `type == manga`）。
+class MalSourceMaterial {
+  const MalSourceMaterial({required this.malId, required this.name});
+
+  /// MAL manga id。
+  final int malId;
+
+  /// Jikan 给的条目名（MAL 默认标题，多为罗马字 / 原文）。
+  final String name;
+}
+
 /// [MalVideoMetadataProvider.fetchRelatedWorks] 的结果。
 class MalRelatedWorks {
   const MalRelatedWorks({
@@ -66,6 +81,7 @@ class MalVideoMetadataProvider
     VideoMetadataHttpClient? transport,
     this.endpoint = 'https://api.jikan.moe/v4',
     this.language = kFallbackVideoMetadataLocale,
+    this.maxCharacterDetailFetches = kMalMaxCharacterDetailFetches,
     MalVideoMetadataRequestGate? requestGate,
   })  : assert(client == null || transport == null),
         _transport = transport ??
@@ -92,6 +108,11 @@ class MalVideoMetadataProvider
   /// 此前无论资料语言是什么都把 `title_japanese` 写进 `title`——海报、简介按
   /// 资料语言走而标题恒日文，就是「刮削不同语言」的来源。
   final String language;
+
+  /// 每部作品最多给几个**主要角色**（Jikan `role == "Main"`、有日语声优）取
+  /// `/characters/{id}` 详情拿日文原名 `name_kanji`。0 = 不取。见
+  /// [kMalMaxCharacterDetailFetches]。
+  final int maxCharacterDetailFetches;
 
   /// [language] 的主子标签（`zh-CN` → `zh`）。
   String get _titleLanguage => VideoMetadataLanguages(language).primarySubtag;
@@ -138,8 +159,10 @@ class MalVideoMetadataProvider
         await _optionalCredits(id, 'characters', incomplete);
     final Map<String, Object?> staff =
         await _optionalCredits(id, 'staff', incomplete);
+    final Map<String, String> kanjiNames =
+        await _mainCharacterKanjiNames(characters);
     return work.copyWith(
-      credits: _credits(characters, staff),
+      credits: _credits(characters, staff, kanjiNames),
       rawPayload: <String, Object?>{
         ...item,
         if (incomplete.isNotEmpty) malIncompleteCreditEndpointsKey: incomplete,
@@ -213,6 +236,37 @@ class MalVideoMetadataProvider
     );
   }
 
+  /// 一部作品在 MAL 上的**原作**：`anime/{id}/full` 里 `relations[].relation ==
+  /// "Adaptation"` 且 `entry.type == "manga"` 的条目（Jikan 把漫画与轻小说都归
+  /// `manga`）。与 [fetchRelatedWorks] 同一请求、同一缓存；只回 MAL id 与名字——
+  /// Jikan 的关联条目不带 ISBN，本地书只能按标题对（作品图谱推断，中等判据）。
+  /// 404 → 空。
+  Future<List<MalSourceMaterial>> fetchSourceMaterial(String malId) async {
+    final int? id = int.tryParse(malId.trim());
+    if (id == null || id <= 0) return const <MalSourceMaterial>[];
+    final Map<String, Object?> payload;
+    try {
+      payload = await _get('anime/$id/full');
+    } on VideoMetadataNetworkException catch (error) {
+      if (error.statusCode == 404) return const <MalSourceMaterial>[];
+      rethrow;
+    }
+    final Map<String, Object?>? item = metadataObject(payload['data']);
+    return <MalSourceMaterial>[
+      for (final Object? node in metadataList(item?['relations']))
+        if (metadataObject(node) case final Map<String, Object?> relation)
+          if (metadataString(relation['relation'])?.toLowerCase() ==
+              'adaptation')
+            for (final Object? entryNode in metadataList(relation['entry']))
+              if (metadataObject(entryNode)
+                  case final Map<String, Object?> entry)
+                if (metadataString(entry['type'])?.toLowerCase() == 'manga')
+                  if (metadataInt(entry['mal_id']) case final int sourceId)
+                    if (metadataString(entry['name']) case final String name)
+                      MalSourceMaterial(malId: sourceId, name: name),
+    ];
+  }
+
   Future<Map<String, Object?>> _optionalCredits(
     String id,
     String endpoint,
@@ -224,6 +278,54 @@ class MalVideoMetadataProvider
       incomplete.add(endpoint);
       return const <String, Object?>{};
     }
+  }
+
+  /// 主要角色的日文原名（角色 MAL id → `name_kanji`）。
+  ///
+  /// Jikan v4 `/anime/{id}/characters` 的角色对象只有 `mal_id / url / images /
+  /// name`（罗马音），`name_kanji` 只在 `/characters/{id}` 详情里（Jikan OpenAPI
+  /// `anime_characters` 与 `character` 两个 schema）。逐个角色取详情要一条请求
+  /// 一个角色，而本闸门是全局 1.1 s 一条（Jikan 60 req/min），所以只取**主要角色**
+  /// 且有上限 [maxCharacterDetailFetches]：一部作品最多多花约 9 秒。配角的日文写法
+  /// 由专名表生成阶段的百科资料补。
+  ///
+  /// 这是锦上添花的字段：任何一条失败都不影响作品与演职员表（不记进
+  /// [malIncompleteCreditEndpointsKey]）。单个角色 4xx（下架 / 不存在）跳过继续；
+  /// 限流用尽或连不上就停下，不把整次刮削拖进冷却。
+  Future<Map<String, String>> _mainCharacterKanjiNames(
+    Map<String, Object?> characters,
+  ) async {
+    final List<String> ids = <String>[];
+    for (final Object? node in metadataList(characters['data'])) {
+      if (ids.length >= maxCharacterDetailFetches) break;
+      final Map<String, Object?>? item = metadataObject(node);
+      if (metadataString(item?['role'])?.toLowerCase() != 'main') continue;
+      final bool hasJapaneseVoice = metadataList(item?['voice_actors']).any(
+          (Object? actor) =>
+              metadataString(metadataObject(actor)?['language']) ==
+              'Japanese');
+      if (!hasJapaneseVoice) continue;
+      final int? characterId =
+          metadataInt(metadataObject(item?['character'])?['mal_id']);
+      if (characterId == null || ids.contains('$characterId')) continue;
+      ids.add('$characterId');
+    }
+    final Map<String, String> names = <String, String>{};
+    for (final String characterId in ids) {
+      try {
+        final Map<String, Object?> payload =
+            await _get('characters/$characterId');
+        final String? kanji =
+            metadataString(metadataObject(payload['data'])?['name_kanji']);
+        if (kanji != null) names[characterId] = kanji;
+      } on VideoMetadataNetworkException catch (error) {
+        final int? status = error.statusCode;
+        final bool perCharacterMiss =
+            status != null && status >= 400 && status < 500 && status != 429;
+        if (!perCharacterMiss) break;
+      }
+    }
+    return names;
   }
 
   @override
@@ -382,8 +484,8 @@ class MalVideoMetadataProvider
         ]);
   }
 
-  List<VideoMetadataCredit> _credits(
-      Map<String, Object?> characters, Map<String, Object?> staff) {
+  List<VideoMetadataCredit> _credits(Map<String, Object?> characters,
+      Map<String, Object?> staff, Map<String, String> kanjiNames) {
     final List<VideoMetadataCredit> credits = <VideoMetadataCredit>[];
     for (final Object? node in metadataList(characters['data'])) {
       final Map<String, Object?>? item = metadataObject(node);
@@ -404,6 +506,7 @@ class MalVideoMetadataProvider
             character: VideoMetadataCharacter(
                 id: characterId,
                 name: name,
+                originalName: kanjiNames[characterId],
                 imageUrl: _image(character),
                 ids: <VideoMetadataId>[
                   if (characterId != null)
@@ -520,7 +623,8 @@ class MalVideoMetadataRequestGate {
       this.cacheTtl = const Duration(hours: 1),
       this.maxRateLimitRetries = 2,
       this.maxTransientRetries = 2,
-      this.transientBackoff = const Duration(seconds: 2)})
+      this.transientBackoff = const Duration(seconds: 2),
+      this.unreachableCooldown = const Duration(minutes: 2)})
       : _now = now ?? DateTime.now,
         _sleep = sleep ?? Future<void>.delayed;
   final VideoMetadataNow _now;
@@ -540,6 +644,14 @@ class MalVideoMetadataRequestGate {
   /// 立刻继续。
   final int maxTransientRetries;
   final Duration transientBackoff;
+
+  /// 一条请求把重试用尽仍是「连不上」（超时 / 连接层失败，没有状态码）时，判上游
+  /// 整个不可达，这段时间内的新请求立刻失败、不再排队空等：此前 Jikan 停摆时每条
+  /// 请求都要吃满 3 次超时（约 2.5 分钟），整套下载逐部核对几十部作品就是一两个
+  /// 小时，全局队列里别的请求也一起被堵住（BUG-2962）。到期或任一请求成功即恢复。
+  /// 与 429 冷却同构：都是闸门对上游状态的共享认识。
+  final Duration unreachableCooldown;
+  DateTime? _unreachableUntil;
   DateTime? _nextStart;
   Future<void> _queue = Future<void>.value();
   final Map<String, ({DateTime expires, String body})> _cache =
@@ -568,12 +680,22 @@ class MalVideoMetadataRequestGate {
       int rateLimitRetries = 0;
       int transientRetries = 0;
       for (;;) {
+        final DateTime? unreachableUntil = _unreachableUntil;
+        if (unreachableUntil != null && unreachableUntil.isAfter(_now())) {
+          result.completeError(
+            VideoMetadataNetworkException(
+              'MAL unreachable; skipped until ${unreachableUntil.toIso8601String()}',
+            ),
+          );
+          return;
+        }
         try {
           final Duration wait = _nextStart?.difference(_now()) ?? Duration.zero;
           if (wait > Duration.zero) await _sleep(wait);
           _nextStart = _now().add(interval);
           final VideoMetadataHttpResponse response = await request();
           response.decodeJsonObject(operation: 'MAL');
+          _unreachableUntil = null;
           _cache.removeWhere(
               (String _, ({DateTime expires, String body}) entry) =>
                   !entry.expires.isAfter(_now()));
@@ -598,6 +720,9 @@ class MalVideoMetadataRequestGate {
             await _sleep(transientBackoff * transientRetries);
             continue;
           }
+          if (_isUnreachable(error)) {
+            _unreachableUntil = _now().add(unreachableCooldown);
+          }
           result.completeError(error, stack);
           return;
         }
@@ -611,4 +736,8 @@ class MalVideoMetadataRequestGate {
   static bool _isTransientFailure(Object error) =>
       error is VideoMetadataNetworkException &&
       (error.statusCode == null || error.statusCode! >= 500);
+
+  /// 连不上（没有任何 HTTP 应答）：5xx 至少说明 Jikan 还活着、会很快作答，不算。
+  static bool _isUnreachable(Object error) =>
+      error is VideoMetadataNetworkException && error.statusCode == null;
 }

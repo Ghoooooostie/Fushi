@@ -1,12 +1,16 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'package:fushi/src/media/video/audio_energy_probe.dart';
 import 'package:fushi/src/media/video/subtitle_delay_input_debounce.dart';
 import 'package:fushi/src/media/video/subtitle_waveform_painter.dart';
+import 'package:fushi/src/media/video/video_m3e_panel_theme.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/utils.dart';
 import 'package:fushi_audio/fushi_audio.dart';
+import 'package:fushi_compute/fushi_compute.dart';
 
 /// 字幕对轴的「音频波形」入口面板（TODO-1051 阶段B；TODO-1207 改为按钮触发的放大可交互视图）。
 ///
@@ -44,6 +48,7 @@ class SubtitleWaveformAlignPanel extends StatefulWidget {
     required this.cues,
     required this.durationMs,
     required this.loadWaveform,
+    this.probeLimitMs = kSubtitleAutoAlignProbeLimitMs,
     this.onCommitDelay,
     this.onAutoAlign,
     this.onSnapDelayToCue,
@@ -66,6 +71,10 @@ class SubtitleWaveformAlignPanel extends StatefulWidget {
 
   /// 视频总时长（毫秒）。<=0 时波形时间窗退化到探测上界（降级）。
   final int durationMs;
+
+  /// 本次探测的时间上界（毫秒）：流音源只拉前几分钟，波形时间窗必须与实际抽到的
+  /// 音频同长（页面的 `_subtitleAlignProbeLimitMs`）。
+  final int probeLimitMs;
 
   /// 抽音频能量包络（原始逐帧 dB 序列）。由页面提供（经 extractAudioEnergyEnvelope）；
   /// 返回空列表 = 拿不到波形（降级态，入口内联提示不可用、不隐藏）。TODO-1315 起
@@ -135,7 +144,7 @@ class _SubtitleWaveformAlignPanelState
   /// 波形时间窗上界（毫秒）：与 extractAudioEnergyEnvelope 的探测上界同源
   /// （前 N 分钟截断），取 min(durationMs, probeLimit)；durationMs 未知时用探测上界。
   int get _windowEndMs {
-    const int limit = kSubtitleAutoAlignProbeLimitMs;
+    final int limit = widget.probeLimitMs;
     if (widget.durationMs <= 0) return limit;
     return widget.durationMs < limit ? widget.durationMs : limit;
   }
@@ -163,7 +172,7 @@ class _SubtitleWaveformAlignPanelState
       setState(() => _probeUnavailable = true);
       return;
     }
-    await showDialog<void>(
+    await showAppDialog<void>(
       context: context,
       useRootNavigator: true,
       builder: (BuildContext _) => SubtitleWaveformZoomView(
@@ -203,10 +212,12 @@ class _SubtitleWaveformAlignPanelState
     final String hint = _probeUnavailable
         ? t.video_subtitle_waveform_unavailable
         : t.video_subtitle_waveform_open_hint;
+    // M3E：入口是一块 tonal 分区卡（面板中性主题下的 surfaceContainer），前置
+    // 波形图标放进 secondaryContainer 圆形色块，与设置侧板里的分组卡同一层级。
     return Material(
       key: const ValueKey<String>('subtitle-waveform-open-button'),
-      color: tokens.surfaces.overlay.withValues(alpha: 0.5),
-      borderRadius: tokens.radii.cardRadius,
+      color: cs.surfaceContainer,
+      borderRadius: FushiM3eShape.cardRadius,
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: _probing ? null : _openZoomView,
@@ -214,7 +225,20 @@ class _SubtitleWaveformAlignPanelState
           padding: EdgeInsets.all(gap),
           child: Row(
             children: <Widget>[
-              Icon(Icons.graphic_eq, color: cs.primary, size: 22),
+              Container(
+                width: 40,
+                height: 40,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: cs.secondaryContainer,
+                  shape: BoxShape.circle,
+                ),
+                child: FushiIcon(
+                  FushiIcons.audio,
+                  color: cs.onSecondaryContainer,
+                  size: 22,
+                ),
+              ),
               SizedBox(width: gap),
               Expanded(
                 child: Column(
@@ -223,15 +247,14 @@ class _SubtitleWaveformAlignPanelState
                   children: <Widget>[
                     Text(
                       t.video_subtitle_waveform_open,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: context.fushiType.titleSmallEmphasized,
                     ),
                     Text(
                       hint,
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color:
-                            _probeUnavailable ? cs.error : cs.onSurfaceVariant,
+                      style: context.fushiType.bodySmall.copyWith(
+                        color: _probeUnavailable
+                            ? cs.error
+                            : cs.onSurfaceVariant,
                       ),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -244,12 +267,16 @@ class _SubtitleWaveformAlignPanelState
                   ? SizedBox(
                       width: 22,
                       height: 22,
-                      child: CircularProgressIndicator(
+                      child: FushiCircularProgressIndicator(
                         strokeWidth: 2,
                         color: cs.primary,
                       ),
                     )
-                  : Icon(Icons.zoom_in, color: cs.onSurfaceVariant, size: 22),
+                  : FushiIcon(
+                      FushiIcons.zoomIn,
+                      color: cs.onSurfaceVariant,
+                      size: 22,
+                    ),
             ],
           ),
         ),
@@ -371,8 +398,9 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
   double _zoom = 1.0;
 
   /// 数值输入框控制器（与滑条 / 步进共享同一权威 [_delayMs]，经 [_commit] 同步）。
-  late final TextEditingController _delayController =
-      TextEditingController(text: '${widget.initialDelayMs}');
+  late final TextEditingController _delayController = TextEditingController(
+    text: '${widget.initialDelayMs}',
+  );
 
   /// 数值输入框「边键入边生效」去抖（BUG-918）：原字段只在 [onSubmitted]（Enter）提交、
   /// 无 [onChanged]，用户报「不按回车不更新、backspace 没反应」。改为键入即去抖 350ms 后
@@ -380,11 +408,11 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
   /// （原两处逐行拷贝已抽出）。
   late final SubtitleDelayInputDebounce _delayInput =
       SubtitleDelayInputDebounce(
-    controller: _delayController,
-    isMounted: () => mounted,
-    currentDelayMs: () => _delayMs,
-    commit: _commit,
-  );
+        controller: _delayController,
+        isMounted: () => mounted,
+        currentDelayMs: () => _delayMs,
+        commit: _commit,
+      );
 
   final ScrollController _scrollController = ScrollController();
 
@@ -425,9 +453,13 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
   static const double _cullMarginPx = 400.0;
 
   /// 降采样波形桶缓存：桶数只随缩放/视口宽变化，不随滚动/延迟变化。按目标桶数 memo，
-  /// 避免每次滚动 setState 都对整条包络重算降采样（[downsampleEnergyEnvelope] 是 O(n)）。
+  /// 避免每次滚动 setState 都对整条包络重算降采样（[FfcEnergyEnvelope.downsample] 是 O(n)）。
   int _cachedBucketCount = -1;
   List<double> _cachedBuckets = const <double>[];
+
+  /// [_bucketsFor] 用的线性振幅包络（原生内存，随 State 释放）与它对应的 dB 源。
+  FfcEnergyEnvelope? _envelope;
+  List<double>? _envelopeSource;
 
   /// 播放条平滑刷新（根因修复「播放条更新太慢」）：`VideoPlayerController` 只在字幕**换句**
   /// 时 `notifyListeners`（`_syncCueForPosition` 的 `changed` 判据），播放头/列表若只靠它重绘
@@ -584,8 +616,8 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
     }
     _listController.animateTo(
       target,
-      duration: const Duration(milliseconds: 250),
-      curve: Curves.easeOutCubic,
+      duration: FushiMotion.medium,
+      curve: FushiSpringCurve.effects,
     );
   }
 
@@ -621,8 +653,8 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
     }
     _scrollController.animateTo(
       target,
-      duration: const Duration(milliseconds: 250),
-      curve: Curves.easeOutCubic,
+      duration: FushiMotion.medium,
+      curve: FushiSpringCurve.effects,
     );
   }
 
@@ -640,12 +672,19 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
     return out;
   }
 
-  /// 按目标桶数 memo 的降采样波形桶（见 [_cachedBucketCount]）。
+  /// 按目标桶数 memo 的降采样波形桶（见 [_cachedBucketCount]）。包络换了（按引用判）就
+  /// 重建 [_envelope]、作废桶缓存；dB → 振幅只在重建时算一遍，改宽度只重跑降采样。
   List<double> _bucketsFor(int targetBuckets) {
+    final List<double> raw = widget.rawEnvelope;
+    FfcEnergyEnvelope? envelope = _envelope;
+    if (envelope == null || !identical(raw, _envelopeSource)) {
+      _envelopeSource = raw;
+      _envelope = envelope = FfcEnergyEnvelope.fromDb(raw);
+      _cachedBucketCount = -1;
+    }
     if (targetBuckets == _cachedBucketCount) return _cachedBuckets;
     _cachedBucketCount = targetBuckets;
-    _cachedBuckets =
-        downsampleEnergyEnvelope(widget.rawEnvelope, targetBuckets);
+    _cachedBuckets = envelope.downsample(targetBuckets);
     return _cachedBuckets;
   }
 
@@ -731,6 +770,12 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
 
   @override
   Widget build(BuildContext context) {
+    // 放大视图压在播放画面上（经根 Navigator 弹出，拿不到侧板的主题）：与设置侧板
+    // 同一份播放器面板中性主题（M3E 中性深色 + app 主色强调；Apple / 墨水屏原样）。
+    return VideoM3ePanelTheme(child: Builder(builder: _buildThemed));
+  }
+
+  Widget _buildThemed(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final ColorScheme cs = theme.colorScheme;
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
@@ -751,7 +796,7 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
           SizedBox(height: gap / 2),
           Text(
             t.video_subtitle_waveform_scroll_hint,
-            style: theme.textTheme.bodySmall?.copyWith(
+            style: context.fushiType.bodySmall.copyWith(
               color: cs.onSurfaceVariant,
             ),
           ),
@@ -764,7 +809,7 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
             _buildCueList(theme, cs),
           ],
           if (widget.onCommitDelay != null) ...<Widget>[
-            Divider(height: gap * 2, color: cs.outlineVariant),
+            FushiDividerControl(height: gap * 2, color: cs.outlineVariant),
             _buildDelayControls(theme, cs, tokens),
           ],
         ],
@@ -787,26 +832,21 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
     final String label = '${_delayMs >= 0 ? '+' : ''}$_delayMs ms';
     return Row(
       children: <Widget>[
-        Icon(Icons.graphic_eq, color: cs.primary),
+        FushiIcon(FushiIcons.audio, color: cs.primary),
         const SizedBox(width: 8),
         Expanded(
           child: Text(
             t.video_subtitle_waveform_open,
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.w600,
+            // State.context 在面板中性主题之外：前景色显式取面板配色。
+            style: context.fushiType.titleLargeEmphasized.copyWith(
+              color: cs.onSurface,
             ),
           ),
         ),
-        Text(
-          label,
-          style: theme.textTheme.titleSmall?.copyWith(
-            color: _delayMs == 0 ? cs.onSurfaceVariant : cs.primary,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
+        _delayPill(cs, label: label, active: _delayMs != 0),
         const SizedBox(width: 4),
-        IconButton(
-          icon: const Icon(Icons.close),
+        FushiIconButtonControl(
+          icon: const FushiIcon(FushiIcons.close),
           tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
           onPressed: () => Navigator.of(context).maybePop(),
         ),
@@ -838,11 +878,16 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
       spacing: 16,
       runSpacing: 6,
       children: <Widget>[
-        item(cs.primary.withValues(alpha: 0.55),
-            t.video_subtitle_waveform_legend_energy),
+        item(
+          cs.primary.withValues(alpha: 0.55),
+          t.video_subtitle_waveform_legend_energy,
+        ),
         item(cs.secondary, t.video_subtitle_waveform_legend_cue, line: true),
-        item(cs.tertiary, t.video_subtitle_waveform_legend_playhead,
-            line: true),
+        item(
+          cs.tertiary,
+          t.video_subtitle_waveform_legend_playhead,
+          line: true,
+        ),
       ],
     );
   }
@@ -856,14 +901,18 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         final ThemeData theme = Theme.of(context);
-        final double viewWidth =
-            constraints.maxWidth.isFinite ? constraints.maxWidth : 600.0;
+        final double viewWidth = constraints.maxWidth.isFinite
+            ? constraints.maxWidth
+            : 600.0;
         final double naturalWidth = widget.windowEndMs * _basePxPerMs * _zoom;
         // 内容至少铺满视图宽（短片不留大片空白），否则按时间密度展开可滚动。
-        final double contentWidth =
-            naturalWidth < viewWidth ? viewWidth : naturalWidth;
-        final int targetBuckets =
-            (contentWidth / _barSlotPx).floor().clamp(1, 400000);
+        final double contentWidth = naturalWidth < viewWidth
+            ? viewWidth
+            : naturalWidth;
+        final int targetBuckets = (contentWidth / _barSlotPx).floor().clamp(
+          1,
+          400000,
+        );
         final List<double> buckets = _bucketsFor(targetBuckets);
         final List<int> boundaries = _cueBoundariesMs;
 
@@ -913,8 +962,9 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
         for (final CueStripSlot? slot in cueSlots) {
           if (slot != null && slot.lane >= laneCount) laneCount = slot.lane + 1;
         }
-        final double laneHeight =
-            laneCount <= 1 ? _stripHeight : _multiLaneHeight;
+        final double laneHeight = laneCount <= 1
+            ? _stripHeight
+            : _multiLaneHeight;
         final double stripHeight = laneCount * laneHeight;
 
         final Widget strip = _buildCueStrip(
@@ -932,7 +982,7 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
           height: _waveHeight + stripHeight,
           decoration: BoxDecoration(
             color: cs.surfaceContainerHighest.withValues(alpha: 0.4),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: FushiM3eShape.smallRadius,
           ),
           clipBehavior: Clip.antiAlias,
           // 滚轮左右滚（用户实报「这里应该支持滚轮滚动左右」）：横向 Scrollable 只
@@ -1013,8 +1063,9 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
     required double laneHeight,
     required double stripHeight,
   }) {
-    final double viewLeft =
-        _scrollController.hasClients ? _scrollController.offset : 0.0;
+    final double viewLeft = _scrollController.hasClients
+        ? _scrollController.offset
+        : 0.0;
     final double viewRight = viewLeft + viewportWidth;
     // 矮行（多 lane）里两行文本放不下，降为一行。
     final int chipMaxLines = laneHeight >= _stripHeight ? 2 : 1;
@@ -1028,20 +1079,22 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
           slot.left > viewRight + _cullMarginPx) {
         continue;
       }
-      chips.add(Positioned(
-        left: slot.left,
-        top: slot.lane * laneHeight,
-        height: laneHeight,
-        width: slot.width,
-        child: _buildCueChip(
-          theme,
-          cs,
-          widget.cues[i],
-          widget.cues[i].text.trim(),
-          delayMs,
-          maxLines: chipMaxLines,
+      chips.add(
+        Positioned(
+          left: slot.left,
+          top: slot.lane * laneHeight,
+          height: laneHeight,
+          width: slot.width,
+          child: _buildCueChip(
+            theme,
+            cs,
+            widget.cues[i],
+            widget.cues[i].text.trim(),
+            delayMs,
+            maxLines: chipMaxLines,
+          ),
         ),
-      ));
+      );
     }
     final Widget stripBody = SizedBox(
       width: contentWidth,
@@ -1074,7 +1127,8 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
           final double next = base + details.delta.dx * msPerPx;
           _cueDragMsPrecise = next;
           setState(
-              () => _dragMs = next.round().clamp(-_clampMs, _clampMs).toInt());
+            () => _dragMs = next.round().clamp(-_clampMs, _clampMs).toInt(),
+          );
         },
         onHorizontalDragEnd: (DragEndDetails _) {
           final int? preview = _dragMs;
@@ -1118,8 +1172,8 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
                 if (canPlay)
                   Padding(
                     padding: const EdgeInsets.only(right: 2.0, top: 1.0),
-                    child: Icon(
-                      Icons.play_circle_outline,
+                    child: FushiIcon(
+                      FushiIcons.playCircle,
                       size: 16,
                       color: cs.primary,
                     ),
@@ -1156,8 +1210,8 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
             animation: widget.positionListenable ?? _livePositionMs,
             builder: (BuildContext _, __) {
               final bool playing = widget.isPlaying!.call();
-              return IconButton.filledTonal(
-                icon: Icon(playing ? Icons.pause : Icons.play_arrow),
+              return FushiIconButtonControl.filledTonal(
+                icon: FushiIcon(playing ? FushiIcons.pause : FushiIcons.play),
                 tooltip: playing
                     ? t.shortcut_action_video_pause
                     : t.shortcut_action_video_play,
@@ -1176,9 +1230,9 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
           Expanded(
             child: Align(
               alignment: Alignment.centerRight,
-              child: TextButton.icon(
+              child: FushiTextButton.icon(
                 onPressed: _jumpToPlayhead,
-                icon: const Icon(Icons.my_location, size: 18),
+                icon: const FushiIcon(FushiIcons.myLocation, size: 18),
                 label: Text(
                   t.video_subtitle_waveform_jump_playhead,
                   maxLines: 1,
@@ -1189,13 +1243,13 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
           )
         else
           const Spacer(),
-        IconButton(
-          icon: const Icon(Icons.zoom_out),
+        FushiIconButtonControl(
+          icon: const FushiIcon(FushiIcons.zoomOut),
           tooltip: t.video_subtitle_waveform_zoom_out,
           onPressed: _zoom <= _minZoom ? null : () => _zoomBy(1 / 1.5),
         ),
-        IconButton(
-          icon: const Icon(Icons.zoom_in),
+        FushiIconButtonControl(
+          icon: const FushiIcon(FushiIcons.zoomIn),
           tooltip: t.video_subtitle_waveform_zoom_in,
           onPressed: _zoom >= _maxZoom ? null : () => _zoomBy(1.5),
         ),
@@ -1218,12 +1272,12 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
           padding: const EdgeInsets.only(bottom: 6.0),
           child: Row(
             children: <Widget>[
-              Icon(Icons.subtitles_outlined, size: 18, color: cs.primary),
+              FushiIcon(FushiIcons.subtitles, size: 18, color: cs.primary),
               const SizedBox(width: 6),
               Text(
                 t.video_subtitle_waveform_cue_list,
-                style: theme.textTheme.titleSmall?.copyWith(
-                  fontWeight: FontWeight.w600,
+                style: context.fushiType.titleSmallEmphasized.copyWith(
+                  color: cs.onSurface,
                 ),
               ),
             ],
@@ -1233,8 +1287,7 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
           height: _cueListHeight,
           decoration: BoxDecoration(
             color: cs.surfaceContainerHighest.withValues(alpha: 0.4),
-            borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: cs.outlineVariant),
+            borderRadius: FushiM3eShape.smallRadius,
           ),
           clipBehavior: Clip.antiAlias,
           child: ValueListenableBuilder<int>(
@@ -1256,8 +1309,9 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
                     final int seekMs = rawSeekMs < 0 ? 0 : rawSeekMs;
                     final bool active = i == activeIdx;
                     return Material(
+                      // M3E：当前句是 secondaryContainer tonal 色块（不叠透明主色）。
                       color: active
-                          ? cs.primaryContainer.withValues(alpha: 0.55)
+                          ? cs.secondaryContainer
                           : Colors.transparent,
                       child: InkWell(
                         onTap: canPlay
@@ -1265,19 +1319,21 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
                             : null,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 10.0, vertical: 6.0),
+                            horizontal: 10.0,
+                            vertical: 6.0,
+                          ),
                           child: Row(
                             children: <Widget>[
                               if (canPlay)
                                 Padding(
                                   padding: const EdgeInsets.only(right: 8.0),
-                                  child: Icon(
+                                  child: FushiIcon(
                                     active
-                                        ? Icons.play_arrow
-                                        : Icons.play_circle_outline,
+                                        ? FushiIcons.play
+                                        : FushiIcons.playCircle,
                                     size: 18,
                                     color: active
-                                        ? cs.primary
+                                        ? cs.onSecondaryContainer
                                         : cs.onSurfaceVariant,
                                   ),
                                 ),
@@ -1285,12 +1341,12 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
                                 width: 52,
                                 child: Text(
                                   _formatTime(cue.startMs),
-                                  style: theme.textTheme.labelSmall?.copyWith(
-                                    color: cs.onSurfaceVariant,
-                                    fontFeatures: const <FontFeature>[
-                                      FontFeature.tabularFigures(),
-                                    ],
-                                  ),
+                                  style: context.fushiType.labelSmall.tabular
+                                      .copyWith(
+                                        color: active
+                                            ? cs.onSecondaryContainer
+                                            : cs.onSurfaceVariant,
+                                      ),
                                 ),
                               ),
                               const SizedBox(width: 8),
@@ -1301,7 +1357,7 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
                                   overflow: TextOverflow.ellipsis,
                                   style: theme.textTheme.bodyMedium?.copyWith(
                                     color: active
-                                        ? cs.onPrimaryContainer
+                                        ? cs.onSecondaryContainer
                                         : cs.onSurface,
                                     height: 1.2,
                                     fontWeight: active
@@ -1325,13 +1381,69 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
     );
   }
 
+  /// ± 步进钮：M3E tonal 圆钮（S 档 40dp），手柄 / 方向键可逐个聚焦。
+  Widget _stepButton({
+    required IconData icon,
+    required String tooltip,
+    required VoidCallback onPressed,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 2),
+      child: FushiIconButtonControl.filledTonal(
+        size: ButtonSizeVariant.small,
+        tooltip: tooltip,
+        icon: FushiIcon(icon),
+        onPressed: onPressed,
+      ),
+    );
+  }
+
+  /// 延迟读数胶囊：等宽数字；[active]（非零）时换 secondaryContainer 色块，颜色
+  /// 过渡走 effects 弹簧（墨水屏 / 减弱动态效果下瞬时）。
+  Widget _delayPill(
+    ColorScheme cs, {
+    required String label,
+    required bool active,
+    double minWidth = 0,
+  }) {
+    final FushiSpringSpec spring = context.fushiMotion.effectsFast;
+    return AnimatedContainer(
+      duration: spring.duration,
+      curve: spring.curve,
+      constraints: BoxConstraints(
+        minWidth: minWidth,
+        maxWidth: 160,
+        minHeight: 36,
+      ),
+      alignment: Alignment.center,
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      decoration: BoxDecoration(
+        color: active ? cs.secondaryContainer : cs.surfaceContainer,
+        borderRadius: FushiM3eShape.cardRadius,
+      ),
+      child: Text(
+        label,
+        textAlign: TextAlign.center,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: context.fushiType.titleMediumEmphasized.tabular.copyWith(
+          color: active ? cs.onSecondaryContainer : cs.onSurfaceVariant,
+        ),
+      ),
+    );
+  }
+
   /// 底部调轴控件条（自动对轴 / 滑条 / 步进 / 归零 / 数值输入）：写回上方权威 `_delayMs`。
   Widget _buildDelayControls(
-      ThemeData theme, ColorScheme cs, FushiDesignTokens tokens) {
+    ThemeData theme,
+    ColorScheme cs,
+    FushiDesignTokens tokens,
+  ) {
     final int shownMs = _dragMs ?? _delayMs;
     final String label = '${shownMs >= 0 ? '+' : ''}$shownMs ms';
-    final double sliderValue =
-        shownMs.clamp(-_sliderRangeMs, _sliderRangeMs).toDouble();
+    final double sliderValue = shownMs
+        .clamp(-_sliderRangeMs, _sliderRangeMs)
+        .toDouble();
     final double gap = tokens.spacing.gap;
 
     // TODO-1316：波形对轴视图内的「自动对轴」按钮（复用上方权威 onAutoAlign 逻辑，不重写
@@ -1342,95 +1454,101 @@ class _SubtitleWaveformZoomViewState extends State<SubtitleWaveformZoomView> {
         : Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              FilledButton.tonalIcon(
+              FushiFilledButton.tonalIcon(
                 onPressed: _autoAligning ? null : _runAutoAlign,
                 icon: _autoAligning
                     ? SizedBox(
                         width: 18,
                         height: 18,
-                        child: CircularProgressIndicator(
+                        child: FushiCircularProgressIndicator(
                           strokeWidth: 2,
                           color: cs.onSecondaryContainer,
                         ),
                       )
-                    : const Icon(Icons.auto_fix_high, size: 18),
+                    : const FushiIcon(FushiIcons.ai, size: 18),
                 label: Text(t.video_subtitle_auto_align),
               ),
+              // 低置信提示：共享提示横幅（中性底 + 警告色图标）。
               if (_autoAlignLowConfidence)
                 Padding(
                   padding: EdgeInsets.only(top: gap / 2),
-                  child: Text(
-                    t.video_subtitle_auto_align_low_confidence,
-                    textAlign: TextAlign.center,
-                    style: theme.textTheme.bodySmall?.copyWith(color: cs.error),
+                  child: FushiInlineNotice(
+                    severity: FushiNoticeSeverity.warning,
+                    message: t.video_subtitle_auto_align_low_confidence,
                   ),
                 ),
               SizedBox(height: gap),
             ],
           );
 
+    // M3E：±50 / ±1000ms tonal 圆钮夹一枚等宽数字读数胶囊（与快速设置调轴行同款）；
+    // 「上/下一句对齐」另成一组，窄弹窗换行时两组各自整体换行。
     final Widget buttons = Wrap(
       alignment: WrapAlignment.center,
       crossAxisAlignment: WrapCrossAlignment.center,
-      spacing: gap / 2,
+      spacing: gap,
       runSpacing: gap / 2,
       children: <Widget>[
-        FushiIconButton(
-          icon: Icons.keyboard_double_arrow_left,
-          tooltip: '-1000ms',
-          padding: EdgeInsets.all(gap / 2),
-          onTap: () => _commit(_delayMs - 1000),
-        ),
-        FushiIconButton(
-          icon: Icons.chevron_left,
-          tooltip: '-50ms',
-          padding: EdgeInsets.all(gap / 2),
-          onTap: () => _commit(_delayMs - 50),
-        ),
-        FushiFocusable(
-          onTap: shownMs == 0 ? null : () => _commit(0),
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(minWidth: 84, maxWidth: 140),
-            child: Text(
-              label,
-              textAlign: TextAlign.center,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: theme.textTheme.bodyLarge?.copyWith(
-                fontWeight: FontWeight.w600,
-                color: shownMs == 0 ? cs.onSurfaceVariant : cs.primary,
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              _stepButton(
+                icon: FushiIcons.fastRewind,
+                tooltip: '-1000ms',
+                onPressed: () => _commit(_delayMs - 1000),
               ),
-            ),
+              _stepButton(
+                icon: FushiIcons.chevronLeft,
+                tooltip: '-50ms',
+                onPressed: () => _commit(_delayMs - 50),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                child: FushiFocusable(
+                  onTap: shownMs == 0 ? null : () => _commit(0),
+                  child: _delayPill(
+                    cs,
+                    label: label,
+                    active: shownMs != 0,
+                    minWidth: 84,
+                  ),
+                ),
+              ),
+              _stepButton(
+                icon: FushiIcons.chevronRight,
+                tooltip: '+50ms',
+                onPressed: () => _commit(_delayMs + 50),
+              ),
+              _stepButton(
+                icon: FushiIcons.fastForward,
+                tooltip: '+1000ms',
+                onPressed: () => _commit(_delayMs + 1000),
+              ),
+            ],
           ),
-        ),
-        FushiIconButton(
-          icon: Icons.chevron_right,
-          tooltip: '+50ms',
-          padding: EdgeInsets.all(gap / 2),
-          onTap: () => _commit(_delayMs + 50),
-        ),
-        FushiIconButton(
-          icon: Icons.keyboard_double_arrow_right,
-          tooltip: '+1000ms',
-          padding: EdgeInsets.all(gap / 2),
-          onTap: () => _commit(_delayMs + 1000),
         ),
         // 「上/下一句对齐到当前时间」：与快速设置面板调轴行同一对按钮、同一执行体。
         // 在放大视图里尤其顺手——播放头就在波形上，点完立刻能看到 cue 线跳到位。
-        if (widget.onSnapDelayToCue != null) ...<Widget>[
-          FushiIconButton(
-            icon: Icons.align_horizontal_left,
-            tooltip: t.video_subtitle_prev_cue_align,
-            padding: EdgeInsets.all(gap / 2),
-            onTap: () => _snapDelayToCue(next: false),
+        if (widget.onSnapDelayToCue != null)
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              FushiIconButtonControl(
+                size: ButtonSizeVariant.small,
+                tooltip: t.video_subtitle_prev_cue_align,
+                icon: const FushiIcon(FushiIcons.skipPrevious),
+                onPressed: () => _snapDelayToCue(next: false),
+              ),
+              FushiIconButtonControl(
+                size: ButtonSizeVariant.small,
+                tooltip: t.video_subtitle_next_cue_align,
+                icon: const FushiIcon(FushiIcons.skipNext),
+                onPressed: () => _snapDelayToCue(next: true),
+              ),
+            ],
           ),
-          FushiIconButton(
-            icon: Icons.align_horizontal_right,
-            tooltip: t.video_subtitle_next_cue_align,
-            padding: EdgeInsets.all(gap / 2),
-            onTap: () => _snapDelayToCue(next: true),
-          ),
-        ],
       ],
     );
 
@@ -1511,8 +1629,10 @@ List<CueStripSlot?> layoutCueStripChips({
   required double minChipWidth,
   required int maxLanes,
 }) {
-  final List<CueStripSlot?> slots =
-      List<CueStripSlot?>.filled(cues.length, null);
+  final List<CueStripSlot?> slots = List<CueStripSlot?>.filled(
+    cues.length,
+    null,
+  );
   // 第一遍：像素几何（与渲染逐像素一致的 clamp 规则）。
   final List<double> lefts = List<double>.filled(cues.length, 0);
   final List<double> widths = List<double>.filled(cues.length, 0);

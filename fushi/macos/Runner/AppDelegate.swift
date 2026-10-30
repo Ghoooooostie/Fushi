@@ -12,24 +12,40 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
   private var sourceUrlEventSink: FlutterEventSink?
   private var globalLookupOverlay: GlobalLookupOverlayController?
   private var desktopFloatingBall: DesktopFloatingBallController?
+  private var floatingLyric: FloatingLyricController?
   /// Dart 最后一次表达的查词输入法语言。app 重新回到前台时按它再切回去——否则
   /// 用户 Cmd-Tab 出去一趟回来，查词页面还开着但输入法已经不是他选的那个了。
   private var desiredLookupImeTag: String?
+  /// 系统「降低透明度」订阅（`app.fushi/system_transparency`）。强引用 channel 与
+  /// observer token，进程内只装一次。
+  private var systemTransparencyChannel: FlutterMethodChannel?
+  private var systemTransparencyObserver: NSObjectProtocol?
 
+  /// ⚠️ 这些 override 里**不许调 `super.`**：`FlutterAppDelegate` 是纯 ObjC 的
+  /// `NSObject <NSApplicationDelegate, FlutterAppLifecycleProvider>`，它只实现了
+  /// `applicationWillFinishLaunching:` / `application:openURLs:` /
+  /// `applicationShouldTerminate:` 三个（见 FlutterAppDelegate.mm，方法表里就这 16 条）。
+  /// 其余 `NSApplicationDelegate` 方法它是**协议声明**、没有实现——`super.applicationDidBecomeActive(_:)`
+  /// 走 `objc_msgSendSuper2` 在父类找不到方法，就落到转发 → `-[AppDelegate
+  /// applicationDidBecomeActive:]: unrecognized selector` 的 NSInvalidArgumentException。
+  /// 插件生命周期事件也不需要我们转发：`FlutterAppLifecycleRegistrar` 自己就是
+  /// `NSApplicationDidBecomeActiveNotification` 等通知的观察者（FlutterAppLifecycleDelegate.mm），
+  /// 注册到它的插件照常收到事件。
   override func applicationDidResignActive(_ notification: Notification) {
     // 离开前台就把用户的输入法放回去：切的是系统全局输入源，留着会漏到别的 app。
     LookupImeLanguage.restore()
-    super.applicationDidResignActive(notification)
   }
 
   override func applicationDidBecomeActive(_ notification: Notification) {
-    super.applicationDidBecomeActive(notification)
+    // 上面那条 super 抛异常时这一行永远执行不到（异常在 super 就抛了），所以
+    // 「切回前台恢复查词输入法」此前从来没生效过——BUG-3856 的连带症状。
     if let tag = desiredLookupImeTag {
       LookupImeLanguage.setLanguage(tag)
     }
   }
 
   override func applicationDidFinishLaunching(_ notification: Notification) {
+    (mainFlutterWindow as? MainFlutterWindow)?.hideForStartupPresentation()
     if let windowController =
         mainFlutterWindow?.contentViewController as? MacOSWindowUtilsViewController {
       let controller = windowController.flutterViewController
@@ -42,6 +58,50 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
       // 方法名与入参逐字对齐 Windows 那份 CF_DIB 实现。
       FushiClipboardImage.register(
         binaryMessenger: controller.engine.binaryMessenger)
+      // 查词浮层的真模糊背衬：WebView 下方的 NSVisualEffectView 平台视图
+      // （apple/FushiNativeMaterialView.swift，Dart 侧 fushi_native_material.dart）。
+      FushiNativeMaterial.register(
+        with: controller.registrar(forPlugin: "FushiNativeMaterial"))
+      let startupWindowChannel = FlutterMethodChannel(
+        name: "app.fushi/window",
+        binaryMessenger: controller.engine.binaryMessenger)
+      startupWindowChannel.setMethodCallHandler { [weak self] call, result in
+        // App-owned borderless fullscreen (disc sessions); see
+        // MainFlutterWindow.setBorderlessFullscreen.
+        if call.method == "setBorderlessFullscreen"
+          || call.method == "isBorderlessFullscreen"
+        {
+          guard let window = self?.mainFlutterWindow as? MainFlutterWindow else {
+            result(FlutterError(code: "window_unavailable", message: nil, details: nil))
+            return
+          }
+          if call.method == "isBorderlessFullscreen" {
+            result(window.isBorderlessFullscreen)
+            return
+          }
+          let args = call.arguments as? [String: Any]
+          let enabled = args?["fullscreen"] as? Bool ?? false
+          result(window.setBorderlessFullscreen(enabled))
+          return
+        }
+        guard call.method == "showStartupWindow" else {
+          result(FlutterMethodNotImplemented)
+          return
+        }
+        guard let window = self?.mainFlutterWindow else {
+          result(FlutterError(code: "window_unavailable", message: nil, details: nil))
+          return
+        }
+        if !fushiHiddenTestMode() {
+          window.orderOut(nil)
+          window.alphaValue = 1
+          window.animationBehavior = .documentWindow
+          window.makeKeyAndOrderFront(nil)
+          NSApp.activate(ignoringOtherApps: true)
+        }
+        result(nil)
+      }
+
       let sourceUrlChannel = FlutterEventChannel(
         name: "app.fushi.reader/source_urls/stream",
         binaryMessenger: controller.engine.binaryMessenger)
@@ -100,6 +160,12 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
       desktopFloatingBall = DesktopFloatingBallController(
         binaryMessenger: controller.engine.binaryMessenger)
 
+      // 有声书悬浮字幕 / 音乐桌面歌词（与 Android FloatingLyricService、Windows
+      // floating_lyric_window.cpp 同名通道 app.fushi.reader/floating_lyric）：置顶、
+      // 不抢前台的 NSPanel。见 FushiFloatingLyric.swift。
+      floatingLyric = FloatingLyricController(
+        binaryMessenger: controller.engine.binaryMessenger)
+
       // 查词输入框的输入法语言。macOS 的输入源是系统全局状态，所以除了「切过去」
       // 还必须「切回来」——页面走掉时 Dart 发 null，app 失去前台时我们自己还原
       // （见 applicationDidResignActive）。
@@ -134,10 +200,44 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
           result(FlutterMethodNotImplemented)
         }
       }
+
+      installSystemTransparencyChannel(binaryMessenger: controller.engine.binaryMessenger)
     } else {
       NSLog("[Fushi] macOS Flutter controller unavailable; custom channels were not registered")
     }
-    super.applicationDidFinishLaunching(notification)
+    // 不调 super：FlutterAppDelegate 没实现 applicationDidFinishLaunching:（见本类
+    // applicationDidBecomeActive 上的说明）。
+  }
+
+  /// 系统设置「辅助功能 → 显示 → 降低透明度」：Dart 侧 `SystemTransparency`
+  /// 经 `getReduceTransparency` 读一次，之后由这里在辅助显示选项变化时推
+  /// `reduceTransparencyChanged`（与 Windows / iOS 同一契约）。
+  private func installSystemTransparencyChannel(binaryMessenger: FlutterBinaryMessenger) {
+    guard systemTransparencyChannel == nil else { return }
+    let channel = FlutterMethodChannel(
+      name: "app.fushi/system_transparency",
+      binaryMessenger: binaryMessenger)
+    channel.setMethodCallHandler { call, result in
+      switch call.method {
+      case "getReduceTransparency":
+        result(NSWorkspace.shared.accessibilityDisplayShouldReduceTransparency)
+      default:
+        result(FlutterMethodNotImplemented)
+      }
+    }
+    systemTransparencyChannel = channel
+    var lastValue = NSWorkspace.shared.accessibilityDisplayShouldReduceTransparency
+    systemTransparencyObserver = NSWorkspace.shared.notificationCenter.addObserver(
+      forName: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification,
+      object: nil,
+      queue: .main
+    ) { [weak self] _ in
+      // 该通知覆盖对比度 / 减少动态效果等全部辅助显示选项，按值去重只推透明度变化。
+      let value = NSWorkspace.shared.accessibilityDisplayShouldReduceTransparency
+      guard value != lastValue else { return }
+      lastValue = value
+      self?.systemTransparencyChannel?.invokeMethod("reduceTransparencyChanged", arguments: value)
+    }
   }
 
   // BUG-2508 真机取证钩子（FUSHI_TEST_INPUT 门控）。坐标口径：Flutter 逻辑坐标
@@ -155,6 +255,34 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
     let flags = NSEvent.ModifierFlags(rawValue: shift ? 0x20002 : 0)
     let now = ProcessInfo.processInfo.systemUptime
     switch call.method {
+    case "resize":
+      let w = (args["w"] as? Double) ?? 600
+      let h = (args["h"] as? Double) ?? 800
+      var frame = window.frame
+      frame.size = NSSize(width: w, height: h)
+      window.setFrame(frame, display: true)
+      result(["w": window.contentView?.bounds.width ?? 0])
+    case "imeMarked", "imeCommit", "imeUnmark":
+      // 模拟 IMK 输入法对「当前输入上下文的 client」的调用（输入法只认第一响应者
+      // 的 inputContext）。first responder 不是文本 client 时如实回报。
+      let responder = window.firstResponder
+      guard let client = (responder as? NSView)?.inputContext?.client else {
+        result(["ok": false, "firstResponder": AppDelegate.responderName(responder)])
+        return
+      }
+      let text = (args["text"] as? String) ?? ""
+      switch call.method {
+      case "imeMarked":
+        let len = (text as NSString).length
+        client.setMarkedText(text, selectedRange: NSRange(location: len, length: 0),
+          replacementRange: NSRange(location: NSNotFound, length: 0))
+      case "imeCommit":
+        client.insertText(text, replacementRange: NSRange(location: NSNotFound, length: 0))
+      default:
+        client.unmarkText()
+      }
+      result(["ok": true, "firstResponder": AppDelegate.responderName(responder),
+              "markedRange": NSStringFromRange(client.markedRange())])
     case "activate":
       NSApp.setActivationPolicy(.regular)
       NSApp.activate(ignoringOtherApps: true)
@@ -224,7 +352,7 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         lines.append(String(repeating: "  ", count: depth)
           + "\(type(of: v)) frame=(\(Int(f.origin.x)),\(Int(f.origin.y)) \(Int(f.width))x\(Int(f.height)))"
           + (v.isHidden ? " hidden" : ""))
-        if depth < 4 { for c in v.subviews { walk(c, depth + 1) } }
+        if depth < 9 { for c in v.subviews { walk(c, depth + 1) } }
       }
       if let content = window.contentView { walk(content, 0) }
       result(["views": lines.joined(separator: "\n")])
@@ -246,6 +374,40 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         "firstResponder": AppDelegate.responderName(window.firstResponder),
         "flags": event.modifierFlags.rawValue,
         "keyCode": event.keyCode,
+      ])
+    case "key":
+      // 真 NSEvent 键盘按下/抬起（经 NSApp.postEvent，走 sendEvent → key equivalent /
+      // 菜单 → first responder 的真实派发链），供快捷键在 macOS 上的可达性取证。
+      // flags 带设备位（同 flagsChanged 的口径）：cmd 0x100008 / shift 0x20002 /
+      // alt 0x80020 / ctrl 0x40001。
+      let keyCode = UInt16((args["keyCode"] as? Int) ?? 0)
+      let chars = (args["chars"] as? String) ?? ""
+      let ignoring = (args["ignoring"] as? String) ?? chars
+      var raw: UInt = 0
+      if (args["cmd"] as? Bool) ?? false { raw |= 0x100008 }
+      if shift { raw |= 0x20002 }
+      if (args["alt"] as? Bool) ?? false { raw |= 0x80020 }
+      if (args["ctrl"] as? Bool) ?? false { raw |= 0x40001 }
+      let keyFlags = NSEvent.ModifierFlags(rawValue: raw)
+      guard let down = NSEvent.keyEvent(
+        with: .keyDown, location: .zero, modifierFlags: keyFlags, timestamp: now,
+        windowNumber: window.windowNumber, context: nil, characters: chars,
+        charactersIgnoringModifiers: ignoring, isARepeat: false, keyCode: keyCode),
+        let up = NSEvent.keyEvent(
+        with: .keyUp, location: .zero, modifierFlags: keyFlags, timestamp: now + 0.03,
+        windowNumber: window.windowNumber, context: nil, characters: chars,
+        charactersIgnoringModifiers: ignoring, isARepeat: false, keyCode: keyCode)
+      else {
+        result(FlutterError(code: "event", message: "key construction failed", details: nil))
+        return
+      }
+      let mode = (args["mode"] as? String) ?? "post"
+      let before = AppDelegate.responderName(window.firstResponder)
+      deliverTestEvent(down, mode: mode)
+      deliverTestEvent(up, mode: mode)
+      result([
+        "firstResponderBefore": before,
+        "firstResponder": AppDelegate.responderName(window.firstResponder),
       ])
     default:
       result(FlutterMethodNotImplemented)
@@ -274,6 +436,8 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
       case .flagsChanged: vc.flagsChanged(with: event)
       case .leftMouseDown: vc.mouseDown(with: event)
       case .leftMouseUp: vc.mouseUp(with: event)
+      case .keyDown: vc.keyDown(with: event)
+      case .keyUp: vc.keyUp(with: event)
       default: NSApp.sendEvent(event)
       }
     default: NSApp.postEvent(event, atStart: false)
@@ -335,7 +499,10 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
     // 应用外悬浮球的面板随进程收掉。
     desktopFloatingBall?.destroy()
     desktopFloatingBall = nil
-    super.applicationWillTerminate(notification)
+    floatingLyric?.destroy()
+    floatingLyric = nil
+    // 不调 super：FlutterAppDelegate 没实现 applicationWillTerminate:（见
+    // applicationDidBecomeActive 上的说明）。
   }
 
   private func handleDataRootAccess(_ call: FlutterMethodCall, result: @escaping FlutterResult) {

@@ -67,7 +67,7 @@ enum class Profile {
 // FloatingLyricWindow::ControlActionAt() resolves through SlotAction(), so the
 // body window and the standalone toolbar can never disagree about what a slot
 // does.
-constexpr int kGalHookSlotCount = 9;
+constexpr int kGalHookSlotCount = 10;
 constexpr const char* kGalHookSlotActions[kGalHookSlotCount] = {
     "replayVoice",         // 0 replay the line's captured audio
     "recaptureVoice",      // 1 open a recapture window
@@ -76,13 +76,17 @@ constexpr const char* kGalHookSlotActions[kGalHookSlotCount] = {
     "toggleTransparency",  // 4 one-click background transparency
     "lock",                // 5 position lock
     "openWorkbench",       // 6 capture workbench
-    // 7 always-on-top pin. Handled natively in DispatchControlAction (no Dart
+    // 7 copy the displayed line to the clipboard (feedback qM4n-Tu0pc: the
+    // line could only be copied from the workbench, i.e. after switching
+    // windows). Executed by Dart (it owns the displayed line text).
+    "copyLine",
+    // 8 always-on-top pin. Handled natively in DispatchControlAction (no Dart
     // round-trip), exactly like the clipboard window's 📌 — the overlay is born
     // topmost, and this is the only way to drop it behind another window
-    // without closing it. Inserted ahead of the close slot so the rightmost
-    // button is still 关闭 (muscle memory) and slots 0..6 keep their index.
+    // without closing it. Kept right ahead of the close slot so the rightmost
+    // button is still 关闭 (muscle memory).
     "topmost",
-    "close",  // 8 close the overlay
+    "close",  // 9 close the overlay
 };
 
 // 有声书悬浮字幕的槽表。前三颗是播放控制（沿用旧歌词条的肌肉记忆顺序：上一句 /
@@ -138,6 +142,19 @@ struct Style {
   uint32_t button_bg_color = 0x33000000;
   uint32_t active_color = 0xFFFFD54F;
   uint32_t bg_color = 0xCC000000;
+  // M3E floating toolbar (galgame hook overlay). Alpha 0 = legacy look: the pill
+  // borrows the caption bar's [bg_color], active slots are a 16% tint of
+  // [active_color], hover is [button_bg_color] at 55%. Non-zero = the Dart side
+  // resolved the app theme: the pill is this tonal surface container, fully
+  // rounded; active slots are filled with [active_bg_color]
+  // (secondaryContainer) under an [active_color] (onSecondaryContainer) glyph;
+  // hover paints [button_bg_color] as-is (an onSurfaceVariant state layer).
+  uint32_t surface_color = 0;
+  uint32_t active_bg_color = 0;
+  // Slot tooltip bubble colours (M3 plain tooltip = inverseSurface /
+  // inverseOnSurface). Alpha 0 = system-themed tooltip, as before.
+  uint32_t tooltip_bg_color = 0;
+  uint32_t tooltip_text_color = 0;
 };
 
 // Where to put the toolbar, in screen / client PHYSICAL px. Computed by the
@@ -154,6 +171,11 @@ struct Layout {
   float button_px = 0.0f;  // button edge length
   float gap_px = 0.0f;     // gap between two buttons
   float margin_px = 0.0f;  // padding between the window edge and the row
+  // Labelled mode (button captions under the icons). slot_px is the slot pitch
+  // width (0 = button_px, i.e. icon-only); label_px the caption band height
+  // under the icon row (0 = no captions).
+  float slot_px = 0.0f;
+  float label_px = 0.0f;
 };
 
 // Whether |slot| draws with the active (highlight) colour under |states|.
@@ -183,6 +205,9 @@ void DrawSlotIcon(ID2D1RenderTarget* target, ID2D1Factory* factory,
 // 那个浮窗会把另一个的提示文案整表覆盖掉（两个浮窗可以同时在屏上）。
 void SetSlotTooltips(Profile profile, std::vector<std::wstring> tooltips);
 const std::wstring& SlotTooltip(Profile profile, int slot);
+// 槽位短标签（图标下方小字，同样由 Dart 按 locale 下发、与槽表同下标）。
+void SetSlotLabels(Profile profile, std::vector<std::wstring> labels);
+const std::wstring& SlotLabel(Profile profile, int slot);
 
 // 手动追踪式 Win32 tooltip（TOOLTIPS_CLASS + TTM_TRACKACTIVATE）。
 //
@@ -203,6 +228,8 @@ class SlotTooltipHost {
   void Update(HWND owner, Profile profile, int slot, int screen_x,
               int screen_y);
   void Hide();
+  // 提示气泡配色（ARGB；alpha 0 = 系统主题样式）。跟随 app 主题。
+  void SetColors(uint32_t bg_argb, uint32_t text_argb);
 
  private:
   bool EnsureWindow(HWND owner);
@@ -223,6 +250,9 @@ class SlotTooltipHost {
   // tool_ 就握着悬垂指针。本类自持一份，lpszText 只指向自己的成员。
   std::wstring current_text_;
   TOOLINFOW tool_ = {};
+  uint32_t bg_argb_ = 0;
+  uint32_t text_argb_ = 0;
+  void ApplyColors();
 };
 
 }  // namespace hook_toolbar

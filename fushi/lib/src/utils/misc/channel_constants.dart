@@ -40,6 +40,17 @@ abstract final class FushiChannels {
       MethodChannel('$_prefix/app_shortcuts');
   static const MethodChannel clipboardImage =
       MethodChannel('$_prefix/clipboard_image');
+
+  /// Android 系统代理（Wi-Fi 手动 / PAC / 全局 HTTP 代理）。原生侧
+  /// `SystemProxyChannel.java`，Dart 门面 `android_system_proxy.dart`。
+  static const MethodChannel systemProxy =
+      MethodChannel('$_prefix/system_proxy');
+
+  /// 上次进程退出原因（`ActivityManager.getHistoricalProcessExitReasons`）与
+  /// `onTrimMemory` 记录。原生侧 `ProcessExitChannel.java`，Dart 门面
+  /// `lib/src/diagnostics/previous_exit_log.dart`。
+  static const MethodChannel processExit =
+      MethodChannel('$_prefix/process_exit');
   static const MethodChannel screenBrightness =
       MethodChannel('$_prefix/screen_brightness');
   static const MethodChannel selectionActions =
@@ -58,7 +69,4 @@ abstract final class FushiChannels {
   /// `AndroidPictureInPicture` 恒答「不支持」且不发调用。
   static const MethodChannel pictureInPicture =
       MethodChannel('$_prefix/picture_in_picture');
-  // TODO-1232 A3: render-backend experiment toggle (persist "disable Impeller"
-  // so MainActivity can force Skia at the next launch; Android-only).
-  static const MethodChannel render = MethodChannel('$_prefix/render');
 }

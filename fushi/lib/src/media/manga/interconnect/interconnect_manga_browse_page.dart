@@ -1,6 +1,12 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/utils/components/fushi_m3e_feedback.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
+import 'package:fushi/src/pages/implementations/reader_fushi_history_page.dart'
+    show kShelfBookCardAspectRatio;
+import 'package:fushi/src/utils/components/shelf_cover_material.dart';
+import 'package:fushi/src/focus/fushi_focus_controller.dart';
 import 'package:fushi_engine/sync/remote_collection_adoption_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -12,7 +18,9 @@ import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi_engine/sync/fushi_library_host_service.dart';
 import 'package:fushi/src/sync/interconnect_sync_backend.dart';
 import 'package:fushi/src/sync/remote_cover_image.dart';
+import 'package:fushi/src/media/online/online_source_error_text.dart';
 import 'package:fushi/utils.dart';
+import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
 
 /// 浏览**已配对互联对端**的漫画库，与浏览一个扩展源同构。
 ///
@@ -35,6 +43,7 @@ class InterconnectMangaBrowsePage extends ConsumerStatefulWidget {
 class _InterconnectMangaBrowsePageState
     extends ConsumerState<InterconnectMangaBrowsePage> {
   final TextEditingController _searchController = TextEditingController();
+  final FocusNode _searchFocus = FocusNode();
   late final InterconnectSyncBackend _backend =
       widget.backend ?? InterconnectSyncBackend.instance;
   List<RemoteBookInfo> _items = const <RemoteBookInfo>[];
@@ -51,6 +60,7 @@ class _InterconnectMangaBrowsePageState
   @override
   void dispose() {
     _searchController.dispose();
+    _searchFocus.dispose();
     super.dispose();
   }
 
@@ -72,7 +82,12 @@ class _InterconnectMangaBrowsePageState
         _items = items;
         _loading = false;
       });
-    } on Object catch (error) {
+    } on Object catch (error, stack) {
+      ErrorLogService.instance.log(
+        'InterconnectMangaBrowse.load',
+        error,
+        stack,
+      );
       if (!mounted) return;
       setState(() {
         _error = error;
@@ -85,10 +100,10 @@ class _InterconnectMangaBrowsePageState
   /// （没有分页端点），再发一次只是把同一份数据重拉一遍。归一化走全应用统一的
   /// [matchesMediaSearch]，与书架/视频库的搜索口径一致。
   List<RemoteBookInfo> get _visible => filterByMediaSearch<RemoteBookInfo>(
-        _items,
-        _query,
-        (RemoteBookInfo book) => <String>{book.displayName, book.title},
-      );
+    _items,
+    _query,
+    (RemoteBookInfo book) => <String>{book.displayName, book.title},
+  );
 
   void _openSeries(RemoteBookInfo book) {
     final AppModel appModel = ref.read(appProvider);
@@ -105,10 +120,8 @@ class _InterconnectMangaBrowsePageState
             ),
             seed: InterconnectMangaCatalog.entryFor(book),
             sourceLabel: t.audio_source_fushi_interconnect,
-            remoteCoverBuilder: (BuildContext context) => _RemoteMangaCover(
-              backend: _backend,
-              book: book,
-            ),
+            remoteCoverBuilder: (BuildContext context) =>
+                _RemoteMangaCover(backend: _backend, book: book),
           ),
         ),
       ),
@@ -117,93 +130,120 @@ class _InterconnectMangaBrowsePageState
 
   @override
   Widget build(BuildContext context) => FushiPageScaffold(
-        title: t.audio_source_fushi_interconnect,
-        automaticallyImplyLeading: false,
-        headerCompact: true,
-        leading: BackButton(
-          key: const ValueKey<String>('interconnect_manga_back'),
-          onPressed: () => Navigator.of(context).maybePop(),
-        ),
-        headerBottom: Padding(
-          padding: const EdgeInsets.only(top: 8),
-          child: TextField(
-            key: const ValueKey<String>('interconnect_manga_search'),
-            controller: _searchController,
-            textInputAction: TextInputAction.search,
-            decoration: InputDecoration(
-              hintText: t.mihon_source_search,
-              prefixIcon: const Icon(Icons.search),
-            ),
-            onChanged: (String value) => setState(() => _query = value),
-          ),
-        ),
-        body: _buildResults(),
-      );
+    title: t.audio_source_fushi_interconnect,
+    automaticallyImplyLeading: false,
+    headerCompact: true,
+    leading: BackButton(
+      key: const ValueKey<String>('interconnect_manga_back'),
+      onPressed: () => Navigator.of(context).maybePop(),
+    ),
+    headerBottom: Padding(
+      padding: const EdgeInsets.only(top: 8),
+      // 2026-10 体验优化：统一为 FushiSearchField；本页边打边滤。
+      child: FushiSearchField(
+        fieldKey: const ValueKey<String>('interconnect_manga_search'),
+        focusId: const FushiFocusId('interconnect-manga-search'),
+        controller: _searchController,
+        focusNode: _searchFocus,
+        hintText: t.mihon_source_search,
+        onChanged: (String value) => setState(() => _query = value),
+        onSubmitted: (String value) => setState(() => _query = value),
+        onClear: () {
+          _searchController.clear();
+          setState(() => _query = '');
+        },
+      ),
+    ),
+    body: _buildResults(),
+  );
 
   Widget _buildResults() {
+    // 页头浮在正文上（FushiPageScaffold 默认 extendBodyBehindHeader）：不滚动的
+    // 加载 / 错误 / 空态整体让开页头，网格把让位加进顶部内边距。
     if (_loading && _items.isEmpty) {
-      return Center(child: adaptiveIndicator(context: context));
+      return SafeArea(
+        bottom: false,
+        child: Center(child: adaptiveIndicator(context: context)),
+      );
     }
-    if (_error != null && _items.isEmpty) {
-      return Center(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Text('$_error', textAlign: TextAlign.center),
-              const SizedBox(height: 12),
-              TextButton(
-                key: const ValueKey<String>('interconnect_manga_retry'),
-                onPressed: () => unawaited(_load()),
-                child: Text(t.retry),
-              ),
-            ],
+    // 2026-10 体验优化：错误 / 空态统一 FushiPlaceholderMessage，重试统一
+    // FilledButton.icon；错误文案经 describeOnlineSourceError 归一。
+    final Object? error = _error;
+    if (error != null && _items.isEmpty) {
+      return SafeArea(
+        bottom: false,
+        child: FushiPlaceholderMessage(
+          icon: Icons.error_outline,
+          message: describeOnlineSourceError(error),
+          action: FushiFilledButton.icon(
+            key: const ValueKey<String>('interconnect_manga_retry'),
+            onPressed: () => unawaited(_load()),
+            icon: const FushiIcon(Icons.refresh_rounded),
+            label: Text(t.retry),
           ),
         ),
       );
     }
     final List<RemoteBookInfo> visible = _visible;
     if (visible.isEmpty) {
-      return Center(child: Text(t.mihon_source_no_results));
+      return SafeArea(
+        bottom: false,
+        child: FushiPlaceholderMessage(
+          icon: Icons.search_off_outlined,
+          message: t.mihon_source_no_results,
+        ),
+      );
     }
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         final int columns = (constraints.maxWidth / 180).floor().clamp(2, 8);
-        return RefreshIndicator(
+        return FushiRefreshIndicator(
           onRefresh: _load,
-          child: GridView.builder(
-            padding: const EdgeInsets.all(16),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: columns,
-              childAspectRatio: 0.62,
-              crossAxisSpacing: 12,
-              mainAxisSpacing: 12,
-            ),
-            itemCount: visible.length,
-            itemBuilder: (BuildContext context, int index) {
-              final RemoteBookInfo book = visible[index];
-              return FushiCard(
-                padding: EdgeInsets.zero,
-                onTap: () => _openSeries(book),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    Expanded(
-                      child: _RemoteMangaCover(backend: _backend, book: book),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Text(
-                        book.displayName,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
+          // 与漫画库同一套条目材质（光面书皮）与卡槽比例（2026-10-25 库页定版）。
+          child: ShelfCoverMaterialScope(
+            material: ShelfCoverMaterial.glossyBook,
+            child: FushiEntranceScope(
+              child: GridView.builder(
+                padding: const EdgeInsets.all(
+                  16,
+                ).copyWith(top: 16 + MediaQuery.paddingOf(context).top),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: columns,
+                  childAspectRatio: kShelfBookCardAspectRatio,
+                  crossAxisSpacing: 12,
+                  mainAxisSpacing: 12,
+                ),
+                itemCount: visible.length,
+                itemBuilder: fushiStaggeredItemBuilder((
+                  BuildContext context,
+                  int index,
+                ) {
+                  final RemoteBookInfo book = visible[index];
+                  return FushiHoverLift(
+                    builder: (BuildContext context, bool _) => shelfCoverCard(
+                      padding: EdgeInsets.all(
+                        FushiDesignTokens.of(context).spacing.rowVertical,
+                      ),
+                      onTap: () => _openSeries(book),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          Expanded(
+                            child: ShelfCoverFrame(
+                              child: _RemoteMangaCover(
+                                backend: _backend,
+                                book: book,
+                              ),
+                            ),
+                          ),
+                          ShelfCardMeta(title: book.displayName),
+                        ],
                       ),
                     ),
-                  ],
-                ),
-              );
-            },
+                  );
+                }),
+              ),
+            ),
           ),
         );
       },
@@ -224,20 +264,32 @@ class _RemoteMangaCover extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String? url = book.coverUrl;
+    // 占位底跟随主题中性色：black12 在深色主题下几乎不可见。
+    final ColorScheme cs = Theme.of(context).colorScheme;
     if (url == null || url.isEmpty) {
-      return const ColoredBox(
-        color: Colors.black12,
-        child: Center(child: Icon(Icons.menu_book_outlined)),
+      return ColoredBox(
+        color: cs.surfaceContainerHighest,
+        child: Center(
+          child: FushiIcon(
+            Icons.menu_book_outlined,
+            color: cs.onSurfaceVariant,
+          ),
+        ),
       );
     }
     return Image(
       image: RemoteCoverImage(url, backend, cacheKey: book.downloadId),
       fit: BoxFit.cover,
       errorBuilder: (BuildContext context, Object error, StackTrace? stack) =>
-          const ColoredBox(
-        color: Colors.black12,
-        child: Center(child: Icon(Icons.broken_image_outlined)),
-      ),
+          ColoredBox(
+            color: cs.surfaceContainerHighest,
+            child: Center(
+              child: FushiIcon(
+                Icons.broken_image_outlined,
+                color: cs.onSurfaceVariant,
+              ),
+            ),
+          ),
     );
   }
 }

@@ -2,19 +2,21 @@ import 'dart:io';
 
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_core/fushi_core.dart';
 
 import 'package:fushi/src/media/discovery/media_discovery_source.dart';
+import 'package:fushi_engine/media/torrent/bt_site_config.dart';
 import 'package:fushi/src/media/discovery/opds_server_config.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/pages/implementations/discovery_source_settings_section.dart';
 
 import '../helpers/test_platform_services.dart';
+import '../helpers/glass_unwrap.dart';
 
 /// 「发现来源」开关区：它是 `discovery_disabled_sources` 这个偏好的**唯一** UI，
 /// 所以断言必须落到偏好本身（写穿），而不是 widget 的局部状态。
@@ -25,7 +27,7 @@ void main() {
   late Directory pathProviderDir;
   setUpAll(() {
     pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_discovery_settings_pp');
+        Directory.systemTemp.createTempSync('fushi_discovery_settings_pp');
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -50,7 +52,7 @@ void main() {
     db = FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
     prefs = PreferencesRepository(db);
     await prefs.loadFromDb();
-    storeDir = Directory.systemTemp.createTempSync('hibiki_discovery_settings');
+    storeDir = Directory.systemTemp.createTempSync('fushi_discovery_settings');
     appModel = AppModel(testPlatformServices())
       ..wireLocalAudioForTesting(prefsRepo: prefs, databaseDirectory: storeDir);
   });
@@ -79,7 +81,7 @@ void main() {
         ),
       );
 
-  testWidgets('lists every registered discovery source, sukebei off by default',
+  testWidgets('lists every registered built-in discovery source, all on by default',
       (WidgetTester tester) async {
     tester.view.physicalSize = const Size(800, 2400);
     tester.view.devicePixelRatio = 1;
@@ -92,6 +94,11 @@ void main() {
     final List<MediaDiscoverySource> sources =
         appModel.mediaDiscoveryService.sources;
     expect(sources, isNotEmpty);
+    // Fushi 不内置任何 BT 站：注册表里不该再有旧的 nyaa / sukebei 内置源。
+    expect(
+      sources.map((MediaDiscoverySource s) => s.id),
+      isNot(anyOf(contains('nyaa'), contains('sukebei'))),
+    );
     for (final MediaDiscoverySource source in sources) {
       final Finder row =
           find.byKey(ValueKey<String>('discovery-source-${source.id}'));
@@ -99,8 +106,8 @@ void main() {
       await tester.ensureVisible(row);
       await tester.pumpAndSettle();
       expect(
-        tester.widget<SwitchListTile>(row).value,
-        source.id == 'sukebei' ? isFalse : isTrue,
+        tester.widget<SwitchListTile>(glassUnwrap<SwitchListTile>(row)).value,
+        isTrue,
         reason: '${source.id} default',
       );
     }
@@ -136,9 +143,45 @@ void main() {
       findsNothing,
     );
     // 内置源仍在。
+    final MediaDiscoverySource builtin = appModel.mediaDiscoveryService.sources
+        .firstWhere((MediaDiscoverySource s) => !s.isUserConfigured);
     expect(
-      find.byKey(const ValueKey<String>('discovery-source-nyaa')),
+      find.byKey(ValueKey<String>('discovery-source-${builtin.id}')),
       findsOneWidget,
+    );
+  });
+
+  testWidgets('用户添加的 BT 站不进这一区（启停在 BT 站设置区那条记录上）',
+      (WidgetTester tester) async {
+    await prefs.setBtSites(<BtSiteConfig>[
+      BtSiteConfig(
+        id: 'site1',
+        baseUrl: Uri.parse('https://bt.example.com'),
+        format: BtSiteFormat.nyaa,
+        domains: const <BtSiteDomain>{BtSiteDomain.manga},
+        nyaaCategories: const <BtSiteDomain, String>{
+          BtSiteDomain.manga: '3_1',
+        },
+      ),
+    ]);
+    tester.view.physicalSize = const Size(800, 2400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(harness());
+    await tester.pumpAndSettle();
+
+    // 前提：站点确实已作为自配源进了运行期注册表。
+    expect(
+      appModel.mediaDiscoveryService.sources
+          .where((MediaDiscoverySource s) => s.id == 'bt-site1')
+          .single
+          .isUserConfigured,
+      isTrue,
+    );
+    expect(
+      find.byKey(const ValueKey<String>('discovery-source-bt-site1')),
+      findsNothing,
     );
   });
 
@@ -151,24 +194,24 @@ void main() {
     await tester.pumpWidget(harness());
     await tester.pumpAndSettle();
 
-    final Finder nyaa =
-        find.byKey(const ValueKey<String>('discovery-source-nyaa'));
-    await tester.ensureVisible(nyaa);
+    final String sourceId = appModel.mediaDiscoveryService.sources
+        .firstWhere((MediaDiscoverySource s) => !s.isUserConfigured)
+        .id;
+    final Finder row =
+        find.byKey(ValueKey<String>('discovery-source-$sourceId'));
+    await tester.ensureVisible(row);
     await tester.pumpAndSettle();
-    await tester.tap(nyaa);
+    await tester.tap(row);
     await tester.pumpAndSettle();
 
     // 停用清单是**唯一**状态：开关写的就是发现页聚合读的那个偏好。
-    expect(appModel.discoveryDisabledSourceIds, contains('nyaa'));
-    expect(prefs.discoveryDisabledSources.split(','), contains('nyaa'));
-    expect(tester.widget<SwitchListTile>(nyaa).value, isFalse);
+    expect(appModel.discoveryDisabledSourceIds, contains(sourceId));
+    expect(prefs.discoveryDisabledSources.split(','), contains(sourceId));
+    expect(tester.widget<SwitchListTile>(glassUnwrap<SwitchListTile>(row)).value, isFalse);
 
-    // 出厂就停用的 sukebei 不能被这次写入顺手打开。
-    expect(appModel.discoveryDisabledSourceIds, contains('sukebei'));
-
-    await tester.tap(nyaa);
+    await tester.tap(row);
     await tester.pumpAndSettle();
-    expect(appModel.discoveryDisabledSourceIds, isNot(contains('nyaa')));
-    expect(tester.widget<SwitchListTile>(nyaa).value, isTrue);
+    expect(appModel.discoveryDisabledSourceIds, isNot(contains(sourceId)));
+    expect(tester.widget<SwitchListTile>(glassUnwrap<SwitchListTile>(row)).value, isTrue);
   });
 }

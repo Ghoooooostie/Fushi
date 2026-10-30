@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:fushi/src/sync/sync_repository.dart';
 import 'package:fushi_engine/foundation/engine_log.dart';
@@ -71,6 +72,19 @@ List<FushiClientUrl> interconnectPeerAddressesOf(
   }
   return const <FushiClientUrl>[];
 }
+
+/// 「忘记这台 host」：去掉 [url] 那一行；它带 [hostId] 时删的是**那台 host** 的全部
+/// 地址——同组其余地址都带着它的 token，只删一行等于没解绑（剩下的照常同步，被删的
+/// learned 地址 10 分钟内还会被学回来）。老条目（无 hostId）只删那一行。
+/// 设置页地址行的删除与控制通道 `peer forget` 共用。
+List<FushiClientUrl> withoutInterconnectHost(
+  Iterable<FushiClientUrl> urls, {
+  required String url,
+  String? hostId,
+}) => <FushiClientUrl>[
+  for (final FushiClientUrl u in urls)
+    if (u.url != url && (hostId == null || u.hostId != hostId)) u,
+];
 
 /// 每台 host 的**连接代表**：组内并发选路后排在最前的地址（可达者优先）。用于
 /// 「对每台已配对设备各发一次请求」的场景。
@@ -390,6 +404,98 @@ bool _anchorMayClaimHostId(
   return true;
 }
 
+/// 同一网段（/64 前缀 + scheme + 端口）的 IPv6 地址只留一条。
+///
+/// 开着 IPv6 隐私扩展的主机（Windows / Android / macOS 默认）每天换一个临时地址，
+/// 旧的以「已弃用」状态再挂最多 7 天；`dart:io` 拿不到临时 / 弃用标志，host 会把
+/// 它们全部公布出来。逐条学下来，配对列表就会堆满同一台机器的十几行 IPv6，每次
+/// 选路还要逐条探测。同一 /64 里的地址可达性相同，留一条就够。
+///
+/// 选哪条：[preferUrls] 里最先出现的（已在列表里的那条，免得每次刷新换一条），
+/// 没有就取公布顺序的第一条。非 IPv6 字面量地址原样保留。
+List<InterconnectHostAddress> collapseRotatingIpv6Addresses(
+  List<InterconnectHostAddress> addresses, {
+  List<String> preferUrls = const <String>[],
+}) {
+  final Map<String, List<InterconnectHostAddress>> byPrefix =
+      <String, List<InterconnectHostAddress>>{};
+  for (final InterconnectHostAddress a in addresses) {
+    final String? key = _ipv6PrefixKey(a.url);
+    if (key != null) (byPrefix[key] ??= <InterconnectHostAddress>[]).add(a);
+  }
+  final Set<String> chosen = <String>{};
+  for (final List<InterconnectHostAddress> group in byPrefix.values) {
+    InterconnectHostAddress pick = group.first;
+    for (final String url in preferUrls) {
+      final int i = group.indexWhere(
+        (InterconnectHostAddress a) => a.url == url,
+      );
+      if (i >= 0) {
+        pick = group[i];
+        break;
+      }
+    }
+    chosen.add(pick.url);
+  }
+  return <InterconnectHostAddress>[
+    for (final InterconnectHostAddress a in addresses)
+      if (_ipv6PrefixKey(a.url) == null || chosen.contains(a.url)) a,
+  ];
+}
+
+/// `https://[2408:…]:38765` → `https|2408:821b:9a33:8900|38765`；非 IPv6 字面量 → null。
+String? _ipv6PrefixKey(String url) {
+  final Uri? uri = Uri.tryParse(url);
+  if (uri == null || !uri.host.contains(':')) return null;
+  final InternetAddress? ip = InternetAddress.tryParse(uri.host);
+  if (ip == null || ip.type != InternetAddressType.IPv6) return null;
+  final List<int> raw = ip.rawAddress;
+  final String prefix = <String>[
+    for (int i = 0; i < 8; i += 2)
+      ((raw[i] << 8) | raw[i + 1]).toRadixString(16),
+  ].join(':');
+  return '${uri.scheme}|$prefix|${uri.port}';
+}
+
+/// 53NT7G_tSO：把 host 刚签发给本机的 per-peer token 落到 [url] 那一行，**并同步到
+/// 同一台 host 的全部地址**（纯函数）。
+///
+/// host 按设备记 token（`upsertPairedPeer` 以 deviceId 为键）：经任一地址重新配对，
+/// 这台设备的旧 token 当场作废。以前只改了配对用的那一行，同组其余地址（内网 /
+/// 外网 / IPv6 / P2P）还拿着旧 token 撞 401——用户看到的就是「内网和外网 token
+/// 不同」，而 UI 又不提供逐地址配置。
+///
+/// [hostId] 是配对时 `/api/ping` 回报的 host 身份：这一行还没有 hostId 时，按
+/// 与地址学习同一判据（[_anchorMayClaimHostId]：同组已钉扎的证书指纹必须相同）
+/// 给它补标，再按组同步。不满足判据（对不上指纹 / 明文地址想并入已有组）就只改
+/// 这一行，绝不把 token 发去另一台机器。[url] 不在列表里 → 原样返回。
+List<FushiClientUrl> applyIssuedInterconnectToken(
+  List<FushiClientUrl> list, {
+  required String url,
+  required String token,
+  String? hostId,
+}) {
+  final int index = list.indexWhere((FushiClientUrl u) => u.url == url);
+  if (index < 0) return list;
+  FushiClientUrl row = list[index];
+  if (hostId != null &&
+      hostId.isNotEmpty &&
+      (row.hostId == null || row.hostId!.isEmpty) &&
+      _anchorMayClaimHostId(list, index, hostId)) {
+    row = row.copyWith(hostId: hostId);
+  }
+  final String? group = row.hostId;
+  return <FushiClientUrl>[
+    for (int i = 0; i < list.length; i++)
+      if (i == index)
+        row.copyWith(token: token)
+      else if (group != null && group.isNotEmpty && list[i].hostId == group)
+        list[i].copyWith(token: token)
+      else
+        list[i],
+  ];
+}
+
 /// 把 host 公布的地址集合并进候选列表（纯函数，便于单测）。
 ///
 /// - [anchorUrl] 是本次拿到地址集时用的那条地址；它被标上 [hostId]。列表里找不
@@ -411,9 +517,25 @@ List<FushiClientUrl> mergeLearnedHostAddresses(
   if (anchorIndex < 0) return list;
   if (!_anchorMayClaimHostId(list, anchorIndex, hostId)) return list;
   final FushiClientUrl anchor = list[anchorIndex].copyWith(hostId: hostId);
+  final List<InterconnectHostAddress> kept = collapseRotatingIpv6Addresses(
+    addresses,
+    preferUrls: <String>[
+      anchor.url,
+      for (final FushiClientUrl u in list) u.url,
+    ],
+  );
   final Set<String> published = <String>{
-    for (final InterconnectHostAddress a in addresses) a.url,
+    for (final InterconnectHostAddress a in kept) a.url,
   };
+
+  // 53NT7G_tSO：锚点刚用自己的 token 从 host 取到了地址集（`/api/host/addresses`
+  // 要鉴权），所以它手里的就是 host 此刻认的那一份。同组其余地址若还拿着重新配对前
+  // 的旧 token（已被 host 作废），在这里一并换新——已经坏掉的老配置也能自愈。
+  final String? anchorToken = anchor.token;
+  FushiClientUrl withAnchorToken(FushiClientUrl u) =>
+      anchorToken == null || u.token == anchorToken
+      ? u
+      : u.copyWith(token: anchorToken);
 
   final List<FushiClientUrl> out = <FushiClientUrl>[];
   for (int i = 0; i < list.length; i++) {
@@ -422,13 +544,14 @@ List<FushiClientUrl> mergeLearnedHostAddresses(
       continue; // host 不再公布的学到地址：删。
     }
     if (u.hostId == null && !u.learned && published.contains(u.url)) {
-      out.add(u.copyWith(hostId: hostId)); // 手输的同一台机器：归组。
+      // 手输的同一台机器：归组。
+      out.add(withAnchorToken(u.copyWith(hostId: hostId)));
       continue;
     }
-    out.add(u);
+    out.add(u.hostId == hostId ? withAnchorToken(u) : u);
   }
 
-  for (final InterconnectHostAddress a in addresses) {
+  for (final InterconnectHostAddress a in kept) {
     // 只学带密码学身份的地址（https / p2p）；明文地址一律不学，见
     // [isInterconnectLearnableUrl]。
     if (!isInterconnectLearnableUrl(a.url)) continue;

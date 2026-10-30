@@ -13,6 +13,11 @@ library;
 /// label; keeping it an enum (not a pre-localized string) keeps i18n in the
 /// widget layer and makes the orchestrator testable.
 enum SyncPhase {
+  /// 解析同步根 + 一次列举远端清单（`snapshotListing`）+ 清理根下残留。每轮最先走网络的
+  /// 一步，库大时可达数十秒；没有这个阶段名时进度行停在「正在准备同步」，与「等锁 /
+  /// 鉴权」同形，用户看不出同步在干活。
+  remoteListing,
+
   /// Downloading + importing books that exist remotely but not locally.
   books,
 
@@ -31,6 +36,31 @@ enum SyncPhase {
 
   /// Video files in the `__videos__` namespace (多端库联合视图 §2.6).
   videos,
+
+  /// Font files + font settings in the `__fonts__` namespace.
+  fonts,
+
+  // ── 收尾阶段（DRXb43v3fA / y3tzvcnrPU）─────────────────────────────────
+  // 有声书 / 视频之后这几步都走网络、在 Drive 上合计可达十几秒。它们没有阶段名时
+  // 进度行停在上一阶段最后一本书上，用户看到的就是「最后一本卡死」。不拆条目：
+  // 只发 itemTotal 0 的阶段 tick（不确定进度条）。
+
+  /// Cross-device aggregate: statistics, favorites, web history.
+  statistics,
+
+  /// Collections plus what hangs off them (tags, media links, scraped metadata).
+  collections,
+
+  /// Deletion-propagation tombstones.
+  deletions,
+
+  /// Pending card-mining relay (`__pending_mines__`).
+  pendingMines,
+
+  /// 通道编排跑完之后的后置步骤（复习同步、刷新库页）。它们不发阶段 tick，没有
+  /// 这一档时进度行会一直挂着编排的最后一个阶段名（用户看到的是「同步待发制卡」
+  /// 长时间不动，以为每轮都在传卡）。
+  finishing,
 }
 
 /// One progress tick within a sync phase.
@@ -46,6 +76,7 @@ class SyncProgress {
     required this.itemTotal,
     this.title,
     this.fileFraction,
+    this.bytesPerSecond,
   });
 
   final SyncPhase phase;
@@ -53,6 +84,11 @@ class SyncProgress {
   final int itemTotal;
   final String? title;
   final double? fileFraction;
+
+  /// Current transfer rate, or null when this tick carries no byte count (an
+  /// atomic item, a transport that only reports a fraction, or the wait for a
+  /// package's first byte) or the meter has not seen enough of a window yet.
+  final double? bytesPerSecond;
 
   /// 0..1 progress within the current phase.
   ///
@@ -68,6 +104,60 @@ class SyncProgress {
     if (itemTotal <= 0) return null;
     final double file = (fileFraction ?? 1).clamp(0.0, 1.0);
     return ((itemIndex + file) / itemTotal).clamp(0.0, 1.0);
+  }
+}
+
+/// Sliding-window transfer rate over the per-file byte counts a sync reports.
+///
+/// Transports report bytes done *within the current file*, so the caller names
+/// the file each sample belongs to; when the name changes (or the count drops
+/// back, as on a retry of the same file) the meter folds the finished count
+/// into a running total instead of treating the drop as negative throughput.
+/// The name is the only reliable boundary: a small file's final count can be
+/// below the next file's first one, which a "count went down" check misses.
+/// Samples
+/// older than [window] are discarded, so a long gap (the host packaging the
+/// next dictionary) does not drag the average down nor leave a stale rate.
+class TransferRateMeter {
+  TransferRateMeter({
+    DateTime Function()? now,
+    this.window = const Duration(seconds: 3),
+    this.minSpan = const Duration(milliseconds: 300),
+  }) : _now = now ?? DateTime.now;
+
+  final DateTime Function() _now;
+
+  /// How far back samples count towards the average.
+  final Duration window;
+
+  /// Minimum time the retained samples must span before a rate is reported;
+  /// shorter spans divide by near-zero and flicker.
+  final Duration minSpan;
+
+  final List<(DateTime, int)> _samples = <(DateTime, int)>[];
+  int _finishedBytes = 0;
+  int _fileBytes = 0;
+  Object? _file;
+
+  /// Records that [file] has [bytesDone] bytes transferred and returns the
+  /// rate in bytes per second, or null if not yet measurable. [file] is any
+  /// value with equality that identifies the transfer (a record works).
+  double? sample(Object file, int bytesDone) {
+    if (file != _file || bytesDone < _fileBytes) {
+      _finishedBytes += _fileBytes;
+      _file = file;
+    }
+    _fileBytes = bytesDone;
+
+    final DateTime now = _now();
+    _samples
+      ..add((now, _finishedBytes + bytesDone))
+      ..removeWhere(((DateTime, int) s) => now.difference(s.$1) > window);
+
+    final (DateTime t0, int b0) = _samples.first;
+    final Duration span = now.difference(t0);
+    if (span < minSpan) return null;
+    return (_samples.last.$2 - b0) * 1000000 / span.inMicroseconds;
   }
 }
 

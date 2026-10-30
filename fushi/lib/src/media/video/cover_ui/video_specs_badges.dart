@@ -1,4 +1,7 @@
-/// 封面左下角的规格角标（v95）：`4K` / `HDR10`。
+/// 库页卡片的规格角标（v95）：`4K` / `HDR10` / `Atmos`（或 `7.1` / `5.1`）。
+///
+/// 2026-10-25 库页定版后封面上不再压角标，它和原盘角标（BD / UHD / DVD）一起排在
+/// 封面下副行的尾部（用户 2026-10-26：格式标签要留着，但别压封面）。
 ///
 /// 单独一个 widget 而不是在 `_buildCard` 里内联，是为了**把重建面钉死在角标本身**。
 /// [VideoSpecsService] 每探完一个文件就通知一次（滚一屏几十次），如果在库页
@@ -14,7 +17,7 @@
 /// 会让那些测试全部抛。注入让依赖显式，也让「不传就不显示」成为测试宿主的默认行为。
 library;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'package:fushi/src/media/video/video_specs_display.dart';
 import 'package:fushi/src/media/video/video_specs_service.dart';
@@ -22,7 +25,11 @@ import 'package:fushi/src/utils/components/cover_badge.dart';
 import 'package:fushi_engine/media/video/strm_file.dart'
     show lacksLocalMediaFile;
 
-/// 压在封面左下角的规格角标条。规格未知时**整个不占位**（返回 SizedBox.shrink）。
+/// 排在卡片副行尾部的规格角标条。规格未知时**整个不占位**（返回 SizedBox.shrink）。
+///
+/// 只排**一行**：副行高度固定，宿主给的宽度放不下时，排在后面的角标（音频 →
+/// 动态范围）整枚不显示，而不是溢出、换行撑高文字块或切半个胶囊——清晰度永远排
+/// 第一个。
 class VideoSpecsBadgeStrip extends StatefulWidget {
   const VideoSpecsBadgeStrip({
     required this.service,
@@ -97,17 +104,21 @@ class _VideoSpecsBadgeStripState extends State<VideoSpecsBadgeStrip> {
     return ListenableBuilder(
       listenable: service,
       builder: (BuildContext context, Widget? _) {
-        final List<String> badges =
-            videoSpecsCoverBadges(service.specsFor(path));
+        final List<String> badges = videoSpecsCoverBadges(
+          service.specsFor(path),
+        );
         if (badges.isEmpty) return const SizedBox.shrink();
-        return Row(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            for (final String badge in badges) ...<Widget>[
-              if (badge != badges.first) const SizedBox(width: 4),
-              CoverBadge(label: badge),
+        // 一行高的盒子里放 Wrap：放不下的角标掉到第二行，被裁掉不画。
+        return SizedBox(
+          height: coverBadgeLabelHeight(context),
+          child: Wrap(
+            spacing: 4,
+            runSpacing: 4,
+            clipBehavior: Clip.hardEdge,
+            children: <Widget>[
+              for (final String badge in badges) CoverBadge(label: badge),
             ],
-          ],
+          ),
         );
       },
     );

@@ -1,0 +1,987 @@
+part of '../video_fushi_page.dart';
+
+/// The disc supplies the picture and buttons. Flutter only forwards input and
+/// binds a selected physical playlist to the existing learning pipeline.
+extension _VideoDiscMenu on _VideoFushiPageState {
+  Future<bool> _ensureDiscMenuRuntime(String playlistPath) async {
+    // DVD menus run in libdvdnav: no BD-J runtime to provision.
+    if (isDvdTitlePath(playlistPath)) return true;
+    final String? root = discRootForMemberPath(playlistPath);
+    if (root == null) return true; // Controller reports malformed input.
+    final BlurayMenuInfo? info;
+    try {
+      info = await readBlurayMenuInfo(root);
+    } catch (error, stack) {
+      ErrorLogService.instance.log('VideoDiscMenu.runtime', error, stack);
+      if (mounted) {
+        _rebuild(() {
+          _failed = true;
+          _failReason = t.video_disc_runtime_required;
+        });
+      }
+      return false;
+    }
+    return _ensureDiscMenuRuntimeFor(info);
+  }
+
+  /// BD-J 运行时检查本体：本地盘读本机 `index.bdmv`，远端盘读共享里的同一文件，
+  /// 之后完全相同。
+  Future<bool> _ensureDiscMenuRuntimeFor(BlurayMenuInfo? info) async {
+    try {
+      if (!mounted) return false;
+      if (info?.requiresJava != true) return true;
+      final BlurayJavaRuntimeManager manager = BlurayJavaRuntimeManager();
+      if (await manager.probeJavaHome() != null) return mounted;
+      if (!mounted) return false;
+      if (!manager.canInstall) {
+        if (!Platform.isWindows) return true;
+        throw const VideoDiscMenuException('java-runtime-unavailable');
+      }
+      final bool installed =
+          await _focusOwnership.guardOverlay(
+            () => showAppDialog<bool>(
+              context: context,
+              barrierDismissible: false,
+              builder: (_) => _BlurayJavaRuntimeInstallDialog(manager: manager),
+            ),
+          ) ??
+          false;
+      if (!installed && mounted) {
+        _rebuild(() {
+          _failed = true;
+          _failReason = t.video_disc_runtime_required;
+        });
+      }
+      return installed && mounted;
+    } catch (error, stack) {
+      ErrorLogService.instance.log('VideoDiscMenu.runtime', error, stack);
+      if (mounted) {
+        _rebuild(() {
+          _failed = true;
+          _failReason = t.video_disc_runtime_required;
+        });
+      }
+      return false;
+    }
+  }
+
+  bool _discExtractionAllowed(VideoPlayerController controller) {
+    if (!controller.isBlurayNavigationSession) return true;
+    if (controller.discMiningAvailable && !_discLearningBlocked) return true;
+    final String message = switch (controller.discMiningUnavailableReason) {
+      'multi-angle-source' => t.video_disc_angle_extraction_unavailable,
+      'audio-track-unavailable' => t.video_disc_audio_selection_pending,
+      'extraction-source-unavailable' => t.video_clip_export_input_missing,
+      'encrypted-extraction-source' => t.video_disc_extraction_unavailable,
+      kVideoDiscRemoteExtractionUnavailable =>
+        t.video_disc_extraction_unavailable,
+      _ => t.video_disc_title_binding_failed,
+    };
+    _showOsd(message, severity: ToastSeverity.warning);
+    return false;
+  }
+
+  // Pending menus still own input so arrows cannot leak into seek/volume.
+  // Dispatch below consumes them without sending commands until Top is ready.
+  bool get _discOwnsInput =>
+      _discLearningBlocked &&
+      !_videoNavigablePanelOpen &&
+      !_hasVisiblePopup &&
+      ModalRoute.of(_videoControlsContext ?? context)?.isCurrent != false;
+
+  void _reclaimDiscMenuFocusAfterAttachment(BuildContext hostContext) {
+    if (!mounted ||
+        !hostContext.mounted ||
+        !_discOwnsInput ||
+        ModalRoute.of(hostContext)?.isCurrent != true) {
+      return;
+    }
+    // Runs after the replacement Focus host has attached and the old adaptive
+    // controls have detached. Keep all page/popup focus policy centralized.
+    _focusOwnership.reclaim(FocusReclaimCause.contentReady);
+  }
+
+  Future<void> _runDiscNavigation(String action) async {
+    if (_controller?.discMenuEntryPending == true) return;
+    // Remote keys go through the command table of the session's disc type
+    // (videoDiscMenuKeyActions: Blu-ray libbluray / DVD libdvdnav).
+    final VideoDiscMenuKey? key = videoDiscMenuKeyForAction(action);
+    try {
+      await (key == null
+          ? _controller?.discNavigation(action)
+          : _controller?.discMenuKey(key));
+    } catch (error, stack) {
+      ErrorLogService.instance.log('VideoDiscMenu.navigate', error, stack);
+      if (mounted) {
+        _showOsd(t.video_disc_navigation_failed, severity: ToastSeverity.error);
+      }
+    }
+  }
+
+  bool _handleDiscMenuKey(KeyEvent event) {
+    // macOS：Cmd+W 直接退出原盘会话（整段会话都算，正片播放中也是）。
+    if (Platform.isMacOS &&
+        event is KeyDownEvent &&
+        event.logicalKey == LogicalKeyboardKey.keyW &&
+        HardwareKeyboard.instance.isMetaPressed &&
+        _controller?.isBlurayNavigationSession == true) {
+      unawaited(_exitDiscSession());
+      return true;
+    }
+    if (!_discOwnsInput ||
+        HardwareKeyboard.instance.isControlPressed ||
+        HardwareKeyboard.instance.isAltPressed ||
+        HardwareKeyboard.instance.isMetaPressed) {
+      // 按住期间焦点 / 浮层变了：松开沿照样要收掉圆环，否则它卡在屏幕中间。
+      if (event is KeyUpEvent &&
+          _discExitHold.release(LogicalKeyboardKey.escape)) {
+        return true;
+      }
+      return false;
+    }
+    // Esc 是会话键而不是盘的 Return：短按呼出 / 退出控制栏，按住约 1 秒直接退出。
+    if (event.logicalKey == LogicalKeyboardKey.escape) {
+      _handleDiscExitHoldEdge(event, LogicalKeyboardKey.escape);
+      return true;
+    }
+    final String? action = blurayMenuKeyAction(event.logicalKey);
+    if (action == null) return false;
+    // 操作盘菜单不呼出控制栏；控制栏开着时算一次操作，重新计 3 秒。
+    if (_discMenuChromeVisible.value) _pokeDiscMenuChrome();
+    if (_controller?.discMenuEntryPending == true) return true;
+    if (event is KeyDownEvent ||
+        event is KeyRepeatEvent && action != 'select') {
+      unawaited(_runDiscNavigation(action));
+    }
+    return true;
+  }
+
+  bool _handleDiscMenuGamepad(GamepadButton button) {
+    if (!_discOwnsInput) return false;
+    if (button == GamepadButton.b) {
+      // 手柄 B 与 Esc 同语义：短按呼出 / 退出控制栏，按住约 1 秒直接退出。松开沿
+      // 经 [_handleDiscMenuGamepadRelease]。
+      _discExitHold.press(GamepadButton.b);
+      return true;
+    }
+    final String? action = blurayMenuGamepadAction(button);
+    if (action == null) return false;
+    if (_discMenuChromeVisible.value) _pokeDiscMenuChrome();
+    if (_controller?.discMenuEntryPending == true) return true;
+    unawaited(_runDiscNavigation(action));
+    return true;
+  }
+
+  bool _handleDiscMenuGamepadRelease(GamepadButton button) {
+    if (button != GamepadButton.b || !_discExitHold.active) return false;
+    if (_discExitHold.release(GamepadButton.b)) _discSessionBack();
+    return true;
+  }
+
+  void _handleDiscExitHoldEdge(KeyEvent event, Object source) {
+    if (event is KeyDownEvent) {
+      _discExitHold.press(source);
+    } else if (event is KeyUpEvent) {
+      if (_discExitHold.release(source)) _discSessionBack();
+    }
+    // KeyRepeatEvent：按住期间的自动重复不是新的一次按下。
+  }
+
+  /// 原盘菜单画面（会话的菜单阶段）正在显示：控制栏、点击层级、Esc 语义只在这时生效；
+  /// 进了正片就是普通播放器。
+  bool get _discSessionSurfaceActive => _discLearningBlocked;
+
+  /// 桌面端「播放原盘时自动全屏」：只对从库里显式进入的原盘会话生效。
+  bool get _wantsDiscAutoFullscreen =>
+      widget.openBlurayMenu &&
+      !isMobilePlatform &&
+      appModel.videoDiscAutoFullscreen;
+
+  /// 「返回」在原盘会话里的第一步（页面浮层已由调用方先关）：控制栏收着就只把它呼出来
+  /// 并返回 true；开着返回 false，调用方照常退出。
+  bool _discSessionShowBarOnBack() {
+    if (!_discSessionSurfaceActive || _discSessionExitRequested) return false;
+    if (resolveDiscSessionBack(barVisible: _discMenuChromeVisible.value) !=
+        DiscSessionBackRoute.showBar) {
+      return false;
+    }
+    _pokeDiscMenuChrome();
+    return true;
+  }
+
+  /// Esc / 手柄 B 短按：先关页面浮层，再按控制栏状态呼出或退出。
+  void _discSessionBack() {
+    if (_dismissTopForegroundLayer()) return;
+    if (_discSessionShowBarOnBack()) return;
+    unawaited(_exitDiscSession());
+  }
+
+  /// 退出整个原盘会话回到详情页：会话进过的全屏先退（窗口按进入前状态还原），再离开
+  /// 本页。不经页面浮层表——调用方要么已关过（短按），要么用户明确要直接走（按满 /
+  /// Cmd+W / 「退出原盘」）。
+  Future<void> _exitDiscSession() async {
+    _discExitHold.cancel();
+    if (!mounted || _discSessionExitRequested) return;
+    // 退出意图一旦成立，返回链上的「先呼出控制栏」那一步就不再拦它。
+    _discSessionExitRequested = true;
+    final BuildContext? controlsContext = _videoControlsContext;
+    if (controlsContext != null &&
+        controlsContext.mounted &&
+        isFullscreen(controlsContext)) {
+      await _exitVideoFullscreen(controlsContext);
+      if (!mounted) return;
+    }
+    // 与 Esc / 系统返回同一个退出汇聚点（落库与 pop 之间不 await，BUG-2119）。
+    await _handleBackOrExit();
+  }
+
+  void _syncDiscTrackSelection(VideoPlayerController controller) {
+    final BlurayDiscTrackSelection selection = resolveBlurayDiscTrackSelection(
+      discOwnsTracks: controller.discOwnsTracks,
+      nativeAudioId: controller.activeAudioTrackId,
+      nativeSubtitleId: controller.resolvedDiscSubtitleTrackId,
+      nativeSubtitleStreamIndex: controller.activeSubtitleStreamIndex,
+      currentSubtitleSource: _currentSubtitleSource,
+      currentSecondarySubtitleSource: _currentSecondarySubtitleSource,
+    );
+    final List<SubtitleTrack> tracks = controller.subtitleTracks;
+    final bool tracksChanged = !identical(_discLastSubtitleTracks, tracks);
+    if (_currentAudioTrackId == selection.audioId &&
+        _currentSubtitleSource == selection.subtitleSource &&
+        _currentSecondarySubtitleSource == selection.secondarySubtitleSource &&
+        !tracksChanged &&
+        (!controller.discOwnsTracks ||
+            (_delayMs == 0 && _secondaryDelayMs == null))) {
+      return;
+    }
+    _rebuild(() {
+      if (controller.discOwnsTracks) {
+        _delayMs = 0;
+        _secondaryDelayMs = null;
+      }
+      _currentAudioTrackId = selection.audioId;
+      _currentSubtitleSource = selection.subtitleSource;
+      _currentSecondarySubtitleSource = selection.secondarySubtitleSource;
+      if (tracksChanged) {
+        _discLastSubtitleTracks = tracks;
+        _discSubtitleTracksRevision++;
+        _subtitleMenuSourcesPath = null;
+        _subtitleMenuLoading = false;
+      }
+    });
+    if (tracksChanged &&
+        !_discLearningBlocked &&
+        _videoSidePanel.value?.kind == _VideoSidePanelKind.subtitle) {
+      unawaited(_ensureSubtitleMenuSourcesLoaded());
+    }
+  }
+
+  void _onDiscNavigationChanged() {
+    final VideoPlayerController? controller = _controller;
+    if (!mounted ||
+        controller == null ||
+        !controller.isBlurayNavigationSession) {
+      return;
+    }
+    _syncDiscTrackSelection(controller);
+    final String? error = controller.discMenuError;
+    if (error != null && !_failed) {
+      unawaited(controller.pause());
+      _rebuild(() {
+        _failed = true;
+        _failReason = error.contains('java-runtime-unavailable')
+            ? t.video_disc_runtime_required
+            : error == 'navigation-open-failed'
+            ? t.video_disc_menu_open_failed
+            : t.video_disc_navigation_failed;
+      });
+    }
+    final bool blocked =
+        controller.discMenuActive || !controller.discTitleReady;
+    if (blocked && !_discMenuWasActive) {
+      // These panels are replaced by the authored menu surface. Clear their
+      // ownership too, otherwise invisible panels keep swallowing menu arrows.
+      if (_videoSidePanel.value != null) _hideVideoSidePanel();
+      if (_subtitleListVisible.value) _closeSubtitleJumpList();
+      if (_episodeListVisible.value) _closeEpisodeList();
+      _hideVideoControlEditOverlay(revealControls: false);
+      _watchTracker?.dispose();
+      _watchTracker = null;
+      _watchTrackerCoverageKey = null;
+      _miningDraft.clear();
+      _lastLookupCue = null;
+      _lastLookupSentence = '';
+      _subtitleLookupHighlight = null;
+      _clearClipExportState();
+      _pausedForLookup = false;
+      if (_hasVisiblePopup) _popNestedPopupAt(0);
+      // Reveal the menu chrome once on entry so it can be found, then let it fade.
+      // The previous chrome may have unmounted under the pointer / focus without
+      // an exit callback, so its holds do not survive into this menu visit.
+      _discMenuChromeHovered = false;
+      _discMenuChromeFocused = false;
+      _pokeDiscMenuChrome();
+    }
+    _discMenuWasActive = blocked;
+    final String? selected = controller.selectedDiscPlaylistPath;
+    if (selected != _discBindingPath ||
+        _discNativeGeneration != controller.discTitleGeneration) {
+      _discNativeGeneration = controller.discTitleGeneration;
+      _episodeLoadSeq++;
+      // 换了光盘标题：旧标题的图形字幕整轨转文字作废，强杀在途抽轨（见 _applyLoad）。
+      _cancelGraphicSubtitleOcr();
+      _discBindingPath = selected;
+      final int generation = ++_discBindingGeneration;
+      if (selected != null) {
+        unawaited(
+          _bindDiscPlaylist(
+            controller,
+            selected,
+            generation,
+            controller.discTitleGeneration,
+          ),
+        );
+      }
+    } else if (!blocked) {
+      _ensureWatchTracker(controller, _title ?? '');
+    }
+  }
+
+  Future<void> _bindDiscPlaylist(
+    VideoPlayerController controller,
+    String path,
+    int generation,
+    int nativeGeneration,
+  ) async {
+    bool current() =>
+        mounted &&
+        identical(_controller, controller) &&
+        generation == _discBindingGeneration &&
+        controller.selectedDiscPlaylistPath == path &&
+        controller.discTitleGeneration == nativeGeneration;
+    try {
+      // Menu-only bonus titles can be absent from the importer's filtered list.
+      // They get their row through the importer's own rules (disc source, disc
+      // collection, META disc name) — a hand-built sourceless row is invisible
+      // to every scrape entry point, which select books by source.
+      // Remote disc: the title is the host's; there is no row to bind here.
+      if (controller.isRemoteDiscSession) {
+        if (!current()) return;
+        controller.bindRemoteDiscTitle(expectedGeneration: nativeGeneration);
+        return;
+      }
+      final VideoBookRow? row = isDvdTitlePath(path)
+          ? await ensureDvdTitleInLibrary(appModel.database, path)
+          : await ensureBlurayTitleInLibrary(appModel.database, path);
+      if (!current() || row == null) return;
+      final VideoBookRow selected = row;
+      // Identity changes atomically before enabling title playback consumers.
+      _rebuild(() {
+        _discBookUid = selected.bookUid;
+        _bookRow = selected;
+        final int episode = _episodes.indexWhere(
+          (_PlaylistEpisodeRef entry) => entry.bookUid == selected.bookUid,
+        );
+        _currentEpisode = episode < 0 ? 0 : episode;
+        _title = selected.title;
+        _currentVideoPath = path;
+        // Stored choices remain library candidates; the disc VM owns startup.
+        _currentSubtitleSource = null;
+        _currentSecondarySubtitleSource = null;
+        _currentAudioTrackId = null;
+        _delayMs = 0;
+        _secondaryDelayMs = null;
+        _subtitleMenuSources = const <SubtitleSource>[];
+        _importedSubtitleSources = const <SubtitleSource>[];
+        _favoritedVideoSentences.clear();
+        _danmakuVisibleItems = const <VideoDanmakuItem>[];
+        _subtitleMenuSourcesPath = null;
+        _subtitleMenuLoading = false;
+      });
+      _titleNotifier.value = selected.title;
+      await controller.bindDiscTitle(
+        playlistPath: path,
+        bookUid: selected.bookUid,
+        expectedGeneration: nativeGeneration,
+      );
+      if (!current()) return;
+      if (controller.discMiningAvailable) _setupThumbnailPreview(path);
+      _ensureWatchTracker(controller, selected.title);
+      _syncDiscTrackSelection(controller);
+      unawaited(_refreshFavoritedCueCache());
+    } catch (error, stack) {
+      ErrorLogService.instance.log('VideoDiscMenu.bindTitle', error, stack);
+      if (current()) {
+        _showOsd(
+          t.video_disc_title_binding_failed,
+          severity: ToastSeverity.error,
+        );
+      }
+    }
+  }
+
+  /// 原盘菜单顶栏的自动隐藏：任何指针活动都把它唤出，静置
+  /// [_VideoFushiPageState._videoControlsHoverDuration] 后淡出（与常规控制条同节奏）。
+  /// 指针悬停或焦点停在顶栏上时不排隐藏。
+  void _pokeDiscMenuChrome() {
+    if (!mounted) return;
+    _discMenuChromeVisible.value = true;
+    _discMenuChromeHideTimer?.cancel();
+    if (_discMenuChromeHovered || _discMenuChromeFocused) return;
+    _discMenuChromeHideTimer = Timer(kDiscSessionBarIdleDuration, () {
+      if (mounted) _discMenuChromeVisible.value = false;
+    });
+  }
+
+  void _hideDiscMenuChrome() {
+    _discMenuChromeHideTimer?.cancel();
+    _discMenuChromeVisible.value = false;
+  }
+
+  void _setDiscMenuChromeHovered(bool hovered) {
+    _discMenuChromeHovered = hovered;
+    _pokeDiscMenuChrome();
+  }
+
+  void _setDiscMenuChromeFocused(bool focused) {
+    _discMenuChromeFocused = focused;
+    _pokeDiscMenuChrome();
+  }
+
+  Offset? _discPointerPoint(
+    VideoPlayerController controller,
+    Offset position,
+    Size viewport,
+  ) => blurayMenuPointerPosition(
+    position: position,
+    viewport: viewport,
+    video: Size(
+      (controller.videoWidth ?? 0).toDouble(),
+      (controller.videoHeight ?? 0).toDouble(),
+    ),
+    fit: videoFitModeToBoxFit(_videoFitMode),
+  );
+
+  /// 把一次点击交给原盘，返回盘是否接收（点中按钮）。第 0 步实测：HDMV 点空白时
+  /// `discnav mouse-click` 返回「未接收」，点中按钮返回成功（见 spec 第 0 步）。
+  Future<bool> _clickDiscMenu(
+    VideoPlayerController controller,
+    Offset point,
+  ) async {
+    try {
+      return await controller.clickDiscMenu(point.dx, point.dy);
+    } catch (error, stack) {
+      ErrorLogService.instance.log('VideoDiscMenu.pointer', error, stack);
+      if (mounted) {
+        _showOsd(t.video_disc_navigation_failed, severity: ToastSeverity.error);
+      }
+      // 报过错了：不再按「点空白」去切控制栏。
+      return true;
+    }
+  }
+
+  /// 原盘画面上的一次点击，按层级分流（spec「点空白呼出控制栏」拍板）：开着浮层
+  /// （页面浮层 / 控制栏）只关它；点在盘按钮上交给盘；只有真正的空白才呼出控制栏。
+  Future<void> _onDiscSurfaceTap(
+    VideoPlayerController controller,
+    Offset position,
+    Size viewport,
+  ) async {
+    if (_discMultiTouch) return; // 两指点击由 [_onDiscSurfacePointerUp] 处理。
+    if (_dismissTopForegroundLayer()) return;
+    final VideoDiscNavigationState? state = controller.discNavigationState;
+    final bool bdj = state?.bdjDetected == true;
+    final Offset? point = _discPointerPoint(controller, position, viewport);
+    switch (resolveDiscSurfaceTap(
+      overlayOpen: _discMenuChromeVisible.value,
+      insideVideo: point != null,
+      menuInteractive: state?.menuActive == true,
+      bdj: bdj,
+      inTopBand: isInDiscSessionTopBand(position, viewport),
+      menuStarting: controller.discMenuEntryPending,
+    )) {
+      case DiscSurfaceTapRoute.dismissOverlay:
+        _hideDiscMenuChrome();
+      case DiscSurfaceTapRoute.toggleBar:
+        _pokeDiscMenuChrome();
+      case DiscSurfaceTapRoute.ignore:
+        break;
+      case DiscSurfaceTapRoute.forwardToDisc:
+        if (point == null) return;
+        final bool consumed = await _clickDiscMenu(controller, point);
+        if (consumed || !mounted) return;
+        switch (resolveUnconsumedDiscClick(
+          bdj: bdj,
+          discTitle: state?.title ?? 0,
+        )) {
+          case DiscUnconsumedClickRoute.closeDiscPopup:
+            unawaited(_runDiscNavigation('popup'));
+          case DiscUnconsumedClickRoute.showBar:
+            _pokeDiscMenuChrome();
+          case null:
+            break;
+        }
+    }
+  }
+
+  void _onDiscSurfacePointerDown(PointerDownEvent event) {
+    _discSurfacePointers++;
+    if (_discSurfacePointers >= 2) _discMultiTouch = true;
+  }
+
+  void _onDiscSurfacePointerUp(PointerEvent event) {
+    if (_discSurfacePointers > 0) _discSurfacePointers--;
+    if (_discSurfacePointers > 0 || !_discMultiTouch) return;
+    _discMultiTouch = false;
+    if (event is! PointerUpEvent) return;
+    // 两指点击：BD-J 盘（没有按钮几何）的控制栏呼出方式，HDMV 上同样可用。
+    if (_discMenuChromeVisible.value) {
+      _hideDiscMenuChrome();
+    } else {
+      _pokeDiscMenuChrome();
+    }
+  }
+
+  void _onDiscSurfaceHover(Offset position, Size viewport) {
+    // 鼠标移到屏幕顶部呼出控制栏；控制栏开着时任何移动都算操作、重新计时。
+    if (_discMenuChromeVisible.value ||
+        isInDiscSessionTopBand(position, viewport)) {
+      _pokeDiscMenuChrome();
+    }
+  }
+
+  /// 原盘画面上的指针层。只有**点击**交给原盘（选中并激活所点按钮）；指针移动只用来
+  /// 唤出顶栏。
+  ///
+  /// 不转发移动：libbluray 把每一次指针位置都当成「选中该处按钮」
+  /// （graphics_controller.c `_mouse_move`），而盘上带 auto-action 的按钮一被选中
+  /// 就执行导航命令。鼠标从刚展开的子菜单移开时会掠过别的按钮（页签 / 父项），菜单
+  /// 随之被切回、收起；BD-J 同理（移动即 `MOUSE_MOVED`，改焦点）。原盘菜单按遥控器
+  /// 设计，指针在上面只该有「点哪按哪」一种语义，与触屏一致。
+  Widget _buildDiscMenuSurface(VideoPlayerController controller) {
+    if (controller.discMenuEntryPending) return const SizedBox.expand();
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        return MouseRegion(
+          cursor: SystemMouseCursors.basic,
+          onHover: (PointerHoverEvent event) =>
+              _onDiscSurfaceHover(event.localPosition, constraints.biggest),
+          child: Listener(
+            onPointerDown: _onDiscSurfacePointerDown,
+            onPointerUp: _onDiscSurfacePointerUp,
+            onPointerCancel: _onDiscSurfacePointerUp,
+            child: GestureDetector(
+              key: const ValueKey<String>('disc-session-surface'),
+              behavior: HitTestBehavior.opaque,
+              onTapUp: (TapUpDetails details) {
+                unawaited(
+                  _onDiscSurfaceTap(
+                    controller,
+                    details.localPosition,
+                    constraints.biggest,
+                  ),
+                );
+                _focusOwnership.reclaim(FocusReclaimCause.gesture);
+              },
+              // Claim press gestures so authored buttons never become speed/seek.
+              onLongPress: () {},
+              child: const SizedBox.expand(),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  /// 按住 Esc / 手柄 B 时屏幕中央的圆环进度。
+  Widget _buildDiscExitHoldRing() => DiscExitHoldRing(
+    holding: _discExitHold.holding,
+    color: _osdTextColor(_videoChromeColorScheme(context)),
+    label: t.video_disc_hold_to_exit,
+  );
+
+  /// 原盘启动动画：只在从库里显式进原盘会话、带了封面、且设置开着时出现。动画本身
+  /// 在减弱动态效果 / 墨水屏下时长为零、什么都不画。
+  Widget _wrapDiscLaunchTransition(Widget child) {
+    final ImageProvider? cover = widget.discLaunchCover;
+    if (!widget.openBlurayMenu ||
+        cover == null ||
+        !appModel.videoDiscLaunchAnimation) {
+      return child;
+    }
+    return Stack(
+      fit: StackFit.expand,
+      children: <Widget>[
+        child,
+        Positioned.fill(
+          child: DiscLaunchCoverTransition(
+            key: const ValueKey<String>('disc-launch-transition'),
+            cover: cover,
+            origin: widget.discLaunchOrigin,
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// 原盘会话的悬浮控制栏（BD/DVD 原盘交互改造第 6 项）：复用 [FushiFloatingTopBar]
+  /// 的 `adaptiveOverflow`——动作默认全部平铺，只有宽度放不下时才按优先级收进
+  /// 「⋯」（CLAUDE.md「工具栏默认展开、放不下才收起」）。栏内：退出原盘、顶层菜单、
+  /// 弹出菜单、章节、音轨、字幕、全屏 / 退出全屏。整条随 [_discMenuChromeVisible]
+  /// 淡出，隐藏时不吃点击（点穿给原盘）。
+  Widget _buildDiscMenuChrome(VideoPlayerController controller) {
+    final bool pending = controller.discMenuEntryPending;
+    final VideoDiscNavigationState? state = controller.discNavigationState;
+    // 章节只属于正片时间轴：顶层菜单 / first-play 阶段没有正片，置灰并说明原因；
+    // 正片上叠着盘的弹出菜单时（导航标题 1..65534 且已有播放列表）照常可用。
+    final bool onTitle =
+        state != null &&
+        (state.discType == VideoDiscType.dvd
+            ? state.dvd?.domain == VideoDvdDomain.title
+            : state.title > 0 && state.title < 65535 && state.playlist != null);
+    final bool chaptersAvailable = onTitle && _hasChapters;
+    void poke() {
+      _pokeControlsVisible();
+      _pokeDiscMenuChrome();
+    }
+
+    final List<FushiToolbarItem> navigation = <FushiToolbarItem>[
+      FushiToolbarItem(
+        key: const ValueKey<String>('bluray-menu-top'),
+        icon: FushiIcons.toc,
+        label: t.video_disc_top_menu,
+        onPressed: pending
+            ? null
+            : () {
+                poke();
+                unawaited(_runDiscNavigation('menu'));
+              },
+      ),
+      FushiToolbarItem(
+        key: const ValueKey<String>('bluray-menu-popup'),
+        icon: FushiIcons.menu,
+        label: t.video_disc_popup_menu,
+        onPressed: pending
+            ? null
+            : () {
+                poke();
+                unawaited(_runDiscNavigation('popup'));
+              },
+      ),
+    ];
+    final List<FushiToolbarItem> tracks = <FushiToolbarItem>[
+      FushiToolbarItem(
+        key: const ValueKey<String>('bluray-menu-chapters'),
+        icon: _videoControlItemIcon(VideoControlItem.chapterList),
+        label: t.video_chapters,
+        tooltip: chaptersAvailable
+            ? t.video_chapters
+            : onTitle
+            ? t.video_chapters_empty
+            : t.video_disc_chapters_menu_unavailable,
+        onPressed: chaptersAvailable
+            ? () {
+                poke();
+                _showChapterPanel(controller);
+              }
+            : null,
+      ),
+      FushiToolbarItem(
+        key: const ValueKey<String>('bluray-menu-audio'),
+        icon: _videoControlItemIcon(VideoControlItem.audioTrack),
+        label: t.video_audio_track,
+        tooltip: _discAudioTracks(controller).isEmpty
+            ? t.video_audio_track_empty
+            : t.video_audio_track,
+        onPressed: pending || _discAudioTracks(controller).isEmpty
+            ? null
+            : () {
+                poke();
+                unawaited(_pickDiscAudioTrack(controller));
+              },
+      ),
+      FushiToolbarItem(
+        key: const ValueKey<String>('bluray-menu-subtitle'),
+        icon: _videoControlItemIcon(VideoControlItem.subtitleTrack),
+        label: _videoControlItemTooltip(VideoControlItem.subtitleTrack),
+        onPressed: pending
+            ? null
+            : () {
+                poke();
+                unawaited(_pickDiscSubtitleTrack(controller));
+              },
+      ),
+    ];
+    // 原盘菜单替换了整套常规控制条，全屏键必须在这里另给一份（同一执行体与移动端
+    // 门控：[_toggleVideoFullscreen]，移动端不提供全屏）。
+    final bool fullscreen = _isVideoFullscreenRoute;
+    final List<FushiToolbarItem> window = <FushiToolbarItem>[
+      if (!isMobilePlatform)
+        FushiToolbarItem(
+          key: const ValueKey<String>('bluray-menu-fullscreen'),
+          icon: fullscreen ? FushiIcons.fullscreenExit : FushiIcons.fullscreen,
+          label: _videoControlItemTooltip(VideoControlItem.fullscreen),
+          onPressed: () {
+            poke();
+            final BuildContext? ctx = _videoControlsContext;
+            if (ctx != null && ctx.mounted) {
+              unawaited(_toggleVideoFullscreen(ctx));
+            }
+          },
+        ),
+    ];
+    return BlurayDiscMenuChrome(
+      visible: _discMenuChromeVisible,
+      transitionDuration: _videoControlsTransitionDuration,
+      slideEnabled: !_appleChrome,
+      hiddenOffset: Offset(0, -24 * _videoUiScale),
+      margin: EdgeInsets.zero,
+      onHoverChanged: _setDiscMenuChromeHovered,
+      onFocusChanged: _setDiscMenuChromeFocused,
+      child: ValueListenableBuilder<String?>(
+        valueListenable: _titleNotifier,
+        builder: (BuildContext _, String? title, __) => FushiFloatingTopBar(
+          // 控制栏里的返回 = 退出原盘（回详情页），不再是「先呼出控制栏」那一步。
+          leading: <FushiToolbarItem>[
+            FushiToolbarItem(
+              key: const ValueKey<String>('bluray-menu-exit'),
+              icon: _videoControlItemIcon(VideoControlItem.back),
+              label: t.video_disc_exit,
+              onPressed: () => unawaited(_exitDiscSession()),
+            ),
+          ],
+          title: title ?? '',
+          actions: <List<FushiToolbarItem>>[
+            navigation,
+            tracks,
+            if (window.isNotEmpty) window,
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// 原盘提供的可选音轨（去掉 auto / no 占位）。
+  List<AudioTrack> _discAudioTracks(VideoPlayerController controller) =>
+      <AudioTrack>[
+        for (final AudioTrack track in controller.audioTracks)
+          if (track.id != 'auto' && track.id != 'no') track,
+      ];
+
+  /// 原盘提供的字幕轨（PGS / TextST，去掉 auto / no 占位）。下标即
+  /// [VideoPlayerController.selectEmbeddedGraphicTrack] 的 streamIndex。
+  List<SubtitleTrack> _discSubtitleTracks(VideoPlayerController controller) =>
+      <SubtitleTrack>[
+        for (final SubtitleTrack track in controller.subtitleTracks)
+          if (track.id != 'auto' && track.id != 'no') track,
+      ];
+
+  /// 栏内选音轨：用户显式选轨即由 Fushi 接管（controller 选轨入口自带
+  /// `claimDiscTrackOwnership`），下次进入交互菜单时由
+  /// [shouldReturnDiscTrackOwnership] 交还给盘。菜单阶段没有绑定标题，不落库。
+  Future<void> _pickDiscAudioTrack(VideoPlayerController controller) async {
+    final List<AudioTrack> tracks = _discAudioTracks(controller);
+    if (tracks.isEmpty) return;
+    final String? current = controller.activeAudioTrackId;
+    final AudioTrack? picked = await _focusOwnership.guardOverlay(
+      () => showFushiChoiceDialog<AudioTrack>(
+        context: context,
+        title: t.video_audio_track,
+        selected: <AudioTrack?>[
+          for (final AudioTrack track in tracks)
+            if (track.id == current) track,
+        ].firstOrNull,
+        options: <FushiChoiceOption<AudioTrack>>[
+          for (final AudioTrack track in tracks)
+            FushiChoiceOption<AudioTrack>(
+              value: track,
+              label: _trackLabel(track.title, track.language, track.id),
+            ),
+        ],
+      ),
+    );
+    if (picked == null || !mounted || !identical(_controller, controller)) {
+      return;
+    }
+    await controller.selectAudioTrack(picked);
+    if (!mounted) return;
+    _showOsd(
+      t.video_audio_track_switched(
+        label: _trackLabel(picked.title, picked.language, picked.id),
+      ),
+    );
+  }
+
+  /// 栏内选字幕：原盘字幕轨或关闭。规则同 [_pickDiscAudioTrack]。
+  Future<void> _pickDiscSubtitleTrack(VideoPlayerController controller) async {
+    final List<SubtitleTrack> tracks = _discSubtitleTracks(controller);
+    final int? current = controller.activeSubtitleStreamIndex;
+    // -1 = 关闭字幕；其余为 streamIndex。
+    final int? picked = await _focusOwnership.guardOverlay(
+      () => showFushiChoiceDialog<int>(
+        context: context,
+        title: _videoControlItemTooltip(VideoControlItem.subtitleTrack),
+        selected: current ?? -1,
+        options: <FushiChoiceOption<int>>[
+          FushiChoiceOption<int>(value: -1, label: t.video_subtitle_off),
+          for (int i = 0; i < tracks.length; i++)
+            FushiChoiceOption<int>(
+              value: i,
+              label: _trackLabel(
+                tracks[i].title,
+                tracks[i].language,
+                tracks[i].id,
+              ),
+            ),
+        ],
+      ),
+    );
+    if (picked == null || !mounted || !identical(_controller, controller)) {
+      return;
+    }
+    if (picked < 0) {
+      await controller.selectSubtitleTrack(SubtitleTrack.no());
+    } else {
+      await controller.selectEmbeddedGraphicTrack(picked);
+    }
+  }
+
+  /// 原盘「主菜单 / 弹出菜单」两个导航钮。播放正片时挂在常规顶栏右上按钮组的头部
+  /// （[_topBarSlotGroup]），随控制条一起显隐；菜单模式挂在 [_buildDiscMenuChrome]。
+  /// 两处同一份条目，窄屏时都按优先级收进「⋯」。
+  List<VideoBarEntry> _discNavigationBarEntries({required bool desktop}) {
+    VideoBarEntry entry(
+      String key,
+      IconData icon,
+      String label,
+      String action,
+    ) {
+      void run() {
+        _pokeControlsVisible();
+        _pokeDiscMenuChrome();
+        unawaited(_runDiscNavigation(action));
+      }
+
+      return VideoBarEntry(
+        // 原盘会话里它们是主导航：比它们先收起的只剩全屏 / 设置以外的一切。
+        priority: 87,
+        menuAction: VideoBarMenuAction(
+          icon: icon,
+          label: label,
+          onSelected: run,
+        ),
+        child: FushiTooltip(
+          message: label,
+          child: KeyedSubtree(
+            key: ValueKey<String>(key),
+            child: _chromeIconButton(
+              icon: icon,
+              desktop: desktop,
+              onPressed: run,
+            ),
+          ),
+        ),
+      );
+    }
+
+    return <VideoBarEntry>[
+      entry('bluray-menu-top', FushiIcons.toc, t.video_disc_top_menu, 'menu'),
+      entry(
+        'bluray-menu-popup',
+        FushiIcons.menu,
+        t.video_disc_popup_menu,
+        'popup',
+      ),
+    ];
+  }
+}
+
+class _BlurayJavaRuntimeInstallDialog extends StatefulWidget {
+  const _BlurayJavaRuntimeInstallDialog({required this.manager});
+  final BlurayJavaRuntimeManager manager;
+  @override
+  State<_BlurayJavaRuntimeInstallDialog> createState() =>
+      _BlurayJavaRuntimeInstallDialogState();
+}
+
+class _BlurayJavaRuntimeInstallDialogState
+    extends State<_BlurayJavaRuntimeInstallDialog> {
+  bool _installing = false;
+  bool _failed = false;
+  double? _progress;
+
+  Future<void> _install() async {
+    setState(() {
+      _installing = true;
+      _failed = false;
+    });
+    try {
+      await widget.manager.install(
+        onProgress: (int received, int? total) {
+          if (mounted) {
+            setState(
+              () => _progress = total == null || total <= 0
+                  ? null
+                  : (received / total).clamp(0.0, 1.0),
+            );
+          }
+        },
+      );
+      if (mounted) Navigator.of(context).pop(true);
+    } catch (error, stack) {
+      ErrorLogService.instance.log(
+        'VideoDiscMenu.installRuntime',
+        error,
+        stack,
+      );
+      if (mounted) {
+        setState(() {
+          _failed = true;
+          _installing = false;
+        });
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+    widget.manager.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => PopScope(
+    canPop: !_installing,
+    child: FushiAlertDialog(
+      title: Text(t.video_disc_runtime_install),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(t.video_disc_runtime_description),
+          if (_installing) ...<Widget>[
+            const SizedBox(height: 16),
+            FushiLinearProgressIndicator(value: _progress),
+          ],
+          if (_failed) ...<Widget>[
+            const SizedBox(height: 16),
+            Text(t.video_disc_runtime_install_failed),
+          ],
+        ],
+      ),
+      actions: <Widget>[
+        FushiTextButton(
+          onPressed: () {
+            widget.manager.cancel();
+            Navigator.of(context).pop(false);
+          },
+          child: Text(t.cancel),
+        ),
+        FushiFilledButton(
+          onPressed: _installing ? null : _install,
+          child: Text(t.video_disc_runtime_install),
+        ),
+      ],
+    ),
+  );
+}

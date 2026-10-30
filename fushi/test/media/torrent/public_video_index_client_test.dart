@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -16,6 +17,12 @@ import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart';
 
 const String _hashA = 'aabbccddeeff00112233445566778899aabbccdd';
 const String _hashB = '00112233445566778899aabbccddeeff00112233';
+
+// 测试用站点地址与站点 id（Fushi 不内置 BT 站，地址只是测试数据）。
+const String _apibayUrl = 'https://apibay.org';
+const String _knabenUrl = 'https://api.knaben.org/v1';
+const String _apibaySite = 'apibay-test';
+const String _knabenSite = 'knaben-test';
 
 VideoResourceSearchRequest _request({
   VideoDiscoveryCategory? category,
@@ -86,6 +93,7 @@ void main() {
   group('ApibayClient', () {
     test('drops the sentinel no-results row', () async {
       final ApibayClient client = ApibayClient(
+        baseUrl: _apibayUrl,
         client: MockClient(
           (http.Request request) async => http.Response(
             jsonEncode(<Map<String, Object?>>[
@@ -105,6 +113,7 @@ void main() {
     test('deduplicates across the per-category requests', () async {
       final List<Uri> calls = <Uri>[];
       final ApibayClient client = ApibayClient(
+        baseUrl: _apibayUrl,
         client: MockClient((http.Request request) async {
           calls.add(request.url);
           return http.Response(
@@ -142,6 +151,7 @@ void main() {
 
     test('throws on a non-200 instead of reporting an empty result', () async {
       final ApibayClient client = ApibayClient(
+        baseUrl: _apibayUrl,
         client: MockClient(
           (http.Request request) async => http.Response('nope', 503),
         ),
@@ -157,6 +167,7 @@ void main() {
     test('parses hits and keeps the server-provided magnet', () async {
       late Map<String, Object?> body;
       final KnabenClient client = KnabenClient(
+        baseUrl: _knabenUrl,
         client: MockClient((http.Request request) async {
           body = jsonDecode(request.body) as Map<String, Object?>;
           return http.Response(
@@ -197,6 +208,7 @@ void main() {
 
     test('synthesizes a magnet when the API omits magnetUrl', () async {
       final KnabenClient client = KnabenClient(
+        baseUrl: _knabenUrl,
         client: MockClient(
           (http.Request request) async => http.Response(
             jsonEncode(<String, Object?>{
@@ -257,20 +269,17 @@ void main() {
         '2012',
       ]) {
         expect(
-          publicVideoIndexSearchQuery(
-            VideoResourceSearchRequest(query: q),
-          ),
+          publicVideoIndexSearchQuery(VideoResourceSearchRequest(query: q)),
           q,
-          reason: '$q 有拉丁词可匹配，apibay 对它并不退化；'
+          reason:
+              '$q 有拉丁词可匹配，apibay 对它并不退化；'
               '含一个汉字就整条拦是过度拦截，实现范围大于实测证据范围',
         );
       }
       // 反向：没有拉丁词、也不是纯 ASCII，且拿不到媒体身份 → 表达不了。
       for (final String q in <String>['薬屋のひとりごと 第2期', 'ﾎﾟｹﾓﾝ', '오징어 게임']) {
         expect(
-          publicVideoIndexSearchQuery(
-            VideoResourceSearchRequest(query: q),
-          ),
+          publicVideoIndexSearchQuery(VideoResourceSearchRequest(query: q)),
           isNull,
           reason: '$q 没有拉丁词，送进去只会拿回热门榜',
         );
@@ -294,9 +303,11 @@ void main() {
           aliases: const <String>['Kusuriya no Hitorigoto Season 2'],
         ),
       );
-      expect(publicVideoIndexSearchQuery(request),
-          'Kusuriya no Hitorigoto Season 2',
-          reason: '全角数字不折，isKnownTitle 就失配，别名降级白做');
+      expect(
+        publicVideoIndexSearchQuery(request),
+        'Kusuriya no Hitorigoto Season 2',
+        reason: '全角数字不折，isKnownTitle 就失配，别名降级白做',
+      );
     });
 
     test('BUG-1985 CJK 标题命中媒体身份时改用可信拉丁别名', () {
@@ -325,7 +336,9 @@ void main() {
     test('BUG-1985 apibay 传输层收到拉丁别名而不是原始 CJK', () async {
       final List<String> queries = <String>[];
       final ApibayVideoResourceProvider provider = ApibayVideoResourceProvider(
+        siteId: _apibaySite,
         client: ApibayClient(
+          baseUrl: _apibayUrl,
           client: MockClient((http.Request request) async {
             queries.add(request.url.queryParameters['q']!);
             return http.Response('[]', 200);
@@ -362,7 +375,9 @@ void main() {
     test('BUG-1985 手输的无别名 CJK 查询不发送给公共索引器', () async {
       int calls = 0;
       final ApibayVideoResourceProvider provider = ApibayVideoResourceProvider(
+        siteId: _apibaySite,
         client: ApibayClient(
+          baseUrl: _apibayUrl,
           client: MockClient((http.Request request) async {
             calls++;
             return http.Response('[]', 200);
@@ -389,18 +404,26 @@ void main() {
       // 「表达不了」是未参与，不是失败。表达成 failure 会让订阅 / 下载流水线
       // 每一轮定时任务都 throw（那两条路径重建 media 时结构上拿不到别名），
       // 也会让 UI 弹「加载失败 + 重试」——而重试永远不可能成功。
-      expect(result.failures, isEmpty,
-          reason: 'unsupported 不得表达成 provider failure');
+      expect(
+        result.failures,
+        isEmpty,
+        reason: 'unsupported 不得表达成 provider failure',
+      );
       expect(result.successfulProviderCount, 0);
-      expect(result.hasNoActiveProvider, isTrue,
-          reason: '要落进既有的第三态，让聚合层与 UI 拿到「这家没参与」而不是「炸了」');
+      expect(
+        result.hasNoActiveProvider,
+        isTrue,
+        reason: '要落进既有的第三态，让聚合层与 UI 拿到「这家没参与」而不是「炸了」',
+      );
       expect(result.isTotalFailure, isFalse);
     });
 
     test('BUG-1985 Knaben 不走拉丁词门：它是硬标题过滤，CJK 返回的是真的 0 条', () async {
       final List<String> queries = <String>[];
       final KnabenVideoResourceProvider provider = KnabenVideoResourceProvider(
+        siteId: _knabenSite,
         client: KnabenClient(
+          baseUrl: _knabenUrl,
           client: MockClient((http.Request request) async {
             queries.add(
               (jsonDecode(request.body) as Map<String, Object?>)['query']!
@@ -425,15 +448,20 @@ void main() {
             ),
           );
 
-      expect(queries, <String>['薬屋のひとりごと 第2期'],
-          reason: 'Knaben 的 search_type:100% 是硬标题过滤，对 CJK 返回正确的 0 条；'
-              '把它一起拦掉是纯功能删除，删的正是它相对 apibay 的价值');
+      expect(
+        queries,
+        <String>['薬屋のひとりごと 第2期'],
+        reason:
+            'Knaben 的 search_type:100% 是硬标题过滤，对 CJK 返回正确的 0 条；'
+            '把它一起拦掉是纯功能删除，删的正是它相对 apibay 的价值',
+      );
       expect(result.failures, isEmpty);
     });
 
     test('apibay only serves movie and tv, never anime', () {
       final ApibayVideoResourceProvider provider = ApibayVideoResourceProvider(
-        client: ApibayClient(),
+        siteId: _apibaySite,
+        client: ApibayClient(baseUrl: _apibayUrl),
       );
       expect(provider.categories, <VideoDiscoveryCategory>{
         VideoDiscoveryCategory.movie,
@@ -448,7 +476,8 @@ void main() {
 
     test('knaben only serves movie and tv, never anime', () {
       final KnabenVideoResourceProvider provider = KnabenVideoResourceProvider(
-        client: KnabenClient(),
+        siteId: _knabenSite,
+        client: KnabenClient(baseUrl: _knabenUrl),
       );
       expect(provider.categories, <VideoDiscoveryCategory>{
         VideoDiscoveryCategory.movie,
@@ -464,7 +493,9 @@ void main() {
     test('a tv request uses the tv categories', () async {
       late Uri seen;
       final ApibayVideoResourceProvider provider = ApibayVideoResourceProvider(
+        siteId: _apibaySite,
         client: ApibayClient(
+          baseUrl: _apibayUrl,
           client: MockClient((http.Request request) async {
             seen = request.url;
             return http.Response('[]', 200);
@@ -480,7 +511,9 @@ void main() {
       () async {
         final ApibayVideoResourceProvider provider =
             ApibayVideoResourceProvider(
+              siteId: _apibaySite,
               client: ApibayClient(
+                baseUrl: _apibayUrl,
                 client: MockClient(
                   (http.Request request) async => http.Response('boom', 500),
                 ),
@@ -511,18 +544,54 @@ void main() {
           sizeBytes: 1,
         ),
         providerId: kApibayResourceProviderId,
-        providerInstanceId: 'apibay.org',
+        providerInstanceId: _apibaySite,
         providerPriority: 200,
       );
       final TorrentAddPayload payload = resolvePublicVideoIndexCandidate(
         mine,
-        kApibayResourceProviderId,
+        '$kApibayResourceProviderId:$_apibaySite',
+        _apibaySite,
       );
       expect(payload, isA<TorrentMagnetPayload>());
       expect((payload as TorrentMagnetPayload).torrentId, _hashA);
       expect(
-        () => resolvePublicVideoIndexCandidate(mine, kKnabenResourceProviderId),
+        () => resolvePublicVideoIndexCandidate(
+          mine,
+          '$kKnabenResourceProviderId:$_apibaySite',
+          _apibaySite,
+        ),
         throwsA(isA<ExternalProviderFailure>()),
+      );
+    });
+  });
+
+  // BUG-2933：连上之后不回包的请求必须按总时限失败，而不是把整轮资源搜索
+  // （注册表 `Future.wait`）一起挂住。
+  group('总时限', () {
+    MockClient hangingClient() =>
+        MockClient((http.Request request) => Completer<http.Response>().future);
+
+    test('apibay 请求挂住时按 requestTimeout 抛 TimeoutException', () async {
+      final ApibayClient client = ApibayClient(
+        baseUrl: _apibayUrl,
+        client: hangingClient(),
+        requestTimeout: const Duration(milliseconds: 50),
+      );
+      await expectLater(
+        client.search('Inception', categories: const <int>[201]),
+        throwsA(isA<TimeoutException>()),
+      );
+    });
+
+    test('Knaben 请求挂住时按 requestTimeout 抛 TimeoutException', () async {
+      final KnabenClient client = KnabenClient(
+        baseUrl: _knabenUrl,
+        client: hangingClient(),
+        requestTimeout: const Duration(milliseconds: 50),
+      );
+      await expectLater(
+        client.search('Inception', categories: const <int>[3000000]),
+        throwsA(isA<TimeoutException>()),
       );
     });
   });

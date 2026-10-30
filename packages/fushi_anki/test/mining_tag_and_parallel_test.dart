@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_anki/fushi_anki.dart';
 
 // TODO-062 / BUG-166:
-//  (1) Every Hibiki-mined card must carry the `fushi` tag, appended to the
+//  (1) Every Fushi-mined card must carry the `fushi` tag, appended to the
 //      user's configured tags (de-duped, order preserved); both backends behave
 //      identically.
 //  (2) The 6s slowness root cause was several independent media uploads chained
@@ -75,7 +75,7 @@ AnkiSettings _settingsWithTags(String tags) => AnkiSettings(
   selectedNoteTypeId: 2,
   availableDecks: const <AnkiDeck>[AnkiDeck(id: 1, name: 'Mining')],
   availableNoteTypes: const <AnkiNoteType>[
-    AnkiNoteType(id: 2, name: 'Hibiki', fields: <String>['Expression']),
+    AnkiNoteType(id: 2, name: 'Fushi', fields: <String>['Expression']),
   ],
   fieldMappings: const <String, String>{'Expression': '{expression}'},
   tags: tags,
@@ -126,6 +126,35 @@ void main() {
 
     test('a user-configured fushi tag is not duplicated', () async {
       expect(await tagsForConnect('fushi extra'), <String>['fushi', 'extra']);
+    });
+
+    // 反馈 ORHr4_WDOy：全局标签（所有 Profile）+ Profile 标签叠加，全局在前、去重。
+    test('global tags are added before profile tags, de-duplicated', () async {
+      final service = _RecordingAnkiConnectService();
+      final repo = _ConfiguredAnkiConnectRepository(
+        service: service,
+        settings: _settingsWithTags(
+          'lapis shared',
+        ).copyWith(globalTags: 'jp shared'),
+      );
+      final outcome = await repo.mineEntry(
+        rawPayloadJson: _payload,
+        context: const AnkiMiningContext(sentence: ''),
+      );
+      expect(outcome.result, MineResult.success);
+      expect(service.addedTags.single, <String>[
+        'jp',
+        'shared',
+        'lapis',
+        'fushi',
+      ]);
+    });
+
+    test('globalTags round-trips through JSON and defaults to empty', () {
+      const AnkiSettings s = AnkiSettings(tags: 'a', globalTags: 'g');
+      expect(AnkiSettings.fromJson(s.toJson()).globalTags, 'g');
+      expect(AnkiSettings.fromJson(const <String, dynamic>{}).globalTags, '');
+      expect(const AnkiSettings(tags: 'a').noteTags, 'a');
     });
 
     test('AnkiDroid backend appends fushi identically', () async {
@@ -251,6 +280,17 @@ void main() {
         },
       );
 
+      // 所有者 2026-10-24：音乐卡单独打 `music`，不再沿用 `book`。
+      test(
+        'music source -> appends both fushi and music (AnkiConnect)',
+        () async {
+          expect(
+            await tagsForConnect('', source: AnkiMiningSource.music),
+            <String>['fushi', 'music'],
+          );
+        },
+      );
+
       test(
         'null source -> only fushi, no category tag (AnkiConnect)',
         () async {
@@ -290,6 +330,10 @@ void main() {
         expect(await tagsForDroid('', source: AnkiMiningSource.game), <String>[
           'fushi',
           'game',
+        ]);
+        expect(await tagsForDroid('', source: AnkiMiningSource.music), <String>[
+          'fushi',
+          'music',
         ]);
         expect(await tagsForDroid('foo', source: null), <String>[
           'foo',
@@ -910,7 +954,7 @@ void main() {
           selectedNoteTypeId: 2,
           availableDecks: const <AnkiDeck>[AnkiDeck(id: 1, name: 'Mining')],
           availableNoteTypes: const <AnkiNoteType>[
-            AnkiNoteType(id: 2, name: 'Hibiki', fields: <String>['Expression']),
+            AnkiNoteType(id: 2, name: 'Fushi', fields: <String>['Expression']),
           ],
           fieldMappings: const <String, String>{'Expression': '{expression}'},
           allowDupes: true,

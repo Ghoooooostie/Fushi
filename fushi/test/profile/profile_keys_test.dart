@@ -23,6 +23,8 @@ void main() {
       expect(ProfileKeys.isExcludedPref('update_beta_channel'), isTrue);
       expect(
           ProfileKeys.isExcludedPref('startup_default_dictionary_tab'), isTrue);
+      // 启动页与 module_nav_order 同族：设备本地，不随 Profile 走。
+      expect(ProfileKeys.isExcludedPref('startup_module'), isTrue);
       expect(ProfileKeys.isExcludedPref('app_ui_scale'), isTrue);
       expect(ProfileKeys.isExcludedPref('app_ui_scale_mode'), isTrue);
       // TODO-1961: download folder + legacy-folder history are device-local.
@@ -84,12 +86,10 @@ void main() {
       );
     });
 
-    test('reading goals are per-Profile (not excluded, TODO-1046)', () {
-      // 0=off, but the goal targets themselves are per-Profile prefs: they must
-      // NOT be in the exclusion set so each profile keeps its own daily/weekly
-      // target.
+    test('reading goal is per-Profile (not excluded, TODO-1046)', () {
+      // 0=off, but the goal target itself is a per-Profile pref: it must NOT be
+      // in the exclusion set so each profile keeps its own daily target.
       expect(ProfileKeys.isExcludedPref('reading_goal_daily_chars'), isFalse);
-      expect(ProfileKeys.isExcludedPref('reading_goal_weekly_chars'), isFalse);
     });
   });
 
@@ -255,6 +255,29 @@ void main() {
       expect(result.batchMiningEnabled, isTrue);
       expect(result.useAnkiSyncClient, isTrue);
       expect(result.repositionRareFirst, isTrue);
+    });
+
+    // 反馈 ORHr4_WDOy：全局标签所有 Profile 共用，Profile 标签各配各的。
+    test('global tags survive a profile switch; profile tags are swapped', () {
+      const AnkiSettings current = AnkiSettings(
+        tags: 'profile_a',
+        globalTags: 'everywhere',
+      );
+      final Map<String, String> snapshotB = ProfileKeys.ankiSettingsToMap(
+        const AnkiSettings(tags: 'profile_b', globalTags: 'stale'),
+      );
+      expect(
+        snapshotB.containsKey('globalTags'),
+        isFalse,
+        reason: '全局标签进了 Profile 快照就不再全局',
+      );
+      final AnkiSettings result = ProfileKeys.mapToAnkiSettings(
+        snapshotB,
+        current,
+      );
+      expect(result.tags, 'profile_b');
+      expect(result.globalTags, 'everywhere');
+      expect(result.noteTags, 'everywhere profile_b');
     });
   });
 

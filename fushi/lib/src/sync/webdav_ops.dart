@@ -127,11 +127,48 @@ class DavEntry {
     required this.href,
     required this.displayName,
     required this.isCollection,
+    this.etag,
+    this.modifiedAt,
   });
 
   final String href;
   final String displayName;
   final bool isCollection;
+
+  /// `DAV:getetag`（RFC 4918 §15.6：资源内容一变就必须变）；服务端不报时为 null。
+  final String? etag;
+
+  /// `getlastmodified`（RFC 1123 HTTP 日期）换成的 UTC 毫秒；服务器没给或解析不了为 null。
+  final int? modifiedAt;
+}
+
+/// 把 WebDAV `getlastmodified` 的值（RFC 1123，如 `Wed, 14 Oct 2026 08:15:30 GMT`；
+/// [HttpDate.parse] 也接受 RFC 850 / asctime 两种旧格式）换成 UTC 毫秒。解析不了返回 null，
+/// 不拿本机墙钟兜底（SRS 同步要的是服务器时间，拿不到就该如实为空）。
+int? parseDavLastModified(String? raw) {
+  if (raw == null) return null;
+  final String v = raw.trim();
+  if (v.isEmpty) return null;
+  try {
+    DateTime t = HttpDate.parse(v).toUtc();
+    // RFC 850 只有两位年份，HttpDate.parse 原样当成公元 00xx 年。按 RFC 7231 §7.1.1.1 的
+    // 习惯折回最近的世纪（<70 → 20xx，否则 19xx）。
+    if (t.year < 100) {
+      t = DateTime.utc(
+        t.year + (t.year < 70 ? 2000 : 1900),
+        t.month,
+        t.day,
+        t.hour,
+        t.minute,
+        t.second,
+      );
+    }
+    return t.millisecondsSinceEpoch;
+  } on HttpException {
+    return null;
+  } on FormatException {
+    return null;
+  }
 }
 
 class WebDavOps {
@@ -143,8 +180,13 @@ class WebDavOps {
     String? pinnedFingerprint,
     void Function()? onConnectivityError,
     SyncAuthFailureKind unauthorizedKind = SyncAuthFailureKind.credentials,
+    Duration? requestTimeout,
   }) : _baseUrl = baseUrl,
-       _connectionTimeout = connectionTimeout,
+       _requestTimeout = requestTimeout,
+       _connectionTimeout =
+           requestTimeout != null && requestTimeout < connectionTimeout
+           ? requestTimeout
+           : connectionTimeout,
        _pinnedFingerprint = pinnedFingerprint,
        _onConnectivityError = onConnectivityError,
        _unauthorizedKind = unauthorizedKind,
@@ -158,6 +200,17 @@ class WebDavOps {
   final String _baseUrl;
   final String? _authHeader;
   final Duration _connectionTimeout;
+
+  /// XVEF3huDTF：本类自有的小请求（PROPFIND / MKCOL / MOVE / JSON GET / PUT 字节 /
+  /// HEAD / DELETE，请求体都在内存里、响应体 ≤ [maxJsonDownloadSize]）的单阶段封顶：
+  /// 连接、等响应头、读响应体各自不超过它。null = 不封顶（云 WebDAV 维持原语义）。
+  ///
+  /// 没有它时，一条已建立的连接在对端掉线（host 换 IP、Wi-Fi 休眠、NAT 半开）后，
+  /// 读写要等到 OS 级 TCP 重传超时（Android 上是分钟级，日志里的 `errno = 110`）
+  /// 才失败；整轮同步串行地发几十个这样的小请求，一次挂起就是几分钟。超时按连接类
+  /// 失败上报 [_onConnectivityError]，互联会话随即换路。只作用于本类的方法——经
+  /// [buildRequest] 自行发送的流式传输不受影响。
+  final Duration? _requestTimeout;
 
   /// BUG-1693（审计项：故障切换失效）：连接类失败（拒连/握手失败/超时/断流）的
   /// 通知回调。互联 backend 用它把 `_sessionResolved` 置脏——已解析地址一掉线，
@@ -227,12 +280,28 @@ class WebDavOps {
   /// 握手失败/传输中断流）先通知 [_onConnectivityError] 再原样 rethrow。
   Future<HttpClientResponse> closeRequest(HttpClientRequest request) async {
     try {
-      return await request.close();
+      final Duration? limit = _requestTimeout;
+      if (limit == null) return await request.close();
+      return await request.close().timeout(
+        limit,
+        onTimeout: () {
+          request.abort();
+          throw TimeoutException(
+            'WebDAV request timed out after $limit: ${request.method} '
+            '${request.uri.path}',
+            limit,
+          );
+        },
+      );
     } on Object catch (e) {
       _notifyIfConnectivity(e);
       rethrow;
     }
   }
+
+  /// 让经 [buildRequest] 自行发送请求的调用方（互联端点）也走同一条连接类失败
+  /// 通知：[e] 是连接类失败时触发 `onConnectivityError`，否则什么也不做。
+  void reportConnectivityFailure(Object e) => _notifyIfConnectivity(e);
 
   void _notifyIfConnectivity(Object e) {
     if (e is SocketException ||
@@ -243,6 +312,21 @@ class WebDavOps {
     }
   }
 
+  /// 在 [_requestTimeout] 内消费完 [response] 的响应体（null = 不封顶）。超时同样
+  /// 按连接类失败上报：响应头到了但体断流，与连不上是同一种「这条路坏了」。
+  Future<T> _bounded<T>(Future<T> body) async {
+    final Duration? limit = _requestTimeout;
+    try {
+      return limit == null ? await body : await body.timeout(limit);
+    } on TimeoutException catch (e) {
+      _notifyIfConnectivity(e);
+      rethrow;
+    }
+  }
+
+  Future<void> _drain(HttpClientResponse response) =>
+      _bounded(response.drain<void>());
+
   Future<void> testConnection() async {
     try {
       final request = await buildRequest('PROPFIND', _baseUrl);
@@ -252,7 +336,7 @@ class WebDavOps {
       final response = await closeRequest(request);
 
       if (response.statusCode == 401) {
-        await response.drain<void>();
+        await _drain(response);
         throw SyncAuthError('Authentication failed', kind: _unauthorizedKind);
       }
       // BUG-1323：403 是服务端的策略拒绝，用户要看到的是**服务端说了什么**，而不是
@@ -266,7 +350,7 @@ class WebDavOps {
           serverReason: await readSyncErrorBody(response),
         );
       }
-      await response.drain<void>();
+      await _drain(response);
       if (response.statusCode >= 400) {
         throw SyncBackendError('Server returned ${response.statusCode}');
       }
@@ -285,12 +369,12 @@ class WebDavOps {
     checkReq.headers.set('Content-Type', 'application/xml; charset=utf-8');
     checkReq.add(utf8.encode(propfindBody));
     final checkResp = await closeRequest(checkReq);
-    await checkResp.drain<void>();
+    await _drain(checkResp);
     if (checkResp.statusCode == 207) return;
 
     final mkcolReq = await buildRequest('MKCOL', path);
     final mkcolResp = await closeRequest(mkcolReq);
-    await mkcolResp.drain<void>();
+    await _drain(mkcolResp);
     if (mkcolResp.statusCode >= 400 && mkcolResp.statusCode != 405) {
       throw SyncBackendError(
         'Failed to create folder: ${mkcolResp.statusCode}',
@@ -307,7 +391,7 @@ class WebDavOps {
     request.headers.set('Content-Type', 'application/xml; charset=utf-8');
     request.add(utf8.encode(propfindBody));
     final response = await closeRequest(request);
-    await response.drain<void>();
+    await _drain(response);
     return response.statusCode == 207;
   }
 
@@ -319,13 +403,21 @@ class WebDavOps {
     request.headers.set('Destination', toPath);
     request.headers.set('Overwrite', 'F');
     final response = await closeRequest(request);
-    await response.drain<void>();
+    await _drain(response);
     checkStatus(response.statusCode, 'MOVE $fromPath -> $toPath');
   }
 
-  Future<List<DavEntry>> propfindChildren(String path) async {
+  Future<List<DavEntry>> propfindChildren(String path) =>
+      propfindDepth(path, '1');
+
+  /// PROPFIND [path]，`Depth` 头取 [depth]（`'0'` / `'1'` / `'infinity'`）。
+  ///
+  /// 回包里有哪些层级完全取决于服务器：很多 WebDAV 服务器拒绝或降级 `infinity`
+  /// （RFC 4918 §9.1 允许 403 `propfind-finite-depth`），老版互联 host 更是把它当
+  /// Depth 0。调用方必须先经能力协商确认服务器会完整回答，不能凭回包形状猜。
+  Future<List<DavEntry>> propfindDepth(String path, String depth) async {
     final request = await buildRequest('PROPFIND', path);
-    request.headers.set('Depth', '1');
+    request.headers.set('Depth', depth);
     request.headers.set('Content-Type', 'application/xml; charset=utf-8');
     request.add(utf8.encode(propfindBody));
     final response = await closeRequest(request);
@@ -344,7 +436,7 @@ class WebDavOps {
       );
     }
 
-    final body = await response.transform(utf8.decoder).join();
+    final body = await _bounded(response.transform(utf8.decoder).join());
     if (response.statusCode != 207) {
       throw SyncBackendError(
         'PROPFIND failed: ${response.statusCode}',
@@ -367,13 +459,22 @@ class WebDavOps {
     final displayNamePattern = RegExp(
       r'<(?:[a-zA-Z0-9]+:)?displayname>(.*?)</(?:[a-zA-Z0-9]+:)?displayname>',
     );
+    final etagPattern = RegExp(
+      r'<(?:[a-zA-Z0-9]+:)?getetag>(.*?)</(?:[a-zA-Z0-9]+:)?getetag>',
+      dotAll: true,
+    );
+    // 允许带属性（IIS / SabreDAV 会写 `<d:getlastmodified ns0:dt="dateTime.rfc1123">`）。
+    final lastModifiedPattern = RegExp(
+      r'<(?:[a-zA-Z0-9]+:)?getlastmodified(?:\s[^>]*)?>(.*?)</(?:[a-zA-Z0-9]+:)?getlastmodified>',
+      dotAll: true,
+    );
 
     for (final match in responsePattern.allMatches(xml)) {
       final block = match.group(1)!;
       final hrefMatch = hrefPattern.firstMatch(block);
       if (hrefMatch == null) continue;
 
-      final href = Uri.decodeFull(hrefMatch.group(1)!.trim());
+      final href = decodedDavHref(hrefMatch.group(1)!.trim());
       final isCollection = collectionPattern.hasMatch(block);
       final displayMatch = displayNamePattern.firstMatch(block);
 
@@ -388,17 +489,33 @@ class WebDavOps {
         displayName = Uri.decodeFull(cleaned.split('/').last);
       }
 
+      final String? etag = etagPattern.firstMatch(block)?.group(1)?.trim();
+
       final resolvedHref = resolveHref(href, basePath);
       entries.add(
         DavEntry(
           href: resolvedHref,
           displayName: displayName,
           isCollection: isCollection,
+          etag: etag == null || etag.isEmpty ? null : etag,
+          modifiedAt: parseDavLastModified(
+            lastModifiedPattern.firstMatch(block)?.group(1),
+          ),
         ),
       );
     }
     return entries;
   }
+
+  /// PROPFIND 返回的 href 解码成 [DavEntry.href]（之后原样当 URL 交给 [buildRequest]）。
+  ///
+  /// 解码让中文 / 空格等字符以可读形式出现（既有 id 形态，按 id 比较的调用方依赖它），但
+  /// `%`、`#`、`?` 解码出来就成了 URL 分隔符：`Uri.parse` 会把 `#1/` 当片段、把 `?` 后当查询，
+  /// 请求打到截断后的路径（BUG-3576：复习同步写入者目录名 `<deviceId>#<化身号>`，第二轮起
+  /// PROPFIND 404）。这三个字符解码后重新转义，其余保持原样。
+  static String decodedDavHref(String rawHref) => Uri.decodeFull(
+    rawHref,
+  ).replaceAll('%', '%25').replaceAll('#', '%23').replaceAll('?', '%3F');
 
   String resolveHref(String href, String basePath) {
     final baseUri = Uri.parse(basePath);
@@ -433,12 +550,14 @@ class WebDavOps {
     final response = await closeRequest(request);
     checkStatus(response.statusCode, 'GET $fileId');
     final BytesBuilder builder = BytesBuilder(copy: false);
-    await for (final List<int> chunk in response) {
-      builder.add(chunk);
-      if (builder.length > maxJsonDownloadSize) {
-        throw SyncBackendError('GET $fileId failed: response too large');
+    await _bounded(() async {
+      await for (final List<int> chunk in response) {
+        builder.add(chunk);
+        if (builder.length > maxJsonDownloadSize) {
+          throw SyncBackendError('GET $fileId failed: response too large');
+        }
       }
-    }
+    }());
     return jsonDecode(utf8.decode(builder.takeBytes()));
   }
 
@@ -462,21 +581,21 @@ class WebDavOps {
     request.headers.set('Content-Length', '${bytes.length}');
     request.add(bytes);
     final response = await closeRequest(request);
-    await response.drain<void>();
+    await _drain(response);
     checkStatus(response.statusCode, 'PUT $path');
   }
 
   Future<bool> headFile(String path) async {
     final request = await buildRequest('HEAD', path);
     final response = await closeRequest(request);
-    await response.drain<void>();
+    await _drain(response);
     return response.statusCode >= 200 && response.statusCode < 300;
   }
 
   Future<void> deleteFile(String path) async {
     final request = await buildRequest('DELETE', path);
     final response = await closeRequest(request);
-    await response.drain<void>();
+    await _drain(response);
     if (response.statusCode >= 400 && response.statusCode != 404) {
       throw SyncBackendError('DELETE failed: ${response.statusCode}');
     }
@@ -522,6 +641,8 @@ class WebDavOps {
       '<d:prop>'
       '<d:resourcetype/>'
       '<d:displayname/>'
+      '<d:getetag/>'
+      '<d:getlastmodified/>'
       '</d:prop>'
       '</d:propfind>';
 

@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../anki_models.dart';
 import '../card_source_link.dart';
+import '../fushi_card_fields.dart';
 import '../anki_note_type_definition.dart';
 import '../anki_remote_media_http.dart';
 import '../base_anki_repository.dart';
@@ -15,6 +16,8 @@ import '../ankiconnect/ankiconnect_repository.dart';
 import '../lapis_note_type.dart';
 
 class AnkiRepository extends BaseAnkiRepository {
+  AnkiRepository({super.settingsStore});
+
   static const _channel = MethodChannel('app.fushi.reader/anki');
   static const _legacyDeckKey = 'last_selected_deck';
 
@@ -75,13 +78,13 @@ class AnkiRepository extends BaseAnkiRepository {
 
   @override
   Future<AnkiSettings> loadSettings() async {
-    final prefs = await SharedPreferences.getInstance();
-    // 原始串必须经基类 readSettingsJson 取（W2-7 键搬移 + W2-2 别名改写的唯一
-    // 通道）；直接 prefs.getString 会绕过两个载入期迁移。
-    final String? raw = await readSettingsJson(prefs);
+    // 原始串必须经基类 readSettingsJson 取（载入期迁移的唯一通道）；直接读存储
+    // 会绕过它们。
+    final AnkiSettingsStore store = settingsStore;
+    final String? raw = await readSettingsJson(store);
     if (raw == null) {
-      await _migrateFromLegacy(prefs);
-      final migrated = prefs.getString(BaseAnkiRepository.settingsKey);
+      await _migrateFromLegacy(store);
+      final migrated = await store.read();
       if (migrated != null) {
         try {
           return AnkiSettings.fromJson(
@@ -232,7 +235,27 @@ class AnkiRepository extends BaseAnkiRepository {
     await _ensurePermission();
     final settings = await loadSettings();
 
-    final AnkiDeck? deck = resolveSelectedDeck(settings);
+    // 「高级制卡」的卡组覆盖在 payload 里，目标卡组必须在 payload 解析**之后**才能定
+    // （见 resolveTargetDeck）。解析失败时沿用旧判定次序：设置里根本没有卡组 → 仍报
+    // notConfigured（旧代码先查卡组），否则报同样的 payload failure。
+    final AnkiMiningPayload payload;
+    try {
+      final json = Map<String, dynamic>.from(jsonDecode(rawPayloadJson) as Map);
+      payload = AnkiMiningPayload.fromJson(json);
+    } catch (e, stack) {
+      if (resolveSelectedDeck(settings) == null) {
+        return const MineOutcome.notConfigured();
+      }
+      return MineOutcome.failure(
+        'Invalid card data (payload parse failed): $e',
+        error: e,
+        stackTrace: stack,
+      );
+    }
+
+    // 覆盖卡组命中时即便设置里没选卡组也能落卡（它取自 availableDecks，是用户这一次
+    // 明确挑的）；没有覆盖 / 没命中 → 退回设置卡组，为空仍是 notConfigured。
+    final AnkiDeck? deck = resolveTargetDeck(settings, payload);
     if (deck == null) return const MineOutcome.notConfigured();
 
     final noteType = settings.availableNoteTypes.firstWhereOrNull(
@@ -245,24 +268,16 @@ class AnkiRepository extends BaseAnkiRepository {
             : null);
     if (noteType == null) return const MineOutcome.notConfigured();
 
-    final AnkiMiningPayload payload;
-    try {
-      final json = Map<String, dynamic>.from(jsonDecode(rawPayloadJson) as Map);
-      payload = AnkiMiningPayload.fromJson(json);
-    } catch (e, stack) {
-      return MineOutcome.failure(
-        'Invalid card data (payload parse failed): $e',
-        error: e,
-        stackTrace: stack,
-      );
-    }
-
     final rendered = await _renderMinedFields(
       settings: settings,
       payload: payload,
       context: context,
     );
-    final Map<String, String> fields = rendered.fields;
+    // 渲染键与笔记类型字段名新旧不一致（Fushi 卡片改名）时按别名对上，AnkiDroid 按名取值。
+    final Map<String, String> fields = FushiCardFields.alignToFields(
+      rendered.fields,
+      noteType.fields,
+    );
     // TODO-779: 单词远程音频下载失败时带可见原因到成功 toast（卡片仍建好）。
     final String? audioWarning = rendered.audioWarning;
 
@@ -275,7 +290,10 @@ class AnkiRepository extends BaseAnkiRepository {
       if (firstFieldValue.isNotEmpty) {
         final readingIdx = _findReadingFieldIndex(
           noteType,
-          settings.fieldMappings,
+          FushiCardFields.alignToFields(
+            settings.fieldMappings,
+            noteType.fields,
+          ),
         );
         try {
           final isDupe = await _channel.invokeMethod('checkForDuplicates', {
@@ -299,6 +317,7 @@ class AnkiRepository extends BaseAnkiRepository {
       return MineOutcome.failure(
         'All fields are empty — refusing to create a blank card. '
         'Check your note type field mappings.',
+        errorCode: AnkiErrorCode.allFieldsEmpty,
       );
     }
     // BUG-1900：Anki 的 `fields_check()` **只看第一个字段**——其余字段填得再满，首字段
@@ -310,11 +329,11 @@ class AnkiRepository extends BaseAnkiRepository {
       fieldsForNoteType(noteType, fields),
     );
     if (rejected != null) return rejected;
-    // TODO-062: append the `hibiki` tag (de-duped, order preserved) to the
+    // TODO-062: append the `fushi` tag (de-duped, order preserved) to the
     // user's configured tags via the shared base helper — same behavior as the
     // AnkiConnect backend.
     final tags = buildNoteTags(
-      settings.tags,
+      settings.noteTags,
       source: context.source,
       includeHibiki: settings.tagIncludeHibiki,
       includeCategory: settings.tagIncludeCategory,
@@ -513,12 +532,13 @@ class AnkiRepository extends BaseAnkiRepository {
         return MineOutcome.failure(
           'All fields are empty — refusing to clear an existing card. '
           'Check your note type field mappings.',
+          errorCode: AnkiErrorCode.allFieldsEmpty,
         );
       }
 
       // BUG-2606：与 [mineEntry] 同一组标签、同一个 helper。
       final List<String> tags = buildNoteTags(
-        settings.tags,
+        settings.noteTags,
         source: context.source,
         includeHibiki: settings.tagIncludeHibiki,
         includeCategory: settings.tagIncludeCategory,
@@ -699,6 +719,9 @@ class AnkiRepository extends BaseAnkiRepository {
       return null;
     }
   }
+
+  @override
+  bool get canOpenMinedNote => true;
 
   // TODO-1007/1008：用 ACTION_VIEW intent 在 AnkiDroid 中打开该 note（native `openNote`）。
   @override
@@ -1134,14 +1157,14 @@ class AnkiRepository extends BaseAnkiRepository {
     return -1;
   }
 
-  Future<void> _migrateFromLegacy(SharedPreferences prefs) async {
+  /// 更早的「只存牌组名」旧键（SharedPreferences）：设置存储里一份都没有时，用它
+  /// 种一份初始设置写进 [store]。只读 SP、不改 SP。
+  Future<void> _migrateFromLegacy(AnkiSettingsStore store) async {
+    final prefs = await SharedPreferences.getInstance();
     final legacyDeck = prefs.getString(_legacyDeckKey);
     if (legacyDeck != null && legacyDeck != 'Default') {
       final settings = AnkiSettings(selectedDeckName: legacyDeck);
-      await prefs.setString(
-        BaseAnkiRepository.settingsKey,
-        jsonEncode(settings.toJson()),
-      );
+      await store.write(jsonEncode(settings.toJson()));
     }
   }
 }

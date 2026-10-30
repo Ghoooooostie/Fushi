@@ -20,6 +20,7 @@ import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:fushi_audio/fushi_audio.dart' show decodeTextBytes;
 import 'package:path/path.dart' as p;
 
+import 'package:fushi_engine/media/video/video_member_file.dart';
 import 'package:fushi_engine/ai/ai_chat_client.dart';
 import 'package:fushi_engine/ai/ai_provider_config.dart';
 import 'package:fushi_engine/ai/ai_video_search_assistant.dart';
@@ -34,6 +35,8 @@ import 'package:fushi_engine/media/video/subtitle/video_subtitle_provider.dart';
 import 'package:fushi_engine/media/video/video_duration_probe.dart';
 import 'package:fushi_engine/media/video/video_sidecar.dart'
     show listSidecarSubtitles;
+import 'package:fushi/src/media/video/subtitle/subtitle_content_language.dart';
+import 'package:fushi/src/media/video/subtitle/subtitle_work_identity.dart';
 
 /// 一个待补字幕的视频。身份来自刮削，不是从文件名现猜的。
 class SubtitleBackfillTarget {
@@ -88,7 +91,7 @@ enum SubtitleBackfillOutcome {
   /// 搜索没有任何候选。
   noCandidate,
 
-  /// 有候选但全都没通过时长/内容校验。
+  /// 有候选但全都没通过校验：不是这部作品、不是要的语言、或时长/内容对不上。
   allCandidatesRejected,
 
   /// 视频文件不在了 / 目录读不了 / 写盘失败。
@@ -119,10 +122,11 @@ class SubtitleBackfillResult {
 ///
 /// 返回值必须是入参的**全量排列**——它只改顺序、不改集合，[VideoSubtitleBackfillService.maxCandidates]
 /// 的语义（最多真下几条）不受影响。抛异常按「原序」处理。
-typedef SubtitleBackfillReorder = Future<List<VideoSubtitleCandidate>> Function(
-  List<VideoSubtitleCandidate> candidates,
-  SubtitleBackfillTarget target,
-);
+typedef SubtitleBackfillReorder =
+    Future<List<VideoSubtitleCandidate>> Function(
+      List<VideoSubtitleCandidate> candidates,
+      SubtitleBackfillTarget target,
+    );
 
 /// 给刮削后仍缺字幕的视频自动补一条字幕。
 class VideoSubtitleBackfillService {
@@ -159,16 +163,19 @@ class VideoSubtitleBackfillService {
         SubtitleBackfillOutcome.alreadyHasSubtitle,
       );
     }
-    final File video = File(target.videoPath);
-    if (!video.existsSync()) {
+    // 全部文件判据 async：补字幕跑在 UI isolate，视频与 sidecar 常在网络盘上，同步
+    // stat / list 冷目录要数秒、冻结界面与同 isolate 的互联 host（BUG-3756）。DVD
+    // title 是虚拟路径，按「这个路径本身是不是文件」判（video_member_file.dart）。
+    if (!await videoPathFileExists(target.videoPath)) {
       return const SubtitleBackfillResult(
         SubtitleBackfillOutcome.failed,
         detail: 'video file is gone',
       );
     }
+    final File video = File(target.videoPath);
     // 目录里已经躺着 sidecar 就当已有字幕——它可能是用户手放的，也可能是下载
     // 流水线放的。两种都不该被覆盖。
-    if (_existingSidecars(video).isNotEmpty) {
+    if ((await _existingSidecars(video)).isNotEmpty) {
       return const SubtitleBackfillResult(
         SubtitleBackfillOutcome.alreadyHasSubtitle,
       );
@@ -176,23 +183,7 @@ class VideoSubtitleBackfillService {
 
     final ProviderBatchResult<VideoSubtitleCandidate> result;
     try {
-      result = await registry.search(
-        VideoSubtitleSearchRequest(
-          media: target.media,
-          season: target.media.season,
-          episode: target.media.episode,
-          languages: target.explicitLanguage == null
-              ? preferredLanguages
-              : <String>[target.explicitLanguage!],
-          fingerprint: LocalVideoFingerprint(
-            fileSize: await video.length(),
-            fileName: p.basename(video.path),
-            openSubtitlesMovieHash: await computeOpenSubtitlesMovieHash(
-              video.path,
-            ),
-          ),
-        ),
-      );
+      result = await registry.search(await _request(target, video));
     } on Object catch (error) {
       return SubtitleBackfillResult(
         SubtitleBackfillOutcome.failed,
@@ -209,19 +200,49 @@ class VideoSubtitleBackfillService {
     // 一次 ffprobe 拿两件事实：时长（校验用）+ 音轨语言（选语言用）。
     final VideoProbeFacts facts = await probeVideoFacts(target.videoPath);
     final KnownVideoDuration? duration = _resolveDuration(target, facts);
-    // 默认取**视频自己的语言**。这里是排序不是过滤：只有英文字幕的日语番仍然
-    // 配得上，只是排在后面。硬过滤只属于用户显式选的语言（已进 request.languages）。
+    // 要哪种语言：用户显式选的 > 视频自己的语言（BUG-3069）。由**这部作品**的证据
+    // （显式选择 / 手动内容语言 / 刮削原语言 / 音轨 tag）解析得出就是**硬条件**
+    // ——这是无人值守地往用户片子旁边落字幕，「日语片只找到印尼语字幕」的正确
+    // 结果是不装，而不是悄悄装一条他没要的语言。
+    //
+    // 全局「默认内容语言」不是这部作品的证据（BUG-3083）：用户设了 ja，不代表这部
+    // 没有语言资料的英语片要日文字幕。它只参与排序（[ranking]），不做硬拒——否则
+    // 英语片的英文字幕在下载前与正文复核两关都被拒。
     final String? preferred = resolveSubtitleDownloadLanguage(
       explicitSubtitlePreference:
           target.explicitLanguage ?? preferredLanguages.firstOrNull,
       videoContentLanguage: target.contentLanguage,
       contentMetadataLanguage:
           target.originalLanguage ?? facts.primaryAudioLanguage,
-      globalDefaultContentLanguage: defaultContentLanguage,
     );
+    final String? ranking =
+        preferred ??
+        resolveSubtitleDownloadLanguage(
+          globalDefaultContentLanguage: defaultContentLanguage,
+        );
+    String? lastRejection;
+    final List<VideoSubtitleCandidate> eligible = <VideoSubtitleCandidate>[];
+    for (final VideoSubtitleCandidate candidate in result.items) {
+      final String? rejection = _rejectBeforeDownload(
+        target,
+        candidate,
+        preferred,
+      );
+      if (rejection == null) {
+        eligible.add(candidate);
+        continue;
+      }
+      lastRejection = rejection;
+      debugPrint(
+        '[subtitle-backfill] skipped "${candidate.fileName}" for '
+        '${target.bookUid}: $rejection',
+      );
+    }
+    // 语言没标的候选（压缩包、文件名没写语言）也在 eligible 里，下载后按正文核；
+    // 标了且对上的排前面先试。
     List<VideoSubtitleCandidate> ordered = rankByPreferredLanguage(
-      result.items,
-      preferred,
+      eligible,
+      ranking,
       (VideoSubtitleCandidate c) => c.language,
     );
     // AI 重排只在语言排序之后、截 maxCandidates 之前插一刀：它决定的是「先下哪几条」，
@@ -244,9 +265,9 @@ class VideoSubtitleBackfillService {
         );
       }
     }
-    String? lastRejection;
-    final int limit =
-        ordered.length < maxCandidates ? ordered.length : maxCandidates;
+    final int limit = ordered.length < maxCandidates
+        ? ordered.length
+        : maxCandidates;
     for (int i = 0; i < limit; i++) {
       final VideoSubtitleCandidate candidate = ordered[i];
       final VideoSubtitleDownload download;
@@ -256,8 +277,22 @@ class VideoSubtitleBackfillService {
         lastRejection = 'download failed: $error';
         continue;
       }
+      final String text = await decodeTextBytes(download.bytes);
+      final String? languageRejection = _rejectDownloadedLanguage(
+        download,
+        text,
+        preferred,
+      );
+      if (languageRejection != null) {
+        lastRejection = languageRejection;
+        debugPrint(
+          '[subtitle-backfill] rejected "${candidate.fileName}" for '
+          '${target.bookUid}: $languageRejection',
+        );
+        continue;
+      }
       final SubtitleTimingCheck check = checkSubtitleTiming(
-        summarizeSubtitleTiming(await decodeTextBytes(download.bytes)),
+        summarizeSubtitleTiming(text),
         video: duration,
       );
       if (check.rejected) {
@@ -269,10 +304,13 @@ class VideoSubtitleBackfillService {
         continue;
       }
       try {
-        final String installed = await _writeSidecar(video, download);
+        final String target = sidecarPathFor(video.path, download);
+        if (!await _writeSidecar(video, download)) {
+          return _sameNameExists(target);
+        }
         return SubtitleBackfillResult(
           SubtitleBackfillOutcome.installed,
-          installedPath: installed,
+          installedPath: target,
           language: download.language,
         );
       } on Object catch (error) {
@@ -286,6 +324,126 @@ class VideoSubtitleBackfillService {
       SubtitleBackfillOutcome.allCandidatesRejected,
       detail: lastRejection,
     );
+  }
+
+  /// 自动补与手动搜共用的检索请求：身份、季集号、语言硬过滤、文件指纹。
+  ///
+  /// [query] / [episode] 只给手动搜用：覆盖检索词（身份 id 照旧带上）与集号。
+  Future<VideoSubtitleSearchRequest> _request(
+    SubtitleBackfillTarget target,
+    File video, {
+    String? query,
+    int? episode,
+  }) async {
+    final int? wantedEpisode = episode ?? target.media.episode;
+    return VideoSubtitleSearchRequest(
+      media: target.media,
+      query: query,
+      season: target.media.season,
+      episode: wantedEpisode,
+      languages: target.explicitLanguage == null
+          ? preferredLanguages
+          : <String>[target.explicitLanguage!],
+      fingerprint: LocalVideoFingerprint(
+        fileSize: await video.length(),
+        fileName: p.basename(video.path),
+        openSubtitlesMovieHash: await computeOpenSubtitlesMovieHash(video.path),
+      ),
+    );
+  }
+
+  /// 手动搜：与 [backfill] 同一个请求，但只列候选、不下载不校验（用户自己挑）。
+  /// 视频文件不在时抛 [FileSystemException]。
+  Future<ProviderBatchResult<VideoSubtitleCandidate>> search(
+    SubtitleBackfillTarget target, {
+    String? query,
+    int? episode,
+  }) async {
+    if (!await videoPathFileExists(target.videoPath)) {
+      throw FileSystemException('video file is gone', target.videoPath);
+    }
+    final File video = File(target.videoPath);
+    return registry.search(
+      await _request(target, video, query: query, episode: episode),
+    );
+  }
+
+  /// 手动挑：用户点名的这一条直接下载落 sidecar，跳过作品 / 语言 / 时长的自动拒收
+  /// （那些是无人值守时的保护，用户亲手选的就以他为准）。仍然**不覆盖**已有的同名
+  /// 字幕文件。
+  Future<SubtitleBackfillResult> install(
+    SubtitleBackfillTarget target,
+    VideoSubtitleCandidate candidate,
+  ) async {
+    if (!await videoPathFileExists(target.videoPath)) {
+      return const SubtitleBackfillResult(
+        SubtitleBackfillOutcome.failed,
+        detail: 'video file is gone',
+      );
+    }
+    final File video = File(target.videoPath);
+    final VideoSubtitleDownload download;
+    try {
+      download = await registry.download(candidate);
+    } on Object catch (error) {
+      return SubtitleBackfillResult(
+        SubtitleBackfillOutcome.failed,
+        detail: 'download failed: $error',
+      );
+    }
+    final String dest = sidecarPathFor(video.path, download);
+    if (await File(dest).exists()) return _sameNameExists(dest);
+    try {
+      if (!await _writeSidecar(video, download)) return _sameNameExists(dest);
+      return SubtitleBackfillResult(
+        SubtitleBackfillOutcome.installed,
+        installedPath: dest,
+        language: download.language,
+      );
+    } on Object catch (error) {
+      return SubtitleBackfillResult(
+        SubtitleBackfillOutcome.failed,
+        detail: 'sidecar write failed: $error',
+      );
+    }
+  }
+
+  /// 下载前就能判死的候选：不是这部作品（BUG-3068），或来源标明了别的语言
+  /// （BUG-3069）。返回拒收原因；能进下载环节返回 null。
+  ///
+  /// 放在下载之前不只是省流量：OpenSubtitles 的下载计配额，错作品 / 错语言的
+  /// 候选此前会白白吃掉前 [maxCandidates] 个名额，把真正对的那条挤出窗口。
+  String? _rejectBeforeDownload(
+    SubtitleBackfillTarget target,
+    VideoSubtitleCandidate candidate,
+    String? preferred,
+  ) {
+    final SubtitleWorkCheck work = checkSubtitleWork(target.media, candidate);
+    if (work.rejected) return work.detail;
+    final String? declared = normalizeSubtitleLanguageCode(candidate.language);
+    if (preferred != null && declared != null && declared != preferred) {
+      return 'subtitle language is $declared, wanted $preferred';
+    }
+    return null;
+  }
+
+  /// 下载后的语言复核：解包挑出的文件可能另标了语言，文件名标签也常是错的
+  /// （上传者套模板）——正文是权威（[detectSubtitleContentLanguage]）。
+  String? _rejectDownloadedLanguage(
+    VideoSubtitleDownload download,
+    String text,
+    String? preferred,
+  ) {
+    if (preferred == null) return null;
+    final String? declared = normalizeSubtitleLanguageCode(download.language);
+    if (declared != null && declared != preferred) {
+      return 'subtitle language is $declared, wanted $preferred';
+    }
+    final SubtitleContentLanguage content = detectSubtitleContentLanguage(text);
+    if (subtitleContentContradictsLanguage(content, preferred)) {
+      return 'subtitle text reads as ${content.name}, wanted $preferred';
+    }
+    return null;
   }
 
   /// 时长来源优先级：ffprobe 探到的真实容器时长 > 刮削的播出时长 > 未知。
@@ -305,37 +463,43 @@ class VideoSubtitleBackfillService {
     return null;
   }
 
-  List<String> _existingSidecars(File video) {
+  Future<List<String>> _existingSidecars(File video) async {
     try {
       final Directory dir = video.parent;
       final List<String> names = <String>[
-        for (final FileSystemEntity entity in dir.listSync())
+        await for (final FileSystemEntity entity in dir.list())
           if (entity is File) p.basename(entity.path),
       ];
       return listSidecarSubtitles(
         p.basenameWithoutExtension(video.path),
         names,
       );
-    } catch (_) {
+    } on FileSystemException {
       // 目录读不了就当「不确定有没有」，按有处理——宁可不补，也不能覆盖。
       return const <String>['<unreadable>'];
     }
   }
 
+  /// 同名 sidecar 已经在了：不是这次写的，报 [SubtitleBackfillOutcome.alreadyHasSubtitle]
+  /// ——报成 installed 会让调用方（撤销「删掉刚装的字幕」、成功提示）把用户原有的
+  /// 那份当成这次的产物（BUG-3783）。
+  static SubtitleBackfillResult _sameNameExists(String path) =>
+      SubtitleBackfillResult(
+        SubtitleBackfillOutcome.alreadyHasSubtitle,
+        installedPath: path,
+        detail: 'a subtitle file with the same name already exists',
+      );
+
   /// 落 sidecar：`<video 基名>.<lang><ext>`。**已存在同名文件就不写**（上面已经
-  /// 查过整目录的 sidecar，这里是防并发的第二道）。
-  Future<String> _writeSidecar(
+  /// 查过整目录的 sidecar，这里是防并发的第二道）。返回 true = 这次真写了；false =
+  /// 同名文件已在（写之前就在，或对齐期间被别人落下），什么都没写。
+  Future<bool> _writeSidecar(
     File video,
     VideoSubtitleDownload download,
   ) async {
-    final String extension = sidecarSubtitleExtension(download.fileName);
-    final String language = sidecarLanguageTag(download.language);
-    final String target = p.join(
-      p.dirname(video.path),
-      '${p.basenameWithoutExtension(video.path)}.$language$extension',
-    );
+    final String target = sidecarPathFor(video.path, download);
     final File dest = File(target);
-    if (dest.existsSync()) return target;
+    if (await dest.exists()) return false;
     // 先写临时文件再 rename：半截字幕文件比没有字幕更糟——播放页会把它当成
     // 一条可用字幕加载，用户看到的是「字幕只有前三句」。
     final File temp = File('$target.fushi.tmp');
@@ -350,16 +514,25 @@ class VideoSubtitleBackfillService {
     );
     // 对齐可能要几十秒（整片抽轨）：这期间用户 / 另一条路径可能已经落了同名
     // sidecar，rename 会把它覆盖掉。再查一次，已存在就放弃这份。
-    if (dest.existsSync()) {
+    if (await dest.exists()) {
       try {
         await temp.delete();
       } catch (_) {}
-      return target;
+      return false;
     }
     await temp.rename(target);
-    return target;
+    return true;
   }
 }
+
+/// 一条下载结果在 [videoPath] 旁的 sidecar 路径：`<video 基名>.<lang><ext>`。纯函数。
+String sidecarPathFor(String videoPath, VideoSubtitleDownload download) =>
+    p.join(
+      p.dirname(videoPath),
+      '${p.basenameWithoutExtension(videoPath)}.'
+      '${sidecarLanguageTag(download.language)}'
+      '${sidecarSubtitleExtension(download.fileName)}',
+    );
 
 /// 语言标签归一到 sidecar 后缀白名单允许的字符集（见 `isSidecarSubtitleSuffix`：
 /// `[A-Za-z0-9_-]{1,32}`）。纯函数，与那条白名单成对单测。

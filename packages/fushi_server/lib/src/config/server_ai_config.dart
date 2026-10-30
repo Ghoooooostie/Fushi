@@ -16,15 +16,19 @@
 ///   reasoning_effort: "none"  # none / low / medium / high
 ///   allow_insecure_http: false
 ///   web_knowledge: true       # 联网资料（内置维基站）辅助识别作品 / 列系列
+///   library_organize: false   # 扫描入库后自动 AI 整理库（把该在一起的归进合集）
+///   agent_for_peers: false    # 允许已配对设备经 AI 助手调用本服务端的 admin 操作
 /// ```
 ///
 /// 没有 `ai:` 段 = 没指派提供商：能力位报 `no_provider`，**一个 AI 请求都不发**。
 library;
 
+import 'package:fushi_core/fushi_core.dart' show FushiDatabase;
 import 'package:fushi_engine/ai/ai_feature.dart';
 import 'package:fushi_engine/ai/ai_provider_config.dart';
 import 'package:fushi_engine/ai/ai_settings.dart';
 import 'package:fushi_engine/ai/web_knowledge.dart';
+import 'package:fushi_engine/media/collections/library_organize/library_organize_service.dart';
 
 /// 服务端那一家 AI 在引擎提供商清单里的 id（只在进程内用，不落盘）。
 const String kServerAiProviderId = 'server';
@@ -39,6 +43,8 @@ class ServerAiConfig {
     this.reasoningEffort = AiReasoningEffort.none,
     this.allowInsecureHttp = false,
     this.webKnowledge = true,
+    this.libraryOrganize = false,
+    this.agentForPeers = false,
   });
 
   /// 预设 id（[kAiProviderPresets]）或 [kAiCustomPresetId]。
@@ -52,6 +58,17 @@ class ServerAiConfig {
   final AiReasoningEffort reasoningEffort;
   final bool allowInsecureHttp;
   final bool webKnowledge;
+
+  /// 扫描入库后对规则归不了组的新条目跑一次自动 AI 整理（spec
+  /// `docs/specs/2026-10-20-ai-library-organize-design.md` §10.2）。默认关：按量计费，
+  /// 绝不静默开启。服务端通常就是那台「负责自动整理」的设备。
+  final bool libraryOrganize;
+
+  /// 允许已配对设备把 AI 助手会话交给本服务端跑（spec 2026-10-26 §6.5）。默认关：
+  /// 打开后已配对设备能经 AI 调到一部分 admin 操作（增删库根、改部分设置、确认后扫描 /
+  /// 刮削），比配对本来给的权限多——服务端可能是几个人共用的，必须管理员显式打开。
+  /// 凭据、配对、监听类操作无论如何都不进目录。
+  final bool agentForPeers;
 
   /// yaml `ai:` 段 → 配置；不是 map 或没有 `preset` → null（未配置）。解析保持宽松
   /// （手写的一条坏值不拒绝启动），地址等是否可用由 [problem] / [provider] 判。
@@ -69,6 +86,8 @@ class ServerAiConfig {
       reasoningEffort: AiReasoningEffort.fromStorageKey(_text(raw['reasoning_effort'])),
       allowInsecureHttp: raw['allow_insecure_http'] == true || '${raw['allow_insecure_http']}' == 'true',
       webKnowledge: raw['web_knowledge'] != false && '${raw['web_knowledge']}' != 'false',
+      libraryOrganize: raw['library_organize'] == true || '${raw['library_organize']}' == 'true',
+      agentForPeers: raw['agent_for_peers'] == true || '${raw['agent_for_peers']}' == 'true',
     );
   }
 
@@ -147,6 +166,8 @@ class ServerAiConfig {
     AiReasoningEffort? reasoningEffort,
     bool? allowInsecureHttp,
     bool? webKnowledge,
+    bool? libraryOrganize,
+    bool? agentForPeers,
   }) =>
       ServerAiConfig(
         preset: preset ?? this.preset,
@@ -157,6 +178,8 @@ class ServerAiConfig {
         reasoningEffort: reasoningEffort ?? this.reasoningEffort,
         allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
         webKnowledge: webKnowledge ?? this.webKnowledge,
+        libraryOrganize: libraryOrganize ?? this.libraryOrganize,
+        agentForPeers: agentForPeers ?? this.agentForPeers,
       );
 
   /// 写进 `ai:` 段（[q] 是 ServerConfig 的 yaml 字符串转义）。
@@ -170,6 +193,8 @@ class ServerAiConfig {
     b.writeln('  reasoning_effort: ${q(reasoningEffort.storageKey)}');
     b.writeln('  allow_insecure_http: $allowInsecureHttp');
     b.writeln('  web_knowledge: $webKnowledge');
+    b.writeln('  library_organize: $libraryOrganize');
+    b.writeln('  agent_for_peers: $agentForPeers');
   }
 
   /// 给 admin API 的形状：API key 只报「设过没有」，不回显。
@@ -184,6 +209,8 @@ class ServerAiConfig {
       'reasoningEffort': reasoningEffort.storageKey,
       'allowInsecureHttp': allowInsecureHttp,
       'webKnowledge': webKnowledge,
+      'libraryOrganize': libraryOrganize,
+      'agentForPeers': agentForPeers,
       'effectiveBaseUrl': effectiveBaseUrl,
       'effectiveModel': effectiveModel,
       'status': issue == null ? 'ready' : 'incomplete',
@@ -205,16 +232,43 @@ class ServerAiSettings implements AiSettingsSource {
     return provider == null ? const <AiProviderConfig>[] : <AiProviderConfig>[provider];
   }
 
-  /// 那一家只指派给「AI 下载」：服务端没有刮削 AI 识别 / 补字幕重排等其它 AI 功能的
-  /// 装配，不设默认提供商，免得以后新接一个功能时被静默带上。
+  /// 那一家只指派给「AI 下载」「视频字幕 AI 校对」「AI 助手」（远端会话，工具集是
+  /// 服务端自己描述的 admin 操作，见 `agent_host.dart`），以及打开了
+  /// `library_organize` 时的「AI 整理库」：服务端没有刮削 AI 识别 / 补字幕重排等其它
+  /// AI 功能的装配，不设默认提供商，免得以后新接一个功能时被静默带上。
   @override
-  AiFeatureAssignments get aiFeatureAssignments => _config()?.provider() == null
-      ? const AiFeatureAssignments()
-      : const AiFeatureAssignments(
-          providerIdByFeature: <AiFeature, String>{AiFeature.acquire: kServerAiProviderId},
-        );
+  AiFeatureAssignments get aiFeatureAssignments {
+    final ServerAiConfig? config = _config();
+    if (config?.provider() == null) return const AiFeatureAssignments();
+    return AiFeatureAssignments(
+      providerIdByFeature: <AiFeature, String>{
+        AiFeature.acquire: kServerAiProviderId,
+        AiFeature.subtitleProofread: kServerAiProviderId,
+        AiFeature.agent: kServerAiProviderId,
+        if (config!.libraryOrganize) AiFeature.libraryOrganize: kServerAiProviderId,
+      },
+    );
+  }
 
   @override
   List<WebKnowledgeSite> get aiWebKnowledgeSites =>
       _config()?.webKnowledge ?? false ? kBuiltinWebKnowledgeSites : const <WebKnowledgeSite>[];
+}
+
+/// 扫描后自动 AI 整理库的服务（`ai.library_organize` 打开且提供商能用）；否则 null。
+///
+/// 服务端没有 UI 语言：新合集名用作品原语言（`original`），系列标签前缀用英文。
+LibraryOrganizeService? serverLibraryOrganizer(
+  FushiDatabase db,
+  ServerAiConfig? config,
+) {
+  if (config == null || !config.libraryOrganize || config.provider() == null) {
+    return null;
+  }
+  return LibraryOrganizeService(
+    db: db,
+    settings: ServerAiSettings(() => config),
+    nameLanguage: 'original',
+    videoTagPrefix: 'Series: ',
+  );
 }

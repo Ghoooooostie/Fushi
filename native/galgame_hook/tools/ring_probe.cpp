@@ -24,7 +24,7 @@
 // 用途：injector 早注入（--launch）目标游戏、放着游戏出声后，用它旁路读共享内存，直观确认
 // DirectSound/XAudio2 捕获真的在工作——hooked=1、格式被 hook 填上、total_written 在涨、峰值
 // 振幅从 silent 变 SOUND。**只读**，不注入、不写共享内存，故不需与目标同位数：命名文件映射
-// （Local\HibikiVoiceHook_<pid>）跨 32/64 位可读，x64 reader 能读 32 位游戏里 hook 填的缓冲。
+// （Local\FushiVoiceHook_<pid>）跨 32/64 位可读，x64 reader 能读 32 位游戏里 hook 填的缓冲。
 //
 // 用法：fushi_voice_ring_probe <pid> [轮数=30] [间隔ms=500]
 //   <pid>    injector 建共享内存时用的目标进程 pid（injector 打印的 pid=）
@@ -443,7 +443,7 @@ bool DumpUtterance(const SharedHeader* h, const uint8_t* ring, uint64_t ts,
       voice_src = kv.first;
     }
   }
-  // 拼接语音源在 [下界, ts+6000] 的段；静音判据用该源峰值能量的 8%。下界与 host 的
+  // 拼接语音源在 [下界, ts+kUtteranceMaxForwardMs] 的段；静音判据用该源峰值能量的 8%。下界与 host 的
   // GrabUtterance 共用同一份实现（BUG-1593）：clip 时间戳是**提交**时刻，流式引擎按缓冲
   // 深度提前灌入，固定 200ms 回看会整块丢掉句首。诊断工具必须和真实取音判据一致，否则
   // 拿它排障只会把人带偏。
@@ -474,7 +474,7 @@ bool DumpUtterance(const SharedHeader* h, const uint8_t* ring, uint64_t ts,
     }
     const int64_t d = static_cast<int64_t>(c->timestamp_ms) -
                       static_cast<int64_t>(ts);
-    if (static_cast<int64_t>(c->timestamp_ms) < lower_ts || d > 6000) {
+    if (static_cast<int64_t>(c->timestamp_ms) < lower_ts || d > fushi_voice_hook::kUtteranceMaxForwardMs) {
       continue;
     }
     const double e = ClipEnergy16(h, ring, c);
@@ -1133,8 +1133,7 @@ bool ResolveRemotePeExportRva(HANDLE process,
 }
 
 bool IsExpectedHookModuleName(const std::wstring& name) {
-  return _wcsicmp(name.c_str(), L"fushi_voice_hook.dll") == 0 ||
-         _wcsicmp(name.c_str(), L"hibiki_voice_hook.dll") == 0;
+  return _wcsicmp(name.c_str(), L"fushi_voice_hook.dll") == 0;
 }
 
 bool FindRemoteXAudioTrace(HANDLE process, DWORD pid,
@@ -2371,7 +2370,7 @@ int main(int argc, char** argv) {
   const uint8_t* ring =
       reinterpret_cast<const uint8_t*>(header) + sizeof(SharedHeader);
 
-  // Diagnostic equivalent of Hibiki VoiceHookReader::SelectTextThread. This
+  // Diagnostic equivalent of Fushi VoiceHookReader::SelectTextThread. This
   // changes only the production IPC selector; text/resource events still have
   // to be produced by the live Luna/game hooks.
   if (select_text_thread) {

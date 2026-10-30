@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:fushi/src/lookup/effective_lookup_size.dart'
+    show kLookupPopupMinHeight;
 import 'package:fushi/src/pages/implementations/dictionary_popup_layer.dart';
 import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart';
 import 'package:fushi/src/utils/components/fushi_material_components.dart';
@@ -516,6 +518,91 @@ void main() {
       expect(overlapsColumn, isTrue);
     });
   });
+
+  group(
+    'BUG-3604: choosePopupAnchorRect falls back when avoidance collapses',
+    () {
+      const Size screen = Size(363, 792);
+      const Rect glyph = Rect.fromLTWH(300, 396, 15, 16);
+
+      Rect choose(
+        Rect preferred, {
+        Rect? fallback = glyph,
+        bool docked = false,
+      }) => choosePopupAnchorRect(
+        preferred: preferred,
+        fallback: fallback,
+        screen: screen,
+        bottomDocked: docked,
+        maxWidth: 480,
+        maxHeight: 480,
+      );
+
+      test('preferred rect taller than the screen -> fallback glyph', () {
+        expect(choose(const Rect.fromLTRB(0, -320, 363, 1180)), glyph);
+      });
+
+      test(
+        'preferred rect leaving only a sliver (< min height) -> fallback',
+        () {
+          // 上方 40、下方 40：按它避让弹窗只剩 ~36 高。
+          expect(choose(const Rect.fromLTRB(0, 50, 363, 742)), glyph);
+        },
+      );
+
+      test('roomy preferred rect is kept (bubble avoidance unchanged)', () {
+        const Rect bubble = Rect.fromLTWH(40, 520, 200, 120);
+        expect(choose(bubble), bubble);
+      });
+
+      test('tight but usable room keeps the preferred rect', () {
+        // 上方约 250：弹窗被压矮但仍不小于弹窗系统自己的最小高度（200），
+        // 不放弃气泡避让。
+        const Rect bubble = Rect.fromLTRB(0, 260, 363, 700);
+        expect(choose(bubble), bubble);
+      });
+
+      test(
+        '9VPd0p5d0V: room below the popup minimum height (~130) -> fallback',
+        () {
+          // 反馈未放大截图：资料表并集上方只剩约 130 高。旧阈值 120 判它「放得下」，
+          // 弹窗被推到屏顶、只露顶栏与词头、离被点的词半屏远（「避开过头」）。
+          const Rect table = Rect.fromLTRB(0, 140, 363, 780);
+          final Rect placed = calcPopupPosition(
+            selectionRect: table,
+            screen: screen,
+            maxWidth: 480,
+            maxHeight: 480,
+          );
+          expect(placed.height, lessThan(kLookupPopupMinHeight));
+          expect(placed.height, greaterThan(120), reason: '旧阈值下会被判成功');
+          expect(choose(table), glyph);
+        },
+      );
+
+      test('no fallback / docked mode -> preferred untouched', () {
+        const Rect huge = Rect.fromLTRB(0, -320, 363, 1180);
+        expect(choose(huge, fallback: null), huge);
+        expect(choose(huge, docked: true), huge);
+      });
+
+      test('small max height setting does not count as collapse', () {
+        // 用户把最大高度设成 80：避让后高度 80 是「放得下」，不是被挤压。
+        const Rect bubble = Rect.fromLTWH(40, 520, 200, 120);
+        expect(
+          choosePopupAnchorRect(
+            preferred: bubble,
+            fallback: glyph,
+            screen: screen,
+            bottomDocked: false,
+            maxWidth: 480,
+            maxHeight: 80,
+          ),
+          bubble,
+        );
+      });
+    },
+  );
 
   group('TODO-108: dockedPopupRect pins a full-width bottom panel', () {
     const Size screen = Size(800, 600);

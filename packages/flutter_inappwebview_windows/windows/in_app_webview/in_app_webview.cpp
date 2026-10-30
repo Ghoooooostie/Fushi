@@ -1,9 +1,12 @@
+#include <cmath>
 #include <cstring>
 #include <filesystem>
 #include <nlohmann/json.hpp>
 #include <objbase.h>
 #include <Shlwapi.h>
 #include <windows.h>
+#include <bcrypt.h>
+#include <iostream>
 #include <WebView2EnvironmentOptions.h>
 #include <wil/wrl.h>
 
@@ -20,6 +23,9 @@
 #include "../webview_environment/webview_environment_manager.h"
 #include "in_app_webview.h"
 #include "in_app_webview_manager.h"
+
+// Fushi bridge lock：BCryptGenRandom 生成桥令牌。
+#pragma comment(lib, "bcrypt.lib")
 
 namespace flutter_inappwebview_plugin
 {
@@ -40,6 +46,46 @@ namespace flutter_inappwebview_plugin
       }
       value.resize(written);
       return value;
+    }
+
+    // Fushi bridge lock：丢弃消息时的 warn。debugLog 在 release 被编译掉，这条必须留痕。
+    void fushiBridgeLockWarn(const std::string& message)
+    {
+      const std::string line = "[flutter_inappwebview_windows][bridge-lock][warn] " + message;
+      std::cerr << line << std::endl;
+      OutputDebugStringW(utf8_to_wide("\n" + line + "\n").c_str());
+    }
+
+    // ≥128 bit 的随机令牌：BCryptGenRandom(系统首选 RNG) 取 32 字节 → 64 位小写 hex。
+    bool fushiGenerateBridgeLockToken(std::string* out)
+    {
+      unsigned char bytes[32] = {};
+      if (!BCRYPT_SUCCESS(BCryptGenRandom(nullptr, bytes, static_cast<ULONG>(sizeof(bytes)), BCRYPT_USE_SYSTEM_PREFERRED_RNG))) {
+        return false;
+      }
+      static const char kHex[] = "0123456789abcdef";
+      std::string token;
+      token.reserve(sizeof(bytes) * 2);
+      for (unsigned char b : bytes) {
+        token.push_back(kHex[b >> 4]);
+        token.push_back(kHex[b & 0x0F]);
+      }
+      SecureZeroMemory(bytes, sizeof(bytes));
+      *out = std::move(token);
+      return true;
+    }
+
+    // 定长比较，不因首个不同字节提前返回。
+    bool fushiTokensEqual(const std::string& a, const std::string& b)
+    {
+      if (a.size() != b.size()) {
+        return false;
+      }
+      unsigned char diff = 0;
+      for (size_t i = 0; i < a.size(); ++i) {
+        diff |= static_cast<unsigned char>(a[i]) ^ static_cast<unsigned char>(b[i]);
+      }
+      return diff == 0;
     }
   }
 
@@ -210,9 +256,20 @@ namespace flutter_inappwebview_plugin
       // intended behavior. NOTE: all environments created against the same user
       // data folder must use identical options (mismatch fails with
       // 0x8007139F) — this is the plugin's single default-environment site.
+      //
+      // BUG-3497: `fushi.local` is a virtual host served entirely by the
+      // WebResourceRequested interceptor, yet Chromium still resolves it on
+      // every main-frame navigation. `.local` goes to Windows multicast name
+      // resolution (mDNS/LLMNR), which only fails after ~2.7 s and is not
+      // negatively cached, so every book open and chapter turn sat blank for
+      // ~2 s. The lookup already fails today (NavigationCompleted below turns
+      // that failure into success); `~NOTFOUND` makes it fail immediately
+      // without touching the system resolver. Keep the host in sync with
+      // kReaderResourceHost (guard: webview2_reader_host_resolver_guard_test).
       auto options = Make<CoreWebView2EnvironmentOptions>();
       options->put_AdditionalBrowserArguments(
-        L"--autoplay-policy=no-user-gesture-required");
+        L"--autoplay-policy=no-user-gesture-required "
+        L"--host-resolver-rules=\"MAP fushi.local ~NOTFOUND\"");
       hr = CreateCoreWebView2EnvironmentWithOptions(
         nullptr, userDataFolder.empty() ? nullptr : userDataFolder.c_str(),
         options.Get(),
@@ -258,7 +315,7 @@ namespace flutter_inappwebview_plugin
       // Deliberately UNCONDITIONAL — not a missing knob. Exposing it as a
       // setting would need a matching Dart field in
       // flutter_inappwebview_platform_interface, which lives in pub-cache and is
-      // NOT forked here (only this windows package is vendored). And no Hibiki
+      // NOT forked here (only this windows package is vendored). And no Fushi
       // surface wants a browser status bar: every WebView in this app renders
       // EPUB / dictionary content, never a browsing chrome.
       //
@@ -285,7 +342,7 @@ namespace flutter_inappwebview_plugin
     //
     // WebView2 defaults AllowExternalDrop=TRUE, which makes the runtime register
     // its own IDropTarget on the HOST top-level HWND so files can be dropped INTO
-    // the web page. Hibiki only renders trusted EPUB/dictionary HTML in WebView,
+    // the web page. Fushi only renders trusted EPUB/dictionary HTML in WebView,
     // so dropping OS files into the page is never wanted. Worse, that registration
     // fights desktop_drop, which calls RegisterDragDrop once for the whole window:
     // WebView2 silently takes over the host HWND's drop target while a reader /
@@ -628,6 +685,12 @@ namespace flutter_inappwebview_plugin
           if (!*alive) {
             return S_OK;
           }
+          // Fushi bridge lock：ContentLoading 只在顶层 frame 提交新文档时触发（同文档的
+          // fragment / pushState 不触发，子 frame 导航走 Frame 事件）——新文档回到未锁定。
+          // 故意不在 NavigationStarting 清：导航可能被取消 / 变成下载，旧文档仍活着，
+          // 那时清令牌等于把还在跑的已锁页面解锁。
+          bridgeLockToken_.clear();
+          bridgeLockSource_.clear();
           if (channelDelegate) {
             channelDelegate->onProgressChanged(33);
           }
@@ -673,7 +736,10 @@ namespace flutter_inappwebview_plugin
               }
               channelDelegate->onLoadStop(url);
             }
-            else if (!InAppWebView::isSslError(webErrorType) && navigationAction) {
+            else if (navigationAction) {
+              // 证书错误（WebErrorStatus 1–5）也要回 onReceivedError：上游原先把它们滤掉、
+              // 留给从未实现的 ServerTrustAuth 回调，结果 Dart 侧收不到任何失败信号，
+              // 页面停在 WebView2 自带的拦截页上，app 的失败页 / 重试 / 历史判定都不跑。
               // 根治 fushi.local 假失败：拦截器已为该主框架 URL 注入 2xx 响应，
               // 内容已渲染，引擎因自定义域 DNS 解析失败误报 IsSuccess=FALSE —— 当成功。
               if (url.has_value() && consumeMainFrameInjectedOk(url.value())) {
@@ -691,6 +757,11 @@ namespace flutter_inappwebview_plugin
                     std::optional<std::map<std::string, std::string>>{},
                     std::optional<std::vector<uint8_t>>{});
                   channelDelegate->onReceivedHttpError(std::move(webResourceRequest), std::move(webResourceResponse));
+                  // WebView2 把主框架 4xx/5xx 一律报成 IsSuccess=FALSE，但文档其实已经加载
+                  // 完（网站自己的 404 页，或空响应体时 Chromium 换上的 HTTP ERROR 页）。
+                  // Android / iOS 在 HTTP 错误后照常回 onLoadStop；这里不补，Dart 侧就永远
+                  // 停在 loading、加载后钩子（标题、历史、取词脚本、空白页判定）一个都不跑。
+                  channelDelegate->onLoadStop(url);
                 }
                 else if (httpStatusCode < 400) {
                   auto webResourceError = std::make_unique<WebResourceError>(WebErrorStatusDescription[webErrorType], webErrorType);
@@ -750,13 +821,42 @@ namespace flutter_inappwebview_plugin
           return S_OK;
         }
 
+        // Fushi bridge lock：WebMessageReceived 只承接顶层文档的 chrome.webview.postMessage
+        // （iframe 的 postMessage 走 ICoreWebView2Frame::WebMessageReceived，本插件不订阅）；
+        // Source 仍作为令牌之外的第二道校验（spec 第 7 条）。
+        std::wstring messageSource;
+        {
+          wil::unique_cotaskmem_string sourceRaw;
+          if (SUCCEEDED(args->get_Source(&sourceRaw)) && sourceRaw) {
+            messageSource = sourceRaw.get();
+          }
+        }
+
         wil::unique_cotaskmem_string json;
         if (succeededOrLog(args->get_WebMessageAsJson(&json))) {
-          auto message = nlohmann::json::parse(wide_to_utf8(json.get()));
+          auto message = nlohmann::json::parse(wide_to_utf8(json.get()), nullptr, false);
 
           if (message.is_object() && message.contains("name") && message.at("name").is_string() && message.contains("body") && message.at("body").is_object()) {
             auto name = message.at("name").get<std::string>();
             auto body = message.at("body").get<nlohmann::json>();
+
+            if (name.compare(FUSHI_BRIDGE_LOCK_HANDLER_NAME) == 0) {
+              auto lockCallHandlerID = body.contains("_callHandlerID") && body.at("_callHandlerID").is_number_integer() ? body.at("_callHandlerID").get<int64_t>() : 0;
+              handleBridgeLockRequest(messageSource, lockCallHandlerID);
+              return S_OK;
+            }
+
+            if (!bridgeLockToken_.empty()) {
+              std::string presentedToken;
+              const bool hasToken = body.contains("_fushiBridgeToken") && body.at("_fushiBridgeToken").is_string();
+              if (hasToken) {
+                presentedToken = body.at("_fushiBridgeToken").get<std::string>();
+              }
+              if (!isBridgeMessageAuthorized(messageSource, hasToken ? &presentedToken : nullptr)) {
+                fushiBridgeLockWarn("dropped JS->native message on locked bridge (missing/invalid token or unexpected source): " + wide_to_utf8(messageSource));
+                return S_OK;
+              }
+            }
 
             if (name.compare("callHandler") == 0 && body.contains("handlerName") && body.at("handlerName").is_string()) {
               auto handlerName = body.at("handlerName").get<std::string>();
@@ -926,6 +1026,130 @@ namespace flutter_inappwebview_plugin
         return S_OK;
       }
     ).Get(), &windowCloseRequestedToken_));
+
+    // 下载：Dart 侧实现了 onDownloadStartRequest（_inferInitialSettings 会据此把
+    // useOnDownloadStart 置 true，setSettings 也会实时更新）时，取消 WebView2 自带下载
+    // （不落系统「下载」目录、不弹 Edge 下载浮层），把请求转给 Dart，由宿主自己下载；
+    // 没实现则不碰，保持 WebView2 默认行为（headless / 其它使用方不受影响）。
+    // 与 Android DownloadListener 的约定一致：事件是单向通知，Dart 回调无返回值。
+    wil::com_ptr<ICoreWebView2_4> webView4;
+    if (SUCCEEDED(webView->QueryInterface(IID_PPV_ARGS(&webView4)))) {
+      failedLog(webView4->add_DownloadStarting(
+        Callback<ICoreWebView2DownloadStartingEventHandler>(
+          [this, alive = alive_](ICoreWebView2* sender, ICoreWebView2DownloadStartingEventArgs* args)
+          {
+            if (!*alive) {
+              return S_OK;
+            }
+            if (!channelDelegate || !settings || !settings->useOnDownloadStart) {
+              return S_OK;
+            }
+
+            wil::com_ptr<ICoreWebView2DownloadOperation> operation;
+            if (FAILED(args->get_DownloadOperation(&operation)) || !operation) {
+              return S_OK;
+            }
+            wil::unique_cotaskmem_string uri;
+            if (FAILED(operation->get_Uri(&uri)) || !uri) {
+              return S_OK;
+            }
+            const std::string url = wide_to_utf8(uri.get());
+            // blob: 地址只在页面上下文里有效，宿主的 HTTP 客户端取不到；交给 Dart 只会
+            // 失败并把这次下载弄丢，所以保留 WebView2 自带下载（平台边界，不转发）。
+            if (url.empty() || starts_with(url, std::string{ "blob:" })) {
+              return S_OK;
+            }
+
+            wil::unique_cotaskmem_string mimeTypeRaw;
+            std::optional<std::string> mimeType = SUCCEEDED(operation->get_MimeType(&mimeTypeRaw)) && mimeTypeRaw && *mimeTypeRaw.get() != L'\0'
+              ? wide_to_utf8(mimeTypeRaw.get()) : std::optional<std::string>{};
+
+            wil::unique_cotaskmem_string contentDispositionRaw;
+            std::optional<std::string> contentDisposition = SUCCEEDED(operation->get_ContentDisposition(&contentDispositionRaw)) && contentDispositionRaw && *contentDispositionRaw.get() != L'\0'
+              ? wide_to_utf8(contentDispositionRaw.get()) : std::optional<std::string>{};
+
+            // TotalBytesToReceive 来自 Content-Length，未知时为 -1（与 Android 约定一致）。
+            INT64 totalBytes = -1;
+            if (FAILED(operation->get_TotalBytesToReceive(&totalBytes))) {
+              totalBytes = -1;
+            }
+
+            // WebView2 已按 Content-Disposition / URL / MIME 推好的保存路径，取文件名部分。
+            std::optional<std::string> suggestedFilename;
+            wil::unique_cotaskmem_string resultFilePath;
+            if (SUCCEEDED(args->get_ResultFilePath(&resultFilePath)) && resultFilePath && *resultFilePath.get() != L'\0') {
+              const std::wstring fileName = std::filesystem::path(resultFilePath.get()).filename().wstring();
+              if (!fileName.empty()) {
+                suggestedFilename = wide_to_utf8(fileName);
+              }
+            }
+
+            std::optional<std::string> userAgent;
+            wil::com_ptr<ICoreWebView2Settings> webViewSettings;
+            wil::com_ptr<ICoreWebView2Settings2> webViewSettings2;
+            wil::unique_cotaskmem_string userAgentRaw;
+            if (webView && SUCCEEDED(webView->get_Settings(&webViewSettings)) &&
+              SUCCEEDED(webViewSettings->QueryInterface(IID_PPV_ARGS(&webViewSettings2))) &&
+              SUCCEEDED(webViewSettings2->get_UserAgent(&userAgentRaw)) && userAgentRaw) {
+              userAgent = wide_to_utf8(userAgentRaw.get());
+            }
+
+            failedLog(args->put_Cancel(TRUE));
+
+            auto request = std::make_shared<DownloadStartRequest>(
+              url,
+              userAgent,
+              contentDisposition,
+              mimeType,
+              static_cast<int64_t>(totalBytes),
+              suggestedFilename,
+              std::nullopt);
+            channelDelegate->onDownloadStartRequest(std::move(request));
+            return S_OK;
+          }
+        ).Get(), &downloadStartingToken_));
+    }
+
+    // 进程失败：上游 Windows 实现从未接 ProcessFailed，主渲染进程 / 浏览器进程退出后 Dart 侧
+    // onRenderProcessGone 永不触发，WebView 停在死页面（黑屏回不来）。这里按 kind 转发：
+    // · RENDER_PROCESS_EXITED：主框架渲染进程没了，本 WebView 报废，宿主重建表面；
+    // · BROWSER_PROCESS_EXITED：整个浏览器进程（含环境）没了，宿主还要换新环境再重建。
+    // 其余 kind（iframe 渲染进程、GPU / 工具进程、无响应）WebView2 会自行恢复或不影响主页面，
+    // 不转发——转发了宿主会无谓重建、打断正常播放。
+    failedLog(webView->add_ProcessFailed(Callback<ICoreWebView2ProcessFailedEventHandler>(
+      [this, alive = alive_](ICoreWebView2* sender, ICoreWebView2ProcessFailedEventArgs* args)
+      {
+        if (!*alive || !channelDelegate) {
+          return S_OK;
+        }
+        COREWEBVIEW2_PROCESS_FAILED_KIND kind;
+        if (FAILED(args->get_ProcessFailedKind(&kind))) {
+          return S_OK;
+        }
+        std::string kindName;
+        if (kind == COREWEBVIEW2_PROCESS_FAILED_KIND_RENDER_PROCESS_EXITED) {
+          kindName = "render";
+        }
+        else if (kind == COREWEBVIEW2_PROCESS_FAILED_KIND_BROWSER_PROCESS_EXITED) {
+          kindName = "browser";
+        }
+        else {
+          return S_OK;
+        }
+        // 被正常终止（任务管理器结束 / 系统回收）不算崩溃；读不到原因（旧运行时）按崩溃处理。
+        bool didCrash = true;
+        wil::com_ptr<ICoreWebView2ProcessFailedEventArgs2> args2;
+        if (SUCCEEDED(args->QueryInterface(IID_PPV_ARGS(&args2)))) {
+          COREWEBVIEW2_PROCESS_FAILED_REASON reason;
+          if (SUCCEEDED(args2->get_Reason(&reason))) {
+            didCrash = reason != COREWEBVIEW2_PROCESS_FAILED_REASON_TERMINATED;
+          }
+        }
+        debugLog("ProcessFailed kind=" + kindName);
+        channelDelegate->onRenderProcessGone(didCrash, kindName);
+        return S_OK;
+      }
+    ).Get(), &processFailedToken_));
 
     failedLog(webView->add_PermissionRequested(Callback<ICoreWebView2PermissionRequestedEventHandler>(
       [this, alive = alive_](ICoreWebView2* sender, ICoreWebView2PermissionRequestedEventArgs* args)
@@ -1823,6 +2047,70 @@ namespace flutter_inappwebview_plugin
       SWP_NOACTIVATE | SWP_SHOWWINDOW);
     RECT bounds{ 0, 0, windowedWidth_, windowedHeight_ };
     failedLog(webViewController->put_Bounds(bounds));
+    applyWindowedRegion(child);
+  }
+
+  void InAppWebView::applyWindowedRegion(HWND child)
+  {
+    if (windowedExclusions_.empty()) {
+      ::SetWindowRgn(child, nullptr, TRUE);
+      return;
+    }
+    HRGN region = ::CreateRectRgn(0, 0, windowedWidth_, windowedHeight_);
+    if (!region) {
+      return;
+    }
+    const double scale = deviceScaleFactor_;
+    for (const auto& e : windowedExclusions_) {
+      const int left = static_cast<int>(std::floor(e[0] * scale));
+      const int top = static_cast<int>(std::floor(e[1] * scale));
+      const int right = static_cast<int>(std::ceil(e[2] * scale));
+      const int bottom = static_cast<int>(std::ceil(e[3] * scale));
+      const int diameter = static_cast<int>(std::round(e[4] * scale * 2));
+      if (right <= left || bottom <= top) {
+        continue;
+      }
+      // CreateRoundRectRgn 的右 / 下边不含在内，补 1 像素。
+      HRGN hole = diameter > 0
+        ? ::CreateRoundRectRgn(left, top, right + 1, bottom + 1, diameter, diameter)
+        : ::CreateRectRgn(left, top, right, bottom);
+      if (hole) {
+        ::CombineRgn(region, region, hole, RGN_DIFF);
+        ::DeleteObject(hole);
+      }
+    }
+    // 成功后区域归系统所有，不再 DeleteObject。
+    if (!::SetWindowRgn(child, region, TRUE)) {
+      ::DeleteObject(region);
+    }
+  }
+
+  bool InAppWebView::setWindowedInputExclusions(
+    const std::vector<std::array<double, 5>>& exclusions)
+  {
+    HWND child = nullptr;
+    if (surface_ || !webViewController ||
+      !succeededOrLog(webViewController->get_ParentWindow(&child)) || !child) {
+      return false;
+    }
+    if (exclusions == windowedExclusions_) {
+      return true;
+    }
+    windowedExclusions_ = exclusions;
+    applyWindowedRegion(child);
+    return true;
+  }
+
+  bool InAppWebView::setWindowedInputEnabled(bool enabled)
+  {
+    HWND child = nullptr;
+    if (surface_ || !webViewController ||
+      !succeededOrLog(webViewController->get_ParentWindow(&child)) || !child) {
+      return false;
+    }
+    // 禁用的子窗口不参与命中测试，整棵子树（含 WebView2 浏览器进程建的 HWND）一起跳过。
+    ::EnableWindow(child, enabled ? TRUE : FALSE);
+    return true;
   }
 
   void InAppWebView::setSurfaceSize(size_t width, size_t height,
@@ -1835,8 +2123,8 @@ namespace flutter_inappwebview_plugin
     if (!surface_ && width > 0 && height > 0) {
       // 窗口宿主模式：不设 BoundsMode / RasterizationScale（WebView2 自己按显示器 DPI 栅格化，
       // 这正是硬件 PlayReady 走受保护输出所需的常规窗口路径）。
+      // 子窗口按纹理栅格倍率（dpr × 祖先缩放）定物理尺寸；deviceScaleFactor_ 归 setPosition。
       captureScaleFactor_ = device_scale_factor;
-      deviceScaleFactor_ = device_scale_factor;
       windowedWidth_ = static_cast<int>(width * device_scale_factor);
       windowedHeight_ = static_cast<int>(height * device_scale_factor);
       applyWindowedBounds();
@@ -1847,8 +2135,11 @@ namespace flutter_inappwebview_plugin
     }
 
     if (surface_ && width > 0 && height > 0) {
+      // 尺寸的倍率是纹理栅格倍率（Dart 侧 = dpr × 祖先缩放，见 surfaceRasterScale），
+      // 可以不等于窗口 dpr；deviceScaleFactor_（窗口坐标 / 滚轮还原 / 截图）只归
+      // setPosition 管，这里不覆盖，否则 app 界面大小 ≠ 100% 时滚轮倍率跟着偏。
+      (void)device_scale_factor;
       captureScaleFactor_ = capture_scale_factor;
-      deviceScaleFactor_ = device_scale_factor;
       auto scaled_width = width * capture_scale_factor;
       auto scaled_height = height * capture_scale_factor;
 
@@ -2122,9 +2413,17 @@ namespace flutter_inappwebview_plugin
     }
 
     if (horizontal) {
+      // 两个滚轮轴的符号约定相反：WM_MOUSEWHEEL 正值 = 向上滚（内容下移），
+      // WM_MOUSEHWHEEL 正值 = 向右滚（内容左移；Chromium 的 Win 输入构建器把它取反
+      // 成 WebKit 的「正 = 向左」，DOM deltaX 因而为正）。本入口的 delta 是「内容
+      // 移动量」（Dart 侧传 -scrollDelta / 触控板 panDelta，两者都是内容跟着走的
+      // 方向），纵向正好对上 WHEEL 的约定，横向必须取反才对上 HWHEEL。此前横向原样
+      // 下发 → 倾斜滚轮向右滚成向左、触控板两指横滑内容逆着手指走，阅读器横向
+      // 翻页随之反向（反馈 794gISjvgV）。
       webViewCompositionController->SendMouseInput(
         COREWEBVIEW2_MOUSE_EVENT_KIND_HORIZONTAL_WHEEL,
-        virtualKeys_.state() | extraKeys, offset, lastCursorPos_);
+        virtualKeys_.state() | extraKeys, static_cast<short>(-offset),
+        lastCursorPos_);
     }
     else {
       webViewCompositionController->SendMouseInput(COREWEBVIEW2_MOUSE_EVENT_KIND_WHEEL,
@@ -2197,11 +2496,6 @@ namespace flutter_inappwebview_plugin
     return true;
   }
 
-  bool InAppWebView::isSslError(const COREWEBVIEW2_WEB_ERROR_STATUS& webErrorStatus)
-  {
-    return webErrorStatus >= COREWEBVIEW2_WEB_ERROR_STATUS_CERTIFICATE_COMMON_NAME_IS_INCORRECT && webErrorStatus <= COREWEBVIEW2_WEB_ERROR_STATUS_CERTIFICATE_IS_INVALID;
-  }
-
   namespace {
     // 截断 '#' 之后的 fragment，消除主框架 URL 在注入侧与导航完成侧的规范化差异。
     std::string stripFragment(const std::string& url) {
@@ -2225,6 +2519,57 @@ namespace flutter_inappwebview_plugin
     return true;
   }
 
+  // Fushi bridge lock — 处理桥脚本拦下的 callHandler('_fushiLockBridge')。
+  // 已锁定 / Source 是 srcdoc 或空 / 取随机数失败 → 回 false（保持原令牌）；
+  // 否则生成令牌、记下锁定方文档的 Source，并只回给顶层文档的桥闭包。
+  void InAppWebView::handleBridgeLockRequest(const std::wstring& source, int64_t callHandlerID)
+  {
+    std::string token;
+    bool granted = false;
+    if (!bridgeLockToken_.empty()) {
+      fushiBridgeLockWarn("refused _fushiLockBridge: bridge already locked");
+    }
+    else if (source.empty() || source.rfind(L"about:srcdoc", 0) == 0) {
+      fushiBridgeLockWarn("refused _fushiLockBridge from unexpected source: " + wide_to_utf8(source));
+    }
+    else if (!fushiGenerateBridgeLockToken(&token)) {
+      fushiBridgeLockWarn("refused _fushiLockBridge: BCryptGenRandom failed");
+    }
+    else {
+      bridgeLockToken_ = token;
+      bridgeLockSource_ = source;
+      granted = true;
+    }
+    // evaluateJavascript 只在顶层文档执行；令牌是 hex，直接作 JS 字符串字面量拼入。
+    const std::string reply = granted ? "'" + token + "'" : "false";
+    evaluateJavascript("if (window." + JAVASCRIPT_BRIDGE_NAME + " != null && typeof window." + JAVASCRIPT_BRIDGE_NAME + "._fushiLockResult === 'function') { window." + JAVASCRIPT_BRIDGE_NAME + "._fushiLockResult(" + std::to_string(callHandlerID) + ", " + reply + "); }", ContentWorld::page(), nullptr);
+  }
+
+  // 锁定后每条消息：令牌必须一致，且发送方文档必须是锁定方（或当前顶层 Source，兼容同文档
+  // pushState 改 URL）。about:srcdoc 等子文档 Source 两者都不会相等。
+  bool InAppWebView::isBridgeMessageAuthorized(const std::wstring& source, const std::string* token) const
+  {
+    if (bridgeLockToken_.empty()) {
+      return true;
+    }
+    if (token == nullptr || !fushiTokensEqual(*token, bridgeLockToken_)) {
+      return false;
+    }
+    if (source.empty()) {
+      return false;
+    }
+    if (source == bridgeLockSource_) {
+      return true;
+    }
+    if (webView) {
+      wil::unique_cotaskmem_string topSource;
+      if (SUCCEEDED(webView->get_Source(&topSource)) && topSource && source == topSource.get()) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   InAppWebView::~InAppWebView()
   {
     debugLog("dealloc InAppWebView");
@@ -2244,10 +2589,15 @@ namespace flutter_inappwebview_plugin
       failedLog(webView->remove_NewWindowRequested(newWindowRequestedToken_));
       failedLog(webView->remove_WindowCloseRequested(windowCloseRequestedToken_));
       failedLog(webView->remove_PermissionRequested(permissionRequestedToken_));
+      failedLog(webView->remove_ProcessFailed(processFailedToken_));
       // DOMContentLoaded 注册在 ICoreWebView2_2 接口上，需重新 QueryInterface 该接口才能 remove。
       wil::com_ptr<ICoreWebView2_2> webView2;
       if (SUCCEEDED(webView->QueryInterface(IID_PPV_ARGS(&webView2)))) {
         failedLog(webView2->remove_DOMContentLoaded(domContentLoadedToken_));
+      }
+      wil::com_ptr<ICoreWebView2_4> webView4;
+      if (downloadStartingToken_.value != 0 && SUCCEEDED(webView->QueryInterface(IID_PPV_ARGS(&webView4)))) {
+        failedLog(webView4->remove_DownloadStarting(downloadStartingToken_));
       }
     }
     // DevTools 事件 receiver 注册在各自 receiver 对象上（成员保活），逐个 remove。

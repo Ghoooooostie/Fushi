@@ -11,7 +11,8 @@
 /// 用户只能靠读文字分辨「成了还是崩了」。
 library;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 
 /// 通知语义。
 ///
@@ -20,6 +21,9 @@ enum ToastSeverity { neutral, info, success, warning, error }
 
 /// 把 [ToastSeverity] 映射成 (背景色, 前景色, 图标)。[ToastSeverity.neutral] 返回
 /// null＝不着色，交回各系统的主题默认（旧行为）。
+///
+/// 图标是 M3E 语义符号（FushiIcons，实心版作状态徽记）；Apple 设计系统下 FushiIcon
+/// 渲染时自动换成同语义 SF 符号。
 ///
 /// 用固定 Material 800 色阶而非主题取色：保证四态在任意主题下语义清晰、对比达标，
 /// 也让无 BuildContext 的降级路径（独立弹窗 Activity 的原生 toast）能复用同一配色。
@@ -35,26 +39,26 @@ enum ToastSeverity { neutral, info, success, warning, error }
       return (
         background: const Color(0xFF2E7D32), // green 800
         foreground: Colors.white,
-        icon: Icons.check_circle_rounded,
+        icon: FushiIcons.filled(FushiIcons.success),
       );
     case ToastSeverity.warning:
       return (
         background: const Color(0xFFEF6C00), // orange 800
         // orange 800 配白字仅约 3.08:1；黑字约 6.81:1，满足普通正文 4.5:1。
         foreground: Colors.black,
-        icon: Icons.warning_amber_rounded,
+        icon: FushiIcons.filled(FushiIcons.warning),
       );
     case ToastSeverity.error:
       return (
         background: const Color(0xFFC62828), // red 800
         foreground: Colors.white,
-        icon: Icons.error_rounded,
+        icon: FushiIcons.filled(FushiIcons.error),
       );
     case ToastSeverity.info:
       return (
         background: const Color(0xFF1565C0), // blue 800
         foreground: Colors.white,
-        icon: Icons.info_rounded,
+        icon: FushiIcons.filled(FushiIcons.info),
       );
   }
 }
@@ -62,7 +66,58 @@ enum ToastSeverity { neutral, info, success, warning, error }
 /// TODO-1325 #6: 制卡结果 toast 的语义状态。决定 MD3 toast 的着色与 Material 图标，
 /// 让「加入了 / 已存在 / 失败 / 制卡中」一眼可辨，而不再只靠弹窗里 mine 按钮的图标变化。
 /// [queued]：卡存进了设备端待发制卡队列，稍后补发（不是失败，也还没进 Anki）。
-enum MineToastStatus { added, duplicate, failed, pending, queued }
+/// [addedWithWarning]：卡建成了，但有一项需要用户知道的缺失（如单词音频下载失败）。
+/// 它与 [added] 分开，是因为用户关掉「制卡成功提示」后，这一条仍必须弹出来——
+/// 否则「没音频不知为何」又回来了（TODO-779）。
+enum MineToastStatus {
+  added,
+  addedWithWarning,
+  duplicate,
+  failed,
+  pending,
+  queued,
+}
+
+/// 「制卡提示」开关组（设置 → 制卡 → 制卡提示）对一条制卡结果 toast 的裁决。
+///
+/// * [showSuccess] 管 added / queued / pending：都是「收下了」的确认，阅读时弹在正文
+///   上会挡字（反馈 zNuGKLIhmT）。pending 跟着关——它只是结果 toast 的过渡态，结果不弹
+///   时它会独自停留 4 秒。
+/// * [showDuplicate] 管 duplicate：用户明知是重复卡，提示是噪音（反馈 aK5wv0CnWf）。
+/// * failed 与 addedWithWarning 恒弹：前者是这张卡没制成，后者是卡缺了东西，关掉
+///   提示不该让用户错过它们。
+bool mineToastShown(
+  MineToastStatus status, {
+  required bool showSuccess,
+  required bool showDuplicate,
+}) => switch (status) {
+  MineToastStatus.added ||
+  MineToastStatus.queued ||
+  MineToastStatus.pending => showSuccess,
+  MineToastStatus.duplicate => showDuplicate,
+  MineToastStatus.addedWithWarning || MineToastStatus.failed => true,
+};
+
+/// 制卡结果通知「该不该说」的**唯一裁决点**（反馈 3aFpRYC6a1 / jYEPxVSrts /
+/// iH6RY1kqQn：关了开关后阅读器、弹窗内提示、视频 OSD 仍在说）。
+///
+/// 制卡结果有三个说出口，全部先问这里：
+/// * 底部 toast —— [FushiToast.showMine]；
+/// * 查词弹窗按钮旁的就地提示 —— `MineFailureNotice.settle`（重复 / 失败原因随回包
+///   交给 popup.js，被裁掉时回包标 `hostReported`、去掉 `message`，弹窗不再说）；
+/// * 视频页左上角 OSD —— `_showMineOsd`（视频页禁止 import toast，见文件头）。
+///
+/// 住在这个文件而不是 `fushi_toast.dart`，理由同文件头：视频页要用它。
+/// 各 entry point 拿到 `AppModel` 后经 [filter] 装上读偏好的闭包
+/// （`AppModel.mineNoticeShown` → [mineToastShown]）；没装时一律说（存量行为）。
+abstract final class MineNotices {
+  static bool Function(MineToastStatus status) filter = _showEvery;
+
+  static bool _showEvery(MineToastStatus status) => true;
+
+  /// 这一类制卡结果此刻该不该告诉用户。闭包每次现读偏好，设置页改完立即生效。
+  static bool shown(MineToastStatus status) => filter(status);
+}
 
 /// 把 [MineToastStatus] 映射成 toast 的 (背景色, 前景色, 图标)。用固定 Material 色阶
 /// （绿/橙/红/蓝）而非主题取色，保证四态在任意主题下都语义清晰、对比达标；也让无
@@ -75,31 +130,37 @@ enum MineToastStatus { added, duplicate, failed, pending, queued }
       return (
         background: const Color(0xFF2E7D32), // green 800
         foreground: Colors.white,
-        icon: Icons.check_circle_rounded,
+        icon: FushiIcons.filled(FushiIcons.success),
+      );
+    case MineToastStatus.addedWithWarning:
+      return (
+        background: const Color(0xFFEF6C00), // orange 800
+        foreground: Colors.black,
+        icon: FushiIcons.filled(FushiIcons.warning),
       );
     case MineToastStatus.duplicate:
       return (
         background: const Color(0xFFEF6C00), // orange 800
         foreground: Colors.black,
-        icon: Icons.library_add_check_rounded,
+        icon: FushiIcons.filled(FushiIcons.libraryAdd),
       );
     case MineToastStatus.failed:
       return (
         background: const Color(0xFFC62828), // red 800
         foreground: Colors.white,
-        icon: Icons.error_rounded,
+        icon: FushiIcons.filled(FushiIcons.error),
       );
     case MineToastStatus.pending:
       return (
         background: const Color(0xFF1565C0), // blue 800
         foreground: Colors.white,
-        icon: Icons.sync_rounded,
+        icon: FushiIcons.sync,
       );
     case MineToastStatus.queued:
       return (
         background: const Color(0xFF1565C0), // blue 800
         foreground: Colors.white,
-        icon: Icons.schedule_send_rounded,
+        icon: FushiIcons.schedule,
       );
   }
 }
@@ -110,6 +171,7 @@ ToastSeverity mineToastSeverity(MineToastStatus status) {
   switch (status) {
     case MineToastStatus.added:
       return ToastSeverity.success;
+    case MineToastStatus.addedWithWarning:
     case MineToastStatus.duplicate:
       return ToastSeverity.warning;
     case MineToastStatus.failed:

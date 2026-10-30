@@ -96,6 +96,18 @@ HT_EXPORT int ht_set_unchoke_slots(void* session, int slots);
 HT_EXPORT int ht_pause_torrent(void* session, const char* info_hash,
                                int pause);
 
+// 单种子「停止上传、继续下载」（fRmEhU4XIK：分享率按整个生命周期计算，下载
+// 途中达到上限也要停上传）。libtorrent 没有 per-torrent 的「零上传」原语：
+// torrent_handle::set_upload_limit / set_max_uploads 的 0 与 -1 都表示「不限」，
+// 唯一的「停」是把该种子的上传带宽限到下限 1 B/s（一个 16 KiB block 需数小时，
+// 等效于不发 payload；piece 请求是协议消息不走上传配额，下载不受影响）。
+// [blocked] 非 0 = 限到 1 B/s；0 = 清除单种子上传限速（-1，回到会话级限速）。
+// 该限速会随 fastResume 落盘，宿主每次启动首轮 sweep 都会重新下发真实意图。
+// 返回 1 成功、0 失败（种子不存在 / 异常）。
+HT_EXPORT int ht_set_torrent_upload_blocked(void* session,
+                                            const char* info_hash,
+                                            int blocked);
+
 // 应用内存占用相关 session 设置（把 libtorrent 压进内存预算，避免「有多少内存
 // 吃多少」）：各字段 <=0 时保持 libtorrent 默认，>0 时设置。
 // [connections_limit] 全局最大连接数；[max_queued_disk_bytes] 磁盘写缓冲上限；
@@ -284,6 +296,15 @@ HT_EXPORT char* ht_torrent_trackers(void* session, const char* info_hash);
 // 忽略。返回成功新增数量，-1 = session/种子/参数无效或发生异常。
 HT_EXPORT int ht_add_trackers(void* session, const char* info_hash,
                               const char* tracker_urls);
+
+// BUG-2950：运行期向 DHT 补节点（lt::session::add_dht_node），用于 fake-ip
+// DNS 下建号时的引导点主机名被解析成假地址、路由表永远 0 节点的场景——调用方
+// 先用可信解析（DoH）拿到真实 IP 再喂进来。[nodes] 为 UTF-8 换行分隔列表，
+// 每行 "host:port"（IPv4 / 主机名；IPv6 写 "[addr]:port"），port 1..65535；
+// 空行与非法行跳过。不修改建号时的引导点设置。返回成功添加的条数（>=0），
+// -1 = session 为空或发生异常。老版本预编译库没有此符号，Dart 侧按可选符号
+// 探测（hasAddDhtNodes），缺失时降级、不得崩溃。
+HT_EXPORT int ht_add_dht_nodes(void* session, const char* nodes);
 
 // 每个文件的下载优先级（详情页 Files tab）：
 // {"ok":true,"priorities":[4,0,7,...]}（下标 = 文件 index；libtorrent

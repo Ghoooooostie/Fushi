@@ -11,13 +11,16 @@
 		FA171A002B000002001C0F01 /* FushiSystemOcr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA171A002B000002001C0F02 /* FushiSystemOcr.swift */; };
 		FA171A002B000003001C0F01 /* FushiSpeechTranscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA171A002B000003001C0F02 /* FushiSpeechTranscriber.swift */; };
 		FA171A002B000004001C0F01 /* FushiClipboardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA171A002B000004001C0F02 /* FushiClipboardImage.swift */; };
+		FA171A002B000006001C0F01 /* FushiNativeMaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA171A002B000006001C0F02 /* FushiNativeMaterialView.swift */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		61FEF2834CC237156E0983BA /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5A058A6A618CF04E7D9DEC /* Pods_Runner.framework */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		8F6D7C1B2A3948576E0D1234 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D7C1A2A3948576E0D1234 /* SceneDelegate.swift */; };
 		8F6D7C1D2A3948576E0D1234 /* LookupImeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D7C1C2A3948576E0D1234 /* LookupImeLanguage.swift */; };
+		8F6D7C312A3948576E0D1234 /* FushiSystemTts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D7C302A3948576E0D1234 /* FushiSystemTts.swift */; };
 		8F6D7C212A3948576E0D1234 /* FushiFloatingBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D7C202A3948576E0D1234 /* FushiFloatingBall.swift */; };
+		8F6D7C252A3948576E0D1234 /* MusicOutputChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D7C242A3948576E0D1234 /* MusicOutputChannel.swift */; };
 		8F6D7C232A3948576E0D1234 /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6D7C222A3948576E0D1234 /* AppIntents.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8F6D7C1F2A3948576E0D1234 /* FushiDirectoryImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D7C1E2A3948576E0D1234 /* FushiDirectoryImport.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
@@ -43,6 +46,7 @@
 		FA171A002B000002001C0F02 /* FushiSystemOcr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FushiSystemOcr.swift; path = ../../apple/FushiSystemOcr.swift; sourceTree = "<group>"; };
 		FA171A002B000003001C0F02 /* FushiSpeechTranscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FushiSpeechTranscriber.swift; path = ../../apple/FushiSpeechTranscriber.swift; sourceTree = "<group>"; };
 		FA171A002B000004001C0F02 /* FushiClipboardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FushiClipboardImage.swift; path = ../../apple/FushiClipboardImage.swift; sourceTree = "<group>"; };
+		FA171A002B000006001C0F02 /* FushiNativeMaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FushiNativeMaterialView.swift; path = ../../apple/FushiNativeMaterialView.swift; sourceTree = "<group>"; };
 		0F5A058A6A618CF04E7D9DEC /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
@@ -51,7 +55,9 @@
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F6D7C1A2A3948576E0D1234 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8F6D7C1C2A3948576E0D1234 /* LookupImeLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupImeLanguage.swift; sourceTree = "<group>"; };
+		8F6D7C302A3948576E0D1234 /* FushiSystemTts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FushiSystemTts.swift; sourceTree = "<group>"; };
 		8F6D7C202A3948576E0D1234 /* FushiFloatingBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FushiFloatingBall.swift; sourceTree = "<group>"; };
+		8F6D7C242A3948576E0D1234 /* MusicOutputChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicOutputChannel.swift; sourceTree = "<group>"; };
 		8F6D7C222A3948576E0D1234 /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = System/Library/Frameworks/AppIntents.framework; sourceTree = SDKROOT; };
 		8F6D7C1E2A3948576E0D1234 /* FushiDirectoryImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FushiDirectoryImport.swift; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
@@ -132,10 +138,13 @@
 				FA171A002B000002001C0F02 /* FushiSystemOcr.swift */,
 				FA171A002B000003001C0F02 /* FushiSpeechTranscriber.swift */,
 				FA171A002B000004001C0F02 /* FushiClipboardImage.swift */,
+				FA171A002B000006001C0F02 /* FushiNativeMaterialView.swift */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				8F6D7C1A2A3948576E0D1234 /* SceneDelegate.swift */,
 				8F6D7C1C2A3948576E0D1234 /* LookupImeLanguage.swift */,
+				8F6D7C302A3948576E0D1234 /* FushiSystemTts.swift */,
 				8F6D7C202A3948576E0D1234 /* FushiFloatingBall.swift */,
+				8F6D7C242A3948576E0D1234 /* MusicOutputChannel.swift */,
 				8F6D7C1E2A3948576E0D1234 /* FushiDirectoryImport.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
 			);
@@ -162,6 +171,10 @@
 			buildPhases = (
 				913B847A994ABA4520129689 /* [CP] Check Pods Manifest.lock */,
 				B20200000000000000000001 /* Build FushiDicts FFI */,
+				B20200000000000000000002 /* Check fushi_compute (iOS umbrella) */,
+				B20200000000000000000003 /* Check fushi_rwkv (iOS umbrella) */,
+				B20200000000000000000004 /* Check fushi_music (iOS umbrella) */,
+				B20200000000000000000005 /* Check fushi_corpus (iOS umbrella) */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
@@ -336,6 +349,82 @@
 			shellPath = /bin/bash;
 			shellScript = "/bin/bash \"$PROJECT_DIR/build_fushidicts_ffi.sh\"\n";
 		};
+		B20200000000000000000002 /* Check fushi_compute (iOS umbrella) */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Check fushi_compute (iOS umbrella)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "/bin/bash \"$PROJECT_DIR/check_fushi_compute.sh\"\n";
+		};
+		B20200000000000000000003 /* Check fushi_rwkv (iOS umbrella) */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Check fushi_rwkv (iOS umbrella)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "/bin/bash \"$PROJECT_DIR/check_fushi_rwkv.sh\"\n";
+		};
+		B20200000000000000000004 /* Check fushi_music (iOS umbrella) */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Check fushi_music (iOS umbrella)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "/bin/bash \"$PROJECT_DIR/check_fushi_music.sh\"\n";
+		};
+		B20200000000000000000005 /* Check fushi_corpus (iOS umbrella) */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Check fushi_corpus (iOS umbrella)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "/bin/bash \"$PROJECT_DIR/check_fushi_corpus.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -347,10 +436,13 @@
 				FA171A002B000002001C0F01 /* FushiSystemOcr.swift in Sources */,
 				FA171A002B000003001C0F01 /* FushiSpeechTranscriber.swift in Sources */,
 				FA171A002B000004001C0F01 /* FushiClipboardImage.swift in Sources */,
+				FA171A002B000006001C0F01 /* FushiNativeMaterialView.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				8F6D7C1B2A3948576E0D1234 /* SceneDelegate.swift in Sources */,
 				8F6D7C1D2A3948576E0D1234 /* LookupImeLanguage.swift in Sources */,
+				8F6D7C312A3948576E0D1234 /* FushiSystemTts.swift in Sources */,
 				8F6D7C212A3948576E0D1234 /* FushiFloatingBall.swift in Sources */,
+				8F6D7C252A3948576E0D1234 /* MusicOutputChannel.swift in Sources */,
 				8F6D7C1F2A3948576E0D1234 /* FushiDirectoryImport.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 			);
@@ -451,7 +543,7 @@
 					"$(FUSHIDICTS_MERGED_ARCHIVE)",
 					"-framework",
 					CoreFoundation,
-					"$(FUSHI_P2P_LDFLAGS)",
+					"$(FUSHI_IOS_NATIVE_LDFLAGS)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.fushi.reader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -592,7 +684,7 @@
 					"$(FUSHIDICTS_MERGED_ARCHIVE)",
 					"-framework",
 					CoreFoundation,
-					"$(FUSHI_P2P_LDFLAGS)",
+					"$(FUSHI_IOS_NATIVE_LDFLAGS)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.fushi.reader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -627,7 +719,7 @@
 					"$(FUSHIDICTS_MERGED_ARCHIVE)",
 					"-framework",
 					CoreFoundation,
-					"$(FUSHI_P2P_LDFLAGS)",
+					"$(FUSHI_IOS_NATIVE_LDFLAGS)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.fushi.reader;
 				PRODUCT_NAME = "$(TARGET_NAME)";

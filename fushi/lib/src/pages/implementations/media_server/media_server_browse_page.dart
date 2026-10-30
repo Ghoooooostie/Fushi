@@ -1,11 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:fushi_engine/media/video/video_book_repository.dart';
 import 'package:fushi/src/pages/implementations/media_server/media_server_server_list_view.dart';
 import 'package:fushi/src/pages/implementations/media_server/media_server_session.dart';
 import 'package:fushi/src/pages/implementations/video_fushi_page.dart';
-import 'package:fushi/src/settings/settings_detail_page.dart';
-import 'package:fushi/src/settings/settings_schema_services.dart';
 import 'package:fushi/src/shortcuts/context_menu_trigger.dart'
     show ShortcutBindingScope;
 import 'package:fushi/src/shortcuts/gamepad_forwarding_action.dart';
@@ -15,12 +13,39 @@ import 'package:fushi/src/shortcuts/input_binding.dart'
     show GamepadButton, activeModifierKeys;
 import 'package:fushi/src/shortcuts/shortcut_action.dart';
 import 'package:fushi/src/shortcuts/shortcut_registry.dart';
+import 'package:fushi/src/utils/components/section_visibility.dart'
+    show ModuleRootAwayReporter;
 import 'package:fushi/utils.dart';
 
 export 'package:fushi/src/pages/implementations/media_server/media_server_server_list_view.dart'
     show MediaServerEntry;
 export 'package:fushi/src/pages/implementations/media_server/media_server_session.dart'
     show MediaServerPlayHandler, MediaServerPlayRequest;
+
+/// 媒体服务器播放出口的生产缺省：根 Navigator push
+/// `VideoFushiPage.neutralizedRemote`。分区页与发现详情页「获取途径」的媒体服务器
+/// 渠道共用这一份，播放页的剧集面板口径不会分叉。返回的 Future 在播放页退回来时完成。
+Future<void> pushMediaServerPlayer(
+  BuildContext context,
+  MediaServerPlayRequest request, {
+  required VideoBookRepository repo,
+}) async {
+  await Navigator.of(context, rootNavigator: true).push<void>(
+    adaptivePageRoute<void>(
+      context: context,
+      builder: (_) => VideoFushiPage.neutralizedRemote(
+        info: request.info,
+        repo: repo,
+        client: request.browser.playbackClient,
+        // 与 home_video_page._openRemote 同口径：多于一个成员才建剧集面板。
+        remoteCollectionMembers: request.hasCollection ? request.members : null,
+        initialEpisodeIndex: request.hasCollection
+            ? request.initialIndex
+            : null,
+      ),
+    ),
+  );
+}
 
 /// 视频页「媒体服务器」分区：服务器列表 → 服务器首页 → 库网格 / 搜索 / 详情 → 播放。
 ///
@@ -85,29 +110,28 @@ class _MediaServerBrowsePageState extends State<MediaServerBrowsePage> {
     debugLabel: 'media-server-browse',
   );
 
-  void _play(BuildContext context, MediaServerPlayRequest request) {
+  /// 嵌套栈此刻能不能退一层（嵌套 Navigator 发来的 [NavigationNotification]）。
+  /// 钻进了服务器 / 媒体库就不在模块根：首页外壳不让横滑切模块（见
+  /// [ModuleRootAwayReporter]）。
+  bool _nestedCanPop = false;
+
+  bool _onNavigationNotification(NavigationNotification notification) {
+    if (notification.canHandlePop != _nestedCanPop && mounted) {
+      setState(() => _nestedCanPop = notification.canHandlePop);
+    }
+    return false;
+  }
+
+  Future<void> _play(
+    BuildContext context,
+    MediaServerPlayRequest request,
+  ) async {
     final MediaServerPlayHandler? injected = widget.onPlay;
     if (injected != null) {
-      injected(context, request);
+      await injected(context, request);
       return;
     }
-    Navigator.of(context, rootNavigator: true).push<void>(
-      adaptivePageRoute<void>(
-        context: context,
-        builder: (_) => VideoFushiPage.neutralizedRemote(
-          info: request.info,
-          repo: widget.repo,
-          client: request.browser.playbackClient,
-          // 与 home_video_page._openRemote 同口径：多于一个成员才建剧集面板。
-          remoteCollectionMembers: request.hasCollection
-              ? request.members
-              : null,
-          initialEpisodeIndex: request.hasCollection
-              ? request.initialIndex
-              : null,
-        ),
-      ),
-    );
+    await pushMediaServerPlayer(context, request, repo: widget.repo);
   }
 
   void _openSettings() {
@@ -116,12 +140,7 @@ class _MediaServerBrowsePageState extends State<MediaServerBrowsePage> {
       injected();
       return;
     }
-    Navigator.of(context, rootNavigator: true).push<void>(
-      MaterialPageRoute<void>(
-        builder: (_) =>
-            SettingsDetailPage(destination: buildServicesDestination()),
-      ),
-    );
+    openMediaServerSettings(context);
   }
 
   /// 嵌套栈能退一层就退，并报告是否退了。
@@ -204,24 +223,30 @@ class _MediaServerBrowsePageState extends State<MediaServerBrowsePage> {
             if (!isCupertinoPlatform(context))
               FushiPageHeader.customTitle(title: widget.navigation),
             Expanded(
-              child: NavigatorPopHandler(
-                enabled: widget.systemBackActive,
-                onPopWithResult: (void _) => _popNested(),
-                // 根 MaterialApp 的 HeroController 不能同时挂两个 Navigator；分区内
-                // 不做 Hero 动画，显式断开。
-                child: HeroControllerScope.none(
-                  child: Navigator(
-                    key: _navigatorKey,
-                    onGenerateRoute: (RouteSettings settings) =>
-                        adaptivePageRoute<void>(
-                          context: context,
-                          settings: settings,
-                          builder: (_) => MediaServerListView(
-                            loadServers: widget.loadServers,
-                            play: _play,
-                            onOpenSettings: _openSettings,
-                          ),
-                        ),
+              child: ModuleRootAwayReporter(
+                away: widget.systemBackActive && _nestedCanPop,
+                child: NotificationListener<NavigationNotification>(
+                  onNotification: _onNavigationNotification,
+                  child: NavigatorPopHandler(
+                    enabled: widget.systemBackActive,
+                    onPopWithResult: (void _) => _popNested(),
+                    // 根 MaterialApp 的 HeroController 不能同时挂两个 Navigator；分区内
+                    // 不做 Hero 动画，显式断开。
+                    child: HeroControllerScope.none(
+                      child: Navigator(
+                        key: _navigatorKey,
+                        onGenerateRoute: (RouteSettings settings) =>
+                            adaptivePageRoute<void>(
+                              context: context,
+                              settings: settings,
+                              builder: (_) => MediaServerListView(
+                                loadServers: widget.loadServers,
+                                play: _play,
+                                onOpenSettings: _openSettings,
+                              ),
+                            ),
+                      ),
+                    ),
                   ),
                 ),
               ),

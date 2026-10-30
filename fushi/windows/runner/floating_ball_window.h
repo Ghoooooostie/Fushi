@@ -4,12 +4,15 @@
 #include <windows.h>
 
 #include <d2d1.h>
+#include <dwrite.h>
 #include <wincodec.h>
 #include <wrl/client.h>
 
 #include <cstdint>
 #include <functional>
 #include <map>
+#include <memory>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -31,7 +34,13 @@
 class FloatingBallWindow {
  public:
   struct Config {
-    // Dart 勾选的动作 id（自上而下）；open_app / close 由本类固定加在最上。
+    // Dart 按墨水屏 / 系统减弱动画统一下发；旧调用缺字段时保留原动画。
+    bool animate = true;
+    // 只控制可见标签；labels 仍用于 tooltip 和操作名称。
+    bool show_labels = true;
+    // 菜单里有没有「打开 Fushi」（Dart 应用外按钮组里的开关；旧调用缺字段 = 有）。
+    bool show_open_app = true;
+    // Dart 勾选的动作 id（自上而下）；close（与没关掉的 open_app）由本类加在最上。
     std::vector<std::string> actions;
     // 按钮文案 / tooltip：键为动作 id + open_app / close / ball。
     std::map<std::string, std::wstring> labels;
@@ -43,6 +52,17 @@ class FloatingBallWindow {
     uint32_t surface = 0xFFFEF7FF;
     uint32_t on_surface = 0xFF1D1B20;
     uint32_t primary = 0xFF6750A4;
+    // M3E 角色（Dart floatingBallNativeColors）：球本体 FAB 底色（球面 PNG 缺失
+    // 时的纯色兜底）、tonal 小圆钮底色 / 图标色、描边（只有墨水屏不透明，其余
+    // 全透明 = 不画环）。0 = Dart 没下发，按旧配方兜底。
+    uint32_t ball_container = 0xFFEADDFF;
+    uint32_t button_container = 0;
+    uint32_t on_button_container = 0;
+    uint32_t outline = 0;
+    // 展开态球（M3E FAB menu 的关闭钮）：primary 底 + onPrimary ×（墨水屏 surface /
+    // onSurface）。× 图标 PNG 在 icon_images["ball_close"]。
+    uint32_t ball_open = 0xFF6750A4;
+    uint32_t on_ball_open = 0xFFFFFFFF;
   };
 
   // |anchor| = 球在屏幕上的矩形（物理像素、左上原点）。
@@ -53,6 +73,16 @@ class FloatingBallWindow {
   // 拖动松手吸附后报一次位置。
   using PositionCallback =
       std::function<void(bool dock_left, double fraction)>;
+
+  // 「切换配置」菜单的一项（Dart showProfileMenu 的 items，按顺序）。
+  struct ProfileMenuItem {
+    int64_t id = 0;
+    std::wstring label;
+    bool checked = false;
+  };
+  // |selected| = 用户选中项的 id；点菜单外 / Esc / 空列表 / 球没在跑 / 被拒 = 空。
+  using ProfileMenuCallback =
+      std::function<void(std::optional<int64_t> selected)>;
 
   FloatingBallWindow();
   ~FloatingBallWindow();
@@ -74,9 +104,27 @@ class FloatingBallWindow {
   // 原地更新按钮 / 配色 / 图片（不挪位置、收起菜单，忽略位置参数）。
   bool Start(const Config& config, bool dock_left, double fraction,
              HWND monitor_hint);
-  // 销毁全部窗口；不触发任何回调。
+  // 销毁全部窗口；不触发任何回调——唯一例外是还没结束的配置菜单：它的
+  // ProfileMenuCallback 以空结果收尾（Dart 那边有个 future 在等，不能悬着）。
   void Stop();
   bool IsRunning() const;
+
+  // 截屏识字（spec「截屏识字」）：截图前把球、按钮列与提示藏起来——不销毁、不打断
+  // 动画与停靠状态（收起动画照常在隐藏中跑完）；冻结层关掉后原样恢复。未运行时无操作。
+  void HideForCapture();
+  void RestoreAfterCapture();
+
+  // Fushi 在前台且应用内球开着时让位（Dart setAppForeground）：藏球、收起菜单。
+  // 状态跨 Stop / Start 保留——Dart 在起球之前先下发，新球首帧就按它决定显不显示。
+  void SetHiddenForApp(bool hidden);
+
+  // 桌面「切换配置」（Dart showProfileMenu）：在球旁弹原生弹出式菜单，不唤起主窗、
+  // 结束后前台还给用户正在用的程序。|anchor| = 球在屏幕上的矩形（物理像素、左上
+  // 原点，systemBallAction 报出去的那个原样回传）；空 = 贴着光标弹。
+  // 菜单是模态循环，不在调用栈里跑：投递到球窗、在它的消息里弹，结束后经 |done|
+  // 回结果（恰好一次）。已有一个菜单在等或正弹着时，新请求直接以空结果拒绝。
+  void ShowProfileMenu(std::vector<ProfileMenuItem> items,
+                       std::optional<RECT> anchor, ProfileMenuCallback done);
 
  private:
   struct Screen {
@@ -152,6 +200,10 @@ class FloatingBallWindow {
   bool ButtonCircle(int index, double* cx, double* cy, double* radius,
                     double* opacity) const;
   int ButtonAt(double x, double y) const;
+  // 单列且横向放得下时为每颗按钮排好标签胶囊（DirectWrite 布局 + 宽度）；否则清空。
+  void PrepareMenuLabels(const fushi::floating_ball::Geometry& g);
+  // 当前进度下第 |index| 颗的标签胶囊（按钮窗坐标）；没有标签返回 false。
+  bool LabelRect(int index, D2D1_RECT_F* rect, double* opacity) const;
   void RunButton(int index);
   void UpdateTooltip(int index);
   void HideTooltip();
@@ -177,6 +229,12 @@ class FloatingBallWindow {
                          const std::vector<uint8_t>& png, UINT px,
                          bool crop_square);
   void ClearBitmapCache();
+  bool Suppressed() const { return hidden_for_capture_ || hidden_for_app_; }
+  void ShowBallWindows();
+  // 球窗收到投递的配置菜单请求：真正弹菜单、交还前台、回结果。
+  void RunProfileMenu(HWND hwnd);
+  // 把还没结束的配置菜单以 |selected| 收尾（没有就无操作）。
+  void FinishProfileMenu(std::optional<int64_t> selected);
 
   Config config_;
   bool dock_left_ = false;
@@ -187,6 +245,10 @@ class FloatingBallWindow {
   UINT last_dpi_ = 0;
 
   HWND ball_hwnd_ = nullptr;
+  // HideForCapture 生效中：新建的按钮窗也保持隐藏，直到 RestoreAfterCapture。
+  bool hidden_for_capture_ = false;
+  // SetHiddenForApp 生效中（与截屏隐藏独立，任一成立球都不显示）。
+  bool hidden_for_app_ = false;
   HWND menu_hwnd_ = nullptr;
   bool classes_registered_ = false;
 
@@ -226,7 +288,22 @@ class FloatingBallWindow {
   Microsoft::WRL::ComPtr<ID2D1Factory> d2d_factory_;
   Microsoft::WRL::ComPtr<ID2D1DCRenderTarget> render_target_;
   Microsoft::WRL::ComPtr<IWICImagingFactory> wic_factory_;
+  Microsoft::WRL::ComPtr<IDWriteFactory> dwrite_factory_;
+  Microsoft::WRL::ComPtr<IDWriteTextFormat> label_format_;
+  double label_format_scale_ = 0;
+  // 与 menu_ids_ 一一对应；空 = 本次展开不显示标签。
+  std::vector<Microsoft::WRL::ComPtr<IDWriteTextLayout>> menu_label_layouts_;
+  std::vector<double> menu_label_widths_;
   std::map<std::string, CachedBitmap> bitmaps_;
+
+  // 配置菜单：从 ShowProfileMenu 投递起、到菜单结束回结果止，done 非空 = 有一个
+  // 在等（profile_menu_tracking_ 区分「已投递未弹」与「模态循环里」）。
+  std::vector<ProfileMenuItem> profile_menu_items_;
+  std::optional<RECT> profile_menu_anchor_;
+  ProfileMenuCallback profile_menu_done_;
+  bool profile_menu_tracking_ = false;
+  // 菜单模态循环里本对象可能被析构（主窗拆通道）：循环返回后先看它再碰成员。
+  std::shared_ptr<bool> alive_ = std::make_shared<bool>(true);
 
   ActionCallback on_action_;
   ClosedCallback on_closed_;

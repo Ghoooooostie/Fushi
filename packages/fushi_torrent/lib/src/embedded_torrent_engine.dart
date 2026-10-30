@@ -2,6 +2,7 @@ import 'dart:ffi';
 import 'dart:io';
 
 import 'package:ffi/ffi.dart';
+import 'package:fushi_ffi_view/fushi_ffi_view.dart';
 
 import 'ffi/fushi_torrent_bindings.dart';
 import 'native_json.dart';
@@ -204,7 +205,7 @@ class EmbeddedTorrentEngine {
       // Old bundled DLLs may surface localized WinSock/libtorrent messages in
       // the active Windows code page. Keep the ABI consumer tolerant while
       // the native serializer now guarantees valid UTF-8 for new builds.
-      return decodeNativeTorrentJsonBytes(bytes.asTypedList(length));
+      return decodeNativeTorrentJsonBytes(bytes.asTypedListOutOfLine(length));
     } finally {
       bindings.ht_free_string(p);
     }
@@ -851,6 +852,22 @@ class EmbeddedTorrentSession {
     }
   }
 
+  /// 底层库是否支持单种子停上传（[setTorrentUploadBlocked]）。老 DLL 为 false。
+  bool get supportsTorrentUploadBlock => _b.hasTorrentUploadBlock;
+
+  /// 单种子停止上传、继续下载（fRmEhU4XIK）。[blocked] true = 上传限到
+  /// libtorrent 下限 1 B/s，false = 清除单种子上传限速。库不支持返回 false。
+  bool setTorrentUploadBlocked(String infoHash, {required bool blocked}) {
+    if (isClosed || !_b.hasTorrentUploadBlock) return false;
+    final Pointer<Char> id = infoHash.toNativeUtf8().cast<Char>();
+    try {
+      return _b.ht_set_torrent_upload_blocked(_session, id, blocked ? 1 : 0) ==
+          1;
+    } finally {
+      malloc.free(id);
+    }
+  }
+
   /// 添加磁力链接。
   FtAddResult addMagnet(
     String magnetUri, {
@@ -1207,6 +1224,28 @@ class EmbeddedTorrentSession {
     final Object? json = _engine._consumeJson(_b.ht_session_status(_session));
     if (json is! Map<String, dynamic> || json['ok'] != true) return null;
     return FtSessionStatus._fromJson(json);
+  }
+
+  /// 已加载的库是否支持运行期补 DHT 节点（[addDhtNodes]）。
+  bool get supportsAddDhtNodes => _b.hasAddDhtNodes;
+
+  /// BUG-2950：运行期向 DHT 补节点（每项 "host:port"，IPv6 写 "[addr]:port"）。
+  /// 返回 native 成功添加的条数；库不支持 / session 已关 / 列表为空 / native
+  /// 失败一律返回 -1。
+  int addDhtNodes(List<String> hostPorts) {
+    if (isClosed || !_b.hasAddDhtNodes) return -1;
+    final String joined = hostPorts
+        .map((String value) => value.trim())
+        .where((String value) => value.isNotEmpty)
+        .toSet()
+        .join('\n');
+    if (joined.isEmpty) return -1;
+    final Pointer<Char> nodes = joined.toNativeUtf8().cast<Char>();
+    try {
+      return _b.ht_add_dht_nodes(_session, nodes);
+    } finally {
+      malloc.free(nodes);
+    }
   }
 
   /// 用 CIDR 列表整体重建 session 的 ip_filter（空列表 = 清空）。已连接的

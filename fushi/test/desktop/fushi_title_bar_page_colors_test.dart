@@ -1,9 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fushi/src/media/video/video_hdr_output.dart'
-    show hdrHostActiveGlobal;
+import 'package:flutter/foundation.dart' show defaultTargetPlatform;
+import 'package:flutter/gestures.dart' show PointerDeviceKind;
 import 'package:fushi/src/utils/components/fushi_desktop_title_bar.dart';
+import 'package:fushi/src/utils/window_caption_channel.dart';
+import 'package:window_manager/window_manager.dart' show DragToMoveArea;
 
 /// 桌面自绘顶栏挂在 Navigator 外，`Theme.of` 只读得到根主题；阅读器的纸色是
 /// 预设色（ecru `#F7F6EB`），与种子色生成的 `surface` 不同源——不上报，正文顶上
@@ -16,6 +18,9 @@ void main() {
   const FushiTitleBarColors readerColors = (background: paper, foreground: ink);
 
   setUp(() {
+    // 下面这组钉的是「沉浸页从顶栏下沿开始排、标题行画上报底色」的宿主——
+    // macOS（系统红绿灯收不起）。Windows / Linux 沉浸页铺满整窗，见文件末尾。
+    FushiDesktopTitleBar.debugHostPlatform = () => TargetPlatform.macOS;
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(const MethodChannel('window_manager'), (
           MethodCall call,
@@ -32,6 +37,8 @@ void main() {
   });
 
   tearDown(() {
+    FushiDesktopTitleBar.debugHostPlatform = () => defaultTargetPlatform;
+    WindowCaptionChannel.captionMaxButtonHovered.value = false;
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(const MethodChannel('window_manager'), null);
   });
@@ -58,26 +65,31 @@ void main() {
     return scheme;
   }
 
+  // 顶栏不再显示页面标题（用户 2026-10-04），按拖动区找标题行容器。
   Color? captionColor(WidgetTester tester) => tester
       .widget<Container>(
         find
-            .ancestor(of: find.text('Fushi'), matching: find.byType(Container))
+            .ancestor(
+              of: find.byType(DragToMoveArea),
+              matching: find.byType(Container),
+            )
             .first,
       )
       .color;
 
+  /// 窗口按钮的前景色来源：页面上报的 foreground（null = 根主题 token）。
   Color? titleColor(WidgetTester tester) =>
-      DefaultTextStyle.of(tester.element(find.text('Fushi'))).style.color;
+      FushiDesktopTitleBar.pageColors.value?.foreground;
 
   Widget reader() => const FushiTitleBarColorScope(
     colors: readerColors,
     child: Scaffold(backgroundColor: paper),
   );
 
-  testWidgets('没有页面上报时顶栏用根主题 surface', (WidgetTester tester) async {
+  testWidgets('没有页面上报时顶栏透明，浮在页面上', (WidgetTester tester) async {
     final ColorScheme scheme = await pumpShell(tester, const Scaffold());
-    expect(captionColor(tester), scheme.surface);
-    expect(titleColor(tester), scheme.onSurface);
+    expect(captionColor(tester), Colors.transparent);
+    expect(titleColor(tester), isNull);
     expect(
       scheme.surface,
       isNot(paper),
@@ -86,7 +98,7 @@ void main() {
   });
 
   testWidgets('阅读器上报纸色后顶栏底色 / 标题色跟随，关书后回落', (WidgetTester tester) async {
-    final ColorScheme scheme = await pumpShell(tester, const Scaffold());
+    await pumpShell(tester, const Scaffold());
 
     navigatorKey.currentState!.push(
       MaterialPageRoute<void>(builder: (_) => reader()),
@@ -97,12 +109,12 @@ void main() {
 
     navigatorKey.currentState!.pop();
     await tester.pumpAndSettle();
-    expect(captionColor(tester), scheme.surface);
+    expect(captionColor(tester), Colors.transparent);
     expect(FushiDesktopTitleBar.pageColors.value, isNull);
   });
 
   testWidgets('被另一整页盖住时撤回、回到阅读器时恢复；弹窗不撤回', (WidgetTester tester) async {
-    final ColorScheme scheme = await pumpShell(tester, reader());
+    await pumpShell(tester, reader());
     expect(captionColor(tester), paper);
 
     // 弹窗（PopupRoute）不推动 PageRoute 的 secondaryAnimation：顶栏不闪色。
@@ -120,17 +132,14 @@ void main() {
       MaterialPageRoute<void>(builder: (_) => const Scaffold()),
     );
     await tester.pumpAndSettle();
-    expect(captionColor(tester), scheme.surface);
+    expect(captionColor(tester), Colors.transparent);
 
     navigatorKey.currentState!.pop();
     await tester.pumpAndSettle();
     expect(captionColor(tester), paper);
   });
 
-  testWidgets('HDR 直通时内容区透明，标题行仍是不透明的页面色；半透明上报也叠成不透明', (
-    WidgetTester tester,
-  ) async {
-    addTearDown(() => hdrHostActiveGlobal.value = false);
+  testWidgets('半透明上报叠成不透明的标题行；内容区底色恒为 surface', (WidgetTester tester) async {
     final ColorScheme scheme = await pumpShell(
       tester,
       const FushiTitleBarColorScope(
@@ -138,18 +147,20 @@ void main() {
         child: SizedBox.expand(),
       ),
     );
-    hdrHostActiveGlobal.value = true;
     await tester.pumpAndSettle();
 
     final Color caption = captionColor(tester)!;
-    expect(caption.a, 1.0, reason: '标题行透明 = HDR 时能看见后面的窗口');
+    expect(caption.a, 1.0, reason: '标题行透明会露出窗口后面的东西');
     expect(caption, Color.alphaBlend(const Color(0x80000000), scheme.surface));
     final ColoredBox frame = tester.widget<ColoredBox>(
       find
-          .ancestor(of: find.byType(Column), matching: find.byType(ColoredBox))
-          .first,
+          .ancestor(
+            of: find.byType(DragToMoveArea),
+            matching: find.byType(ColoredBox),
+          )
+          .at(1),
     );
-    expect(frame.color, Colors.transparent, reason: '内容区底色仍听 HDR 让开');
+    expect(frame.color, scheme.surface);
   });
 
   testWidgets('阅读器在 build 中改色（切换阅读主题）顶栏跟着重画', (WidgetTester tester) async {
@@ -171,5 +182,102 @@ void main() {
     await tester.pumpAndSettle();
     expect(captionColor(tester), const Color(0xFF1E1E1E));
     expect(tester.takeException(), isNull);
+  });
+
+  // Windows / Linux：沉浸页铺满整窗，顶栏悬停才浮出（用户 2026-10-30「顶栏条
+  // 只有在应用外才显示……都要占满」「目的只是为了更多显示面积」）。
+  group('Windows 沉浸页', () {
+    setUp(
+      () =>
+          FushiDesktopTitleBar.debugHostPlatform = () => TargetPlatform.windows,
+    );
+
+    double captionOpacity(WidgetTester tester) => tester
+        .widget<AnimatedOpacity>(
+          find
+              .ancestor(
+                of: find.byType(DragToMoveArea),
+                matching: find.byType(AnimatedOpacity),
+              )
+              .first,
+        )
+        .opacity;
+
+    testWidgets('页面从窗口顶端铺起，padding 仍为顶栏让位；标题行透明', (WidgetTester tester) async {
+      await pumpShell(tester, reader());
+
+      final Finder page = find.byType(Scaffold).last;
+      expect(tester.getTopLeft(page).dy, 0, reason: '沉浸页不再被顶栏下推');
+      expect(
+        MediaQuery.paddingOf(tester.element(page)).top,
+        greaterThanOrEqualTo(FushiDesktopTitleBar.height),
+        reason: '页面的悬浮胶囊要按 padding 排在窗口按钮下面',
+      );
+      expect(FushiDesktopTitleBar.visibleHeight, 0);
+      expect(FushiDesktopTitleBar.pageColors.value, readerColors);
+      expect(captionColor(tester), Colors.transparent);
+    });
+
+    testWidgets('指针进入顶栏才显示，离开淡出；原生最大化键悬停也算', (WidgetTester tester) async {
+      await pumpShell(tester, reader());
+      expect(captionOpacity(tester), 0);
+
+      final TestGesture mouse = await tester.createGesture(
+        kind: PointerDeviceKind.mouse,
+      );
+      addTearDown(mouse.removePointer);
+      await mouse.addPointer(location: const Offset(200, 300));
+      await mouse.moveTo(const Offset(200, 8));
+      await tester.pumpAndSettle();
+      expect(captionOpacity(tester), 1);
+
+      await mouse.moveTo(const Offset(200, 300));
+      await tester.pumpAndSettle();
+      expect(captionOpacity(tester), 0);
+
+      // 最大化键是 runner 的 HTMAXBUTTON 原生命中区：Flutter 只收到离开，
+      // 悬停真值由原生回传，不并进来指针一停到最大化键整条就隐去。
+      WindowCaptionChannel.captionMaxButtonHovered.value = true;
+      await tester.pumpAndSettle();
+      expect(captionOpacity(tester), 1);
+      WindowCaptionChannel.captionMaxButtonHovered.value = false;
+      await tester.pumpAndSettle();
+      expect(captionOpacity(tester), 0);
+    });
+
+    testWidgets('触摸没有悬停：带子里按下浮出，带子外按下收起', (WidgetTester tester) async {
+      await pumpShell(tester, reader());
+      expect(captionOpacity(tester), 0);
+
+      final TestGesture touch = await tester.startGesture(
+        const Offset(200, 8),
+        kind: PointerDeviceKind.touch,
+      );
+      await touch.up();
+      await tester.pumpAndSettle();
+      expect(captionOpacity(tester), 1, reason: '纯触屏也要够得着窗口按钮');
+
+      // 浮出后再点带子里（窗口按钮所在处）不收起。
+      final TestGesture again = await tester.startGesture(
+        const Offset(300, 10),
+        kind: PointerDeviceKind.touch,
+      );
+      await again.up();
+      await tester.pumpAndSettle();
+      expect(captionOpacity(tester), 1);
+
+      final TestGesture outside = await tester.startGesture(
+        const Offset(200, 300),
+        kind: PointerDeviceKind.touch,
+      );
+      await outside.up();
+      await tester.pumpAndSettle();
+      expect(captionOpacity(tester), 0);
+    });
+
+    testWidgets('普通页（未上报配色）顶栏常显', (WidgetTester tester) async {
+      await pumpShell(tester, const Scaffold());
+      expect(captionOpacity(tester), 1);
+    });
   });
 }

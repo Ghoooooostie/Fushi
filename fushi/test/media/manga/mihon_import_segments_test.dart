@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/media/manga/mihon/mihon_extension_store_client.dart';
@@ -10,6 +10,9 @@ import 'package:fushi/src/media/manga/mihon/mihon_extensions_page.dart';
 import 'package:fushi/src/media/manga/mihon/mihon_installed_sources_section.dart';
 import 'package:fushi/src/media/manga/mihon/mihon_manager.dart';
 import 'package:fushi/src/media/manga/mihon/mihon_runtime.dart';
+import 'package:fushi/src/pages/implementations/browse_online_sources_view.dart';
+import 'package:fushi/src/pages/implementations/media_library_shell.dart';
+import 'package:fushi/src/utils/components/fushi_m3e_feedback.dart';
 import 'package:fushi/utils.dart';
 import 'package:fushi_core/fushi_core.dart';
 
@@ -30,7 +33,7 @@ void main() {
 
   setUp(() async {
     LocaleSettings.setLocale(AppLocale.en);
-    root = await Directory.systemTemp.createTemp('hibiki-import-segments-');
+    root = await Directory.systemTemp.createTemp('fushi-import-segments-');
     database = FushiDatabase.forTesting(NativeDatabase.memory());
     await database.upsertMangaExtensionStore(
       MangaExtensionStoresCompanion.insert(
@@ -107,7 +110,7 @@ void main() {
       expect(tester.takeException(), null);
     });
 
-    testWidgets('「扩展」段：扩展目录 + 刷新 / 导入 APK，没有仓库卡与添加仓库', (
+    testWidgets('「扩展」段：扩展目录 + 导入 APK，没有刷新、仓库卡与添加仓库', (
       WidgetTester tester,
     ) async {
       await pumpSlivers(tester, <Widget>[
@@ -121,7 +124,11 @@ void main() {
       ]);
       expect(find.text('Fixture Extension'), findsOneWidget);
       expect(find.text(t.mihon_extension_import), findsOneWidget);
-      expect(find.text(t.mihon_store_refresh), findsOneWidget);
+      expect(
+        find.text(t.mihon_store_refresh),
+        findsNothing,
+        reason: '刷新只在「扩展仓库」页，目录那排只放四颗目录动作',
+      );
       expect(
         find.byKey(const ValueKey<String>('mihon_extension_bulk_install')),
         findsOneWidget,
@@ -130,6 +137,54 @@ void main() {
       expect(find.byTooltip(t.mihon_store_remove), findsNothing);
       expect(find.text(t.mihon_store_add), findsNothing);
       expect(tester.takeException(), null);
+    });
+
+    testWidgets('「扩展」段带 onOpenStores：目录按钮行有带字的「扩展仓库」，点了走回调', (
+      WidgetTester tester,
+    ) async {
+      int opened = 0;
+      await pumpSlivers(tester, <Widget>[
+        MihonExtensionsPage(
+          manager: manager,
+          embedded: true,
+          onOpenStores: () => opened++,
+          sections: const <MihonExtensionsSection>[
+            MihonExtensionsSection.catalog,
+          ],
+        ),
+      ]);
+      final Finder button = find.byKey(
+        const ValueKey<String>('mihon_extension_open_stores'),
+      );
+      expect(button, findsOneWidget);
+      expect(
+        find.descendant(
+          of: button,
+          matching: find.text(t.online_sources_stores_manage),
+        ),
+        findsOneWidget,
+        reason: '入口必须带字：页头那颗无字图标新用户认不出来',
+      );
+      await tester.tap(button);
+      await tester.pump();
+      expect(opened, 1);
+      expect(tester.takeException(), null);
+    });
+
+    testWidgets('没传 onOpenStores 时目录里不画「扩展仓库」按钮', (WidgetTester tester) async {
+      await pumpSlivers(tester, <Widget>[
+        MihonExtensionsPage(
+          manager: manager,
+          embedded: true,
+          sections: const <MihonExtensionsSection>[
+            MihonExtensionsSection.catalog,
+          ],
+        ),
+      ]);
+      expect(
+        find.byKey(const ValueKey<String>('mihon_extension_open_stores')),
+        findsNothing,
+      );
     });
 
     testWidgets('空 sections 渲染空 sliver：兄弟节仍在、不抛', (WidgetTester tester) async {
@@ -159,6 +214,60 @@ void main() {
       expect(find.text(t.mihon_store_refresh), findsOneWidget);
       expect(find.text(t.mihon_extension_import), findsOneWidget);
       expect(find.text(t.mihon_store_add), findsOneWidget);
+    });
+  });
+
+  group('来源空态去扩展', () {
+    testWidgets('没有扩展源：空态给「浏览扩展」按钮，点了走 onBrowseExtensions', (
+      WidgetTester tester,
+    ) async {
+      int browsed = 0;
+      await pumpSlivers(tester, <Widget>[
+        MihonInstalledSourcesSection(
+          manager: manager,
+          emptyLabel: t.video_online_sources_empty,
+          onBrowseExtensions: () => browsed++,
+        ),
+      ]);
+      expect(find.text(t.video_online_sources_empty), findsOneWidget);
+      final Finder button = find.byKey(
+        const ValueKey<String>('mihon_sources_browse_extensions'),
+      );
+      expect(button, findsOneWidget);
+      await tester.tap(button);
+      await tester.pump();
+      expect(browsed, 1);
+      expect(tester.takeException(), null);
+    });
+
+    testWidgets('库页壳里 openOnlineSourceExtensions 就地切到「扩展」视图，不 push', (
+      WidgetTester tester,
+    ) async {
+      final List<MediaLibraryViewKind> selected = <MediaLibraryViewKind>[];
+      await tester.pumpWidget(
+        MaterialApp(
+          home: MediaLibraryShellScope(
+            kinds: const <MediaLibraryViewKind>{
+              MediaLibraryViewKind.onlineSources,
+              MediaLibraryViewKind.extensions,
+            },
+            select: selected.add,
+            child: Builder(
+              builder: (BuildContext context) => TextButton(
+                onPressed: () => openOnlineSourceExtensions(
+                  context,
+                  OnlineSourcesDomain.video,
+                ),
+                child: const Text('go'),
+              ),
+            ),
+          ),
+        ),
+      );
+      await tester.tap(find.text('go'));
+      await tester.pump();
+      expect(selected, <MediaLibraryViewKind>[MediaLibraryViewKind.extensions]);
+      expect(find.byType(BrowseSubPage), findsNothing);
     });
   });
 
@@ -198,8 +307,8 @@ void main() {
       expect(find.text('builtin-row'), findsOneWidget);
       expect(find.text('Alpha source'), findsOneWidget);
       expect(find.text('Beta source'), findsOneWidget);
-      // 排序箭头只在未筛选时出现。
-      expect(find.byIcon(Icons.keyboard_arrow_up), findsNWidgets(2));
+      // 拖拽把手只在未筛选时出现（同组两行各一个）。
+      expect(find.byType(FushiDragHandle), findsNWidgets(2));
 
       await tester.enterText(
         find.byKey(const ValueKey<String>('mihon_sources_search_field')),
@@ -209,10 +318,11 @@ void main() {
       expect(find.text('Alpha source'), findsNothing);
       expect(find.text('Beta source'), findsOneWidget);
       expect(
-        find.byIcon(Icons.keyboard_arrow_up),
+        find.byType(FushiDragHandle),
         findsNothing,
-        reason: '筛选中的列表顺序不是真实顺序，不得提供排序按钮',
+        reason: '筛选中的列表顺序不是真实顺序，不得提供拖拽排序',
       );
+      expect(find.text(t.font_library_reorder_filtered_hint), findsOneWidget);
 
       await tester.tap(find.byType(Switch).first);
       await tester.pump();
@@ -251,50 +361,105 @@ void main() {
       expect(tester.takeException(), null);
     });
 
-    testWidgets('窄行动作收进溢出菜单，标题不再被挤成零宽', (WidgetTester tester) async {
+    for (final Size size in const <Size>[Size(390, 760), Size(1400, 900)]) {
+      testWidgets('行尾宽窄同形：来源偏好 + ⋯ 菜单，标题不被挤成零宽（${size.width}）', (
+        WidgetTester tester,
+      ) async {
+        await pumpSlivers(tester, <Widget>[
+          MihonInstalledSourcesSection(manager: manager),
+        ], size: size);
+        // 常驻动作只有「来源偏好」，其余全在 ⋯ 菜单里。
+        expect(find.byTooltip(t.mihon_source_preferences), findsNWidgets(2));
+        final Finder menu = find.byKey(
+          const ValueKey<String>('mihon_source_menu_org.example.fixture_1'),
+        );
+        expect(menu, findsOneWidget);
+        // 真实像素抓到过：五个 48dp 图标按钮排开后标题只剩 2px。标题列必须拿到
+        // 像样的宽度（量的是 Text 的绘制宽，短标题也远超这个阈值）。
+        final Size titleSize = tester.getSize(find.text('Alpha source'));
+        expect(titleSize.width, greaterThan(60));
+
+        await tester.tap(menu);
+        await tester.pumpAndSettle();
+        expect(find.text(t.mihon_source_move_down), findsOneWidget);
+        expect(find.text(t.mihon_source_clear_data), findsOneWidget);
+        expect(find.text(t.mihon_source_pin), findsOneWidget);
+        // 组首的「上移」在菜单里是禁用项而不是消失。
+        final PopupMenuItem<Object?> moveUp = tester
+            .widget<PopupMenuItem<Object?>>(
+              find.ancestor(
+                of: find.text(t.mihon_source_move_up),
+                matching: find.byWidgetPredicate(
+                  (Widget widget) => widget is PopupMenuItem<Object?>,
+                ),
+              ),
+            );
+        expect(moveUp.enabled, isFalse);
+
+        // 菜单里点「下移」真写穿排序：Alpha 从第一行挪到第二行。
+        await tester.tap(find.text(t.mihon_source_move_down));
+        await tester.pumpAndSettle();
+        final List<MangaOnlineSourceRow> rows = await database
+            .getMangaOnlineSources();
+        expect(
+          rows.map((MangaOnlineSourceRow row) => row.name).toList(),
+          <String>['Beta source', 'Alpha source'],
+        );
+        expect(tester.takeException(), null);
+      });
+    }
+
+    testWidgets('置顶源单独成组排在上方，组内顺序不受另一组影响', (WidgetTester tester) async {
+      final MangaOnlineSourceRow beta = manager.sources.singleWhere(
+        (MangaOnlineSourceRow row) => row.sourceId == '2',
+      );
+      await manager.updateSourceSettings(beta, pinned: true);
       await pumpSlivers(tester, <Widget>[
         MihonInstalledSourcesSection(manager: manager),
-      ], size: const Size(390, 760));
-      // 内联图标按钮一个都不在，换成一个 ⋮ 菜单。
-      expect(find.byIcon(Icons.keyboard_arrow_up), findsNothing);
-      expect(find.byIcon(Icons.tune), findsNothing);
-      final Finder menu = find.byKey(
-        const ValueKey<String>('mihon_source_menu_org.example.fixture_1'),
-      );
-      expect(menu, findsOneWidget);
-      // 真实像素抓到过：五个 48dp 图标按钮排开后标题只剩 2px。标题列必须拿到
-      // 像样的宽度（量的是 Text 的绘制宽，短标题也远超这个阈值）。
-      final Size titleSize = tester.getSize(find.text('Alpha source'));
-      expect(titleSize.width, greaterThan(60));
-
-      await tester.tap(menu);
-      await tester.pumpAndSettle();
-      expect(find.text(t.mihon_source_move_down), findsOneWidget);
-      expect(find.text(t.mihon_source_preferences), findsOneWidget);
-      expect(find.text(t.mihon_source_clear_data), findsOneWidget);
-      expect(find.text(t.mihon_source_pin), findsOneWidget);
-      // 首行的「上移」在菜单里是禁用项而不是消失。
-      final PopupMenuItem<Object?> moveUp = tester
-          .widget<PopupMenuItem<Object?>>(
-            find.ancestor(
-              of: find.text(t.mihon_source_move_up),
-              matching: find.byWidgetPredicate(
-                (Widget widget) => widget is PopupMenuItem<Object?>,
-              ),
-            ),
-          );
-      expect(moveUp.enabled, isFalse);
-
-      // 菜单里点「下移」真写穿排序：Alpha 从第一行挪到第二行。
-      await tester.tap(find.text(t.mihon_source_move_down));
-      await tester.pumpAndSettle();
-      final List<MangaOnlineSourceRow> rows = await database
-          .getMangaOnlineSources();
+      ]);
+      expect(find.text(t.online_sources_pinned_header), findsOneWidget);
+      expect(find.text(t.online_sources_all_header), findsOneWidget);
       expect(
-        rows.map((MangaOnlineSourceRow row) => row.name).toList(),
+        tester.getTopLeft(find.text('Beta source')).dy,
+        lessThan(tester.getTopLeft(find.text('Alpha source')).dy),
+      );
+      // 两组各只有一行：组内没有可拖的对象。
+      expect(find.byType(FushiDragHandle), findsNothing);
+      expect(tester.takeException(), null);
+    });
+
+    testWidgets('状态筛选 chip 只影响显示', (WidgetTester tester) async {
+      final MangaOnlineSourceRow alpha = manager.sources.singleWhere(
+        (MangaOnlineSourceRow row) => row.sourceId == '1',
+      );
+      await manager.updateSourceSettings(alpha, enabled: false);
+      await pumpSlivers(tester, <Widget>[
+        MihonInstalledSourcesSection(manager: manager),
+      ]);
+      await tester.tap(
+        find.byKey(const ValueKey<String>('online_sources_filter_disabled')),
+      );
+      await tester.pump();
+      expect(find.text('Alpha source'), findsOneWidget);
+      expect(find.text('Beta source'), findsNothing);
+      expect(manager.sources, hasLength(2), reason: '筛选不改数据');
+
+      await tester.tap(
+        find.byKey(const ValueKey<String>('online_sources_filter_all')),
+      );
+      await tester.pump();
+      expect(find.text('Beta source'), findsOneWidget);
+      expect(tester.takeException(), null);
+    });
+
+    test('reorderSources 按给定顺序重写 sort_order', () async {
+      final List<MangaOnlineSourceRow> reversed = manager.sources.reversed
+          .toList();
+      await manager.reorderSources(reversed);
+      expect(
+        manager.sources.map((MangaOnlineSourceRow row) => row.name).toList(),
         <String>['Beta source', 'Alpha source'],
       );
-      expect(tester.takeException(), null);
     });
 
     testWidgets('一个扩展源都没有时显示 emptyLabel', (WidgetTester tester) async {
@@ -310,6 +475,130 @@ void main() {
         ),
       ]);
       expect(find.text('nothing-installed'), findsOneWidget);
+      expect(tester.takeException(), null);
+    });
+  });
+
+  // 1PKqUbCed7：同一扩展里同名的多个语言源（E-Hentai JA / EN / ZH …）合成一行；
+  // 数据仍是一源一行，开关 / 语言选择逐源写穿。
+  group('多语言同名源合成一行', () {
+    const String pkg = 'org.example.ehentai';
+    setUp(() async {
+      await database.replaceMangaOnlineSources(
+        pkg,
+        <MangaOnlineSourcesCompanion>[
+          for (final (int i, String lang) in <String>[
+            'ja',
+            'en',
+            'zh',
+            'fr',
+          ].indexed)
+            MangaOnlineSourcesCompanion.insert(
+              extensionPackage: pkg,
+              sourceId: '${i + 1}',
+              name: 'E-Hentai',
+              language: lang,
+              sortOrder: Value<int>(i),
+            ),
+          MangaOnlineSourcesCompanion.insert(
+            extensionPackage: pkg,
+            sourceId: '9',
+            name: 'ExHentai',
+            language: 'all',
+            sortOrder: const Value<int>(9),
+          ),
+        ],
+      );
+      await manager.reload();
+    });
+
+    Future<Map<String, bool>> enabledById() async => <String, bool>{
+      for (final MangaOnlineSourceRow row
+          in await database.getMangaOnlineSources())
+        if (row.extensionPackage == pkg) row.sourceId: row.enabled,
+    };
+
+    test('合组：按扩展 + 名称，语言摘要超出三个记 +N', () {
+      final List<MihonSourceGroup> groups = groupMihonSources(manager.sources);
+      expect(groups, hasLength(2));
+      expect(
+        groups.first.members.map((MangaOnlineSourceRow s) => s.sourceId),
+        <String>['1', '2', '3', '4'],
+      );
+      expect(mihonSourceGroupLanguageSummary(groups.first), 'JA · EN · ZH +1');
+      expect(groups.last.isMulti, isFalse);
+    });
+
+    testWidgets('一行显示；开关控整组；点行先选语言再进源；菜单「语言」逐语言启停', (
+      WidgetTester tester,
+    ) async {
+      Finder inDialog(String text) =>
+          find.descendant(of: find.byType(Dialog), matching: find.text(text));
+      final List<String> opened = <String>[];
+      await pumpSlivers(tester, <Widget>[
+        MihonInstalledSourcesSection(
+          manager: manager,
+          onOpenSource: (MangaOnlineSourceRow source) =>
+              opened.add(source.sourceId),
+        ),
+      ]);
+      expect(find.text('E-Hentai'), findsOneWidget);
+      expect(find.text('JA · EN · ZH +1'), findsOneWidget);
+      expect(find.text('ExHentai'), findsOneWidget);
+
+      // 点行：弹语言选择，选 EN 进的是 EN 那个源。
+      await tester.tap(find.text('E-Hentai'));
+      await tester.pumpAndSettle();
+      expect(find.text(t.mihon_source_pick_language), findsOneWidget);
+      await tester.tap(inDialog('EN'));
+      await tester.pumpAndSettle();
+      expect(opened, <String>['2']);
+
+      // 菜单「语言」：取消 JA、ZH、FR，只留 EN。
+      await tester.tap(
+        find.byKey(const ValueKey<String>('mihon_source_menu_${pkg}_1')),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(t.mihon_source_languages));
+      await tester.pumpAndSettle();
+      for (final String label in <String>['JA', 'ZH', 'FR']) {
+        await tester.tap(inDialog(label));
+        await tester.pump();
+      }
+      await tester.tap(inDialog(t.dialog_ok));
+      await tester.pumpAndSettle();
+      expect(await enabledById(), <String, bool>{
+        '1': false,
+        '2': true,
+        '3': false,
+        '4': false,
+        '9': true,
+      });
+
+      // 只剩一个启用的语言：点行直接进它，不再弹选择。
+      await tester.tap(find.text('E-Hentai'));
+      await tester.pumpAndSettle();
+      expect(opened, <String>['2', '2']);
+
+      // 组开关：关掉整组（写穿所有语言源），再打开整组。
+      final Finder groupSwitch = find.descendant(
+        of: find.byKey(const ValueKey<String>('mihon_source_row_${pkg}_1')),
+        matching: find.byType(Switch),
+      );
+      await tester.tap(groupSwitch);
+      await tester.pumpAndSettle();
+      expect((await enabledById()).values.where((bool v) => v), <bool>[
+        true,
+      ], reason: '只剩 ExHentai 开着');
+      await tester.tap(groupSwitch);
+      await tester.pumpAndSettle();
+      expect(await enabledById(), <String, bool>{
+        '1': true,
+        '2': true,
+        '3': true,
+        '4': true,
+        '9': true,
+      });
       expect(tester.takeException(), null);
     });
   });

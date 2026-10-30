@@ -122,7 +122,7 @@ class _FakeLibraryService
       <({String id, String title, String? fileName, List<int> bytes})>[];
 
   @override
-  Future<bool> videoExists(String id) async =>
+  Future<bool> videoExists(String id, {int episodeIndex = 0}) async =>
       id == videoId || uploaded.any((u) => u.id == id);
 
   @override
@@ -693,6 +693,11 @@ void main() {
 }
 
 class _EmbeddedSubtitleFfmpegBackend implements FfmpegBackend {
+  /// 查询类命令（BUG-2938 新增原语）：本假件不区分，交给 [run]。
+  @override
+  Future<FfmpegRunResult> runQuery(List<String> args, Duration timeout) =>
+      run(args, timeout);
+
   @override
   Future<FfmpegRunResult> runProbe(List<String> args, Duration timeout) async =>
       const FfmpegRunResult(returnCode: 0, output: '{"format":{}}');

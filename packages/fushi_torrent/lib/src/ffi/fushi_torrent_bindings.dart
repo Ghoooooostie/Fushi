@@ -203,6 +203,43 @@ class FushiTorrentBindings {
   late final _ht_pause_torrent = _ht_pause_torrentPtr.asFunction<
       int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>, int)>();
 
+  /// 单种子「停止上传、继续下载」（fRmEhU4XIK：分享率下载途中达标也停上传）。
+  /// blocked 非 0 = 该种子上传限到 libtorrent 可表达的下限 1 B/s（0/-1 在
+  /// libtorrent 里都是「不限」）；0 = 清除单种子上传限速。1 成功 0 失败。
+  /// 调用前必须先看 [hasTorrentUploadBlock]（旧 DLL 无此符号）。
+  int ht_set_torrent_upload_blocked(
+    ffi.Pointer<ffi.Void> session,
+    ffi.Pointer<ffi.Char> info_hash,
+    int blocked,
+  ) {
+    return _ht_set_torrent_upload_blocked(session, info_hash, blocked);
+  }
+
+  late final _ht_set_torrent_upload_blockedPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>,
+              ffi.Int)>>('ht_set_torrent_upload_blocked');
+  late final _ht_set_torrent_upload_blocked =
+      _ht_set_torrent_upload_blockedPtr.asFunction<
+          int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>, int)>();
+
+  /// 已加载的库里是否有 [ht_set_torrent_upload_blocked]。随包 DLL 是预编译
+  /// 产物，Dart 先于 DLL 更新的组合真实存在：缺符号时下载阶段的分享率截停
+  /// 降级为不动作（做种阶段仍由 [ht_pause_torrent] 截停）。
+  late final bool hasTorrentUploadBlock = _probeTorrentUploadBlock();
+
+  bool _probeTorrentUploadBlock() {
+    try {
+      _lookup<
+          ffi.NativeFunction<
+              ffi.Int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>,
+                  ffi.Int)>>('ht_set_torrent_upload_blocked');
+      return true;
+    } on ArgumentError {
+      return false;
+    }
+  }
+
   /// 已加载的库里是否同时有 [ht_set_unchoke_slots] 与 [ht_pause_torrent]
   /// （上传策略两个原语一起用，缺一即整体降级）。
   ///
@@ -705,6 +742,38 @@ class FushiTorrentBindings {
           ffi.NativeFunction<
               ffi.Int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>,
                   ffi.Pointer<ffi.Char>)>>('ht_add_trackers');
+      return true;
+    } on ArgumentError {
+      return false;
+    }
+  }
+
+  /// BUG-2950：运行期向 DHT 补节点（换行分隔的 "host:port"）。返回成功添加的
+  /// 条数，-1 失败。调用前必须先看 [hasAddDhtNodes]——比本文件旧的预编译库
+  /// 里没有这个符号。
+  int ht_add_dht_nodes(
+    ffi.Pointer<ffi.Void> session,
+    ffi.Pointer<ffi.Char> nodes,
+  ) {
+    return _ht_add_dht_nodes(session, nodes);
+  }
+
+  late final _ht_add_dht_nodesPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Void>,
+              ffi.Pointer<ffi.Char>)>>('ht_add_dht_nodes');
+  late final _ht_add_dht_nodes = _ht_add_dht_nodesPtr
+      .asFunction<int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>)>();
+
+  /// 已加载的库里是否有 [ht_add_dht_nodes]（理由同 [hasApplyProxy]）。
+  late final bool hasAddDhtNodes = _probeAddDhtNodes();
+
+  bool _probeAddDhtNodes() {
+    try {
+      _lookup<
+          ffi.NativeFunction<
+              ffi.Int Function(ffi.Pointer<ffi.Void>,
+                  ffi.Pointer<ffi.Char>)>>('ht_add_dht_nodes');
       return true;
     } on ArgumentError {
       return false;

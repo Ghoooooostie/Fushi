@@ -3,9 +3,10 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/media/video/cover_ui/landscape_cover_image.dart';
+import 'package:fushi/src/utils/components/prebaked_blur_image.dart';
 
 /// BUG-1298 守卫：合集详情页 hero 是宽幅槽（整屏宽 × 400~600 高，约 2.7:1），
 /// 而它的图源 `MediaCollections.coverPath` 一个列同时承载两种朝向——导入抽帧的
@@ -25,60 +26,70 @@ import 'package:fushi/src/media/video/cover_ui/landscape_cover_image.dart';
 void main() {
   group('LandscapeCoverImage 按图片朝向分流 — BUG-1298', () {
     testWidgets('横图（16:9 抽帧）仍 cover 铺满，不加模糊垫底', (WidgetTester tester) async {
-      final MemoryImage provider =
-          MemoryImage(await _solidPngBytes(tester, 1600, 900));
+      final MemoryImage provider = MemoryImage(
+        await _solidPngBytes(tester, 1600, 900),
+      );
       await _pumpHero(tester, provider);
 
       expect(
         _fitOfImageWith(tester, BoxFit.cover),
         isTrue,
-        reason: '横图必须 BoxFit.cover 铺满宽幅槽——这是本组件引入前的行为，'
+        reason:
+            '横图必须 BoxFit.cover 铺满宽幅槽——这是本组件引入前的行为，'
             '不得回归',
       );
       expect(
-        find.byType(ImageFiltered),
+        find.byType(PrebakedBlurImage),
         findsNothing,
         reason: '横图不需要模糊垫底；出现垫底说明朝向判定把横图误判成竖图',
       );
     });
 
-    testWidgets('竖版海报（2:3 刮削）走模糊垫底 + contain 完整前景',
-        (WidgetTester tester) async {
+    testWidgets('竖版海报（2:3 刮削）走模糊垫底 + contain 完整前景', (
+      WidgetTester tester,
+    ) async {
       // 用户实际刮到的海报尺寸（853×1200），不是随手编的比例。
-      final MemoryImage provider =
-          MemoryImage(await _solidPngBytes(tester, 853, 1200));
+      final MemoryImage provider = MemoryImage(
+        await _solidPngBytes(tester, 853, 1200),
+      );
       await _pumpHero(tester, provider);
 
       expect(
-        find.byType(ImageFiltered),
+        find.byType(PrebakedBlurImage),
         findsOneWidget,
         reason: '竖版海报必须有模糊垫底填满宽幅槽的两侧，否则要么黑边要么被裁',
       );
       expect(
         _fitOfImageWith(tester, BoxFit.contain),
         isTrue,
-        reason: '竖版海报前景必须 contain 完整显示——cover 会放大 4.5 倍只剩'
+        reason:
+            '竖版海报前景必须 contain 完整显示——cover 会放大 4.5 倍只剩'
             '中间 26%，正是 BUG-1298 的现象',
       );
     });
 
     testWidgets('竖图路径下遮罩压在垫底之上、清晰海报之下', (WidgetTester tester) async {
-      final MemoryImage provider =
-          MemoryImage(await _solidPngBytes(tester, 853, 1200));
+      final MemoryImage provider = MemoryImage(
+        await _solidPngBytes(tester, 853, 1200),
+      );
       await _pumpHero(tester, provider);
 
-      // 取渲染出竖图三层的那个 Stack（含 ImageFiltered 垫底的那个）。
+      // 取渲染出竖图三层的那个 Stack（含模糊垫底的那个）。
       final Stack stack = tester
           .widgetList<Stack>(find.byType(Stack))
           .firstWhere(
-              (Stack s) => s.children.any((Widget w) => w is ImageFiltered));
+            (Stack s) => s.children.any((Widget w) => w is PrebakedBlurImage),
+          );
 
-      final int overlayIndex =
-          stack.children.indexWhere((Widget w) => w.key == _overlayKey);
-      final int blurIndex =
-          stack.children.indexWhere((Widget w) => w is ImageFiltered);
-      final int foregroundIndex =
-          stack.children.indexWhere((Widget w) => w is Padding);
+      final int overlayIndex = stack.children.indexWhere(
+        (Widget w) => w.key == _overlayKey,
+      );
+      final int blurIndex = stack.children.indexWhere(
+        (Widget w) => w is PrebakedBlurImage,
+      );
+      final int foregroundIndex = stack.children.indexWhere(
+        (Widget w) => w is Padding,
+      );
 
       expect(overlayIndex, isNonNegative, reason: 'overlays 没被渲染进 Stack');
       expect(foregroundIndex, isNonNegative, reason: '清晰前景没被渲染进 Stack');
@@ -90,16 +101,22 @@ void main() {
       expect(
         overlayIndex < foregroundIndex,
         isTrue,
-        reason: '遮罩绝不能压在清晰海报之上——hero 底部渐变浓到 0xE8，会把海报'
+        reason:
+            '遮罩绝不能压在清晰海报之上——hero 底部渐变浓到 0xE8，会把海报'
             '下半截压成一片黑（等于换个方式毁掉海报）',
       );
     });
   });
 
-  // 组件写对了，页面没接上去照样是坏的。这条锁调用点：hero 视觉现在住在共享布局
-  // `CollectionDetailHero`（本地系列 + 媒体服务器详情页同一套），封面分流在它的
-  // build 里；本地页面的 `_buildHero` 只算数据、把 `_heroCover` 喂给它。两段各锁一半。
-  test('合集详情页 hero 必须走 LandscapeCoverImage，不得回退裸 cover — BUG-1298', () {
+  // 组件写对了，页面没接上去照样是坏的。这条锁调用点：hero 视觉住在共享布局
+  // `CollectionDetailHero`（本地系列 + 媒体服务器详情页同一套），本地页面的
+  // `_buildHero` 只算数据、把 `_heroCover` 喂给它。两段各锁一半。
+  //
+  // 2026-10 M3E 重做后 hero 不再把封面铺进宽幅槽：2:3 封面进独立的封面卡
+  // （`PortraitCoverImage` 按朝向分流），大背景是模糊垫底（`MediaDetailBackdrop`）。
+  // BUG-1298 的根因——竖版海报被 `BoxFit.cover` 硬塞进宽幅槽、裁成中间一条——
+  // 在新结构下由「封面只进 PortraitCoverImage、背景只走模糊垫底」两条一起堵住。
+  test('合集详情页 hero 封面走 PortraitCoverImage 封面卡，不得回退裸 cover — BUG-1298', () {
     const String pagePath =
         'lib/src/pages/implementations/media_collection_detail_page.dart';
     final String page = _functionSource(
@@ -120,30 +137,42 @@ void main() {
     const String layoutPath =
         'lib/src/media/collections/collection_detail_layout.dart';
     final String layout = File(layoutPath).readAsStringSync();
-    final String body = _functionSource(
-      layout.substring(layout.indexOf('class CollectionDetailHero ')),
-      'Widget build(BuildContext context) {',
+    final String hero = layout.substring(
+      layout.indexOf('class CollectionDetailHero '),
+      layout.indexOf('class CollectionHeroBadgeChips '),
     );
-
+    // 封面卡（2:3 框）只负责外框，图本身由 _buildCoverContent 画（两栏 / 紧凑
+    // hero 共用）；两段都要过：卡走 content、content 走 PortraitCoverImage。
+    final String coverCard = _functionSource(hero, 'Widget? _buildCoverCard(');
     expect(
-      body,
-      contains('LandscapeCoverImage('),
-      reason: 'hero 封面必须经 LandscapeCoverImage 按朝向分流；直接 Image(...) '
-          '会把 2:3 刮削海报裁成中间一条（BUG-1298）',
+      coverCard,
+      contains('_buildCoverContent()'),
+      reason: 'hero 封面卡必须复用 _buildCoverContent，不得另画一份图',
     );
-    // 词边界不可省：`LandscapeCoverImage(` 本身就以 `Image(` 结尾，不加负向后行
-    // 断言的话，正确写法只要把 `key:` 行删掉就会被误判成回归（变异实测抓到的）。
+    final String coverContent = _functionSource(
+      hero,
+      'Widget? _buildCoverContent(',
+    );
     expect(
-      body,
+      coverContent,
+      contains('PortraitCoverImage('),
+      reason:
+          'hero 封面卡必须经 PortraitCoverImage 按朝向分流；直接 Image(...) '
+          '会把横版截帧 / 竖版海报按错误槽向硬裁（BUG-1298 / BUG-1299）',
+    );
+    final String backdrop = _functionSource(hero, 'Widget _buildBackdrop(');
+    expect(
+      backdrop,
+      contains('MediaDetailBackdrop('),
+      reason: '没有横版 fanart 时封面只能模糊垫底，不得清晰铺满宽幅槽',
+    );
+    // 词边界不可省：`PortraitCoverImage(` 本身就以 `Image(` 结尾。
+    expect(
+      hero,
       isNot(contains(RegExp(r'(?<![A-Za-z_])Image\(\s*image: cover'))),
-      reason: 'hero 不得绕过 LandscapeCoverImage 直接渲染 cover——那正是 '
-          'BUG-1298 的原始写法',
-    );
-    expect(
-      body,
-      contains('overlays: overlays'),
-      reason: '两层可读性渐变必须作为 overlays 交给 LandscapeCoverImage 排层序，'
-          '留在 hero 自己的 Stack 里会压黑竖版海报',
+      reason:
+          'hero 不得绕过 PortraitCoverImage / MediaDetailBackdrop 直接渲染 '
+          'cover——那正是 BUG-1298 的原始写法',
     );
   });
 }
@@ -222,8 +251,9 @@ Future<Uint8List> _solidPngBytes(WidgetTester tester, int w, int h) async {
     );
     final ui.Picture picture = recorder.endRecording();
     final ui.Image image = await picture.toImage(w, h);
-    final ByteData? data =
-        await image.toByteData(format: ui.ImageByteFormat.png);
+    final ByteData? data = await image.toByteData(
+      format: ui.ImageByteFormat.png,
+    );
     image.dispose();
     picture.dispose();
     bytes = data!.buffer.asUint8List();
@@ -240,7 +270,8 @@ String _functionSource(String source, String startToken) {
   final RegExpMatch? next = nextWidget.firstMatch(
     source.substring(start + startToken.length),
   );
-  final int end =
-      next == null ? source.length : start + startToken.length + next.start + 1;
+  final int end = next == null
+      ? source.length
+      : start + startToken.length + next.start + 1;
   return source.substring(start, end);
 }

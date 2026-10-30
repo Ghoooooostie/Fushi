@@ -13,6 +13,10 @@ class LyricsCueText {
   final List<EpubRubyAnnotation> rubies;
 }
 
+/// 两条 cue 之间的未认领正文至少这么多个有读音的字才在歌词页灰显
+/// （[LyricsCueTextResolver.skippedTextBetween]）。
+const int kLyricsSkippedTextMinChars = 2;
+
 /// Resolves display text without changing transcript cues or their token timing.
 /// Uses the same ruby-free chapter text and UTF-16 normalization as the matcher.
 ///
@@ -55,11 +59,16 @@ class LyricsCueTextResolver {
         return LyricsCueText.plain(cue.text);
       }
       final int available = normalized.length - start;
-      final int from = first ? chapter.norm.starts[start] : 0;
+      // 句首开括号 / 破折号（「『――…）被归一化剥掉、落在匹配区间之外——按
+      // [_gapSplit] 往回补上，歌词行才是「月が替わると…」而不是缺了左括号的半句。
+      final int from = first ? _headStart(chapter, start) : 0;
       if (remaining <= available) {
         final int end = start + remaining;
         if (!_isBoundary(normalized, end)) return LyricsCueText.plain(cue.text);
-        final int to = chapter.norm.ends[end - 1];
+        // 句末标点 / 闭括号 / 破折号（。」』！？…――）同样被归一化剥掉：matcher 的
+        // 区间止于最后一个「有读音」的字，直接按它截取正文会让每行都丢掉句号（用户
+        // 2026-10-04 报「歌词模式没有标点」）。往后补到 [_gapSplit] 的切点。
+        final int to = _tailEnd(chapter, end);
         _collectRubies(rubies, chapter, from, to, result.length);
         result.write(chapter.text.substring(from, to));
         return LyricsCueText(result.toString(), rubies);
@@ -73,6 +82,62 @@ class LyricsCueTextResolver {
     }
     return LyricsCueText.plain(cue.text);
   }
+
+  /// 两条相邻 cue 之间**没有任何 cue 认领**的正文（朗读者跳读，或合缝也认领不下
+  /// 的 ASR 漏转），按歌词行同一取法带回 ruby；没有这样的正文返回 null。
+  ///
+  /// 只在同章、区间都合法、[prev] 止于 [next] 起点之前时产生——跨章、开头结尾、
+  /// 区间重叠或乱序一律不算。缝的归一化字数（有读音的字）不足
+  /// [kLyricsSkippedTextMinChars] 不算（只剩标点 / 空白，或模糊命中漏掉的一个
+  /// 词尾字）。文本区间与两侧歌词行首尾相接：从 [prev] 补完收尾标点之后起，到
+  /// [next] 往回补的开括号之前止，再去掉两端空白。
+  ///
+  /// 纯显示：不改 cue、不改匹配区间，统计 / 制卡 / 高亮仍只认 cue 区间，所以
+  /// 已落库的书不用重新对齐就能看到。
+  LyricsCueText? skippedTextBetween(AudioCue prev, AudioCue next) {
+    final SubtitleRematchFragment? a = SubtitleRematchCodec.tryDecode(
+      prev.textFragmentId,
+    );
+    final SubtitleRematchFragment? b = SubtitleRematchCodec.tryDecode(
+      next.textFragmentId,
+    );
+    if (a == null ||
+        b == null ||
+        a.sectionIndex != b.sectionIndex ||
+        a.sectionIndex < 0 ||
+        a.sectionIndex >= book.chapters.length ||
+        a.normCharStart < 0 ||
+        a.normCharEnd <= a.normCharStart ||
+        b.normCharEnd <= b.normCharStart ||
+        b.normCharStart - a.normCharEnd < kLyricsSkippedTextMinChars) {
+      return null;
+    }
+    final _Chapter chapter = _chapter(a.sectionIndex);
+    final String normalized = chapter.norm.text;
+    final int gapStart = a.normCharEnd;
+    final int gapEnd = b.normCharStart;
+    if (gapEnd >= normalized.length ||
+        !_isBoundary(normalized, gapStart) ||
+        !_isBoundary(normalized, gapEnd)) {
+      return null;
+    }
+    final String text = chapter.text;
+    int from = _tailEnd(chapter, gapStart);
+    int to = _headStart(chapter, gapEnd);
+    while (from < to && _isBlank(text.codeUnitAt(from))) {
+      from++;
+    }
+    while (to > from && _isBlank(text.codeUnitAt(to - 1))) {
+      to--;
+    }
+    if (from >= to) return null;
+    final List<EpubRubyAnnotation> rubies = <EpubRubyAnnotation>[];
+    _collectRubies(rubies, chapter, from, to, 0);
+    return LyricsCueText(text.substring(from, to), rubies);
+  }
+
+  static bool _isBlank(int c) =>
+      c == 0x20 || c == 0x09 || c == 0x0a || c == 0x0d || c == 0x3000;
 
   /// 把章内 `[from, to)` 里的 ruby 平移到输出坐标（输出已有 [offset] 码元）。
   /// 被 cue 边界切开的 ruby 丢弃：半个基底配整个读音比没有更糟。
@@ -107,6 +172,66 @@ class LyricsCueTextResolver {
     return value;
   }
 
+  /// 从归一化下标 [normStart] 起的那条歌词行，在正文里的起点：往回认领它前面
+  /// 那段无读音缝隙里 [_gapSplit] 切点之后的部分（开括号、行首破折号……），
+  /// 再跳过行首空白。
+  static int _headStart(_Chapter chapter, int normStart) {
+    final int gapTo = chapter.norm.starts[normStart];
+    final int gapFrom = normStart > 0 ? chapter.norm.ends[normStart - 1] : 0;
+    int i = _gapSplit(chapter, gapFrom, gapTo, forNextLine: true);
+    while (i < gapTo && _isBlank(chapter.text.codeUnitAt(i))) {
+      i++;
+    }
+    return i;
+  }
+
+  /// 止于归一化下标 [normEnd]（不含）的那条歌词行，在正文里的终点：往后认领
+  /// 它后面那段无读音缝隙里 [_gapSplit] 切点之前的部分（句末标点、闭括号、
+  /// 省略号、破折号……）。
+  static int _tailEnd(_Chapter chapter, int normEnd) {
+    final int gapFrom = chapter.norm.ends[normEnd - 1];
+    final int gapTo = normEnd < chapter.norm.text.length
+        ? chapter.norm.starts[normEnd]
+        : chapter.text.length;
+    return _gapSplit(chapter, gapFrom, gapTo, forNextLine: false);
+  }
+
+  /// 两个有读音的字之间那段缝隙 `[gapFrom, gapTo)`（只含标点 / 符号 / 空白，
+  /// 归一化把它们全剥了）归前后两行的切点：前一行认领切点之前
+  /// （[forNextLine] = false 求的切点）、后一行认领切点之后（[forNextLine] =
+  /// true 求的切点）。
+  ///
+  /// 优先切在段落边界（章纯文本不含段落分隔符，边界记在 `blockEnds`）：前一行
+  /// 止于缝隙里**第一个**段落边界，后一行起于**最后一个**——缝隙里夹着整段只有
+  /// 符号的段落（场景分隔「◇」「＊＊＊」）时两边都不认领它，下一行不会变成
+  /// 「◇「誰だ」」。缝隙里只有一个段落边界时两个切点重合，不丢字也不重复。
+  /// 没有段落边界时两行共用同一个切点：第一个空白处；其次第一个开括号前；都
+  /// 没有则整段归前一行（句末的「。――」「……」、句中的「、」）。不按白名单逐个
+  /// 收标点：此前白名单漏了破折号，补到「――」就停，后面的闭引号也跟着丢。
+  static int _gapSplit(
+    _Chapter chapter,
+    int gapFrom,
+    int gapTo, {
+    required bool forNextLine,
+  }) {
+    int? split;
+    for (final int e in chapter.blockEnds) {
+      if (e > gapTo) break;
+      if (e < gapFrom) continue;
+      split = e;
+      if (!forNextLine) break;
+    }
+    if (split != null) return split;
+    final String text = chapter.text;
+    for (int i = gapFrom; i < gapTo; i++) {
+      final int c = text.codeUnitAt(i);
+      if (_isBlank(c) || _kOpening.contains(c)) return i;
+    }
+    return gapTo;
+  }
+
+  static final Set<int> _kOpening = '「『（(［[｛{【〔〈《〖〘〚“‘〝«‹'.codeUnits.toSet();
+
   static bool _isBoundary(String text, int offset) =>
       offset == text.length ||
       text.codeUnitAt(offset) < 0xdc00 ||
@@ -118,6 +243,7 @@ class _Chapter {
     required this.text,
     required this.norm,
     required this.rubies,
+    required this.blockEnds,
   });
 
   factory _Chapter.parse(EpubBook book, int section) {
@@ -128,10 +254,14 @@ class _Chapter {
       text: chapter.text,
       norm: AudioTextNormalizer.normalizeWithOffsets(chapter.text),
       rubies: chapter.rubies,
+      blockEnds: chapter.blockEnds,
     );
   }
 
   final String text;
   final NormalizedTextWithOffsets norm;
   final List<EpubRubyAnnotation> rubies;
+
+  /// 段落边界（升序，章纯文本坐标）。
+  final List<int> blockEnds;
 }

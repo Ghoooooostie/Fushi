@@ -1,16 +1,16 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
 import 'anki_media_dedup.dart';
 import 'anki_models.dart';
+import 'anki_settings_store.dart';
 import 'anki_note_type_definition.dart';
 import 'anki_synchronized_clip_template.dart';
 import 'card_source_link.dart';
 import 'lapis_note_type.dart';
 import 'anki_note_composer.dart';
 
+export 'anki_settings_store.dart';
 export 'anki_note_composer.dart'
     show
         AudioFetchOutcome,
@@ -24,18 +24,27 @@ export 'anki_note_composer.dart'
         synchronizedVideoReplayHtml;
 
 abstract class BaseAnkiRepository with AnkiNoteComposer {
-  @protected
-  static const settingsKey = 'fushi_anki_settings';
+  /// [settingsStore] 为 null 时用进程（isolate）级装配点 [defaultSettingsStore]。
+  BaseAnkiRepository({AnkiSettingsStore? settingsStore})
+      : _settingsStore = settingsStore;
 
-  /// 存量 SharedPreferences 键（W2-7 迁移输入）：[readSettingsJson] 载入期把
-  /// 值搬到 [settingsKey] 后删除旧键。旧字面量只允许活在这一处迁移代码里。
-  static const String _legacySettingsKey = 'hoshi_anki_settings';
+  /// 进程级装配点：app 在每个 entry point（主 app / `:popup` / 悬浮词典）打开
+  /// Drift 库后换成 Drift 实现；没装配（测试、没有 Drift 库的宿主）时是
+  /// SharedPreferences 实现，行为与迁移前一致。
+  static AnkiSettingsStore defaultSettingsStore =
+      const SharedPreferencesAnkiSettingsStore();
+
+  final AnkiSettingsStore? _settingsStore;
+
+  /// 本实例实际读写的设置存储（每次取值都解析，装配点后换也立即生效）。
+  @protected
+  AnkiSettingsStore get settingsStore => _settingsStore ?? defaultSettingsStore;
 
   /// 载入期一次性迁移（W2-2）：把存量用户卡模板里的音频旧别名
   /// `{sasayaki-audio}` 就地改写为 `{sentence-audio}`（两者从来渲染同一个值，
   /// 改写零语义变化），命中即回写持久层。幂等：改写后源串不再含旧 token。
   /// 旧字面量只允许活在这一处迁移代码里——渲染器/枚举/诊断均已不再受理别名。
-  /// 清理条件：无（SharedPreferences 无版本阶梯，载入期改写即是它的迁移通道）。
+  /// 清理条件：无（设置串整份存在单个键里、无版本阶梯，载入期改写即是它的迁移通道）。
   static const String _legacySentenceAudioAlias = '{sasayaki-audio}';
 
   /// 载入期一次性迁移：存量配置里 `MiscInfo` 的映射**一字不差**还是旧出厂默认
@@ -45,7 +54,7 @@ abstract class BaseAnkiRepository with AnkiNoteComposer {
   /// 为什么只认「等于旧默认」：这等价于「用户从没碰过这个字段」，补齐是在替他
   /// 跟进出厂默认。凡是被改过的值——清空、换成别的占位符、或自己拼过别的
   /// 组合——一律不动，不覆盖用户意图。不会修改已经导出的旧卡。
-  /// 幂等：改写后值不再等于旧默认。清理条件：无（SharedPreferences 无版本阶梯，
+  /// 幂等：改写后值不再等于旧默认。清理条件：无（设置串无版本阶梯，
   /// 载入期改写即是它的迁移通道，与上面的别名改写同构）。
   static const String _legacyMiscInfoMapping = '{document-title}';
   static const String _miscInfoMappingWithClipTime =
@@ -55,32 +64,25 @@ abstract class BaseAnkiRepository with AnkiNoteComposer {
   static const String _miscInfoMappingWithLinkedTitle =
       '{source-link} {clip-timestamp}';
 
-  /// 读原始设置 JSON 的**唯一通道**：三个载入期迁移（W2-7 键搬移 + W2-2 别名改写
-  /// + MiscInfo 补片段时间窗）都收敛在这里。子类若覆写 [loadSettings]（AnkiDroid 的
+  /// 读原始设置 JSON 的**唯一通道**：载入期迁移（W2-2 别名改写 + MiscInfo 补片段
+  /// 时间窗）都收敛在这里，改写结果经 [store] 回写——换成 Drift 存储后照样生效。
+  /// （W2-7 旧 SP 键搬移属于 SP 存储自身，见 [SharedPreferencesAnkiSettingsStore]。）子类若覆写 [loadSettings]（AnkiDroid 的
   /// legacy deck 迁移）也必须经由本方法取原始串，否则迁移被绕过。返回 null = 从未存过。
   ///
   /// 顺序有意：别名改写只把 `{sasayaki-audio}` 换成 `{sentence-audio}`，不可能凭空
   /// 造出或抹掉 `{document-title}`，故两条迁移互不干扰；但必须先改写再补 MiscInfo，
   /// 否则 `replaceAll` 会作用在已重编码的串上、把后一步的结果覆盖掉。
   @protected
-  Future<String?> readSettingsJson(SharedPreferences prefs) async {
-    String? raw = prefs.getString(settingsKey);
-    if (raw == null) {
-      final String? legacy = prefs.getString(_legacySettingsKey);
-      if (legacy != null) {
-        await prefs.setString(settingsKey, legacy);
-        await prefs.remove(_legacySettingsKey);
-        raw = legacy;
-      }
-    }
+  Future<String?> readSettingsJson(AnkiSettingsStore store) async {
+    String? raw = await store.read();
     if (raw != null && raw.contains(_legacySentenceAudioAlias)) {
       raw = raw.replaceAll(_legacySentenceAudioAlias, '{sentence-audio}');
-      await prefs.setString(settingsKey, raw);
+      await store.write(raw);
     }
     if (raw != null) {
       final String? upgraded = upgradeMiscInfoMapping(raw);
       if (upgraded != null) {
-        await prefs.setString(settingsKey, upgraded);
+        await store.write(upgraded);
         raw = upgraded;
       }
     }
@@ -126,8 +128,7 @@ abstract class BaseAnkiRepository with AnkiNoteComposer {
   }
 
   Future<AnkiSettings> loadSettings() async {
-    final prefs = await SharedPreferences.getInstance();
-    final String? raw = await readSettingsJson(prefs);
+    final String? raw = await readSettingsJson(settingsStore);
     if (raw == null) return const AnkiSettings();
     try {
       return AnkiSettings.fromJson(jsonDecode(raw) as Map<String, dynamic>);
@@ -137,16 +138,8 @@ abstract class BaseAnkiRepository with AnkiNoteComposer {
     }
   }
 
-  Future<void> saveSettings(AnkiSettings settings) async {
-    final prefs = await SharedPreferences.getInstance();
-    final bool saved = await prefs.setString(
-      settingsKey,
-      jsonEncode(settings.toJson()),
-    );
-    if (!saved) {
-      throw StateError('Failed to persist Anki settings.');
-    }
-  }
+  Future<void> saveSettings(AnkiSettings settings) =>
+      settingsStore.write(jsonEncode(settings.toJson()));
 
   Future<AnkiSettings> updateSettings(
     AnkiSettings Function(AnkiSettings) transform,
@@ -164,7 +157,7 @@ abstract class BaseAnkiRepository with AnkiNoteComposer {
     required AnkiMiningContext context,
   });
 
-  /// TODO-270 D：覆盖一张**已存在**的 Hibiki 制卡（[noteId]）的字段，用同一字段
+  /// TODO-270 D：覆盖一张**已存在**的 Fushi 制卡（[noteId]）的字段，用同一字段
   /// 渲染链路从 [rawPayloadJson]+[context] 生成 fields 后按 id 覆盖（不新增卡片、
   /// 不查重）。供「刚制完卡又点 ✓」时真实 update 上一张卡片，而非删旧建新。
   ///
@@ -387,6 +380,14 @@ abstract class BaseAnkiRepository with AnkiNoteComposer {
   /// **默认实现 = 优雅降级**：基类返回 `false`。
   Future<bool> openNoteInAnki(int noteId) async => false;
 
+  /// BUG-3790：已制卡片住在哪（界面据此说「Anki」还是「Fushi 复习」）。
+  MinedNoteHome get minedNoteHome => MinedNoteHome.anki;
+
+  /// [openNoteInAnki] 在本后端是否可能成功。基类默认实现恒 `false`，与之同步默认
+  /// 为 `false`；真实现了按 id 打开的后端覆写为 `true`。为 `false` 时「已存在的
+  /// 卡片」不出「打开」按钮——点下去只能弹「打不开」。
+  bool get canOpenMinedNote => false;
+
   /// BUG-2051：点 ↗「在 Anki 中打开**这个词**已有的卡」。
   ///
   /// 语义是「按词去 Anki 里看」，不是「按我们记下的某个 note id 去看」——后者要求
@@ -496,7 +497,7 @@ abstract class BaseAnkiRepository with AnkiNoteComposer {
   // ── 媒体存储优化（字节级去重，见 anki_media_dedup.dart）────────────────
 
   /// 本后端能否做媒体字节级去重。需要**本机可直读** collection.media +
-  /// 全库检索 + 字段/模板改写；默认 false，仅 AnkiConnect（Anki 与 Hibiki
+  /// 全库检索 + 字段/模板改写；默认 false，仅 AnkiConnect（Anki 与 Fushi
   /// 同机）支持。
   ///
   /// **后端不对称（有意）**：AnkiDroid（`AnkiRepository`）与 AnkiMobile 都不覆写
@@ -553,11 +554,34 @@ abstract class BaseAnkiRepository with AnkiNoteComposer {
   /// 也没有对应端点。这些后端默认 false，UI 据此把入口置灰并说明原因。
   bool get supportsDeckReposition => false;
 
+  /// 制卡后要不要自动重排新卡（「制卡后自动按词频重排」开关与调度器只对它为 true 的后端生效）。
+  ///
+  /// 缺省 = 能重排就要：Anki 出卡只看队列位置，新卡按词频出只能事后改写位置。Fushi 复习
+  /// 覆盖成 false——它出卡时直接按卡上的词频名次排（牌组「新卡顺序」），不需要事后改写。
+  bool get supportsAutoReposition => supportsDeckReposition;
+
   /// 列出 [deckName]（含子卡组、排除筛选牌组）里的全部**新卡**。
   /// 默认实现 = 不支持，抛 [UnsupportedError]；调用前先看
   /// [supportsDeckReposition]。
   Future<List<AnkiCardInfo>> listNewCards(String deckName) async =>
       throw UnsupportedError('This Anki backend cannot list deck cards.');
+
+  /// [deckName] 里此刻全部新卡的 id（写回前重校验「还是不是新卡」用）。
+  ///
+  /// 默认取 [listNewCards] 的 id；读字段代价高的后端（Fushi 复习要物化笔记）覆盖成
+  /// 只读卡片 id 的轻查询——写回前的重校验不需要字段，不该再把整个牌组读一遍。
+  Future<Set<int>> newCardIdsIn(String deckName) async => <int>{
+        for (final AnkiCardInfo c in await listNewCards(deckName)) c.cardId,
+      };
+
+  /// 给已按目标出卡顺序排好的 [ordered] 分配新位置（与 [ordered] 同序、严格递增）。
+  ///
+  /// 默认 = 从 1 起连续编号，与 Anki 自己的「重新定位」一致（AnkiConnect 走这条）。
+  /// 后端可以覆盖成「只移动必须移动的卡」的稀疏方案（Fushi 复习：位置只是排序键、
+  /// 每改一张卡就是一条要同步的修改记录）。
+  List<int> assignNewCardPositions(List<AnkiCardInfo> ordered) => <int>[
+        for (int i = 0; i < ordered.length; i++) i + 1,
+      ];
 
   /// 批量写回新卡位置。默认实现 = 不支持。
   Future<AnkiCardDueWriteResult> setNewCardPositions(

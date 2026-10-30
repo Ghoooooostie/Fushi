@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -14,6 +14,7 @@ import 'package:fushi/src/utils/components/fushi_material_components.dart';
 import 'package:fushi_dictionary/fushi_dictionary.dart';
 
 import '../helpers/test_platform_services.dart';
+import '../helpers/popup_mining_target_overrides.dart';
 
 class PopupTestAppModel extends AppModel {
   PopupTestAppModel() : super(testPlatformServices());
@@ -23,6 +24,12 @@ class PopupTestAppModel extends AppModel {
 
   @override
   double get popupMaxWidth => 400;
+
+  @override
+  double get dictionaryFontSize => 16;
+
+  @override
+  double get appUiScale => 1.0;
 
   @override
   List<String> get enabledAudioSources => const <String>[];
@@ -55,6 +62,7 @@ Widget buildTestApp({
   return ProviderScope(
     overrides: [
       appProvider.overrideWith((ref) => appModel),
+      ...popupMiningTargetTestOverrides(),
     ],
     child: TranslationProvider(
       child: MaterialApp(
@@ -124,7 +132,7 @@ void main() {
     expect(closed, isTrue);
   });
 
-  testWidgets('desktop lookup opens in-app instead of launching hibiki url', (
+  testWidgets('desktop lookup opens in-app instead of launching fushi url', (
     WidgetTester tester,
   ) async {
     final AppModel appModel = AppModel(testPlatformServices());

@@ -302,6 +302,9 @@ class ErrorLogService extends ChangeNotifier
   /// 把它经 FFI 透传给 native；[init] 未跑完（极早期）时返回 `''`，native 视为禁用。
   String get importStepBreadcrumbDir => _appDir?.path ?? '';
 
+  /// 面包屑 / 会话标记所在的应用文档目录；[init] 跑完前为 null。
+  Directory? get appDirectory => _appDir;
+
   void markImportStart(String detail) {
     try {
       _breadcrumbFile?.writeAsStringSync('[${DateTime.now()}] $detail',
@@ -601,6 +604,8 @@ String? localizeAnkiMineError(String? code) {
       return t.anki_error_field_mapping_mismatch;
     case AnkiErrorCode.firstFieldEmpty:
       return t.anki_error_first_field_empty;
+    case AnkiErrorCode.allFieldsEmpty:
+      return t.anki_error_all_fields_empty;
     case AnkiErrorCode.syncClientSignedOut:
       return t.anki_error_sync_signed_out;
     case AnkiErrorCode.syncClientUnavailable:
@@ -641,7 +646,9 @@ String? localizeAnkiMineError(String? code) {
       final String baseMessage = overwrite
           ? t.card_overwritten(deck: deckName)
           : t.card_exported(deck: deckName);
-      final String message = audioWarning != null && audioWarning.isNotEmpty
+      final bool hasAudioWarning =
+          audioWarning != null && audioWarning.isNotEmpty;
+      final String message = hasAudioWarning
           ? '$baseMessage ${t.card_exported_audio_failed(reason: audioWarning)}'
           : baseMessage;
       return (
@@ -650,7 +657,10 @@ String? localizeAnkiMineError(String? code) {
         // 覆盖已有卡片不是新制一张，不计入制卡统计（与新制路径区分）。
         record: !overwrite,
         // TODO-1325 #6：新制与覆写成功都是绿色 added（覆写用 card_overwritten 文案区分）。
-        status: MineToastStatus.added,
+        // 带音频缺失提示的成功是 addedWithWarning：关掉「制卡成功提示」也照样弹。
+        status: hasAudioWarning
+            ? MineToastStatus.addedWithWarning
+            : MineToastStatus.added,
       );
     case MineResult.duplicate:
       return (

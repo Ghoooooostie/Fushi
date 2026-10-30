@@ -95,8 +95,9 @@ function fushiClipSource() {
 // 且随站点改版就会碎）。cid 由服务端用 bvid 现查（`x/web-interface/view`），扩展不必知道它。
 //
 // 两类页面两个 kind，因为**音轨的来路根本不同**：
-//   'bilibili'     — `/video/BV...` 稿件：`x/player/playurl` 匿名即可（未登录也拿得到最高档
-//                    音轨，实测见 `bilibili_clip_miner.dart`），服务端自己解析，原路不动。
+//   'bilibili'     — `/video/BV...` 稿件：`x/player/playurl` 未登录也拿得到最高档音轨，但服务端
+//                    的匿名请求会被 B 站风控 HTTP 412（海外 / 代理出口），所以 background 同样先在
+//                    页面主世界里取（`fushiResolveBilibiliUgcPlayurl`），取不到才由服务端自己解析。
 //   'bilibili-pgc' — `/bangumi/play/ep<id>` 番剧/影视：走 `pgc/player/web/playurl`（epid→cid），
 //                    大会员内容**必须带 SESSDATA**；而该接口的 CORS 只放行
 //                    `https://www.bilibili.com`（实测 `Access-Control-Allow-Origin` 就是这一个
@@ -518,13 +519,33 @@ function fushiFullTrackCueMatching(startMs, endMs) {
   }
   return null;
 }
+// 整轨 key 的语言段：Netflix 同一语言常有普通字幕与 CC / SDH 两条轨，只按语言会互相覆盖——带了
+// trackId（netflix-bridge）就拼成 `lang~trackId`，消费端按第一个 `~` 拆回语言与轨 id。
+function fushiFullTrackLangSegment(msg) {
+  const lang = String(msg.lang || 'und');
+  return msg.trackId ? lang + '~' + String(msg.trackId) : lang;
+}
+// 轨的站点显示名（「English [CC]」）：key → 名字。面板列轨时优先显示它，裸语言段只作兜底。
+const fushiTrackLabels = Object.create(null);
+window.fushiTrackLabels = fushiTrackLabels;
+function fushiOnFullEpisodeCuesFailed(msg) {
+  try {
+    const vid = String(msg.videoId || netflixVideoIdFromPath(location.pathname) || '');
+    const key = vid + '|' + fushiFullTrackLangSegment(msg);
+    if (typeof window.fushiSubtitlePanelOnTrackFailed === 'function') {
+      window.fushiSubtitlePanelOnTrackFailed(key, String(msg.err || ''));
+    }
+  } catch (_) {}
+}
 function fushiOnFullEpisodeCues(msg) {
   try {
     const cues = msg.format === 'ttml' ? parseTtml(msg.text) : parseWebVtt(msg.text);
     if (!cues || !cues.length) return;
     const vid = String(msg.videoId || netflixVideoIdFromPath(location.pathname) || '');
-    const key = vid + '|' + (msg.lang || 'und');
+    const key = vid + '|' + fushiFullTrackLangSegment(msg);
+    if (msg.label) fushiTrackLabels[key] = String(msg.label);
     fushiEpisodeCues[key] = cues;
+    delete fushiLazyTracks[key]; // 占位轨拿到真 cue 就不再是「待加载」
     try {
       console.log('[Fushi][TODO-1219] full-episode cues intercepted:', key, cues.length, 'cues; first:', cues.slice(0, 3));
     } catch (_) {}
@@ -535,8 +556,31 @@ function fushiOnFullEpisodeCues(msg) {
     } catch (_) {}
   } catch (_) {}
 }
+// 播放器状态通道的整份轨清单（netflix-bridge.js harvestPlayerState）：每条文字轨登记成空 cue 的
+// 占位轨（key 与整轨同形 `${videoId}|${lang}~${trackId}`，cue 到了同 key 覆盖），菜单 / 侧边栏
+// 立刻能列出全部轨；用户选中时 fushiRequestLazyTrack 发 {__fushiNf:'fetchTrack'} 让桥真取。
+function fushiOnNetflixTracks(msg) {
+  try {
+    if (!Array.isArray(msg.tracks)) return;
+    const vid = String(msg.videoId || netflixVideoIdFromPath(location.pathname) || '');
+    if (!vid) return;
+    for (const t of msg.tracks) {
+      if (!t || !t.lang || !t.trackId) continue;
+      const key = vid + '|' + fushiFullTrackLangSegment(t);
+      if (t.label) fushiTrackLabels[key] = String(t.label);
+      if (fushiEpisodeCues[key] && fushiEpisodeCues[key].length) continue; // 已有真 cue
+      if (fushiLazyTracks[key]) continue; // 已登记
+      fushiEpisodeCues[key] = [];
+      fushiLazyTracks[key] = true;
+      fushiNotifyPanel(key);
+    }
+  } catch (_) {}
+}
 window.addEventListener('message', (e) => {
-  if (e.source !== window || !e.data || e.data.__fushiNf !== 'cues') return;
+  if (e.source !== window || !e.data) return;
+  if (e.data.__fushiNf === 'cuesFailed') { fushiOnFullEpisodeCuesFailed(e.data); return; }
+  if (e.data.__fushiNf === 'tracks') { fushiOnNetflixTracks(e.data); return; }
+  if (e.data.__fushiNf !== 'cues') return;
   fushiOnFullEpisodeCues(e.data);
 });
 // TODO-1219/1363（勾选面板要刷新 + 面板空列表的根因）：本脚本 document_idle 注入，主世界
@@ -603,6 +647,15 @@ window.fushiRequestLazyTrack = function (key) {
   if (!fushiLazyTracks[key]) return false;
   const sep = key.indexOf('|');
   if (sep < 0) return false;
+  // Netflix 占位轨（lang 段带 `~trackId`）走 netflix-bridge 的按需取轨。
+  const seg = key.slice(sep + 1);
+  const tilde = seg.indexOf('~');
+  if (fushiSite() === 'netflix' && tilde > 0) {
+    try {
+      window.postMessage({ __fushiNf: 'fetchTrack', videoId: key.slice(0, sep), trackId: seg.slice(tilde + 1) }, '/');
+    } catch (_) { return false; }
+    return true;
+  }
   try {
     window.postMessage({ __fushiStream: 'fetchTrack', videoKey: key.slice(0, sep), lang: key.slice(sep + 1) }, '/');
   } catch (_) { return false; }

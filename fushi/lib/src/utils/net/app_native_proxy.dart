@@ -10,6 +10,8 @@ import 'package:fushi_engine/sync/tls/fushi_pinning_http.dart';
 import 'package:fushi_engine/utils/net/app_http.dart';
 import 'package:fushi_engine/media/video/bluray/aacs_media_session.dart'
     show redactAacsRelayUrls;
+import 'package:fushi_engine/media/video/bluray/bluray_source.dart'
+    show mapEdlSources;
 import 'package:fushi_engine/utils/net/app_proxy.dart';
 import 'package:fushi/src/utils/net/hls_relay_normalizer.dart';
 
@@ -101,6 +103,9 @@ void registerTlsNativeOrigin({required String host, required int port}) {
 /// 端口必须显式：`https://h/x`（隐含 443）降成 `http://h/x` 会变成隐含 80，中继就
 /// 查不到登记项。
 String nativePlaybackUri(String uri) {
+  // `edl://` 拼接流（互联 host 的蓝光标题、本地加密盘的解密回环）：逐段改写，
+  // 整串 EDL 不是 URL。非 EDL 原样返回，走下面的单 URL 规则。
+  if (uri.startsWith('edl://')) return mapEdlSources(uri, nativePlaybackUri);
   final Uri? parsed = Uri.tryParse(uri);
   if (parsed == null) return uri;
   if (parsed.isScheme('http')) {
@@ -190,6 +195,61 @@ Future<AppNativeProxy> _liveProxy(
   );
   store(started);
   return started;
+}
+
+/// 中继替 native 取上游时最近一次失败的原因，按 `host:port` 记，最多
+/// [_kRecentUpstreamFailureLimit] 个原点（最旧的先丢）；同一原点后来取成功就清掉。
+///
+/// 为什么要有：native 侧只看得到中继回的 502 / 上游状态码，mpv 报出来的只是一句
+/// `Failed to open http://<host>:443/...`——而且 URL 还是 [nativePlaybackUri] 降成
+/// 明文显式端口后的形态，看起来像「https 被改写成了 http」，把排查带向错误方向
+/// （反馈 VgLO1PVFjj：真实原因是该 CDN 每 20 秒一次连接超时）。真实原因此前只进
+/// 调试日志，随反馈上传的报错日志里没有。[nativeUpstreamFailureFor] 让播放页的
+/// 「打不开」诊断把它带上。
+final Map<String, String> _recentUpstreamFailures = <String, String>{};
+const int _kRecentUpstreamFailureLimit = 32;
+
+void _recordUpstreamFailure(String host, int port, String reason) {
+  final String key = _pinnedOriginKey(host, port);
+  _recentUpstreamFailures.remove(key);
+  _recentUpstreamFailures[key] = reason;
+  while (_recentUpstreamFailures.length > _kRecentUpstreamFailureLimit) {
+    _recentUpstreamFailures.remove(_recentUpstreamFailures.keys.first);
+  }
+}
+
+void _clearUpstreamFailure(String host, int port) {
+  _recentUpstreamFailures.remove(_pinnedOriginKey(host, port));
+}
+
+/// [url]（native 报错里的地址：中继形态的 `http://h:443/…` 或原始 https 都行）所在
+/// 原点最近一次经中继取上游失败的原因（已脱敏）；没有记录返回 null。
+String? nativeUpstreamFailureFor(String url) {
+  final Uri? parsed = Uri.tryParse(url);
+  if (parsed == null || parsed.host.isEmpty) return null;
+  return _recentUpstreamFailures[_pinnedOriginKey(parsed.host, parsed.port)];
+}
+
+@visibleForTesting
+void clearNativeUpstreamFailuresForTesting() => _recentUpstreamFailures.clear();
+
+final RegExp _firstUrl = RegExp(r'https?://\S+');
+
+/// 网络流「打不开」诊断的尾巴：播放器最后一条错误，加上（若错误里带着地址）中继
+/// 对那个原点记下的真实上游原因（见 [nativeUpstreamFailureFor]）。
+String nativeOpenFailureDiagnosis(String? lastPlayerError) {
+  final String base = 'lastPlayerError=${lastPlayerError ?? "<none>"}';
+  final Match? match = lastPlayerError == null
+      ? null
+      : _firstUrl.firstMatch(lastPlayerError);
+  if (match == null) return base;
+  // mpv 的句子以「.」收尾，紧贴在 URL 后面。
+  String url = match.group(0)!;
+  while (url.endsWith('.')) {
+    url = url.substring(0, url.length - 1);
+  }
+  final String? upstream = nativeUpstreamFailureFor(url);
+  return upstream == null ? base : '$base; relayUpstream=$upstream';
 }
 
 /// Proxy environment for a native child. Clear inherited bypass rules because
@@ -367,6 +427,16 @@ class AppNativeProxy {
     final String target = request.method == 'CONNECT'
         ? request.uri.toString()
         : request.requestedUri.replace(query: '', fragment: '').toString();
+    final Uri? origin = request.method == 'CONNECT'
+        ? Uri.tryParse('https://${request.uri}')
+        : request.requestedUri;
+    if (origin != null && origin.host.isNotEmpty) {
+      _recordUpstreamFailure(
+        origin.host,
+        origin.port,
+        redactAppNativeProxySecrets('$error'),
+      );
+    }
     appNativeProxyLogSink(
       redactAppNativeProxySecrets(
         'native proxy: ${request.method} $target -> $error',
@@ -413,6 +483,15 @@ class AppNativeProxy {
     outbound.headers.set(HttpHeaders.acceptEncodingHeader, 'identity');
     await outbound.addStream(request);
     final HttpClientResponse response = await outbound.close();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      _recordUpstreamFailure(
+        uri.host,
+        uri.port,
+        'upstream HTTP ${response.statusCode}',
+      );
+    } else {
+      _clearUpstreamFailure(uri.host, uri.port);
+    }
     request.response.statusCode = response.statusCode;
     _copyHeaders(response.headers, request.response.headers);
     _rewriteRedirectLocation(response.headers, request.response.headers);
@@ -522,6 +601,16 @@ class AppNativeProxy {
           final List<int> body = utf8.encode(rewritten);
           _asWholeEntity(out);
           out.headers.removeAll(HttpHeaders.contentEncodingHeader);
+          // 正文已确认是 HLS 播放列表，就按 RFC 8216 的 mime 回给 native，不沿用上游
+          // 的 Content-Type（BUG-3079）。视频源扩展的 CDN 常把播放列表挂在非 .m3u8
+          // 路径上、回 `text/plain` / `application/octet-stream` / 图片类型；ffmpeg
+          // 的 hls_probe 遇到「扩展名与 mime 都不标准」直接拒认 HLS，libmpv 退到自己
+          // 的 demux_playlist，把每个分片当成独立的播放列表条目逐个播——每条只有一个
+          // 分片长（3～4 秒），进度条就被切成一段一段。
+          out.headers.contentType = ContentType(
+            'application',
+            'vnd.apple.mpegurl',
+          );
           out.contentLength = body.length;
           out.add(body);
           return;

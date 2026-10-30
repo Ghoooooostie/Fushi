@@ -18,19 +18,23 @@ import 'package:drift/drift.dart' show Value;
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_engine/foundation/engine_log.dart';
 import 'package:fushi_engine/media/torrent/anime_download_config.dart';
-import 'package:fushi_engine/media/torrent/builtin_video_resource_providers.dart';
+import 'package:fushi_engine/media/torrent/bt_site_config.dart';
+import 'package:fushi_engine/media/torrent/bt_site_providers.dart';
 import 'package:fushi_engine/media/torrent/torznab_client.dart';
 import 'package:fushi_engine/media/torrent/embedded_torrent_host.dart';
+import 'package:fushi_engine/media/torrent/embedded_torrent_host_client.dart';
+import 'package:fushi_engine/media/torrent/embedded_torrent_host_slot.dart';
+import 'package:fushi_engine/media/torrent/embedded_torrent_worker.dart' show EmbeddedTorrentHostOpenArgs;
 import 'package:fushi_engine/media/torrent/qb_torrent_backend.dart';
 import 'package:fushi_engine/media/torrent/qbittorrent_client.dart';
 import 'package:fushi_engine/media/torrent/torrent_backend.dart';
 import 'package:fushi_engine/media/torrent/video_resource_provider.dart';
 import 'package:fushi_engine/media/video/download/video_download_backend_identity.dart';
 import 'package:fushi_engine/media/video/download/video_download_pipeline_service.dart';
+import 'package:fushi_engine/media/video/download/video_download_subscription_auto_disable.dart';
 import 'package:fushi_engine/media/video/download/video_download_subscription_service.dart';
 import 'package:fushi_engine/media/video/download/video_resource_prefs.dart';
 import 'package:fushi_engine/media/video/download/video_resource_registry.dart';
-import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart';
 import 'package:fushi_engine/sync/downloads/host_download_host.dart';
 import 'package:fushi_engine/utils/net/app_http.dart';
 import 'package:fushi_engine/sync/subscriptions/host_subscription_host.dart';
@@ -89,7 +93,11 @@ class ServerDownloadHost implements HostDownloadHost {
   /// 当前 registry 下可用的 provider id（能力位同源；WebUI 保存索引器后回显用）。
   List<String> get availableResourceProviderIds => (_subscriptions ??= _buildSubscriptionHost()).availableProviderIds;
   TorrentBackend? _backend;
-  EmbeddedTorrentHost? _embedded;
+  /// 内置宿主（BUG-3577：跑在专用工作 isolate，本 isolate 只持客户端——服务端的
+  /// HTTP 事件循环同样不能被 libtorrent 的同步往返卡住）。槽位负责懒建去重（并发
+  /// 解析后端时只起一个工作 isolate，不抢同一个监听端口），并在工作 isolate 意外
+  /// 退出后摘下失效客户端，下一个任务解析后端时重建。
+  final EmbeddedTorrentHostSlot _embedded = EmbeddedTorrentHostSlot();
   int? _sourceId;
 
   /// 启动时解析定的后端：`embedded` / `qbittorrent` / null（都不可用）。
@@ -165,8 +173,8 @@ class ServerDownloadHost implements HostDownloadHost {
     }
     await downloadRoot.create(recursive: true);
     _sourceId = await _ensureDownloadSource();
-    // 资源索引器：与 app 同一张内置表 + 同一个 Torznab 偏好键（同一张 preferences 表），
-    // 停用清单同源。订阅服务的在场校验看它，客户端搜到的 provider id 才对得上。
+    // 资源索引器：与 app 同一份用户 BT 站清单 + 同一个 Torznab 偏好键（同一张
+    // preferences 表）。订阅服务的在场校验看它，客户端搜到的 provider id 才对得上。
     _startPipeline(_buildRegistry());
     engineLog.logDiagnostic(
       'ServerDownloadHost',
@@ -198,6 +206,9 @@ class ServerDownloadHost implements HostDownloadHost {
       resourceRegistry: registry,
       enqueue: pipeline.enqueue,
       workerId: 'fushi-server-sub-${identity.deviceId}',
+      // 与 app 读同一个设置：追更订阅久无新集自动停用。
+      autoDisableAfterDays: () =>
+          readVideoDownloadSubscriptionAutoDisableDays(prefs),
     );
     subscriptions.start();
     _subscriptionService = subscriptions;
@@ -206,7 +217,7 @@ class ServerDownloadHost implements HostDownloadHost {
 
   Future<void> _reloadOps = Future<void>.value();
 
-  /// 资源索引器配置（Torznab 清单 / 内置源停用清单）改完后调：按偏好重建 registry，
+  /// 资源索引器配置（Torznab 清单 / 用户 BT 站清单）改完后调：按偏好重建 registry，
   /// 对正在跑的 host 立即生效，与 app `reloadVideoDownloadPipelineRuntime` 同一形态
   /// ——registry 是构造期快照，管线与订阅服务都持有它，只能整套换新。
   ///
@@ -242,47 +253,84 @@ class ServerDownloadHost implements HostDownloadHost {
     _startPipeline(_buildRegistry());
     if (oldRegistry != null) unawaited(oldPipeline.stop().whenComplete(oldRegistry.close));
     engineLog.logDiagnostic('ServerDownloadHost', 'resource indexers reloaded: ${availableResourceProviderIds.join(', ')}');
+    // 因「没有可用 BT 站」暂停的订阅：来源变了就唤醒重查（不 await——重查要联网搜，
+    // 不该拖住保存请求；新服务被下一次重载 dispose 时它自己收手）。
+    final VideoDownloadSubscriptionService? fresh = _subscriptionService;
+    if (fresh != null) {
+      unawaited(fresh.wakeBtSiteMissingSubscriptions().catchError(
+            (Object e, StackTrace st) => engineLog.log('ServerDownloadHost.wakeBtSiteMissingSubscriptions', e, st),
+          ));
+    }
   }
 
   /// 内置引擎 session 懒建（幂等）；库/端口失败 → null，调用方报 ActionRequired。
-  Future<EmbeddedTorrentHost?> _ensureEmbedded() async {
-    final EmbeddedTorrentHost? existing = _embedded;
-    if (existing != null) return existing;
+  Future<EmbeddedTorrentHostClient?> _ensureEmbedded() => _embedded.ensure(
+        _openEmbedded,
+        onLost: (EmbeddedTorrentHostClient _) => engineLog.logDiagnostic(
+          'ServerDownloadHost',
+          'embedded torrent worker exited unexpectedly; rebuilding on next job',
+        ),
+      );
+
+  Future<EmbeddedTorrentHostClient?> _openEmbedded() async {
     await paths.torrentResume.create(recursive: true);
     // 计划集合 = video_download_jobs 里仍活着的 embedded 任务；resume 目录只是它的镜像。
     final Set<String> restoreIds = await loadEmbeddedTorrentResumeIds(db);
-    final EmbeddedTorrentHost? host = EmbeddedTorrentHost.open(
+    final EmbeddedTorrentHostClient? host = await EmbeddedTorrentHostClient.open(EmbeddedTorrentHostOpenArgs(
       libraryPath: _torrentLibraryPath,
       baseSavePath: downloadRoot.path,
       resumeDir: paths.torrentResume.path,
       restoreIds: restoreIds,
       listenInterfaces: config.torrentListen,
-    );
+    ));
     if (host == null) {
       engineLog.logDiagnostic('ServerDownloadHost', 'embedded torrent session failed to open');
       return null;
     }
-    host.applySessionSettings(_qbConfig);
+    host.post('applySessionSettings', host.applySessionSettings(_qbConfig));
     engineLog.logDiagnostic('ServerDownloadHost', 'embedded libtorrent ${host.libtorrentVersion} on ${config.torrentListen}');
-    return _embedded = host;
+    return host;
   }
 
+  /// 按偏好建 registry：用户 BT 站（Fushi 不内置任何站点）+ Torznab。
+  ///
+  /// 保持同步：订阅面的 getter（[subscriptions] / [availableResourceProviderIds]）在
+  /// 后端没起来时也要现取一份 registry。逐站点用引擎的单站工厂
+  /// `createBtSiteResourceProvider`（与 `createBtSiteResourceProviders` 同一判据、同一
+  /// 优先级编号），client 只给真正注册的站点建，所有权交给 provider（registry.close 关）。
   VideoResourceRegistry _buildRegistry() {
     final List<TorznabIndexerConfig> torznab = readTorznabIndexerConfigs(
       prefs,
       onDecodeError: (Object e, StackTrace st) =>
           engineLog.log('ServerDownloadHost.torznabConfig', e, st),
     );
-    return VideoResourceRegistry(
-      <VideoResourceProvider>[
-        for (final BuiltinVideoResourceProviderSpec spec in kBuiltinVideoResourceProviderSpecs)
-          spec.create(createAppHttpIoClient()),
-        // 没有启用的索引器就不注册（判据与 app 同一处，见 torznabHasEnabledIndexer，BUG-2818）。
-        if (torznabHasEnabledIndexer(torznab))
-          TorznabClient(indexers: torznab, client: createAppHttpIoClient(), closesClient: true),
-      ],
-      disabledProviderIds: readVideoResourceDisabledSourceIds(prefs),
+    final List<BtSiteConfig> sites = readBtSiteConfigs(
+      prefs,
+      onDecodeError: (Object e, StackTrace st) => engineLog.log('ServerDownloadHost.btSiteConfig', e, st),
     );
+    final List<VideoResourceProvider> btProviders = <VideoResourceProvider>[];
+    int index = 0;
+    for (final BtSiteConfig site in sites) {
+      if (!site.enabled || site.effectiveVideoCategories.isEmpty) continue;
+      final VideoResourceProvider? provider = createBtSiteResourceProvider(site, createAppHttpIoClient(), index: index++);
+      if (provider != null) btProviders.add(provider);
+    }
+    return VideoResourceRegistry(<VideoResourceProvider>[
+      ...btProviders,
+      // 没有启用的索引器就不注册（判据与 app 同一处，见 torznabHasEnabledIndexer，BUG-2818）。
+      if (torznabHasEnabledIndexer(torznab))
+        TorznabClient(indexers: torznab, client: createAppHttpIoClient(), closesClient: true),
+    ]);
+  }
+
+  /// 当前 registry 里实际注册的用户 BT 站 id（启用且对至少一个视频域生效的站点；
+  /// WebUI 标「生效中」用）。
+  List<String> get activeBtSiteIds {
+    final VideoResourceRegistry registry = (_subscriptions ??= _buildSubscriptionHost()).registry;
+    return <String>[
+      for (final VideoResourceProvider provider in registry.providers)
+        if (isBtSiteProviderId(provider.id) && provider.id.contains(':')) provider.id.substring(provider.id.indexOf(':') + 1),
+    ];
   }
 
   PipelineSubscriptionHost _buildSubscriptionHost() => PipelineSubscriptionHost(
@@ -309,10 +357,9 @@ class ServerDownloadHost implements HostDownloadHost {
     _registry = null;
     _backend?.close();
     _backend = null;
-    final EmbeddedTorrentHost? embedded = _embedded;
-    _embedded = null;
+    final EmbeddedTorrentHostClient? embedded = await _embedded.take();
     if (embedded != null) {
-      embedded.dispose(keepIds: await loadEmbeddedTorrentResumeIds(db));
+      await embedded.dispose(keepIds: await loadEmbeddedTorrentResumeIds(db));
     }
   }
 
@@ -345,7 +392,7 @@ class ServerDownloadHost implements HostDownloadHost {
     if (override != null) return VideoDownloadBackendBinding(backend: override, identity: _identity());
     switch (_resolvedBackend) {
       case ServerConfig.torrentEngineEmbedded:
-        final EmbeddedTorrentHost? host = await _ensureEmbedded();
+        final EmbeddedTorrentHostClient? host = await _ensureEmbedded();
         if (host == null) {
           throw const VideoDownloadPipelineActionRequired('embedded torrent engine unavailable on this host');
         }
@@ -373,14 +420,10 @@ class ServerDownloadHost implements HostDownloadHost {
   Future<List<VideoDownloadJobRow>> listJobs() => db.getVideoDownloadJobs();
 
   @override
-  Future<String> addMagnet({
-    required String magnetUri,
-    required String title,
-    String mediaKind = 'movie',
-    String? discoveryKind,
-  }) async {
+  Future<String> add(HostDownloadAddRequest request) async {
     // 能力位 `kinds` 之外的域（游戏，或不认识的值）：客户端照规矩不会投，投了按 400 拒。
     // 判据与能力位同一个集合，两边不会各说各话。
+    final String? discoveryKind = request.discoveryKind;
     DiscoveryMediaKind? kind;
     if (discoveryKind != null) {
       if (!kServerDownloadDiscoveryKinds.contains(discoveryKind)) {
@@ -393,15 +436,18 @@ class ServerDownloadHost implements HostDownloadHost {
     if (pipeline == null || sourceId == null) {
       throw const VideoDownloadPipelineActionRequired('downloads are not configured on this host');
     }
-    return pipeline.enqueueManual(VideoDownloadManualEnqueueRequest(
-      title: title,
+    return pipeline.enqueueManual(request.toEnqueueRequest(
       backendTarget: VideoDownloadBackendTarget(identity: _identity(), category: _qbConfig.category),
-      magnetUri: magnetUri,
       discoveryKind: kind,
-      mediaKind: mediaKind == 'tv' ? VideoMetadataMediaKind.tv : VideoMetadataMediaKind.movie,
       // 非视频任务不进受管视频来源（文件留在下载目录原地，整包按域入库）。
       targetSourceId: kind == null ? sourceId : null,
     ));
+  }
+
+  @override
+  Future<List<VideoDownloadJobSubtitleRow>?> listJobSubtitles(String jobId) async {
+    if (await db.getVideoDownloadJob(jobId) == null) return null;
+    return db.getVideoDownloadJobSubtitles(jobId);
   }
 
   VideoDownloadPipelineService get _requirePipeline =>
@@ -414,8 +460,10 @@ class ServerDownloadHost implements HostDownloadHost {
   Future<void> retryJob(String jobId) => _requirePipeline.retryJob(jobId);
 
   @override
-  Future<void> deleteJob(String jobId) =>
-      _requirePipeline.deleteJob(jobId, deleteFiles: true);
+  Future<void> deleteJob(String jobId, {bool? deleteFiles}) =>
+      // [deleteFiles] 是对端的显式选择（BUG-3437），按字面执行；缺省（旧客户端 /
+      // admin WebUI 不带参数）保持历史行为：整台机器为对端服务，连下载数据一起删。
+      _requirePipeline.deleteJob(jobId, deleteFiles: deleteFiles ?? true);
 }
 
 /// 见 [ServerDownloadHost.subscriptions]：每次调用转给当前那一份订阅面。

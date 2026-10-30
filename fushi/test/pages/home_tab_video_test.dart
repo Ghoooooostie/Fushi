@@ -18,13 +18,15 @@ ModuleVisibility _visibility({
   bool lookup = true,
   bool browserExtension = false,
 }) => ModuleVisibility(<ModuleId>{
+  // 首页 2026-10-09 起是可关模块；这些用例的语义是「首页开着」。
+  ModuleId.home,
   if (books) ModuleId.books,
   if (manga) ModuleId.manga,
   if (video) ModuleId.video,
   if (games) ModuleId.games,
   if (downloads) ModuleId.browse,
   if (lookup) ModuleId.lookup,
-  if (browserExtension) ModuleId.browserExtension,
+  if (browserExtension) ModuleId.web,
 });
 
 /// 锁定首页顶层 tab 顺序与「实验视频」开关的条件插入（用户需求：视频 tab 放在

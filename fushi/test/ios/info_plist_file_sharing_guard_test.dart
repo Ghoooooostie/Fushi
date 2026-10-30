@@ -1,0 +1,58 @@
+import 'dart:io';
+
+import 'package:flutter_test/flutter_test.dart';
+import 'package:fushi/src/storage/app_paths.dart';
+
+/// iOS 刻意**不开**「文件」App 共享（PR #2298 审查，2026-10-17）。
+///
+/// iOS 没有「只共享 Documents 的某个子目录」的办法：`UIFileSharingEnabled` /
+/// `LSSupportsOpeningDocumentsInPlace` 一开就是整份 Documents——书正文、有声书、视频、词典资源、
+/// 卡片来源回写草稿、未脱敏的错误日志全部可见、可被用户删改（删改让库条目指向丢失的文件）。
+/// 复习数据的「带走」需求走「同步与历史」页的 `.fushisrs` 导出（桌面另存为 / 移动端系统分享）与导入
+/// （同步 v2 取代了旧的定时备份页，docs/specs/2026-10-25-srs-sync-v2-design.md §10.4），不靠暴露 Documents。
+///
+/// 另外钉住「数据库目录 = support 根」：哪怕将来有人重新打开共享，数据库也不能在 Documents 里。
+void main() {
+  // Tests run with CWD = `fushi/`.
+  final String plist = File('ios/Runner/Info.plist').readAsStringSync();
+
+  // 只看真正生效的 <key>，注释里提到键名不算。
+  final String plistNoComments = plist.replaceAll(
+    RegExp(r'<!--.*?-->', dotAll: true),
+    '',
+  );
+  bool hasKey(String key) => plistNoComments.contains('<key>$key</key>');
+
+  test('Info.plist 不开「文件」App 共享（两个键都不许出现）', () {
+    expect(hasKey('UIFileSharingEnabled'), isFalse);
+    expect(hasKey('LSSupportsOpeningDocumentsInPlace'), isFalse);
+    // 自检：去注释后确实还剩别的键（防止正则吃光整份文件让上面两条恒真）。
+    expect(hasKey('ITSAppUsesNonExemptEncryption'), isTrue);
+  });
+
+  test('同步与历史页保留「导出 .fushisrs（另存为 / 分享）」与「导入」两条带走 / 带回路径', () {
+    final String page = File(
+      'lib/src/pages/implementations/srs/srs_history_page.dart',
+    ).readAsStringSync();
+    expect(page, contains('FushiShare.shareFiles('));
+    expect(page, contains('pickSystemFilePath('));
+    expect(page, contains("ValueKey<String>('srs_timeline_export')"));
+    expect(page, contains("ValueKey<String>('srs_timeline_import')"));
+  });
+
+  test('复习备份目录在 documents 根下、并随数据根迁移', () {
+    expect(AppPaths.fushiOwnedDocumentsEntries, contains('srs_backups'));
+    final String paths = File(
+      'lib/src/storage/app_paths.dart',
+    ).readAsStringSync();
+    expect(paths, contains("documentsSubdirectory('srs_backups')"));
+  });
+
+  test('数据库目录是 support 根（不在会被「文件」App 共享的 Documents 里）', () {
+    final String app = File('lib/src/models/app_model.dart').readAsStringSync();
+    expect(
+      RegExp(r'_databaseDirectory\s*=\s*_appPaths\.supportRoot').hasMatch(app),
+      isTrue,
+    );
+  });
+}

@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:drift/drift.dart' hide isNull;
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/lookup/effective_lookup_size.dart';
@@ -106,7 +106,7 @@ void main() {
     late Directory pathProviderDir;
     setUpAll(() {
       pathProviderDir =
-          Directory.systemTemp.createTempSync('hibiki_path_provider');
+          Directory.systemTemp.createTempSync('fushi_path_provider');
       binding.defaultBinaryMessenger.setMockMethodCallHandler(
         const MethodChannel('plugins.flutter.io/path_provider'),
         (MethodCall call) async => pathProviderDir.path,
@@ -162,8 +162,8 @@ void main() {
 
     testWidgets('向右下拖动放大 → 偏好宽/高都增大', (WidgetTester tester) async {
       await pumpLayer(tester);
-      expect(appModel.popupMaxWidth, appModel.defaultPopupMaxWidth); // 400
-      expect(appModel.popupMaxHeight, appModel.defaultPopupMaxHeight); // 360
+      expect(appModel.popupMaxWidth, appModel.defaultPopupMaxWidth);
+      expect(appModel.popupMaxHeight, appModel.defaultPopupMaxHeight);
 
       await tester.drag(
         find.byKey(DictionaryPopupLayer.resizeGripKey),
@@ -171,8 +171,8 @@ void main() {
       );
       await tester.pump();
 
-      expect(appModel.popupMaxWidth, greaterThan(400));
-      expect(appModel.popupMaxHeight, greaterThan(360));
+      expect(appModel.popupMaxWidth, greaterThan(appModel.defaultPopupMaxWidth));
+      expect(appModel.popupMaxHeight, greaterThan(appModel.defaultPopupMaxHeight));
       // 不超上界。
       expect(appModel.popupMaxWidth, lessThanOrEqualTo(kLookupPopupMaxWidth));
       expect(appModel.popupMaxHeight, lessThanOrEqualTo(kLookupPopupMaxHeight));

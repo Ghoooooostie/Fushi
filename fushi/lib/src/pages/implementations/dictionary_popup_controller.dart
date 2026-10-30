@@ -23,6 +23,28 @@ import 'package:fushi/src/shortcuts/dictionary_popup_gamepad.dart';
 final DictionarySearchResult kPopupSearchingPlaceholderResult =
     DictionarySearchResult(searchTerm: '');
 
+/// 宿主注入弹窗页 `window.lookupPending` 的**唯一派生点**（popup.js 只在它为 true 且
+/// 文档可见时，150ms 后插入循环加载动画）。
+///
+/// 「占位 / 空闲」与「查询进行中」是两件事：热槽 seed、关栈复位、停驻 realm 挂的都是
+/// [kPopupSearchingPlaceholderResult]，但那是**空闲**——旧实现按「结果是占位单例」推
+/// pending=true，停驻在屏外的热槽页里加载动画就无限循环（Windows WebView2 停驻仍
+/// `IsVisible(true)`、文档仍 visible，纹理合成持续出帧）。所以 pending 只由查询状态与
+/// 层可见性决定，与结果对象身份无关：
+/// - [layerVisible]：这一层当前真的画在屏上（非停驻、未被对话框挪到屏外）；
+/// - [isSearching]：这一层确实有一次查询在进行中（[DictionaryPopupEntry.isSearching]）；
+/// - 还没有可渲染内容——分页 load-more 期间 `isSearching` 也为 true，但页面已有词条，
+///   此时翻 pending 只会触发一次无意义的全量重渲染（滚回顶）。
+bool popupLookupPending({
+  required bool layerVisible,
+  required bool isSearching,
+  required DictionarySearchResult? result,
+}) {
+  if (!layerVisible || !isSearching) return false;
+  return result == null ||
+      (result.entries.isEmpty && result.kanjiResults.isEmpty);
+}
+
 /// 弹窗**原地跳转**历史里的一页（对齐 Hoshi Reader iOS `popup.js` 的
 /// `backStack/forwardStack` 快照：条目 + 滚动位）。
 ///
@@ -39,15 +61,11 @@ class DictionaryPopupHistoryPage {
     required this.result,
     required this.allLoaded,
     required this.scrollTop,
-    this.lookupSentence,
   });
 
   final String searchTerm;
   final DictionarySearchResult? result;
   final bool allLoaded;
-
-  /// 该页的词是在哪句话里查的（见 [DictionaryPopupEntry.lookupSentence]）。
-  final String? lookupSentence;
 
   /// 离开该页时弹窗内容的 `scrollTop`（CSS px，WebView 局部）；回来时恢复。
   final double scrollTop;
@@ -70,17 +88,6 @@ class DictionaryPopupEntry {
   Rect selectionRect;
   DictionarySearchResult? result;
 
-  /// 本层的词是在哪句话里查的；null = 没有可信的句子。只有从正文（阅读器 / 漫画 /
-  /// PDF 的句子）直接查的那一层才有——在释义里再点词叠出的子层、原地跳到的词头 /
-  /// 交叉引用都不在那句话里，拿外层句子去问「这句里是什么意思」只会得到错答案。
-  /// 换词时由宿主写（[DictionaryPopupController] 的原地跳转清空、历史页随页恢复）。
-  String? lookupSentence;
-
-  /// 非 null 当且仅当当前 [result] 只是这一份的**重排**（同一批词条换顺序，见
-  /// [DictionaryPopupController.reorderResult]）。弹窗 WebView 据此只挪已渲染的卡片，
-  /// 保住滚动位、已选释义与句子上下文镜像；任何换内容的写入都清空它。
-  DictionarySearchResult? reorderBase;
-
   /// 该层是否被绘制/可交互。常驻热槽在两次查词之间 `visible=false` 隐身，
   /// 但 WebView 仍挂载预热；一次查词把它翻为可见。
   bool visible;
@@ -102,15 +109,60 @@ class DictionaryPopupEntry {
   /// 都重新判定，不跨查词沿用。
   Duration? searchPlaceholderShownFor;
 
+  /// 本层的入场淡入是否已走完、满不透明地画在屏上（隐藏即复位 false）。由
+  /// `parkedPopupLayer` 的 `onEntranceSettled` 回报、宿主写入。
+  ///
+  /// 只有满足它的层才进更下层的 `occluders`（`PopupOccluderClip` 把下层被盖住的部分
+  /// 整块裁掉）。反馈 iZupbhhdNV：曾按 [visible] 判，上层一翻可见、下层同一帧就被挖洞，
+  /// 而上层此时正从透明度 0 淡入——那 200ms 里洞口什么都不挡，视频画面直接透出来
+  /// （「视频查词框内出现播放画面，很短的一下，次级查词才有」）。
+  bool entranceSettled = false;
+
   /// 该层是否正在（增量/分页）搜索中。
   bool isSearching = false;
+
+  /// 按控制器状态，本层页面此刻应收到的 `window.lookupPending`（见
+  /// [popupLookupPending]）。宿主若还有额外的屏外停靠门（对话框期间），实际注入值由
+  /// `parkedPopupLayer` 的最终可见性再收紧一次，派生函数仍是同一个。
+  bool get lookupPending => popupLookupPending(
+        layerVisible: visible,
+        isSearching: isSearching,
+        result: result,
+      );
 
   /// 是否已无更多结果可加载（分页到底）。
   bool allLoaded;
 
   /// BUG-1651：本层按 DOM 内容测量得到的外壳总高度（Flutter 逻辑像素）。null 表示
   /// 尚未测量，先按用户最大高度布局；每次新顶层查词重置，增量结果则在当前高度上伸缩。
+  ///
+  /// 宿主改它一律走 [DictionaryPopupController.setAutoFitHeight]：那里 notify，
+  /// 监听 controller 的那一层就地重建，不再整页 setState（每次渲染信号两次）。
   double? autoFitHeight;
+
+  /// 本层「查词会话」代次。热槽复用 / 关栈复位 / 原地跳转换页都**不换 entry 身份**，
+  /// 只靠 `entries.contains(entry)` 判不出「这条 entry 已经换成别的词了」——远程查词
+  /// 真异步时，慢回来的旧词结果会灌进新词那一层。发起异步查询前记下它，结果回来用
+  /// [DictionaryPopupController.isCurrentLookup] 核对。只由 controller 递增。
+  int get lookupGeneration => _lookupGeneration;
+  int _lookupGeneration = 0;
+
+  /// 查询已结束、且没有任何可渲染结果（无词条也无汉字卡）。与
+  /// `DictionaryPopupLayer` 画「未找到」的判据同口径：搜索期占位单例不算空。
+  bool get isRealEmptyResult {
+    final DictionarySearchResult? r = result;
+    return !isSearching &&
+        r != null &&
+        !identical(r, kPopupSearchingPlaceholderResult) &&
+        r.entries.isEmpty &&
+        r.kanjiResults.isEmpty;
+  }
+
+  /// 宿主排版用的外壳高度：真实空结果收成 [emptyHeight]（「未找到」占位不需要
+  /// 一整块最大高度的面板，且这条路径没有 WebView 内容测量可依），否则按
+  /// [autoFitHeight]。
+  double? layoutAutoFitHeight({required double emptyHeight}) =>
+      isRealEmptyResult ? emptyHeight : autoFitHeight;
 
   /// 原地跳转的后退 / 前进栈（栈顶在末尾）。只由 [DictionaryPopupController]
   /// 写；随本层一起消亡（关层 / 热槽复位 / 顶层新查词都清空，不跨查词会话）。
@@ -242,7 +294,11 @@ class DictionaryPopupController extends ChangeNotifier {
   /// 冷的。现在被裁掉的嵌套层把 WebView 键停到这里，宿主继续在屏外挂着它，下一条嵌套
   /// 层直接接管。上限 1：绝大多数嵌套只有两层，多停一个 realm 就多一份 WebView 进程
   /// 内存；更深层次仍冷建。低内存模式不停驻（与热槽同一策略）。
-  static const int kMaxParkedRealms = 1;
+  ///
+  /// P2-G（2026-10-20）：上限 1 → 2。上限 1 时第三层起每次都冷建（约 300KB 内联
+  /// HTML/CSS/JS 解析 + 等 onLoadStop + 全量静态段），而「词条里点词再点词」三层
+  /// 是常见操作。多停一个 realm 换掉这次冷建；低内存模式仍一个都不停（见 [_retireEntries]）。
+  static const int kMaxParkedRealms = 2;
 
   final List<GlobalKey<DictionaryPopupWebViewState>> _parkedRealms =
       <GlobalKey<DictionaryPopupWebViewState>>[];
@@ -303,6 +359,15 @@ class DictionaryPopupController extends ChangeNotifier {
 
   bool get hasVisiblePopup =>
       _entries.any((DictionaryPopupEntry e) => e.visible);
+
+  /// BUG-3652 续：[entry] 这一层此刻是否仍在屏上——仍在栈里（没被关 / 清栈）且未
+  /// 停驻（常驻热槽在两次查词之间 `visible=false` 隐身）。读的是模型而不是已建好的
+  /// widget 树：用户刚关掉弹窗、重建帧还没跑时，制卡回包看到的也是「已不在」。
+  ///
+  /// 对话框期间宿主把弹窗挪到屏外（`_popupHidingDialogDepth`）**不算**不在：那是同一
+  /// 次查词，对话框一关它就回来，失败原因仍该由它就地说。
+  bool isEntryOnScreen(DictionaryPopupEntry entry) =>
+      entry.visible && _entries.contains(entry);
 
   /// 最顶层**可见**条目的下标，无可见层返回 -1（常驻隐藏热槽不算）。
   int get lastVisibleIndex {
@@ -404,14 +469,36 @@ class DictionaryPopupController extends ChangeNotifier {
       ..searchTerm = ''
       ..selectionRect = Rect.zero
       ..result = kPopupSearchingPlaceholderResult
-      ..reorderBase = null
-      ..lookupSentence = null
       ..visible = false
       ..revealOnRender = false
       ..isSearching = false
       ..allLoaded = false;
     e.autoFitHeight = null;
+    _bumpLookupGeneration(e);
     _clearHistory(e);
+  }
+
+  /// [e] 换成一个新的查词会话：代次 +1，在途的旧查询回来后 [isCurrentLookup] 落 false。
+  void _bumpLookupGeneration(DictionaryPopupEntry e) {
+    e._lookupGeneration++;
+  }
+
+  /// [e] 仍在栈内、且仍是发起查询时（代次 [generation]）的那一次查词会话。
+  ///
+  /// 异步查词结果回填前必须过这道门：热槽复用时新旧查词是**同一个** entry，只核
+  /// `entries.contains` 会让慢回来的旧结果覆盖新词。
+  bool isCurrentLookup(DictionaryPopupEntry e, int generation) =>
+      e._lookupGeneration == generation && _entries.contains(e);
+
+  /// 写入 [e] 按内容测得的外壳高度并通知监听者（P1-D）。与旧值相差不足 1 逻辑像素、
+  /// 或 [e] 已不在栈内时 no-op——不白白重建。返回是否真的改了。
+  bool setAutoFitHeight(DictionaryPopupEntry e, double height) {
+    if (!_entries.contains(e)) return false;
+    final double? current = e.autoFitHeight;
+    if (current != null && (current - height).abs() < 1) return false;
+    e.autoFitHeight = height;
+    notifyListeners();
+    return true;
   }
 
   /// 清掉 [e] 的原地跳转历史与待恢复滚动位。所有「本层换成一个新查词会话」的路径
@@ -459,13 +546,12 @@ class DictionaryPopupController extends ChangeNotifier {
         ..searchTerm = term
         ..selectionRect = rect
         ..result = initialResult
-        ..reorderBase = null
-        ..lookupSentence = null
         ..allLoaded = false
         ..autoFitHeight = null
         ..isSearching = true
         ..revealOnRender = false
         ..visible = visible;
+      _bumpLookupGeneration(e);
       _clearHistory(e);
     } else {
       if (replaceStack) {
@@ -569,28 +655,11 @@ class DictionaryPopupController extends ChangeNotifier {
   }) {
     e
       ..result = result
-      ..reorderBase = null
       ..allLoaded = allLoaded
       ..isSearching = false
       // 新结果 / load-more 都从当前滚动位出发；只有历史页回退才带恢复位
       //（[goBack] / [goForward] 自己设）。
       ..restoreScrollTop = null;
-    notifyListeners();
-  }
-
-  /// 把 [e] 的结果换成 [reordered]——它必须只是当前结果的**重排**（同一批词条换了
-  /// 顺序，如查词「按句意挑词条」把 AI 选中的词头挪到最前）。与 [fillResult] 的区别：
-  /// 记下 [DictionaryPopupEntry.reorderBase]，弹窗 WebView 据此只挪已渲染的卡片
-  /// （popup.js `fushiReorderPopupEntries`），不全量重渲染——全量会滚回顶、清已选
-  /// 释义、把句子上下文镜像归 0，而宿主的制卡草稿并没有清（BUG-297 型错位）。
-  /// 滚动位、分页状态、句子都不动。
-  void reorderResult(DictionaryPopupEntry e, DictionarySearchResult reordered) {
-    if (!_entries.contains(e)) return;
-    final DictionarySearchResult? base = e.result;
-    if (base == null || identical(base, reordered)) return;
-    e
-      ..result = reordered
-      ..reorderBase = base;
     notifyListeners();
   }
 
@@ -603,7 +672,6 @@ class DictionaryPopupController extends ChangeNotifier {
       result: e.result,
       allLoaded: e.allLoaded,
       scrollTop: scrollTop,
-      lookupSentence: e.lookupSentence,
     );
   }
 
@@ -615,11 +683,11 @@ class DictionaryPopupController extends ChangeNotifier {
     e
       ..searchTerm = page.searchTerm
       ..result = page.result
-      ..reorderBase = null
-      ..lookupSentence = page.lookupSentence
       ..allLoaded = page.allLoaded
       ..isSearching = false
       ..restoreScrollTop = restoreScrollTop;
+    // 换页 = 换查词会话：本层在途的 load-more 等旧词查询回来后一律作废。
+    _bumpLookupGeneration(e);
     // 弹窗不动：selectionRect / autoFitHeight 都保留。高度由新内容的
     // onContentMetrics 再伸缩，先重置会让外壳先跳到最大高再收回来。
   }
@@ -708,7 +776,10 @@ class DictionaryPopupController extends ChangeNotifier {
   /// 零跳变。
   void reanchorEntry(DictionaryPopupEntry e, Rect rect) {
     if (!_entries.contains(e)) return;
-    if (!e.visible && e.isWarmSlot) return;
+    // 隐身且**没被任何查词认领**的热槽才不动：P1-C 起热槽命中也先挂起
+    // （[markPendingReveal]，`revealOnRender=true`）等首条渲染信号再翻可见，这段
+    // 窗口里高亮 eval 回来的重锚必须落地，翻可见时才一次到位。
+    if (!e.visible && e.isWarmSlot && !e.revealOnRender) return;
     if (e.selectionRect == rect) return;
     e.selectionRect = rect;
     notifyListeners();

@@ -1,6 +1,6 @@
 // TODO-817 M1a / TODO-1274 来源库文件系统抽象。
 //
-// 网络/本地来源库（local / sftp / ftp / webdav / alist transport，见 hibiki_core
+// 网络/本地来源库（local / sftp / ftp / webdav / alist transport，见 fushi_core
 // MediaSources.transport）共用一套扫描契约：列目录、找同名 sidecar、读文本、
 // 把网络文件落到本地临时盘。M1b 扫描器据此实现 local，TODO-1274 接入 SFTP/FTP/WebDAV。
 //
@@ -27,6 +27,8 @@ import 'package:ftpconnect/ftpconnect.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
 
+import 'package:fushi_engine/media/source_library/book_library_prune.dart'
+    show sourceContentFingerprint;
 import 'package:fushi_engine/media/video/external_video.dart'
     show sourceEntryBasename;
 import 'package:fushi_engine/utils/net/app_http.dart';
@@ -45,6 +47,8 @@ class SourceFileEntry {
     required this.path,
     required this.isDirectory,
     this.sizeBytes,
+    this.modifiedAt,
+    this.etag,
   });
 
   /// 条目 basename（不含父目录）。
@@ -59,6 +63,21 @@ class SourceFileEntry {
   /// 文件字节大小；目录或不可知时为 null。本地传输恒为 null（列目录不逐文件
   /// stat，见 [LocalSourceFileSystem.listFiles]）；远端传输由列目录响应顺带给出。
   final int? sizeBytes;
+
+  /// 修改时刻（UTC 毫秒），远端列目录响应顺带给出时才有（SFTP mtime / FTP MLSD·LIST
+  /// 时间 / WebDAV `getlastmodified` / AList `modified`）；本地传输恒为 null。
+  final int? modifiedAt;
+
+  /// WebDAV `getetag`（内容一变就必须变，RFC 4918 §15.6）；其它传输为 null。
+  final String? etag;
+
+  /// 远端条目的内容指纹（[sourceContentFingerprint]：ETag 优先，否则大小 + 修改时刻）；
+  /// 一样元数据都没有时为 null。本地条目不靠它，按需 stat（[localSourceContentFingerprint]）。
+  String? get contentFingerprint => sourceContentFingerprint(
+        sizeBytes: sizeBytes,
+        modifiedAt: modifiedAt,
+        etag: etag,
+      );
 }
 
 /// 来源库文件系统抽象：把「列目录 / 找 sidecar / 读文本 / 拉到本地」统一成
@@ -111,7 +130,12 @@ class LocalSourceFileSystem implements SourceFileSystem {
   }) async {
     final Directory dir = Directory(dirPath);
     if (!await dir.exists()) {
-      return const <SourceFileEntry>[];
+      // 不存在 / 读不到（盘没挂上、iOS 沙盒外未授权的安全作用域路径）必须抛：以前
+      // 回空列表，扫描记成「0 个媒体、无错误」，来源页看起来扫过了却什么都没有，
+      // 用户只能猜是不是子文件夹没扫（Tz04dfBf2f）。抛出后扫描器把原因落进
+      // lastScanError，来源行照实显示。
+      throw FileSystemException(
+          'Source folder does not exist or is not accessible', dirPath);
     }
     final List<SourceFileEntry> entries = <SourceFileEntry>[];
     await for (final FileSystemEntity e
@@ -278,10 +302,21 @@ class NetworkSourceFileSystem implements SourceFileSystem {
 
   // ── SFTP ─────────────────────────────────────────────────────────
 
-  Future<SftpClient> _ensureSftp() async {
+  /// 在建的 SFTP 连接。流播时播放内核会同时发好几个 `Range` 请求，各自走到这里；
+  /// 不收口的话每个请求都会另起一条 SSH 连接、互相覆盖 [_ssh] / [_sftp]，被覆盖的
+  /// 那几条再也没人关。
+  Future<SftpClient>? _sftpConnecting;
+
+  Future<SftpClient> _ensureSftp() {
     if (_sftp != null && _ssh != null && !_ssh!.isClosed) {
-      return _sftp!;
+      return Future<SftpClient>.value(_sftp!);
     }
+    return _sftpConnecting ??= _connectSftp().whenComplete(() {
+      _sftpConnecting = null;
+    });
+  }
+
+  Future<SftpClient> _connectSftp() async {
     _sftp = null;
     _ssh = null;
     final String? key = config.privateKey;
@@ -295,6 +330,46 @@ class NetworkSourceFileSystem implements SourceFileSystem {
     );
     _sftp = await _ssh!.sftp();
     return _sftp!;
+  }
+
+  /// SFTP 区间读（流播用）：`[start, end]` 闭区间，[end] 为 null 或越过文件尾时截到
+  /// 文件尾。返回文件总长与区间字节流；流读完或被取消时关闭远端句柄，所以调用方
+  /// 不再需要时**必须**取消订阅。[start] 越过文件尾抛 [RangeError]（流播中继映射成
+  /// 416）。连接断了（移动端挂起后被系统掐掉）下一次调用自动重连。
+  Future<({int totalBytes, int start, int end, Stream<List<int>> bytes})>
+      openSftpRange(
+    String filePath, {
+    required int start,
+    int? end,
+  }) async {
+    if (!config.isSftp) {
+      throw UnsupportedError('Range reads are only implemented for SFTP');
+    }
+    final SftpClient sftp = await _ensureSftp();
+    final int? size = (await sftp.stat(filePath)).size;
+    if (size == null) {
+      throw StateError('SFTP server did not report a size for $filePath');
+    }
+    if (start < 0 || start >= size) {
+      throw RangeError.range(start, 0, size - 1, 'start');
+    }
+    final int last = (end == null || end >= size) ? size - 1 : end;
+    if (last < start) {
+      throw RangeError.range(last, start, size - 1, 'end');
+    }
+    // 句柄在流真正开始读时才打开：中继对 HEAD 是「订阅后立刻取消」，生成器体可能
+    // 根本没跑起来，那时在外面先开的句柄就再也没人关。
+    Stream<List<int>> bytes() async* {
+      final SftpFile handle =
+          await sftp.open(filePath, mode: SftpFileOpenMode.read);
+      try {
+        yield* handle.read(offset: start, length: last - start + 1);
+      } finally {
+        await handle.close();
+      }
+    }
+
+    return (totalBytes: size, start: start, end: last, bytes: bytes());
   }
 
   Future<List<SourceFileEntry>> _listSftp(
@@ -328,6 +403,10 @@ class NetworkSourceFileSystem implements SourceFileSystem {
             path: childPath,
             isDirectory: false,
             sizeBytes: e.attr.size,
+            // SFTP mtime 是秒。
+            modifiedAt: e.attr.modifyTime == null
+                ? null
+                : e.attr.modifyTime! * 1000,
           ));
         }
       }
@@ -446,6 +525,7 @@ class NetworkSourceFileSystem implements SourceFileSystem {
             path: childPath,
             isDirectory: false,
             sizeBytes: e.size,
+            modifiedAt: e.modifyTime?.toUtc().millisecondsSinceEpoch,
           ));
         }
       }
@@ -551,6 +631,8 @@ class NetworkSourceFileSystem implements SourceFileSystem {
             name: e.displayName,
             path: e.href,
             isDirectory: false,
+            modifiedAt: e.modifiedAt,
+            etag: e.etag,
           ));
         }
       }
@@ -657,6 +739,9 @@ class NetworkSourceFileSystem implements SourceFileSystem {
             path: url,
             isDirectory: false,
             sizeBytes: e.sizeBytes,
+            modifiedAt: DateTime.tryParse(e.modified ?? '')
+                ?.toUtc()
+                .millisecondsSinceEpoch,
           ));
         }
       }

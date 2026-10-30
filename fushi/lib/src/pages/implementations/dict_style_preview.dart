@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:fushi/src/dictionary/dict_style_preview_sample.dart';
 import 'package:fushi/src/dictionary/dict_style_rules.dart';
@@ -25,6 +25,7 @@ class DictStylePreview extends StatefulWidget {
     required this.css,
     required this.highlightPart,
     required this.onPickPart,
+    this.themeVariablesJs,
   });
 
   /// 当前规则编译出的 CSS，改一次换一次（不重载页面）。
@@ -35,6 +36,14 @@ class DictStylePreview extends StatefulWidget {
 
   /// 用户在预览里点了某个部位。
   final ValueChanged<DictStylePart> onPickPart;
+
+  /// 真弹窗的主题注入段（`buildInAppPopupThemeVariablesJs`）：设计系统 class
+  /// （`fushi-m3e` / `fushi-glass-host` + `fushi-apple` / `eink`）与全部 `--md-*` 令牌。
+  ///
+  /// 给了它，预览与 app 内弹窗同一外观：M3E 分段卡片 / Apple 淡染标签，文档背景
+  /// 透明、底色由外层 Flutter 面板画（与真弹窗的 FushiPopupSurface 同一结构）。
+  /// null 时退回只设 `data-theme` / `eink`（集成测试的裸宿主没有 AppModel）。
+  final String? themeVariablesJs;
 
   @override
   State<DictStylePreview> createState() => _DictStylePreviewState();
@@ -61,6 +70,7 @@ class _DictStylePreviewState extends State<DictStylePreview> {
   /// 上一次真正推给 WebView 的主题标识，避免每次依赖变化都重复 evaluateJavascript。
   bool? _pushedDark;
   bool? _pushedEink;
+  String? _pushedThemeVariablesJs;
 
   @override
   void didChangeDependencies() {
@@ -80,6 +90,13 @@ class _DictStylePreviewState extends State<DictStylePreview> {
   Future<void> _pushTheme() async {
     final InAppWebViewController? controller = _controller;
     if (controller == null || !_ready) return;
+    final String? themeVariablesJs = widget.themeVariablesJs;
+    if (themeVariablesJs != null) {
+      if (_pushedThemeVariablesJs == themeVariablesJs) return;
+      _pushedThemeVariablesJs = themeVariablesJs;
+      await controller.evaluateJavascript(source: themeVariablesJs);
+      return;
+    }
     final ThemeData theme = Theme.of(context);
     final bool dark = theme.brightness == Brightness.dark;
     final bool eink = theme.extension<FushiEinkTheme>()?.einkMode ?? false;
@@ -97,6 +114,9 @@ class _DictStylePreviewState extends State<DictStylePreview> {
   @override
   void didUpdateWidget(DictStylePreview oldWidget) {
     super.didUpdateWidget(oldWidget);
+    if (oldWidget.themeVariablesJs != widget.themeVariablesJs) {
+      unawaited(_pushTheme());
+    }
     if (oldWidget.css != widget.css ||
         oldWidget.highlightPart != widget.highlightPart) {
       unawaited(_pushStyles());
@@ -181,7 +201,9 @@ class _DictStylePreviewState extends State<DictStylePreview> {
           supportZoom: false,
           disableContextMenu: true,
           horizontalScrollBarEnabled: false,
-          transparentBackground: false,
+          // 有真弹窗主题段时文档背景透明（html.fushi-glass-host），WebView 也必须
+          // 透明，否则露出的是 WebView 自己的默认白底，深色主题下白底浅字。
+          transparentBackground: widget.themeVariablesJs != null,
         ),
         onWebViewCreated: (InAppWebViewController controller) {
           _controller = controller;
@@ -250,21 +272,37 @@ const List<String> kDictStylePreviewNoopHandlers = <String>[
   'favoriteEntry',
   'findMinedMatches',
   'getDictAsset',
+  // 「我库里的例句」：预览不查用户库（回 null = 区块不出现）、不跳转。
+  'librarySentenceOpen',
+  'librarySentences',
+  'listWordAudioSources',
   'mineEntry',
+  // BUG-3652 续：制卡失败回包到达时发起按钮已被换掉 → 交回宿主 toast；预览不制卡。
+  'mineFailureUnseen',
   'minedCardAction',
   'onLinkClick',
+  'openAdvancedMining',
   'openInAnki',
   'openLink',
   'openMinedNote',
   'openSentenceContextModal',
   'overwriteTargetNoteId',
+  // BUG-3311：Android 主引擎上 popup.js 把单词音频交宿主原生播放器。预览不出声，
+  // 回 null（非 true）→ popup.js 回落 <audio>，与预览里其它播音桥同样 no-op。
+  'playWordAudioNative',
   // 裁剪模式（宿主调 __fushiSetVisibleViewportHeight）才会复报内容高度；预览
   // WebView 占满自身区域、不裁剪，也没有外壳高度可重算，与 popupRendered 同样 no-op。
   'popupContentResized',
   'popupRendered',
+  // BUG-3492：卡在后台写入时的排队覆盖；预览不制卡。
+  'queueOverwrite',
   'reportJsError',
   'resolveWordAudio',
   'setSentenceContext',
+  // 复习词状态标记：预览不显示复习状态（回 null = 不渲染标记）、不打开卡片。
+  'srsOpenCard',
+  'srsTermStatus',
+  'srsTermStatusBatch',
   'tapOutside',
   'textSelected',
   'updateEntry',
@@ -314,6 +352,15 @@ final String _kPickerJs = '''
         ? highlightSelector + '{outline:2px dashed rgba(120,160,255,.9);outline-offset:1px;}'
         : '';
       styleEl.textContent = css + '\\n' + marker;
+      // 换了部位就把它滚进视野（应用内反馈 10-09：窄屏预览框只有半屏，选「频率」「词典名」
+      // 还得自己去预览里上下找）。同一部位改属性不滚，免得拖滑块时画面来回跳。
+      if (highlightSelector && highlightSelector !== window.__fushiStylePreviewLastSel) {
+        window.__fushiStylePreviewLastSel = highlightSelector;
+        var target = document.querySelector(highlightSelector);
+        if (target && target.scrollIntoView) {
+          target.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        }
+      }
     };
 
     document.addEventListener('mousemove', function (e) {

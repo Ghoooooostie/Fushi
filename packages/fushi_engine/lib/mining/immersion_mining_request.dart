@@ -2,13 +2,18 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:fushi_anki/fushi_anki_core.dart'
-    show AnkiMiningSource, AnkiMiningContext, CardSourceLink, MineOutcome;
+    show
+        AnkiMiningSource,
+        AnkiMiningContext,
+        CardSourceLink,
+        MineOutcome,
+        MiningMosaicRegion;
 
 /// 沉浸制卡片段音频的容器扩展名，按平台分（TODO-1217 / BUG-460）：
 /// - iOS：`m4a`——AnkiMobile 只自动下载它识别为媒体的 localhost URL，`.aac` 裸流会被当成
-///   可见文本不下载（da22cd42a）；iOS 端 ffmpeg-kit 自带 ipod muxer，能产出 `.m4a`。
-/// - 桌面 / Android：`aac`（adts）——桌面捆绑的 ffmpeg-min
-///   （`tool/ffmpeg-min/build-ffmpeg-min.sh` 的 MUXERS 白名单只有 adts，无 ipod/mp4/m4a）
+///   可见文本不下载（da22cd42a）；iOS 端 ffmpeg_kit_next_flutter 自带 ipod muxer，能产出 `.m4a`。
+/// - 桌面 / Android：`aac`（adts）——当时桌面捆绑的旧 ffmpeg-min
+///   （MUXERS 白名单只有 adts，无 ipod/mp4/m4a；统一 FFmpeg 已含，此分流作为既有契约保留）
 ///   写 `.m4a` 会自动选一个不存在的 ipod muxer → `Unable to choose output format` /
 ///   exit -22 → `extractAudioSegmentViaFfmpeg` 返 null → 音频丢（桌面网飞/YouTube/应用内
 ///   视频制卡有图无声，正是 da22cd42a 的桌面回归）；Android AnkiDroid 历来接受 `.aac`（BUG-460）。
@@ -42,8 +47,8 @@ class VideoMiningHistorySnapshot {
   }) : expression = fields['expression'] ?? '',
        reading = fields['reading'] ?? '',
        glossary = fields['glossary'] ?? '',
-       normCharOffset = cueStartMs,
-       normCharLength = cueStartMs == null || cueEndMs == null
+       positionMs = cueStartMs,
+       durationMs = cueStartMs == null || cueEndMs == null
            ? null
            : (cueEndMs - cueStartMs).clamp(0, 1 << 31).toInt();
 
@@ -54,8 +59,12 @@ class VideoMiningHistorySnapshot {
   final String documentTitle;
   final String bookKey;
   final int? sectionIndex;
-  final int? normCharOffset;
-  final int? normCharLength;
+
+  /// cue 起点毫秒（落 `mined_sentences.position_ms`）。
+  final int? positionMs;
+
+  /// cue 时长毫秒（落 `mined_sentences.duration_ms`）。
+  final int? durationMs;
   final String dateKey;
 }
 
@@ -91,12 +100,16 @@ enum VideoMiningImageMode {
   /// 偏好持久化用的稳定字符串键（勿随枚举名改动）。
   final String wireName;
 
-  /// 从偏好字符串解析；未知/null → [videoClip]（默认，见枚举文档）。
-  static VideoMiningImageMode fromWireName(String? name) {
+  /// 从偏好字符串解析；未知/null → [fallback]（默认 [videoClip]，见枚举文档；galgame 按
+  /// 来源给 [gif]，见 `PreferencesRepository.galMiningImageMode`）。
+  static VideoMiningImageMode fromWireName(
+    String? name, {
+    VideoMiningImageMode fallback = VideoMiningImageMode.videoClip,
+  }) {
     for (final VideoMiningImageMode mode in VideoMiningImageMode.values) {
       if (mode.wireName == name) return mode;
     }
-    return VideoMiningImageMode.videoClip;
+    return fallback;
   }
 
   /// 是否为静态截图模式（用户主动选静态图，非 GIF 降级）。动图与视频片段都不是。
@@ -114,7 +127,7 @@ enum VideoMiningImageMode {
 /// | 格式 | 卡片里怎么播 | 取舍 |
 /// |---|---|---|
 /// | [webmVp9]（默认） | `<video>` 内嵌，翻面自动播放、点例句重播 | Anki 桌面 Qt WebEngine / AnkiDroid WebView 都能解 |
-/// | [webmAv1] | 同上 | 体积最小（约为 VP9 的 60%），编码耗时约为 VP9 的 2 倍；移动端 ffmpeg-kit（Android / iOS）无 SVT-AV1 → 降级 VP9，仍内嵌 |
+/// | [webmAv1] | 同上 | 体积最小（约为 VP9 的 60%），编码耗时约为 VP9 的 2 倍；统一 FFmpeg 五端都带 SVT-AV1（tool/ffmpeg-unified），降级链只给用户自带的外部 ffmpeg 兜底 |
 /// | [mp4H264] | `[sound:]` 交给 Anki 原生播放器（Windows 弹独立窗口） | 兼容兜底；iOS 默认 |
 ///
 /// 为什么内嵌只能是 WebM：Anki 桌面的 Qt WebEngine 不带专利编解码器，**没有 H.264 也没有
@@ -309,23 +322,14 @@ enum MiningAnimatedFormat {
 /// [png] 走 [encodeAttempts] 的降级链：ffmpeg 缺 png 编码器时退回 [jpg] 再抽一次，
 /// 而不是让封面直接丢失。
 ///
-/// **两个平台的现状不同，别再把这条链当纯兜底**（BUG-2366，此处原先写反）：
-/// - 桌面：入库的 `ffmpeg-min` 配方 ENCODERS 含 `png`，降级链确实只是给「配方漂了 /
-///   用户自带的外部 ffmpeg」兜底。
-/// - **移动端（Android/iOS）：png 编码器根本不存在**。入库的自编 ffmpeg-kit 配方带
-///   `--disable-zlib`，而 ffmpeg 的 png 编解码器硬依赖 zlib——实测 AAR 里
-///   `libavcodec.so` 的未定义符号中一条 `deflate*`/`inflate*` 都没有。所以移动端选
-///   [png] 时，第一次尝试是**注定失败**的常态路径，降级到 [jpg] 才出卡。
-///
-/// 由此推出两条不变式，改这里前先想清楚：
-/// 1. 那次注定失败**不是错误**，不得进用户可见错误日志——收口在
+/// 统一 FFmpeg（tool/ffmpeg-unified）五端都带 zlib 与 png 编码器（BUG-2366 时移动端的
+/// ffmpeg-kit 是 `--disable-zlib`，png 第一次尝试注定失败；统一后已不再如此，由守卫
+/// `fushi/test/tools/ffmpeg_unified_mobile_guard_test.dart` 从产物字节钉住）。降级链现在只给
+/// 用户自带的外部 ffmpeg 兜底，但两条不变式照旧：
+/// 1. 非末次尝试的失败**不是错误**，不得进用户可见错误日志——收口在
 ///    `extractStillWithFallback`（`immersion_mining_engine.dart`），非末次尝试一律
 ///    `diagnosticOnly`。
 /// 2. 卡上的文件扩展名必须跟随**实际编成**的格式（见 [fileExtension]）。
-///
-/// 想让移动端真正支持 png，唯一办法是在构建机重编 ffmpeg-kit 时加 `--enable-zlib`
-/// 并重新 vendor AAR/xcframework；配方与 Dart 假设的一致性由守卫
-/// `fushi/test/tools/ffmpeg_kit_mobile_recipe_guard_test.dart` 钉住。
 enum MiningStillFormat {
   jpg('jpg', 'jpg'),
   png('png', 'png');
@@ -404,6 +408,9 @@ class ImmersionMiningRequest {
     this.providedAudioBytes,
     this.providedAudioName,
     this.requireAudio = true,
+    this.omitAudio = false,
+    this.omitCover = false,
+    this.coverMosaic = const <MiningMosaicRegion>[],
     this.imageMode = VideoMiningImageMode.gif,
     this.animatedFormat = MiningAnimatedFormat.gif,
     this.stillFormat = MiningStillFormat.jpg,
@@ -411,6 +418,7 @@ class ImmersionMiningRequest {
     this.mediaSourceTlsPinSha256,
     this.mediaSourceHttpHeaders = const {},
     this.mediaSourceRouteReady,
+    this.fieldsMediaReady,
     this.remoteAudioClipper,
     this.cachedMediaSnapshot,
     this.mediaTimeOffsetMs = 0,
@@ -474,6 +482,25 @@ class ImmersionMiningRequest {
   /// true = 无音频则中止制卡（本地/YouTube 默认）；false = 允许无音频卡（Netflix 2A 截图卡）。
   final bool requireAudio;
 
+  /// 用户为**这一张卡**明确选了「不要句子音频」（高级制卡，`MiningRequestOverrides
+  /// .omitAudio`）。与 [requireAudio] 不是一回事：后者是来源能力（拿不到音频算不算
+  /// 失败），本字段是用户意图——引擎不启动音频抽取，也就不会因为「缺音频」中止。
+  ///
+  /// 为什么不在 [VideoMiningImageMode] 里加一个 none：那个枚举是持久化偏好的值域，
+  /// 「不要」只对单张卡有意义，不能变成一键制卡的设置值。
+  final bool omitAudio;
+
+  /// 用户为这一张卡明确选了「不要图片」：封面阶梯（动图 / 起点帧 / 当前帧）与外部
+  /// 给好的封面字节一律跳过。与 [omitAudio] 都为真时出纯文本卡（用户要的就是它，
+  /// 不再按「无封面也无音频」当空壳卡中止）。
+  final bool omitCover;
+
+  /// 用户为这一张卡框的打码区域（高级制卡，相对那一帧画面的 0..1 归一化矩形）。
+  ///
+  /// 非空时引擎只出**静态**封面（动图 / 片段改按「字幕开头」抽单帧——逐帧打码做不到
+  /// 所见即所得），封面落盘后打码；打码失败就不要封面，绝不退回没打码的画面。
+  final List<MiningMosaicRegion> coverMosaic;
+
   /// 视频制卡封面图片模式（见 [VideoMiningImageMode]）。值对象默认
   /// [VideoMiningImageMode.gif]（不读偏好的调用方行为不变；偏好默认是 videoClip）。仅本地/有 range 的封面解析路径读取；providedCoverBytes 路径不受影响。
   final VideoMiningImageMode imageMode;
@@ -503,7 +530,7 @@ class ImmersionMiningRequest {
   /// 显式透传偏好。与 [animatedFormat] 的默认取法一致。
   final MiningClipFormat clipFormat;
 
-  /// BUG-891：[mediaSource]/[audioSource] 若是远端自签 Hibiki 主机的 https 流，这里带上
+  /// BUG-891：[mediaSource]/[audioSource] 若是远端自签 Fushi 主机的 https 流，这里带上
   /// 该 host 经 TOFU 钉扎的证书 SHA-256 指纹（`aa:bb:..`）。引擎把它透传给 ffmpeg 抽取器的
   /// `-tls_pin_sha256`，使自编 ffmpeg-kit（`--enable-gnutls` + pin 补丁）按指纹接受自签，
   /// 而非无条件放行。null = 本地源 / 公网有效证书源（YouTube 等），不钉扎、走 ffmpeg 默认。
@@ -532,7 +559,17 @@ class ImmersionMiningRequest {
   /// 在队列里轮到本任务、构造 ffmpeg 参数之前先等它。它从不失败（宿主自己兜错）。
   final Future<void>? mediaSourceRouteReady;
 
-  /// BUG-1004：互联 host（LAN Hibiki 库）远端流的句子音频改由 **host 端**裁好再下载——host
+  /// [fields] 里登记的词典媒体（外字等，`dictionaryMedia`）落进 Anki 媒体缓存完成的
+  /// 信号；null = 已就位（调用方在入队前就写好了缓存）。
+  ///
+  /// 与 [mediaSourceRouteReady] 同一个理由：写缓存是异步的，而制卡请求必须在点击当下
+  /// **同步**冻结播放器输入并入队。先 await 写缓存再冻结，中间那段时间里换集，卡片就
+  /// 会拿旧集字幕的时间去截新集的音频和画面（手机遥控制卡曾如此）。所以调用方当场
+  /// 开始写、把 Future 挂在这里，引擎在队列里轮到本任务时先等它，再抽媒体、落卡。
+  /// 它失败时本次制卡按失败结束（与改动前 await 写缓存抛错同一结局）。
+  final Future<void>? fieldsMediaReady;
+
+  /// BUG-1004：互联 host（LAN Fushi 库）远端流的句子音频改由 **host 端**裁好再下载——host
   /// 用本地文件裁、不经网络/TLS，从根上绕开「client ffmpeg 抓 host 自签 https / token 流」的
   /// 整类失败（移动端自编 ffmpeg-kit 的 TLS pin 仍有残余缺口、URL 编码/网络脆弱等，见
   /// BUG-891）。非空且 [audioSource]/[mediaSource] 命中远端 http(s) 时优先调用：返回裁好的
@@ -595,10 +632,14 @@ class ImmersionMiningRequest {
         providedAudioBytes: providedAudioBytes,
         providedAudioName: providedAudioName,
         requireAudio: requireAudio,
+        omitAudio: omitAudio,
+        omitCover: omitCover,
+        coverMosaic: coverMosaic,
         imageMode: imageMode,
         animatedFormat: animatedFormat,
         stillFormat: stillFormat,
         clipFormat: clipFormat,
+        fieldsMediaReady: fieldsMediaReady,
         mediaTimeOffsetMs: snapshot.zeroMs,
         stageNote: stageNote,
       );
@@ -657,6 +698,9 @@ class ImmersionMiningRequest {
         : Uint8List.fromList(providedAudioBytes!),
     providedAudioName: providedAudioName,
     requireAudio: requireAudio,
+    omitAudio: omitAudio,
+    omitCover: omitCover,
+    coverMosaic: List<MiningMosaicRegion>.unmodifiable(coverMosaic),
     imageMode: imageMode,
     animatedFormat: animatedFormat,
     stillFormat: stillFormat,
@@ -668,6 +712,7 @@ class ImmersionMiningRequest {
       mediaSourceHttpHeaders,
     ),
     mediaSourceRouteReady: mediaSourceRouteReady,
+    fieldsMediaReady: fieldsMediaReady,
     remoteAudioClipper: remoteAudioClipper,
     cachedMediaSnapshot: cachedMediaSnapshot,
     mediaTimeOffsetMs: mediaTimeOffsetMs,

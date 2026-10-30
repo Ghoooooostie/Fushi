@@ -7,8 +7,9 @@ import 'package:flutter_test/flutter_test.dart';
 /// BUG-124：第三方预编译 `ffmpeg_kit_flutter_new_min` 的 `libffmpegkit_abidetect.so`
 /// 在 Android 16/API 36 上 `JNI_OnLoad` 返回非法版本，且在 `onAttachedToActivity`
 /// 强制加载 → app 启动即崩（Dart 拦不住）。改用「自编」ffmpeg-kit（arthenica 源码 +
-/// NDK r25 重编最小变体，vendored 于 third_party/ffmpeg_kit_flutter，android 用自编
-/// AAR），经 [KitFfmpegBackend] 接入。这里钉死：①用 ffmpeg_kit_flutter（非崩溃的
+/// NDK r25 重编最小变体，android 用自编 AAR），经 [KitFfmpegBackend] 接入。统一 FFmpeg
+/// （docs/specs/2026-10-17-unified-ffmpeg.md）后换成 vendored 于
+/// third_party/ffmpeg_kit_next_flutter 的 FFmpegKitNext + 统一 FFmpeg 自编 AAR。这里钉死：①用 ffmpeg_kit_flutter（非崩溃的
 /// _new_min）②移动端路由 KitFfmpegBackend ③桌面仍 CLI ④两后端共用 runFfmpegProcess
 /// ⑤android build.gradle 用本地自编 AAR、不再拉 maven 预编译。实际原生执行需真机验证。
 ///
@@ -32,7 +33,7 @@ void main() {
 
   test('用自编 ffmpeg-kit：KitFfmpegBackend + ffmpeg_kit_flutter API（app 侧）', () {
     expect(
-        kit, contains('import \'package:ffmpeg_kit_flutter/ffmpeg_kit.dart\''));
+        kit, contains('import \'package:ffmpeg_kit_next_flutter/ffmpeg_kit.dart\''));
     expect(kit, contains('class KitFfmpegBackend implements FfmpegBackend'));
     expect(kit, contains('FFmpegKit.executeWithArguments'));
     // 引擎不得反向碰插件（纯度守卫另钉，这里顺手钉住后端文件本身）。
@@ -40,13 +41,16 @@ void main() {
         reason: '引擎 ffmpeg_backend.dart 不得 import ffmpeg_kit 插件');
   });
 
-  test('顶层进程 runner 各自一处 drain/超时（ffmpeg + ffprobe）', () {
-    // ffmpeg 工作输出写 stderr、ffprobe JSON 写 stdout，两者收集/drain 的流相反，
-    // 故各有一个顶层 runner（runFfmpegProcess / runFfprobeProcess），各自一处
-    // sigkill 超时逻辑（TODO-1045 新增 ffprobe 路径）。钉死两处、不允许再散落第三处。
+  test('顶层进程 runner 共用唯一一处 drain/超时（ffmpeg + 查询 + ffprobe）', () {
+    // ffmpeg 工作输出写 stderr、ffprobe JSON 写 stdout、ffmpeg 查询表（-filters 等，
+    // BUG-2938）写 stdout，三者收集/drain 的流各不相同，故各有一个顶层 runner
+    // （runFfmpegProcess / runFfmpegQueryProcess / runFfprobeProcess），但都委托同一个
+    // _runToolProcess——sigkill 超时逻辑只许有这一处，不允许再散落第二处。
     expect(src, contains('Future<FfmpegRunResult> runFfmpegProcess('));
+    expect(src, contains('Future<FfmpegRunResult> runFfmpegQueryProcess('));
     expect(src, contains('Future<FfmpegRunResult> runFfprobeProcess('));
-    expect('ProcessSignal.sigkill'.allMatches(src).length, 2);
+    expect(src, contains('Future<FfmpegRunResult> _runToolProcess('));
+    expect('ProcessSignal.sigkill'.allMatches(src).length, 1);
   });
 
   test('Android/iOS 路由到 KitFfmpegBackend，桌面仍 CLI', () {
@@ -100,16 +104,19 @@ void main() {
 
   test('vendored 包用本地自编 AAR（不拉 maven 预编译）', () {
     final File gradle =
-        File('../third_party/ffmpeg_kit_flutter/android/build.gradle');
+        File('../third_party/ffmpeg_kit_next_flutter/android/build.gradle');
     expect(gradle.existsSync(), isTrue,
-        reason: 'vendored ffmpeg_kit_flutter 应存在');
+        reason: 'vendored ffmpeg_kit_next_flutter 应存在');
     final String g = gradle.readAsStringSync();
-    expect(g.contains('implementation(name: \'ffmpeg-kit\', ext: \'aar\')'),
+    expect(
+        g.contains('implementation(name: \'ffmpeg-kit-next\', ext: \'aar\')'),
         isTrue);
-    expect(g.contains('com.arthenica:ffmpeg-kit-https'), isFalse,
+    // 任何 com.arthenica:ffmpeg-kit* maven 坐标都是上游预编译（不含 Fushi 补丁、
+    // 与播放器不是同一份 FFmpeg）。
+    expect(g.contains('com.arthenica:ffmpeg-kit'), isFalse,
         reason: '不再拉 maven 预编译');
     expect(
-      File('../third_party/ffmpeg_kit_flutter/android/libs/ffmpeg-kit.aar')
+      File('../third_party/ffmpeg_kit_next_flutter/android/libs/ffmpeg-kit-next.aar')
           .existsSync(),
       isTrue,
       reason: '自编 AAR 应 vendored',

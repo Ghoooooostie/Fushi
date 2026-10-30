@@ -64,8 +64,8 @@ const Duration _kClipProbeTimeout = Duration(seconds: 30);
 
 /// 源视频的编码画像：从 `ffmpeg -hide_banner -i <file>` 的日志里解析出来。
 ///
-/// 为什么不用 ffprobe：随包的 ffmpeg-min 确实并排放着同一次 configure 编出的 ffprobe
-/// （`test/tools/ffmpeg_min_vendored_recipe_guard_test.dart` 守着），但那只覆盖**随包**
+/// 为什么不用 ffprobe：随包的统一 FFmpeg 确实并排放着同一次构建编出的 ffprobe
+/// （`tool/ffmpeg-unified/` 的配方产出），但那只覆盖**随包**
 /// 这一种情形——用户用 `FUSHI_FFMPEG` 指向自己的 ffmpeg、或回退到 PATH 上的 ffmpeg 时，
 /// 同目录未必有 ffprobe。`ffmpeg -i` 用的是 [resolveFfmpegExecutable] 解析出的那一个
 /// 二进制：只要这台机器裁得动片段，就一定探得到编码。仓库里也已有同款「解析 ffmpeg
@@ -277,7 +277,7 @@ List<String> buildClipVideoEncoderArgs({int? videoBitrateKbps}) {
 /// 之前的那个关键帧：重编码的视频靠 accurate seek 把请求点之前的帧全丢掉，copy 的音频
 /// 却是逐包原样带出，从关键帧起的那一截全在；随后 `-avoid_negative_ts make_zero`（重编码
 /// 路径必带，见 [buildFfmpegVideoClipExportArgs]）把这截负时间戳平移成正片内容。实测
-/// 随包 ffmpeg-min 裁一个关键帧间隔 1 s 的源、请求 3 s：产物 4.04 s，视频 start_time
+/// （旧）随包 ffmpeg-min 裁一个关键帧间隔 1 s 的源、请求 3 s：产物 4.04 s，视频 start_time
 /// 1.02 s、音频 0 s——开头一秒只有声音没画面。音频重编码（aac 192k，与整段重编码兜底
 /// 同参数）就精确切在请求点。视频 copy 时不受影响：那条路径不带 make_zero，前导由 mp4
 /// edit list 表达成「播放时跳过」（BUG-2011）。
@@ -399,17 +399,22 @@ class _ClipProbe {
 /// 秒级的用户操作；缓存换不来可感知的收益，却会引入「用户中途换了 `FUSHI_FFMPEG`
 /// 指向，缓存还是旧能力」的陈旧态。
 ///
-/// 探测失败一律当**不能烧**（返回空集合）：烧不了顶多退成无字幕导出，而误判成能烧
-/// 会让整次导出失败。
-Future<Set<String>> _probeFfmpegFilters(
+/// 探测失败（起不来 / 超时 / 非零退出）一律当**不能烧**（返回空集合）：烧不了顶多
+/// 退成无字幕导出，而误判成能烧会让整次导出失败。
+///
+/// 必须走 [FfmpegBackend.runQuery]：滤镜表写在 stdout，[FfmpegBackend.run] 只收
+/// stderr，经它探在桌面 CLI 上恒为空表、硬字幕静默退成无字幕（BUG-2938）。app 的片段
+/// 导出与无头服务端 `video clip --burn-subs` 共用这一个探测点。
+Future<Set<String>> queryFfmpegFilterNames(
   FfmpegBackend backend,
   Duration timeout,
 ) async {
   try {
-    final FfmpegRunResult probe = await backend.run(<String>[
+    final FfmpegRunResult probe = await backend.runQuery(<String>[
       '-hide_banner',
       '-filters',
     ], timeout);
+    if (!probe.isSuccess) return const <String>{};
     return parseFfmpegFilterNames(probe.output);
   } catch (e, stack) {
     engineLog.log('VideoClipExport', e, stack);
@@ -556,8 +561,8 @@ List<String> buildFfmpegVideoClipExportArgs({
 ///
 /// 当 [buildFfmpegVideoClipExportArgs] 的 `-c copy` 因源编码装不进 mp4 容器而失败
 /// （vc1/wmv/mpeg2/rv/theora 视频、dts/truehd/pcm 音频等，或流复制不兼容）时用它兜底。
-/// 桌面精简 ffmpeg（`tool/ffmpeg-min`）为此专门编入 libx264（`--enable-gpl`，TODO-1257），
-/// mp4 muxer 也在白名单里；重编码后任何可解码的源都能落成通用可播的 .mp4，杜绝
+/// 桌面 ffmpeg 为此带 libx264（GPL 构建；旧 ffmpeg-min 于 TODO-1257 专门编入，统一 FFmpeg
+/// 全组件构建沿用），mp4 muxer 同样具备；重编码后任何可解码的源都能落成通用可播的 .mp4，杜绝
 /// 「输出跟随源容器 → matroska/webm muxer 缺失 → exit -22 EINVAL」（BUG-917/460）。
 ///
 /// TODO-2357：这里的 `libx264` **无平台分支**，而移动端 ffmpeg-kit 此前并未编入 x264
@@ -693,6 +698,116 @@ List<String> buildFfmpegVideoClipBurnArgs({
   ];
 }
 
+/// 用 ffmpeg 自带 libass 烧字幕所需的滤镜（`subtitles`）。没有它就只能走上面那条
+/// 「Flutter 渲染 PNG + overlay」的路径（[buildFfmpegVideoClipBurnArgs]）。
+const String kLibassSubtitlesFilter = 'subtitles';
+
+/// 本机 ffmpeg 有没有 libass 的 `subtitles` 滤镜（[filters] 来自
+/// [parseFfmpegFilterNames]）。探测失败（空集合）一律判没有。
+bool ffmpegHasLibassSubtitlesFilter(Set<String> filters) =>
+    filters.contains(kLibassSubtitlesFilter);
+
+/// 纯函数：滤镜**选项值**一级转义（ffmpeg filters 文档「Notes on filtergraph
+/// escaping」第一层）：`\`、`'`、`:` 前加反斜杠。`:` 是选项分隔符，不转义的话
+/// Windows 盘符 `C:` 会把路径劈成两个选项。
+String escapeFfmpegFilterOptionValue(String value) =>
+    value.replaceAllMapped(RegExp(r"[\\':]"), (Match m) => '\\${m[0]}');
+
+/// 纯函数：**滤镜图**二级转义（同一节第二层）：`\`、`'`、`[`、`]`、`,`、`;` 前加
+/// 反斜杠。`,` / `;` 是滤镜 / 链分隔符，`[` `]` 是 pad 标签。参数经 argv 直传（不过
+/// shell），没有第三层。
+String escapeFfmpegFiltergraphText(String text) =>
+    text.replaceAllMapped(RegExp(r"[\\'\[\],;]"), (Match m) => '\\${m[0]}');
+
+/// 纯函数：把字幕文件路径写成 `subtitles=filename=…` 里能原样还原的形式。
+///
+/// [windows] 为 true 时先把 `\` 换成 `/`（ffmpeg 在 Windows 上两种分隔符都认），
+/// 少一层反斜杠叠加；盘符的 `:` 照样转义。
+String ffmpegSubtitlesFilenameArg(String path, {required bool windows}) {
+  final String normalized = windows ? path.replaceAll(r'\', '/') : path;
+  return escapeFfmpegFiltergraphText(escapeFfmpegFilterOptionValue(normalized));
+}
+
+/// 纯函数：libass 烧录的 `-vf` 滤镜链。
+///
+/// 时间轴对齐：`-ss` 放在 `-i` 前面是输入 seek，进滤镜图的帧 PTS 从 0 起算；而
+/// `subtitles` 按帧 PTS 去字幕文件里找事件——不处理的话，从 1:23 起剪的片段会烧上
+/// 字幕文件开头那几句。做法是先 `setpts=PTS+<起点>/TB` 把帧挪回源时间轴、烧完再
+/// `setpts=PTS-STARTPTS` 归零。相比「先把字幕平移 / 裁剪成新 SRT」，这样 ASS 的样式、
+/// 定位、特效原样保留（转 SRT 会全丢），也不用写临时文件。[startMs] 为 0 时省掉两次
+/// setpts。
+String buildLibassSubtitlesFilter({
+  required String subtitlePath,
+  required int startMs,
+  required bool windows,
+}) {
+  final String burn =
+      '$kLibassSubtitlesFilter=filename='
+      '${ffmpegSubtitlesFilenameArg(subtitlePath, windows: windows)}';
+  if (startMs <= 0) return burn;
+  final String offset = (startMs / 1000.0).toStringAsFixed(3);
+  return 'setpts=PTS+$offset/TB,$burn,setpts=PTS-STARTPTS';
+}
+
+/// 纯函数：用 libass `subtitles` 滤镜烧硬字幕的裁剪命令（无头端用；app 走 PNG +
+/// overlay 的 [buildFfmpegVideoClipBurnArgs]）。
+///
+/// 与另外两条重编码路径同参：烧录必然重编码视频（画面变了，`-c copy` 在定义上就
+/// 不可能），音频 aac、`-sn` / `-dn` 不带任何源字幕 / 数据流、不继承章节表
+/// （BUG-2011）、mp4 系挂 faststart。`-vf` 与 `-map` 同时出现时自动流选择关闭，
+/// 所以音频照样显式 `-map 0:a…?`（BUG-345 的 `?` 兜底）。
+List<String> buildFfmpegVideoClipLibassBurnArgs({
+  required String inputPath,
+  required int startMs,
+  required int endMs,
+  required String outputPath,
+  required String subtitlePath,
+  required bool windows,
+  int? audioStreamIndex,
+  int? audioStreamCount,
+  int? videoBitrateKbps,
+}) {
+  final double startSeconds = startMs / 1000.0;
+  final double durationSeconds = (endMs - startMs) / 1000.0;
+  final int? explicitAudio = resolveAudioMapIndex(
+    audioStreamIndex: audioStreamIndex,
+    audioStreamCount: audioStreamCount,
+  );
+  return <String>[
+    '-hide_banner',
+    '-y',
+    '-ss',
+    startSeconds.toStringAsFixed(3),
+    '-t',
+    durationSeconds.toStringAsFixed(3),
+    '-i',
+    inputPath,
+    '-vf',
+    buildLibassSubtitlesFilter(
+      subtitlePath: subtitlePath,
+      startMs: startMs,
+      windows: windows,
+    ),
+    '-map',
+    '0:v:0',
+    '-map',
+    explicitAudio != null ? '0:a:$explicitAudio?' : '0:a?',
+    '-sn',
+    '-dn',
+    '-map_chapters',
+    '-1',
+    ...buildClipVideoEncoderArgs(videoBitrateKbps: videoBitrateKbps),
+    '-c:a',
+    'aac',
+    '-b:a',
+    '192k',
+    '-avoid_negative_ts',
+    'make_zero',
+    ...buildClipFaststartArgs(outputPath),
+    outputPath,
+  ];
+}
+
 /// 纯函数：把请求的 [audioStreamIndex] 归一成「实际拼进 `-map 0:a:N` 的下标」，
 /// 否则返回 null（不加 `-map`，用 ffmpeg 默认音频选择）。两条 ffmpeg 裁剪路径
 /// （视频片段导出 / 桌面音频裁剪）共用这套边界判定（BUG-345）。
@@ -793,13 +908,14 @@ Future<VideoClipExportResult> exportVideoClipViaFfmpeg({
     // 导出变成失败。失败原因写进错误日志，排查时看那条。
     if (subtitleCues.isNotEmpty && subtitleRenderer != null) {
       final ClipFrameSize? frame = probe.frameSize;
-      final Set<String> filters = await _probeFfmpegFilters(
+      final Set<String> filters = await queryFfmpegFilterNames(
         resolved,
         _kClipProbeTimeout,
       );
       if (frame != null && ffmpegCanBurnClipSubtitles(filters)) {
         final _BurnFrames? frames = await _renderClipBurnFrames(
-          cues: subtitleCues,
+          // overlay 链后画的在上：按 ASS Layer 排成与 libass / 屏幕一致的叠画顺序。
+          cues: orderClipCuesForBurn(subtitleCues),
           frame: frame,
           renderer: subtitleRenderer,
         );
@@ -850,9 +966,9 @@ Future<VideoClipExportResult> exportVideoClipViaFfmpeg({
 
     /// 跑完整一轮：快路径 `-c copy`（瞬时、无损，多数 h264/hevc + aac 源直接成功），
     /// 失败则重编码 libx264 + aac 兜底（源编码装不进 mp4：vc1/wmv/dts/pcm… 桌面
-    /// ffmpeg-min 专为此编入 libx264，TODO-1257；杜绝 BUG-917 的 exit -22）。
-    /// 输出恒 `.mp4`——绝不跟随源容器扩展名，否则 mkv/webm 源会选中 ffmpeg-min
-    /// 白名单里不存在的 matroska muxer。
+    /// ffmpeg 带 libx264（旧 ffmpeg-min 专为此编入，TODO-1257）；杜绝 BUG-917 的 exit -22）。
+    /// 输出恒 `.mp4`——绝不跟随源容器扩展名，否则 mkv/webm 源会选中旧 ffmpeg-min
+    /// 白名单里不存在的 matroska muxer（统一 FFmpeg 已含，恒 mp4 为既有契约）。
     Future<_ClipAttempt> attempt(List<String> subs) async {
       final FfmpegRunResult copyResult = await resolved.run(
         buildFfmpegVideoClipExportArgs(
@@ -899,10 +1015,9 @@ Future<VideoClipExportResult> exportVideoClipViaFfmpeg({
     // movtext 编码器，缺它会直接 'Unknown encoder'。宁可导出一个没字幕的片段，也不
     // 能让「加字幕」这个增强把原本能成功的导出变成失败。
     //
-    // ⚠️ 这条降级会**静默**吞掉字幕，所以它掩盖过一次真 bug：随包的精简 ffmpeg 自己
+    // ⚠️ 这条降级会**静默**吞掉字幕，所以它掩盖过一次真 bug：旧随包的精简 ffmpeg-min 自己
     // 就漏编了 movtext（BUG-1058），桌面端每次导出都走到这里，用户只看到"导出成功但
-    // 没字幕"。入库二进制已重新 vendor 修好，且由
-    // fushi/test/tools/ffmpeg_min_vendored_recipe_guard_test.dart 守住不再漂移；
+    // 没字幕"。统一 FFmpeg 为全组件构建，已含 movtext；
     // 降级本身保留，因为它要兜的是用户自带的第三方 ffmpeg，那个仍然不可控。
     // 失败原因照常写进错误日志（下方 ErrorLogService），排查时先看那条。
     if (!result.produced && subtitlePaths.isNotEmpty) {
@@ -1039,7 +1154,7 @@ Future<_BurnFrames?> _renderClipBurnFrames({
 Future<Directory?> _writeTempSubtitleFiles(List<String> contents) async {
   Directory? dir;
   try {
-    dir = await Directory.systemTemp.createTemp('hibiki_clip_sub');
+    dir = await Directory.systemTemp.createTemp('fushi_clip_sub');
     for (int i = 0; i < contents.length; i++) {
       // flush: true——ffmpeg 进程随后立刻读这些文件，不能停在 OS 写缓冲里。
       // encoding: utf8 且不写 BOM：ffmpeg 的 srt demuxer 默认按 UTF-8 解析。

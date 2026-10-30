@@ -4,16 +4,24 @@ import 'package:fushi/pages.dart';
 import 'package:fushi_engine/media/discovery/discovery_models.dart';
 import 'package:fushi/src/ai/ai_media_acquisition_assistant.dart'
     show AiMediaAcquisitionDomain;
+import 'package:fushi/src/media/discovery/user_server_discovery_view.dart';
 import 'package:fushi/src/models/store_compliance.dart';
 import 'package:fushi/src/pages/implementations/browse_online_sources_view.dart';
 import 'package:fushi/src/pages/implementations/discovery_ai_acquire_action.dart';
 import 'package:fushi/src/pages/implementations/library_online_sources_view.dart';
 import 'package:fushi/src/pages/implementations/media_discovery_page.dart';
+import 'package:fushi/src/pages/implementations/media_server/user_media_servers_view.dart';
 import 'package:fushi/src/pages/implementations/media_library_shell.dart';
 import 'package:fushi/src/pages/implementations/media_sources_page.dart';
-import 'package:fushi/src/pages/implementations/module_settings_view.dart';
-import 'package:fushi/src/settings/settings_destination.dart';
+import 'package:fushi/src/utils/components/fushi_floating_chrome.dart'
+    show FushiFloatingChromeInsetPadding;
 import 'package:fushi/utils.dart';
+
+/// 书 tab「发现」视图覆盖的媒体域。
+const List<DiscoveryMediaKind> _bookDiscoveryKinds = <DiscoveryMediaKind>[
+  DiscoveryMediaKind.novel,
+  DiscoveryMediaKind.audiobook,
+];
 
 /// The body content for the Reader tab in the main menu.
 class HomeReaderPage extends BaseTabPage {
@@ -28,18 +36,23 @@ class _HomeReaderPageState extends BaseTabPageState<HomeReaderPage> {
   @override
   MediaType get mediaType => ReaderMediaType.instance;
 
-  /// 书 tab：书架 / 发现 / 来源 / 扩展 / 导入 / 设置，与漫画 / 视频同一套导航结构。
+  /// 书 tab：书架 / 发现 / 来源 / 扩展 / 导入，与漫画 / 视频同一套导航结构。
   ///
   /// 书架视图仍走 `mediaSource.buildHistoryPage()`——书 tab 支持切换来源
   /// （EPUB / PDF / 通用），页面类型由当前来源决定，壳不得硬编某一个实现。
   ///
   /// 发现（nyaa / OPDS 等）与小说在线源（LNReader）的来源 / 扩展同时住在顶层
   /// 「浏览」模块与这里（2026-10-01 用户拍板加回库页子标签），两处是同一组组件。
-  /// 各自过 iOS 合规门 / 平台宿主门；书 tab 存在即书模块开着。
+  /// 各自过 iOS 合规门 / 平台宿主门；书 tab 存在即书模块开着。iOS 上没有内置
+  /// 发现源，「发现」只在用户配了 OPDS / AList / Audiobookshelf 服务器时出现
+  /// （[userServerDiscoverViewAvailable]，2026-10-27 用户拍板）。
   @override
   Widget build(BuildContext context) {
     final bool online = isOnlineSourcesDomainAvailable(
       OnlineSourcesDomain.novel,
+    );
+    final bool mediaServers = ref.watch(
+      userMediaServersAvailableProvider(UserMediaServersDomain.book),
     );
     return MediaLibraryShell(
       focusIdPrefix: 'book-library-view',
@@ -47,65 +60,86 @@ class _HomeReaderPageState extends BaseTabPageState<HomeReaderPage> {
         MediaLibraryViewSpec(
           kind: MediaLibraryViewKind.library,
           label: t.library_view_shelf,
-          builder: (BuildContext context, Widget navigation) =>
-              mediaSource.buildHistoryPage(navigation: navigation),
+          // 书架（[ReaderFushiHistoryPage]）主滚动视图自己让出浮动工具栏的高度；
+          // 其它来源的通用回退页不认识工具栏，整体下移。
+          handlesChromeInset: true,
+          builder: (BuildContext context, Widget navigation) {
+            final Widget page = mediaSource.buildHistoryPage(
+              navigation: navigation,
+            );
+            return page is ReaderFushiHistoryPage
+                ? page
+                : FushiFloatingChromeInsetPadding(child: page);
+          },
         ),
-        if (StoreRestrictedCapability.externalDiscovery.isAvailable)
+        if (StoreRestrictedCapability.externalDiscovery.isAvailable ||
+            userServerDiscoverViewAvailable(
+              appModel.mediaDiscoveryService,
+              _bookDiscoveryKinds,
+            ))
           MediaLibraryViewSpec(
             kind: MediaLibraryViewKind.discover,
+            // 发现页把自己的搜索 / 筛选行叠进浮动工具区，主滚动视图自己让位。
+            handlesChromeInset: true,
             label: t.library_view_discover,
             builder: (BuildContext context, Widget navigation) =>
                 MediaDiscoveryPage(
-              kinds: const <DiscoveryMediaKind>[
-                DiscoveryMediaKind.novel,
-                DiscoveryMediaKind.audiobook,
-              ],
-              navigation: navigation,
-              onAiAcquire: discoveryAiAcquireAction(
-                context: context,
-                readAppModel: () => appModelNoUpdate,
-                domain: AiMediaAcquisitionDomain.novel,
-                domainLabel: t.books,
-                onlineDomain: OnlineSourcesDomain.novel,
-              ),
-            ),
+                  kinds: _bookDiscoveryKinds,
+                  navigation: navigation,
+                  onAiAcquire: discoveryAiAcquireAction(
+                    context: context,
+                    readAppModel: () => appModelNoUpdate,
+                    domain: AiMediaAcquisitionDomain.novel,
+                    domainLabel: t.books,
+                    onlineDomain: OnlineSourcesDomain.novel,
+                  ),
+                ),
+          ),
+        // 用户自己的 Kavita / Audiobookshelf 服务器（同 Jellyfin / Plex）：配了可用的
+        // 才出页签，设置里增删后随之出现 / 消失。浏览、流式阅读 / 播放与下载到本机
+        // 都不属于 App Store 受限能力（2026-10-27 用户拍板），iOS 也保留。
+        if (mediaServers)
+          MediaLibraryViewSpec(
+            kind: MediaLibraryViewKind.mediaServers,
+            // 主滚动视图自己把浮动工具区高度加成顶部内边距。
+            handlesChromeInset: true,
+            label: t.library_view_media_servers,
+            builder: (BuildContext context, Widget navigation) =>
+                const UserMediaServersView(domain: UserMediaServersDomain.book),
           ),
         if (online)
           MediaLibraryViewSpec(
             kind: MediaLibraryViewKind.onlineSources,
+            // 主滚动视图自己把浮动工具区高度加成顶部内边距：工具区收起后不留空白。
+            handlesChromeInset: true,
             label: t.library_view_sources,
             builder: (BuildContext context, Widget navigation) =>
                 LibraryOnlineSourcesView(
-              domain: OnlineSourcesDomain.novel,
-              section: OnlineSourcesSection.sources,
-              navigation: navigation,
-            ),
+                  domain: OnlineSourcesDomain.novel,
+                  section: OnlineSourcesSection.sources,
+                  navigation: navigation,
+                ),
           ),
         if (online)
           MediaLibraryViewSpec(
             kind: MediaLibraryViewKind.extensions,
+            // 主滚动视图自己把浮动工具区高度加成顶部内边距：工具区收起后不留空白。
+            handlesChromeInset: true,
             label: t.media_import_segment_extensions,
             builder: (BuildContext context, Widget navigation) =>
                 LibraryOnlineSourcesView(
-              domain: OnlineSourcesDomain.novel,
-              section: OnlineSourcesSection.extensions,
-              navigation: navigation,
-            ),
+                  domain: OnlineSourcesDomain.novel,
+                  section: OnlineSourcesSection.extensions,
+                  navigation: navigation,
+                ),
           ),
         MediaLibraryViewSpec(
           kind: MediaLibraryViewKind.sources,
+          // 主滚动视图自己把浮动工具区高度加成顶部内边距：工具区收起后不留空白。
+          handlesChromeInset: true,
           label: t.library_view_import,
           builder: (BuildContext context, Widget navigation) =>
               MediaSourcesPage(mediaKind: 'book', navigation: navigation),
-        ),
-        MediaLibraryViewSpec(
-          kind: MediaLibraryViewKind.settings,
-          label: t.settings,
-          builder: (BuildContext context, Widget navigation) =>
-              ModuleSettingsView(
-            destinationId: SettingsDestinationId.reading,
-            navigation: navigation,
-          ),
         ),
       ],
     );

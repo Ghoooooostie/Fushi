@@ -7,14 +7,14 @@ part of '../reader_fushi_history_page.dart';
 /// 勾选框（仅 [localFilesSubtitle] 非 null 时渲染——书/PDF/漫画导入即拷贝进 app 目录、
 /// 原件路径根本没入库，只有显式登记了 app 目录之外的原始音频路径的有声书/字幕书才有
 /// 本机可删的原件）。副标题必须由调用方给出、如实说清删的是什么，不能回落到通用措辞。
-/// [rememberedChoices] 恢复两个选项的默认值；「记住这些选择」只保存默认值，不跳过
-/// 本确认框。
+/// [rememberedChoices] 是上次确认删除时两个选项的状态，用作本次默认值；确认后经
+/// [onPersistChoices] 写回本次状态（取消不写）。只决定默认值，不跳过本确认框。
 /// [showSyncScope]=false 时把同步勾选框换成 [DeleteScopeUnavailableNote] 说明行、恒
 /// keepLocalOnly——由调用方按 `hasDeletionPropagationChannel` 传入：本机一个同步通道
 /// 都没有时，那个勾选框兑现不了（TODO-2470 死角②）。取消返回 null。
 /// 漫画作品页「移出漫画书架」也用它（BUG-2513），删除确认的披露与传播语义两处一致。
 /// deleteStatistics 来自「同时删除统计数据」勾选（仅 [statisticsSubtitle] 非 null 时
-/// 渲染；恒从未勾开始、不进「记住这些选择」，与视频删除确认同一纪律）。
+/// 渲染；恒从未勾开始、不沿用上次状态，与视频删除确认同一纪律）。
 class ReaderHistoryDeleteDialog extends StatefulWidget {
   const ReaderHistoryDeleteDialog({
     required this.title,
@@ -44,7 +44,7 @@ class ReaderHistoryDeleteDialog extends StatefulWidget {
   /// 逐项披露真实删除范围；null 表示该入口暂未接入结构化披露。
   final DeletionDisclosure? disclosure;
   final DeletePromptRememberedChoices? rememberedChoices;
-  final Future<void> Function(DeletePromptRememberedChoices?)? onPersistChoices;
+  final Future<void> Function(DeletePromptRememberedChoices)? onPersistChoices;
 
   @override
   State<ReaderHistoryDeleteDialog> createState() =>
@@ -56,7 +56,6 @@ class _ReaderHistoryDeleteDialogState extends State<ReaderHistoryDeleteDialog> {
   late bool _deleteLocalFiles;
   // 统计删除恒从未勾开始、不被记忆（见 [DeleteStatisticsRow]）。
   bool _deleteStatistics = false;
-  late bool _rememberChoices;
   bool _saving = false;
 
   @override
@@ -64,20 +63,17 @@ class _ReaderHistoryDeleteDialogState extends State<ReaderHistoryDeleteDialog> {
     super.initState();
     _syncDelete = widget.rememberedChoices?.syncEverywhere ?? false;
     _deleteLocalFiles = widget.rememberedChoices?.deleteLocalFiles ?? false;
-    _rememberChoices = widget.rememberedChoices != null;
   }
 
   Future<void> _confirm() async {
     if (_saving) return;
     setState(() => _saving = true);
-    final DeletePromptRememberedChoices? choices = _rememberChoices
-        ? DeletePromptRememberedChoices(
-            syncEverywhere: _syncDelete,
-            deleteLocalFiles: _deleteLocalFiles,
-          )
-        : null;
     try {
-      await widget.onPersistChoices?.call(choices);
+      // 本次勾选状态即下次默认值；被隐藏的那一项保持加载来的旧值，不会被覆盖。
+      await widget.onPersistChoices?.call(DeletePromptRememberedChoices(
+        syncEverywhere: _syncDelete,
+        deleteLocalFiles: _deleteLocalFiles,
+      ));
     } catch (error, stackTrace) {
       debugPrint('Delete prompt preference write failed: $error\n$stackTrace');
     }
@@ -161,11 +157,6 @@ class _ReaderHistoryDeleteDialogState extends State<ReaderHistoryDeleteDialog> {
                 value: _deleteStatistics,
                 subtitle: widget.statisticsSubtitle!,
                 onChanged: (bool v) => setState(() => _deleteStatistics = v),
-              ),
-            if (widget.showSyncScope || widget.localFilesSubtitle != null)
-              DeleteRememberChoicesRow(
-                value: _rememberChoices,
-                onChanged: (bool v) => setState(() => _rememberChoices = v),
               ),
           ],
         ),
@@ -333,7 +324,7 @@ class BookProfileDialogFrame extends StatelessWidget {
               ),
         footer: Align(
           alignment: Alignment.centerRight,
-          child: TextButton(onPressed: onClose, child: Text(t.dialog_close)),
+          child: FushiTextButton(onPressed: onClose, child: Text(t.dialog_close)),
         ),
       ),
     );
@@ -407,323 +398,36 @@ class _BookProfileOptionRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool cupertino = isCupertinoPlatform(context);
+    // Apple 设计系统：iOS 单选列表只在选中行尾画强调色对勾，未选中行留空
+    // （透明对勾占位，行高与对齐不跳），不画 Material 的空心圆。
+    final bool glass = !cupertino && isGlassDesign(context);
     final Color selectedColor = cupertino
         ? CupertinoTheme.of(context).primaryColor
+        : glass
+        ? appleColorsOf(context).accent
         : Theme.of(context).colorScheme.primary;
     final Color idleColor = cupertino
         ? CupertinoColors.secondaryLabel.resolveFrom(context)
+        : glass
+        ? Colors.transparent
         : Theme.of(context).colorScheme.onSurfaceVariant;
 
     return AdaptiveSettingsRow(
       title: title,
       onTap: onTap,
-      trailing: Icon(
+      trailing: FushiIcon(
         selected
-            ? (cupertino
+            ? (cupertino || glass
                   ? CupertinoIcons.check_mark
                   : Icons.radio_button_checked)
-            : (cupertino ? CupertinoIcons.circle : Icons.radio_button_off),
+            : (cupertino
+                  ? CupertinoIcons.circle
+                  : glass
+                  ? CupertinoIcons.check_mark
+                  : Icons.radio_button_off),
         size: cupertino ? 20 : 22,
         color: selected ? selectedColor : idleColor,
       ),
     );
   }
-}
-
-class _BatchTagPickerDialog extends StatefulWidget {
-  const _BatchTagPickerDialog({
-    required this.allTags,
-    required this.selectedKeys,
-    required this.database,
-    required this.parseBookKey,
-  });
-
-  final List<BookTagRow> allTags;
-  final Set<String> selectedKeys;
-  final FushiDatabase database;
-  final String? Function(String) parseBookKey;
-
-  @override
-  State<_BatchTagPickerDialog> createState() => _BatchTagPickerDialogState();
-}
-
-class _BatchTagPickerDialogState extends State<_BatchTagPickerDialog> {
-  final Set<int> _addTagIds = {};
-  final Set<int> _removeTagIds = {};
-
-  Future<void> _apply() async {
-    final tr = Translations.of(context);
-    final db = widget.database;
-
-    final List<String> epubBookKeys = [];
-    final List<String> srtUids = [];
-    for (final key in widget.selectedKeys) {
-      if (key.startsWith('srt_')) {
-        srtUids.add(key.substring(4));
-      } else {
-        final String? bookKey = widget.parseBookKey(key);
-        if (bookKey != null) epubBookKeys.add(bookKey);
-      }
-    }
-
-    // v77：SRT 标签映射按 uid 落库，selectedKeys 里的 uid 直用，不再解析 int id。
-    for (final tagId in _addTagIds) {
-      for (final bookKey in epubBookKeys) {
-        await db.addTagToBook(bookKey, tagId);
-      }
-      for (final srtUid in srtUids) {
-        await db.addTagToSrtBook(srtUid, tagId);
-      }
-    }
-    for (final tagId in _removeTagIds) {
-      for (final bookKey in epubBookKeys) {
-        await db.removeTagFromBook(bookKey, tagId);
-      }
-      for (final srtUid in srtUids) {
-        await db.removeTagFromSrtBook(srtUid, tagId);
-      }
-    }
-
-    if (!mounted) return;
-    for (final tagId in _addTagIds) {
-      final tag = widget.allTags.firstWhere((row) => row.id == tagId);
-      FushiToast.show(
-        msg: tr.batch_tag_added(name: tag.name, n: widget.selectedKeys.length),
-        severity: ToastSeverity.success,
-      );
-    }
-    for (final tagId in _removeTagIds) {
-      final tag = widget.allTags.firstWhere((row) => row.id == tagId);
-      FushiToast.show(
-        msg: tr.batch_tag_removed(
-          name: tag.name,
-          n: widget.selectedKeys.length,
-        ),
-        severity: ToastSeverity.success,
-      );
-    }
-    Navigator.pop(context);
-  }
-
-  void _setTagIntent(BookTagRow tag, _BatchTagIntent intent) {
-    setState(() {
-      _addTagIds.remove(tag.id);
-      _removeTagIds.remove(tag.id);
-      switch (intent) {
-        case _BatchTagIntent.keep:
-          break;
-        case _BatchTagIntent.add:
-          _addTagIds.add(tag.id);
-        case _BatchTagIntent.remove:
-          _removeTagIds.add(tag.id);
-      }
-    });
-  }
-
-  _BatchTagIntent _tagIntent(BookTagRow tag) {
-    if (_addTagIds.contains(tag.id)) return _BatchTagIntent.add;
-    if (_removeTagIds.contains(tag.id)) return _BatchTagIntent.remove;
-    return _BatchTagIntent.keep;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ReaderHistoryBatchTagDialogFrame(
-      canApply: _addTagIds.isNotEmpty || _removeTagIds.isNotEmpty,
-      onApply: _apply,
-      body: ListView.builder(
-        shrinkWrap: true,
-        itemCount: widget.allTags.length,
-        itemBuilder: (_, i) {
-          final tag = widget.allTags[i];
-          return _BatchTagIntentRow(
-            tag: tag,
-            selected: _tagIntent(tag),
-            onChanged: (intent) => _setTagIntent(tag, intent),
-          );
-        },
-      ),
-    );
-  }
-}
-
-@visibleForTesting
-class ReaderHistoryBatchTagDialogFrame extends StatelessWidget {
-  const ReaderHistoryBatchTagDialogFrame({
-    required this.body,
-    required this.canApply,
-    required this.onApply,
-    super.key,
-  });
-
-  final Widget body;
-  final bool canApply;
-  final VoidCallback onApply;
-
-  @override
-  Widget build(BuildContext context) {
-    // 与视频 tab 批量打标签弹窗共用 [BatchTagPickerDialogFrame] chrome；本壳保留为书架侧
-    // 公开测试入口（reader_history_batch_tag_dialog_test 直接构造它验证紧凑窗口不溢出）。
-    return BatchTagPickerDialogFrame(
-      body: body,
-      canApply: canApply,
-      onApply: onApply,
-    );
-  }
-}
-
-enum _BatchTagIntent { keep, add, remove }
-
-class _BatchTagIntentRow extends StatelessWidget {
-  const _BatchTagIntentRow({
-    required this.tag,
-    required this.selected,
-    required this.onChanged,
-  });
-
-  final BookTagRow tag;
-  final _BatchTagIntent selected;
-  final ValueChanged<_BatchTagIntent> onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    final bool cupertino = isCupertinoPlatform(context);
-    final ThemeData theme = Theme.of(context);
-    final ColorScheme colors = theme.colorScheme;
-    final Color tagColor = Color(tag.colorValue);
-    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-
-    // TODO-308: 三段意图原来用 keep=`horizontal_rule`、remove=`remove` 两个几乎
-    // 一样的横杠（语义相反却长得一样），且纯图标无可见文字（tooltip 只有桌面悬停
-    // 才出，手机/手柄看不到）。这里给每段配语义区分的图标 + 颜色 + 可见文字标签
-    // （复用已有 i18n key），三段一眼可辨：
-    //   keep   = 中性灰 圈内横杠（不改动）
-    //   add    = 主色   实心加号圈（添加）
-    //   remove = 错误红 禁止圈（移除，整段连文字一起染红）
-    final Color removeColor = colors.error;
-    final Color addColor = colors.primary;
-    final Color keepColor = colors.onSurfaceVariant;
-
-    Widget segmentLabel(String text, _BatchTagIntent intent, Color color) {
-      // 三段共享一行、每段仅得 ~90dp（手机窄弹窗），双字标签必须锁死单行，
-      // 否则 SegmentedButton 会把「保持」竖排成「保/持」（原缺陷）。softWrap
-      // 关掉后文字一律横排；配合下方 Expanded 铺满行宽 + 收紧内边距保证放得下。
-      return Text(
-        text,
-        maxLines: 1,
-        softWrap: false,
-        overflow: TextOverflow.visible,
-        style: TextStyle(color: selected == intent ? color : null),
-      );
-    }
-
-    // 收紧每段横向内边距（默认 ~12dp/侧太宽，在窄弹窗里把 icon+双字挤到换行）。
-    // 只在本弹窗局部覆盖，不动全局 kSettingsSegmentedStyle。字号走按钮自己的
-    // textStyle（labelMedium），段内 Text 只给选中色、未选中继续继承按钮前景色。
-    final ButtonStyle segmentedStyle = kSettingsSegmentedStyle.copyWith(
-      padding: const WidgetStatePropertyAll<EdgeInsetsGeometry>(
-        EdgeInsets.symmetric(horizontal: 6),
-      ),
-      textStyle: WidgetStatePropertyAll<TextStyle?>(
-        theme.textTheme.labelMedium,
-      ),
-    );
-
-    return AdaptiveSettingsRow(
-      title: tag.name,
-      icon: cupertino ? CupertinoIcons.tag : Icons.sell_outlined,
-      controlBelow: true,
-      // controlBelow 下 trailing 独占整行；用 Expanded 让三段铺满行宽（不再被
-      // mainAxisSize.min + maxWidth:300 挤到 ~270 触发压缩换行）。
-      trailing: Row(
-        children: [
-          DecoratedBox(
-            decoration: BoxDecoration(color: tagColor, shape: BoxShape.circle),
-            child: const SizedBox(width: 12, height: 12),
-          ),
-          SizedBox(width: tokens.spacing.gap + tokens.spacing.gap / 2),
-          Expanded(
-            child: adaptiveSegmentedButton<_BatchTagIntent>(
-              context: context,
-              segments: [
-                ButtonSegment<_BatchTagIntent>(
-                  value: _BatchTagIntent.keep,
-                  tooltip: t.batch_tag_keep,
-                  label: segmentLabel(
-                    t.batch_tag_keep,
-                    _BatchTagIntent.keep,
-                    keepColor,
-                  ),
-                  icon: Icon(
-                    cupertino
-                        ? CupertinoIcons.minus_circle
-                        : Icons.remove_circle_outline,
-                    size: 16,
-                    color: selected == _BatchTagIntent.keep ? keepColor : null,
-                  ),
-                ),
-                ButtonSegment<_BatchTagIntent>(
-                  value: _BatchTagIntent.add,
-                  tooltip: t.batch_tag_add,
-                  label: segmentLabel(
-                    t.batch_tag_add,
-                    _BatchTagIntent.add,
-                    addColor,
-                  ),
-                  icon: Icon(
-                    cupertino ? CupertinoIcons.add_circled : Icons.add_circle,
-                    size: 16,
-                    color: selected == _BatchTagIntent.add ? addColor : null,
-                  ),
-                ),
-                ButtonSegment<_BatchTagIntent>(
-                  value: _BatchTagIntent.remove,
-                  tooltip: t.batch_tag_remove,
-                  label: segmentLabel(
-                    t.batch_tag_remove,
-                    _BatchTagIntent.remove,
-                    removeColor,
-                  ),
-                  icon: Icon(
-                    cupertino
-                        ? CupertinoIcons.minus_circle_fill
-                        : Icons.do_not_disturb_on,
-                    size: 16,
-                    color: selected == _BatchTagIntent.remove
-                        ? removeColor
-                        : null,
-                  ),
-                ),
-              ],
-              selected: {selected},
-              onSelectionChanged: (values) {
-                if (values.isNotEmpty) onChanged(values.first);
-              },
-              style: segmentedStyle,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-/// TODO-308 测试钩子：渲染批量打标签的「保持 / 添加 / 移除」三段意图行，供 widget
-/// 守卫断言三段各有可见文字标签与语义区分的图标（不再是两个一样的横杠）。
-/// [selectedIndex] 0=keep / 1=add / 2=remove。
-@visibleForTesting
-Widget buildBatchTagIntentRowForTesting({
-  required BookTagRow tag,
-  int selectedIndex = 0,
-}) {
-  const List<_BatchTagIntent> intents = <_BatchTagIntent>[
-    _BatchTagIntent.keep,
-    _BatchTagIntent.add,
-    _BatchTagIntent.remove,
-  ];
-  return _BatchTagIntentRow(
-    tag: tag,
-    selected: intents[selectedIndex],
-    onChanged: (_) {},
-  );
 }

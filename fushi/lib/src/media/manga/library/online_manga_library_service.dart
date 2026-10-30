@@ -7,9 +7,12 @@ import 'package:path/path.dart' as p;
 
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi/src/media/manga/library/online_manga_chapter_updates.dart';
+import 'package:fushi/src/media/manga/library/manga_resume_point.dart';
 import 'package:fushi/src/media/manga/library/online_manga_library_entry.dart';
 import 'package:fushi/src/media/manga/library/online_manga_runtime_adapter.dart';
 import 'package:fushi/src/media/media_cover_service.dart';
+import 'package:fushi/src/media/manga/mihon/manga_page_provider.dart'
+    show mangaImageContentType;
 import 'package:fushi/src/media/manga/mihon/mihon_manager.dart';
 import 'package:fushi/src/utils/misc/error_log_service.dart';
 import 'package:fushi_engine/media/cover_file_writer.dart'
@@ -175,8 +178,27 @@ class OnlineMangaLibraryService {
       ),
     );
     final EpubBookRow row = (await database.getEpubBook(bookKey))!;
+    await _clearPeerDeletionTombstone(entry);
     await _adoptRemoteCollection(entry, row);
     return row;
+  }
+
+  /// 重新收下经互联来的漫画 = 撤销本机此前对它的「从所有设备删除」。
+  ///
+  /// 那次删除的墓碑写的是**对端键**（`ReaderFushiSource.deleteBook` 经
+  /// `InterconnectMangaCatalog.peerBookKeyOf`，本机 `interconnect-…` 键对端认不出），
+  /// 而 [FushiDatabase.insertEpubBook] 只按本机键清墓碑。不在这里补清，删了又收下
+  /// 时那条还没推出去的墓碑会在下一轮推给 host，把用户刚重新要回来的书从 host 删掉。
+  Future<void> _clearPeerDeletionTombstone(
+    OnlineMangaLibraryEntry entry,
+  ) async {
+    if (entry.runtime != OnlineMangaRuntimeKind.interconnect) return;
+    final String peerKey = entry.series.key;
+    if (peerKey.isEmpty) return;
+    await database.clearSyncDeletionTombstone(
+      SyncTombstoneKind.book.dbValue,
+      peerKey,
+    );
   }
 
   Future<void> _adoptRemoteCollection(
@@ -423,45 +445,18 @@ class OnlineMangaLibraryService {
     }
   }
 
-  /// 新读者从哪一章开始。
-  ///
-  /// 源按新→旧返回，所以「最旧的一章」= 列表末尾 = 第 1 话。
-  static int initialChapterIndex(OnlineMangaLibraryEntry entry) {
-    final int? selected = entry.currentChapterIndex;
-    if (selected != null && selected >= 0 && selected < entry.chapters.length) {
-      return selected;
-    }
-    return entry.chapters.isEmpty ? -1 : entry.chapters.length - 1;
-  }
+  /// 新读者从哪一章开始（[mangaInitialChapterIndex]）。
+  static int initialChapterIndex(OnlineMangaLibraryEntry entry) =>
+      mangaInitialChapterIndex(entry);
 
-  /// 「继续阅读」落到哪一章。
-  ///
-  /// 优先取**最近读过且没读完**的那一章（`manga_chapter_states.updatedAt` 最大
-  /// 且 `readAt == null`）；全读完了就落到它之后的下一话；一次没读过就走
-  /// [initialChapterIndex]。这比直接用 `currentChapterIndex` 准：那个字段只记
-  /// 「最后一次选了哪章」，用户在作品页点开一章看了两眼退出来，它也会被改写。
+  /// 「继续阅读」落到哪一章（[continueMangaChapterIndex]）。这比直接用
+  /// `currentChapterIndex` 准：那个字段只记「最后一次选了哪章」，用户在作品页点开
+  /// 一章看了两眼退出来，它也会被改写。[target] 见 [MangaResumeTarget]。
   static int resumeChapterIndex(
     OnlineMangaLibraryEntry entry,
-    Map<String, MangaChapterStateRow> states,
-  ) {
-    if (entry.chapters.isEmpty) return -1;
-    int bestIndex = -1;
-    int bestUpdatedAt = -1;
-    for (int index = 0; index < entry.chapters.length; index++) {
-      final MangaChapterStateRow? state = states[entry.chapters[index].key];
-      if (state == null) continue;
-      if (state.updatedAt > bestUpdatedAt) {
-        bestUpdatedAt = state.updatedAt;
-        bestIndex = index;
-      }
-    }
-    if (bestIndex < 0) return initialChapterIndex(entry);
-    final MangaChapterStateRow best = states[entry.chapters[bestIndex].key]!;
-    if (best.readAt == null) return bestIndex;
-    // 最近那章已读完 → 往「更新」的方向走一话（列表是新→旧，所以是 -1）。
-    // 已经是最新一话就停在原地，让用户看到自己读到头了。
-    return bestIndex > 0 ? bestIndex - 1 : bestIndex;
-  }
+    Map<String, MangaChapterStateRow> states, {
+    MangaResumeTarget target = MangaResumeTarget.furthestProgress,
+  }) => continueMangaChapterIndex(entry, states, target: target);
 
   static String _chaptersJson(List<OnlineMangaChapter> chapters) =>
       jsonEncode(<Map<String, Object?>>[
@@ -476,28 +471,17 @@ class OnlineMangaLibraryService {
     await temporary.rename(target.path);
   }
 
-  /// 按魔数定封面扩展名；不是 PNG / WebP / GIF / JPEG 返回 null（调用方不落盘）。
-  static String? _imageExtension(List<int> bytes) {
-    if (bytes.length >= 8 &&
-        bytes[0] == 0x89 &&
-        bytes[1] == 0x50 &&
-        bytes[2] == 0x4e &&
-        bytes[3] == 0x47) {
-      return '.png';
-    }
-    if (bytes.length >= 12 &&
-        String.fromCharCodes(bytes.skip(8).take(4)) == 'WEBP') {
-      return '.webp';
-    }
-    if (bytes.length >= 6 && String.fromCharCodes(bytes.take(3)) == 'GIF') {
-      return '.gif';
-    }
-    if (bytes.length >= 3 &&
-        bytes[0] == 0xff &&
-        bytes[1] == 0xd8 &&
-        bytes[2] == 0xff) {
-      return '.jpg';
-    }
-    return null;
-  }
+  /// 按魔数定封面扩展名（与页图同一判据 [mangaImageContentType]）；不是 PNG / WebP /
+  /// GIF / JPEG / AVIF 返回 null（调用方不落盘）。
+  static String? _imageExtension(List<int> bytes) =>
+      switch (mangaImageContentType(
+        bytes is Uint8List ? bytes : Uint8List.fromList(bytes),
+      )) {
+        'image/png' => '.png',
+        'image/webp' => '.webp',
+        'image/gif' => '.gif',
+        'image/jpeg' => '.jpg',
+        'image/avif' => '.avif',
+        _ => null,
+      };
 }

@@ -12,10 +12,16 @@ enum HomeTab {
   manga,
   video,
 
+  /// 音乐库（`ModuleId.music`）。
+  music,
+
   /// 浏览（Mihon 的 Browse：来源 / 扩展 / 发现 / 下载），2026-09-27 由「下载」改名。
   browse,
   dictionaries,
+
+  /// 复习（Fushi 内置 SRS）。模块默认关闭，见 `ModuleId.srs`。
+  srs,
   games,
-  browserExtension,
+  web,
   settings,
 }

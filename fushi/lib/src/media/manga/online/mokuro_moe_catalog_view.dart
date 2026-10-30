@@ -1,7 +1,12 @@
 import 'dart:async';
 
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
+import 'package:fushi/src/pages/implementations/reader_fushi_history_page.dart'
+    show kShelfBookCardAspectRatio;
+import 'package:fushi/src/utils/components/shelf_cover_material.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/src/utils/net/app_http_image.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:fushi_core/fushi_core.dart';
@@ -9,9 +14,12 @@ import 'package:fushi/src/media/manga/download/manga_download_service.dart';
 import 'package:fushi/src/media/manga/online/mokuro_moe_client.dart';
 import 'package:fushi/src/media/manga/online/mokuro_moe_volume_downloader.dart';
 import 'package:fushi/src/media/media_search_text.dart';
+import 'package:fushi/src/media/online/online_source_error_text.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi_engine/sync/ttu_filename.dart';
 import 'package:fushi/utils.dart';
+import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
+import 'package:fushi/src/utils/components/fushi_search.dart';
 
 /// mokuro.moe 目录内容体的外层可见状态快照：标题与动作按钮所需的最小事实。
 ///
@@ -146,7 +154,8 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
   final Set<String> _existingBookKeys = <String>{};
 
   /// 当前系列的卷任务行（按卷名），任务表一变整体重取。
-  Map<String, MangaDownloadJobRow> _jobs = const <String, MangaDownloadJobRow>{};
+  Map<String, MangaDownloadJobRow> _jobs =
+      const <String, MangaDownloadJobRow>{};
   StreamSubscription<void>? _jobsWatch;
 
   /// 已处理过完成的任务 id（防重复计 ✓/重复 toast——任务表每次变更都全量扫）。
@@ -160,11 +169,13 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
   @override
   void initState() {
     super.initState();
-    _enabled = widget.enabledOverride ??
+    _enabled =
+        widget.enabledOverride ??
         (widget.clientOverride != null && widget.downloadsOverride != null
             ? true
             : ref.read(appProvider).mangaOnlineCatalogEnabled);
-    _client = widget.clientOverride ??
+    _client =
+        widget.clientOverride ??
         MokuroMoeClient(
           baseUrl: ref.read(appProvider).mangaOnlineCatalogBaseUrl,
         );
@@ -230,8 +241,8 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
   Future<void> _refreshJobs({bool seedHistory = false}) async {
     final MokuroMoeSeries? series = _series;
     if (series == null) return;
-    final Map<String, MangaDownloadJobRow> jobs =
-        await _downloads.mokuroJobsForSeries(series.name);
+    final Map<String, MangaDownloadJobRow> jobs = await _downloads
+        .mokuroJobsForSeries(series.name);
     if (!mounted || _series?.name != series.name) return;
     bool completed = false;
     for (final MangaDownloadJobRow job in jobs.values) {
@@ -275,11 +286,15 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
         _library = library;
         _loading = false;
       });
-    } catch (e) {
+    } on Object catch (e, stack) {
       if (!mounted) return;
       setState(() {
         _loading = false;
-        _loadError = '$e';
+        _loadError = describeOnlineSourceError(
+          e,
+          logTag: 'MokuroMoeCatalogView.library',
+          stackTrace: stack,
+        );
       });
     }
   }
@@ -288,14 +303,16 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
     final List<EpubBookMeta> rows = await widget.db.getEpubBookMetas();
     if (!mounted) return;
     setState(() {
-      _existingBookKeys
-          .addAll(rows.map((EpubBookMeta r) => sanitizeTtuFilename(r.title)));
+      _existingBookKeys.addAll(
+        rows.map((EpubBookMeta r) => sanitizeTtuFilename(r.title)),
+      );
     });
   }
 
   /// 一卷的入库身份 key（与导入侧 [MokuroMoeVolumeDownloader.volumeTitle] 同源）。
   String _volumeKey(String volume) => sanitizeTtuFilename(
-      MokuroMoeVolumeDownloader.volumeTitle(_series?.name ?? '', volume));
+    MokuroMoeVolumeDownloader.volumeTitle(_series?.name ?? '', volume),
+  );
 
   bool _isImported(String volume) =>
       _existingBookKeys.contains(_volumeKey(volume));
@@ -305,7 +322,10 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
     // G6：与库页搜索同一归一化口径——「ふぇいと」要能命中「フェイト」，此前
     // 裸 toLowerCase 子串让同一批日文标题在书架能搜到、在这里搜不到。
     return filterByMediaSearch(
-        all, _query, (MokuroMoeSeries s) => <String>[s.name]);
+      all,
+      _query,
+      (MokuroMoeSeries s) => <String>[s.name],
+    );
   }
 
   /// 打开一个系列的卷列表。
@@ -342,11 +362,15 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
         );
         _seriesLoading = false;
       });
-    } catch (e) {
+    } on Object catch (e, stack) {
       if (!mounted || token != _seriesToken) return;
       setState(() {
         _seriesLoading = false;
-        _seriesError = '$e';
+        _seriesError = describeOnlineSourceError(
+          e,
+          logTag: 'MokuroMoeCatalogView.series',
+          stackTrace: stack,
+        );
       });
     }
   }
@@ -428,9 +452,16 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
         volumeNames: volumes,
       );
     } on Object catch (error, stack) {
-      ErrorLogService.instance.log('MokuroMoeCatalogView.enqueue', error, stack);
+      ErrorLogService.instance.log(
+        'MokuroMoeCatalogView.enqueue',
+        error,
+        stack,
+      );
       if (mounted) {
-        FushiToast.show(msg: '$error', severity: ToastSeverity.error);
+        FushiToast.show(
+          msg: describeOnlineSourceError(error),
+          severity: ToastSeverity.error,
+        );
       }
       return;
     }
@@ -455,10 +486,7 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Icon(
-                Icons.public_off_outlined,
-                color: tokens.surfaces.onVariant,
-              ),
+              FushiIcon(FushiIcons.globeOff, color: tokens.surfaces.onVariant),
               SizedBox(height: tokens.spacing.gap),
               Text(
                 t.manga_online_source_disabled,
@@ -477,6 +505,22 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
     if (!widget.embedded) return body;
     // 页面语境：正文撑满可用空间，series 阶段在底部画动作行。
     final bool hasActions = _stage == _CatalogStage.series;
+    // 系列阶段只是本视图的内部状态、不是路由：不拦的话页头返回箭头 / 系统返回
+    // 会直接 pop 整个目录页（回到发现页），而不是先回到系列列表。
+    return PopScope(
+      canPop: !hasActions,
+      onPopInvokedWithResult: (bool didPop, Object? _) {
+        if (!didPop) backToBrowse();
+      },
+      child: _buildEmbeddedBody(tokens, body, hasActions),
+    );
+  }
+
+  Widget _buildEmbeddedBody(
+    FushiDesignTokens tokens,
+    Widget body,
+    bool hasActions,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
@@ -510,18 +554,15 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          OutlinedButton(
-            onPressed: backToBrowse,
-            child: Text(t.back),
-          ),
+          FushiOutlinedButton(onPressed: backToBrowse, child: Text(t.back)),
           SizedBox(width: tokens.spacing.gap),
-          OutlinedButton(
+          FushiOutlinedButton(
             key: const ValueKey<String>('mokuro_moe_download_all'),
             onPressed: _selectableVolumes().isEmpty ? null : enqueueAll,
             child: Text(t.manga_online_download_all),
           ),
           SizedBox(width: tokens.spacing.gap),
-          FilledButton(
+          FushiFilledButton(
             onPressed: _selectedVolumes.isEmpty ? null : enqueueSelected,
             child: Text(t.manga_online_download_selected),
           ),
@@ -534,15 +575,10 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        TextField(
+        FushiSearchBar(
           controller: _searchCtrl,
-          decoration: InputDecoration(
-            hintText: t.manga_online_search_hint,
-            prefixIcon: const Icon(Icons.search),
-            isDense: true,
-            border: const OutlineInputBorder(),
-          ),
-          onChanged: (String value) => setState(() => _query = value),
+          hintText: t.manga_online_search_hint,
+          onQueryChanged: (String value) => setState(() => _query = value),
         ),
         SizedBox(height: tokens.spacing.gap),
         Expanded(child: _buildBrowseBody(tokens)),
@@ -551,44 +587,48 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
   }
 
   Widget _buildBrowseBody(FushiDesignTokens tokens) {
+    // 2026-10 体验优化：加载 / 错误态统一 adaptiveIndicator +
+    // FushiPlaceholderMessage，重试统一 FilledButton.icon。
     if (_loading) {
-      return const Center(child: CircularProgressIndicator());
+      return const FushiLoadingView();
     }
     final String? error = _loadError;
     if (error != null) {
-      return Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text(
-              '${t.manga_online_load_failed}: $error',
-              style: tokens.type.listSubtitle
-                  .copyWith(color: Theme.of(context).colorScheme.error),
-              textAlign: TextAlign.center,
-              maxLines: 4,
-              overflow: TextOverflow.ellipsis,
-            ),
-            SizedBox(height: tokens.spacing.gap),
-            OutlinedButton(
-              onPressed: _loadLibrary,
-              child: Text(t.retry),
-            ),
-          ],
+      return FushiPlaceholderMessage(
+        icon: FushiIcons.cloudOff,
+        tone: FushiPlaceholderTone.error,
+        message: t.manga_online_load_failed,
+        detail: error,
+        action: FushiFilledButton.icon(
+          onPressed: _loadLibrary,
+          icon: const FushiIcon(FushiIcons.refresh),
+          label: Text(t.retry),
         ),
       );
     }
     final List<MokuroMoeSeries> series = _filteredSeries;
     // 千余系列：GridView.builder 懒构建。
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 128,
-        childAspectRatio: 0.58,
-        crossAxisSpacing: 8,
-        mainAxisSpacing: 8,
+    // 2026-10 动效重做：首屏系列错峰淡入，滚动带出的瞬间出现。
+    // 与漫画库同一套条目材质（光面书皮）与卡槽比例（2026-10-25 库页定版）；卡
+    // 槽宽上限取书架最窄档 150，文字块（两行标题 + 副行）才放得下。
+    return ShelfCoverMaterialScope(
+      material: ShelfCoverMaterial.glossyBook,
+      child: FushiEntranceScope(
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 150,
+            childAspectRatio: kShelfBookCardAspectRatio,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+          ),
+          itemCount: series.length,
+          itemBuilder: (BuildContext context, int index) =>
+              FushiStaggeredEntrance(
+                index: index,
+                child: _buildSeriesTile(tokens, series[index]),
+              ),
+        ),
       ),
-      itemCount: series.length,
-      itemBuilder: (BuildContext context, int index) =>
-          _buildSeriesTile(tokens, series[index]),
     );
   }
 
@@ -596,39 +636,34 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
     // 无封面占位：MD3 tokens 面色（overlay = 最高 tonal 层），不裸引 scheme 角色。
     final Widget placeholder = ColoredBox(
       color: tokens.surfaces.overlay,
-      child: Icon(Icons.menu_book_outlined, color: tokens.surfaces.onVariant),
+      child: FushiIcon(FushiIcons.books, color: tokens.surfaces.onVariant),
     );
-    return InkWell(
-      borderRadius: tokens.radii.cardRadius,
-      onTap: () => unawaited(_openSeries(series)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            child: ClipRRect(
-              borderRadius: tokens.radii.cardRadius,
-              child: series.cover.isEmpty
-                  ? placeholder
-                  : Image(
-                      image: AppCachedHttpImage(
-                        _client.coverUrl(series.cover),
-                        cacheKey: 'mokuromoe|${series.name}',
+    return FushiHoverLift(
+      builder: (BuildContext context, bool _) => shelfCoverCard(
+        padding: EdgeInsets.all(tokens.spacing.rowVertical),
+        onTap: () => unawaited(_openSeries(series)),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              child: ShelfCoverFrame(
+                child: series.cover.isEmpty
+                    ? placeholder
+                    : Image(
+                        image: AppCachedHttpImage(
+                          _client.coverUrl(series.cover),
+                          cacheKey: 'mokuromoe|${series.name}',
+                        ),
+                        fit: BoxFit.cover,
+                        errorBuilder:
+                            (BuildContext _, Object __, StackTrace? ___) =>
+                                placeholder,
                       ),
-                      fit: BoxFit.cover,
-                      errorBuilder:
-                          (BuildContext _, Object __, StackTrace? ___) =>
-                              placeholder,
-                    ),
+              ),
             ),
-          ),
-          SizedBox(height: tokens.spacing.gap / 2),
-          Text(
-            series.name,
-            style: tokens.type.metadata,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-          ),
-        ],
+            ShelfCardMeta(title: series.name),
+          ],
+        ),
       ),
     );
   }
@@ -640,7 +675,9 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         if (_hasUnfinishedJobs) _buildQueuePanel(tokens),
-        if (series.volumes.isNotEmpty && !_seriesLoading && _seriesError == null)
+        if (series.volumes.isNotEmpty &&
+            !_seriesLoading &&
+            _seriesError == null)
           _buildSelectAllHeader(tokens),
         Expanded(child: _buildSeriesBody(tokens, series)),
       ],
@@ -648,21 +685,21 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
   }
 
   bool get _hasUnfinishedJobs => _jobs.values.any(
-        (MangaDownloadJobRow job) =>
-            job.status == MangaDownloadJobStatus.queued ||
-            job.status == MangaDownloadJobStatus.running,
-      );
+    (MangaDownloadJobRow job) =>
+        job.status == MangaDownloadJobStatus.queued ||
+        job.status == MangaDownloadJobStatus.running,
+  );
 
   /// 卷列表头：全选复选框（只作用于还能选的卷）。
   Widget _buildSelectAllHeader(FushiDesignTokens tokens) {
     final List<String> selectable = _selectableVolumes();
-    final bool allSelected = selectable.isNotEmpty &&
-        selectable.every(_selectedVolumes.contains);
+    final bool allSelected =
+        selectable.isNotEmpty && selectable.every(_selectedVolumes.contains);
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: tokens.spacing.gap),
       child: Row(
         children: <Widget>[
-          Checkbox(
+          FushiCheckbox(
             key: const ValueKey<String>('mokuro_moe_select_all'),
             value: allSelected,
             onChanged: selectable.isEmpty ? null : (_) => toggleSelectAll(),
@@ -679,48 +716,53 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
   /// 什么都不画的空白，用户无从判断发生了什么。
   Widget _buildSeriesBody(FushiDesignTokens tokens, MokuroMoeSeries series) {
     if (_seriesLoading) {
-      return const Center(child: CircularProgressIndicator());
+      return const FushiLoadingView();
     }
     final String? error = _seriesError;
     if (error != null) {
-      return Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text(
-              '${t.manga_online_detail_load_failed}: $error',
-              style: tokens.type.listSubtitle
-                  .copyWith(color: Theme.of(context).colorScheme.error),
-              textAlign: TextAlign.center,
-              maxLines: 4,
-              overflow: TextOverflow.ellipsis,
-            ),
-            SizedBox(height: tokens.spacing.gap),
-            OutlinedButton(
-              onPressed: () => unawaited(_openSeries(series)),
-              child: Text(t.retry),
-            ),
-          ],
+      return FushiPlaceholderMessage(
+        icon: FushiIcons.cloudOff,
+        tone: FushiPlaceholderTone.error,
+        message: t.manga_online_detail_load_failed,
+        detail: error,
+        action: FushiFilledButton.icon(
+          onPressed: () => unawaited(_openSeries(series)),
+          icon: const FushiIcon(FushiIcons.refresh),
+          label: Text(t.retry),
         ),
       );
     }
     if (series.volumes.isEmpty) {
-      return Center(
-        child: Text(
-          t.manga_online_series_empty,
-          style: tokens.type.listSubtitle,
-          textAlign: TextAlign.center,
-        ),
+      return FushiPlaceholderMessage(
+        icon: FushiIcons.books,
+        message: t.manga_online_series_empty,
       );
     }
-    return ListView.builder(
-      itemCount: series.volumes.length,
-      itemBuilder: (BuildContext context, int index) =>
-          _buildVolumeRow(tokens, series.volumes[index]),
+    // M3E 分段卡片列表（首尾大圆角、行间 2）+ 首屏错峰进场。
+    final int count = series.volumes.length;
+    return FushiEntranceScope(
+      child: ListView.builder(
+        itemCount: count,
+        itemBuilder: (BuildContext context, int index) =>
+            FushiStaggeredEntrance(
+              index: index,
+              child: _buildVolumeRow(
+                tokens,
+                series.volumes[index],
+                index,
+                count,
+              ),
+            ),
+      ),
     );
   }
 
-  Widget _buildVolumeRow(FushiDesignTokens tokens, MokuroMoeVolume volume) {
+  Widget _buildVolumeRow(
+    FushiDesignTokens tokens,
+    MokuroMoeVolume volume,
+    int index,
+    int count,
+  ) {
     final MokuroMoeSeries? series = _series;
     final bool imported = _isImported(volume.name);
     final MangaDownloadJobRow? job = series == null ? null : _jobs[volume.name];
@@ -729,28 +771,32 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
         : switch (job?.status) {
             MangaDownloadJobStatus.running => _progressLabel(job!),
             MangaDownloadJobStatus.queued => t.download_status_queued,
-            MangaDownloadJobStatus.failed =>
-              '${t.manga_online_failed}: ${job!.lastError ?? ''}',
+            // lastError 是持久化的原始异常串，只给归一后的短句。
+            MangaDownloadJobStatus.failed => _failedLabel(job!.lastError),
             _ => null,
           };
     final Widget? subtitle = subtitleText == null
         ? null
-        : Text(subtitleText,
+        : Text(
+            subtitleText,
             style: tokens.type.listSubtitle,
             maxLines: 1,
-            overflow: TextOverflow.ellipsis);
+            overflow: TextOverflow.ellipsis,
+          );
     final bool selectable = !imported && !_isPending(volume.name);
-    // 手排行（MD3 tokens 间距），不走 ListTile（MD3 守卫：普通 chrome 统一走
-    // 共享 tokens 布局）。
-    return InkWell(
-      borderRadius: tokens.radii.controlRadius,
+    // 分段卡片行（FushiGroupedListItem：M3E 首尾大圆角 + 悬停/选中形变；
+    // Apple inset grouped），选中卷 = secondaryContainer 底。
+    return FushiGroupedListItem(
+      index: index,
+      count: count,
+      selected: _selectedVolumes.contains(volume.name),
       onTap: !selectable
           ? null
           : () => setState(() {
-                if (!_selectedVolumes.remove(volume.name)) {
-                  _selectedVolumes.add(volume.name);
-                }
-              }),
+              if (!_selectedVolumes.remove(volume.name)) {
+                _selectedVolumes.add(volume.name);
+              }
+            }),
       child: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: tokens.spacing.gap,
@@ -759,19 +805,22 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
         child: Row(
           children: <Widget>[
             if (imported)
-              Icon(Icons.check_circle, color: tokens.surfaces.primary)
+              FushiIcon(
+                FushiIcons.filled(FushiIcons.success),
+                color: tokens.surfaces.primary,
+              )
             else
-              Checkbox(
+              FushiCheckbox(
                 value: _selectedVolumes.contains(volume.name),
                 onChanged: !selectable
                     ? null
                     : (bool? checked) => setState(() {
-                          if (checked == true) {
-                            _selectedVolumes.add(volume.name);
-                          } else {
-                            _selectedVolumes.remove(volume.name);
-                          }
-                        }),
+                        if (checked == true) {
+                          _selectedVolumes.add(volume.name);
+                        } else {
+                          _selectedVolumes.remove(volume.name);
+                        }
+                      }),
               ),
             SizedBox(width: tokens.spacing.gap),
             Expanded(
@@ -796,6 +845,14 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
 
   /// 执行中任务的进度文案：CBZ 阶段是字节、导入阶段是页——任务行只存比值，
   /// 这里统一显示成「x / y」。
+  /// 卷下载失败文案：原因为空时只给「失败」，否则拼上归一后的短句（原始串
+  /// 留在任务行里供诊断）。
+  static String _failedLabel(String? lastError) {
+    final String raw = lastError?.trim() ?? '';
+    if (raw.isEmpty) return t.manga_online_failed;
+    return '${t.manga_online_failed}: ${describeOnlineSourceErrorText(raw)}';
+  }
+
   static String _progressLabel(MangaDownloadJobRow job) => job.pagesTotal > 0
       ? t.manga_ocr_wizard_page_progress(
           done: job.pagesDone,
@@ -805,8 +862,8 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
 
   static double? _progressValue(MangaDownloadJobRow? job) =>
       job == null || job.pagesTotal <= 0
-          ? null
-          : (job.pagesDone / job.pagesTotal).clamp(0.0, 1.0);
+      ? null
+      : (job.pagesDone / job.pagesTotal).clamp(0.0, 1.0);
 
   /// 本系列任务的内联进度面板（有未完成任务时显示）：`x/y · 当前卷进度` +
   /// 进度条 + 取消当前卷。与「下载」页任务 tab 同源（同一张任务表）。
@@ -820,9 +877,11 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
       }
     }
     final int finished = jobs
-        .where((MangaDownloadJobRow job) =>
-            job.status != MangaDownloadJobStatus.queued &&
-            job.status != MangaDownloadJobStatus.running)
+        .where(
+          (MangaDownloadJobRow job) =>
+              job.status != MangaDownloadJobStatus.queued &&
+              job.status != MangaDownloadJobStatus.running,
+        )
         .length;
     final String label = running == null
         ? t.download_status_queued
@@ -848,14 +907,14 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
               if (cancelTarget != null)
                 FushiIconButton(
                   tooltip: t.dialog_cancel,
-                  icon: Icons.close,
+                  icon: FushiIcons.close,
                   size: 18,
                   onTap: () => unawaited(_downloads.cancel(cancelTarget.jobId)),
                 ),
             ],
           ),
           SizedBox(height: tokens.spacing.gap / 2),
-          LinearProgressIndicator(value: _progressValue(running)),
+          FushiLinearProgressIndicator(value: _progressValue(running)),
         ],
       ),
     );

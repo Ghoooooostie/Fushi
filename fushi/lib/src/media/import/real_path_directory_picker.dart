@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, immutable, kDebugMode, visibleForTesting;
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart'
     show MissingPluginException, PlatformException;
 import 'package:fushi/src/models/app_model.dart';
@@ -15,6 +15,11 @@ import 'package:path/path.dart' as p;
 /// 真应用集成测试的目录选择结果注入；release 构建恒忽略。
 @visibleForTesting
 String? debugRealDirectoryPathOverride;
+
+/// 集成测试是否注入了目录选择结果（release 构建恒 false）。给要绕开平台专用选择器
+/// （如 iOS 来源书签选择器，BUG-3697）、改走 [pickRealDirectoryPath] 吃注入值的调用方用。
+bool get isRealDirectoryPathOverridden =>
+    kDebugMode && debugRealDirectoryPathOverride != null;
 
 /// 「选一个文件夹并返回它的**真实文件系统绝对路径**」的统一入口。
 ///
@@ -68,7 +73,7 @@ Future<String?> pickRealDirectoryPath({
   if (!granted) {
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(t.folder_picker_permission_required)),
+        FushiSnackBar(content: Text(t.folder_picker_permission_required)),
       );
     }
     return null;

@@ -1,7 +1,10 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/media/video/video_apple_chrome.dart';
 import 'package:fushi/src/utils/components/fushi_design_tokens.dart';
+import 'package:fushi/src/utils/components/glass/fushi_glass_controls.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 
 const Key videoVolumePopoverFrameKey =
     ValueKey<String>('video-volume-popover-frame');
@@ -26,12 +29,16 @@ class VideoVolumePopoverCard extends StatelessWidget {
     required this.tooltip,
     required this.onToggleMute,
     required this.onChanged,
+    this.maximum = 100.0,
     this.frameKey = videoVolumePopoverFrameKey,
     this.sliderKey = videoVolumePopoverSliderKey,
   });
 
   final double width;
   final double value;
+
+  /// 滑条上限（百分比）：音量上限设置（100 / 150 / 200），超过 100 即放大。
+  final double maximum;
   final double uiScale;
   final ColorScheme colorScheme;
   final IconData icon;
@@ -44,7 +51,8 @@ class VideoVolumePopoverCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double scale = math.max(0.1, uiScale);
-    final double clamped = value.clamp(0.0, 100.0).toDouble();
+    final double max = math.max(100.0, maximum);
+    final double clamped = value.clamp(0.0, max).toDouble();
     final double controlHeight = 40 * scale;
     return Material(
       color: Colors.transparent,
@@ -73,10 +81,10 @@ class VideoVolumePopoverCard extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Tooltip(
+                  FushiTooltip(
                     message: tooltip,
-                    child: IconButton(
-                      icon: Icon(icon),
+                    child: FushiIconButtonControl(
+                      icon: FushiIcon(icon),
                       iconSize: 20 * scale,
                       color: colorScheme.primary,
                       padding: EdgeInsets.zero,
@@ -101,11 +109,11 @@ class VideoVolumePopoverCard extends StatelessWidget {
                             overlayRadius: 14.0 * scale,
                           ),
                         ),
-                        child: Slider(
+                        child: FushiSlider(
                           key: sliderKey,
                           value: clamped,
                           min: 0,
-                          max: 100,
+                          max: max,
                           onChanged: onChanged,
                         ),
                       ),
@@ -118,6 +126,10 @@ class VideoVolumePopoverCard extends StatelessWidget {
                       color: colorScheme.onSurface,
                       fontSize: 12 * scale,
                       fontWeight: FontWeight.w600,
+                      // 百分比随拖动逐帧变化：等宽数字。
+                      fontFeatures: const <FontFeature>[
+                        FontFeature.tabularFigures(),
+                      ],
                     ),
                   ),
                 ],
@@ -143,9 +155,14 @@ class VideoLevelHudCard extends StatelessWidget {
     required this.shadowColor,
     required this.frameKey,
     required this.progressKey,
+    this.maximum = 100.0,
   });
 
   final double value;
+
+  /// 电平满格对应的值：亮度恒 100；音量是音量上限（150 / 200 时 100% 不再满格，
+  /// 数字照实显示放大后的百分比）。
+  final double maximum;
   final double uiScale;
   final IconData icon;
   final AlignmentGeometry alignment;
@@ -159,9 +176,13 @@ class VideoLevelHudCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double scale = math.max(0.1, uiScale);
-    final double clamped = value.clamp(0.0, 100.0).toDouble();
+    final double max = math.max(100.0, maximum);
+    final double clamped = value.clamp(0.0, max).toDouble();
     final double rowHeight = 24 * scale;
     final double progressHeight = 4 * scale;
+    if (videoAppleChrome(context)) {
+      return _buildApple(context, scale: scale, fraction: clamped / max);
+    }
     return Align(
       alignment: alignment,
       child: SafeArea(
@@ -199,7 +220,7 @@ class VideoLevelHudCard extends StatelessWidget {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        Icon(
+                        FushiIcon(
                           icon,
                           color: textColor,
                           size: 20 * scale,
@@ -227,9 +248,9 @@ class VideoLevelHudCard extends StatelessWidget {
                     height: progressHeight,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(999),
-                      child: LinearProgressIndicator(
+                      child: FushiLinearProgressIndicator(
                         key: progressKey,
-                        value: clamped / 100.0,
+                        value: clamped / max,
                         minHeight: progressHeight,
                         backgroundColor: textColor.withValues(alpha: 0.24),
                         valueColor: AlwaysStoppedAnimation<Color>(textColor),
@@ -238,6 +259,64 @@ class VideoLevelHudCard extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// Apple（iOS 26 系统音量 / 亮度 HUD）：一枚竖向深色液态玻璃胶囊，里面一条
+  /// 自下而上填充的白色电平条，底部是 SF 字形。不显示百分比数字——与系统 HUD
+  /// 一样只靠填充高度表达电平。[frameKey] / [progressKey] 仍挂在外框与填充上。
+  Widget _buildApple(
+    BuildContext context, {
+    required double scale,
+    required double fraction,
+  }) {
+    final double width = 48 * scale;
+    return Align(
+      alignment: alignment,
+      child: SafeArea(
+        minimum: minimum,
+        child: SizedBox(
+          key: frameKey,
+          width: width,
+          height: 168 * scale,
+          child: VideoGlassSurface(
+            enabled: true,
+            radius: width / 2,
+            padding: EdgeInsets.fromLTRB(
+              8 * scale,
+              10 * scale,
+              8 * scale,
+              10 * scale,
+            ),
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(width / 2),
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: <Widget>[
+                        const ColoredBox(color: Color(0x38FFFFFF)),
+                        Align(
+                          alignment: Alignment.bottomCenter,
+                          child: FractionallySizedBox(
+                            key: progressKey,
+                            widthFactor: 1,
+                            heightFactor: fraction,
+                            child: const ColoredBox(color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 8 * scale),
+                FushiIcon(icon, color: Colors.white, size: 20 * scale),
+              ],
             ),
           ),
         ),

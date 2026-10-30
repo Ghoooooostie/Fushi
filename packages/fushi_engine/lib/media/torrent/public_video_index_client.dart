@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'package:fushi_engine/media/torrent/anime_release_descriptor.dart';
+import 'package:fushi_engine/media/torrent/download_timeouts.dart';
 import 'package:fushi_engine/media/torrent/public_trackers.dart';
 import 'package:fushi_engine/utils/net/app_http.dart';
 
@@ -82,16 +83,28 @@ String normalizePublicVideoIndexInfoHash(String raw) {
   return '';
 }
 
-/// apibay（The Pirate Bay 官方 JSON API）客户端。零配置、无 API key。
+/// apibay 式 JSON 搜索接口（`GET {base}/q.php?q=&cat=`，回 JSON 数组）客户端。
+/// 无 API key；**不内置地址**，[baseUrl] 来自用户添加的 BT 站。
 ///
 /// 分类由调用方给（`cat=201/207` 电影、`205/208` 剧集）：**分类是这条链路唯一的
 /// 内容边界**——不传分类就是全站搜，成人分区（5xx）会直接混进电影结果里。
 class ApibayClient {
-  ApibayClient({this.baseUrl = 'https://apibay.org', http.Client? client})
-      : _client = client ?? createAppHttpIoClient();
+  ApibayClient({
+    required this.baseUrl,
+    http.Client? client,
+    this.requestTimeout = kDownloadDiscoveryTimeout,
+  }) : _client = client ?? createAppHttpIoClient();
 
   final String baseUrl;
   final http.Client _client;
+
+  /// 单次请求（建连 + 收完响应）的总时限，与 Nyaa 同一契约（BUG-2933）。
+  ///
+  /// `connectionTimeout` 只管建连：连上之后服务端不回包，`get` 永远不完成。
+  /// 资源注册表把各家 provider `Future.wait` 在一起，一家挂住整轮搜索就跟着
+  /// 挂住，「AI 下视频」停在「正在找资源」不动。调用链上没有外层超时，时限
+  /// 只能落在 client 上。
+  final Duration requestTimeout;
 
   /// 按关键词搜索。网络错误 / 非 200 / 响应不是 JSON 数组一律**抛出**，由
   /// provider 归入 `failures`——与 Nyaa 同款契约，绝不把故障伪装成「没搜到」。
@@ -112,7 +125,7 @@ class ApibayClient {
           'cat': category.toString(),
         },
       );
-      final http.Response res = await _client.get(uri);
+      final http.Response res = await _client.get(uri).timeout(requestTimeout);
       if (res.statusCode != 200) {
         throw http.ClientException('apibay HTTP ${res.statusCode}', uri);
       }
@@ -131,13 +144,37 @@ class ApibayClient {
     return results;
   }
 
+  /// 添加 BT 站时的格式探测（`bt_site_probe.dart`）：用 [query] 全站搜一次
+  /// （`cat=0`），响应必须是 apibay 形状的 JSON 数组——非空、首项带 `info_hash`
+  /// 与 `name`（无结果时 apibay 也回一条 `id=0` 的哨兵行，形状相同）。不符合
+  /// 一律抛 [FormatException]；网络错误 / 非 200 原样抛。
+  Future<void> verifyEndpoint(String query) async {
+    final Uri uri = Uri.parse(baseUrl).replace(
+      path: '/q.php',
+      queryParameters: <String, String>{'q': query, 'cat': '0'},
+    );
+    final http.Response res = await _client.get(uri).timeout(requestTimeout);
+    if (res.statusCode != 200) {
+      throw http.ClientException('HTTP ${res.statusCode}', uri);
+    }
+    final dynamic decoded = jsonDecode(utf8.decode(res.bodyBytes));
+    if (decoded is! List ||
+        decoded.isEmpty ||
+        decoded.first is! Map ||
+        !(decoded.first as Map).containsKey('info_hash') ||
+        !(decoded.first as Map).containsKey('name')) {
+      throw const FormatException('not an apibay-style search response');
+    }
+  }
+
   PublicVideoIndexTorrent? _parse(Map<dynamic, dynamic> entry, int category) {
     // 「没有结果」不是空数组：apibay 返回一条 id=0 / name="No results returned"
     // 的哨兵行。不认它就会把哨兵当成一个种子推给用户。
     final String id = '${entry['id'] ?? ''}'.trim();
     if (id.isEmpty || id == '0') return null;
-    final String infoHash =
-        normalizePublicVideoIndexInfoHash('${entry['info_hash'] ?? ''}');
+    final String infoHash = normalizePublicVideoIndexInfoHash(
+      '${entry['info_hash'] ?? ''}',
+    );
     if (infoHash.isEmpty) return null;
     final String title = '${entry['name'] ?? ''}'.trim();
     if (title.isEmpty) return null;
@@ -163,18 +200,23 @@ class ApibayClient {
   void close() => _client.close();
 }
 
-/// Knaben 聚合索引 API 客户端。零配置、无 API key。
+/// Knaben 式聚合索引 API（`POST {base}` JSON 查询，回 `{hits: [...]}`）客户端。
+/// 无 API key；**不内置地址**，[baseUrl] 来自用户添加的 BT 站。
 ///
 /// 与 apibay 互补：它把 1337x / EZTV / TPB 等站的索引聚在一起，同一个片子换个发布
 /// 组也能命中。分类走 Knaben 自己的层级 id（`3000000` 电影 / `2000000` 剧集）。
 class KnabenClient {
   KnabenClient({
-    this.baseUrl = 'https://api.knaben.org/v1',
+    required this.baseUrl,
     http.Client? client,
+    this.requestTimeout = kDownloadDiscoveryTimeout,
   }) : _client = client ?? createAppHttpIoClient();
 
   final String baseUrl;
   final http.Client _client;
+
+  /// 单次请求总时限，契约同 [ApibayClient.requestTimeout]。
+  final Duration requestTimeout;
 
   Future<List<PublicVideoIndexTorrent>> search(
     String query, {
@@ -184,22 +226,24 @@ class KnabenClient {
     final String trimmed = query.trim();
     if (trimmed.isEmpty) throw ArgumentError.value(query, 'query');
     final Uri uri = Uri.parse(baseUrl);
-    final http.Response res = await _client.post(
-      uri,
-      headers: const <String, String>{'Content-Type': 'application/json'},
-      body: jsonEncode(<String, Object?>{
-        'query': trimmed,
-        // `search_type: score` 会把 query 当权重提示而不是过滤条件——实测搜
-        // "inception" 返回的全是当季无关热门。`100%` 才是「标题必须含关键词」。
-        'search_type': '100%',
-        'search_field': 'title',
-        'categories': categories,
-        'hide_xxx': true,
-        'order_by': 'seeders',
-        'order_direction': 'desc',
-        'size': limit,
-      }),
-    );
+    final http.Response res = await _client
+        .post(
+          uri,
+          headers: const <String, String>{'Content-Type': 'application/json'},
+          body: jsonEncode(<String, Object?>{
+            'query': trimmed,
+            // `search_type: score` 会把 query 当权重提示而不是过滤条件——实测搜
+            // "inception" 返回的全是当季无关热门。`100%` 才是「标题必须含关键词」。
+            'search_type': '100%',
+            'search_field': 'title',
+            'categories': categories,
+            'hide_xxx': true,
+            'order_by': 'seeders',
+            'order_direction': 'desc',
+            'size': limit,
+          }),
+        )
+        .timeout(requestTimeout);
     if (res.statusCode != 200) {
       throw http.ClientException('knaben HTTP ${res.statusCode}', uri);
     }
@@ -223,19 +267,43 @@ class KnabenClient {
     return results;
   }
 
+  /// 添加 BT 站时的格式探测：POST 一条最小查询，响应必须是带 `hits` 数组的
+  /// JSON 对象（空数组也算——接口形状对就行）。不符合抛 [FormatException]。
+  Future<void> verifyEndpoint(String query) async {
+    final Uri uri = Uri.parse(baseUrl);
+    final http.Response res = await _client
+        .post(
+          uri,
+          headers: const <String, String>{'Content-Type': 'application/json'},
+          body: jsonEncode(<String, Object?>{
+            'query': query,
+            'search_type': '100%',
+            'search_field': 'title',
+            'hide_xxx': true,
+            'size': 1,
+          }),
+        )
+        .timeout(requestTimeout);
+    if (res.statusCode != 200) {
+      throw http.ClientException('HTTP ${res.statusCode}', uri);
+    }
+    final dynamic decoded = jsonDecode(utf8.decode(res.bodyBytes));
+    if (decoded is! Map || decoded['hits'] is! List) {
+      throw const FormatException('not a knaben-style search response');
+    }
+  }
+
   PublicVideoIndexTorrent? _parse(Map<dynamic, dynamic> entry) {
-    final String infoHash =
-        normalizePublicVideoIndexInfoHash('${entry['hash'] ?? ''}');
+    final String infoHash = normalizePublicVideoIndexInfoHash(
+      '${entry['hash'] ?? ''}',
+    );
     if (infoHash.isEmpty) return null;
     final String title = '${entry['title'] ?? ''}'.trim();
     if (title.isEmpty) return null;
     final Object? magnetRaw = entry['magnetUrl'];
     final String magnet = magnetRaw is String && magnetRaw.startsWith('magnet:')
         ? magnetRaw
-        : buildPublicVideoIndexMagnet(
-            infoHash: infoHash,
-            displayName: title,
-          );
+        : buildPublicVideoIndexMagnet(infoHash: infoHash, displayName: title);
     final Object? detailsRaw = entry['details'];
     final Object? dateRaw = entry['date'];
     return PublicVideoIndexTorrent(
@@ -247,10 +315,12 @@ class KnabenClient {
       sizeBytes: int.tryParse('${entry['bytes'] ?? ''}'),
       completed: int.tryParse('${entry['grabs'] ?? ''}') ?? 0,
       publishedAt: dateRaw is String ? DateTime.tryParse(dateRaw) : null,
-      category:
-          entry['category'] is String ? entry['category'] as String : null,
-      detailsUrl:
-          detailsRaw is String && detailsRaw.isNotEmpty ? detailsRaw : null,
+      category: entry['category'] is String
+          ? entry['category'] as String
+          : null,
+      detailsUrl: detailsRaw is String && detailsRaw.isNotEmpty
+          ? detailsRaw
+          : null,
     );
   }
 

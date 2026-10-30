@@ -36,6 +36,7 @@ void main() {
   const String rightUrl = 'fushi.local/OEBPS/img/right.png';
 
   String htmlWith({String keyBridgeScript = ''}) => buildSpreadPageHtml(
+        navigationGeneration: 1,
         leftUrl: leftUrl,
         rightUrl: rightUrl,
         swipeDistThreshold: 44,
@@ -62,6 +63,7 @@ void main() {
 
     test('横扫桥直连既有 onSwipe，阈值来自入参而非另立默认', () {
       final String html = buildSpreadPageHtml(
+        navigationGeneration: 1,
         leftUrl: leftUrl,
         rightUrl: rightUrl,
         swipeDistThreshold: 77,
@@ -85,7 +87,7 @@ void main() {
     test('spread 脚本真跑：滚轮方向 / 横扫阈值 / 合成 click 抑制（行为级）', () {
       final String payload = jsonEncode(<String, String>{'html': htmlWith()});
       final Directory temp =
-          Directory.systemTemp.createTempSync('hibiki-spread-input-js-');
+          Directory.systemTemp.createTempSync('fushi-spread-input-js-');
       final File payloadFile = File('${temp.path}/payload.json')
         ..writeAsStringSync(payload);
       late final ProcessResult result;

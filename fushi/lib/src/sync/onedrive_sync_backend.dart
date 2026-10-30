@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:http/http.dart' as http;
+import 'package:fushi/src/sync/onedrive_upload_session.dart';
 import 'package:fushi/src/sync/pkce_oauth.dart';
 import 'package:fushi/src/sync/pkce_oauth_backend_mixin.dart';
 import 'package:fushi/src/sync/sync_asset_range_reader.dart';
@@ -17,6 +18,19 @@ import 'package:fushi/src/utils/misc/error_log_service.dart';
 import 'package:fushi_engine/sync/ttu_filename.dart';
 import 'package:fushi/src/sync/sync_file_ref.dart';
 import 'package:fushi_engine/sync/ttu_models.dart';
+
+/// Graph `driveItem` → [AssetEntry]。
+///
+/// 修改时间取**顶层** `lastModifiedDateTime`（服务端写入时刻，UTC `Z`），不取
+/// `fileSystemInfo.lastModifiedDateTime`——后者是客户端可自报的文件系统时间，不是服务器时间。
+AssetEntry oneDriveItemToAssetEntry(Map<String, dynamic> item) => AssetEntry(
+      id: item['id'] as String,
+      name: item['name'] as String,
+      isFolder: item.containsKey('folder'),
+      sizeBytes: (item['size'] as num?)?.toInt(),
+      modifiedAt: syncIsoTimestampMs(item['lastModifiedDateTime']),
+      revision: OneDriveSyncBackend._contentRevisionOf(item),
+    );
 
 /// OneDrive sync backend via Microsoft Graph API.
 ///
@@ -354,9 +368,21 @@ class OneDriveSyncBackend extends SyncBackend
     required String folderId,
     required String fileName,
     required File file,
-    void Function(double progress)? onProgress,
+    SyncTransferProgress? onProgress,
   }) async {
     final fileLength = await file.length();
+    if (fileLength > kOneDriveSimpleUploadMaxBytes) {
+      // 大文件（有声书包 / 视频 / 词典包）走可续传上传会话：单次长 PUT 一断就整份
+      // 作废、下轮同步从头重传（BUG-3690）。
+      final String uploadUrl = await _createUploadSession(folderId, fileName);
+      await uploadFileToOneDriveSession(
+        client: await obtainSyncHttpClient(),
+        uploadUrl: Uri.parse(uploadUrl),
+        file: file,
+        onProgress: onProgress,
+      );
+      return;
+    }
     final request = http.StreamedRequest(
       'PUT',
       Uri.parse(
@@ -374,7 +400,7 @@ class OneDriveSyncBackend extends SyncBackend
   Future<void> downloadContentFile({
     required String fileId,
     required File destination,
-    void Function(double progress)? onProgress,
+    SyncTransferProgress? onProgress,
   }) async {
     // Get the download URL from item metadata.
     final metaResp = await _graphGet('/me/drive/items/$fileId');
@@ -426,14 +452,28 @@ class OneDriveSyncBackend extends SyncBackend
   @override
   Future<List<AssetEntry>> listChildren(String namespaceId) async {
     final items = await _listChildren('/me/drive/items/$namespaceId/children');
-    return items
-        .map((item) => AssetEntry(
-              id: item['id'] as String,
-              name: item['name'] as String,
-              isFolder: item.containsKey('folder'),
-              sizeBytes: (item['size'] as num?)?.toInt(),
-            ))
-        .toList();
+    return items.map(oneDriveItemToAssetEntry).toList();
+  }
+
+  /// driveItem 的内容版本标记：优先内容哈希（个人版给 quickXorHash / sha1Hash，
+  /// 商业版给 quickXorHash），都没有时退到 `cTag`——Graph 规定内容一变 cTag 就变
+  /// （元数据改动只动 eTag）。文件夹没有内容，返回 null。
+  static String? _contentRevisionOf(Map<String, dynamic> item) {
+    final Object? file = item['file'];
+    if (file is! Map<String, dynamic>) return null;
+    final Object? hashes = file['hashes'];
+    if (hashes is Map<String, dynamic>) {
+      for (final String key in const <String>[
+        'quickXorHash',
+        'sha256Hash',
+        'sha1Hash',
+      ]) {
+        final Object? value = hashes[key];
+        if (value is String && value.isNotEmpty) return '$key:$value';
+      }
+    }
+    final Object? cTag = item['cTag'];
+    return cTag is String && cTag.isNotEmpty ? 'cTag:$cTag' : null;
   }
 
   @override
@@ -563,6 +603,24 @@ class OneDriveSyncBackend extends SyncBackend
       bytes,
       contentType: 'application/json',
     );
+  }
+
+  /// `createUploadSession`：覆盖同名文件（与简单上传 `PUT :/content` 同语义）。
+  Future<String> _createUploadSession(String folderId, String fileName) async {
+    final resp = await _graphPost(
+      '/me/drive/items/$folderId:/${Uri.encodeComponent(fileName)}:/createUploadSession',
+      <String, dynamic>{
+        'item': <String, dynamic>{
+          '@microsoft.graph.conflictBehavior': 'replace',
+        },
+      },
+    );
+    final json = jsonDecode(resp.body) as Map<String, dynamic>;
+    final String? uploadUrl = json['uploadUrl'] as String?;
+    if (uploadUrl == null || uploadUrl.isEmpty) {
+      throw SyncBackendError('createUploadSession returned no uploadUrl');
+    }
+    return uploadUrl;
   }
 
   Future<void> _deleteItem(String fileId) async {

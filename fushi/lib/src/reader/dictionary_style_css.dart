@@ -2,10 +2,8 @@
 ///
 /// 与 `dictionary_font_css.dart` / `dictionary_language_css.dart` 同范式：UI 设置
 /// → 生成 CSS 文本 → 经既有 `globalDictCSS` / `customDictCSS` 通道下发。popup.js
-/// 一行不用改，三个消费面（app 内 / Android 独立弹窗 / 浏览器扩展）自动吃到。
+/// 一行不用改，三个消费面（app 内 / Android `:popup` 弹窗 / 浏览器扩展）自动吃到。
 library;
-
-import 'dart:convert';
 
 import 'package:fushi/src/dictionary/dict_style_rules.dart';
 
@@ -55,32 +53,6 @@ Set<String> dictionariesWithStyleRules(List<DictStyleRule> rules) => <String>{
           rule.dictionaryName!,
     };
 
-/// 把规则表编译成给**非 Dart 消费方**读的产物缓存（JSON）。
-///
-/// 形状 `{"global": "...", "byDictionary": {"词典名": "..."}}`。两份都要——只存
-/// 全局的话，per-dictionary 规则会在 Android 独立弹窗里静默失效，而用户在设置里
-/// 明明看见自己设过。
-///
-/// 消费方职责：把 `global` 拼在 `global_dict_css` **之前**，把 `byDictionary[名]`
-/// 拼在 `custom_dict_css[名]` **之前**（手写在后 → 手写优先），与 Dart 侧的
-/// [mergeGeneratedAndAuthoredCss] 语义一致。
-String encodeCompiledDictStyleCss(List<DictStyleRule> rules) {
-  final Map<String, String> byDictionary = <String, String>{};
-  for (final String name in dictionariesWithStyleRules(rules)) {
-    final String css = buildPerDictionaryStyleCss(rules, name);
-    if (css.trim().isEmpty) continue;
-    byDictionary[name] = css;
-  }
-  final String global = buildGlobalDictStyleCss(rules);
-  // 全空就返回空串：与「从未设过」在偏好层同形，消费方一个 if 就能短路，
-  // 不用先 jsonDecode 再发现里面啥也没有。
-  if (global.trim().isEmpty && byDictionary.isEmpty) return '';
-  return jsonEncode(<String, Object>{
-    'global': global,
-    'byDictionary': byDictionary,
-  });
-}
-
 /// 把编译产物与用户手写 CSS 拼成最终下发文本。
 ///
 /// 顺序即优先级：产物在前、手写在后。同特异度下后者胜出，用户手写永远能覆盖
@@ -124,10 +96,13 @@ String _declarations(DictStyleProps props) {
     decls.add('font-size: ${_num(props.fontScale!)}em !important');
   }
   if (props.cornerRadius != null) {
+    // 只写 border-radius，**不改 display**。旧实现顺手塞了一条
+    // `display: inline-block !important`（理由是「inline 元素没有盒子、圆角无效」——
+    // 这个前提是错的：行内盒的背景 / 边框照样按 border-radius 画圆角）。它把词条卡
+    // `.entry`、释义正文 `.glossary-content`、词典名行这些块级部位全部压成收缩包裹的
+    // 行内块：多列卡片里释义宽度塌成一两个字，正文被挤成竖排一字一行（用户 10-09
+    // 「词典样式开圆角后样式改炸」两张截图）。圆角是纯外观属性，不该动布局。
     decls.add('border-radius: ${_num(props.cornerRadius!)}px !important');
-    // 圆角只对 inline 元素（词头/标签）无效——它们没有盒子。给个最小 padding
-    // 让背景色+圆角在 inline 上也看得见，否则用户设了圆角却「没反应」。
-    decls.add('display: inline-block !important');
   }
   return decls.join('; ');
 }

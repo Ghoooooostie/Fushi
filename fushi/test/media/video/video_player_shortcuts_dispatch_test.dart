@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart' show kBackMouseButton;
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart' hide ModifierKey;
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:fushi/src/media/video/video_player_shortcuts.dart';
 import 'package:fushi/src/shortcuts/input_binding.dart'
-    show ModifierKey, MouseBinding, ShortcutBindingSet;
+    show InputBindingActivator, ModifierKey, MouseBinding, ShortcutBindingSet;
 import 'package:fushi/src/shortcuts/mouse_binding_dispatch.dart';
 import 'package:fushi/src/shortcuts/shortcut_action.dart';
 import 'package:fushi/src/shortcuts/shortcut_registry.dart';
@@ -32,6 +32,7 @@ VideoPlayerShortcutActions _recordingVideoActions(List<String> log) {
     nextFrame: () => record('nextFrame'),
     screenshot: () => record('screenshot'),
     screenshotSubtitled: () => record('screenshotSubtitled'),
+    ocrFrame: () => record('ocrFrame'),
     toggleFullscreen: () => record('toggleFullscreen'),
     toggleMiniWindow: () => record('toggleMiniWindow'),
     toggleMiniChrome: () => record('toggleMiniChrome'),
@@ -47,6 +48,9 @@ VideoPlayerShortcutActions _recordingVideoActions(List<String> log) {
     toggleFavoriteSentence: () => record('toggleFavoriteSentence'),
     replayCurrentSubtitle: () => record('replayCurrentSubtitle'),
     replayPreviousSubtitle: () => record('replayPreviousSubtitle'),
+    copyCurrentSubtitle: () => record('copyCurrentSubtitle'),
+    copyCurrentSecondarySubtitle: () => record('copyCurrentSecondarySubtitle'),
+    toggleLoopCurrentSubtitle: () => record('toggleLoopCurrentSubtitle'),
     previousChapter: () => record('previousChapter'),
     nextChapter: () => record('nextChapter'),
     openSubtitleAlign: () => record('openSubtitleAlign'),
@@ -193,7 +197,10 @@ void main() {
         registry,
         _recordingVideoActions(<String>[]),
       );
-      final bool hasBareEnter = map.keys.whereType<SingleActivator>().any(
+      expect(map, isNotEmpty);
+      final bool hasBareEnter = map.keys
+          .map((ShortcutActivator a) => (a as InputBindingActivator).exact)
+          .any(
             (SingleActivator a) =>
                 a.trigger == LogicalKeyboardKey.enter &&
                 !a.control &&

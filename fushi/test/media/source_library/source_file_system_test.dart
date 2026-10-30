@@ -82,10 +82,15 @@ void main() {
       expect(entries.every((SourceFileEntry e) => !e.isDirectory), isTrue);
     });
 
-    test('listFiles 不存在的目录返回空列表（不抛）', () async {
-      final List<SourceFileEntry> entries =
-          await fs.listFiles(p.join(tmp.path, 'nope'));
-      expect(entries, isEmpty);
+    // 契约反转（Tz04dfBf2f）：以前回空列表，扫描根读不到（iOS 沙盒外未授权路径、
+    // 盘没挂上）时来源被记成「0 个媒体、无错误」。现在必须抛，由扫描器落 lastScanError。
+    test('listFiles 不存在 / 读不到的目录抛 FileSystemException（带路径）', () async {
+      final String missing = p.join(tmp.path, 'nope');
+      await expectLater(
+        fs.listFiles(missing),
+        throwsA(isA<FileSystemException>()
+            .having((FileSystemException e) => e.path, 'path', missing)),
+      );
     });
 
     test('listSiblingNames 返回同目录所有文件 basename（含自身，供 sidecar 匹配）', () async {
@@ -238,7 +243,7 @@ void main() {
           reason: 'source_types/ 单文件目录已并入 media/sources/，禁止复活');
 
       // source_library/ 域内禁止声明任何 MediaSource* 前缀类型（class/mixin/enum/
-      // typedef/extension type）。MediaSourceRow 只能来自 hibiki_core 的 drift
+      // typedef/extension type）。MediaSourceRow 只能来自 fushi_core 的 drift
       // 生成层（DB 契约），消费侧一律用 SourceLibraryRow 别名。
       final RegExp forbiddenDecl = RegExp(
         r'^(?:abstract |base |final |sealed |interface )*'

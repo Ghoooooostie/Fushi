@@ -10,8 +10,8 @@ import 'package:fushi_engine/sync/remote_source_note.dart';
 
 /// TODO-1000（BUG-530）：浏览器扩展 / 外部工具的两个远端 API（查词 `/api/lookup/dictionary`
 /// + 制卡 `/api/mine`）的**共享 handler 逻辑**。FushiSyncServer（互联/同步 host）与
-/// YomitanApiServer（外部工具 API surface）都复用这里，保证扩展契约是**单一真相源**——
-/// 历史 bug 正是两个 server 契约分裂：扩展被自动配置指向 YomitanApiServer（19633），但
+/// FushiApiServer（外部工具 API surface）都复用这里，保证扩展契约是**单一真相源**——
+/// 历史 bug 正是两个 server 契约分裂：扩展被自动配置指向 FushiApiServer（19633），但
 /// 这两个端点当时只在 FushiSyncServer 实现，导致 Netflix 查词/制卡全断。
 ///
 /// 纯逻辑（已解析的 body Map → 调注入的窄接口 service → 返回响应 Map），不碰 shelf/HTTP，
@@ -125,6 +125,7 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
   RemoteThemeColorsProvider? themeColorsProvider,
   List<String> Function()? audioSourcesProvider,
   bool Function()? autoReadOnLookupProvider,
+  bool Function()? dictionaryUnifiedStyleProvider,
   String? Function()? extensionBuildProvider,
   RemotePopupDictionaryCss Function()? popupDictionaryCssProvider,
   String? Function()? appLocaleProvider,
@@ -144,6 +145,10 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
   // 响应下发，扩展据此在渲染后播首条词的发音；不新增扩展本地开关，免得两处语义漂开。
   // null（未注入，如 sync host）时不带该字段（向后兼容）。
   final bool? autoReadOnLookup = autoReadOnLookupProvider?.call();
+  // 「统一词典样式」（popup_dictionary_unified_style）：app 内弹窗由 popup_settings_injection
+  // 注入 `window.__fushiDictUnifiedStyle`，扩展跑同一份 popup.js 却拿不到它。随查词响应
+  // 下发同一个偏好，扩展落到同名全局；字段缺失（未注入 / 旧 app）扩展按关处理，与 app 默认一致。
+  final bool? dictionaryUnifiedStyle = dictionaryUnifiedStyleProvider?.call();
   final String? extensionBuild = extensionBuildProvider?.call();
   // app 当前 UI 语言（Slang languageTag，如 'en' / 'zh-CN' / 'ja'）随查词响应下发，
   // 扩展弹窗 / 面板据此选文案；缺失（未注入，如 sync host）时扩展回落浏览器语言。
@@ -166,6 +171,8 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
     if (theme != null) 'theme': theme,
     if (audioSources != null) 'audioSources': audioSources,
     if (autoReadOnLookup != null) 'autoReadOnLookup': autoReadOnLookup,
+    if (dictionaryUnifiedStyle != null)
+      'dictionaryUnifiedStyle': dictionaryUnifiedStyle,
     if (extensionBuild != null) 'extensionBuild': extensionBuild,
     if (appLocale != null) 'appLocale': appLocale,
     if (popupCss != null) 'dictionaryStylesRevision': popupCss.revision,
@@ -198,22 +205,19 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
   // BUG-1525：浏览器扩展只消费 popupJson + bestLength。若实现方提供窄快路径，
   // 不再先构造完整 DictionaryEntry（其中每条 glossary 都会额外 jsonEncode），再把
   // 同一份 FFI 结果遍历一次生成 popupJson。record=true 必须保留完整结果供历史使用。
-  if (popupOnly && !record && lookup is FushiRemotePopupLookupService) {
-    final FushiRemotePopupLookupService popupLookup =
-        lookup as FushiRemotePopupLookupService;
+  // 请求方的查词语言（可选）：中文 → host 开简体 → 繁體回落。缺省 = 旧行为，按 host
+  // 本机当前查词语言；旧 host 不认该字段，同样是旧行为。
+  final String? language = remoteLookupLanguageOf(body);
+  if (popupOnly && !record && hasPopupFastPath(lookup, language: language)) {
     final RemoteDictionaryPopupLookup? popup =
-        popupTiming != null && popupLookup is FushiRemoteTimedPopupLookupService
-            ? await popupLookup.searchDictionaryPopupWithTiming(
-                term: term,
-                wildcards: wildcards,
-                maximumTerms: maximumTerms,
-                timing: popupTiming,
-              )
-            : await popupLookup.searchDictionaryPopup(
-                term: term,
-                wildcards: wildcards,
-                maximumTerms: maximumTerms,
-              );
+        await searchRemoteDictionaryPopupForRequest(
+      lookup,
+      term: term,
+      wildcards: wildcards,
+      maximumTerms: maximumTerms,
+      language: language,
+      timing: popupTiming,
+    );
     return <String, dynamic>{
       'type': 'dictionaryResult',
       'result': popup == null
@@ -223,10 +227,12 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
       ...envelope,
     };
   }
-  final DictionarySearchResult? result = await lookup.searchDictionary(
+  final DictionarySearchResult? result = await searchRemoteDictionaryForRequest(
+    lookup,
     term: term,
     wildcards: wildcards,
     maximumTerms: maximumTerms,
+    language: language,
   );
   if (result != null && history != null && record) {
     history.recordHistory(result);

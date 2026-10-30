@@ -1,7 +1,13 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'package:fushi/src/media/drag_drop/drop_surface_scope.dart';
+import 'package:fushi/src/utils/components/fushi_floating_chrome.dart';
+import 'package:fushi/src/utils/components/fushi_header_search.dart'
+    show FushiHeaderSearchKeys, fushiVisibleHeaderSearch;
+import 'package:fushi/src/utils/components/section_visibility.dart';
+import 'package:fushi/src/utils/components/glass/fushi_apple_scroll_chrome.dart'
+    show fushiNotificationFromVisibleSubtree;
 import 'package:fushi/utils.dart';
 
 /// 库页视图种类：一个顶层 tab 内部的几个平级视图。
@@ -32,8 +38,18 @@ enum MediaLibraryViewKind {
   /// 两个独立视图，不在这里。
   sources,
 
-  /// 本媒体域的设置。正文投影自全局 settings schema，避免复制第二套配置。
-  settings,
+  /// 「媒体服务器」：用户自己的 Kavita / Audiobookshelf 服务器列表（书 / 漫画域），
+  /// 点进某台浏览。与视频域的「媒体服务器」分区共用同一个列表组件。只在配了可用
+  /// 服务器时出现，增删服务器时会在视图列表中间出现或消失，所以壳按 **kind**
+  /// 而不是按下标记住选中项（见 `didUpdateWidget`）。
+  ///
+  /// 原先的 `kavita` / `audiobookshelf` 两个视图并进了这里；用户自定义页签顺序里
+  /// 存的旧 id（`kavita` / `audiobookshelf`）按「存储里有但此刻不存在的忽略」规则
+  /// 自然失效，不需要迁移。
+  mediaServers,
+
+  // 「设置」视图已移除（2026-10-09 用户拍板）：它只是全局「设置 › <本域>」分类的
+  // 投影，与全局设置、阅读时的设置面板重复。各域设置一律从全局设置进入。
 }
 
 /// 一个视图的声明：显示名 + 内容构建器。
@@ -47,11 +63,17 @@ class MediaLibraryViewSpec {
     required this.kind,
     required this.label,
     required this.builder,
+    this.handlesChromeInset = false,
   });
 
   final MediaLibraryViewKind kind;
   final String label;
   final Widget Function(BuildContext context, Widget navigation) builder;
+
+  /// 视图自己的主滚动视图把 [FushiFloatingChromeInset] 加成顶部内边距（内容滚到
+  /// 壳的浮动工具栏底下，如书架）。false 时壳把整个视图下移工具栏高度
+  /// （[FushiFloatingChromeInsetPadding]），视图不必知道工具栏的存在。
+  final bool handlesChromeInset;
 }
 
 /// 向壳内子树暴露「切到某个视图」的能力（[InheritedWidget]，不改 builder 签名）。
@@ -103,8 +125,12 @@ class MediaLibraryShellScope extends InheritedWidget {
 /// - 视图**惰性构建 + 保活**（Offstage + TickerMode），与顶层 tab 的做法同源
 ///   （`home_page.dart` 的 `_visitedKeepAliveTabs`）：没访问过的视图不构建（在线目录
 ///   不会因为壳挂载就发网络请求），访问过的切走仍保留滚动位置/搜索词，切回不重建。
-/// - 导航条只交给**当前**视图。分段条内部要注册一个方向焦点停靠点，同一个
-///   focusIdPrefix 注册两次会互相打架，所以隐藏的视图拿到的是空占位（它们本就不可见）。
+/// - 顶部与视频库同一套 M3E 浮动工具栏（2026-10-06「书架 / 漫画 / 游戏库与视频库
+///   顶部结构统一」，[FushiFloatingChromeBar]）：外壳大标题下面一行是贴合内容宽的
+///   分区页签浮动胶囊 + 右侧同高的悬浮动作组。各视图照旧用 [FushiPageHeader] 声明
+///   自己的动作，壳挂一个自己的 [FushiShellActionsSlot]，页头把动作登记进来、由
+///   浮动动作组画出；所以视图拿到的 `navigation` 一律是空占位（页签由壳画出）。
+///   往下滚收起、往上滚 / 回顶 / 切视图弹回（[FushiFloatingChromeController]）。
 class MediaLibraryShell extends StatefulWidget {
   const MediaLibraryShell({
     required this.views,
@@ -125,6 +151,15 @@ class MediaLibraryShell extends StatefulWidget {
 class _MediaLibraryShellState extends State<MediaLibraryShell> {
   int _currentIndex = 0;
 
+  /// 「在线源」组上次停留的视图（来源 / 扩展），点组页签回到这里。
+  MediaLibraryViewKind _lastOnline = MediaLibraryViewKind.onlineSources;
+
+  /// 来源 / 扩展同属「在线源」组（2026-10-14 用户：视频库顶栏分组后「在线源
+  /// 这块其他模块也该跟进」）：顶栏只占一段，组内由二级胶囊切换。
+  static bool _isOnline(MediaLibraryViewKind kind) =>
+      kind == MediaLibraryViewKind.onlineSources ||
+      kind == MediaLibraryViewKind.extensions;
+
   /// 已访问过的视图下标（惰性构建 + 保活，见类文档）。
   final Set<int> _visited = <int>{0};
 
@@ -135,9 +170,29 @@ class _MediaLibraryShellState extends State<MediaLibraryShell> {
     debugLabel: 'media-library-sections',
   );
 
+  /// 浮动工具栏的显隐（滚动驱动）。
+  final FushiFloatingChromeController _chrome = FushiFloatingChromeController();
+
+  /// 视图页头登记动作的槽：由浮动动作组画出（见类注释）。
+  final FushiShellActionsSlot _actionsSlot = FushiShellActionsSlot();
+
+  @override
+  void dispose() {
+    _chrome.dispose();
+    _actionsSlot.dispose();
+    super.dispose();
+  }
+
+  bool _onScroll(ScrollNotification notification) {
+    // 隐藏的保活视图后台加载 / 横滚卡片行发来的通知不算（后者 controller 内按轴过滤）。
+    if (!fushiNotificationFromVisibleSubtree(notification)) return false;
+    return _chrome.handleScrollNotification(notification);
+  }
+
   void _select(MediaLibraryViewKind kind) {
-    final int index = widget.views
-        .indexWhere((MediaLibraryViewSpec spec) => spec.kind == kind);
+    final int index = widget.views.indexWhere(
+      (MediaLibraryViewSpec spec) => spec.kind == kind,
+    );
     if (index < 0) return;
     // 「回到壳」的导航所有权收在这一处：切视图发生在壳里，壳上面压着的路由不弹掉
     // 用户就什么都看不见。以本壳自己的路由为界一次弹到底，与调用方压了几层无关
@@ -147,15 +202,53 @@ class _MediaLibraryShellState extends State<MediaLibraryShell> {
       Navigator.of(context).popUntil((Route<dynamic> above) => above == route);
     }
     if (index == _currentIndex) return;
+    // 换了视图，新页面从顶部开始：工具栏回来。
+    _chrome.resetToTop();
     setState(() {
       _currentIndex = index;
       _visited.add(index);
+      if (_isOnline(kind)) _lastOnline = kind;
     });
   }
 
   @override
   void didUpdateWidget(MediaLibraryShell oldWidget) {
     super.didUpdateWidget(oldWidget);
+    final List<MediaLibraryViewKind> oldKinds = <MediaLibraryViewKind>[
+      for (final MediaLibraryViewSpec spec in oldWidget.views) spec.kind,
+    ];
+    final List<MediaLibraryViewKind> newKinds = <MediaLibraryViewKind>[
+      for (final MediaLibraryViewSpec spec in widget.views) spec.kind,
+    ];
+    if (!listEquals(oldKinds, newKinds)) {
+      // 视图集合变了（在线源下线、Audiobookshelf 登录 / 登出）：选中项和「访问过」
+      // 的保活集合都是下标，下标会随中间那一项的出现 / 消失整体错位，必须按 kind
+      // 重新定位到新列表里。
+      final MediaLibraryViewKind? currentKind = _currentIndex < oldKinds.length
+          ? oldKinds[_currentIndex]
+          : null;
+      final Set<MediaLibraryViewKind> visitedKinds = <MediaLibraryViewKind>{
+        for (final int i in _visited)
+          if (i < oldKinds.length) oldKinds[i],
+      };
+      final int current = currentKind == null
+          ? -1
+          : newKinds.indexOf(currentKind);
+      _visited.clear();
+      if (current < 0) {
+        // 当前视图没了：回到第一个。
+        _currentIndex = 0;
+        _visited.add(0);
+        return;
+      }
+      _currentIndex = current;
+      for (final MediaLibraryViewKind kind in visitedKinds) {
+        final int index = newKinds.indexOf(kind);
+        if (index >= 0) _visited.add(index);
+      }
+      _visited.add(current);
+      return;
+    }
     // 视图集合变短（例如某域的在线源被下线）时把选中项拉回合法范围。
     if (_currentIndex >= widget.views.length) {
       _currentIndex = 0;
@@ -179,17 +272,14 @@ class _MediaLibraryShellState extends State<MediaLibraryShell> {
       );
     }
     final Widget navigation = _buildNavigation(views);
-    return MediaLibraryShellScope(
-      kinds: kinds,
-      select: _select,
+    final Widget sections = SectionSwipeNavigator<MediaLibraryViewKind>(
       // 触屏横滑切到相邻视图，序即 [views] 声明序（与分段条同一份真相）。
-      child: SectionSwipeNavigator<MediaLibraryViewKind>(
-        sections: <MediaLibraryViewKind>[
-          for (final MediaLibraryViewSpec spec in views) spec.kind,
-        ],
-        selected: views[_currentIndex].kind,
-        onSelect: _select,
-        child: Stack(
+      sections: <MediaLibraryViewKind>[
+        for (final MediaLibraryViewSpec spec in views) spec.kind,
+      ],
+      selected: views[_currentIndex].kind,
+      onSelect: _select,
+      child: Stack(
         children: <Widget>[
           for (int i = 0; i < views.length; i++)
             if (_visited.contains(i))
@@ -205,37 +295,159 @@ class _MediaLibraryShellState extends State<MediaLibraryShell> {
                   // 照样是 true —— 隐藏的书架仍会把拖入的文件夹当漫画导入。
                   // 判据与上面 `offstage:` 用的是同一个表达式，且写成回调、在 drop
                   // 落地那一刻求值。
-                  child: DropSurfaceScope(
-                    isActive: () => i == _currentIndex,
-                    child: views[i].builder(
-                      context,
-                      i == _currentIndex ? navigation : const SizedBox.shrink(),
+                  // 隐藏视图不参与焦点遍历与系统返回（HBK-AUDIT-017），判据同
+                  // `offstage:`。
+                  child: SectionVisibilityScope(
+                    visible: i == _currentIndex,
+                    child: DropSurfaceScope(
+                      isActive: () => i == _currentIndex,
+                      // 每个保活视图自己的主滚动控制器：共用 tab 外壳那一个会让
+                      // 多个主滚动视图附着同一控制器、Scrollbar 断言。
+                      child: SectionPrimaryScrollScope(
+                        child: _insetFor(
+                          views[i],
+                          // 页签由壳的浮动工具栏画出，视图页头的主位留空。
+                          views[i].builder(context, const SizedBox.shrink()),
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
         ],
+      ),
+    );
+    // 保留外壳给本 tab 的页面名（页头据它判断「标题已由外壳画出」），只把动作槽
+    // 换成壳自己的，动作改由浮动动作组画（与视频库外壳同构）。
+    return MediaLibraryShellScope(
+      kinds: kinds,
+      select: _select,
+      child: FushiShellTitleScope(
+        title: FushiShellTitleScope.maybeTitleOf(context) ?? '',
+        actionsSlot: _actionsSlot,
+        child: FushiHeaderSearchKeys(
+          // Ctrl+F / `/` 展开当前视图的页头搜索，展开时 Esc 先清空再收起
+          // （焦点在页签、动作或内容上都认）。
+          resolve: () => fushiVisibleHeaderSearch(_actionsSlot),
+          child: FushiFloatingChromeScope(
+            controller: _chrome,
+            // 工具栏叠在内容上，收起只滑出画面、不改内容视口高度（滚轮上下「回弹、
+            // 滚不动」的根因是收起改了视口高度，BUG-2975，见
+            // [FushiFloatingChromeOverlay]）。
+            child: FushiFloatingChromeOverlay(
+              chrome: FushiFloatingChromeBar(
+                tabs: navigation,
+                slot: _actionsSlot,
+              ),
+              child: NotificationListener<ScrollNotification>(
+                onNotification: _onScroll,
+                // 二级胶囊行叠在页面上、与顶栏同一份显隐（嵌套的
+                // [FushiFloatingChromeOverlay] 读同一个作用域，视图的顶部让位
+                // 自动累加两行）；不在「在线源」组时不占高度。
+                child: FushiFloatingChromeOverlay(
+                  chrome: _buildOnlineSubNavigation(context, views),
+                  child: sections,
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );
   }
 
+  /// 不自己处理工具栏让位的视图整体下移工具栏高度（见
+  /// [MediaLibraryViewSpec.handlesChromeInset]）。
+  Widget _insetFor(MediaLibraryViewSpec spec, Widget view) =>
+      spec.handlesChromeInset
+      ? view
+      : FushiFloatingChromeInsetPadding(child: view);
+
   Widget _buildNavigation(List<MediaLibraryViewSpec> views) {
     final MediaLibraryViewKind selected = views[_currentIndex].kind;
     // 分段条走库页共享的 [LibrarySectionTabs]（内含 [FushiAdjustableSegmented]：
     // 单个焦点停靠点，左右方向键原地切视图，手柄/键盘可达）。
+    final List<MediaLibraryViewSpec> online = <MediaLibraryViewSpec>[
+      for (final MediaLibraryViewSpec spec in views)
+        if (_isOnline(spec.kind)) spec,
+    ];
+    final bool groupOnline = online.length > 1;
+    // 「在线源」组页签的值是组内此刻 / 上次停留的视图，点它即回到那里；选中
+    // 判据仍是当前视图。
+    // 只在真的并组（≥2 个在线视图）时才用得到；没有在线视图的壳（iOS 合规门 /
+    // 宿主不可用）不能去取 `online.first`。
+    final MediaLibraryViewKind onlineValue = !groupOnline || _isOnline(selected)
+        ? selected
+        : online.any((MediaLibraryViewSpec spec) => spec.kind == _lastOnline)
+        ? _lastOnline
+        : online.first.kind;
     return LibrarySectionTabs<MediaLibraryViewKind>(
       key: _navigationKey,
       tabs: <LibrarySectionTab<MediaLibraryViewKind>>[
         for (final MediaLibraryViewSpec spec in views)
-          LibrarySectionTab<MediaLibraryViewKind>(
-            value: spec.kind,
-            label: spec.label,
-          ),
+          if (!groupOnline || !_isOnline(spec.kind))
+            LibrarySectionTab<MediaLibraryViewKind>(
+              value: spec.kind,
+              label: spec.label,
+              orderId: spec.kind.name,
+            )
+          else if (identical(spec, online.first))
+            LibrarySectionTab<MediaLibraryViewKind>(
+              value: onlineValue,
+              label: t.media_import_segment_sources,
+              // 组页签的值随组内停留的视图变，顺序身份认组。
+              orderId: 'online',
+            ),
       ],
       selected: selected,
       onChanged: _select,
       focusIdPrefix: widget.focusIdPrefix,
+      floating: true,
+      // 反馈 ndQ5eXLcqp：长按 / 右键页签栏自定义顶部页签顺序（书 / 漫画各一份）。
+      orderKey: widget.focusIdPrefix,
+    );
+  }
+
+  /// 「在线源」组的二级胶囊（来源 / 扩展）；不在该组或组内只有一个视图时为空。
+  Widget _buildOnlineSubNavigation(
+    BuildContext context,
+    List<MediaLibraryViewSpec> views,
+  ) {
+    final MediaLibraryViewKind selected = views[_currentIndex].kind;
+    final List<MediaLibraryViewSpec> online = <MediaLibraryViewSpec>[
+      for (final MediaLibraryViewSpec spec in views)
+        if (_isOnline(spec.kind)) spec,
+    ];
+    if (online.length < 2 || !_isOnline(selected)) {
+      return const SizedBox.shrink();
+    }
+    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
+    return Padding(
+      // 与顶栏胶囊、页面内容同一条页边；顶上 8 + 顶栏底边 4 = 两级页签之间 12
+      // （同浏览页二级内容域）。
+      padding: EdgeInsets.fromLTRB(
+        tokens.spacing.page,
+        tokens.spacing.gap,
+        tokens.spacing.page,
+        tokens.spacing.gap,
+      ),
+      child: Align(
+        alignment: AlignmentDirectional.centerStart,
+        child: LibrarySectionTabs<MediaLibraryViewKind>(
+          tabs: <LibrarySectionTab<MediaLibraryViewKind>>[
+            for (final MediaLibraryViewSpec spec in online)
+              LibrarySectionTab<MediaLibraryViewKind>(
+                value: spec.kind,
+                label: spec.label,
+              ),
+          ],
+          selected: selected,
+          onChanged: _select,
+          focusIdPrefix: '${widget.focusIdPrefix}-online',
+          secondary: true,
+          floating: true,
+        ),
+      ),
     );
   }
 }

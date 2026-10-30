@@ -10,7 +10,9 @@ import 'package:fushi/src/platform/platform_services.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi/src/media/sources/reader_fushi_source.dart';
 import 'package:fushi/src/models/app_model.dart';
+import 'package:fushi/src/profile/profile_deletion_cascade.dart';
 import 'package:fushi/src/profile/profile_repository.dart';
+import 'package:fushi/src/srs/srs_profile_cleanup.dart';
 
 /// Serializes Profile application with temporary draft persistence.
 ///
@@ -22,6 +24,12 @@ class ProfileDraftCoordinator {
   Future<void> _tail = Future<void>.value();
 
   Object get draftScope => _draftScope;
+
+  /// 正在切换去的目标配置（乐观标签）。它挂在这个跨重建存活的协调器上而不是视图
+  /// 模型里：切换的应用回调会失效 `ankiRepositoryProvider`，整个视图模型随之重建，
+  /// 新实例从零开始；目标放在这里，新旧实例都读得到、也都收得到清除通知。
+  final ValueNotifier<ProfileRow?> pendingSwitchTarget =
+      ValueNotifier<ProfileRow?>(null);
 
   void invalidateDrafts() {
     _draftScope = Object();
@@ -101,6 +109,7 @@ class ProfileUiState {
     this.mediaTypeBindings = const {},
     this.languageBindings = const {},
     this.isLoading = false,
+    this.pendingProfile,
   });
   final List<ProfileRow> profiles;
   final int activeProfileId;
@@ -112,12 +121,29 @@ class ProfileUiState {
   final Map<String, int> languageBindings;
   final bool isLoading;
 
+  /// 切换已发起、尚未结束时的目标配置；展示用，不代表已落库的激活配置。
+  final ProfileRow? pendingProfile;
+
   ProfileRow? get activeProfile {
     for (final p in profiles) {
       if (p.id == activeProfileId) return p;
     }
     return profiles.isNotEmpty ? profiles.first : null;
   }
+
+  /// 悬浮球「切换配置」胶囊等要展示的配置：切换中是目标配置（切换要做快照、应用、
+  /// 重载词典，是秒级的，期间不能还显示旧配置名），否则是激活配置；装载中为 null。
+  ProfileRow? get displayProfile =>
+      pendingProfile ?? (isLoading ? null : activeProfile);
+
+  ProfileUiState withPendingProfile(ProfileRow? pending) => ProfileUiState(
+        profiles: profiles,
+        activeProfileId: activeProfileId,
+        mediaTypeBindings: mediaTypeBindings,
+        languageBindings: languageBindings,
+        isLoading: isLoading,
+        pendingProfile: pending,
+      );
 
   ProfileUiState copyWith({
     List<ProfileRow>? profiles,
@@ -132,6 +158,7 @@ class ProfileUiState {
         mediaTypeBindings: mediaTypeBindings ?? this.mediaTypeBindings,
         languageBindings: languageBindings ?? this.languageBindings,
         isLoading: isLoading ?? this.isLoading,
+        pendingProfile: pendingProfile,
       );
 }
 
@@ -139,13 +166,44 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
   ProfileViewModel(
     this._repo,
     this._onProfileApplied,
-    this._profileDraftCoordinator,
-  ) : super(const ProfileUiState()) {
+    this._profileDraftCoordinator, {
+    ProfileDeletionCascade? deletionCascade,
+  })  : _deletionCascade = deletionCascade,
+        super(
+          ProfileUiState(
+            pendingProfile: _profileDraftCoordinator.pendingSwitchTarget.value,
+          ),
+        ) {
+    _profileDraftCoordinator.pendingSwitchTarget
+        .addListener(_onPendingSwitchTargetChanged);
     _load();
+    // BUG-3148：别处（互联下载 / 对端上传入站）写进 profiles 表的新配置，列表要跟着
+    // 刷新，不必等重启。只重读列表本身——激活 id 与绑定的切换都经本类，不受影响。
+    _profilesChanged = _repo.watchProfilesChanged().listen((_) {
+      unawaited(_refreshProfileList());
+    });
+  }
+
+  StreamSubscription<void>? _profilesChanged;
+
+  void _onPendingSwitchTargetChanged() {
+    if (!mounted) return;
+    state = state.withPendingProfile(
+      _profileDraftCoordinator.pendingSwitchTarget.value,
+    );
+  }
+
+  Future<void> _refreshProfileList() async {
+    final List<ProfileRow> profiles = await _repo.getAllProfiles();
+    if (!mounted) return;
+    state = state.copyWith(profiles: profiles);
   }
 
   @override
   void dispose() {
+    _profilesChanged?.cancel();
+    _profileDraftCoordinator.pendingSwitchTarget
+        .removeListener(_onPendingSwitchTargetChanged);
     _repo.snapshotCurrentSettings(state.activeProfileId).catchError((Object e) {
       debugPrint('[profile] snapshot on dispose failed: $e');
     });
@@ -155,6 +213,9 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
   final ProfileRepository _repo;
   final Future<void> Function() _onProfileApplied;
   final ProfileDraftCoordinator _profileDraftCoordinator;
+
+  /// 删 Profile 时连带清理的、主库外键级联管不到的数据（复习数据在 srs.db）；null = 不清（测试）。
+  final ProfileDeletionCascade? _deletionCascade;
 
   Future<T> _whileInvalidatingProfileDrafts<T>(
     Future<T> Function() action,
@@ -173,6 +234,7 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
       activeProfileId: activeId,
       mediaTypeBindings: bindings,
       languageBindings: languageBindings,
+      pendingProfile: _profileDraftCoordinator.pendingSwitchTarget.value,
     );
   }
 
@@ -185,35 +247,131 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
   /// `VideoBooks.language` / `Galgames.language` 等列的值），由 repository 归一。
   /// 拿不到就不传——绝不要拿全局默认内容语言来填（理由见 [ProfileRepository.
   /// resolveProfileId] 的文档）。
+  ///
+  /// [restoreFallback]：没有绑定命中时，是否回到「绑定切换前用户自己选的配置」。
+  /// 只有**打开一个具体条目**的入口（阅读器 / 视频 / 漫画开页、从库里启动 gal）
+  /// 传 true——换了条目，上一个条目的绑定配置才该退场。浏览器扩展查词、附着任意
+  /// 外部窗口这类旁路活动传 false：它们与正在看的条目并存，无绑定时绝不能把条目
+  /// 背后的配置换掉、也不能消费回退点（否则阅读器开着时在浏览器查一次词，书的
+  /// 词典 / 阅读器设置 / Anki 就全换成别的配置）。必填，逼每个新入口显式表态。
   Future<void> autoApplyBinding({
     String? bookUid,
     String? languageTag,
     required ProfileMediaKind mediaType,
+    required bool restoreFallback,
   }) async {
     try {
-      final int resolvedId = await _repo.resolveProfileId(
-        bookUid: bookUid,
-        languageTag: languageTag,
-        mediaType: mediaType,
+      // 读回退点 / 读激活 id / 写回退点 / 切换必须是一个原子操作：中间隔着 await，
+      // 并发的另一趟会读到旧状态（例如把刚记下的回退点清掉）。与手动切换 / 草稿
+      // 保存同一把锁；只有真的切换时才作废在飞的草稿。
+      await _profileDraftCoordinator._runProfileMutation(
+        (_ProfileDraftMutation mutation) => _applyBindingLocked(
+          mutation,
+          bookUid: bookUid,
+          languageTag: languageTag,
+          mediaType: mediaType,
+          restoreFallback: restoreFallback,
+        ),
       );
-      final int currentActiveId = await _repo.getActiveProfileId();
-      if (resolvedId != currentActiveId) {
-        await switchProfile(resolvedId);
-      }
     } catch (e, st) {
       debugPrint('[profile] auto-apply "${mediaType.dbValue}" binding failed '
           '(non-fatal): $e\n$st');
     }
   }
 
-  Future<void> switchProfile(int profileId) =>
-      _whileInvalidatingProfileDrafts(() async {
-        await _repo.snapshotCurrentSettings(state.activeProfileId);
-        await _repo.setActiveProfileId(profileId);
-        await _repo.applyProfile(profileId);
-        state = state.copyWith(activeProfileId: profileId);
-        await _onProfileApplied();
+  /// [autoApplyBinding] 的锁内本体；只能在 [ProfileDraftCoordinator] 的配置变更
+  /// 锁里调用。
+  Future<void> _applyBindingLocked(
+    _ProfileDraftMutation mutation, {
+    required String? bookUid,
+    required String? languageTag,
+    required ProfileMediaKind mediaType,
+    required bool restoreFallback,
+  }) async {
+    final int? boundId = await _repo.resolveBoundProfileId(
+      bookUid: bookUid,
+      languageTag: languageTag,
+      mediaType: mediaType,
+    );
+    final int currentActiveId = await _repo.getActiveProfileId();
+    final int? fallbackId = await _repo.getFallbackProfileId();
+    if (boundId != null) {
+      if (boundId == currentActiveId) return;
+      // 绑定只是「这本书临时用」：第一次离开用户自己选的配置时记下它，之后
+      // 无绑定的条目才有地方回去（否则切过去的绑定配置就成了新的默认）。
+      if (fallbackId == null) {
+        await _repo.setFallbackProfileId(currentActiveId);
+      }
+      await _switchLocked(mutation, boundId);
+      return;
+    }
+    if (!restoreFallback || fallbackId == null) return;
+    await _repo.setFallbackProfileId(null);
+    final List<ProfileRow> profiles = await _repo.getAllProfiles();
+    final bool stillExists = profiles.any((ProfileRow p) => p.id == fallbackId);
+    if (stillExists && fallbackId != currentActiveId) {
+      await _switchLocked(mutation, fallbackId);
+    }
+  }
+
+  /// 用户手动切换：这是新的「自己选的配置」，作废绑定留下的回退点。清回退点与
+  /// 切换在同一把锁里，不会被并发的绑定应用夹在中间。
+  Future<void> switchProfile(int profileId) async {
+    // 乐观标签：用户一点选就显示目标配置名，不等排队 / 快照 / 应用这些秒级步骤。
+    ProfileRow? target;
+    for (final ProfileRow p in state.profiles) {
+      if (p.id == profileId) target = p;
+    }
+    final ValueNotifier<ProfileRow?> pending =
+        _profileDraftCoordinator.pendingSwitchTarget;
+    if (target != null) pending.value = target;
+    try {
+      await _profileDraftCoordinator
+          ._runProfileMutation((_ProfileDraftMutation mutation) async {
+        await _repo.setFallbackProfileId(null);
+        await _switchLocked(mutation, profileId);
       });
+    } finally {
+      // 成功：激活 id 已是目标；失败：已回滚——两种都回到读激活配置。
+      if (identical(pending.value, target)) pending.value = null;
+    }
+  }
+
+  /// 切换激活配置的本体；只能在配置变更锁里调用（[mutation] 就是那把锁的凭据）。
+  Future<void> _switchLocked(
+    _ProfileDraftMutation mutation,
+    int profileId,
+  ) async {
+    mutation.invalidateDrafts();
+    final int previousActiveId = state.activeProfileId;
+    await _repo.snapshotCurrentSettings(previousActiveId);
+    await _repo.setActiveProfileId(profileId);
+    // state.activeProfileId 只代表「已生效」的配置：应用完成前编辑器草稿、删除判据等仍按
+    // 旧配置走。切换期间要显示目标配置名的地方（悬浮球「切换配置」胶囊）读
+    // [ProfileUiState.displayProfile]，由 [ProfileDraftCoordinator.pendingSwitchTarget] 驱动。
+    try {
+      await _repo.applyProfile(profileId);
+    } catch (_) {
+      // 应用失败：落库的激活 id 回到切换前，别停在没真正生效的配置上。
+      await _repo.setActiveProfileId(previousActiveId);
+      rethrow;
+    }
+    state = state.copyWith(activeProfileId: profileId);
+    await _onProfileApplied();
+  }
+
+  /// 互联「下载配置」：把收到的配置作为**新**配置落地（不覆盖任何既有配置），再走
+  /// 与配置选择器同一条 [switchProfile] 切过去（issue #1997，所有者 2026-10-09 拍板：
+  /// 下载完直接生效，不再让用户自己去「配置管理」里切）。
+  ///
+  /// 切换前的规矩与手动切换完全一致：当前配置的实时设置先快照回它自己那一份，在飞的
+  /// 设置草稿随配置代次一起作废，切换后 [_onProfileApplied] 刷新偏好缓存 / 词典 /
+  /// 阅读器设置。返回新配置的 id。
+  Future<int> importAndSwitchProfile(String json) async {
+    final int id = await importProfile(json);
+    await switchProfile(id);
+    return id;
+  }
 
   Future<void> createProfile(String name) =>
       _whileInvalidatingProfileDrafts(() async {
@@ -242,8 +400,27 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
     state = state.copyWith(profiles: await _repo.getAllProfiles());
   }
 
-  Future<void> deleteProfile(int id) => _profileDraftCoordinator
+  /// 删掉 [id] 会连带删掉的数据规模（确认框用）。
+  Future<ProfileDeletionImpact> deletionImpact(int id) async {
+    final ProfileDeletionCascade? cascade = _deletionCascade;
+    if (cascade == null) return const ProfileDeletionImpact.none();
+    final ProfileRow? target = _profileById(await _repo.getAllProfiles(), id);
+    if (target == null) return const ProfileDeletionImpact.none();
+    return cascade.impactOf(target);
+  }
+
+  /// 删 Profile，连带它在 srs.db 里的复习数据与媒体目录（反馈 8TaOy2i-lL）：先备份（失败抛
+  /// [ProfileDeletionBackupException]，什么都不删），再删 `profiles` 行（主库外键级联其余），最后清复习数据。
+  /// 只剩一个 Profile 或 [id] 不存在时不删，返回 null。
+  Future<ProfileDeletionOutcome?> deleteProfile(int id) =>
+      _profileDraftCoordinator
           ._runProfileMutation((_ProfileDraftMutation mutation) async {
+        final List<ProfileRow> before = await _repo.getAllProfiles();
+        final ProfileRow? target = _profileById(before, id);
+        if (target == null || before.length <= 1) return null;
+        final ProfileDeletionCleanup? cleanup =
+            await _deletionCascade?.prepare(target);
+
         // This repository read must happen after acquiring the same lock used
         // by switch/create/Save. State may still describe the previous Profile
         // while an earlier switch has already updated the repository.
@@ -260,7 +437,31 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
         if (deletesActiveProfile && activeId != previousActiveId) {
           await _onProfileApplied();
         }
+        // 行删掉、当前 Profile 已切走之后再清：被删的若是当前 Profile，它的副本此刻才不再被界面使用。
+        await cleanup?.run();
+        return ProfileDeletionOutcome(
+          impact: cleanup?.impact ?? const ProfileDeletionImpact.none(),
+          backupPath: cleanup?.backupPath,
+        );
       });
+
+  /// 一次性存量扫描：清掉 srs.db 里不属于任何现存 Profile 的复习数据（先备份；扫完记标记，之后不再扫）。
+  /// 进 Profile 管理时调用。失败时标记不写（下次进来再扫），错误照常抛给调用方。返回清掉的无主 uid 数。
+  Future<int> sweepOrphanProfileData() async {
+    final ProfileDeletionCascade? cascade = _deletionCascade;
+    if (cascade == null) return 0;
+    return _profileDraftCoordinator._runProfileMutation(
+      (_ProfileDraftMutation _) async =>
+          cascade.sweepOrphans(await _repo.getAllProfiles()),
+    );
+  }
+
+  static ProfileRow? _profileById(List<ProfileRow> profiles, int id) {
+    for (final ProfileRow p in profiles) {
+      if (p.id == id) return p;
+    }
+    return null;
+  }
 
   Future<void> setMediaTypeBinding(
       ProfileMediaKind mediaType, int? profileId) async {
@@ -390,5 +591,21 @@ final profileViewModelProvider =
     await ReaderFushiSource.readerSettings?.refreshFromDb();
   }
 
-  return ProfileViewModel(repo, onApplied, profileDraftCoordinator);
+  return ProfileViewModel(
+    repo,
+    onApplied,
+    profileDraftCoordinator,
+    deletionCascade: srsProfileCleanupFor(ref),
+  );
 });
+
+/// 另一个进程 / engine 改过偏好（[AppModel.refreshPrefCacheIfChanged] 返回 true）后，
+/// 丢掉本 engine 里由 Anki 设置派生的 Riverpod 状态：仓库装饰链（后端选择已由
+/// `refreshPrefCache` 重新推导）、[AnkiViewModel] 里缓存的设置快照、Profile 视图。
+/// 常驻的 `:popup` / 悬浮词典据此在下一次查词时显示主 app 刚切的牌组 / 配置
+/// （fiwDIpFep7）。三者都 watch [ankiRepositoryProvider]，逐个点名只是让意图可读。
+void invalidateAnkiStateAfterPrefsChange(WidgetRef ref) {
+  ref.invalidate(ankiRepositoryProvider);
+  ref.invalidate(ankiViewModelProvider);
+  ref.invalidate(profileViewModelProvider);
+}

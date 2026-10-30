@@ -471,16 +471,26 @@ class MediaTrackingService {
     }
   }
 
+  /// 按 id 取一个 Bangumi 条目（控制通道建映射时只给了 subject id，用它补名字）。
+  Future<BangumiSubject> getSubject(int subjectId) async {
+    final BangumiTrackingApi api = _apiFactory(accessToken);
+    try {
+      return await api.getSubject(subjectId);
+    } finally {
+      api.close();
+    }
+  }
+
   /// 拉取当前账号在 Bangumi 标记为「看过」的全部动画收藏。
   ///
-  /// 不从本地映射反推：映射只记录 Hibiki 建过的关联，会永久漏掉用户接入 Hibiki
+  /// 不从本地映射反推：映射只记录 Fushi 建过的关联，会永久漏掉用户接入 Fushi
   /// 之前的历史。账号入口必须直接以 Bangumi 收藏列表为真相源。
   Future<List<BangumiWatchedItem>> loadWatchedAnime() async {
     if (!isConfigured) return const <BangumiWatchedItem>[];
     final BangumiTrackingApi api = _apiFactory(accessToken);
     try {
       final BangumiUser user = await api.getMe();
-      return api.getWatchedAnime(user.username);
+      return await api.getWatchedAnime(user.username);
     } finally {
       api.close();
     }
@@ -982,6 +992,13 @@ class MediaTrackingService {
 
     Future<MediaTrackingMappingRow?> run() async {
       try {
+        // 被标成私密的作品不建自动映射：建映射要拿它的本地标题去 Bangumi 搜索。
+        // 不记 miss（取消私密后应立即可匹配），也不留重试（重试同样会搜）。
+        if (await _isAutoMappingKeyPrivate(key)) {
+          _autoMappingRetry.remove(key);
+          _autoMappingErrors.remove(key);
+          return null;
+        }
         final MediaTrackingMappingRow? result = await resolve();
         if (result == null) {
           _autoMappingMissAt[key] = DateTime.now().millisecondsSinceEpoch;
@@ -1014,6 +1031,17 @@ class MediaTrackingService {
     });
     _autoMappingInFlight[key] = future;
     return future;
+  }
+
+  /// [key] 形如 `<TrackingMediaType.value>:<mediaKey>`（见各 `_ensureAuto*Mapping`）。
+  Future<bool> _isAutoMappingKeyPrivate(String key) async {
+    final int colon = key.indexOf(':');
+    if (colon <= 0) return false;
+    return isTrackedMediaPrivate(
+      await _repository.loadPrivacy(),
+      key.substring(0, colon),
+      key.substring(colon + 1),
+    );
   }
 
   Future<void> _enqueueAndSync({

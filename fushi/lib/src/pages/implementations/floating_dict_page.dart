@@ -1,14 +1,18 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi_dictionary/fushi_dictionary.dart';
 import 'package:fushi/models.dart';
 import 'package:fushi_anki/fushi_anki.dart';
 import 'package:fushi/src/anki/anki_view_model.dart';
 import 'package:fushi/src/lookup/lookup_ime_binding.dart';
 import 'package:fushi/src/pages/implementations/dictionary_popup_native.dart';
+import 'package:fushi/src/profile/profile_view_model.dart'
+    show invalidateAnkiStateAfterPrefsChange;
 import 'package:fushi/utils.dart';
 
 class FloatingDictPage extends ConsumerStatefulWidget {
@@ -66,12 +70,31 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
     }
   }
 
+  /// 悬浮词典是同进程的另一个 engine、自有一份 AppModel 偏好缓存：常驻期间主 app
+  /// 改了偏好（牌组 / Anki 后端 / Profile 等）它看不到。与 `:popup` 的热复用路径同
+  /// 一口径——单行读跨进程 prefs_version，变了才全量重载并丢掉 Anki 派生状态
+  /// （fiwDIpFep7）。DB 读失败不拦查词 / 制卡：记日志后带旧缓存继续（同 TODO-1336）。
+  Future<void> _syncPrefsChangedElsewhere() async {
+    try {
+      if (await appModel.refreshPrefCacheIfChanged() && mounted) {
+        invalidateAnkiStateAfterPrefsChange(ref);
+      }
+    } on Object catch (e, stack) {
+      ErrorLogService.instance.log(
+        'FloatingDict.refreshPrefCacheIfChanged',
+        e,
+        stack,
+      );
+    }
+  }
+
   Future<void> _doSearch(String term) async {
     if (term.trim().isEmpty) return;
     final query = term.trim();
     if (query == _lastSearch && _result != null) return;
     _lastSearch = query;
     setState(() => _isSearching = true);
+    await _syncPrefsChangedElsewhere();
 
     try {
       final result = await appModel.searchDictionary(
@@ -94,6 +117,8 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
   }
 
   Future<void> _exportToAnki(Map<String, String> fields) async {
+    await _syncPrefsChangedElsewhere();
+    if (!mounted) return;
     final repo = ref.read(ankiRepositoryProvider);
     const miningContext = AnkiMiningContext(sentence: '');
     final outcome = await repo.mineEntry(
@@ -102,12 +127,9 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
     );
     // 牌组名由后端随成功结果带回（outcome.deckName，BUG-1549）。
     final described = describeMineOutcome(outcome);
-    FushiToast.show(
-      msg: described.message,
-      // 制卡结果的语义已由 describeMineOutcome 算出（added/duplicate/failed），
-      // 这里只把它翻译成 toast 配色，不再另判一次。
-      severity: mineToastSeverity(described.status),
-    );
+    // 制卡结果的语义已由 describeMineOutcome 算出（added/duplicate/failed）；走
+    // showMine 才过「制卡提示」开关（popup_main 装了同一份偏好闭包）。
+    FushiToast.showMine(msg: described.message, status: described.status);
   }
 
   @override
@@ -118,12 +140,23 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
       safeArea: false,
       body: FushiPopupSurface(
         color: tokens.surfaces.search.withValues(alpha: 0.94),
+        // 悬浮词典是独立窗口：Apple 下玻璃采不到窗口背后的其它 app，画不透明面板。
+        standaloneWindow: true,
         padding: EdgeInsets.all(tokens.spacing.gap),
         child: Column(
           children: [
             _buildTitleBar(),
             _buildSearchBar(),
-            Expanded(child: _buildResults()),
+            // 搜索中 / 无结果 / 结果三态之间淡入淡出（effects 弹簧，不过冲）。
+            Expanded(
+              child: AnimatedSwitcher(
+                duration: context.fushiMotion.effectsDefault.duration,
+                child: KeyedSubtree(
+                  key: ValueKey<String>(_resultsStateKey),
+                  child: _buildResults(),
+                ),
+              ),
+            ),
             _buildResizeHandle(),
           ],
         ),
@@ -150,18 +183,28 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
         ),
         child: Row(
           children: [
+            // M3E：标题前的语义图标（主色），标题 titleSmall emphasized；整条仍是
+            // 拖动窗口的把手。
+            FushiIcon(
+              FushiIcons.dictionary,
+              size: 18,
+              color: tokens.surfaces.primary,
+            ),
+            SizedBox(width: tokens.spacing.gap),
             Expanded(
               child: Text(
                 t.floating_dict_title,
-                style: tokens.type.listTitle,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: context.fushiType.titleSmallEmphasized,
               ),
             ),
             SizedBox(
               width: 28,
               height: 28,
-              child: IconButton(
-                icon: Icon(
-                  Icons.close,
+              child: FushiIconButtonControl(
+                icon: FushiIcon(
+                  FushiIcons.close,
                   size: 16,
                   color: tokens.surfaces.onVariant,
                 ),
@@ -193,6 +236,15 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
     );
   }
 
+  /// 结果区当前处于哪一态（给 [AnimatedSwitcher] 区分子树）。
+  String get _resultsStateKey {
+    if (_isSearching) return 'searching';
+    if (_result == null || _result!.entries.isEmpty) {
+      return _lastSearch.isEmpty ? 'idle' : 'empty';
+    }
+    return 'results';
+  }
+
   Widget _buildResults() {
     if (_isSearching) {
       return Center(
@@ -204,11 +256,15 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
       );
     }
     if (_result == null || _result!.entries.isEmpty) {
-      final FushiDesignTokens tokens = FushiDesignTokens.of(context);
+      if (_lastSearch.isEmpty) return const SizedBox.shrink();
+      // 无结果：M3E 空状态（色块图标 + 文案），而不是一行小灰字。
       return Center(
-        child: Text(
-          _lastSearch.isEmpty ? '' : t.no_results_found,
-          style: tokens.type.metadata,
+        child: SingleChildScrollView(
+          child: FushiPlaceholderMessage(
+            icon: FushiIcons.searchOff,
+            message: t.no_results_found,
+            iconSize: 28,
+          ),
         ),
       );
     }
@@ -242,8 +298,8 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
           width: 20,
           height: 20,
           alignment: Alignment.bottomRight,
-          child: Icon(
-            Icons.drag_handle,
+          child: FushiIcon(
+            FushiIcons.dragHandle,
             size: 14,
             color: cs.outlineVariant,
           ),

@@ -8,10 +8,11 @@
 // 本文件只做「类型 → 本地化文案/图标」的纯映射，不读写注册表、不触碰
 // 绑定序列化。
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/src/shortcuts/input_binding.dart';
 import 'package:fushi/src/shortcuts/shortcut_action.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 
 /// Localised label for a [ShortcutAction].
 extension ShortcutActionLabel on ShortcutAction {
@@ -75,6 +76,8 @@ extension ShortcutActionLabel on ShortcutAction {
         return t.shortcut_action_home_tab_next;
       case ShortcutAction.homeFocusSearch:
         return t.shortcut_action_home_focus_search;
+      case ShortcutAction.librarySearch:
+        return t.shortcut_action_library_search;
       case ShortcutAction.globalBack:
         return t.shortcut_action_global_back;
       case ShortcutAction.globalScrollPageDown:
@@ -91,6 +94,8 @@ extension ShortcutActionLabel on ShortcutAction {
         return t.shortcut_action_global_scroll_to_bottom;
       case ShortcutAction.globalToggleFullscreen:
         return t.shortcut_action_global_toggle_fullscreen;
+      case ShortcutAction.globalOpenAiAssistant:
+        return t.shortcut_action_global_open_ai_assistant;
       case ShortcutAction.globalContextMenu:
         return t.shortcut_action_global_context_menu;
       case ShortcutAction.audiobookPlayPause:
@@ -101,6 +106,20 @@ extension ShortcutActionLabel on ShortcutAction {
         return t.shortcut_action_audiobook_prev_sentence;
       case ShortcutAction.audiobookSeekToClickedSentence:
         return t.shortcut_action_audiobook_seek_clicked;
+      case ShortcutAction.audiobookReplaySentence:
+        return t.shortcut_action_audiobook_replay_sentence;
+      case ShortcutAction.audiobookSeekBackward:
+        return t.shortcut_action_audiobook_seek_backward;
+      case ShortcutAction.audiobookSeekForward:
+        return t.shortcut_action_audiobook_seek_forward;
+      case ShortcutAction.audiobookSpeedUp:
+        return t.shortcut_action_audiobook_speed_up;
+      case ShortcutAction.audiobookSpeedDown:
+        return t.shortcut_action_audiobook_speed_down;
+      case ShortcutAction.audiobookToggleLyricsMode:
+        return t.shortcut_action_audiobook_toggle_lyrics_mode;
+      case ShortcutAction.audiobookToggleLyricsMask:
+        return t.shortcut_action_audiobook_toggle_lyrics_mask;
       case ShortcutAction.videoDismissDict:
         return t.shortcut_action_video_dismiss_dict;
       case ShortcutAction.videoTogglePlayPause:
@@ -141,6 +160,8 @@ extension ShortcutActionLabel on ShortcutAction {
         return t.shortcut_action_video_screenshot;
       case ShortcutAction.videoScreenshotSubtitled:
         return t.shortcut_action_video_screenshot_subtitled;
+      case ShortcutAction.videoOcrFrame:
+        return t.shortcut_action_video_ocr_frame;
       case ShortcutAction.videoToggleFullscreen:
         return t.shortcut_action_video_toggle_fullscreen;
       case ShortcutAction.videoToggleMiniWindow:
@@ -169,6 +190,12 @@ extension ShortcutActionLabel on ShortcutAction {
         return t.shortcut_action_video_replay_current_subtitle;
       case ShortcutAction.videoReplayPreviousSubtitle:
         return t.shortcut_action_video_replay_previous_subtitle;
+      case ShortcutAction.videoToggleLoopCurrentSubtitle:
+        return t.shortcut_action_video_toggle_loop_current_subtitle;
+      case ShortcutAction.videoCopyCurrentSubtitle:
+        return t.shortcut_action_video_copy_current_subtitle;
+      case ShortcutAction.videoCopyCurrentSecondarySubtitle:
+        return t.shortcut_action_video_copy_current_secondary_subtitle;
       case ShortcutAction.videoPreviousChapter:
         return t.shortcut_action_video_previous_chapter;
       case ShortcutAction.videoNextChapter:
@@ -185,6 +212,48 @@ extension ShortcutActionLabel on ShortcutAction {
         return t.shortcut_action_video_align_subtitle_to_next;
       case ShortcutAction.videoEnterCaret:
         return t.shortcut_action_video_enter_caret;
+      case ShortcutAction.videoLookupNextWord:
+        return t.shortcut_action_video_lookup_next_word;
+      case ShortcutAction.videoLookupPrevWord:
+        return t.shortcut_action_video_lookup_prev_word;
+      case ShortcutAction.webBrowserNewTab:
+        return t.shortcut_action_web_browser_new_tab;
+      case ShortcutAction.webBrowserCloseTab:
+        return t.shortcut_action_web_browser_close_tab;
+      case ShortcutAction.webBrowserReopenClosedTab:
+        return t.shortcut_action_web_browser_reopen_closed_tab;
+      case ShortcutAction.webBrowserNextTab:
+        return t.shortcut_action_web_browser_next_tab;
+      case ShortcutAction.webBrowserPreviousTab:
+        return t.shortcut_action_web_browser_previous_tab;
+      case ShortcutAction.webBrowserFocusAddress:
+        return t.shortcut_action_web_browser_focus_address;
+      case ShortcutAction.webBrowserBack:
+        return t.shortcut_action_web_browser_back;
+      case ShortcutAction.webBrowserForward:
+        return t.shortcut_action_web_browser_forward;
+      case ShortcutAction.webBrowserReload:
+        return t.shortcut_action_web_browser_reload;
+      case ShortcutAction.webBrowserFindInPage:
+        return t.shortcut_action_web_browser_find_in_page;
+      case ShortcutAction.webBrowserToggleBookmark:
+        return t.shortcut_action_web_browser_toggle_bookmark;
+      case ShortcutAction.webBrowserZoomIn:
+        return t.shortcut_action_web_browser_zoom_in;
+      case ShortcutAction.webBrowserZoomOut:
+        return t.shortcut_action_web_browser_zoom_out;
+      case ShortcutAction.webBrowserZoomReset:
+        return t.shortcut_action_web_browser_zoom_reset;
+      case ShortcutAction.musicTogglePlayPause:
+        return t.shortcut_action_music_toggle_play_pause;
+      case ShortcutAction.musicNextTrack:
+        return t.shortcut_action_music_next_track;
+      case ShortcutAction.musicPreviousTrack:
+        return t.shortcut_action_music_previous_track;
+      case ShortcutAction.musicSeekForward:
+        return t.shortcut_action_music_seek_forward;
+      case ShortcutAction.musicSeekBackward:
+        return t.shortcut_action_music_seek_backward;
       case ShortcutAction.dpadUp:
         return t.shortcut_action_dpad_up;
       case ShortcutAction.dpadDown:
@@ -197,6 +266,8 @@ extension ShortcutActionLabel on ShortcutAction {
         return t.shortcut_action_global_external_lookup;
       case ShortcutAction.globalExternalOpenLookupPage:
         return t.shortcut_action_global_external_open_lookup_page;
+      case ShortcutAction.globalExternalScreenOcr:
+        return t.shortcut_action_global_external_screen_ocr;
       case ShortcutAction.popupNextEntry:
         return t.shortcut_action_popup_next_entry;
       case ShortcutAction.popupPrevEntry:
@@ -207,6 +278,31 @@ extension ShortcutActionLabel on ShortcutAction {
         return t.shortcut_action_popup_play_audio;
     }
   }
+}
+
+/// 按钮 / 菜单文案后缀快捷键提示（`插图画廊 · G`）。只在 [keyboardHints] 为 true
+/// （桌面：键盘是常规输入）时追加；触屏平台（Android / iOS）不挂——手机、平板上
+/// 菜单里写「有声书 · B」是噪声（BUG-3040）。键名走 [InputBinding.displayLabel]，
+/// 不用持久化 token（`Ctrl+KeyF`）。
+String labelWithShortcutHint(
+  String label,
+  List<InputBinding> keyboardBindings, {
+  required bool keyboardHints,
+}) {
+  if (!keyboardHints || keyboardBindings.isEmpty) return label;
+  return '$label · ${keyboardBindings.first.displayLabel}';
+}
+
+/// 工具栏按钮的 tooltip 文案：功能名后括注快捷键（`导航 (Ctrl+F)`）。可见标签只放
+/// 功能名，快捷键挪进 tooltip——窄窗下 `导航 · Ctrl+F` 这种拼接会把底栏标签挤成
+/// 截断的乱码。触屏平台同 [labelWithShortcutHint] 不挂。
+String tooltipWithShortcutHint(
+  String label,
+  List<InputBinding> keyboardBindings, {
+  required bool keyboardHints,
+}) {
+  if (!keyboardHints || keyboardBindings.isEmpty) return label;
+  return '$label (${keyboardBindings.first.displayLabel})';
 }
 
 /// Localised label for a [ShortcutScope].
@@ -227,19 +323,25 @@ extension ShortcutScopeLabel on ShortcutScope {
         return t.shortcut_scope_video;
       case ShortcutScope.manga:
         return t.shortcut_scope_manga;
+      // 复用浏览器页标题（「浏览器」），与页面上看到的名字一致。
+      case ShortcutScope.webBrowser:
+        return t.web_browser_title;
       case ShortcutScope.gamepad:
         return t.shortcut_scope_gamepad;
       case ShortcutScope.globalExternal:
         return t.shortcut_scope_global_external;
       case ShortcutScope.dictionaryPopup:
         return t.shortcut_scope_dictionary_popup;
+      case ShortcutScope.music:
+        return t.shortcut_scope_music;
     }
   }
 }
 
 /// 滚轮绑定的本地化显示名与小图标（与 [MouseBindingLabel] 同形，供设置页的
-/// chip 复用）。修饰键沿用 [ModifierKey.label] 的英文缩写（Alt/Ctrl/Shift/Meta，
-/// 与键盘 chip 一致），只有方向翻译成人话。
+/// chip 复用）。修饰键走与键盘 chip 同一个显示入口
+/// [shortcutModifierDisplayLabels]（macOS 上是 ⌃ ⌥ ⇧ ⌘，BUG-3203），只有方向
+/// 翻译成人话。
 extension WheelBindingLabel on WheelBinding {
   String get label {
     final String direction = switch (this.direction) {
@@ -247,12 +349,14 @@ extension WheelBindingLabel on WheelBinding {
       WheelDirection.down => t.shortcut_wheel_down,
     };
     if (modifiers.isEmpty) return direction;
-    final List<ModifierKey> sorted = modifiers.toList()
-      ..sort((ModifierKey a, ModifierKey b) => a.index.compareTo(b.index));
-    return '${sorted.map((ModifierKey m) => m.label).join('+')}+$direction';
+    final List<String> mods = shortcutModifierDisplayLabels(modifiers);
+    // 方向是一个词（「滚轮向下」），Apple 写法里也和修饰键符号隔开。
+    return shortcutUsesAppleSymbols(shortcutDisplayPlatform)
+        ? '${mods.join()} $direction'
+        : '${mods.join('+')}+$direction';
   }
 
-  IconData get icon => Icons.mouse_outlined;
+  IconData get icon => FushiIcons.mouse;
 }
 
 /// TODO-1050b: 鼠标绑定的本地化显示名与小图标。
@@ -276,14 +380,14 @@ extension MouseBindingLabel on MouseBinding {
     }
   }
 
-  /// 中键落在滚轮上用滚轮图标，其余用通用鼠标图标
-  /// （Material 无左右键专属图标）。
+  /// 中键用线框鼠标图标，其余按键用实心鼠标图标（Material Symbols 无左右键专属
+  /// 图标，靠线框 / 实心把中键与其它键区分开）。
   IconData get icon {
     switch (button) {
       case 1:
-        return Icons.mouse_outlined;
+        return FushiIcons.mouse;
       default:
-        return Icons.mouse;
+        return FushiIcons.filled(FushiIcons.mouse);
     }
   }
 }
@@ -303,115 +407,128 @@ extension ShortcutActionIcon on ShortcutAction {
     switch (this) {
       // 播放控制
       case ShortcutAction.videoTogglePlayPause:
-        return Icons.play_arrow_rounded;
+        return FushiIcons.play;
       case ShortcutAction.videoPlay:
-        return Icons.play_circle_outline;
+        return FushiIcons.playCircle;
       case ShortcutAction.videoPause:
-        return Icons.pause_circle_outline;
+        return FushiIcons.pauseCircle;
       case ShortcutAction.videoSeekBackward:
-        return Icons.fast_rewind_rounded;
+        return FushiIcons.fastRewind;
       case ShortcutAction.videoSeekForward:
-        return Icons.fast_forward_rounded;
+        return FushiIcons.fastForward;
       case ShortcutAction.videoPreviousFrame:
-        return Icons.skip_previous_outlined;
+        return FushiIcons.stepBackward;
       case ShortcutAction.videoNextFrame:
-        return Icons.skip_next_outlined;
+        return FushiIcons.stepForward;
 
       // 倍速
       case ShortcutAction.videoSpeedUp:
-        return Icons.speed;
+        return FushiIcons.speed;
       case ShortcutAction.videoSpeedDown:
-        return Icons.slow_motion_video;
+        return FushiIcons.slowMotion;
       case ShortcutAction.videoResetSpeed:
-        return Icons.restore;
+        return FushiIcons.restart;
       case ShortcutAction.videoHoldSpeed:
-        return Icons.fast_forward;
+        return FushiIcons.fastForward;
 
       // 字幕跳转 / 重播
       case ShortcutAction.videoPreviousSubtitle:
-        return Icons.skip_previous;
+        return FushiIcons.skipPrevious;
       case ShortcutAction.videoNextSubtitle:
-        return Icons.skip_next;
+        return FushiIcons.skipNext;
       case ShortcutAction.videoReplayCurrentSubtitle:
-        return Icons.replay;
+        return FushiIcons.replay;
       case ShortcutAction.videoReplayPreviousSubtitle:
-        return Icons.replay_5;
+        return FushiIcons.replay5;
+      case ShortcutAction.videoToggleLoopCurrentSubtitle:
+        return FushiIcons.repeat;
+      case ShortcutAction.videoCopyCurrentSubtitle:
+        return FushiIcons.copy;
+      case ShortcutAction.videoCopyCurrentSecondarySubtitle:
+        return FushiIcons.copyAll;
 
       // 章节
       case ShortcutAction.videoPreviousChapter:
-        return Icons.first_page;
+        return FushiIcons.firstPage;
       case ShortcutAction.videoNextChapter:
-        return Icons.last_page;
+        return FushiIcons.lastPage;
 
       // 字幕显示 / 遮蔽
       case ShortcutAction.videoToggleSubtitleList:
-        return Icons.format_list_bulleted;
+        return FushiIcons.listView;
       case ShortcutAction.videoSearchSubtitleList:
-        return Icons.search;
+        return FushiIcons.search;
       case ShortcutAction.videoToggleSubtitleBlur:
-        return Icons.blur_on;
+        return FushiIcons.blur;
       case ShortcutAction.videoCycleSubtitleObscure:
-        return Icons.visibility_off_outlined;
+        return FushiIcons.visibilityOff;
       case ShortcutAction.videoToggleSubtitleHide:
-        return Icons.subtitles_off_outlined;
+        return FushiIcons.subtitlesOff;
       case ShortcutAction.videoCycleSecondarySubtitleObscure:
-        return Icons.blur_linear;
+        return FushiIcons.blurLinear;
       case ShortcutAction.videoToggleSecondarySubtitleHide:
-        return Icons.closed_caption_disabled_outlined;
+        return FushiIcons.captionsOff;
 
       // 字幕对轴
       case ShortcutAction.videoOpenSubtitleAlign:
-        return Icons.graphic_eq;
+        return FushiIcons.audio;
       case ShortcutAction.videoSubtitleDelayIncrease:
-        return Icons.more_time;
+        return FushiIcons.moreTime;
       case ShortcutAction.videoSubtitleDelayDecrease:
-        return Icons.history_toggle_off;
+        return FushiIcons.history;
       case ShortcutAction.videoAlignSubtitleToPrev:
-        return Icons.align_horizontal_left;
+        return FushiIcons.alignLeft;
       case ShortcutAction.videoAlignSubtitleToNext:
-        return Icons.align_horizontal_right;
+        return FushiIcons.alignRight;
 
       // 音量
       case ShortcutAction.videoVolumeUp:
-        return Icons.volume_up;
+        return FushiIcons.volumeUp;
       case ShortcutAction.videoVolumeDown:
-        return Icons.volume_down;
+        return FushiIcons.volumeDown;
       case ShortcutAction.videoToggleMute:
-        return Icons.volume_off;
+        return FushiIcons.volumeOff;
 
       // 画面 / 杂项
       case ShortcutAction.videoToggleFullscreen:
-        return Icons.fullscreen;
+        return FushiIcons.fullscreen;
       case ShortcutAction.videoToggleMiniWindow:
-        return Icons.picture_in_picture_alt_outlined;
+        return FushiIcons.pictureInPicture;
       case ShortcutAction.videoToggleMiniChrome:
-        return Icons.tune_rounded;
+        return FushiIcons.settings;
       case ShortcutAction.videoScreenshot:
-        return Icons.photo_camera_outlined;
+        return FushiIcons.camera;
       case ShortcutAction.videoScreenshotSubtitled:
-        return Icons.subtitles_outlined;
+        return FushiIcons.subtitles;
+      case ShortcutAction.videoOcrFrame:
+        return FushiIcons.ocr;
       case ShortcutAction.videoToggleShaderCompare:
-        return Icons.compare;
+        return FushiIcons.compare;
       case ShortcutAction.videoToggleImmersiveLock:
-        return Icons.lock_outline;
+        return FushiIcons.lock;
 
       // 学习
       case ShortcutAction.videoToggleFavoriteSentence:
-        return Icons.star_border_rounded;
+        return FushiIcons.star;
       case ShortcutAction.videoEnterCaret:
-        return Icons.text_fields;
+        return FushiIcons.textFields;
+      // 扫词：同一根「逐词移动」的语义，用前后向的小三角图标区分方向。
+      case ShortcutAction.videoLookupNextWord:
+        return FushiIcons.stepForward;
+      case ShortcutAction.videoLookupPrevWord:
+        return FushiIcons.stepBackward;
 
       // 全 app 共用「返回上一级」：视频页把它解释成逐级退出阶梯。
       case ShortcutAction.globalBack:
-        return Icons.arrow_back;
+        return FushiIcons.back;
 
       // 全 app 共用全屏键（F11）：视频页把它接成与 F / 双击同一个视频全屏（BUG-2462）。
       case ShortcutAction.globalToggleFullscreen:
-        return Icons.fullscreen;
+        return FushiIcons.fullscreen;
 
       // 右键菜单（按钮归属声明，执行体在各卡片 / 各媒体表面自己的 showMenu）。
       case ShortcutAction.globalContextMenu:
-        return Icons.menu_open;
+        return FushiIcons.menu;
 
       // ignore: no_default_cases
       default:

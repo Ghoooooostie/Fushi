@@ -38,7 +38,7 @@ class FushiGameStreamLibraryHost implements GameStreamLibraryHost {
   FushiGameStreamLibraryHost({
     required Future<List<GalgameEntry>> Function() loadGames,
     required bool Function() isLaunchEnabled,
-    required FushiRemoteGameStreamService service,
+    required FushiRemoteGameStreamService Function() service,
     required GameStreamSessionStarter startStream,
     GameStreamGameLauncher? launchGame,
     GalHookSessionState Function()? readHookState,
@@ -55,7 +55,11 @@ class FushiGameStreamLibraryHost implements GameStreamLibraryHost {
 
   final Future<List<GalgameEntry>> Function() _loadGames;
   final bool Function() _isLaunchEnabled;
-  final FushiRemoteGameStreamService _service;
+
+  /// The service this library is attached to *now*. The host controller
+  /// replaces the service on every server restart; holding one instance would
+  /// publish launch progress into a disposed registry the receiver never reads.
+  final FushiRemoteGameStreamService Function() _service;
   final GameStreamSessionStarter _startStream;
   final GalHookSessionState Function() _readHookState;
   final Listenable _hookChanges;
@@ -110,14 +114,14 @@ class FushiGameStreamLibraryHost implements GameStreamLibraryHost {
     if (game == null) {
       throw const GameStreamLaunchRejected(GameStreamLaunchFailure.unknownGame);
     }
-    final GameStreamSession? live = _service.session;
+    final GameStreamSession? live = _service().session;
     if (live != null &&
         !live.state.isTerminal &&
         live.gameId == game.id &&
         live.state == GameStreamSessionState.waiting) {
       // A stream for this game is already waiting (e.g. the host started it
       // locally); joining it is the whole job.
-      _service.updateLaunch(
+      _service().updateLaunch(
         launchId,
         state: GameStreamLaunchState.streaming,
         sessionId: live.sessionId,
@@ -133,7 +137,10 @@ class FushiGameStreamLibraryHost implements GameStreamLibraryHost {
     if (!_isRunning(game) || _readHookState().boundWindow == null) {
       await (_launchGameOverride ?? launchGalgameForStream)(game);
     }
-    _service.updateLaunch(launchId, state: GameStreamLaunchState.waitingWindow);
+    _service().updateLaunch(
+      launchId,
+      state: GameStreamLaunchState.waitingWindow,
+    );
     final int hwnd = await _waitForWindow(game);
     try {
       final GameStreamSession session = await _startStream(
@@ -143,7 +150,7 @@ class FushiGameStreamLibraryHost implements GameStreamLibraryHost {
         gameTitle: game.displayName,
         launchId: launchId,
       );
-      _service.updateLaunch(
+      _service().updateLaunch(
         launchId,
         state: GameStreamLaunchState.streaming,
         sessionId: session.sessionId,
@@ -218,6 +225,23 @@ class FushiGameStreamLibraryHost implements GameStreamLibraryHost {
             : GameStreamLaunchFailure.launchFailed,
       );
     }
+  }
+
+  /// 这场串流的游戏在库里声明的内容语言（`GalgameEntry.language`），供 host 登记
+  /// 查词来源语言——串流里被查的台词来自 host 上运行的这款游戏，查词语言归 host，
+  /// 接收端无权声明。
+  ///
+  /// [gameId] 非空（从库里远程启动）按 id 找条目；为空（host 本机对正在运行的游戏
+  /// 开串流）按 Hook 会话的 exe 找。找不到或卡上没指定语言都返回 null，由调用方落到
+  /// 全局默认——绝不沿用上一个媒体页留下的语言。
+  Future<String?> streamGameLanguage({String? gameId}) async {
+    for (final GalgameEntry game in await _loadGames()) {
+      final bool matches = gameId != null && gameId.isNotEmpty
+          ? game.id == gameId
+          : _isRunning(game);
+      if (matches) return game.language;
+    }
+    return null;
   }
 
   Future<GalgameEntry?> _find(String gameId) async {

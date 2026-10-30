@@ -110,6 +110,32 @@ const Set<String> kDragImageArchiveProbeExtensions = <String>{
   'zip',
 };
 
+/// 落点**偏好漫画**（漫画库）时额外开包定性的扩展名（不带点，小写）。
+///
+/// 书架上拖 `.epub` 不开包：它默认就是一本书，书籍导入框收下路径时会再真读包，
+/// 认出扫描版就提示转交漫画。但用户已经站在漫画库里时，先进书籍框再被告知「这看起来
+/// 是漫画」是倒过来的——落点本身已经回答了「用户想导什么」。所以漫画库把 `.epub`
+/// 也纳入同一个判据（与 [kDragImageArchiveProbeExtensions] 同一个 `isImageArchive`），
+/// 图片型 EPUB 直接归漫画；文字 EPUB 判据为假，照旧归书（不收窄漫画库拖文字书
+/// 自动导去书架的既有能力）。
+const Set<String> kDragMangaSurfaceProbeExtensions = <String>{
+  ...kDragImageArchiveProbeExtensions,
+  'epub',
+};
+
+/// 落点偏好漫画时**直接**归漫画的扩展名（不带点，小写）：`pdf`。
+///
+/// 一卷扫描版漫画常就是一份 PDF，漫画导入框把它逐页栅格化成漫画
+/// （`ImportCarrier.pdf` → `importPdfAsManga`）。PDF 没有便宜的「是不是页图」判据，
+/// 在漫画库里就按落点意图走漫画；书架上它仍是一本 PDF 书。
+const Set<String> kDragMangaSurfaceDirectExtensions = <String>{'pdf'};
+
+/// [classifyDroppedFiles] / `probeDroppedImageArchives` 按落点取开包扩展名。
+Set<String> dragImageArchiveProbeExtensionsFor({required bool preferManga}) =>
+    preferManga
+        ? kDragMangaSurfaceProbeExtensions
+        : kDragImageArchiveProbeExtensions;
+
 /// 看得出是漫画包、但当前**导入器不支持**的扩展名（不带点，小写）。
 ///
 /// `archive` 包不解 RAR，故 cbr/cb7/rar 无法导入。单列一类只为一件事：让落点
@@ -131,6 +157,8 @@ const Set<String> kDragAudioExtensions = <String>{
   'wma',
   'ac3',
   'eac3',
+  'aiff',
+  'aif',
   'mp4',
 };
 
@@ -275,17 +303,29 @@ bool isImportableDropUrl(String candidate) {
 ///
 /// [isDirectory] 是唯一的外注入判据：拖入的**目录**（漫画页图文件夹）没有扩展名，
 /// 纯扩展名分类无法与「无扩展名的文件」区分，而本函数不碰文件系统。调用方
-/// （widget 层）传 `(pth) => Directory(pth).existsSync()`，测试注入假谓词。
+/// （widget 层）先用 async 文件 API（`FileSystemEntity.isDirectory`，各路径
+/// `Future.wait` 并发）判完，再传**查表**谓词（如 `directories.contains`）；测试注入
+/// 假谓词。**禁止**在谓词里做同步 stat（`existsSync` 之类）：拖进来的常是网络盘上的
+/// 文件，同步 stat 冷目录要数秒、冻结 UI isolate（BUG-3756）。
 /// 不传（默认 null）时行为与历史逐字节一致——目录会落进 [DroppedFiles.unknown]。
 ///
-/// [blurayDiscRootForDirectory] 同理由 widget 层注入（`bluray_disc.dart` 的同名函数，
-/// 要看目录下有没有 `BDMV/PLAYLIST`）；盘内**文件**只看路径形状，本函数自己认。
+/// [blurayDiscRootForDirectory] 同理：调用方先对判为目录的路径 await
+/// `bluray_disc.dart` 的同名 async 函数（看目录下有没有 `BDMV/PLAYLIST`），把
+/// 「目录 → 盘根」结果做成表，这里只传查表函数（如 `(d) => discRoots[d]`）；
+/// 盘内**文件**只看路径形状，本函数自己认。
+///
+/// [preferManga]：落点是漫画库。图片型 `.epub` 经 [isImageArchive] 归漫画、`.pdf`
+/// 直接归漫画（见 [kDragMangaSurfaceProbeExtensions] / [kDragMangaSurfaceDirectExtensions]）。
+/// 默认 false，书架与其它落点的分类与历史逐字节一致。
 DroppedFiles classifyDroppedFiles(
   List<String> paths, {
   bool Function(String path)? isDirectory,
   bool Function(String path)? isImageArchive,
   String? Function(String directory)? blurayDiscRootForDirectory,
+  bool preferManga = false,
 }) {
+  final Set<String> probeExtensions =
+      dragImageArchiveProbeExtensionsFor(preferManga: preferManga);
   final List<String> books = <String>[];
   final List<String> videos = <String>[];
   final List<String> subtitles = <String>[];
@@ -325,8 +365,12 @@ DroppedFiles classifyDroppedFiles(
     // zip 会走到 books 分支的 `files.hasAny` 兜底、回「本页面不支持」，而导入对话框
     // 明明导得了它。与对话框同一判据，两条入口的回答因此必然一致。
     if (isImageArchive != null &&
-        kDragImageArchiveProbeExtensions.contains(ext) &&
+        probeExtensions.contains(ext) &&
         isImageArchive(path)) {
+      mangas.add(path);
+      continue;
+    }
+    if (preferManga && kDragMangaSurfaceDirectExtensions.contains(ext)) {
       mangas.add(path);
       continue;
     }

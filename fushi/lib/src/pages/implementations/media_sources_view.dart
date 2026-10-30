@@ -1,4 +1,4 @@
-// TODO-817 M1c / TODO-1274 来源库管理视图：列出某媒体种类（'video' | 'book' |
+// TODO-817 M1c / TODO-1274 来源库管理视图：列出某媒体种类（'video' | 'book' | 'music' |
 // 'manga'）的来源库，支持添加本地文件夹、添加网络来源、重新扫描、打开文件夹
 // （仅 Windows 本地）、移除来源、拖拽重排。
 //
@@ -15,23 +15,29 @@
 // 网络来源三域全开放，transport 集按域收窄（[_networkTransports]）：
 // - 'book'：SFTP/FTP/WebDAV/AList（EPUB 小体积、扫描时下载后导入）；
 // - 'manga'：SFTP/FTP/WebDAV/AList（整卷下载后导入，重扫有标题预检不重下载）；
-// - 'video'：仅 WebDAV / AList（条目 URL 按流媒体书原地入库播放，AList 起播前
-//   经 fs/get 换签名直链；SFTP/FTP 无 HTTP 直链、播放器吃不了，扫描器也会拒绝）。
+// - 'video'：SFTP / WebDAV / AList（条目按流媒体书原地入库播放：AList 起播前
+//   经 fs/get 换签名直链，SFTP 起播时登记进回环中继按偏移读，见
+//   sftp_stream_source.dart；FTP 没有按偏移读、拖不了进度条，扫描器也会拒绝）。
 // WebDAV 的 rootPath 即完整集合 URL（scheme/host/端口/路径都在里面），无需单独存
 // host/port（见 NetworkSourceFileSystem）。
 
 import 'dart:async' show unawaited;
-import 'dart:io' show Directory, File, Platform, Process;
+import 'dart:io' show Directory, File, Platform;
 
 import 'package:drift/drift.dart' show Value;
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fushi/models.dart';
 import 'package:fushi/src/media/alist/alist_api_client.dart';
+import 'package:fushi/src/media/audio_cd/audio_cd_import.dart';
+import 'package:fushi/src/media/source_library/add_local_folder_source.dart';
 import 'package:fushi/src/media/alist/alist_source_url.dart';
+import 'package:fushi/src/media/source_library/source_folder_access.dart';
 import 'package:fushi/src/media/source_library/source_library_credential_store.dart';
 import 'package:fushi/src/media/source_library/source_library_removal.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi_engine/media/source_library/source_library_row.dart';
 import 'package:fushi/src/media/source_library/source_library_scanner.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart';
@@ -49,6 +55,7 @@ import 'package:fushi/src/sync/webdav_sync_backend.dart';
 import 'package:fushi/src/pages/fushi_page_placeholders.dart';
 import 'package:fushi/src/pages/implementations/name_input_dialog.dart';
 import 'package:fushi/src/utils/misc/fushi_share.dart';
+import 'package:fushi/src/utils/misc/reveal_in_file_manager.dart';
 import 'package:fushi_engine/utils/net/url_input_normalizer.dart';
 import 'package:fushi/utils.dart';
 import 'package:fushi_core/fushi_core.dart';
@@ -73,7 +80,7 @@ class MediaSourcesView extends ConsumerStatefulWidget {
     this.onLibraryChanged,
   });
 
-  /// 'video' | 'book' | 'manga' —— 决定统计文案与 mediaKind 过滤。
+  /// 'video' | 'book' | 'manga' | 'music' —— 决定统计文案与 mediaKind 过滤。
   final String mediaKind;
 
   /// true = 自带纵向滚动（页面语境，外层给的是 Expanded 无界高度）；
@@ -105,7 +112,7 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
   /// null = 仍在加载；非 null = 已加载（可能为空列表）。
   List<SourceLibraryRow>? _rows;
 
-  /// Hibiki 互联不是 `media_sources` 扫描根，但它确实是**本机之外的同一批本地
+  /// Fushi 互联不是 `media_sources` 扫描根，但它确实是**本机之外的同一批本地
   /// 文件**（局域网里另一台自己的设备），所以与扫描根同列。
   ///
   /// 🔴 别再往这里加「网站」型来源（BUG-1431）：mokuro.moe 曾挂在这一节，用户口径
@@ -146,11 +153,14 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
   late final AppModel _appModel;
 
   /// 本域可选的网络传输：书/漫画四 transport 全通（远端文件下载后导入）；
-  /// 视频仅 WebDAV 与 AList/OpenList（条目 URL 原地流播——AList 起播前经 fs/get
-  /// 换签名直链；SFTP/FTP 无 HTTP 直链，扫描器会拒）。
-  List<String> get _networkTransports => widget.mediaKind == 'video'
-      ? const <String>['webdav', 'alist']
-      : const <String>['sftp', 'ftp', 'webdav', 'alist'];
+  /// 视频是 SFTP、WebDAV 与 AList/OpenList（条目原地流播——AList 起播前经 fs/get
+  /// 换签名直链，SFTP 经回环中继按偏移读；FTP 读不了区间，扫描器会拒）。
+  /// 音乐只认本地文件夹（扫描器对非 local 来源直接报错，见 `_scanMusicSource`）。
+  List<String> get _networkTransports => switch (widget.mediaKind) {
+        'video' => const <String>['sftp', 'webdav', 'alist'],
+        'music' => const <String>[],
+        _ => const <String>['sftp', 'ftp', 'webdav', 'alist'],
+      };
 
   /// 页面页头与所有行级 mutation 共用的忙状态。
   bool get isBusy =>
@@ -308,24 +318,29 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     if (rows == null || interconnectEnabled == null) {
       return buildLoading(padding: const EdgeInsets.all(24));
     }
+    // M3E 分段列表：互联一行自成一组；扫描根是另一组（可拖拽重排）。
     final List<Widget> sourceRows = <Widget>[
       _buildVirtualSourceRow(
         tokens,
-        icon: Icons.devices_outlined,
+        icon: FushiIcons.devices,
         title: t.audio_source_fushi_interconnect,
         subtitle: t.interconnect_enable_hint,
         value: interconnectEnabled,
         onChanged: _setInterconnectEnabled,
       ),
-      if (rows.isNotEmpty) ...<Widget>[
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: tokens.spacing.gap / 2),
-          child: const Divider(height: 1),
-        ),
+      SizedBox(height: tokens.spacing.gap + 4),
+      if (rows.isEmpty)
+        FushiPlaceholderMessage(
+          icon: FushiIcons.folderOpen,
+          message: t.media_source_list_empty,
+        )
+      else
         _buildFolderRows(tokens, rows),
-      ],
     ];
-    return Column(children: sourceRows);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: sourceRows,
+    );
   }
 
   Widget _buildFolderRows(
@@ -334,8 +349,11 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
   ) {
     // 自实现的 FushiReorderableColumn（局部坐标长按拖拽，消祖先 FushiAppUiScale
     // 缩放），与 LocalAudioSourcesDialog 同款，而非 SDK ReorderableListView。
+    // 行间缝由列表插（分段行不自带缝），拖拽浮层只包住行本身。
     return FushiReorderableColumn(
       itemCount: rows.length,
+      spacing: fushiGroupedListGap(context),
+      feedbackBorderRadius: FushiM3eShape.cardRadius,
       keyForIndex: (int index) =>
           ValueKey<String>('media_source_${rows[index].id}'),
       onReorder: (int from, int to) {
@@ -345,8 +363,13 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
         });
         _persistOrder();
       },
-      itemBuilder: (BuildContext context, int index) =>
-          _buildRow(tokens, rows[index]),
+      itemBuilder: (BuildContext context, int index) => FushiGroupedListItem(
+        index: index,
+        count: rows.length,
+        includeGap: false,
+        separatorIndent: tokens.spacing.rowHorizontal + 40 + 12,
+        child: _buildRow(tokens, rows[index]),
+      ),
     );
   }
 
@@ -358,38 +381,48 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     required bool value,
     required ValueChanged<bool> onChanged,
   }) {
-    final ThemeData theme = Theme.of(context);
-    final ColorScheme cs = theme.colorScheme;
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: tokens.spacing.gap / 2),
-      child: Row(
-        children: <Widget>[
-          Icon(icon, color: cs.onSurfaceVariant),
-          SizedBox(width: tokens.spacing.gap),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Text(title, style: theme.textTheme.titleSmall),
-                Text(
-                  subtitle,
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: cs.onSurfaceVariant,
-                  ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
+    final ColorScheme cs = Theme.of(context).colorScheme;
+    return FushiGroupedListItem(
+      index: 0,
+      count: 1,
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: tokens.spacing.rowHorizontal,
+          vertical: tokens.spacing.gap + 4,
+        ),
+        child: Row(
+          children: <Widget>[
+            FushiListLeadingIcon(
+              icon,
+              shape: FushiLeadingShape.cookie,
+              tone: value ? FushiCardTone.primary : FushiCardTone.neutral,
             ),
-          ),
-          SizedBox(width: tokens.spacing.gap),
-          adaptiveSwitch(
-            context: context,
-            value: value,
-            onChanged: onChanged,
-          ),
-        ],
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Text(title, style: context.fushiType.titleSmallEmphasized),
+                  Text(
+                    subtitle,
+                    style: context.fushiType.bodySmall.copyWith(
+                      color: cs.onSurfaceVariant,
+                    ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(width: tokens.spacing.gap),
+            adaptiveSwitch(
+              context: context,
+              value: value,
+              onChanged: onChanged,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -404,55 +437,104 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     }
   }
 
+  /// 一个扫描根的分段行（M3E）：行首形状图标、名称 / 位置 / 状态三行，行尾只留
+  /// 高频动作（重新扫描；视频另有刮削与刮削设置）+「⋯」菜单（改名、诊断包、
+  /// 打开文件夹、移除）。扫描 / 刮削进行中行底亮波浪进度。
   Widget _buildRow(FushiDesignTokens tokens, SourceLibraryRow row) {
     final ThemeData theme = Theme.of(context);
     final ColorScheme cs = theme.colorScheme;
-    final TextStyle? subStyle =
-        theme.textTheme.bodySmall?.copyWith(color: cs.onSurfaceVariant);
+    final TextStyle subStyle =
+        context.fushiType.bodySmall.copyWith(color: cs.onSurfaceVariant);
     final bool isLocal = row.transport == 'local';
     final bool isVideo = widget.mediaKind == 'video';
     final bool scanning = _scanning.contains(row.id);
     final bool scraping = _isScrapingSource(row.id);
     final bool exporting = _exportingDiagnostics.contains(row.id);
     final bool busy = scanning || scraping || exporting || isBusy;
-
+    final bool working = scanning || scraping || exporting;
+    final FushiMotionScheme motion = context.fushiMotion;
+    final List<_SourceRowMenuAction> menu = <_SourceRowMenuAction>[
+      _SourceRowMenuAction(
+        key: ValueKey<String>('media_source_rename_${row.id}'),
+        label: t.media_source_rename,
+        icon: FushiIcons.rename,
+        onTap: busy ? null : () => _rename(row),
+      ),
+      if (isVideo)
+        _SourceRowMenuAction(
+          key: ValueKey<String>('video_source_restore_grouping_${row.id}'),
+          label: t.video_source_restore_grouping_action,
+          icon: FushiIcons.collections,
+          onTap: busy ? null : () => _restoreAutomaticGrouping(row),
+        ),
+      if (isVideo && isLocal)
+        _SourceRowMenuAction(
+          key: ValueKey<String>('video_scrape_diagnostic_export_${row.id}'),
+          label: t.video_scrape_diagnostic_export,
+          icon: FushiIcons.backup,
+          onTap: busy ? null : () => _exportVideoScrapeDiagnostics(row),
+        ),
+      _SourceRowMenuAction(
+        label: t.media_source_open_folder,
+        icon: FushiIcons.folderOpen,
+        // 打开文件夹只在桌面（有文件管理器契约）+ 本地来源可用；网络来源
+        // 无本地目录可开。
+        onTap: isLocal && currentRevealHost() != null
+            ? () => _openFolder(row)
+            : null,
+      ),
+      _SourceRowMenuAction(
+        key: ValueKey<String>('media_source_remove_${row.id}'),
+        label: t.media_source_remove,
+        icon: FushiIcons.delete,
+        destructive: true,
+        onTap: busy ? null : () => _remove(row),
+      ),
+    ];
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: tokens.spacing.gap / 2),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      padding: EdgeInsetsDirectional.fromSTEB(
+        tokens.spacing.rowHorizontal,
+        tokens.spacing.gap + 2,
+        tokens.spacing.gap,
+        tokens.spacing.gap + 2,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Icon(
-            isLocal ? Icons.folder_outlined : Icons.cloud_outlined,
-            color: cs.onSurfaceVariant,
-          ),
-          SizedBox(width: tokens.spacing.gap),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Text(
-                  row.label,
-                  style: theme.textTheme.titleSmall,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                Text(
-                  _rowLocation(row),
-                  style: subStyle,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                _buildStatusLine(theme, cs, subStyle, row),
-              ],
-            ),
-          ),
-          SizedBox(width: tokens.spacing.gap),
           Row(
-            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              FushiListLeadingIcon(
+                isLocal ? FushiIcons.folder : FushiIcons.cloud,
+                shape: FushiLeadingShape.square,
+                tone: working ? FushiCardTone.primary : FushiCardTone.secondary,
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Text(
+                      row.label,
+                      style: context.fushiType.titleSmallEmphasized,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      _rowLocation(row),
+                      style: subStyle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    _buildStatusLine(theme, cs, subStyle, row),
+                  ],
+                ),
+              ),
+              SizedBox(width: tokens.spacing.gap),
               FushiIconButton(
-                icon: Icons.refresh,
+                icon: FushiIcons.refresh,
                 size: 18,
                 tooltip: t.media_source_rescan,
                 busy: scanning,
@@ -460,18 +542,9 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
                 padding: EdgeInsets.all(tokens.spacing.gap / 2),
                 onTap: () => _rescan(row),
               ),
-              FushiIconButton(
-                key: ValueKey<String>('media_source_rename_${row.id}'),
-                icon: Icons.drive_file_rename_outline,
-                size: 18,
-                tooltip: t.media_source_rename,
-                enabled: !busy,
-                padding: EdgeInsets.all(tokens.spacing.gap / 2),
-                onTap: () => _rename(row),
-              ),
               if (isVideo && widget.onScrapeSource != null)
                 FushiIconButton(
-                  icon: Icons.manage_search_outlined,
+                  icon: FushiIcons.manageSearch,
                   size: 18,
                   tooltip: row.videoGroupingMode == 'folder'
                       ? t.video_source_grouping_folder_hint
@@ -481,46 +554,66 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
                   padding: EdgeInsets.all(tokens.spacing.gap / 2),
                   onTap: () => _scrapeSource(row),
                 ),
-              if (isVideo && isLocal)
-                FushiIconButton(
-                  key: ValueKey<String>(
-                    'video_scrape_diagnostic_export_${row.id}',
-                  ),
-                  icon: Icons.archive_outlined,
-                  size: 18,
-                  tooltip: t.video_scrape_diagnostic_export,
-                  busy: exporting,
-                  enabled: !busy,
-                  padding: EdgeInsets.all(tokens.spacing.gap / 2),
-                  onTap: () => _exportVideoScrapeDiagnostics(row),
-                ),
               if (isVideo)
                 FushiIconButton(
-                  icon: Icons.tune,
+                  icon: FushiIcons.settings,
                   size: 18,
                   tooltip: t.video_source_scrape_settings,
                   enabled: !busy,
                   padding: EdgeInsets.all(tokens.spacing.gap / 2),
                   onTap: () => _openVideoScrapeSettings(row),
                 ),
-              FushiIconButton(
-                icon: Icons.folder_open,
-                size: 18,
-                tooltip: t.media_source_open_folder,
-                // 打开文件夹只在 Windows + 本地来源可用；网络来源无本地目录可开。
-                enabled: isLocal && Platform.isWindows,
-                padding: EdgeInsets.all(tokens.spacing.gap / 2),
-                onTap: () => _openFolder(row),
-              ),
-              FushiIconButton(
-                icon: Icons.remove_circle_outline,
-                size: 18,
-                tooltip: t.media_source_remove,
-                enabled: !busy,
-                padding: EdgeInsets.all(tokens.spacing.gap / 2),
-                onTap: () => _remove(row),
+              FushiPopupMenuButton<_SourceRowMenuAction>(
+                key: ValueKey<String>('media_source_menu_${row.id}'),
+                tooltip: t.common_more_actions,
+                icon: const FushiIcon(FushiIcons.more, size: 20),
+                onSelected: (_SourceRowMenuAction action) =>
+                    action.onTap?.call(),
+                itemBuilder: (BuildContext context) =>
+                    <PopupMenuEntry<_SourceRowMenuAction>>[
+                  for (final _SourceRowMenuAction action in menu)
+                    PopupMenuItem<_SourceRowMenuAction>(
+                      key: action.key,
+                      value: action,
+                      enabled: action.onTap != null,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          FushiIcon(
+                            action.icon,
+                            size: 20,
+                            color: action.destructive ? cs.error : null,
+                          ),
+                          const SizedBox(width: 12),
+                          Flexible(
+                            child: Text(
+                              action.label,
+                              style: action.destructive
+                                  ? TextStyle(color: cs.error)
+                                  : null,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                ],
               ),
             ],
+          ),
+          // 扫描 / 刮削 / 导出进行中：行底波浪进度（spring 展开收起）。
+          AnimatedSize(
+            duration: motion.spatialDefault.duration,
+            curve: motion.spatialDefault.curve,
+            alignment: Alignment.topCenter,
+            child: working
+                ? Padding(
+                    padding: EdgeInsetsDirectional.only(
+                      top: tokens.spacing.gap,
+                      end: tokens.spacing.gap,
+                    ),
+                    child: const FushiLinearProgressIndicator(),
+                  )
+                : const SizedBox(width: double.infinity),
           ),
         ],
       ),
@@ -599,6 +692,7 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     final String count = switch (widget.mediaKind) {
       'book' => t.media_source_count_book(n: total),
       'manga' => t.media_source_count_manga(n: total),
+      'music' => t.media_source_count_music(n: total),
       _ => t.media_source_count_video(n: total),
     };
     final DateTime? scannedAt = row.lastScannedAt;
@@ -687,16 +781,21 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
   /// 公开给外层的唯一动作入口（对话框页脚 / 页面页头按钮都调它）。
   Future<void> addSource() async {
     if (isBusy) return;
+    // 本域没有网络传输（音乐）：不弹二选一，直接选本地文件夹。
+    if (_networkTransports.isEmpty) {
+      await addLocalFolder();
+      return;
+    }
     final _AddSourceChoice? choice = await showAppDialog<_AddSourceChoice>(
       context: context,
-      builder: (BuildContext ctx) => SimpleDialog(
+      builder: (BuildContext ctx) => FushiSimpleDialog(
         title: Text(t.media_source_add),
         children: <Widget>[
-          SimpleDialogOption(
+          FushiSimpleDialogOption(
             onPressed: () => Navigator.pop(ctx, _AddSourceChoice.local),
             child: Row(
               children: <Widget>[
-                const Icon(Icons.folder_outlined),
+                const FushiIcon(Icons.folder_outlined),
                 const SizedBox(width: 16),
                 // BUG-1184：紧邻的「网络来源」选项已用 Expanded，这条漏了——窄屏 +
                 // 长本地化文案时裸 Text 直接把 Row 撑溢出。
@@ -704,12 +803,12 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
               ],
             ),
           ),
-          SimpleDialogOption(
+          FushiSimpleDialogOption(
             onPressed: () => Navigator.pop(ctx, _AddSourceChoice.network),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                const Icon(Icons.cloud_outlined),
+                const FushiIcon(Icons.cloud_outlined),
                 const SizedBox(width: 16),
                 Expanded(
                   child: Column(
@@ -755,14 +854,14 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     final _FolderImportChoice? choice =
         await showAppDialog<_FolderImportChoice>(
       context: context,
-      builder: (BuildContext ctx) => SimpleDialog(
+      builder: (BuildContext ctx) => FushiSimpleDialog(
         title: Text(t.media_import_folder),
         children: <Widget>[
-          SimpleDialogOption(
+          FushiSimpleDialogOption(
             onPressed: () => Navigator.pop(ctx, _FolderImportChoice.asSource),
             child: Row(
               children: <Widget>[
-                const Icon(Icons.create_new_folder_outlined),
+                const FushiIcon(Icons.create_new_folder_outlined),
                 const SizedBox(width: 16),
                 Expanded(
                   child: Column(
@@ -780,11 +879,11 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
               ],
             ),
           ),
-          SimpleDialogOption(
+          FushiSimpleDialogOption(
             onPressed: () => Navigator.pop(ctx, _FolderImportChoice.once),
             child: Row(
               children: <Widget>[
-                const Icon(Icons.file_download_outlined),
+                const FushiIcon(Icons.file_download_outlined),
                 const SizedBox(width: 16),
                 Expanded(child: Text(t.media_import_folder_once)),
               ],
@@ -802,6 +901,42 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     }
   }
 
+  /// 视频域选中的若是音频 CD（只有 `.cda` 快捷方式），抓轨后按「仅此一次」导入，
+  /// 不登记常驻来源（BUG-3312）。返回 true 表示已接管，调用方就此结束。
+  Future<bool> _importedAsAudioCd(String picked) async {
+    if (widget.mediaKind != SourceLibraryKind.video.dbValue) return false;
+    final bool handled = await _whileTempSourceScans(
+      (void Function(int sourceId) onScanning) => importAudioCdIfPresent(
+        context,
+        db: _db,
+        dir: picked,
+        onScanning: onScanning,
+      ),
+    );
+    if (!handled) return false;
+    widget.onLibraryChanged?.call();
+    return true;
+  }
+
+  /// 一次性导入（[importLocalFolderOnceAt]）的临时来源行不进 [_rows]（中途不
+  /// `_load`），但扫描期间计入 [_scanning] 让 [isBusy] 生效，与常驻来源扫描共享同一套
+  /// 忙态与重入保护；[body] 结束（含抛出）即撤掉。来源页「仅此一次」与音频 CD 抓轨导入
+  /// 共用这一份，不各自记账。
+  Future<T> _whileTempSourceScans<T>(
+    Future<T> Function(void Function(int sourceId) onScanning) body,
+  ) async {
+    int? scanningId;
+    try {
+      return await body((int id) {
+        scanningId = id;
+        if (mounted) setState(() => _scanning.add(id));
+      });
+    } finally {
+      final int? id = scanningId;
+      if (id != null && mounted) setState(() => _scanning.remove(id));
+    }
+  }
+
   /// 添加本地文件夹为常驻来源（选目录 → 去重 → 落库 → 立即扫描）。
   ///
   /// 公开：除 [addSource] 的本地分支外，「导入」视图快速导入区的「导入文件夹 →
@@ -810,14 +945,14 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     // 扫描根是**长期存储并反复复扫**的路径，必须是 `dart:io` 真读得动的绝对路径：
     // 安卓上裸 `getDirectoryPath()` 只是把 tree URI 拼成路径串（映射不出 volume 时
     // 还会退化成 `/`），而 SAF 授的是 URI 权限不是路径权限——没有全文件访问，扫描
-    // 器读它必失败，于是「加了来源却永远扫不出书」。统一走 pickRealDirectoryPath
-    // （安卓先取全文件访问再经原生 SAF 解析真实路径；桌面/iOS 行为逐字不变）。
-    final String? picked = await pickRealDirectoryPath(
-      context: context,
-      appModel: _appModel,
-      dialogTitle: t.media_source_add_local_folder,
-    );
-    if (!mounted || picked == null || picked.isEmpty) return;
+    // 器读它必失败，于是「加了来源却永远扫不出书」。统一走 [_pickSourceFolder]
+    // （安卓先取全文件访问再经原生 SAF 解析真实路径；iOS 建安全作用域书签；桌面原样）。
+    final ({String path, String? bookmark})? pick =
+        await _pickSourceFolder(t.media_source_add_local_folder);
+    if (!mounted || pick == null) return;
+    final String picked = pick.path;
+    final String? bookmark = pick.bookmark;
+    if (await _importedAsAudioCd(picked) || !mounted) return;
 
     final String norm = normalizeSourceRootPath(picked, transport: 'local');
     final List<SourceLibraryRow> existing = _rows ?? const <SourceLibraryRow>[];
@@ -831,7 +966,7 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
           msg: t.media_source_root_already_added(path: norm),
           severity: ToastSeverity.warning,
         );
-        await _rescan(row);
+        await _rescan(await _adoptFreshBookmark(row, bookmark));
         return;
       }
     }
@@ -844,6 +979,8 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
         mediaKind: Value(widget.mediaKind),
         transport: const Value('local'),
         rootPath: Value(norm),
+        // iOS：安全作用域书签，扫描 / 播放前据此重新取得访问权（BUG-3697）。
+        configJson: sourceConfigValueForBookmark(bookmark),
         recursive: const Value(true),
         videoGroupingMode: Value(groupingMode),
         sortOrder: Value(_nextSortOrder()),
@@ -865,12 +1002,11 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
   /// 逐字一致。
   Future<void> importLocalFolderOnce() async {
     if (isBusy) return;
-    final String? picked = await pickRealDirectoryPath(
-      context: context,
-      appModel: _appModel,
-      dialogTitle: t.media_import_folder,
-    );
-    if (!mounted || picked == null || picked.isEmpty) return;
+    final ({String path, String? bookmark})? pick =
+        await _pickSourceFolder(t.media_import_folder);
+    if (!mounted || pick == null) return;
+    final String picked = pick.path;
+    if (await _importedAsAudioCd(picked) || !mounted) return;
 
     final String norm = normalizeSourceRootPath(picked, transport: 'local');
     // 该根已是常驻来源：不再造同根的一次性影子，直接重扫那一行。重扫本身在来源页
@@ -883,7 +1019,7 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
           msg: t.media_source_root_already_added(path: norm),
           severity: ToastSeverity.warning,
         );
-        await _rescan(row);
+        await _rescan(await _adoptFreshBookmark(row, pick.bookmark));
         return;
       }
     }
@@ -891,30 +1027,20 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     final String? groupingMode = await _pickVideoGroupingMode();
     if (!mounted || groupingMode == null) return;
     final VoidCallback? onLibraryChanged = widget.onLibraryChanged;
-    final int tempId = await _db.insertMediaSource(
-      MediaSourcesCompanion(
-        label: Value(defaultLabelFromRoot(norm, transport: 'local')),
-        mediaKind: Value(widget.mediaKind),
-        transport: const Value('local'),
-        rootPath: Value(norm),
-        recursive: const Value(true),
-        videoGroupingMode: Value(groupingMode),
-        sortOrder: Value(_nextSortOrder()),
-        createdAt: Value(DateTime.now().millisecondsSinceEpoch),
-      ),
-    );
-    final SourceLibraryRow? temp = await _db.getMediaSourceById(tempId);
-    if (temp == null) return;
     SourceScanSummary? summary;
-    // 临时行不进 _rows（中途不 _load），但计入 _scanning 让 isBusy 生效，
-    // 与常驻来源扫描共享同一套忙态与重入保护。
-    setState(() => _scanning.add(tempId));
     try {
-      summary = await SourceLibraryScanner(_db).scan(temp);
+      summary = await _whileTempSourceScans(
+        (void Function(int sourceId) onScanning) => importLocalFolderOnceAt(
+          db: _db,
+          mediaKind: widget.mediaKind,
+          path: norm,
+          videoGroupingMode: groupingMode,
+          bookmark: pick.bookmark,
+          onScanning: onScanning,
+        ),
+      );
     } finally {
-      await _db.deleteMediaSource(tempId);
       if (mounted) {
-        setState(() => _scanning.remove(tempId));
         // summary == null 只发生在 scan 意外抛出（scanner 常规失败会把错误写进
         // summary.error）；此时不播成功，让异常沿 unawaited 链路进错误日志。
         if (summary != null) {
@@ -928,6 +1054,8 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
                   t.media_source_count_book(n: summary.importedMediaCount),
                 'manga' =>
                   t.media_source_count_manga(n: summary.importedMediaCount),
+                'music' =>
+                  t.media_source_count_music(n: summary.importedMediaCount),
                 _ => t.media_source_count_video(n: summary.importedMediaCount),
               },
               severity: ToastSeverity.success,
@@ -937,6 +1065,58 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
       }
       onLibraryChanged?.call();
     }
+  }
+
+  /// 选一个要登记成来源（常驻或仅此一次）的本地文件夹。
+  ///
+  /// iOS 走 [SourceFolderAccess.pickFolder]：系统目录选择器 + 在访问窗口内建安全作用域
+  /// 书签（BUG-3697）。file_picker 的 `getDirectoryPath()` 交回的沙盒外路径从未激活
+  /// 访问，`dart:io` 读不了，存下来也永远扫不出东西。其它平台（以及集成测试注入路径
+  /// 时）走 [pickRealDirectoryPath]，书签恒为 null。
+  ///
+  /// 返回 null = 取消或失败（失败已提示）。
+  Future<({String path, String? bookmark})?> _pickSourceFolder(
+    String dialogTitle,
+  ) async {
+    final SourceFolderAccess access = SourceFolderAccess.instance;
+    if (access.requiresBookmark && !isRealDirectoryPathOverridden) {
+      final SourceFolderBookmarkPick? pick;
+      try {
+        pick = await access.pickFolder();
+      } on SourceFolderAccessException catch (e) {
+        FushiToast.show(
+          msg: t.media_source_folder_access_pick_failed(reason: e.message),
+          severity: ToastSeverity.error,
+        );
+        return null;
+      }
+      if (pick == null || pick.path.isEmpty) return null;
+      return (path: pick.path, bookmark: pick.bookmark);
+    }
+    final String? picked = await pickRealDirectoryPath(
+      context: context,
+      appModel: _appModel,
+      dialogTitle: dialogTitle,
+    );
+    if (picked == null || picked.isEmpty) return null;
+    return (path: picked, bookmark: null);
+  }
+
+  /// 撞同根时用户刚为这个文件夹重新授过权：把新书签写回已有行并丢掉旧访问，返回
+  /// 带新 configJson 的行供重扫。这是修复之前在 iOS 上加的、没有书签的来源的恢复
+  /// 路径（扫描报「未保存访问授权」时提示用户重新添加同一个文件夹）。
+  /// [bookmark] 为 null（非 iOS）时原样返回 [row]。
+  Future<SourceLibraryRow> _adoptFreshBookmark(
+    SourceLibraryRow row,
+    String? bookmark,
+  ) async {
+    if (bookmark == null) return row;
+    await _db.updateMediaSourceConfigJson(
+      row.id,
+      configWithSourceBookmark(row.configJson, bookmark),
+    );
+    await SourceFolderAccess.instance.invalidate(row.id);
+    return await _db.getMediaSourceById(row.id) ?? row;
   }
 
   /// 添加网络来源：弹连接表单（transport 集按域收窄，见 [_networkTransports]）
@@ -1004,9 +1184,28 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     if (fresh != null) await _rescan(fresh);
   }
 
+  /// 「恢复自动分组」：确认后带 `restoreDissolvedGroups` 重扫一次。
+  ///
+  /// 解散合集（库页多选删除合集卡、合集详情删除）会留下按合集名的墓碑，普通重扫
+  /// 据此不再自动归组（BUG-1739）。整批解散后系列就永久散成单集、重扫也救不回来，
+  /// 而界面上看不到这层状态——这里是唯一的显式出路（BUG-3654）。
+  Future<void> _restoreAutomaticGrouping(SourceLibraryRow row) async {
+    final bool confirmed = await showFushiConfirmDialog(
+      context: context,
+      title: t.video_source_restore_grouping_action,
+      message: t.video_source_restore_grouping_confirm,
+      icon: FushiIcons.collections,
+    );
+    if (!mounted || !confirmed) return;
+    await _rescan(row, restoreDissolvedGroups: true);
+  }
+
   /// 重新扫描一个来源：行级 loading → scanner.scan（内部吞异常写 lastScanError）→
   /// 重读该行刷新统计/时间/错误。
-  Future<void> _rescan(SourceLibraryRow row) async {
+  Future<void> _rescan(
+    SourceLibraryRow row, {
+    bool restoreDissolvedGroups = false,
+  }) async {
     if (isBusy) return;
     final VoidCallback? onLibraryChanged = widget.onLibraryChanged;
     final Future<void> Function(SourceLibraryRow, SourceScanSummary)?
@@ -1014,7 +1213,10 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     SourceScanSummary? summary;
     setState(() => _scanning.add(row.id));
     try {
-      Future<SourceScanSummary> scan() => SourceLibraryScanner(_db).scan(row);
+      Future<SourceScanSummary> scan() => SourceLibraryScanner(_db).scan(
+            row,
+            restoreDissolvedGroups: restoreDissolvedGroups,
+          );
       final VideoSourceScrapeTaskController? controller =
           widget.mediaKind == 'video' ? widget.scrapeTaskController : null;
       summary = controller == null
@@ -1119,11 +1321,11 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     if (widget.mediaKind != 'video') return 'series';
     return await showAppDialog<String>(
       context: context,
-      builder: (BuildContext context) => SimpleDialog(
+      builder: (BuildContext context) => FushiSimpleDialog(
         title: Text(t.video_source_grouping_mode),
         children: <Widget>[
           for (final String mode in <String>['series', 'folder'])
-            SimpleDialogOption(
+            FushiSimpleDialogOption(
               onPressed: () => Navigator.pop(context, mode),
               child: FushiListItem(
                 padding: EdgeInsets.zero,
@@ -1145,17 +1347,22 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
     );
   }
 
-  /// 打开来源根目录（仅 Windows 本地来源，复用仓库唯一现成的 explorer 调用）。
+  /// 打开来源根目录（桌面三端本地来源）。走文件管理器原语的「打开目录」形态
+  /// [openDirectoryInFileManager]：rootPath 由 normalizeSourceRootPath 归一化为正
+  /// 斜杠，而 Windows explorer.exe 只认反斜杠（传正斜杠会改开「文档」，BUG-920）——
+  /// 这层方向转换收在原语的 Windows 分支里，这里不再自己拼 explorer 调用。
+  ///
+  /// 根目录可以是符号链接 / 联接点：必须按目录打开，不能交给按 `followLinks: false`
+  /// 判类型的 [revealInFileManager]（会被当成文件、在父目录里选中它，BUG-3090）。
+  /// 打不开（根目录已不存在 / 盘没挂 / 启动失败）要告诉用户，不能点了没反应。
   Future<void> _openFolder(SourceLibraryRow row) async {
-    if (!Platform.isWindows || row.transport != 'local') return;
-    try {
-      // rootPath 由 normalizeSourceRootPath 归一化为正斜杠（跨平台一致 + dedup），
-      // 但 Windows explorer.exe 只认反斜杠路径参数：传正斜杠会被忽略、改开默认
-      // 「文档」目录（BUG-920）。仅在 explorer 这个平台边界把 `/` 转回 `\`。
-      final String windowsPath = row.rootPath.replaceAll('/', r'\');
-      await Process.run('explorer', <String>[windowsPath]);
-    } catch (_) {
-      // 打开失败不致命（路径可能已不存在）；静默即可。
+    if (row.transport != 'local') return;
+    final bool opened = await openDirectoryInFileManager(row.rootPath);
+    if (!opened && mounted) {
+      FushiToast.show(
+        msg: t.media_source_open_folder_failed,
+        severity: ToastSeverity.error,
+      );
     }
   }
 
@@ -1165,26 +1372,14 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
   /// 绝对路径。原始 NFO 与文件名仍可能含个人信息，因此分享前必须二次确认。
   Future<void> _exportVideoScrapeDiagnostics(SourceLibraryRow row) async {
     if (row.transport != 'local' || row.mediaKind != 'video') return;
-    final bool? confirmed = await showAppDialog<bool>(
+    final bool confirmed = await showFushiConfirmDialog(
       context: context,
-      builder: (BuildContext ctx) => AlertDialog.adaptive(
-        title: Text(t.video_scrape_diagnostic_confirm_title),
-        content: Text(t.video_scrape_diagnostic_confirm_body),
-        actions: <Widget>[
-          adaptiveDialogAction(
-            context: ctx,
-            onPressed: () => Navigator.pop(ctx, false),
-            child: Text(t.dialog_cancel),
-          ),
-          adaptiveDialogAction(
-            context: ctx,
-            onPressed: () => Navigator.pop(ctx, true),
-            child: Text(t.dialog_export),
-          ),
-        ],
-      ),
+      title: t.video_scrape_diagnostic_confirm_title,
+      message: t.video_scrape_diagnostic_confirm_body,
+      icon: Icons.ios_share,
+      confirmLabel: t.dialog_export,
     );
-    if (!mounted || confirmed != true) return;
+    if (!mounted || !confirmed) return;
 
     setState(() => _exportingDiagnostics.add(row.id));
     final bool isDesktop =
@@ -1317,6 +1512,25 @@ class MediaSourcesViewState extends ConsumerState<MediaSourcesView>
 }
 
 /// 移除来源确认框的结果；[migrateVideoDownloadsTo] 为 null = 不迁移下载引用。
+/// 扫描根行「⋯」菜单里的一个动作（[onTap] 为 null = 当前不可用）。
+class _SourceRowMenuAction {
+  const _SourceRowMenuAction({
+    required this.label,
+    required this.icon,
+    required this.onTap,
+    this.key,
+    this.destructive = false,
+  });
+
+  final Key? key;
+  final String label;
+  final IconData icon;
+  final VoidCallback? onTap;
+
+  /// 破坏性动作（移除）：菜单里用 error 色；确认框由 `_remove` 弹。
+  final bool destructive;
+}
+
 class _SourceRemovalChoice {
   const _SourceRemovalChoice(this.migrateVideoDownloadsTo);
 
@@ -1348,7 +1562,7 @@ class _SourceRemovalDialogState extends State<_SourceRemovalDialog> {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog.adaptive(
+    return FushiAlertDialog.adaptive(
       title: Text(t.media_source_remove),
       content: Column(
         mainAxisSize: MainAxisSize.min,
@@ -1366,7 +1580,7 @@ class _SourceRemovalDialogState extends State<_SourceRemovalDialog> {
             const SizedBox(height: 8),
             Material(
               type: MaterialType.transparency,
-              child: DropdownButton<int>(
+              child: FushiDropdownButton<int>(
                 key: const ValueKey<String>('media-source-remove-migrate'),
                 isExpanded: true,
                 value: _target,
@@ -1534,7 +1748,7 @@ class _VideoSourceScrapeSettingsDialogState
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
+    return FushiAlertDialog(
       title: Text(t.video_source_scrape_settings),
       content: SizedBox(
         width: 480,
@@ -1588,7 +1802,7 @@ class _VideoSourceScrapeSettingsDialogState
                 Text(t.video_metadata_primary_provider_hint),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: TextField(
+                  child: FushiTextFieldControl(
                     controller: _metadataLocale,
                     decoration: InputDecoration(
                       labelText: t.video_source_scrape_metadata_locale,
@@ -1983,7 +2197,7 @@ class _NetworkSourceFormDialogState extends State<_NetworkSourceFormDialog> {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
+    return FushiAlertDialog(
       title: Text(t.media_source_add_network),
       content: SizedBox(
         width: 420,
@@ -2103,9 +2317,9 @@ class _NetworkSourceFormDialogState extends State<_NetworkSourceFormDialog> {
                     ? const SizedBox(
                         width: 24,
                         height: 24,
-                        child: CircularProgressIndicator(strokeWidth: 2),
+                        child: FushiCircularProgressIndicator(strokeWidth: 2),
                       )
-                    : FilledButton.tonal(
+                    : FushiFilledButton.tonal(
                         onPressed: _testConnection,
                         child: Text(t.sync_test_connection),
                       ),

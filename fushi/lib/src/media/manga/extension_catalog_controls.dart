@@ -1,6 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
+import 'package:fushi/src/media/manga/extension_management_tile.dart';
 import 'package:fushi/src/media/manga/mihon/mihon_download_counts.dart';
+import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/src/utils/misc/error_details_dialog.dart';
 import 'package:fushi/utils.dart';
 
@@ -58,51 +61,14 @@ String extensionDownloadCountLabel(int? downloads) => downloads == null
         count: formatMihonDownloadCount(downloads),
       );
 
-/// 扩展行副标题：一行元信息 + 一行下载量（小号字）。
-///
-/// [extra] 接在下载量下面（Mihon 用它挂「包含的源」清单）。
-class ExtensionCatalogSubtitle extends StatelessWidget {
-  const ExtensionCatalogSubtitle({
-    required this.meta,
-    required this.downloads,
-    this.extra = const <Widget>[],
-    super.key,
-  });
-
-  final String meta;
-  final int? downloads;
-  final List<Widget> extra;
-
-  @override
-  Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        Text(meta, maxLines: 1, overflow: TextOverflow.ellipsis),
-        Text(
-          extensionDownloadCountLabel(downloads),
-          style: theme.textTheme.labelSmall,
-        ),
-        ...extra,
-      ],
-    );
-  }
-}
-
-/// 扩展目录的动作行：最低下载量下拉 + 批量安装 + 一键更新。
-///
-/// 键名按 [keyPrefix] 生成（`<prefix>_min_downloads` /
-/// `<prefix>_min_downloads_<档位>` / `<prefix>_bulk_install` /
-/// `<prefix>_update_all`），测试按它定位。
-class ExtensionCatalogActions extends StatelessWidget {
-  const ExtensionCatalogActions({
+/// 扩展目录「最低下载量」筛选：一排单选 chip（[ExtensionFilterChipRow]，与仓库 /
+/// 语言筛选同一形态）。键名 `<prefix>_min_downloads`（chip 行）/
+/// `<prefix>_min_downloads_<档位>`（chip）。
+class ExtensionMinDownloadsFilter extends StatelessWidget {
+  const ExtensionMinDownloadsFilter({
     required this.keyPrefix,
     required this.minDownloads,
     required this.onMinDownloadsChanged,
-    required this.onBulkInstall,
-    required this.onUpdateAll,
     this.minDownloadOptions = kExtensionMinDownloadOptions,
     super.key,
   });
@@ -110,48 +76,77 @@ class ExtensionCatalogActions extends StatelessWidget {
   final String keyPrefix;
   final int minDownloads;
   final ValueChanged<int> onMinDownloadsChanged;
-
-  /// null = 置灰（批量动作进行中 / 目录加载中）。
-  final VoidCallback? onBulkInstall;
-  final VoidCallback? onUpdateAll;
   final List<int> minDownloadOptions;
 
   @override
   Widget build(BuildContext context) {
+    return ExtensionFilterChipRow<int>(
+      key: ValueKey<String>('${keyPrefix}_min_downloads'),
+      icon: FushiIcons.download,
+      label: t.mihon_extension_min_downloads,
+      chipKeyPrefix: '${keyPrefix}_min_downloads_',
+      selected: minDownloads,
+      options: <ExtensionFilterOption<int>>[
+        for (final int option in minDownloadOptions)
+          (
+            value: option,
+            label: option == 0
+                ? t.mihon_extension_min_downloads_any
+                : '≥ ${formatMihonDownloadCount(option)}',
+          ),
+      ],
+      onSelected: onMinDownloadsChanged,
+    );
+  }
+}
+
+/// 扩展目录的动作排：批量安装 + 一键更新 + [trailing]（M3E，同一行、靠左）。
+///
+/// 排在目录最上面、搜索框之上（2026-10-25 用户拍板：四颗按钮同一行放左上角，
+/// 页头的仓库 / 刷新图标砍掉）。批量安装是 outlined（装进来的是会执行的代码，
+/// 不给主色），一键更新是 tonal 强调。键名 `<prefix>_bulk_install` /
+/// `<prefix>_update_all`，测试按它定位。
+class ExtensionCatalogActions extends StatelessWidget {
+  const ExtensionCatalogActions({
+    required this.keyPrefix,
+    required this.onBulkInstall,
+    required this.onUpdateAll,
+    this.trailing = const <Widget>[],
+    super.key,
+  });
+
+  final String keyPrefix;
+
+  /// null = 置灰（批量动作进行中 / 目录加载中）。
+  final VoidCallback? onBulkInstall;
+  final VoidCallback? onUpdateAll;
+
+  /// 同一行末尾的其它目录动作（「扩展仓库」「导入本地 APK」；按钮尺寸用
+  /// [FushiButtonSize.s] 与前两颗对齐）。
+  final List<Widget> trailing;
+
+  @override
+  Widget build(BuildContext context) {
     return Wrap(
-      spacing: 12,
+      spacing: 8,
       runSpacing: 8,
       crossAxisAlignment: WrapCrossAlignment.center,
       children: <Widget>[
-        DropdownButton<int>(
-          key: ValueKey<String>('${keyPrefix}_min_downloads'),
-          value: minDownloads,
-          onChanged: (int? value) => onMinDownloadsChanged(value ?? 0),
-          items: <DropdownMenuItem<int>>[
-            for (final int option in minDownloadOptions)
-              DropdownMenuItem<int>(
-                key: ValueKey<String>('${keyPrefix}_min_downloads_$option'),
-                value: option,
-                child: Text(
-                  option == 0
-                      ? '${t.mihon_extension_min_downloads}: ${t.mihon_extension_language_all}'
-                      : '${t.mihon_extension_min_downloads}: $option',
-                ),
-              ),
-          ],
-        ),
-        OutlinedButton.icon(
+        FushiOutlinedButton.icon(
           key: ValueKey<String>('${keyPrefix}_bulk_install'),
+          size: FushiButtonSize.s,
           onPressed: onBulkInstall,
-          icon: const Icon(Icons.playlist_add_check),
+          icon: const FushiIcon(FushiIcons.libraryAdd),
           label: Text(t.mihon_extension_bulk_install),
         ),
-        OutlinedButton.icon(
+        FushiFilledButton.tonalIcon(
           key: ValueKey<String>('${keyPrefix}_update_all'),
+          size: FushiButtonSize.s,
           onPressed: onUpdateAll,
-          icon: const Icon(Icons.system_update_alt),
+          icon: const FushiIcon(FushiIcons.sync),
           label: Text(t.mihon_extension_update_all),
         ),
+        ...trailing,
       ],
     );
   }
@@ -164,7 +159,7 @@ Future<void> showExtensionBulkNothing(
   required String message,
 }) => showAppDialog<void>(
   context: context,
-  builder: (BuildContext dialogContext) => AlertDialog.adaptive(
+  builder: (BuildContext dialogContext) => FushiAlertDialog.adaptive(
     title: Text(title),
     content: Text(message),
     actions: <Widget>[
@@ -186,29 +181,14 @@ Future<bool> confirmExtensionBulk(
   required String message,
   required String actionLabel,
   required bool destructive,
-}) async =>
-    await showAppDialog<bool>(
-      context: context,
-      builder: (BuildContext dialogContext) => AlertDialog.adaptive(
-        title: Text(title),
-        content: Text(message),
-        actions: <Widget>[
-          adaptiveDialogAction(
-            context: dialogContext,
-            onPressed: () => Navigator.pop(dialogContext, false),
-            child: Text(t.dialog_cancel),
-          ),
-          adaptiveDialogAction(
-            context: dialogContext,
-            isDestructiveAction: destructive,
-            isDefaultAction: !destructive,
-            onPressed: () => Navigator.pop(dialogContext, true),
-            child: Text(actionLabel),
-          ),
-        ],
-      ),
-    ) ==
-    true;
+}) => showFushiConfirmDialog(
+  context: context,
+  title: title,
+  message: message,
+  icon: destructive ? FushiIcons.warning : null,
+  confirmLabel: actionLabel,
+  destructive: destructive,
+);
 
 /// 批量动作执行体：进度框 → [run] → 关进度框。
 ///
@@ -238,7 +218,7 @@ Future<R?> runExtensionBulkWithProgress<R>(
     barrierDismissible: false,
     builder: (BuildContext dialogContext) {
       progressContext = dialogContext;
-      return AlertDialog.adaptive(
+      return FushiAlertDialog.adaptive(
         title: Text(title),
         content: ValueListenableBuilder<(int, int, String)>(
           valueListenable: progress,
@@ -249,7 +229,7 @@ Future<R?> runExtensionBulkWithProgress<R>(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                LinearProgressIndicator(
+                FushiLinearProgressIndicator(
                   value: total == 0 ? null : done / total,
                 ),
                 const SizedBox(height: 12),
@@ -305,7 +285,7 @@ Future<void> showExtensionBulkReport(
   Map<String, String> failures = const <String, String>{},
 }) => showAppDialog<void>(
   context: context,
-  builder: (BuildContext dialogContext) => AlertDialog.adaptive(
+  builder: (BuildContext dialogContext) => FushiAlertDialog.adaptive(
     title: Text(title),
     content: SingleChildScrollView(
       child: SelectableText(

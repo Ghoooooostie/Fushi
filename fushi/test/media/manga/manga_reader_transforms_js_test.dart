@@ -128,6 +128,124 @@ assert.equal(source.style.width,'1000px');
   );
 
   test(
+    'long strip pages snap to device pixels and overlap one device pixel',
+    () async {
+      final String webtoon = mangaWindowDocument(
+        const <MokuroImage>[
+          MokuroImage(
+            url: 'a.png',
+            size: MokuroSize(720, 3001),
+            blocks: <MokuroBlock>[],
+          ),
+        ],
+        const <String>['a.png'],
+        mode: MangaReadingMode.webtoon,
+        spreadDirection: 'ltr',
+        inlineSelectionJs: '',
+        readerPreferences: const MangaReaderPreferences(),
+      );
+      final int start = webtoon.indexOf('  function _layoutSource(page){');
+      final String layout = webtoon.substring(
+        start,
+        webtoon.indexOf('  function _inspectSource(page){', start),
+      );
+      await runJs('''
+const assert=require('node:assert/strict');
+function mk(prev, gap){
+  const source={style:{}};
+  return {dataset:{pw:'720',ph:'3001',spreadPages:'1'},style:{},
+    previousElementSibling:prev,__gap:gap,querySelector:()=>source,source};
+}
+const window={innerWidth:393,innerHeight:852,devicePixelRatio:2.75};
+function getComputedStyle(el){return {marginBottom:el.__gap?'12px':'0px'};}
+const ROTATE_WIDE=false,IS_WEBTOON=true,IS_VERTICAL_PAGED=false;
+$layout
+const first=mk(null,false), second=mk(first,false), afterGap=mk(mk(null,true),false);
+[first,second,afterGap].forEach(_layoutSource);
+// 393/720*3001 = 1638.07… CSS px → 4504.7 device px; must land on a whole one.
+const devicePx=parseFloat(first.style.height)*2.75;
+assert.ok(Math.abs(devicePx-Math.round(devicePx))<1e-6, first.style.height);
+assert.equal(first.style.marginTop,'');
+assert.equal(second.style.marginTop,(-1/2.75)+'px');
+// 有间距（webtoonGaps）时页缝是有意的，不能被压掉。
+assert.equal(afterGap.style.marginTop,'');
+// 图像的纵向缩放必须跟着对齐后的页高走，否则图和页框之间又留一条缝。
+const sy=Number(first.source.style.transform.split(',')[3]);
+assert.ok(Math.abs(sy*3001-parseFloat(first.style.height))<1e-6);
+''');
+    },
+  );
+
+  test('long strip gaps follow the reading mode, not showPageGaps', () {
+    String rule(MangaReadingMode mode, {required bool showPageGaps}) {
+      final String doc = mangaWindowDocument(
+        const <MokuroImage>[
+          MokuroImage(
+            url: 'a.png',
+            size: MokuroSize(720, 2000),
+            blocks: <MokuroBlock>[],
+          ),
+        ],
+        const <String>['a.png'],
+        mode: mode,
+        spreadDirection: 'ltr',
+        inlineSelectionJs: '',
+        readerPreferences: MangaReaderPreferences(
+          mode: mode,
+          showPageGaps: showPageGaps,
+        ),
+      );
+      final int start = doc.indexOf('.manga-page{width:');
+      return doc.substring(start, doc.indexOf('}', start));
+    }
+
+    // 「条漫」：showPageGaps 默认开也不能留缝（BUG-3749 的满屏黑线）。
+    expect(
+      rule(MangaReadingMode.webtoon, showPageGaps: true),
+      isNot(contains('margin-bottom')),
+    );
+    expect(
+      rule(MangaReadingMode.webtoonGaps, showPageGaps: false),
+      contains('margin-bottom:12px'),
+    );
+  });
+
+  test(
+    'fling velocity averages the recent window, not the last event',
+    () async {
+      final String webtoon = mangaWindowDocument(
+        const <MokuroImage>[
+          MokuroImage(
+            url: 'a.png',
+            size: MokuroSize(720, 3000),
+            blocks: <MokuroBlock>[],
+          ),
+        ],
+        const <String>['a.png'],
+        mode: MangaReadingMode.webtoon,
+        spreadDirection: 'ltr',
+        inlineSelectionJs: '',
+      );
+      final int start = webtoon.indexOf(
+        '  function _releaseVelocity(drag, upT){',
+      );
+      final String velocity = webtoon.substring(
+        start,
+        webtoon.indexOf('  function _startFlick(vy){', start),
+      );
+      await runJs('''
+const assert=require('node:assert/strict');
+$velocity
+// 最后一次事件间隔 1ms、只挪 0.2px：旧实现得到 200px/s，几乎不滑。
+const drag={vy:200,samples:[{t:0,y:0},{t:50,y:-100},{t:99,y:-199.8},{t:100,y:-200}]};
+assert.equal(_releaseVelocity(drag,104),-2000);
+// 手指停住 80ms 后才抬：不带惯性。
+assert.equal(_releaseVelocity(drag,180),0);
+''');
+    },
+  );
+
+  test(
     'split wide page consumes exactly two halves in reading direction',
     () async {
       for (final String direction in <String>['rtl', 'ltr']) {
@@ -195,6 +313,128 @@ assert.equal(page.style.clipPath,'${direction == 'rtl' ? 'inset(0 50% 0 0)' : 'i
     },
   );
 
+  test('取页失败的页可以重取：换带 retry 参数的新 URL，只认失败页', () async {
+    expect(
+      document,
+      contains("image.addEventListener('error'"),
+      reason: '失败要打标记，否则整章不重开这页就一直白着',
+    );
+    final String retry = section('  var RETRY_SERIAL = 0;', '  // 摆位是「重投影」');
+    await runJs('''
+function el(attrs){
+  return {
+    attrs: attrs,
+    getAttribute: function(k){ return k in this.attrs ? this.attrs[k] : null; },
+    setAttribute: function(k, v){ this.attrs[k] = String(v); },
+    removeAttribute: function(k){ delete this.attrs[k]; },
+  };
+}
+var img = el({src: 'https://fushi.local/img/a.png?v=3', loading: 'lazy'});
+Object.defineProperty(img, 'src', {
+  get: function(){ return this.attrs.src; },
+  set: function(v){ this.attrs.src = v; },
+});
+var page = el({'data-page': '0', 'data-spread': '0', 'data-load-failed': '1'});
+page.querySelector = function(){ return img; };
+page.getBoundingClientRect = function(){ return {left: 0, top: 0, right: 100, bottom: 100}; };
+var document = {
+  querySelectorAll: function(){
+    return page.getAttribute('data-load-failed') === '1' ? [page] : [];
+  },
+};
+$retry
+function check(cond, msg){ if (!cond) { console.error(msg); process.exit(1); } }
+check(!_retryFailedPageAt(200, 200), 'tap outside the failed page must not retry');
+check(!_retryFailedPageAt(5, 50), 'tap on the failed page away from the retry icon must not retry');
+check(_retryFailedPageAt(50, 50), 'tap on the retry icon retries it');
+check(img.src === 'https://fushi.local/img/a.png?v=3&retry=1', 'retry url: ' + img.src);
+check(img.attrs.loading === 'eager', 'retry is requested now, not lazily');
+check(page.getAttribute('data-load-failed') === null, 'failure mark cleared');
+check(!_retryPageImage(page), 'a page that did not fail is never re-requested');
+page.setAttribute('data-load-failed', '1');
+_retryFailedPagesWhere(function(p){ return Number(p.getAttribute('data-spread')) === 0; });
+check(img.src === 'https://fushi.local/img/a.png?v=3&retry=2', 'second retry keeps base url: ' + img.src);
+''');
+  });
+
+  test('失败页上左右翻页热区照常翻页，只有中央重试符号触发重取', () async {
+    final String retry = section('  var RETRY_SERIAL = 0;', '  // 摆位是「重投影」');
+    final String tap = section(
+      '  var TAP_ZONE_PAGING = ',
+      '  function _end(x, y){',
+    );
+    await runJs('''
+function el(attrs){
+  return {
+    attrs: attrs,
+    getAttribute: function(k){ return k in this.attrs ? this.attrs[k] : null; },
+    setAttribute: function(k, v){ this.attrs[k] = String(v); },
+    removeAttribute: function(k){ delete this.attrs[k]; },
+    appendChild: function(){},
+    remove: function(){},
+    style: {},
+  };
+}
+var img = el({src: 'https://fushi.local/img/a.png', loading: 'lazy'});
+Object.defineProperty(img, 'src', {
+  get: function(){ return this.attrs.src; },
+  set: function(v){ this.attrs.src = v; },
+});
+// 单页模式：失败页铺满 1000x1000 视口。
+var page = el({'data-page': '0', 'data-spread': '0', 'data-load-failed': '1'});
+page.querySelector = function(){ return img; };
+page.getBoundingClientRect = function(){ return {left: 0, top: 0, right: 1000, bottom: 1000}; };
+var document = {
+  querySelectorAll: function(){
+    return page.getAttribute('data-load-failed') === '1' ? [page] : [];
+  },
+  createElement: function(){ return el({}); },
+  getElementById: function(){ return null; },
+  addEventListener: function(){},
+  body: {appendChild: function(){}},
+};
+// 未放大（BUG-3634 的放大态判据住在 canvas zoom 段，本 harness 不截那段）。
+function _userZoomedIn(){ return false; }
+var calls = [];
+var window = {
+  innerWidth: 1000, innerHeight: 1000,
+  flutter_inappwebview: {callHandler: function(name, arg){ calls.push([name, arg]); }},
+};
+var timers = [];
+var setTimeout = function(fn){ timers.push(fn); return timers.length; };
+var clearTimeout = function(){};
+var IS_WEBTOON = false;
+function _bridge(){ return window.flutter_inappwebview; }
+function _selectOcrChar(){ return false; }
+function _doubleTapZoom(){}
+$retry
+$tap
+function check(cond, msg){ if (!cond) { console.error(msg); process.exit(1); } }
+function failAgain(){ page.setAttribute('data-load-failed', '1'); }
+// 左右热区：失败页上照常翻页，且不重取。
+_onTap(20, 500);
+check(calls.length === 1 && calls[0][0] === 'onMangaTurn', 'left zone must turn on a failed page: ' + JSON.stringify(calls));
+check(page.getAttribute('data-load-failed') === '1', 'left zone tap must not retry');
+_onTap(980, 500);
+check(calls.length === 2 && calls[1][0] === 'onMangaTurn' && calls[1][1] !== calls[0][1], 'right zone must turn the other way: ' + JSON.stringify(calls));
+check(page.getAttribute('data-load-failed') === '1', 'right zone tap must not retry');
+// 重取后源仍挂、马上又失败：热区依旧能翻走（不会卡在失败页上）。
+_onTap(500, 500);
+check(page.getAttribute('data-load-failed') === null, 'tap on the centre retry icon retries');
+check(calls.length === 2, 'retry tap does nothing else: ' + JSON.stringify(calls));
+failAgain();
+_onTap(20, 500);
+check(calls.length === 3 && calls[2][0] === 'onMangaTurn', 'still turns after a failed retry');
+// 命中区 ≥48dp：图标外缘 ±30px 内仍算重试。
+_onTap(530, 470);
+check(page.getAttribute('data-load-failed') === null, 'retry hit area is at least 48dp');
+failAgain();
+// 中央空白但不在图标上：不重取，走空白单击。
+_onTap(500, 200);
+check(page.getAttribute('data-load-failed') === '1', 'blank centre away from the icon must not retry');
+''');
+  });
+
   test(
     'filter values preserve zero adjustment and isolate bitmap color effects',
     () {
@@ -214,6 +454,16 @@ assert.equal(page.style.clipPath,'${direction == 'rtl' ? 'inset(0 50% 0 0)' : 'i
         ),
         'invert(1) grayscale(1) brightness(1.25) contrast(1.5) saturate(0.5)',
       );
+      // 恒等滤镜不下发：超高长条页图上的滤镜离屏面会越过纹理上限画成空白。
+      expect(
+        mangaImageFilterIsIdentity(const MangaReaderPreferences()),
+        isTrue,
+      );
+      expect(
+        mangaImageFilterIsIdentity(const MangaReaderPreferences(brightness: 5)),
+        isFalse,
+      );
+      expect(document, contains('.manga-source img{filter:none;}'));
       expect(document, contains('class="manga-source"'));
       expect(document, contains('source.insertAdjacentHTML'));
     },

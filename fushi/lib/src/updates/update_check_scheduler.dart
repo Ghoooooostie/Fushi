@@ -25,6 +25,20 @@ typedef UpdateProbe = Future<void> Function();
 String updateLastCheckPrefKey(UpdateFeedKind kind) =>
     'updates_last_check_${kind.dbValue}';
 
+/// 调度器的域开关（[UpdateCheckScheduler.isKindEnabled] 的生产接线）。
+///
+/// 番剧新集域在调度器里只跑「媒体库在线作品补新集」：跑不跑看它自己的开关
+/// [videoLibraryAutoUpdate]（`video_library_auto_update`），**不看**「番剧新集提醒」
+/// ——提醒开关只决定补上的集进不进更新中心（publishBatch 按域开关丢弃），用户
+/// 2026-10-23 拍板拆开。其余域看各自的提醒开关 [notifyEnabled]。
+bool Function(UpdateFeedKind) updateCheckKindGate({
+  required bool Function() videoLibraryAutoUpdate,
+  required bool Function(UpdateFeedKind) notifyEnabled,
+}) =>
+    (UpdateFeedKind kind) => kind == UpdateFeedKind.videoEpisode
+        ? videoLibraryAutoUpdate()
+        : notifyEnabled(kind);
+
 class UpdateCheckScheduler {
   UpdateCheckScheduler({
     required PreferencesRepository prefs,
@@ -32,8 +46,10 @@ class UpdateCheckScheduler {
     required bool Function(UpdateFeedKind) isKindEnabled,
     this.intervals = kDefaultUpdateCheckIntervals,
     this.tick = const Duration(minutes: 30),
+    Set<UpdateFeedKind> dueOnStart = const <UpdateFeedKind>{},
     DateTime Function() now = DateTime.now,
   })  : _prefs = prefs,
+        _dueOnStart = <UpdateFeedKind>{...dueOnStart},
         _probes = probes,
         _isKindEnabled = isKindEnabled,
         _now = now;
@@ -44,8 +60,11 @@ class UpdateCheckScheduler {
   /// 扩展与 app 24 小时：版本发布是周级事件，一天一次已经足够快。
   static const Map<UpdateFeedKind, Duration> kDefaultUpdateCheckIntervals =
       <UpdateFeedKind, Duration>{
+    // 番剧域在这里只有「媒体库在线作品补新集」（订阅仍走自己的相位节奏，见库注释）。
+    UpdateFeedKind.videoEpisode: Duration(hours: 6),
     UpdateFeedKind.mangaChapter: Duration(hours: 6),
     UpdateFeedKind.mangaExtension: Duration(hours: 24),
+    UpdateFeedKind.animeExtension: Duration(hours: 24),
     UpdateFeedKind.appRelease: Duration(hours: 24),
   };
 
@@ -58,6 +77,12 @@ class UpdateCheckScheduler {
   final Duration tick;
 
   final DateTime Function() _now;
+
+  /// 本进程**第一轮**无视最小间隔、照查一次的域（每个域只豁免一次，查过即移出）。
+  ///
+  /// 给扩展后台自动更新用：它只在「应用刚启动、还没打开任何在线源」时装，错过
+  /// 启动这一轮就只能等下次启动——24 小时间隔若还拦着它，被推迟的更新会一拖再拖。
+  final Set<UpdateFeedKind> _dueOnStart;
 
   Timer? _timer;
   Future<void>? _activeRun;
@@ -97,7 +122,7 @@ class UpdateCheckScheduler {
     for (final MapEntry<UpdateFeedKind, UpdateProbe> entry in _probes.entries) {
       final UpdateFeedKind kind = entry.key;
       if (!_isKindEnabled(kind)) continue;
-      if (!isDue(kind)) continue;
+      if (!_dueOnStart.remove(kind) && !isDue(kind)) continue;
       try {
         await entry.value();
       } on Object catch (error) {

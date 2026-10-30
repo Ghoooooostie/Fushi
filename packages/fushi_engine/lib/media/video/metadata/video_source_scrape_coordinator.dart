@@ -7,6 +7,8 @@ import 'dart:typed_data';
 import 'package:meta/meta.dart';
 import 'package:drift/drift.dart' show Value;
 import 'package:http/http.dart' as http;
+import 'package:fushi_engine/media/collections/collection_cover.dart'
+    show applyScrapedCollectionCover;
 import 'package:fushi_engine/media/video/metadata/anidb_file_identity_store.dart';
 import 'package:fushi_engine/media/video/metadata/anidb_hash_identity_service.dart';
 import 'package:fushi_engine/media/video/metadata/anidb_udp_file_client.dart';
@@ -17,6 +19,7 @@ import 'package:fushi_engine/media/source_library/source_library_row.dart';
 import 'package:fushi_engine/media/video/metadata/anidb_video_metadata_provider.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_asset_downloader.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_database_store.dart';
+import 'package:fushi_engine/media/video/metadata/video_metadata_work_loader.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_languages.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_merge.dart';
 import 'package:fushi_engine/media/video/metadata/video_metadata_models.dart';
@@ -301,6 +304,8 @@ class VideoSourceScrapeCoordinator
     required String workTitle,
     String? workStableKey,
     required String query,
+    VideoMetadataProviderKind? provider,
+    VideoMetadataMediaKind? mediaKind,
   }) async {
     final String trimmed = query.trim();
     if (trimmed.isEmpty) {
@@ -317,8 +322,8 @@ class VideoSourceScrapeCoordinator
             workStableKey: workStableKey);
     final List<VideoMetadataLookup> explicit = parseExplicitVideoMetadataIds(
       <String>[trimmed],
-      fallbackMediaKind:
-          work == null ? VideoMetadataMediaKind.tv : _manualMediaKind(work),
+      fallbackMediaKind: mediaKind ??
+          (work == null ? VideoMetadataMediaKind.tv : _manualMediaKind(work)),
     );
     final bool identityInput = explicit.isNotEmpty ||
         trimmed.contains('://') ||
@@ -327,7 +332,12 @@ class VideoSourceScrapeCoordinator
             .hasMatch(trimmed);
     final VideoMetadataProviderKind selected =
         source == null ? primaryProvider : await _sourceProvider(source);
-    final List<VideoMetadataProviderKind> chain = _providerChain(selected);
+    // 用户显式指定资料源时只搜它（不在可选主源白名单里的照样当查无）。
+    final List<VideoMetadataProviderKind> chain = provider == null
+        ? _providerChain(selected)
+        : <VideoMetadataProviderKind>[
+            if (kSelectableVideoMetadataProviders.contains(provider)) provider,
+          ];
     if (identityInput) {
       final VideoMetadataLookup? lookup =
           explicit.length == 1 ? explicit.single : null;
@@ -343,12 +353,12 @@ class VideoSourceScrapeCoordinator
           !<String>{'http', 'https'}.contains(Uri.tryParse(trimmed)?.scheme)) {
         throw const FormatException('Invalid video metadata work URL');
       }
-      final VideoMetadataProvider? provider =
+      final VideoMetadataProvider? idProvider =
           _manualSearchProvider(lookup.provider);
-      if (provider == null) {
+      if (idProvider == null) {
         return const <VideoSourceScrapeConfirmationCandidate>[];
       }
-      final VideoMetadataWork? result = await provider.fetchWork(lookup);
+      final VideoMetadataWork? result = await idProvider.fetchWork(lookup);
       return <VideoSourceScrapeConfirmationCandidate>[
         if (result != null)
           VideoSourceScrapeConfirmationCandidate(
@@ -362,26 +372,28 @@ class VideoSourceScrapeCoordinator
               work: result),
       ];
     }
-    final List<VideoMetadataMediaKind> kinds = work == null
-        ? const <VideoMetadataMediaKind>[
-            VideoMetadataMediaKind.tv,
-            VideoMetadataMediaKind.movie,
-          ]
-        : <VideoMetadataMediaKind>[_manualMediaKind(work)];
+    final List<VideoMetadataMediaKind> kinds = mediaKind != null
+        ? <VideoMetadataMediaKind>[mediaKind]
+        : work == null
+            ? const <VideoMetadataMediaKind>[
+                VideoMetadataMediaKind.tv,
+                VideoMetadataMediaKind.movie,
+              ]
+            : <VideoMetadataMediaKind>[_manualMediaKind(work)];
     final List<VideoSourceScrapeConfirmationCandidate> candidates =
         <VideoSourceScrapeConfirmationCandidate>[];
     final Set<String> seenLookups = <String>{};
     for (final VideoMetadataProviderKind providerKind in chain) {
-      final VideoMetadataProvider? provider =
+      final VideoMetadataProvider? searchProvider =
           _manualSearchProvider(providerKind);
-      if (provider == null) continue;
+      if (searchProvider == null) continue;
       try {
         for (final VideoMetadataMediaKind kind in kinds) {
-          final List<VideoMetadataWork> results = await provider.search(
+          final List<VideoMetadataWork> results = await searchProvider.search(
             VideoMetadataSearchRequest(title: trimmed, mediaKind: kind),
           );
           for (final VideoMetadataWork candidate in results) {
-            if (_lookupForCandidate(candidate, provider.providerKind)
+            if (_lookupForCandidate(candidate, searchProvider.providerKind)
                 case final VideoMetadataLookup lookup) {
               if (!seenLookups.add(
                   '${lookup.provider.name}:${lookup.mediaKind.name}:${lookup.externalId}')) {
@@ -445,6 +457,156 @@ class VideoSourceScrapeCoordinator
       confirmedLookups: <String, VideoMetadataLookup>{work.stableKey: lookup},
       runScope: 'work',
     );
+  }
+
+  /// 按库里已落的规范资料重写一部作品的 NFO / 图片 sidecar：**不重新识别、不重拉
+  /// 资料**（无头端 `video sidecar write`）。
+  ///
+  /// 资料取 DB（[loadVideoMetadataWork]），分集绑定取已落库的
+  /// `video_metadata_episodes.book_uid`（刮削时 [VideoMetadataDatabaseStore.apply]
+  /// 写下的那把键，与当初写 sidecar 用的同一份），落盘走与刮削同一个
+  /// [_writeSidecars]——同一套所有权账本、来源级写入策略与覆盖保护。图片仍按 DB 里的
+  /// 远端 URL 下载。[replaceOwnArtifacts] 语义同手动指定身份重刮：只换 Fushi 自己写下
+  /// 且未被改动过的旧产物。
+  ///
+  /// 作品不存在返回 null；没有规范身份（扫描器写的 `local` 骨架）或不属于任何已登记的
+  /// 本地视频来源抛 [StateError]。
+  Future<SourceScrapeReport?> rewriteSidecarsForStoredWork(
+    int workId, {
+    bool replaceOwnArtifacts = false,
+  }) async {
+    final VideoScrapeOperationLease? lease =
+        VideoScrapeOperationGate.tryEnterOperation();
+    if (lease == null) throw StateError('视频刮削资料正在清理');
+    try {
+      return await _rewriteSidecarsUnlocked(workId,
+          replaceOwnArtifacts: replaceOwnArtifacts);
+    } finally {
+      lease.release();
+    }
+  }
+
+  Future<SourceScrapeReport?> _rewriteSidecarsUnlocked(
+    int workId, {
+    required bool replaceOwnArtifacts,
+  }) async {
+    final VideoMetadataWorkRow? row =
+        await database.getVideoMetadataWorkById(workId);
+    if (row == null) return null;
+    final VideoMetadataWork? metadata =
+        await loadVideoMetadataWork(database, row);
+    if (metadata == null) {
+      throw StateError('work $workId 还没有刮削身份（扫描器骨架），没有可写的 sidecar');
+    }
+    SourceLibraryRow? source;
+    VideoSourceScrapeWork? localWork;
+    for (final SourceLibraryRow candidate
+        in await database.getMediaSourcesByKind('video')) {
+      if (candidate.transport != 'local') continue;
+      for (final VideoSourceScrapeWork work
+          in await VideoSourceWorkPlanner(database).plan(candidate)) {
+        final bool same = row.collectionId != null
+            ? work.collection?.id == row.collectionId
+            : work.collection == null &&
+                work.members.length == 1 &&
+                work.members.single.bookUid == row.bookUid;
+        if (same) {
+          source = candidate;
+          localWork = work;
+          break;
+        }
+      }
+      if (localWork != null) break;
+    }
+    if (source == null || localWork == null) {
+      throw StateError('作品 $workId 不属于任何已登记的本地视频来源');
+    }
+    final int sourceId = source.id;
+    final Map<int, int> seasonIds = <int, int>{};
+    final Map<(int, int), int> episodeIds = <(int, int), int>{};
+    final Map<String, (int, int)> episodeOverrides = <String, (int, int)>{};
+    for (final VideoMetadataSeasonRow season
+        in await database.getVideoMetadataSeasons(workId)) {
+      seasonIds[season.seasonNumber] = season.id;
+      for (final VideoMetadataEpisodeRow episode
+          in await database.getVideoMetadataEpisodes(season.id)) {
+        episodeIds[(season.seasonNumber, episode.episodeNumber)] = episode.id;
+        if (episode.bookUid case final String bookUid) {
+          episodeOverrides[bookUid] =
+              (season.seasonNumber, episode.episodeNumber);
+        }
+      }
+    }
+    final _EffectiveSourceSettings settings = _EffectiveSourceSettings.from(
+      await database.getVideoSourceScrapeSettings(sourceId),
+      config,
+      allowProtectedOverwrite: false,
+      primaryProvider: primaryProvider,
+    );
+    final int startedAt = DateTime.now().millisecondsSinceEpoch;
+    final int runId = await database.insertVideoSourceScrapeRun(
+      VideoSourceScrapeRunsCompanion.insert(
+        sourceId: Value<int?>(sourceId),
+        scope: 'sidecar',
+        status: 'running',
+        provider: Value<String?>(metadata.provider.name),
+        phase: const Value<String?>('writingSidecars'),
+        startedAt: startedAt,
+        updatedAt: startedAt,
+      ),
+    );
+    final List<String> knownSourcePaths = (await database.allVideoBooks())
+        .where((VideoBookRow book) => book.sourceId == sourceId)
+        .map((VideoBookRow book) => book.videoPath)
+        .toList(growable: false);
+    try {
+      final _SidecarOutcome outcome = await _writeSidecars(
+        source: source,
+        runId: runId,
+        localWork: localWork,
+        metadata: metadata,
+        persisted: PersistedVideoMetadata(
+          workId: workId,
+          seasonIds: seasonIds,
+          episodeIds: episodeIds,
+          episodesByBookUid: const <String, VideoMetadataEpisode>{},
+        ),
+        knownSourcePaths: knownSourcePaths,
+        settings: settings,
+        cancellationToken: VideoSourceScrapeCancellationToken(),
+        episodeOverrides: episodeOverrides,
+        replaceOwnArtifacts: replaceOwnArtifacts,
+      );
+      final SourceScrapeReport report = SourceScrapeReport(
+        sourceIds: <int>[sourceId],
+        totalWorks: 1,
+        succeededWorks: outcome.errors.isEmpty ? 1 : 0,
+        failedWorks: outcome.errors.isEmpty ? 0 : 1,
+        nfoWritten: outcome.nfoWritten,
+        imagesWritten: outcome.imagesWritten,
+        protectedArtifacts: outcome.protectedArtifacts,
+        unchangedArtifacts: outcome.unchangedArtifacts,
+        warnings: List<SourceScrapeIssue>.unmodifiable(outcome.warnings),
+        errors: List<SourceScrapeIssue>.unmodifiable(outcome.errors),
+      );
+      await _finishRun(runId, status: 'completed', report: report);
+      return report;
+    } catch (error) {
+      await _finishRun(
+        runId,
+        status: 'failed',
+        report: SourceScrapeReport(
+          sourceIds: <int>[sourceId],
+          totalWorks: 1,
+          failedWorks: 1,
+          errors: <SourceScrapeIssue>[
+            SourceScrapeIssue(workTitle: row.title, message: error.toString()),
+          ],
+        ),
+        lastError: error.toString(),
+      );
+      rethrow;
+    }
   }
 
   @override
@@ -549,10 +711,17 @@ class VideoSourceScrapeCoordinator
   VideoMetadataMediaKind _manualMediaKind(VideoSourceScrapeWork work) {
     final VideoNameInfo parsed =
         parseVideoFilename(p.basename(work.members.first.videoPath));
-    return work.isEpisodic || parsed.episode != null
+    return _looksEpisodic(work, parsed)
         ? VideoMetadataMediaKind.tv
         : VideoMetadataMediaKind.movie;
   }
+
+  /// 没有身份证据时的形态判据：多集作品是剧；单文件作品解出集号也是剧，**除非**
+  /// 文件名带电影关键词——`Doraemon Movie 01 (1980)` 的 `01` 是剧场版序号，按剧
+  /// 搜会让「Doraemon」唯一命中 TMDB 的 TV 本体并自动绑上（下载整理器
+  /// `video_download_organizer.dart` 同样是电影提示优先于集号）。
+  static bool _looksEpisodic(VideoSourceScrapeWork work, VideoNameInfo parsed) =>
+      work.isEpisodic || (parsed.episode != null && !parsed.isMovieHint);
 
   @override
   Future<SourceScrapeReport> scrapeSource(
@@ -660,16 +829,21 @@ class VideoSourceScrapeCoordinator
     // 本趟的已确认身份：调用方给的 + 途中按 AniDB 作品拆出来的电影子单元。
     final Map<String, VideoMetadataLookup> lookups =
         <String, VideoMetadataLookup>{...confirmedLookups};
+    // 下载任务记下的身份（按 stableKey，首选在前）。它是**自动证据**，不是用户
+    // 锁定：与离线索引 / 哈希映射同一档，那家拉不到就换任务里的另一个 id，都不行
+    // 再按主源链严格标题搜。曾经并进 [lookups] 当显式身份，一家资料源连不上
+    // （Jikan 停摆）就只剩 providerUnavailable，作品永远认不出（BUG-3073）。
+    final Map<String, List<VideoMetadataLookup>> downloadEvidence =
+        <String, List<VideoMetadataLookup>>{};
     try {
       cancellationToken.throwIfCancelled();
       works =
           plannedWorks ?? await VideoSourceWorkPlanner(database).plan(source);
-      // 下载任务确认过的身份是持久的：作品还没有规范身份时照它刮，不退回按
-      // 标题搜（资料源临时故障让下载那一轮没刮成时，补刮 / 整源刮削靠它补上）。
-      // 调用方显式给的身份优先；已有规范身份的作品不动（可能是用户后来手动改
-      // 过的绑定）。
-      for (final MapEntry<String, VideoMetadataLookup> entry
-          in (await downloadConfirmedLookupsForWorks(database, works))
+      // 作品还没有规范身份时才用（资料源临时故障让下载那一轮没刮成时，补刮 /
+      // 整源刮削靠它补上）。调用方显式给的身份优先；已有规范身份的作品不动（可能
+      // 是用户后来手动改过的绑定）。
+      for (final MapEntry<String, List<VideoMetadataLookup>> entry
+          in (await downloadConfirmedLookupListsForWorks(database, works))
               .entries) {
         if (lookups.containsKey(entry.key)) continue;
         final VideoSourceScrapeWork? work = works
@@ -679,7 +853,7 @@ class VideoSourceScrapeCoordinator
             await hasCanonicalVideoMetadataIdentity(database, work)) {
           continue;
         }
-        lookups[entry.key] = entry.value;
+        downloadEvidence[entry.key] = entry.value;
       }
       final List<String> knownSourcePaths = (await database.allVideoBooks())
           .where((VideoBookRow row) => row.sourceId == source.id)
@@ -801,6 +975,8 @@ class VideoSourceScrapeCoordinator
             settings.provider,
             warnings,
             confirmedLookup: lookups[localWork.stableKey],
+            downloadLookups: downloadEvidence[localWork.stableKey] ??
+                const <VideoMetadataLookup>[],
             cancellationToken: cancellationToken,
             onHashProgress: (String path, int bytes, int totalBytes) =>
                 onProgress(
@@ -1089,6 +1265,7 @@ class VideoSourceScrapeCoordinator
     VideoMetadataProviderKind selectedProvider,
     List<SourceScrapeIssue> warnings, {
     VideoMetadataLookup? confirmedLookup,
+    List<VideoMetadataLookup> downloadLookups = const <VideoMetadataLookup>[],
     required VideoSourceScrapeCancellationToken cancellationToken,
     required void Function(String, int, int) onHashProgress,
     required Map<String, VideoMetadataWork> resolvedWorkCache,
@@ -1118,9 +1295,12 @@ class VideoSourceScrapeCoordinator
     final int? seasonNumber = _parsedSeason(localWork, parsed);
     // 单文件单元带着已确认身份时，形态跟身份走（`Movie 01.mkv` 这种带序号的
     // 剧场版文件名会被误判成剧集；按 AniDB 作品拆出来的电影子单元就是这样）。
-    VideoMetadataMediaKind kind = !localWork.isEpisodic && confirmedLookup != null
-        ? confirmedLookup.mediaKind
-        : localWork.isEpisodic || parsed.episode != null
+    // 下载任务记下的形态同样是用户入队时确认的。
+    final VideoMetadataLookup? kindEvidence =
+        confirmedLookup ?? downloadLookups.firstOrNull;
+    VideoMetadataMediaKind kind = !localWork.isEpisodic && kindEvidence != null
+        ? kindEvidence.mediaKind
+        : _looksEpisodic(localWork, parsed)
             ? VideoMetadataMediaKind.tv
             : VideoMetadataMediaKind.movie;
     VideoMetadataWork? nfo = await VideoNfoReader(
@@ -1243,6 +1423,7 @@ class VideoSourceScrapeCoordinator
     );
     final List<VideoMetadataLookup> identityHints = <VideoMetadataLookup>[
       if (confirmedLookup != null) confirmedLookup,
+      ...downloadLookups,
       ...reusableLookups,
       ..._lookupsForNfo(nfo),
     ];
@@ -1388,6 +1569,11 @@ class VideoSourceScrapeCoordinator
       tmdbLookupHint ??=
           offline!.lookupFor(VideoMetadataProviderKind.tmdb, kind);
     }
+    // 自动证据：下载任务记下的身份在前（用户入队时确认过），离线索引在后。
+    final List<VideoMetadataLookup> automaticLookups = <VideoMetadataLookup>[
+      ...downloadLookups,
+      ...offlineLookups,
+    ];
     final int? searchYear = nfo?.year ?? _parsedYear(localWork);
     final int? episodeCount =
         localWork.isEpisodic ? localWork.members.length : null;
@@ -1414,18 +1600,18 @@ class VideoSourceScrapeCoordinator
             seasonNumber: seasonNumber,
             episodeCount: episodeCount,
             confirmedLookup:
-                canonicalLookup ?? hashLookup ?? offlineLookups.firstOrNull,
+                canonicalLookup ?? hashLookup ?? automaticLookups.firstOrNull,
             identityHints: pathHints,
           ));
     if (canonicalLookup == null &&
         hashLookup == null &&
-        offlineLookups.isNotEmpty) {
-      // 离线身份是自动证据，不是用户锁定：主源那家 id 拉不到（Jikan 504、条目
-      // 下架）就换链上另一家的 id；两家都不行才退回严格标题搜索。
+        automaticLookups.isNotEmpty) {
+      // 下载身份 / 离线身份是自动证据，不是用户锁定：那家 id 拉不到（Jikan 504、
+      // 条目下架）就换下一个 id；都不行才退回严格标题搜索。
       for (int index = 1;
-          index < offlineLookups.length && !_isUsableResolution(resolution);
+          index < automaticLookups.length && !_isUsableResolution(resolution);
           index++) {
-        final VideoMetadataLookup lookup = offlineLookups[index];
+        final VideoMetadataLookup lookup = automaticLookups[index];
         resolution = await resolver.resolve(VideoMetadataResolveRequest(
           selectedProvider: lookup.provider,
           mediaKind: kind,
@@ -1437,10 +1623,13 @@ class VideoSourceScrapeCoordinator
         ));
       }
       if (!_isUsableResolution(resolution)) {
+        final String evidence = offline != null
+            ? '离线标题索引已命中 AniDB ${offline.anidbId}（${offline.matchedTitle}）'
+            : '下载任务记下的身份 ${automaticLookups.map((VideoMetadataLookup l) => '${l.provider.name}:${l.externalId}').join(' / ')}';
         warnings.add(SourceScrapeIssue(
             workTitle: localWork.title,
             message:
-                '离线标题索引已命中 AniDB ${offline!.anidbId}（${offline.matchedTitle}），但按 id 拉取资料失败（${resolution.reason}）；退回标题搜索。'));
+                '$evidence，但按 id 拉取资料失败（${resolution.reason}）；退回标题搜索。'));
         resolution = await resolver.resolve(VideoMetadataResolveRequest(
           selectedProvider: selectedProvider,
           fallbackProvider: videoMetadataFallbackProvider(selectedProvider),
@@ -1583,6 +1772,18 @@ class VideoSourceScrapeCoordinator
       );
     }
 
+    // 存量 / NFO 带来的 TMDB 交叉引用若与主身份的映射矛盾（命名空间不对），它是
+    // 旧 bug 绑错的，丢掉再按映射 / 标题补（BUG-3071）。
+    final VideoMetadataLookup? staleTmdbHint = tmdbLookupHint;
+    if (staleTmdbHint != null &&
+        await _tmdbHintContradictsMapping(staleTmdbHint, resolvedLookup)) {
+      warnings.add(SourceScrapeIssue(
+        workTitle: localWork.title,
+        message: '已绑定的 TMDB ${staleTmdbHint.mediaKind.name} '
+            '${staleTmdbHint.externalId} 与作品映射的命名空间不符，已丢弃重认',
+      ));
+      tmdbLookupHint = null;
+    }
     // 身份接力：MAL 主身份 + 还没有 TMDB 身份 → 经 Fribb 换 TMDB id，补充按 id 直拉。
     tmdbLookupHint ??= await _tmdbLookupFromMapping(resolvedLookup, kind);
     final _HydratedWork primaryHydration = await _hydrateWork(
@@ -1683,6 +1884,8 @@ class VideoSourceScrapeCoordinator
         metadata,
         tmdb.metadata,
         preferredLanguage: _locale,
+        supplementPart:
+            await _tmdbSupplementPart(resolvedLookup, tmdb.metadata),
       );
       // MAL cour 季缺分集（播出中的作品 Jikan 常给 0 集）→ 按映射表显式的
       // 「TMDB 第 S 季从第 O+1 集起」切片补集，本地文件才挂得上分集行。
@@ -1978,10 +2181,15 @@ class VideoSourceScrapeCoordinator
         item.mediaType == MediaKind.video.dbValue &&
         splitUids.contains(item.entryKey));
     if (wholeCollection) {
-      await deleteMediaCollectionWithAssets(database, collection.id);
+      // 刮削按 AniDB 作品拆分是自动整理，不是用户拒绝这个分组（不记整理分组键）。
+      await deleteMediaCollectionWithAssets(
+        database,
+        collection.id,
+        userIntent: false,
+      );
     } else {
       for (final String uid in splitUids) {
-        await database.removeFromCollection(collection.id, MediaKind.video, uid);
+        await database.removeFromCollection(collection.id, MediaKind.video, uid, userIntent: false);
       }
       await _store.removeCollectionOwnedWork(collection.id);
       await database.deleteCollectionScrapeMeta(collection.id);
@@ -2240,7 +2448,7 @@ class VideoSourceScrapeCoordinator
     final int newId =
         await database.createMediaCollection(name, collectionType: 'playlist');
     for (final VideoBookRow member in group.members) {
-      await database.addToCollection(newId, MediaKind.video, member.bookUid);
+      await database.addToCollection(newId, MediaKind.video, member.bookUid, userIntent: false);
     }
     final MediaCollectionRow row =
         (await database.getMediaCollectionById(newId))!;
@@ -2834,39 +3042,114 @@ class VideoSourceScrapeCoordinator
     VideoMetadataLookup? resolved,
     VideoMetadataMediaKind kind,
   ) async {
+    final List<AnimeIdentityEntry> entries = await _mappingEntries(resolved);
+    // 按 TMDB 命名空间取 id，不按作品形态：剧场版的 Fribb 行常是
+    // `{tv: N}`（剧的特典季），按形态取会把 tv id 当 /movie 拉（BUG-2828）。
+    final Set<int> tmdbIds = <int>{
+      for (final AnimeIdentityEntry entry in entries)
+        if (entry.tmdbIdFor(kind) case final int id) id,
+    };
+    if (tmdbIds.length != 1) return null;
+    return VideoMetadataLookup(
+      provider: VideoMetadataProviderKind.tmdb,
+      externalId: '${tmdbIds.single}',
+      mediaKind: kind,
+    );
+  }
+
+  /// TMDB 补充若是主身份所属的**整部剧**（Fribb 行指向剧的第 S≠1 季 / 集偏移
+  /// 大于 0 / 剧场版挂在剧的特典季下），返回主身份那一部分自己的年份来源；补充
+  /// 就是主身份本身时返回 null。不这么分，AniDB 只有标题目录摘要（没有年份）时
+  /// 剧本体的首播年会填进续作季与剧场版（响け！2/3 显示 2015、剧场版显示 1979）。
+  Future<VideoMetadataSupplementPart?> _tmdbSupplementPart(
+    VideoMetadataLookup? resolved,
+    VideoMetadataWork? supplement,
+  ) async {
+    if (supplement == null) return null;
+    final int? supplementId = int.tryParse(
+      _lookupForCandidate(supplement, VideoMetadataProviderKind.tmdb)
+              ?.externalId ??
+          '',
+    );
+    if (supplementId == null) return null;
+    for (final AnimeIdentityEntry entry in await _mappingEntries(resolved)) {
+      if (entry.tmdbId != supplementId ||
+          entry.tmdbMediaKind != VideoMetadataMediaKind.tv ||
+          supplement.kind != VideoMetadataMediaKind.tv) {
+        continue;
+      }
+      final int? season = entry.tmdbSeason;
+      final bool part = entry.isMovie ||
+          (season != null && season != 1) ||
+          (entry.tmdbEpisodeOffset ?? 0) > 0;
+      if (!part) continue;
+      final VideoMetadataSeason? own = entry.isMovie || season == null
+          ? null
+          : supplement.seasons
+              .where((VideoMetadataSeason s) => s.seasonNumber == season)
+              .firstOrNull;
+      // 同一季里的后半段（集偏移 > 0）不是从这一季开头播的，季的年份 / 首播日
+      // 都不一定属于它，留空。
+      final bool offset = (entry.tmdbEpisodeOffset ?? 0) > 0;
+      return VideoMetadataSupplementPart(
+        year: offset ? null : own?.year,
+        premiered: offset ? null : own?.airDate,
+      );
+    }
+    return null;
+  }
+
+  /// 主身份（MAL / AniDB）在离线映射里的行；没有映射 / 不是这两家 / 查询失败 → 空。
+  Future<List<AnimeIdentityEntry>> _mappingEntries(
+    VideoMetadataLookup? resolved,
+  ) async {
     final AnimeIdentityMapping? mapping = identityMapping;
     if (mapping == null ||
         resolved == null ||
         (resolved.provider != VideoMetadataProviderKind.mal &&
             resolved.provider != VideoMetadataProviderKind.anidb)) {
-      return null;
+      return const <AnimeIdentityEntry>[];
     }
     final int? primaryId = int.tryParse(resolved.externalId);
-    if (primaryId == null) return null;
+    if (primaryId == null) return const <AnimeIdentityEntry>[];
     try {
-      final List<AnimeIdentityEntry> entries =
-          resolved.provider == VideoMetadataProviderKind.anidb
-              ? <AnimeIdentityEntry>[
-                  if (await mapping.entryForAnidb(primaryId)
-                      case final AnimeIdentityEntry entry)
-                    entry,
-                ]
-              : await mapping.entriesForMal(primaryId);
-      // 按 TMDB 命名空间取 id，不按作品形态：剧场版的 Fribb 行常是
-      // `{tv: N}`（剧的特典季），按形态取会把 tv id 当 /movie 拉（BUG-2828）。
-      final Set<int> tmdbIds = <int>{
-        for (final AnimeIdentityEntry entry in entries)
-          if (entry.tmdbIdFor(kind) case final int id) id,
-      };
-      if (tmdbIds.length != 1) return null;
-      return VideoMetadataLookup(
-        provider: VideoMetadataProviderKind.tmdb,
-        externalId: '${tmdbIds.single}',
-        mediaKind: kind,
-      );
+      return resolved.provider == VideoMetadataProviderKind.anidb
+          ? <AnimeIdentityEntry>[
+              if (await mapping.entryForAnidb(primaryId)
+                  case final AnimeIdentityEntry entry)
+                entry,
+            ]
+          : await mapping.entriesForMal(primaryId);
     } on Object {
-      return null;
+      return const <AnimeIdentityEntry>[];
     }
+  }
+
+  /// [hint] 是否与主身份的映射**明确矛盾**：映射说这个 TMDB id 住在另一个命名
+  /// 空间（/movie 与 /tv 是两套 id）。
+  ///
+  /// 存量交叉引用与 NFO 的 TMDB id 不带命名空间（identity 表只存 id），读回来时按
+  /// 作品形态还原成 lookup——BUG-2828 修复前绑错的 `tv 62564` 于是以 `/movie/62564`
+  /// 的身份回来，且排在映射之前，重刮也改不掉（BUG-3071：リズと青い鳥 重刮仍是
+  /// 挪威电影）。只在映射明确给出另一个空间时判矛盾；映射没收这部 / 没给 TMDB 时
+  /// 不动它（标题搜到的交叉引用照样可信）。
+  Future<bool> _tmdbHintContradictsMapping(
+    VideoMetadataLookup hint,
+    VideoMetadataLookup? resolved,
+  ) async {
+    final int? hintId = int.tryParse(hint.externalId);
+    if (hint.provider != VideoMetadataProviderKind.tmdb || hintId == null) {
+      return false;
+    }
+    for (final AnimeIdentityEntry entry in await _mappingEntries(resolved)) {
+      final VideoMetadataMediaKind? namespace = entry.tmdbMediaKind;
+      if (entry.tmdbId == hintId &&
+          namespace != null &&
+          namespace != hint.mediaKind) {
+        return true;
+      }
+    }
+    return false;
   }
 
   /// 最终资料是否就是离线索引指到的那部作品（MAL id 或 TMDB id 对得上）。
@@ -4248,18 +4531,12 @@ class VideoSourceScrapeCoordinator
           DatabaseSidecarGeneratedArtifactChecker(database);
       await VideoCoverMutationGate.runExclusive(() async {
         if (localWork.collection case final MediaCollectionRow collection) {
-          final MediaCollectionRow? current =
-              await database.getMediaCollectionById(collection.id);
-          if (current != null &&
-              (current.coverPath == null ||
-                  await generated.isUnmodifiedGeneratedArtifact(
-                    current.coverPath!,
-                  ))) {
-            await database.updateMediaCollectionCoverPath(
-              collection.id,
-              coverPath,
-            );
-          }
+          await applyScrapedCollectionCover(
+            database,
+            collection.id,
+            coverPath,
+            generated: generated,
+          );
         } else {
           final VideoBookRow planned = localWork.members.single;
           final VideoBookRow? current =
@@ -4950,6 +5227,10 @@ class VideoSourceScrapeCoordinator
 /// 它们在 MAL/TMDB 上只能搜出一堆类型合格、标题不符的垃圾候选，把整条识别
 /// 污染成「待确认」，还白白消耗 Jikan 配额。**目录名**候选不受此限——目录
 /// `86` 是用户手写的番名，不是集号。
+///
+/// 标题尾部的裸年份（`Frieren 2023`）先按年份剥掉（BUG-3192），但片名本身也可能
+/// 以年份结尾（`Death Race 2000`），所以紧跟一条不剥年份的完整标题；resolver 搜
+/// 这条时不再拿它自己的尾部年份当年份门（[VideoMetadataResolver]，BUG-3266）。
 List<String> videoScrapeTitleCandidates({
   required String workTitle,
   required String parsedSeries,
@@ -4965,11 +5246,16 @@ List<String> videoScrapeTitleCandidates({
       if (!isEpisodeLabelTitle(value)) value,
     ...directoryDerived,
   ];
+  // 清洗标题在前；剥过尾部裸年份的再跟一条不剥年份的完整标题（`Death Race 2000`
+  // 这类片名本身以年份结尾，BUG-3266），原值最后。
   final List<String> values = <String>[
-    for (final String value in rawValues) ...<String>[
-      FilenameParser.parse(value).title,
-      value,
-    ],
+    for (final String value in rawValues)
+      if (FilenameParser.parse(value) case final ParsedMediaName parsed)
+        ...<String>[
+          parsed.title,
+          if (parsed.titleWithTrailingYear case final String withYear) withYear,
+          value,
+        ],
   ];
   final Set<String> seen = <String>{};
   return <String>[

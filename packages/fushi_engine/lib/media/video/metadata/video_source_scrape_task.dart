@@ -366,11 +366,18 @@ class VideoSourceScrapeWorkAmbiguous extends VideoSourceScrapeWorkNotFound {
 abstract interface class VideoSourceScrapeManualBinding {
   /// 按用户输入的标题在资料源里搜索候选。作品的剧集/电影形态由来源计划决定，
   /// 调用方不需要（也不应该）自己猜。
+  ///
+  /// [provider] / [mediaKind] 是用户的显式指定（CLI `video candidates
+  /// --provider/--type`）：给了就只搜这个资料源 / 这个形态，不再按主源链「搜到
+  /// 第一个有结果的源就停」，也不再用来源计划猜形态——否则主源 AniDB 有一堆歧义
+  /// 候选时 TMDB 永远搜不到，计划误判成剧集的剧场版也永远搜不到电影。
   Future<List<VideoSourceScrapeConfirmationCandidate>> searchManualCandidates({
     SourceLibraryRow? source,
     required String workTitle,
     String? workStableKey,
     required String query,
+    VideoMetadataProviderKind? provider,
+    VideoMetadataMediaKind? mediaKind,
   });
 
   /// 拉取 [lookup] 指向作品的完整资料（候选搜索结果只是摘要）。provider 不可用
@@ -621,6 +628,8 @@ class VideoSourceScrapeTaskController extends EngineChangeNotifier {
     required String workTitle,
     String? workStableKey,
     required String query,
+    VideoMetadataProviderKind? provider,
+    VideoMetadataMediaKind? mediaKind,
   }) {
     if (_disposed || _runner is! VideoSourceScrapeManualBinding) {
       return Future<List<VideoSourceScrapeConfirmationCandidate>>.value(
@@ -632,6 +641,8 @@ class VideoSourceScrapeTaskController extends EngineChangeNotifier {
       workTitle: workTitle,
       workStableKey: workStableKey,
       query: query,
+      provider: provider,
+      mediaKind: mediaKind,
     );
   }
 
@@ -1042,22 +1053,27 @@ class VideoSourceScrapeTaskController extends EngineChangeNotifier {
     return completer.future.whenComplete(_clearPendingConfirmation);
   }
 
-  void confirmPending(
+  /// 用 [candidate] 回答当前待确认项。app 内确认框与桌面 CLI（`video confirm`）
+  /// 回答的是同一个待决状态：谁先答算谁的，后到的一方拿到 false（此时完成器已
+  /// 完成、只是清理还没跑到微任务，[pendingConfirmation] 可能仍非空，所以「答没
+  /// 答上」只能看返回值）。
+  bool confirmPending(
     VideoSourceScrapeConfirmationCandidate candidate,
   ) {
     final Completer<VideoSourceScrapeConfirmationCandidate?>? completer =
         _confirmationCompleter;
-    if (completer != null && !completer.isCompleted) {
-      completer.complete(candidate);
-    }
+    if (completer == null || completer.isCompleted) return false;
+    completer.complete(candidate);
+    return true;
   }
 
-  void skipPendingConfirmation() {
+  /// 跳过当前待确认项（作品留在待确认清单里）。返回值语义同 [confirmPending]。
+  bool skipPendingConfirmation() {
     final Completer<VideoSourceScrapeConfirmationCandidate?>? completer =
         _confirmationCompleter;
-    if (completer != null && !completer.isCompleted) {
-      completer.complete();
-    }
+    if (completer == null || completer.isCompleted) return false;
+    completer.complete();
+    return true;
   }
 
   void _clearPendingConfirmation() {

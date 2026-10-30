@@ -13,6 +13,7 @@ import 'package:http/http.dart' as http;
 import 'package:fushi_engine/utils/net/app_http.dart';
 import 'package:fushi_engine/utils/net/bounded_read.dart';
 import 'package:fushi_engine/media/video/anime_source_video_path.dart';
+import 'package:fushi_engine/media/video/media_server_video_path.dart';
 
 /// 流媒体书判据（TODO-1157）：`videoPath` 是网络流地址，或 `.strm` 流指针。
 ///
@@ -26,10 +27,16 @@ import 'package:fushi_engine/media/video/anime_source_video_path.dart';
 ///   真正的流地址起播时经 [resolveStrmStreamTarget] 现读。
 /// - 在线视频源（Aniyomi）入库集（[isAnimeSourceVideoPath]）：没有本地文件，
 ///   起播时向扩展重新取流（见 `anime_source_library.dart`）。
+/// - 媒体服务器入库条目（[isMediaServerVideoPath]）：起播时按设置里的服务器配置
+///   现建客户端取流（见 `media_server_library.dart`）。
+/// - 来源库 SFTP 条目（[isSourceLibrarySftpVideoPath]，`sftp://`）：起播时经来源
+///   的播放期解析器登记进回环中继（`sftp_stream_source.dart`）。
 bool isStreamVideoBook(VideoBookRow book) =>
     isNetworkStreamUrl(book.videoPath) ||
+    isSourceLibrarySftpVideoPath(book.videoPath) ||
     isStrmPath(book.videoPath) ||
-    isAnimeSourceVideoPath(book.videoPath);
+    isAnimeSourceVideoPath(book.videoPath) ||
+    isMediaServerVideoPath(book.videoPath);
 
 /// `.strm` 读不出可播地址的原因（起播失败文案据此分派）。
 enum StrmResolveFailure {
@@ -198,6 +205,38 @@ Future<bool> _defaultStreamLiveness(
   }
 }
 
+/// 纯函数：spec 里的外挂字幕地址不是 http(s)，但能经来源的播放期解析器换成可下载
+/// 地址时放行（来源库 SFTP 同名字幕：扫描存成 `sftp://…srt`，起播经
+/// `SftpStreamUrlResolver` 登记进回环中继再下载）。
+///
+/// 只放行与视频同一 SFTP 来源（同 `sftp://<host>:<port>` 前缀）且确有解析器的
+/// 字幕：别的 `sftp://` 地址解析器会原样返回，交给 HTTP 下载只会失败。
+bool isResolvableSourceSubtitleUrl({
+  required String subtitleUrl,
+  required String videoUrl,
+  required bool hasSourceUrlResolver,
+}) {
+  if (!hasSourceUrlResolver) return false;
+  if (!isSourceLibrarySftpVideoPath(subtitleUrl) ||
+      !isSourceLibrarySftpVideoPath(videoUrl)) {
+    return false;
+  }
+  final String? subtitleOrigin = _sftpOriginOf(subtitleUrl);
+  return subtitleOrigin != null && subtitleOrigin == _sftpOriginOf(videoUrl);
+}
+
+/// `sftp://<host>:<port>` 前缀（小写）；不经 [Uri]：路径是解码态，真名里的 `%`
+/// 会让 [Uri.parse] 失败。
+String? _sftpOriginOf(String url) {
+  final String trimmed = url.trim();
+  const String schemeSep = '://';
+  final int authorityStart = trimmed.indexOf(schemeSep);
+  if (authorityStart < 0) return null;
+  final int pathStart = trimmed.indexOf('/', authorityStart + schemeSep.length);
+  if (pathStart < 0) return null;
+  return trimmed.substring(0, pathStart).toLowerCase();
+}
+
 /// 从流媒体书重建播放所需的 [UrlStreamVideoClient] + [RemoteVideoInfo]（TODO-1157）。
 ///
 /// 让「粘贴 URL 导入」的流媒体像本地视频一样入库、在书架持久、可重复打开：重开时不复用
@@ -338,7 +377,13 @@ Future<({UrlStreamVideoClient client, RemoteVideoInfo info})>
     final String? subtitleUrl = spec.subtitleUrl;
     client = UrlStreamVideoClient(
       streamUrl: url,
-      subtitleUrl: (subtitleUrl != null && isPlayableStreamUrl(subtitleUrl))
+      subtitleUrl: (subtitleUrl != null &&
+              (isPlayableStreamUrl(subtitleUrl) ||
+                  isResolvableSourceSubtitleUrl(
+                    subtitleUrl: subtitleUrl,
+                    videoUrl: url,
+                    hasSourceUrlResolver: sourceUrlResolver != null,
+                  )))
           ? subtitleUrl
           : null,
       subtitleFileName: spec.subtitleFileName,

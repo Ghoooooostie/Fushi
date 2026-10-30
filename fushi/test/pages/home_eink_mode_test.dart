@@ -13,17 +13,19 @@ import 'dart:io';
 
 import 'package:drift/drift.dart' hide isNotNull, isNull;
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
 import 'package:fushi/src/models/theme_notifier.dart';
 import 'package:fushi/src/sync/remote_download_progress_badge.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_navigation.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
+import 'package:fushi/src/utils/adaptive/nav_shape.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_widgets.dart';
 import 'package:fushi/src/utils/components/fushi_material_components.dart';
 import 'package:fushi/src/utils/components/library_section_tabs.dart';
 import 'package:fushi_core/fushi_core.dart';
+import '../helpers/glass_unwrap.dart';
 
 /// 最小 eink 主题：白底黑字的纯黑白 scheme + 扩展标志，与产品 `_buildThemeData`
 /// 的 eink 分支同源（这里只需要颜色角色塌缩这一层）。
@@ -119,21 +121,20 @@ void main() {
       AdaptiveNavItem(icon: Icons.search, label: '词典'),
     ];
 
-    Container selectedPill(WidgetTester tester) {
-      // 选中项的药丸：那个 64×32、带 BoxDecoration 的 Container。
-      return tester.widget<Container>(
+    Color? selectedShapeColor(WidgetTester tester) {
+      // 选中项图标背后的专属多边形（[NavMorphShape] 里那块 ShapeDecoration）。
+      final DecoratedBox box = tester.widget<DecoratedBox>(
         find
-            .ancestor(
-              of: find.byIcon(Icons.home),
-              matching: find.byWidgetPredicate(
-                (Widget w) => w is Container && w.decoration is BoxDecoration,
-              ),
+            .descendant(
+              of: find.byType(NavMorphShape),
+              matching: find.byType(DecoratedBox),
             )
             .first,
       );
+      return (box.decoration as ShapeDecoration).color;
     }
 
-    testWidgets('底栏选中药丸反色：底色前景、图标底色', (WidgetTester tester) async {
+    testWidgets('底栏选中多边形反色：底色前景、图标底色', (WidgetTester tester) async {
       await tester.pumpWidget(
         _wrap(
           Builder(
@@ -149,21 +150,21 @@ void main() {
       await tester.pumpAndSettle();
 
       final ColorScheme colors = buildEinkColorScheme(Brightness.light);
-      final BoxDecoration pill =
-          selectedPill(tester).decoration! as BoxDecoration;
-      expect(pill.color, colors.onSurface, reason: '药丸必须是实心前景色');
       expect(
-        tester.widget<Icon>(find.byIcon(Icons.home)).color,
+        selectedShapeColor(tester),
+        colors.onSurface,
+        reason: '选中多边形必须是实心前景色',
+      );
+      expect(
+        // 只认能点到的那份：悬浮底栏常驻一枚透明 + IgnorePointer 的「最小化小
+        // 胶囊」，里面也有当前项图标，那份不是这里要钉的药丸。
+        tester.widget<Icon>(find.byIcon(Icons.home).hitTestable()).color,
         colors.surface,
-        reason: '反色药丸里的图标用底色',
+        reason: '反色多边形上的图标用底色',
       );
 
-      // 底栏本体与内容面之间要有一条前景色边线。
-      final Material bar = tester.widget<Material>(
-        find.byKey(fushiMaterialNavKey),
-      );
-      expect(bar.shape, isA<Border>());
-      expect((bar.shape! as Border).top.color, colors.outline);
+      // 悬浮胶囊一圈前景色描边（eink 不画阴影）。
+      expect(_floatingNavOutline(tester), colors.outline);
     });
 
     testWidgets('侧栏尾侧描边', (WidgetTester tester) async {
@@ -185,17 +186,14 @@ void main() {
         ),
       );
       await tester.pumpAndSettle();
-      final Material rail = tester.widget<Material>(
-        find.byKey(fushiMaterialNavKey),
-      );
-      expect(rail.shape, isA<BorderDirectional>());
+      // 悬浮侧轨面板一圈前景色描边。
       expect(
-        (rail.shape! as BorderDirectional).end.color,
+        _floatingNavOutline(tester),
         buildEinkColorScheme(Brightness.light).outline,
       );
     });
 
-    testWidgets('非 eink 主题原样：secondaryContainer 药丸、无边线', (
+    testWidgets('非 eink 主题原样：悬浮胶囊 tertiary 选中多边形、无边线', (
       WidgetTester tester,
     ) async {
       await tester.pumpWidget(
@@ -212,9 +210,8 @@ void main() {
         ),
       );
       await tester.pumpAndSettle();
-      final BoxDecoration pill =
-          selectedPill(tester).decoration! as BoxDecoration;
-      expect(pill.color, ThemeData().colorScheme.secondaryContainer);
+      // M3E 悬浮底栏是 vibrant tertiaryContainer 胶囊，选中多边形深一阶 tertiary。
+      expect(selectedShapeColor(tester), ThemeData().colorScheme.tertiary);
       expect(
         tester.widget<Material>(find.byKey(fushiMaterialNavKey)).shape,
         isNull,
@@ -334,7 +331,9 @@ void main() {
       expect(
         tester
             .widget<CircularProgressIndicator>(
-              find.byType(CircularProgressIndicator),
+              glassUnwrap<CircularProgressIndicator>(
+                find.byType(CircularProgressIndicator),
+              ),
             )
             .value,
         0.5,
@@ -346,7 +345,15 @@ void main() {
         _wrap(
           const Row(
             children: <Widget>[
-              RemoteDownloadProgressBadge(progress: null, tooltip: '下载中'),
+              // 进度态铺满封面（自身撑满父级），给一个封面大小的框。
+              SizedBox(
+                width: 120,
+                height: 180,
+                child: RemoteDownloadProgressBadge(
+                  progress: null,
+                  tooltip: '下载中',
+                ),
+              ),
               RemoteDownloadFailedBadge(tooltip: '失败'),
             ],
           ),
@@ -354,7 +361,9 @@ void main() {
       );
       final CircularProgressIndicator ring = tester
           .widget<CircularProgressIndicator>(
-            find.byType(CircularProgressIndicator),
+            glassUnwrap<CircularProgressIndicator>(
+              find.byType(CircularProgressIndicator),
+            ),
           );
       expect(ring.value, 0, reason: 'null = 无限转圈，eink 下钉成 0');
       final List<Container> discs = tester
@@ -401,7 +410,9 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      final TabBar bar = tester.widget<TabBar>(find.byType(TabBar));
+      final TabBar bar = tester.widget<TabBar>(
+        glassUnwrap<TabBar>(find.byType(TabBar)),
+      );
       expect(bar.controller?.animationDuration, Duration.zero);
 
       final Finder gradientBox = find.byWidgetPredicate(
@@ -433,7 +444,9 @@ void main() {
         ),
       );
       await tester.pumpAndSettle();
-      final TabBar bar = tester.widget<TabBar>(find.byType(TabBar));
+      final TabBar bar = tester.widget<TabBar>(
+        glassUnwrap<TabBar>(find.byType(TabBar)),
+      );
       expect(bar.controller?.animationDuration, kTabScrollDuration);
     });
   });
@@ -451,7 +464,7 @@ void main() {
           r'Widget _sectionCard\([\s\S]*?isEinkTheme\(context\)',
         ).hasMatch(src),
         isTrue,
-        reason: '四张分区卡的 group 面层塌成底色后必须描边',
+        reason: '分区卡的 group 面层塌成底色后必须描边',
       );
       expect(src, contains('Widget _bookCoverImage('));
       expect(
@@ -459,7 +472,19 @@ void main() {
         1,
         reason: '书封面只能经 _bookCoverImage 淡入（eink 下它换成直出的 Image）',
       );
-      expect(src, contains('backgroundColor: eink\n'));
+      // 封面进度条的 eink 实心轨道收进共享的 CoverProgressStrip（书架 / 视频库
+      // 同用）：首页「继续」封面卡（2026-10 精简后在展示件文件里）必须走它，组件
+      // 里轨道在 eink 下换成页面底色。
+      expect(
+        read('lib/src/pages/implementations/home_dashboard_widgets.dart'),
+        contains('CoverProgressStrip('),
+      );
+      expect(
+        RegExp(
+          r'class CoverProgressStrip[\s\S]*?backgroundColor: eink\s*\?\s*tokens\.surfaces\.page',
+        ).hasMatch(read('lib/src/utils/components/shelf_card_widgets.dart')),
+        isTrue,
+      );
     });
 
     test('学习热力图：eink 用尺寸而非 alpha 编码等级', () {
@@ -480,14 +505,26 @@ void main() {
       expect(src, contains('LibraryFilterChip('));
       expect(
         read('lib/src/pages/implementations/library_filter_dropdown.dart'),
-        contains('color: active && eink ? colors.onSurface : null'),
+        // eink 分支拆成独立的 _buildEink：激活态反色填充前景色。
+        allOf(
+          contains('if (eink) return _buildEink(context, colors);'),
+          contains('color: active ? colors.onSurface : null'),
+        ),
       );
+      // 2026-10-25 材质定版：进度条从封面底边挪到封面下的文字块
+      // （ShelfCardMeta），横排卡与墙卡共用 _videoCardMeta；eink 下轨道换页面
+      // 底色 + 描边、填充换前景色（组件内）。
+      expect(
+        'CoverProgressStrip('.allMatches(src).length,
+        0,
+        reason: '封面上不再压进度条',
+      );
+      expect(src, contains('ShelfCardMeta('));
       expect(
         RegExp(
-          r'backgroundColor: isEinkTheme\(context\)\s*\?\s*Theme\.of\(context\)\.colorScheme\.surface',
-        ).allMatches(src).length,
-        2,
-        reason: '横排卡与墙卡两条进度条都要换实心轨道',
+          r'class ShelfCardMeta[\s\S]*?final Color track = eink\s*\?\s*cs\.surface',
+        ).hasMatch(read('lib/src/utils/components/shelf_cover_material.dart')),
+        isTrue,
       );
       expect(
         RegExp(
@@ -514,7 +551,27 @@ void main() {
         contains('Border(top: BorderSide(color: scheme.outline))'),
       );
       final String sync = read('lib/src/sync/sync_progress_banner.dart');
-      expect(sync, contains('einkSafeProgressValue(context, p?.fraction)'));
+      // 常规同步与复习同步两条进度共用一个 _bar(fraction:)，墨水屏归零在那一处。
+      expect(sync, contains('einkSafeProgressValue(context, fraction)'));
     });
   });
+}
+
+/// MD3 悬浮导航（底部胶囊 / 侧轨面板）表面 Material 的描边色；没有描边返回 null。
+Color? _floatingNavOutline(WidgetTester tester) {
+  final Iterable<Material> surfaces = tester.widgetList<Material>(
+    find.descendant(
+      of: find.byKey(fushiMaterialNavKey),
+      matching: find.byWidgetPredicate(
+        (Widget w) =>
+            w is Material &&
+            w.shape is RoundedRectangleBorder &&
+            (w.shape! as RoundedRectangleBorder).side != BorderSide.none,
+      ),
+    ),
+  );
+  if (surfaces.isEmpty) return null;
+  final Material surface = surfaces.first;
+  expect(surface.elevation, 0, reason: 'eink 不画阴影');
+  return (surface.shape! as RoundedRectangleBorder).side.color;
 }

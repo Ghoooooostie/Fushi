@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/dictionary/dict_style_rules.dart';
 import 'package:fushi/src/reader/dictionary_style_css.dart';
@@ -150,15 +148,18 @@ void main() {
       expect(css, contains('text-decoration: none !important'));
     });
 
-    test('圆角连带 inline-block，否则 inline 元素上看不见', () {
-      final String css = buildGlobalDictStyleCss(<DictStyleRule>[
-        const DictStyleRule(
-          part: DictStylePart.expressionTag,
-          props: DictStyleProps(cornerRadius: 4),
-        ),
-      ]);
-      expect(css, contains('border-radius: 4px !important'));
-      expect(css, contains('display: inline-block !important'));
+    // 用户 10-09「开圆角后样式改炸」：圆角曾连带 `display: inline-block !important`，
+    // 把 .entry / .glossary-content 等块级部位压成收缩包裹的行内块，多列卡片里释义
+    // 塌成一字一行。圆角是纯外观，任何部位都不得改 display。
+    test('圆角只产 border-radius，任何部位都不改 display', () {
+      for (final DictStylePart part in DictStylePart.values) {
+        final String css = buildGlobalDictStyleCss(<DictStyleRule>[
+          DictStyleRule(
+              part: part, props: const DictStyleProps(cornerRadius: 4)),
+        ]);
+        expect(css, contains('border-radius: 4px !important'), reason: '$part');
+        expect(css, isNot(contains('display')), reason: '$part');
+      }
     });
 
     test('浮点尾巴被裁掉', () {
@@ -393,49 +394,6 @@ void main() {
         dictStylePropsFor(rules, DictStylePart.glossaryContent, '三省堂').italic,
         isTrue,
       );
-    });
-  });
-
-  group('非 Dart 消费方的产物缓存', () {
-    test('全空返回空串，消费方一个 if 就能短路', () {
-      expect(encodeCompiledDictStyleCss(const <DictStyleRule>[]), '');
-    });
-
-    test('同时带上全局与单典两份', () {
-      // 只存全局的话，per-dict 规则会在 Android 独立弹窗里静默失效。
-      final String raw = encodeCompiledDictStyleCss(<DictStyleRule>[
-        const DictStyleRule(
-          part: DictStylePart.expression,
-          props: DictStyleProps(bold: true),
-        ),
-        const DictStyleRule(
-          part: DictStylePart.glossaryContent,
-          dictionaryName: '三省堂',
-          props: DictStyleProps(italic: true),
-        ),
-      ]);
-      final Map<String, dynamic> decoded =
-          jsonDecode(raw) as Map<String, dynamic>;
-      expect(decoded['global'], contains('.expression {'));
-      final Map<String, dynamic> byDict =
-          decoded['byDictionary'] as Map<String, dynamic>;
-      expect(byDict.keys, <String>['三省堂']);
-      expect(byDict['三省堂'], contains('font-style: italic'));
-      // 单典段不能自带前缀——消费方把它塞进 custom_dict_css，下游还会再加一次。
-      expect(byDict['三省堂'], isNot(contains('data-dictionary')));
-    });
-
-    test('只有全局规则时 byDictionary 为空对象而非缺字段', () {
-      final Map<String, dynamic> decoded = jsonDecode(
-        encodeCompiledDictStyleCss(<DictStyleRule>[
-          const DictStyleRule(
-            part: DictStylePart.pitch,
-            props: DictStyleProps(bold: true),
-          ),
-        ]),
-      ) as Map<String, dynamic>;
-      expect(decoded['byDictionary'], isEmpty);
-      expect(decoded.containsKey('byDictionary'), isTrue);
     });
   });
 

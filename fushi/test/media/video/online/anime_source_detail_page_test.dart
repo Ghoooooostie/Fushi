@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:drift/drift.dart' show Value;
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_core/fushi_core.dart';
@@ -34,7 +34,7 @@ void main() {
   late MihonManager manager;
 
   setUp(() async {
-    root = await Directory.systemTemp.createTemp('hibiki-anime-detail-');
+    root = await Directory.systemTemp.createTemp('fushi-anime-detail-');
     database = FushiDatabase.forTesting(NativeDatabase.memory());
     runtime = _AnimeRuntime();
     await database.upsertMangaExtension(
@@ -334,11 +334,11 @@ void main() {
         )
         .data!;
 
-    testWidgets('without any watch position it reads Play and plays the '
-        'first episode', (WidgetTester tester) async {
+    testWidgets('without any watch position it reads Start watching · '
+        'episode 1 and plays the first episode', (WidgetTester tester) async {
       final List<(RemoteVideoInfo, int)> opened = await pumpDetail(tester);
       expect(find.text('Fixture Show (details)'), findsWidgets);
-      expect(playLabel(tester), t.play);
+      expect(playLabel(tester), '${t.media_detail_start_watching} · Episode 1');
       await tester.tap(playButton());
       await tester.pump();
       expect(opened.single.$2, 0);
@@ -652,6 +652,11 @@ void main() {
       );
       await tester.pump();
       await tester.pump();
+      // 动作只有两个：工具栏默认平铺成图标钮，不再收进「⋯」菜单。
+      expect(
+        find.byKey(const ValueKey<String>('anime_source_open_website')),
+        findsOneWidget,
+      );
       await tester.tap(
         find.byKey(const ValueKey<String>('anime_source_open_website')),
       );

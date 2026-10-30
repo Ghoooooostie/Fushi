@@ -123,7 +123,8 @@ class VideoStorage {
   }
 
   /// 导入字幕目录绝对路径（不创建）。TODO-935 E0：经唯一入口 [AppPaths] 派生。
-  static Future<Directory> subtitlesDir() => enginePaths.videoSubtitlesDirectory();
+  static Future<Directory> subtitlesDir() =>
+      enginePaths.videoSubtitlesDirectory();
 
   /// 删除一本视频后回收**它自己**的 app 拥有副本：把 [deletedCoverPath] /
   /// [deletedSubtitlePath] / [deletedSecondarySubtitlePath]（被删 book 删前的
@@ -178,13 +179,13 @@ class VideoStorage {
   }
 
   /// Deletes the temp cache directory used for extracted embedded subtitles of
-  /// [videoPath]. This only touches Hibiki's derived temp cache, never the
+  /// [videoPath]. This only touches Fushi's derived temp cache, never the
   /// original video file.
   static Future<bool> deleteEmbeddedSubtitleCacheForVideoPath(
     String? videoPath,
   ) async {
     if (videoPath == null || videoPath.isEmpty) return false;
-    final Directory cacheDir = embeddedSubtitleCacheDir(videoPath);
+    final Directory cacheDir = await embeddedSubtitleCacheDir(videoPath);
     if (!await cacheDir.exists()) return false;
     try {
       await cacheDir.delete(recursive: true);

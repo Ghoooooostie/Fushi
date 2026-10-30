@@ -2,13 +2,15 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:drift/drift.dart';
-import 'package:image/image.dart' as img;
 import 'package:path/path.dart' as p;
 
+import 'package:fushi_compute/fushi_compute.dart' show FfcImageFormat;
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_engine/epub/book_title_conflict.dart';
+import 'package:fushi_engine/media/image_kernels.dart';
 import 'package:fushi_engine/media/manga/import/image_size_probe.dart';
 import 'package:fushi_engine/media/manga/manga_storage.dart';
+import 'package:fushi_engine/media/manga/mokuro_legacy_html.dart';
 import 'package:fushi_engine/media/manga/mokuro_payload.dart';
 import 'package:fushi_engine/ocr/manga_ocr_folder_job.dart';
 import 'package:fushi_engine/media/media_extensions.dart';
@@ -16,12 +18,12 @@ import 'package:fushi_engine/sync/ttu_filename.dart';
 import 'package:fushi_engine/utils/misc/fushi_time_format.dart';
 import 'package:fushi_engine/foundation/engine_log.dart';
 
-/// 已知漫画页图扩展名（mokuro 惯例）＝图片扩展名基集。
+/// 已知漫画页图扩展名（mokuro 惯例）＝漫画页图共享表（基集 + `.avif`）。
 ///
 /// 与整卷 OCR 的白名单 `kMangaOcrImageExtensions`（manga_ocr_folder_job.dart）
-/// 同源取基集：导入这道关认的页图，OCR 那道关必须能扫（BUG-1121——两表曾各自
+/// 同源取共享表：导入这道关认的页图，OCR 那道关必须能扫（BUG-1121——两表曾各自
 /// 手写漂移，bmp 漫画 OCR 静默缺页），守卫测试钉死两关口径一致。
-const Set<String> kMangaImageExtensions = kImageExtensionsBase;
+const Set<String> kMangaImageExtensions = kMangaPageImageExtensions;
 
 /// **载体分类**判据：[paths] 中至少有一个 `.mokuro` 文件，且其同级目录（含一层子目录）
 /// 里有图片来源——即「这看起来是一卷 mokuro 漫画」，用于对话框即时禁用按钮 / 拖入分流。
@@ -38,6 +40,11 @@ const Set<String> kMangaImageExtensions = kImageExtensionsBase;
 /// 纯判定（仅同步文件系统探测，无平台通道、无 async），便于单测与对话框即时禁用按钮。
 bool mangaImportCanImport(List<String> paths) {
   for (final String path in paths) {
+    // mokuro 旧版产物（`.html` + `_ocr/`）：页图就在同名卷目录里。
+    if (isLegacyMokuroHtmlVolume(path)) {
+      if (_dirHasMangaImage(Directory(legacyMokuroImageDir(path)))) return true;
+      continue;
+    }
     if (p.extension(path).toLowerCase() != '.mokuro') continue;
     final Directory parent = Directory(p.dirname(path));
     if (!parent.existsSync()) continue;
@@ -55,6 +62,15 @@ bool mangaImportCanImport(List<String> paths) {
     }
   }
   return false;
+}
+
+bool _dirHasMangaImage(Directory dir) {
+  try {
+    return dir.listSync(recursive: true).any(
+        (FileSystemEntity e) => e is File && _isMangaImageFile(e.path));
+  } catch (_) {
+    return false;
+  }
 }
 
 bool _isMangaImageFile(String path) =>
@@ -131,19 +147,23 @@ class MangaImporter {
     return MokuroPayload(images: pages);
   }
 
-  /// 页图宽高：先只读文件头（[probeOrientedImageSize]，零像素解码），认不出的
-  /// 格式才回退整张解码 + `bakeOrientation`（与从前逐字节同口径）。
+  /// 页图宽高（已按显示方向）：先走 Dart 头部探测（[probeOrientedImageSize]，JPEG /
+  /// PNG / WebP 等），认不出的格式交给原生内核只读头（[probeImageNative]，含 AVIF——
+  /// 它的 irot 宽高互换在原生侧完成）。原生也认不出才算坏页。
+  ///
+  /// 以前的回退是 `package:image` 整张解码：AVIF 页到这里直接抛「Could not decode」，
+  /// 整卷导入失败。
   static MokuroSize _pageSize(Uint8List bytes, String relativeUrl) {
-    final ({int width, int height})? probed = probeOrientedImageSize(bytes);
-    if (probed != null) {
-      return MokuroSize(probed.width.toDouble(), probed.height.toDouble());
+    final ({int width, int height})? header = probeOrientedImageSize(bytes);
+    if (header != null) {
+      return MokuroSize(header.width.toDouble(), header.height.toDouble());
     }
-    final img.Image? decoded = img.decodeImage(bytes);
-    if (decoded == null) {
+    final ({int width, int height, FfcImageFormat format})? native =
+        probeImageNative(bytes);
+    if (native == null) {
       throw MangaImportException('Could not decode manga page: $relativeUrl');
     }
-    final img.Image oriented = img.bakeOrientation(decoded);
-    return MokuroSize(oriented.width.toDouble(), oriented.height.toDouble());
+    return MokuroSize(native.width.toDouble(), native.height.toDouble());
   }
 
   /// 第一遍（纯校验，零副作用）：为 [payload] 的每页规划书目录内的 destRel
@@ -228,7 +248,10 @@ class MangaImporter {
     if (!mokuroFile.existsSync()) {
       throw MangaImportException('Mokuro file not found: $mokuroPath');
     }
-    final String jsonStr = await mokuroFile.readAsString();
+    // mokuro 0.1 旧版产物（`.html` + `_ocr/`）先拼回 `.mokuro` 形状，之后同一条管线。
+    final String jsonStr = isMokuroLegacyHtmlPath(mokuroPath)
+        ? await legacyMokuroJson(mokuroPath)
+        : await mokuroFile.readAsString();
     final MokuroPayload payload = parseMokuro(jsonStr);
     if (payload.images.isEmpty) {
       throw const MangaImportException('Mokuro file has no pages');
@@ -430,6 +453,65 @@ class MangaImporter {
       }
       rethrow;
     }
+  }
+
+  /// mokuro 0.1 旧版产物 [htmlPath]（`<父>/<卷名>.html`）→ 一份 `.mokuro` 形状的
+  /// JSON 文本（见 `mokuro_legacy_html.dart`）。
+  ///
+  /// 页序与 mokuro 一致：卷目录 `<父>/<卷名>/` 下的页图按自然序枚举（与
+  /// [payloadFromImageFolder] 同一个 [enumerateMangaPages]）；每页的文字层取
+  /// `<父>/_ocr/<卷名>/<页相对路径去扩展名>.json`，宽高 / 框原样搬过来，`img_path`
+  /// 写成相对 `.html` 所在目录的 `<卷名>/<页>`（`.mokuro` 惯例 A），于是下游的页图根
+  /// 解析、逐页校验、拷贝与普通 `.mokuro` 卷逐字节同构。某页没有 JSON（mokuro 半途
+  /// 失败）时该页照常入卷、文字层为空、宽高从页图头部探测——少一页字好过整卷失败。
+  ///
+  /// 卷目录或 `_ocr/<卷名>/` 不在，抛 [MangaImportException] 并指出缺的是哪个目录。
+  static Future<String> legacyMokuroJson(String htmlPath) async {
+    final Directory imageDir = Directory(legacyMokuroImageDir(htmlPath));
+    final Directory ocrDir = Directory(legacyMokuroOcrDir(htmlPath));
+    for (final Directory required in <Directory>[imageDir, ocrDir]) {
+      if (!required.existsSync()) {
+        throw MangaImportException(
+          'Not a mokuro volume: missing folder ${required.path}',
+        );
+      }
+    }
+    final String volumeName = p.basename(imageDir.path);
+    final List<MangaOcrPageFile> files = enumerateMangaPages(imageDir);
+    if (files.isEmpty) {
+      throw MangaImportException(
+        'Manga image folder has no pages: ${imageDir.path}',
+      );
+    }
+    final List<Map<String, Object?>> pages = <Map<String, Object?>>[];
+    for (final MangaOcrPageFile page in files) {
+      final File json = File(p.joinAll(<String>[
+        ocrDir.path,
+        ...legacyMokuroPageJsonRel(page.relativeUrl).split('/'),
+      ]));
+      Map<String, Object?>? ocr;
+      if (json.existsSync()) {
+        final Object? decoded = jsonDecode(await json.readAsString());
+        if (decoded is Map) ocr = decoded.cast<String, Object?>();
+      }
+      final Object? width = ocr?['img_width'];
+      final Object? height = ocr?['img_height'];
+      final MokuroSize size =
+          width is num && height is num && width > 0 && height > 0
+              ? MokuroSize(width.toDouble(), height.toDouble())
+              : _pageSize(await page.file.readAsBytes(), page.relativeUrl);
+      final Object? blocks = ocr?['blocks'];
+      pages.add(<String, Object?>{
+        'img_path': '$volumeName/${page.relativeUrl}',
+        'img_width': size.width,
+        'img_height': size.height,
+        'blocks': blocks is List ? blocks : const <Object?>[],
+      });
+    }
+    return jsonEncode(<String, Object?>{
+      ...legacyMokuroRoot(htmlPath),
+      'pages': pages,
+    });
   }
 
   /// 把相对 [rawUrl]（正斜杠或反斜杠）解析成 [srcDirPath] 下的源图 [File]。

@@ -7,11 +7,14 @@
 ///
 /// 这里把三样状态落成 support 目录下的一个小 JSON 文件：设备本地（不进备份 / 同步，
 /// 与 `anidb_anime/` XML 缓存同待遇），读写失败一律退化成进程内记账，绝不影响刮削。
+///
+/// 配置指纹只落 SHA-256 摘要：明文指纹里有 TMDB key 与 AniDB 账号密码。
 library;
 
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:crypto/crypto.dart' show sha256;
 import 'package:fushi_engine/foundation/engine_paths.dart';
 import 'package:path/path.dart' as p;
 
@@ -20,21 +23,35 @@ class VideoScrapeSweepLedger {
   VideoScrapeSweepLedger({
     File? file,
     this.retryAttemptAfter = const Duration(days: 7),
-  })  : _file = file,
-        _resolveFile = null;
+    this.transientRetryAfter = const Duration(hours: 1),
+  }) : _file = file,
+       _resolveFile = null;
 
   /// 生产装配：`<support>/video_scrape_sweep_ledger.json`。
   VideoScrapeSweepLedger.inSupportDirectory({
     this.retryAttemptAfter = const Duration(days: 7),
-  })  : _file = null,
-        _resolveFile = (() async => File(p.join(
-            (await enginePaths.supportRootDirectory()).path,
-            'video_scrape_sweep_ledger.json')));
+    this.transientRetryAfter = const Duration(hours: 1),
+  }) : _file = null,
+       _resolveFile = (() async => File(
+         p.join(
+           (await enginePaths.supportRootDirectory()).path,
+           'video_scrape_sweep_ledger.json',
+         ),
+       ));
 
   static const int _version = 1;
 
   /// 查无 / 歧义 / 哈希失败的作品多久之后才再自动试一次。手动刮削不受影响。
   final Duration retryAttemptAfter;
+
+  /// 只因资料源 / AI 临时不可用（504 / 握手失败 / 超时 / 限流）而失败的作品多久
+  /// 之后才再自动试一次。
+  ///
+  /// 临时失败同样是一次「已尝试」：旧实现把它直接撤账（BUG-2796），于是任意
+  /// 一次触发都会重新认领它——资料源连不上时同一作品每分钟被重刮十几次
+  /// （BUG-3072）。这里给它一个有界的短间隔：不像查无那样挡 7 天，也不会在
+  /// 资料源恢复之前被每一轮触发反复认领。
+  final Duration transientRetryAfter;
 
   File? _file;
   final Future<File> Function()? _resolveFile;
@@ -44,41 +61,55 @@ class VideoScrapeSweepLedger {
 
   String? _fingerprint;
   final Map<String, int> _attemptedAt = <String, int>{};
+  final Map<String, int> _transientFailedAt = <String, int>{};
   final Map<String, int> _refreshedAt = <String, int>{};
   int? _lastRefreshProbeAt;
 
   /// 首次使用前读盘（幂等）。[fingerprint] 是刮削配置指纹：配置变了（开了哈希、
   /// 换了主源 / 账号），上一套配置下「试过没中」的结论不再成立，清掉重试。
+  ///
+  /// [fingerprint] 含凭据，内存与磁盘上都只留它的摘要（[fingerprintDigest]）。
+  /// 旧版本把明文原样落盘：读到与本次明文相等的旧值视为同一套配置，只换成摘要
+  /// 重写、不清账，免得升级后平白重刮一轮。
   Future<void> ensureLoaded({required String fingerprint}) async {
     await (_loading ??= _load());
-    if (_fingerprint != fingerprint) {
-      if (_fingerprint != null && _attemptedAt.isNotEmpty) {
-        _attemptedAt.clear();
-      }
-      _fingerprint = fingerprint;
-      _dirty = true;
+    final String digest = fingerprintDigest(fingerprint);
+    if (_fingerprint == digest) return;
+    if (_fingerprint != null && _fingerprint != fingerprint) {
+      _attemptedAt.clear();
+      _transientFailedAt.clear();
     }
+    _fingerprint = digest;
+    _dirty = true;
   }
 
-  bool wasAttemptedRecently(String workKey, DateTime now) {
-    final int? at = _attemptedAt[workKey];
-    return at != null &&
-        now.difference(DateTime.fromMillisecondsSinceEpoch(at)) <
-            retryAttemptAfter;
-  }
+  /// 配置指纹落盘形态：明文的 SHA-256 十六进制摘要。
+  static String fingerprintDigest(String fingerprint) =>
+      'sha256:${sha256.convert(utf8.encode(fingerprint))}';
+
+  bool wasAttemptedRecently(String workKey, DateTime now) =>
+      _within(_attemptedAt[workKey], now, retryAttemptAfter) ||
+      _within(_transientFailedAt[workKey], now, transientRetryAfter);
+
+  static bool _within(int? at, DateTime now, Duration window) =>
+      at != null &&
+      now.difference(DateTime.fromMillisecondsSinceEpoch(at)) < window;
 
   void markAttempted(Iterable<String> workKeys, DateTime now) {
     for (final String key in workKeys) {
       _attemptedAt[key] = now.millisecondsSinceEpoch;
+      _transientFailedAt.remove(key);
       _dirty = true;
     }
   }
 
-  /// 撤掉「已尝试」：这些作品只因资料源临时不可用而失败，不是「查无 / 歧义」，
-  /// 下次触发就该再试，不必等 [retryAttemptAfter]。
-  void forgetAttempts(Iterable<String> workKeys) {
+  /// 这些作品的这次尝试只因资料源临时不可用而失败，不是「查无 / 歧义」：
+  /// 改按 [transientRetryAfter] 退避（从 [now] 起算），不挡 [retryAttemptAfter]。
+  void markTransientFailure(Iterable<String> workKeys, DateTime now) {
     for (final String key in workKeys) {
-      if (_attemptedAt.remove(key) != null) _dirty = true;
+      _attemptedAt.remove(key);
+      _transientFailedAt[key] = now.millisecondsSinceEpoch;
+      _dirty = true;
     }
   }
 
@@ -110,13 +141,20 @@ class VideoScrapeSweepLedger {
     // 过期条目不再有判定作用，顺手剪掉，文件大小只跟「近期碰过的作品」走。
     final int nowMs = now.millisecondsSinceEpoch;
     _attemptedAt.removeWhere(
-        (_, int at) => nowMs - at >= retryAttemptAfter.inMilliseconds);
-    _refreshedAt
-        .removeWhere((_, int at) => nowMs - at >= refreshWindow.inMilliseconds);
+      (_, int at) => nowMs - at >= retryAttemptAfter.inMilliseconds,
+    );
+    _transientFailedAt.removeWhere(
+      (_, int at) => nowMs - at >= transientRetryAfter.inMilliseconds,
+    );
+    _refreshedAt.removeWhere(
+      (_, int at) => nowMs - at >= refreshWindow.inMilliseconds,
+    );
     final String payload = jsonEncode(<String, Object?>{
       'v': _version,
       'fingerprint': _fingerprint,
       'attempted': _attemptedAt,
+      // 新增字段不升版本：旧版本读到会忽略它（= 下次触发重试），不会读坏。
+      'transient': _transientFailedAt,
       'refreshed': _refreshedAt,
       'lastRefreshProbeAt': _lastRefreshProbeAt,
     });
@@ -153,6 +191,7 @@ class VideoScrapeSweepLedger {
       if (decoded is! Map<String, Object?> || decoded['v'] != _version) return;
       _fingerprint = decoded['fingerprint'] as String?;
       _readTimes(decoded['attempted'], _attemptedAt);
+      _readTimes(decoded['transient'], _transientFailedAt);
       _readTimes(decoded['refreshed'], _refreshedAt);
       final Object? probe = decoded['lastRefreshProbeAt'];
       if (probe is int) _lastRefreshProbeAt = probe;

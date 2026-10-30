@@ -10,7 +10,7 @@ import 'package:fushi/src/sync/interconnect_video_resume_store.dart';
 import 'package:fushi/src/sync/remote_video_client.dart';
 import 'package:fushi/src/sync/sync_error_messages.dart';
 
-/// 一个互联（hibiki 互联 / LAN 对端）下载任务的生命周期状态。
+/// 一个互联（Fushi 互联 / LAN 对端）下载任务的生命周期状态。
 ///
 /// [paused]：用户主动暂停，或进程被杀后从续传清单接回来的任务。`.part` 留着，
 /// [InterconnectDownloadManager.resume] 从已下载的字节处接着下。
@@ -18,6 +18,15 @@ enum InterconnectDownloadStatus { running, paused, completed, failed }
 
 /// 任务的内容域（下载中心按它选图标 / 分类）。
 enum InterconnectDownloadKind { video, book, audiobook }
+
+/// 任务的数据来自哪里（下载中心按它标下载方式 / 外部来源）。
+enum InterconnectDownloadOrigin {
+  /// 用户自己的已配对设备或媒体服务器（HTTP 拉取，不算外部来源）。
+  ownDevice,
+
+  /// 在线视频扩展源（Aniyomi）：扩展从第三方站点取流。
+  extension,
+}
 
 /// 一个互联下载任务的不可变快照。UI 只读这个渲染进度/状态。
 @immutable
@@ -28,10 +37,12 @@ class InterconnectDownloadTask {
     required this.status,
     required this.progress,
     this.kind = InterconnectDownloadKind.video,
+    this.origin = InterconnectDownloadOrigin.ownDevice,
     this.receivedBytes,
     this.totalBytes,
     this.startedAt,
     this.error,
+    this.destPath,
   });
 
   /// 稳定任务键（视频用 RemoteVideoInfo.id；与列表去重键一致）。
@@ -48,6 +59,8 @@ class InterconnectDownloadTask {
 
   final InterconnectDownloadKind kind;
 
+  final InterconnectDownloadOrigin origin;
+
   /// 已落盘字节（**含续传前已有的 `.part`**）；传输原语不报字节时为 null。
   final int? receivedBytes;
 
@@ -59,6 +72,11 @@ class InterconnectDownloadTask {
 
   /// 失败时的错误文本（status==failed 时非空）。
   final String? error;
+
+  /// 成品落点（下载完成后文件就在这里）。任务完成后管理器丢掉重跑规格，
+  /// 「删除并删文件」要删的是**这个文件**，不能再从库行反推（库行可能已被删、
+  /// 或被重新加入成流媒体行，见 `interconnect_download_tasks_section.dart`）。
+  final String? destPath;
 
   bool get isRunning => status == InterconnectDownloadStatus.running;
   bool get isPaused => status == InterconnectDownloadStatus.paused;
@@ -78,10 +96,12 @@ class InterconnectDownloadTask {
       status: status ?? this.status,
       progress: clearProgress ? null : (progress ?? this.progress),
       kind: kind,
+      origin: origin,
       receivedBytes: receivedBytes ?? this.receivedBytes,
       totalBytes: totalBytes ?? this.totalBytes,
       startedAt: startedAt,
       error: clearError ? null : (error ?? this.error),
+      destPath: destPath,
     );
   }
 }
@@ -96,6 +116,7 @@ class InterconnectDownloadBatch {
     required this.total,
     this.completed = 0,
     this.failed = 0,
+    this.skipped = 0,
   });
 
   /// 批键（合集用 [InterconnectDownloadManager.collectionBatchId]）。
@@ -108,16 +129,24 @@ class InterconnectDownloadBatch {
   final int completed;
   final int failed;
 
-  int get finished => completed + failed;
-  bool get isRunning => finished < total;
+  /// 用户停掉整批后没再起跑的成员数（见 [InterconnectDownloadManager.startBatch]）。
+  final int skipped;
 
-  InterconnectDownloadBatch copyWith({int? completed, int? failed}) {
+  int get finished => completed + failed;
+  bool get isRunning => finished + skipped < total;
+
+  InterconnectDownloadBatch copyWith({
+    int? completed,
+    int? failed,
+    int? skipped,
+  }) {
     return InterconnectDownloadBatch(
       id: id,
       title: title,
       total: total,
       completed: completed ?? this.completed,
       failed: failed ?? this.failed,
+      skipped: skipped ?? this.skipped,
     );
   }
 }
@@ -155,6 +184,34 @@ class InterconnectDownloadAggregate {
   bool get isFailed => running == 0 && failed > 0;
 }
 
+/// 单个任务在卡片角标上可见的状态（BUG-2944）：进度量化到整数百分比，
+/// -1 表示尚无进度回报。record 按值比较，供 `provider.select` 收窄重建。
+typedef InterconnectDownloadBadgeState = ({
+  InterconnectDownloadStatus status,
+  int percent,
+  String? error,
+});
+
+/// 合集角标可见的聚合状态（BUG-2944）。
+typedef InterconnectDownloadAggregateBadgeState = ({
+  bool isRunning,
+  bool isFailed,
+  int percent,
+});
+
+/// 把 [task] 投影成角标状态；无任务返回 null。
+InterconnectDownloadBadgeState? interconnectDownloadBadgeState(
+  InterconnectDownloadTask? task,
+) {
+  if (task == null) return null;
+  final double? progress = task.progress;
+  return (
+    status: task.status,
+    percent: progress == null ? -1 : (progress * 100).floor(),
+    error: task.error,
+  );
+}
+
 /// 执行一次实际下载到 [dest] 的原语（注入，便于测试与解耦具体 client）。
 /// [onProgress] 上报 0..1 进度。书 / 有声书走这一形；它们的传输不支持中途
 /// 中止，所以没有暂停。
@@ -186,10 +243,13 @@ class _DownloadSpec {
     required this.onComplete,
     required this.pausable,
     this.resumeRecord,
+    this.origin = InterconnectDownloadOrigin.ownDevice,
+    this.discardLeftovers,
   });
 
   final String title;
   final InterconnectDownloadKind kind;
+  final InterconnectDownloadOrigin origin;
   final File dest;
   final InterconnectVideoDownloadRunner run;
   final InterconnectDownloadComplete? onComplete;
@@ -199,6 +259,10 @@ class _DownloadSpec {
 
   /// 视频任务的续传清单（null = 不落清单）。
   final InterconnectVideoResumeRecord? resumeRecord;
+
+  /// 落点不是单个 `.part` 文件的任务（整盘下载是一整棵目录）自己清半成品；null
+  /// 走 [InterconnectDownloadManager.discard] 的单文件残片清单。
+  final Future<bool> Function()? discardLeftovers;
 }
 
 /// **app 级互联下载管理器（TODO-819）**。持有所有进行中/已完成/失败的互联下载任务，
@@ -236,6 +300,10 @@ class InterconnectDownloadManager extends ChangeNotifier {
   /// 不同值域，再隔一个域前缀）。
   static String srtAudiobookTaskId(String identity) => 'srt:$identity';
 
+  /// 远端原盘整盘下载的任务键（host 下发的盘身份 `discKey`；一张盘的几条标题
+  /// 共用一个任务，再隔一个域前缀与视频键分开）。
+  static String discTaskId(String discKey) => 'disc:$discKey';
+
   /// 合集整体下载的批键（本地 `media_collections.id`）。
   static String collectionBatchId(int collectionId) =>
       'collection:$collectionId';
@@ -248,6 +316,10 @@ class InterconnectDownloadManager extends ChangeNotifier {
   /// 在跑任务的中止开关（完成 = 请求暂停）。
   final Map<String, Completer<void>> _cancelSignals =
       <String, Completer<void>>{};
+
+  /// 在跑任务的「这一轮已结束」信号（无论完成 / 失败 / 暂停）。[cancel] 靠它等
+  /// 传输原语真的停下、`.part` 不再被写，再删半成品。
+  final Map<String, Completer<void>> _stopped = <String, Completer<void>>{};
 
   final Map<String, InterconnectDownloadBatch> _batches =
       <String, InterconnectDownloadBatch>{};
@@ -267,6 +339,11 @@ class InterconnectDownloadManager extends ChangeNotifier {
   /// （成员自己的失败原因仍在其 [InterconnectDownloadTask.error]）。被用户暂停的
   /// 成员同样计入 failed（批只区分「落地了」与「没落地」），它自己停在暂停态。
   /// 同 [id] 已在跑则忽略重复调用，返回当前批。
+  ///
+  /// 用户暂停 / 取消正在跑的成员 = **停掉整批**：后面排队的成员不再起跑。批是
+  /// 串行的，任何时刻用户只看得到正在跑的那一集；若暂停后下一集立刻接上，用户
+  /// 就再也停不下这批（反馈 _sZllpFQWm：「点了下载远端集后没有任何地方能停」）。
+  /// 想继续，对暂停的那集点继续，或再点一次「下载远端集」（已在本机的集不再下）。
   Future<InterconnectDownloadBatch> startBatch({
     required String id,
     required String title,
@@ -281,10 +358,13 @@ class InterconnectDownloadManager extends ChangeNotifier {
     );
     _notify();
     await holdKeepAliveDuring(() async {
-      for (final Future<void> Function() start in starters) {
+      for (int i = 0; i < starters.length; i++) {
         try {
-          await start();
+          await starters[i]();
           _updateBatch(id, completed: 1);
+        } on RemoteDownloadCancelled {
+          _updateBatch(id, failed: 1, skipped: starters.length - i - 1);
+          break;
         } catch (_) {
           _updateBatch(id, failed: 1);
         }
@@ -308,12 +388,18 @@ class InterconnectDownloadManager extends ChangeNotifier {
     }
   }
 
-  void _updateBatch(String id, {int completed = 0, int failed = 0}) {
+  void _updateBatch(
+    String id, {
+    int completed = 0,
+    int failed = 0,
+    int skipped = 0,
+  }) {
     final InterconnectDownloadBatch? batch = _batches[id];
     if (batch == null) return;
     _batches[id] = batch.copyWith(
       completed: batch.completed + completed,
       failed: batch.failed + failed,
+      skipped: batch.skipped + skipped,
     );
     _notify();
   }
@@ -335,6 +421,28 @@ class InterconnectDownloadManager extends ChangeNotifier {
 
   /// 取某任务快照（无则 null）。
   InterconnectDownloadTask? taskFor(String id) => _tasks[id];
+
+  /// 卡片角标需要的那部分任务状态，进度量化到整数百分比（-1 = 不确定）。
+  ///
+  /// 角标所在的书架 / 媒体库页用
+  /// `ref.watch(provider.select((m) => m.badgeStateFor(id)))` 订阅（BUG-2944）：
+  /// record 按值比较，字节回报不改变百分比时不触发整页重建；直接 `ref.watch`
+  /// 管理器则每次通知都整页重建。
+  InterconnectDownloadBadgeState? badgeStateFor(String id) =>
+      interconnectDownloadBadgeState(_tasks[id]);
+
+  /// [aggregateFor] 的角标投影，进度同样量化到整数百分比（BUG-2944）。
+  InterconnectDownloadAggregateBadgeState? aggregateBadgeStateFor(
+    Iterable<String> ids,
+  ) {
+    final InterconnectDownloadAggregate? agg = aggregateFor(ids);
+    if (agg == null) return null;
+    return (
+      isRunning: agg.isRunning,
+      isFailed: agg.isFailed,
+      percent: (agg.progress * 100).floor(),
+    );
+  }
 
   /// 某任务是否正在下载（UI 决定显示进度徽标）。
   bool isRunning(String id) => _tasks[id]?.isRunning ?? false;
@@ -399,6 +507,7 @@ class InterconnectDownloadManager extends ChangeNotifier {
     required InterconnectVideoDownloadRunner run,
     InterconnectDownloadComplete? onComplete,
     InterconnectVideoResumeRecord? resumeRecord,
+    InterconnectDownloadOrigin origin = InterconnectDownloadOrigin.ownDevice,
   }) =>
       _startDownload(
         id,
@@ -410,6 +519,32 @@ class InterconnectDownloadManager extends ChangeNotifier {
           onComplete: onComplete,
           pausable: true,
           resumeRecord: resumeRecord,
+          origin: origin,
+        ),
+      );
+
+  /// 启动一个远端原盘整盘下载（键 = [discTaskId]）。与视频任务同一套生命周期：
+  /// 可暂停 / 继续 / 取消，续传由 [run] 承接（已落地的文件跳过、没下完的按
+  /// `.part` 续）。[dest] 是本机盘根（目录盘是目录、镜像盘是 `.iso`），[discard]
+  /// 放弃任务时清掉整棵半成品。
+  Future<InterconnectDownloadTask> startDiscDownload({
+    required String discKey,
+    required String title,
+    required File dest,
+    required InterconnectVideoDownloadRunner run,
+    required Future<bool> Function() discard,
+    InterconnectDownloadComplete? onComplete,
+  }) =>
+      _startDownload(
+        discTaskId(discKey),
+        _DownloadSpec(
+          title: title,
+          kind: InterconnectDownloadKind.video,
+          dest: dest,
+          run: run,
+          onComplete: onComplete,
+          pausable: true,
+          discardLeftovers: discard,
         ),
       );
 
@@ -446,6 +581,7 @@ class InterconnectDownloadManager extends ChangeNotifier {
       receivedBytes: receivedBytes,
       totalBytes: totalBytes,
       startedAt: _now(),
+      destPath: dest.path,
     );
     _finishedOrder.remove(id);
     _notify();
@@ -541,6 +677,8 @@ class InterconnectDownloadManager extends ChangeNotifier {
     _specs[id] = spec;
     final Completer<void> cancel = Completer<void>();
     _cancelSignals[id] = cancel;
+    final Completer<void> stopped = Completer<void>();
+    _stopped[id] = stopped;
     final InterconnectDownloadTask started = InterconnectDownloadTask(
       id: id,
       title: spec.title,
@@ -548,12 +686,15 @@ class InterconnectDownloadManager extends ChangeNotifier {
       // 继续暂停任务时先沿用暂停前的进度，首个回报（含已有 part）会立刻校正。
       progress: existing?.isPaused == true ? existing!.progress : null,
       kind: spec.kind,
+      origin: spec.origin,
       receivedBytes:
           existing?.isPaused == true ? existing!.receivedBytes : null,
       totalBytes: existing?.isPaused == true ? existing!.totalBytes : null,
       startedAt: _now(),
+      destPath: spec.dest.path,
     );
     _tasks[id] = started;
+    _lastProgressNotify.remove(id);
     // 重跑同一个 id（用户重试）= 上一轮的结束态被消费掉了，从保留窗口里摘掉。
     _finishedOrder.remove(id);
     _notify();
@@ -600,6 +741,8 @@ class InterconnectDownloadManager extends ChangeNotifier {
       rethrow;
     } finally {
       if (identical(_cancelSignals[id], cancel)) _cancelSignals.remove(id);
+      if (identical(_stopped[id], stopped)) _stopped.remove(id);
+      stopped.complete();
     }
   }
 
@@ -652,6 +795,37 @@ class InterconnectDownloadManager extends ChangeNotifier {
     _notify();
   }
 
+  /// 该任务此刻能否「取消下载」：在跑且可暂停（先停再删），或停在暂停 / 失败态。
+  /// 不可暂停的书 / 有声书在跑时不能取消（传输原语不认中止信号）。
+  bool canCancel(String id) {
+    final InterconnectDownloadTask? task = _tasks[id];
+    if (task == null) return false;
+    if (task.isRunning) return canPause(id);
+    return task.status == InterconnectDownloadStatus.paused ||
+        task.status == InterconnectDownloadStatus.failed;
+  }
+
+  /// 取消一个未完成的下载：在跑的先发中止信号并**等这一轮真的停下**（传输原语
+  /// 不再写 `.part`），再走 [discard] 删半成品、续传清单与任务记录——取消后
+  /// 重开 app 也不会被自动续传接回来（续传清单已删）。
+  ///
+  /// 互联下载在任何平台都要能取消（iOS 没有「浏览 → 下载」，这是它唯一的停法），
+  /// 所以这里是不依赖下载中心的公共入口。返回是否删了半成品文件。
+  Future<bool> cancel(String id) async {
+    if (!canCancel(id)) return false;
+    final InterconnectDownloadTask task = _tasks[id]!;
+    if (task.isRunning) {
+      final Completer<void>? stopped = _stopped[id];
+      pause(id);
+      if (stopped != null) await stopped.future;
+      // 这一轮恰好在停下前完成了：成品已入库，不是「取消」能撤回的东西。
+      if (_tasks[id]?.status == InterconnectDownloadStatus.completed) {
+        return false;
+      }
+    }
+    return discard(id);
+  }
+
   /// 放弃一个未完成（paused/failed）的任务并删掉已下载的半成品（`.part` 及其
   /// 侧车、HLS 分片流与断点记录、续传清单）。返回是否真的删了文件。
   Future<bool> discard(String id) async {
@@ -659,6 +833,8 @@ class InterconnectDownloadManager extends ChangeNotifier {
     final _DownloadSpec? spec = _specs[id];
     if (task == null || task.isRunning || spec == null) return false;
     clearTask(id);
+    final Future<bool> Function()? leftovers = spec.discardLeftovers;
+    if (leftovers != null) return leftovers();
     final String destPath = spec.dest.path;
     bool deleted = false;
     for (final File f in <File>[
@@ -705,7 +881,7 @@ class InterconnectDownloadManager extends ChangeNotifier {
     final InterconnectDownloadTask? task = _tasks[id];
     if (task == null || !task.isRunning) return;
     _tasks[id] = task.copyWith(progress: progress.clamp(0.0, 1.0));
-    _notify();
+    _notifyProgress(id);
   }
 
   void _updateBytes(String id, int received, int? total) {
@@ -717,6 +893,34 @@ class InterconnectDownloadManager extends ChangeNotifier {
       totalBytes: knownTotal,
       progress: _fraction(received, knownTotal ?? task.totalBytes),
     );
+    _notifyProgress(id);
+  }
+
+  /// 进度回报的最小通知间隔（BUG-2944）。
+  @visibleForTesting
+  static const int progressNotifyIntervalMs = 250;
+
+  /// 每个在跑任务上一次**进度类**通知的时刻与整数百分比（BUG-2944）。
+  final Map<String, ({int at, int percent})> _lastProgressNotify =
+      <String, ({int at, int percent})>{};
+
+  /// 进度 / 字节回报的节流通知（BUG-2944）：传输原语每读一块就回报一次（局域网
+  /// 下一秒几百上千次），此前每次都 `notifyListeners()`，书架 / 媒体库页整页
+  /// `ref.watch` 管理器，于是下载期间每块都整页重建，iOS 上直接掉成个位数帧率。
+  /// 任务快照照常每次更新（读方随时拿到最新值），只把**通知**收敛到「整数百分比
+  /// 变了」或「距上次通知满 [progressNotifyIntervalMs]」；状态变化（起跑 / 完成 /
+  /// 失败 / 暂停）走 [_notify] 不节流。
+  void _notifyProgress(String id) {
+    final double? progress = _tasks[id]?.progress;
+    final int percent = progress == null ? -1 : (progress * 100).floor();
+    final int now = _now();
+    final ({int at, int percent})? last = _lastProgressNotify[id];
+    if (last != null &&
+        last.percent == percent &&
+        now - last.at < progressNotifyIntervalMs) {
+      return;
+    }
+    _lastProgressNotify[id] = (at: now, percent: percent);
     _notify();
   }
 
@@ -733,6 +937,7 @@ class InterconnectDownloadManager extends ChangeNotifier {
   }) {
     final InterconnectDownloadTask? task = _tasks[id];
     if (task == null) return;
+    _lastProgressNotify.remove(id);
     _tasks[id] = task.copyWith(
       status: status,
       progress: progress,

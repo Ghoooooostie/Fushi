@@ -18,7 +18,7 @@ void main() {
   late MihonManager anime;
 
   setUp(() async {
-    root = await Directory.systemTemp.createTemp('hibiki-mihon-kind-');
+    root = await Directory.systemTemp.createTemp('fushi-mihon-kind-');
     database = FushiDatabase.forTesting(NativeDatabase.memory());
     runtime = _KindRuntime();
     manga = MihonManager(
@@ -79,33 +79,44 @@ void main() {
     );
   });
 
-  test('anime lib gate accepts 14 to 16 and refuses 17', () async {
-    runtime.inspection = _inspection(MihonMediaKind.anime, libVersion: '17');
-    await expectLater(
-      () => install(anime, 'lib17.apk'),
-      throwsA(
-        isA<MihonRuntimeException>().having(
-          (MihonRuntimeException e) => e.code,
-          'code',
-          'UNSUPPORTED_LIB',
+  test(
+    'anime lib gate accepts 14 to 17 and refuses other generations',
+    () async {
+      // gRSPNbJjqT：lib 17（Aniyomi extensions-lib v17，2026-09）曾在这里被拒，
+      // 用户看到「Unsupported extension-lib version」。宿主 ABI 已并入 lib 17。
+      runtime.inspection = _inspection(MihonMediaKind.anime, libVersion: '13');
+      await expectLater(
+        () => install(anime, 'lib13.apk'),
+        throwsA(
+          isA<MihonRuntimeException>().having(
+            (MihonRuntimeException e) => e.code,
+            'code',
+            'UNSUPPORTED_LIB',
+          ),
         ),
-      ),
-    );
-    runtime.inspection = _inspection(MihonMediaKind.anime, libVersion: '14');
-    await install(anime, 'lib14.apk');
-    expect(anime.installed.single.libVersion, '14');
-    // 宿主 ABI 是 lib 14 + lib 16 并集（Hoster API、data class Video）：两代都装。
-    runtime.inspection = _inspection(
-      MihonMediaKind.anime,
-      libVersion: '16',
-      packageName: 'eu.kanade.tachiyomi.animeextension.all.fixture16',
-    );
-    await install(anime, 'lib16.apk');
-    expect(
-      anime.installed.map((MangaExtensionRow e) => e.libVersion).toSet(),
-      <String>{'14', '16'},
-    );
-  });
+      );
+      runtime.inspection = _inspection(MihonMediaKind.anime, libVersion: '14');
+      await install(anime, 'lib14.apk');
+      expect(anime.installed.single.libVersion, '14');
+      // 宿主 ABI 是 lib 14 + lib 16 并集（Hoster API、data class Video）：两代都装。
+      runtime.inspection = _inspection(
+        MihonMediaKind.anime,
+        libVersion: '16',
+        packageName: 'eu.kanade.tachiyomi.animeextension.all.fixture16',
+      );
+      await install(anime, 'lib16.apk');
+      runtime.inspection = _inspection(
+        MihonMediaKind.anime,
+        libVersion: '17',
+        packageName: 'eu.kanade.tachiyomi.animeextension.all.fixture17',
+      );
+      await install(anime, 'lib17.apk');
+      expect(
+        anime.installed.map((MangaExtensionRow e) => e.libVersion).toSet(),
+        <String>{'14', '16', '17'},
+      );
+    },
+  );
 
   test(
     'installs land in the shared tables tagged by kind and each manager only sees its own',
@@ -145,41 +156,21 @@ void main() {
     },
   );
 
-  test(
-    'default store seed is per kind and lands with its media_kind',
-    () async {
-      final MihonManager seeded = MihonManager(
-        database: database,
-        rootDirectory: Directory('${root.path}/seeded'),
-        runtime: runtime,
-        kind: MihonMediaKind.anime,
-        ownsRuntime: false,
-        seedDefaultStore: true,
-        storeClient: _OfflineStoreClient(),
-      );
-      addTearDown(seeded.dispose);
-      await seeded.initialise().catchError((Object _) {});
-      final List<MangaExtensionStoreRow> animeStores = await database
-          .getMangaExtensionStores(mediaKind: 'anime');
-      expect(animeStores.single.indexUrl, kMihonDefaultAnimeStoreIndexUrl);
-      expect(animeStores.single.mediaKind, 'anime');
-      expect(
-        await database.getMangaExtensionStores(mediaKind: 'manga'),
-        isEmpty,
-      );
-      expect(
-        await database.getPrefTyped<bool>(
-          kMihonDefaultAnimeStoreSeededPref,
-          false,
-        ),
-        isTrue,
-      );
-      expect(
-        await database.getPrefTyped<bool>(kMihonDefaultStoreSeededPref, false),
-        isFalse,
-      );
-    },
-  );
+  test('no built-in store is seeded for the anime kind (2026-10-09)', () async {
+    final MihonManager anime = MihonManager(
+      database: database,
+      rootDirectory: Directory('${root.path}/fresh'),
+      runtime: runtime,
+      kind: MihonMediaKind.anime,
+      ownsRuntime: false,
+      storeClient: _OfflineStoreClient(),
+    );
+    addTearDown(anime.dispose);
+    await anime.initialise().catchError((Object _) {});
+    expect(anime.stores, isEmpty);
+    expect(await database.getMangaExtensionStores(mediaKind: 'anime'), isEmpty);
+    expect(await database.getMangaExtensionStores(mediaKind: 'manga'), isEmpty);
+  });
 
   test(
     'a shared runtime is not disposed by a manager that does not own it',

@@ -22,21 +22,50 @@ void main() {
     return token.allMatches(maskComments(file.readAsStringSync())).length;
   }
 
-  test('视频首页：墙卡（本地/远端/合集）+ hero 轮播 + 横滚行卡都接标题溢出 Tooltip', () {
-    // 5 处：合集封面卡 / 远端占位卡 / 本地散卡 / hero 轮播标题 / 横滚行通用卡。
+  test('视频首页：墙卡（本地/远端/合集）+ 横滚行卡都接标题溢出 Tooltip', () {
+    // 2026-10-25 材质库页：卡片文字块统一成 [ShelfCardMeta]（标题一行，内部
+    // 经 ShelfTitleLine 接 ShelfTitleOverflowTooltip），视频页经 `_videoCardMeta`
+    // 一处装配。登记的是 4 个调用点：合集封面卡 / 远端占位卡 / 本地散卡 / 横滚行
+    // 通用卡；组件内部的接线由下一条守卫钉住。
+    final String src = maskComments(
+      File(
+        'lib/src/pages/implementations/home_video_page.dart',
+      ).readAsStringSync(),
+    );
     expect(
-      countIn('lib/src/pages/implementations/home_video_page.dart'),
-      greaterThanOrEqualTo(5),
-      reason: '视频首页标题溢出 Tooltip 接线（TODO-2490/2486）不得少于 5 处：'
-          '合集卡、远端卡、本地卡、hero 轮播标题、横滚行卡',
+      '_videoCardMeta('.allMatches(src).length - 1,
+      greaterThanOrEqualTo(4),
+      reason:
+          '视频首页标题溢出 Tooltip 接线（TODO-2490/2486）不得少于 4 处：'
+          '合集卡、远端卡、本地卡、横滚行卡',
+    );
+    expect(src.contains('ShelfCardMeta('), isTrue);
+  });
+
+  test('ShelfCardMeta 的标题行接标题溢出 Tooltip', () {
+    expect(
+      countIn('lib/src/utils/components/shelf_cover_material.dart'),
+      greaterThanOrEqualTo(1),
+      reason: '材质库页文字块的单行标题必须接 ShelfTitleOverflowTooltip',
     );
   });
 
   test('书架：继续阅读 hero 标题接标题溢出 Tooltip（TODO-2497）', () {
+    // 2026-10-28 起书架 hero 是共用的 FushiContinueHero，Tooltip 接在组件里。
+    final String shelf = maskComments(
+      File(
+        'lib/src/pages/implementations/reader_fushi_history_page.dart',
+      ).readAsStringSync(),
+    );
     expect(
-      countIn('lib/src/pages/implementations/reader_fushi_history_page.dart'),
+      shelf.contains('FushiContinueHero('),
+      isTrue,
+      reason: '书架继续阅读 hero 必须走共用的 FushiContinueHero',
+    );
+    expect(
+      countIn('lib/src/utils/components/fushi_continue_hero.dart'),
       greaterThanOrEqualTo(1),
-      reason: '书架继续阅读 hero 标题必须接 ShelfTitleOverflowTooltip',
+      reason: 'FushiContinueHero 标题必须接 ShelfTitleOverflowTooltip',
     );
   });
 
@@ -44,7 +73,8 @@ void main() {
     expect(
       countIn('lib/src/pages/implementations/galgame_home_page.dart'),
       greaterThanOrEqualTo(3),
-      reason: '游戏首页 hero、随机游戏卡、活动时间轴三处标题必须接 '
+      reason:
+          '游戏首页 hero、随机游戏卡、活动时间轴三处标题必须接 '
           'ShelfTitleOverflowTooltip',
     );
   });

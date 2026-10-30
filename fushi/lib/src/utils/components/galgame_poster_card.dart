@@ -1,54 +1,83 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
-import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
-import 'package:fushi/src/focus/fushi_focus_target.dart';
 import 'package:fushi/src/shortcuts/gamepad_service.dart'
     show GamepadLongPressActions;
-import 'package:fushi/src/utils/components/fushi_design_tokens.dart';
+import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
 import 'package:fushi/src/utils/components/fushi_hover_lift.dart';
+import 'package:fushi/src/utils/components/fushi_m3e_list_card.dart';
 import 'package:fushi/src/utils/components/shelf_card_widgets.dart';
+import 'package:fushi/src/utils/components/shelf_cover_material.dart';
 
-/// galgame 竖版海报卡（对齐 ReinaManager 库页/首页的卡片观感，见
-/// `docs/design/galgame-library-reina-visual-parity.md` §1）。
+/// galgame 竖版卡盒卡（游戏库 / 合集折叠卡 / 合集详情 / 串流库 / 在途下载占位共用）。
 ///
-/// 共享设计系统组件：封面 3:4、圆角 [FushiBorderRadius.poster]、hover 放大 1.05 +
-/// 阴影加深、选中 2px 主色环、封面底部可选「排序信息」渐变浮层、封面下方居中单行标题。
+/// 2026-10-25 库页材质定版：外形是透明卡盒——竖长 1:1.6
+/// （[kShelfGameCaseAspectRatio]），方图 / 横图封面在内窗里居中裁切。材质本身
+/// 由祖先 [ShelfCoverMaterialScope]（`ShelfCoverMaterial.gameCase`）交给共享的
+/// [ShelfCoverFrame] 画（塑料外圈 + 盒面反光 + 悬停柔光 + 接触阴影）；没有材质
+/// 作用域或墨水屏时退回描边封面框，形状不变。
 ///
-/// 刻意**不做文件 IO**：[cover] 由调用方传入（`Image.file` / 占位图 / 网络图都行），
-/// 这样卡片本身是纯 widget、可 widget-test，也不与封面来源耦合。
+/// 封面上**不压任何角标**（用户 2026-10-25：「全部都不用角标设计」）：游玩状态、
+/// 排序值、运行中、下载进度一律进封面下的文字块（[ShelfCardMeta]：标题一行 +
+/// 副行一行 + 进度条）。封面上只剩多选勾选圈 / 选中罩（[ShelfCoverSelection]）
+/// 与调用方自己画在 [cover] 里的加载遮罩。
 ///
-/// 圆角走 token、字号走 textTheme、颜色走 colorScheme 语义角色，是设计系统组件而非页面
-/// chrome，故在 MD3 静态守卫的 allowlist 内（同 `fushi_material_components.dart`）。
-class GalgamePosterCard extends StatefulWidget {
+/// 交互壳是 [shelfCoverCard]（FushiCard：点击 / 长按 / 右键 / 焦点 /
+/// ActivateIntent / 按压下沉），悬停抬升走 [FushiHoverLift]。
+///
+/// 刻意**不做文件 IO**：[cover] 由调用方传入（`ShelfFileCover` / 占位图 / 网络图
+/// 都行），卡片本身是纯 widget、可 widget-test，也不与封面来源耦合。
+///
+/// 树结构恒定：选中 / 多选只换值，不按设计系统增删包装层。
+class GalgamePosterCard extends StatelessWidget {
   const GalgamePosterCard({
     super.key,
     required this.cover,
     required this.title,
-    this.overlayText,
+    this.subtitle,
+    this.subtitleIcon,
+    this.subtitleTone = ShelfMetaTone.normal,
+    this.progress,
+    this.completed = false,
+    this.stackedCovers,
     this.selected = false,
     this.multiSelected = false,
     this.onTap,
     this.onLongPress,
     this.onSecondaryTap,
-    this.trailing,
     this.semanticLabel,
     this.focusId,
   });
 
-  /// 封面 widget（3:4 会被外层裁剪；建议 `fit: BoxFit.cover`）。
+  /// 封面 widget（在卡盒内窗里按 1:1.6 裁剪；建议 `fit: BoxFit.cover`）。
   final Widget cover;
 
-  /// 标题（封面下方居中，单行省略）。
+  /// 标题（封面下方左对齐，一行省略，悬停显示全名）。
   final String title;
 
-  /// 封面底部「排序信息」浮层文本；null / 空则不显示浮层。
-  final String? overlayText;
+  /// 副行：游玩时长 / 游玩状态 / 排序值 / 下载状态等原先压在封面上的信息。
+  final String? subtitle;
 
-  /// 选中态（当前详情/焦点）：加 2px 主色环。
+  /// 副行前导图标（如在途下载的「外部来源」、串流的「运行中」）。
+  final IconData? subtitleIcon;
+
+  /// 副行语气（警示 / 错误换色）。
+  final ShelfMetaTone subtitleTone;
+
+  /// 文字块底部进度条（0–1）；null = 不画（仍占位，网格逐行对齐）。
+  final double? progress;
+
+  /// 进度条换完成色（已通关）。
+  final bool completed;
+
+  /// 合集折叠卡：[cover] 之后的成员封面（近 → 远，最多取 3 张）。材质下画成
+  /// 扇形（[ShelfCoverPile]）；墨水屏退回共享叠层。null = 单张封面。
+  final List<Widget>? stackedCovers;
+
+  /// 选中态（当前详情 / 焦点）：封面上画选中罩（主色细环 + 淡色罩）。
   final bool selected;
 
-  /// 批量多选态：左上角方形勾标（预留，M1.5 暂不启用多选）。
+  /// 批量多选态：封面左上角勾选圈（与书架 / 视频库同一枚）。
   final bool multiSelected;
 
   final VoidCallback? onTap;
@@ -57,9 +86,6 @@ class GalgamePosterCard extends StatefulWidget {
   /// 右键（桌面）→ 一般用于打开详情菜单。
   final VoidCallback? onSecondaryTap;
 
-  /// 右上角悬浮控件（如更多菜单按钮）。
-  final Widget? trailing;
-
   final String? semanticLabel;
 
   /// 焦点站点 id（手柄/键盘导航）。传入时注册到 [FushiFocusRoot]，`Enter`/A 键
@@ -67,206 +93,93 @@ class GalgamePosterCard extends StatefulWidget {
   final FushiFocusId? focusId;
 
   @override
-  State<GalgamePosterCard> createState() => _GalgamePosterCardState();
-}
-
-class _GalgamePosterCardState extends State<GalgamePosterCard> {
-  @override
   Widget build(BuildContext context) {
-    // hover 态与缩放交给共享的 [FushiHoverLift]（书架 / 漫画 / 视频库同一套），
-    // 它顺带带来本组件原先缺的两处降级：墨水屏与「减弱动态效果」。
-    return FushiHoverLift(builder: _buildForHover);
+    // 悬停抬升交给共享的 [FushiHoverLift]（书架 / 漫画 / 视频库同一套，自带墨水屏
+    // 与「减弱动态效果」降级）；封面框经 [FushiHoverLift.liftedOf] 自己扫光 / 加深投影。
+    final ShelfCoverMaterial? material = shelfCoverMaterialOf(context);
+    final BorderRadius radius = material == null
+        ? galgameCoverRadius(context)
+        : shelfMaterialRadius(material);
+    return ShelfCoverRadiusScope(
+      radius: radius,
+      child: FushiHoverLift(
+        builder: (BuildContext context, bool _) => _buildCard(context, radius),
+      ),
+    );
   }
 
-  Widget _buildForHover(BuildContext context, bool hovering) {
-    final ThemeData theme = Theme.of(context);
-    final ColorScheme colors = theme.colorScheme;
-
-    final Widget cover = _buildCover(context, colors, hovering);
-
-    final TextStyle? titleStyle = theme.textTheme.titleSmall?.copyWith(
-      fontWeight: FontWeight.w600,
-      color: widget.selected ? colors.primary : colors.onSurface,
-    );
-    final Widget titleText = Padding(
-      padding: const EdgeInsets.fromLTRB(6, 8, 6, 2),
-      // TODO-2490：两行仍放不下的长游戏名，桌面悬停显示完整标题；触屏走卡片
-      // 长按菜单（标题不限行）看全名。
-      child: ShelfTitleOverflowTooltip(
-        title: widget.title,
-        style: titleStyle,
-        maxLines: 2,
-        child: Text(
-          widget.title,
-          // BUG-1184：galgame 名普遍 20 字以上，窄屏卡宽只有约 136px，单行只看得到
-          // 开头六七个字。封面在 [Flexible] 里，标题变高只是等量压缩封面、不会溢出。
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          textAlign: TextAlign.center,
-          style: titleStyle,
+  Widget _buildCard(BuildContext context, BorderRadius radius) {
+    final List<Widget>? behind = stackedCovers;
+    final bool stacked = behind != null && behind.isNotEmpty;
+    final Widget coverBox = AspectRatio(
+      aspectRatio: kShelfGameCaseAspectRatio,
+      child: ShelfCoverSelection(
+        selectionMode: multiSelected,
+        selected: selected || multiSelected,
+        child: ShelfCoverFrame(
+          // 材质下用成员封面排扇形；墨水屏（无材质）退回共享叠层，叠层只需要
+          // 一张「后面那本」的图。
+          stackedCovers: stacked ? behind.take(3).toList() : null,
+          stackedBehind: stacked ? behind.first : null,
+          child: cover,
         ),
       ),
     );
 
-    final Widget card = Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        Flexible(child: cover),
-        titleText,
-      ],
+    final Widget card = shelfCoverCard(
+      focusId: focusId,
+      borderRadius: radius,
+      onTap: onTap,
+      onLongPress: onLongPress,
+      onSecondaryTap: onSecondaryTap,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Flexible(child: coverBox),
+          // BUG-1184：文字块随文字缩放变高（[ShelfCardMeta.heightFor]），与网格
+          // 行高同一个公式；封面在 [Flexible] 里，放不下时等量压缩封面而不是裁字。
+          SizedBox(
+            height: ShelfCardMeta.heightFor(context),
+            child: ShelfCardMeta(
+              title: title,
+              subtitle: subtitle,
+              leadingIcon: subtitleIcon,
+              tone: subtitleTone,
+              progress: progress,
+              completed: completed,
+            ),
+          ),
+        ],
+      ),
     );
 
-    // 缩放由外层 [FushiHoverLift] 负责；这里只留光标与手势。阴影仍随 hovering
-    // 在 [_buildCover] 里插值（那是卡片自己的视觉，壳不该知道）。
-    final Widget interactive = MouseRegion(
-      cursor:
-          widget.onTap == null ? MouseCursor.defer : SystemMouseCursors.click,
-      child: ContextMenuTrigger(
-        onInvoke: contextMenuInvoker(widget.onSecondaryTap),
-        behavior: HitTestBehavior.opaque,
-        child: GestureDetector(
-          onTap: widget.onTap,
-          onLongPress: widget.onLongPress,
-          behavior: HitTestBehavior.opaque,
+    // 手柄重设计 P4：长按 A = 鼠标长按 / 右键同一入口（onLongPress，游戏卡上是上下文
+    // 菜单）。[GamepadLongPressActions] 对 null onLongPress 透明（intent 继续上溯）。
+    return GamepadLongPressActions(
+      onLongPress: onLongPress,
+      child: Semantics(
+        label: semanticLabel ?? title,
+        button: onTap != null,
+        selected: selected,
+        child: MouseRegion(
+          cursor: onTap == null ? MouseCursor.defer : SystemMouseCursors.click,
           child: card,
         ),
       ),
     );
-
-    final Widget semantic = Semantics(
-      label: widget.semanticLabel ?? widget.title,
-      button: widget.onTap != null,
-      selected: widget.selected,
-      child: interactive,
-    );
-
-    // 焦点注册：与 FushiCard 同款——有 onTap 且存在焦点根时，注册焦点站点并把
-    // ActivateIntent（Enter / 手柄 A）接到 onTap。无焦点根（纯 widget-test）直接返回。
-    if (widget.onTap == null ||
-        FushiFocusRoot.maybeControllerOf(context) == null) {
-      return semantic;
-    }
-    // 手柄重设计 P4：长按 A = 鼠标长按/右键同一入口（onLongPress，游戏卡上是
-    // 上下文菜单）。[GamepadLongPressActions] 对 null onLongPress 透明。
-    return GamepadLongPressActions(
-      onLongPress: widget.onLongPress,
-      child: Actions(
-        actions: <Type, Action<Intent>>{
-          ActivateIntent: CallbackAction<ActivateIntent>(
-            onInvoke: (_) {
-              widget.onTap?.call();
-              return null;
-            },
-          ),
-        },
-        child: FushiFocusTarget(
-          id: widget.focusId ?? _fallbackFocusId,
-          child: semantic,
-        ),
-      ),
-    );
   }
+}
 
-  late final FushiFocusId _fallbackFocusId =
-      FushiFocusId('galgame-poster-${identityHashCode(this)}');
-
-  Widget _buildCover(BuildContext context, ColorScheme colors, bool hovering) {
-    const BorderRadius radius = FushiBorderRadius.poster;
-    final bool elevated = hovering || widget.selected;
-
-    return AspectRatio(
-      aspectRatio: 3 / 4,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 120),
-        decoration: BoxDecoration(
-          borderRadius: radius,
-          border: widget.selected
-              ? Border.all(color: colors.primary, width: 2)
-              : null,
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-              color: colors.shadow.withValues(alpha: elevated ? 0.28 : 0.12),
-              blurRadius: elevated ? 16 : 6,
-              offset: Offset(0, elevated ? 8 : 3),
-            ),
-          ],
-        ),
-        child: ClipRRect(
-          borderRadius: radius,
-          child: Stack(
-            fit: StackFit.expand,
-            children: <Widget>[
-              widget.cover,
-              if (widget.overlayText != null && widget.overlayText!.isNotEmpty)
-                _buildSortOverlay(context),
-              if (widget.multiSelected) _buildSelectBadge(colors),
-              if (widget.trailing != null)
-                Positioned(top: 4, right: 4, child: widget.trailing!),
-            ],
-          ),
-        ),
-      ),
-    );
+/// 游戏封面圆角（游戏海报卡 / 「继续游戏」横版卡 / 游戏库列表行缩略图共用）。
+///
+/// M3E：卡片档 20（[FushiM3eShape.cardRadius]）——游戏包装图是整块 key art，
+/// 比书封 / 视频海报（12）大一档圆角读作「卡」而不是「图」。Apple 设计系统与
+/// 墨水屏沿用共享封面规则（[shelfCoverRadius]：Apple 10 / 墨水屏 12）。
+BorderRadius galgameCoverRadius(BuildContext context) {
+  if (isEinkTheme(context) || isGlassDesign(context)) {
+    final bool apple = isGlassDesign(context) && !isEinkTheme(context);
+    return BorderRadius.all(Radius.circular(apple ? 10 : 12));
   }
-
-  /// 封面底部的排序信息渐变浮层：白字、单行、左对齐，底部深色渐变蒙版托底。
-  ///
-  /// 设计承 ReinaManager（AGPL-3.0，`references/ReinaManager`）卡片浮层的**风格**
-  /// （透明→深色三段渐变托底白字），但渐变透明度、stop 位置与内边距均为本仓自调
-  /// 数值，并非照搬其实现参数。
-  Widget _buildSortOverlay(BuildContext context) {
-    return Positioned(
-      left: 0,
-      right: 0,
-      bottom: 0,
-      child: IgnorePointer(
-        child: Container(
-          padding: const EdgeInsets.fromLTRB(10, 22, 10, 6),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: <Color>[
-                Color(0x00000000),
-                Color(0x520F1720),
-                Color(0xD40F1720),
-              ],
-              stops: <double>[0.0, 0.55, 1.0],
-            ),
-          ),
-          child: Text(
-            widget.overlayText!,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.left,
-            style: Theme.of(context).textTheme.labelMedium?.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-              shadows: const <Shadow>[
-                Shadow(color: Color(0x99000000), blurRadius: 2),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  /// 左上角方形多选勾标（20×20，主色底 + 勾）。
-  Widget _buildSelectBadge(ColorScheme colors) {
-    return Positioned(
-      top: 6,
-      left: 6,
-      child: Container(
-        width: 20,
-        height: 20,
-        decoration: BoxDecoration(
-          color: colors.primary,
-          borderRadius: FushiBorderRadius.chip,
-        ),
-        child: Icon(Icons.check, size: 14, color: colors.onPrimary),
-      ),
-    );
-  }
+  return FushiM3eShape.cardRadius;
 }

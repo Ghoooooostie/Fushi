@@ -1,6 +1,6 @@
 package app.fushi.reader;
 
-import android.app.Activity;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,7 +9,6 @@ import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.os.Looper;
-import android.speech.tts.TextToSpeech;
 
 import androidx.annotation.NonNull;
 
@@ -20,13 +19,11 @@ import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import app.fushi.reader.constants.ChannelNames;
 import io.flutter.embedding.engine.FlutterEngine;
@@ -36,9 +33,15 @@ import io.flutter.plugin.common.MethodChannel;
 public class TtsChannelHandler {
     private static final String CHANNEL = ChannelNames.TTS;
 
-    private final Activity activity;
-    private TextToSpeech tts;
-    private boolean ttsReady = false;
+    // BUG-3740：不再要求 Activity。本 handler 既挂在主 Activity 的引擎上，也挂在
+    // `:popup` 进程的 app 外查词引擎上（[FloatingDictPluginRegistrant]，那里只有
+    // applicationContext）。它对 Context 的用法只有 TextToSpeech 与 getCacheDir，
+    // 主线程回帖改走 [mainHandler]。
+    private final Context context;
+    private final Handler mainHandler = new Handler(Looper.getMainLooper());
+    // 系统语音（TextToSpeech）：引擎 / 声音选择、按引擎切换实例、请求排队都在
+    // [SystemTtsController]。实例懒建——`:popup` 进程也挂着本 handler，多数时候用不到。
+    private final SystemTtsController systemTts;
     // 复用单个 MediaPlayer 实例（reset() 重置而非 new）以省去每次 new 的分配 +
     // 状态机重建开销（TODO-744）。所有 play/stop 入口都跑在 method-channel 的
     // 主线程上，天然串行，无需额外锁。
@@ -46,6 +49,12 @@ public class TtsChannelHandler {
     // 每次 play/stop 自增；prepareAsync/completion/error 回调对比提交时的世代，
     // 让被后续播放/停止取代的旧回调直接 bail，不误动已复用的 player。
     private int playGeneration = 0;
+    // 当前这一次 playUrl/playFile 还没答复的 result。答复的语义是「真的开始播了」：
+    // 远端源 prepareAsync 要等 onPrepared 里 start 成功才回 true，onError / 被下一次
+    // 播放或 stop 取代时回 false（BUG-3311 审查：以前 prepareAsync 一返回就回 true，
+    // 404 / 断网 / 解码不支持全被当成成功，弹窗不回落也不提示）。只经
+    // [finishPendingPlay] 答复，保证每个 result 恰好答复一次。
+    private MethodChannel.Result pendingPlayResult;
     private final List<SQLiteDatabase> localAudioDbs = new ArrayList<>();
     private final List<String> localAudioDbPaths = new ArrayList<>();
     // 与 localAudioDbs 同 index 对齐：每库启用子来源的优先级序（首=最高）。
@@ -56,23 +65,24 @@ public class TtsChannelHandler {
     private final ExecutorService dbSetupExecutor = Executors.newSingleThreadExecutor();
     private volatile Future<?> indexFuture;
 
-    public TtsChannelHandler(Activity activity) {
-        this.activity = activity;
-        tts = new TextToSpeech(activity, status -> {
-            if (status == TextToSpeech.SUCCESS) {
-                int langResult = tts.setLanguage(Locale.JAPAN);
-                ttsReady = (langResult != TextToSpeech.LANG_MISSING_DATA
-                        && langResult != TextToSpeech.LANG_NOT_SUPPORTED);
-            }
-        });
+    public TtsChannelHandler(Context context) {
+        this.context = context;
+        this.systemTts = new SystemTtsController(context);
     }
 
     public void register(@NonNull FlutterEngine engine) {
-        new MethodChannel(engine.getDartExecutor().getBinaryMessenger(), CHANNEL)
-            .setMethodCallHandler((call, result) -> {
+        MethodChannel channel =
+            new MethodChannel(engine.getDartExecutor().getBinaryMessenger(), CHANNEL);
+        channel.setMethodCallHandler((call, result) -> {
                 switch (call.method) {
                     case "ttsToFile":
                         handleTtsToFile(call, result);
+                        break;
+                    case "getEngines":
+                        result.success(systemTts.listEngines());
+                        break;
+                    case "getVoices":
+                        systemTts.listVoices(call.argument("engine"), result);
                         break;
                     case "stop":
                         handleStop(result);
@@ -102,6 +112,11 @@ public class TtsChannelHandler {
                         result.notImplemented();
                 }
             });
+        // 本 handler 挂在 Activity 上、每次 onCreate 新建且本地音频库列表为空，而引擎
+        // 被 audio_service 缓存、比 Activity 活得久：Dart 只在 initialise() 推过一次
+        // 库配置。挂上后主动通知 Dart 重推（TtsChannel.onNativeHandlerAttached，
+        // BUG-3439）；Dart 还没装监听时消息由 ChannelBuffers 暂存。
+        channel.invokeMethod("nativeHandlerAttached", null);
     }
 
     public void destroy() {
@@ -115,69 +130,41 @@ public class TtsChannelHandler {
         ioExecutor.shutdownNow();
         // 让在途回调失效后再释放唯一实例（最终拆除，不再复用）。
         playGeneration++;
+        finishPendingPlay(false);
         if (mediaPlayer != null) {
             mediaPlayer.release();
             mediaPlayer = null;
         }
-        if (tts != null) {
-            tts.shutdown();
-            tts = null;
-        }
+        systemTts.destroy();
     }
 
+    /**
+     * 合成到文件（实现见 [SystemTtsController#synthesize]）。engine 为空 = 系统默认引擎；
+     * voice 为空 = 按 languageTag 挑（null = 引擎默认语言）。
+     */
     private void handleTtsToFile(MethodCall call, MethodChannel.Result result) {
         String text = call.argument("text");
-        String locale = call.argument("locale");
         String outputPath = call.argument("outputPath");
-        if (text == null || text.isEmpty() || outputPath == null || !ttsReady) {
-            result.success(null);
+        if (text == null || text.isEmpty() || outputPath == null) {
+            result.error("INVALID_ARGUMENT", "text and outputPath are required", null);
             return;
         }
-        if (locale != null && !locale.isEmpty()) {
-            String[] parts = locale.split("-");
-            Locale loc = parts.length >= 2 ? new Locale(parts[0], parts[1]) : new Locale(parts[0]);
-            tts.setLanguage(loc);
-        }
-        // Guard against double-invocation: the listener callback runs on a TTS
-        // background thread, and synthesizeToFile may fail synchronously below.
-        // Without this guard, both paths could call result.success().
-        final AtomicBoolean resultSent = new AtomicBoolean(false);
-        final Handler mainHandler = new Handler(Looper.getMainLooper());
-        tts.setOnUtteranceProgressListener(new android.speech.tts.UtteranceProgressListener() {
-            @Override public void onStart(String utteranceId) {}
-            @Override public void onDone(String utteranceId) {
-                tts.setOnUtteranceProgressListener(null);
-                if (resultSent.compareAndSet(false, true)) {
-                    mainHandler.post(() -> result.success(outputPath));
-                }
-            }
-            @Override public void onError(String utteranceId) {
-                tts.setOnUtteranceProgressListener(null);
-                if (resultSent.compareAndSet(false, true)) {
-                    mainHandler.post(() -> result.success(null));
-                }
-            }
-        });
-        File outFile = new File(outputPath);
-        int r = tts.synthesizeToFile(text, null, outFile, "hibiki_tts_file");
-        if (r != TextToSpeech.SUCCESS) {
-            tts.setOnUtteranceProgressListener(null);
-            if (resultSent.compareAndSet(false, true)) {
-                result.success(null);
-            }
-        }
+        systemTts.synthesize(text, call.argument("languageTag"), call.argument("engine"),
+                call.argument("voice"), outputPath, result);
     }
 
     private void handleStop(MethodChannel.Result result) {
-        if (ttsReady) tts.stop();
+        systemTts.stop();
         // 让任何在途的 prepareAsync/completion 回调失效，再 reset() 回 Idle 复用，
         // 不 release（实例留到 destroy 才释放）。
         playGeneration++;
+        // 还在 prepare 的那一次被 stop 取代：它从未出声，调用方拿 false。
+        finishPendingPlay(false);
         if (mediaPlayer != null) {
             try {
                 mediaPlayer.reset();
             } catch (IllegalStateException e) {
-                android.util.Log.w("hibiki-audio", "stop reset failed", e);
+                android.util.Log.w("fushi-audio", "stop reset failed", e);
             }
         }
         result.success(true);
@@ -197,6 +184,8 @@ public class TtsChannelHandler {
     /// reset→setDataSource→prepare(Async)→start。每次自增 playGeneration，回调
     /// 比对世代后才动 player，使被后续播放/停止取代的旧回调直接 bail（TODO-744）。
     /// [async] = true 用 prepareAsync（远程 URL），false 用同步 prepare（本地文件）。
+    /// [result] 答复「是否真的开始播放」：async 时推迟到 onPrepared 里 start 成功
+    /// （true）或 onError / 被取代（false），见 [pendingPlayResult]。
     private void startPlayback(String dataSource, float volume, boolean async,
                                String tag, MethodChannel.Result result) {
         if (dataSource == null || dataSource.isEmpty()) {
@@ -204,6 +193,9 @@ public class TtsChannelHandler {
             return;
         }
         final int generation = ++playGeneration;
+        // 上一次还在 prepare 就被本次取代：它从未出声，先给它答 false。
+        finishPendingPlay(false);
+        pendingPlayResult = result;
         try {
             MediaPlayer mp = ensureMediaPlayer();
             // Idle 状态（new / reset 后）：可安全设置 attributes / dataSource。
@@ -217,11 +209,15 @@ public class TtsChannelHandler {
             mp.setVolume(volume, volume);
             mp.setOnPreparedListener(p -> {
                 // 被取代则不要 start（player 可能已被下一次播放重置）。
+                // 被取代者的 result 已在取代时答过 false。
                 if (generation != playGeneration) return;
                 try {
                     p.start();
+                    finishPendingPlay(true);
                 } catch (IllegalStateException e) {
-                    android.util.Log.w("hibiki-audio", tag + " start failed", e);
+                    android.util.Log.w("fushi-audio", tag + " start failed", e);
+                    resetMediaPlayerQuietly();
+                    finishPendingPlay(false);
                 }
             });
             // 播完不 release，reset() 回 Idle 留待下次复用（仅当世代未变）。
@@ -232,24 +228,39 @@ public class TtsChannelHandler {
             mp.setOnErrorListener((p, what, extra) -> {
                 // 出错后 player 进入 Error 态，必须 reset() 才能再次复用。
                 if (generation == playGeneration) {
+                    android.util.Log.w("fushi-audio",
+                        tag + " error what=" + what + " extra=" + extra);
                     resetMediaPlayerQuietly();
+                    // prepare 阶段出错（404 / 断网 / 不支持的编码）= 从未开播：答 false，
+                    // 弹窗据此回落 <audio> 并在仍失败时提示。已开播后的出错 result
+                    // 早已答过 true，这里是 no-op。
+                    finishPendingPlay(false);
                 }
                 return true;
             });
             if (async) {
+                // 答复推迟到 onPrepared / onError。
                 mp.prepareAsync();
             } else {
                 mp.prepare();
                 // 同步 prepare 返回即 Prepared，回调不会触发，这里直接 start。
-                if (generation == playGeneration) mp.start();
+                mp.start();
+                finishPendingPlay(true);
             }
-            result.success(true);
         } catch (Exception e) {
-            android.util.Log.w("hibiki-audio", tag + " failed", e);
+            android.util.Log.w("fushi-audio", tag + " failed", e);
             // 失败后把 player 拉回干净的 Idle 态，避免污染下次复用。
             resetMediaPlayerQuietly();
-            result.success(false);
+            finishPendingPlay(false);
         }
+    }
+
+    /// 答复当前在途的那一次播放（若还没答复过）并清空，保证每个 result 恰好答复
+    /// 一次。只在主线程调用（method-channel 入口与 MediaPlayer 回调都在主 Looper）。
+    private void finishPendingPlay(boolean started) {
+        MethodChannel.Result pending = pendingPlayResult;
+        pendingPlayResult = null;
+        if (pending != null) pending.success(started);
     }
 
     /// 懒创建唯一的 MediaPlayer 实例（仅在主线程调用）。
@@ -266,7 +277,7 @@ public class TtsChannelHandler {
         try {
             mediaPlayer.reset();
         } catch (IllegalStateException e) {
-            android.util.Log.w("hibiki-audio", "reset failed", e);
+            android.util.Log.w("fushi-audio", "reset failed", e);
         }
     }
 
@@ -318,7 +329,7 @@ public class TtsChannelHandler {
                     try {
                         File dbFile = new File(dbPath);
                         if (!dbFile.exists()) {
-                            android.util.Log.w("hibiki-audio",
+                            android.util.Log.w("fushi-audio",
                                 "DB not found, skipping: " + dbPath);
                             continue;
                         }
@@ -334,7 +345,7 @@ public class TtsChannelHandler {
                                 SQLiteDatabase.OPEN_READONLY
                                     | SQLiteDatabase.NO_LOCALIZED_COLLATORS);
                         } catch (Exception readOnlyFailure) {
-                            android.util.Log.w("hibiki-audio",
+                            android.util.Log.w("fushi-audio",
                                 "read-only open failed, falling back to rw: " + dbPath,
                                 readOnlyFailure);
                             db = SQLiteDatabase.openDatabase(
@@ -346,7 +357,7 @@ public class TtsChannelHandler {
                         localAudioDbs.set(slot, db);
                         indexTargets.add(dbPath);
                     } catch (Exception e) {
-                        android.util.Log.e("hibiki-audio",
+                        android.util.Log.e("fushi-audio",
                             "Failed to open DB: " + dbPath, e);
                     }
                 }
@@ -356,7 +367,7 @@ public class TtsChannelHandler {
                         ensureQueryIndexes(path);
                     }
                 });
-                activity.runOnUiThread(() -> result.success(true));
+                mainHandler.post(() -> result.success(true));
             }
         });
     }
@@ -396,7 +407,7 @@ public class TtsChannelHandler {
             // 连只读都开不了：退回改前的行为——照旧尝试建全部索引。这条兜底只在
             // 「我们读都读不了」时才走，而那正是旧实现同样会去开 readWrite 的场景，
             // 故不会比改前更差。
-            android.util.Log.w("hibiki-audio", "index probe failed: " + dbPath, e);
+            android.util.Log.w("fushi-audio", "index probe failed: " + dbPath, e);
             missing.clear();
             for (String[] spec : QUERY_INDEX_SPECS) missing.add(spec);
         } finally {
@@ -422,11 +433,11 @@ public class TtsChannelHandler {
                         + " ON " + spec[1] + "(" + columns + ")");
                 } catch (Exception e) {
                     // 目标表不存在等：建不了不致命，不牵连另一条。
-                    android.util.Log.w("hibiki-audio", "Index creation skipped", e);
+                    android.util.Log.w("fushi-audio", "Index creation skipped", e);
                 }
             }
         } catch (Exception e) {
-            android.util.Log.w("hibiki-audio", "Index creation skipped: " + dbPath, e);
+            android.util.Log.w("fushi-audio", "Index creation skipped: " + dbPath, e);
         } finally {
             if (writable != null) {
                 try { writable.close(); } catch (Exception ignored) { }
@@ -494,8 +505,17 @@ public class TtsChannelHandler {
         String expression = call.argument("expression");
         String reading = call.argument("reading");
         Integer dbIndexArg = call.argument("dbIndex");
+        // 「选择音频源」菜单：只查 dbIndex 这一个库，回该库全部启用子来源命中的列表
+        // （按子来源优先级排序，首项即单条查询会回的那条），与 Dart 侧
+        // LocalAudioDb.queryMetaAll 同一语义。
+        boolean all = Boolean.TRUE.equals(call.argument("all"));
         if (localAudioDbs.isEmpty() || expression == null) {
-            result.success(null);
+            result.success(all ? new ArrayList<Object>() : null);
+            return;
+        }
+        if (all) {
+            handleQueryLocalAudioAll(expression, reading,
+                dbIndexArg != null ? dbIndexArg : 0, result);
             return;
         }
         ioExecutor.execute(() -> {
@@ -534,7 +554,7 @@ public class TtsChannelHandler {
                             return;
                         }
                     } catch (Exception e) {
-                        android.util.Log.w("hibiki-audio",
+                        android.util.Log.w("fushi-audio",
                             "queryLocalAudio failed on DB " + i, e);
                     } finally {
                         if (cursor != null) cursor.close();
@@ -543,6 +563,65 @@ public class TtsChannelHandler {
                 new Handler(Looper.getMainLooper()).post(() -> result.success(null));
             }
         });
+    }
+
+    private void handleQueryLocalAudioAll(
+            String expression, String reading, int dbIndex, MethodChannel.Result result) {
+        ioExecutor.execute(() -> {
+            List<Map<String, Object>> out = new ArrayList<>();
+            synchronized (dbLock) {
+                SQLiteDatabase db = (dbIndex >= 0 && dbIndex < localAudioDbs.size())
+                    ? localAudioDbs.get(dbIndex) : null;
+                if (db != null && db.isOpen()) {
+                    List<String> order = (dbIndex < localAudioDbOrders.size())
+                        ? localAudioDbOrders.get(dbIndex) : null;
+                    Cursor cursor = null;
+                    try {
+                        cursor = db.rawQuery(
+                            "SELECT file, source FROM entries WHERE expression = ? AND reading = ?",
+                            new String[]{expression, reading != null ? reading : ""});
+                        if (cursor == null || !cursor.moveToFirst()) {
+                            if (cursor != null) cursor.close();
+                            cursor = db.rawQuery(
+                                "SELECT file, source FROM entries WHERE expression = ?",
+                                new String[]{expression});
+                        }
+                        for (String[] row : sortByOrder(cursor, order)) {
+                            Map<String, Object> info = new HashMap<>();
+                            info.put("file", row[0]);
+                            info.put("source", row[1]);
+                            info.put("dbIndex", dbIndex);
+                            out.add(info);
+                        }
+                    } catch (Exception e) {
+                        android.util.Log.w("fushi-audio",
+                            "queryLocalAudio(all) failed on DB " + dbIndex, e);
+                    } finally {
+                        if (cursor != null) cursor.close();
+                    }
+                }
+            }
+            new Handler(Looper.getMainLooper()).post(() -> result.success(out));
+        });
+    }
+
+    /// 全部候选行按 [order] 稳定排序：禁用 / 未列入的 source 跳过；order 为空保持库内顺序。
+    /// 首项与 [pickByOrder] 的结果一致。
+    private static List<String[]> sortByOrder(Cursor cursor, List<String> order) {
+        List<String[]> rows = new ArrayList<>();
+        if (cursor == null || !cursor.moveToFirst()) return rows;
+        do {
+            String file = cursor.getString(0);
+            String source = cursor.getString(1);
+            if (file == null || source == null) continue;
+            if (order != null && !order.isEmpty() && order.indexOf(source) < 0) continue;
+            rows.add(new String[]{file, source});
+        } while (cursor.moveToNext());
+        if (order != null && !order.isEmpty()) {
+            // List.sort 是稳定排序（TimSort）：同级保持库内顺序。
+            rows.sort((a, b) -> Integer.compare(order.indexOf(a[1]), order.indexOf(b[1])));
+        }
+        return rows;
     }
 
     /// 从候选行里按 [order] 选 source 优先级最高（rank 最小且 >=0）的一行。
@@ -593,7 +672,7 @@ public class TtsChannelHandler {
                     }
                 }
             } catch (Exception e) {
-                android.util.Log.w("hibiki-audio",
+                android.util.Log.w("fushi-audio",
                     "listLocalAudioSources failed: " + path, e);
             } finally {
                 if (db != null && db.isOpen()) db.close();
@@ -612,7 +691,7 @@ public class TtsChannelHandler {
             return;
         }
         final int dbIndex = (dbIndexArg != null) ? dbIndexArg : 0;
-        final File cacheDir = activity.getCacheDir();
+        final File cacheDir = context.getCacheDir();
         ioExecutor.execute(() -> {
             synchronized (dbLock) {
                 if (dbIndex < 0 || dbIndex >= localAudioDbs.size()) {
@@ -649,7 +728,7 @@ public class TtsChannelHandler {
                         new Handler(Looper.getMainLooper()).post(() -> result.success(null));
                     }
                 } catch (Exception e) {
-                    android.util.Log.w("hibiki-audio", "extractLocalAudio failed", e);
+                    android.util.Log.w("fushi-audio", "extractLocalAudio failed", e);
                     new Handler(Looper.getMainLooper()).post(() -> result.success(null));
                 }
             }
@@ -702,7 +781,7 @@ public class TtsChannelHandler {
                     retriever.release();
                 }
             } catch (Exception e) {
-                android.util.Log.w("hibiki-audio", "extractEmbeddedCover failed", e);
+                android.util.Log.w("fushi-audio", "extractEmbeddedCover failed", e);
                 new Handler(Looper.getMainLooper()).post(() -> result.success(null));
             }
         });

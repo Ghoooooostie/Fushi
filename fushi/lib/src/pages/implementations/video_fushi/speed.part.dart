@@ -72,6 +72,15 @@ extension _VideoSpeed on _VideoFushiPageState {
 
   void _handleVideoLongPressStart(LongPressStartDetails details) {
     if (_longPressPreviousSpeed != null) return;
+    // 长按落在控件上（控制条空隙 / 只认单击的按钮 / 浮层面板）不是长按画面：外层长按
+    // 手势是所有控件的祖先，不拦就会在按住按钮时顺手临时加速。判据与双击 / 滚轮同一个
+    // （[videoPointerHitsChrome]，真实 hit-test）。start 早退后 move / end 都是空操作。
+    if (videoPointerHitsChrome(
+      globalPosition: details.globalPosition,
+      viewId: View.of(context).viewId,
+    )) {
+      return;
+    }
     _longPressPreviousSpeed = _playbackSpeed;
     final double speed = _asbConfig.longPressSpeed;
     // 长按拖动以固定加速速为基准（TODO-338）：拖动位移在此基础上连续加减。
@@ -81,8 +90,10 @@ extension _VideoSpeed on _VideoFushiPageState {
     unawaited(_setSpeed(speed, persist: false, rebuild: false));
     // TODO-1154：在长按落点上方弹出跟随指针的倍速徽章（B 站/YouTube 观感），
     // 取代钉死左上角的 _showOsd。localPosition 与 Stack 同坐标系，可直接用作 Positioned 锚点。
-    _longPressSpeedBadge.value =
-        (position: details.localPosition, speed: speed);
+    _longPressSpeedBadge.value = (
+      position: details.localPosition,
+      speed: speed,
+    );
   }
 
   /// 长按后横向拖动连续调速（TODO-338）：向右拖加速、向左减速，以长按固定加速速
@@ -98,15 +109,22 @@ extension _VideoSpeed on _VideoFushiPageState {
       details.localOffsetFromOrigin.dx,
     );
     // 徽章始终跟随指针移动（即使速度未越过 0.1x 步进也更新位置），保证「跟手」。
-    _longPressSpeedBadge.value =
-        (position: details.localPosition, speed: snapped);
+    _longPressSpeedBadge.value = (
+      position: details.localPosition,
+      speed: snapped,
+    );
     if ((snapped - _playbackSpeed).abs() < 0.001) return;
     // BUG-965：拖动热路径每 0.1x 步进都调这里；rebuild: false 省掉全页 setState，
     // 让徽章（独立 ValueListenableBuilder）跟手渲染倍速，拖动才顺滑。
     unawaited(_setSpeed(snapped, persist: false, rebuild: false));
   }
 
-  void _handleVideoLongPressEnd(LongPressEndDetails details) {
+  /// 长按会话收尾（[VideoLongPressSessionDetector] 保证每个已开始的会话恰好调一次：
+  /// 正常松手、指针被系统取消、识别器重置、手势层卸载都汇到这里，3sDHeyPQ-I）。
+  void _handleVideoLongPressEnd() {
+    // 手势层随页面一起卸载时收尾被推迟到微任务，此刻页面已 dispose（徽章 notifier
+    // 也已释放），没有可恢复的东西。
+    if (!mounted) return;
     // 键盘/手柄的按住临时倍速正持有恢复位（手势 start 在 previous 非空时早退、
     // 从未接管），这次长按松手只清徽章、不动倍速——恢复权归 [_releaseHoldSpeed]。
     if (_holdSpeedActive) {
@@ -149,8 +167,9 @@ extension _VideoSpeed on _VideoFushiPageState {
     _showOsd('${previous}x', icon: Icons.speed);
   }
 
-  /// 手柄通道的翻转语义（手柄没有可靠的松开事件管线）：按一下进入临时倍速、
-  /// 再按恢复。与键盘按住共用同一状态，二者混用也不会叠加。
+  /// 没有松开沿的入口（鼠标侧键绑定、屏幕自定义按钮）的翻转语义：按一下进入
+  /// 临时倍速、再按恢复。键盘与手柄有松开沿，走按住语义（BUG-3330）。三者共用
+  /// 同一状态，混用也不会叠加。
   void _toggleHoldSpeed() {
     if (_holdSpeedActive) {
       _releaseHoldSpeed();

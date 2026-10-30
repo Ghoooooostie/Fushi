@@ -3,7 +3,8 @@ import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:crop_image/crop_image.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:fushi/pages.dart';
@@ -16,6 +17,7 @@ class CropImageDialogPage extends BasePage {
     required this.imageFile,
     required this.onCrop,
     this.aspectRatio,
+    this.maxDimension,
     super.key,
   });
 
@@ -31,6 +33,12 @@ class CropImageDialogPage extends BasePage {
   /// 用户以为自己裁歪了。
   final double? aspectRatio;
 
+  /// 源图解码与裁剪输出的长边上限（像素）；null = 原分辨率。
+  ///
+  /// 应用图标最终只用到几百像素，按原分辨率解码 + 全尺寸裁剪 + PNG 编码 +
+  /// 整张交给原生，在低内存手机上整段峰值过高（BUG-3601）。
+  final int? maxDimension;
+
   @override
   BasePageState createState() => _CropImageDialogPageState();
 }
@@ -38,7 +46,10 @@ class CropImageDialogPage extends BasePage {
 class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
   late final CropController _controller =
       CropController(aspectRatio: widget.aspectRatio);
-  late final ImageProvider _provider = FileImage(widget.imageFile);
+  late final ImageProvider _provider = cropSourceImageProvider(
+    widget.imageFile,
+    maxDimension: widget.maxDimension,
+  );
 
   /// BUG-2496：[CropImage] 只拿传入 `Image` 的 provider 自己 `resolve`，从不把那个
   /// `Image` 挂进树，所以 `errorBuilder` 在这里是死代码；它自己挂的监听器又没有
@@ -85,7 +96,7 @@ class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
       scrollable: false,
       child: FushiModalSheetFrame(
         title: t.creator_enhancement_crop_image,
-        leadingIcon: Icons.crop_outlined,
+        leadingIcon: FushiIcons.image,
         bodyPadding: EdgeInsets.fromLTRB(
           tokens.spacing.card,
           0,
@@ -119,26 +130,40 @@ class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
 
   Widget buildContent() {
     if (_decodeError != null) {
+      // M3E 错误态：errorContainer 色块图标 + 说明（坏文件 / 非图片字节）。
       return Center(
-        child: Icon(
-          Icons.broken_image_outlined,
-          size: 64,
-          color: Theme.of(context).colorScheme.onSurfaceVariant,
+        child: FushiPlaceholderMessage(
+          icon: FushiIcons.brokenImage,
+          message: t.creator_crop_image_unreadable,
+          tone: FushiPlaceholderTone.error,
         ),
       );
     }
-    return Center(
-      child: CropImage(
-          minimumImageSize: 25,
-          gridColor: Theme.of(context).colorScheme.onSurfaceVariant,
-          controller: _controller,
-          image: Image(image: _provider)),
+    // 裁剪画布放进 M3E 卡片圆角（20）的中性色块里，与对话框面板分出层级；
+    // 网格线用主色，拖动把手更醒目。
+    return ClipRRect(
+      borderRadius: FushiM3eShape.cardRadius,
+      child: ColoredBox(
+        color: fushiNeutralBlockColor(context),
+        child: Padding(
+          padding: EdgeInsets.all(FushiDesignTokens.of(context).spacing.gap),
+          child: Center(
+            child: CropImage(
+              minimumImageSize: 25,
+              gridColor: Theme.of(context).colorScheme.primary,
+              controller: _controller,
+              image: Image(image: _provider),
+            ),
+          ),
+        ),
+      ),
     );
   }
 
   Widget buildCropButton() {
     return adaptiveDialogAction(
       context: context,
+      isDefaultAction: true,
       onPressed: _decodeError == null ? executeCrop : null,
       child: Text(t.dialog_crop),
     );
@@ -164,7 +189,9 @@ class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
 
     String timestamp = DateFormat('yyyyMMddTkkmmss').format(DateTime.now());
     Directory imageDir = Directory('$cropImagePath/$timestamp');
-    ui.Image croppedImage = await _controller.croppedBitmap();
+    ui.Image croppedImage = await _controller.croppedBitmap(
+      maxSize: widget.maxDimension?.toDouble(),
+    );
     ByteData? data =
         await croppedImage.toByteData(format: ui.ImageByteFormat.png);
     Uint8List bytes = data!.buffer.asUint8List();
@@ -179,6 +206,20 @@ class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
   }
 }
 
+/// 裁剪对话框的源图：给了 [maxDimension] 就按长边上限等比解码（不放大），
+/// 否则原图。
+ImageProvider<Object> cropSourceImageProvider(File file, {int? maxDimension}) {
+  final FileImage source = FileImage(file);
+  if (maxDimension == null) return source;
+  return ResizeImage(
+    source,
+    width: maxDimension,
+    height: maxDimension,
+    policy: ResizeImagePolicy.fit,
+    allowUpscaling: false,
+  );
+}
+
 /// 弹出裁剪对话框，返回裁好的文件；用户取消返回 null。
 ///
 /// [CropImageDialogPage] 本身是回调式的（`onCrop` + 自己 pop），三个调用点各写一遍
@@ -187,6 +228,7 @@ Future<File?> showCropImageDialog(
   BuildContext context,
   File source, {
   double? aspectRatio,
+  int? maxDimension,
 }) async {
   File? cropped;
   await showAppDialog<void>(
@@ -194,6 +236,7 @@ Future<File?> showCropImageDialog(
     builder: (_) => CropImageDialogPage(
       imageFile: source,
       aspectRatio: aspectRatio,
+      maxDimension: maxDimension,
       onCrop: (File file) => cropped = file,
     ),
   );

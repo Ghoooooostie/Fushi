@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 import 'dart:ui' show PointerDeviceKind;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/src/lookup/gal_lookup_calibration_capture.dart';
@@ -13,6 +13,7 @@ import 'package:fushi/src/mining/window_capture_channel.dart';
 import 'package:fushi/src/pages/implementations/gal_lookup_samples_dialog.dart';
 import 'package:fushi/src/pages/implementations/gal_lookup_calibration_canvas.dart';
 import 'package:image/image.dart' as img;
+import '../helpers/glass_unwrap.dart';
 
 const String _sha =
     '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
@@ -134,12 +135,7 @@ Future<_Result> _open(
   required _MemoryStore store,
   Future<GalLookupCalibrationCapture> Function() capture = _captureAsync,
   GalCalibrationPreviewBuilder previewBuilder = _preview,
-  Future<GalCalibrationImageFit> Function(
-        GalLookupCalibrationDraft draft, {
-        GalCalibrationPreviewBuilder build,
-      })
-      imageFitter =
-      fitGalCalibrationImages,
+  GalCalibrationImageFitter imageFitter = fitGalCalibrationImages,
   Size size = const Size(1280, 900),
   bool manual = true,
   GalLookupCalibrationSlotV1? slot,
@@ -586,6 +582,7 @@ void main() {
           (
             GalLookupCalibrationDraft fitting, {
             required GalCalibrationPreviewBuilder build,
+            bool Function()? isStale,
           }) async {
             expect(fitting.samples.single.capture.sourceText, '「A\r\nB\nC」');
             expect(fitting.layout.quotedTextOnly, isTrue);
@@ -697,11 +694,9 @@ void main() {
     await tester.tap(manualLayout);
     await tester.pumpAndSettle();
 
-    final Slider continuation = tester.widget<Slider>(
-      find.byKey(
+    final Slider continuation = tester.widget<Slider>(glassUnwrap<Slider>(find.byKey(
         const ValueKey<String>('calibration-continuation-indent-slider'),
-      ),
-    );
+      )),);
     expect(continuation.min, -1);
     expect(continuation.max, 8);
     expect(
@@ -752,9 +747,7 @@ void main() {
     await tester.tap(manualLayout);
     await tester.pumpAndSettle();
 
-    Slider slider() => tester.widget<Slider>(
-      find.byKey(const ValueKey<String>('calibration-grid-advance-slider')),
-    );
+    Slider slider() => tester.widget<Slider>(glassUnwrap<Slider>(find.byKey(const ValueKey<String>('calibration-grid-advance-slider'))),);
     // A narrow ±15 % span around the starting width with 0.1 % steps.
     expect(slider().value, closeTo(0.8, 1e-8));
     expect(slider().min, closeTo(0.65, 1e-8));
@@ -810,9 +803,7 @@ void main() {
       await tester.ensureVisible(manualLayout);
       await tester.tap(manualLayout);
       await tester.pumpAndSettle();
-      Slider slider() => tester.widget<Slider>(
-        find.byKey(const ValueKey<String>('calibration-grid-advance-slider')),
-      );
+      Slider slider() => tester.widget<Slider>(glassUnwrap<Slider>(find.byKey(const ValueKey<String>('calibration-grid-advance-slider'))),);
       // 0.05 free width / (20 × 600/800) = 0.00333 advance → ratio ≈ 0.8667.
       expect(slider().max, closeTo(0.8 + 0.05 / 15 / 0.05, 1e-8));
       for (final double overshoot in <double>[5.0, 0.95, 0.9]) {
@@ -1216,7 +1207,7 @@ void main() {
         tester,
         store: store,
         manual: false,
-        imageFitter: (draft, {build = _preview}) async {
+        imageFitter: (draft, {build = _preview, isStale}) async {
           expect(draft.samples.single.validation, isFalse);
           expect(draft.samples.single.anchors, isEmpty);
           return GalCalibrationImageFit(
@@ -1286,7 +1277,7 @@ void main() {
         tester,
         store: store,
         manual: false,
-        imageFitter: (draft, {build = _preview}) async {
+        imageFitter: (draft, {build = _preview, isStale}) async {
           fitSampleCounts.add(draft.samples.length);
           return GalCalibrationImageFit(
             draft: GalLookupCalibrationDraft(
@@ -1342,7 +1333,7 @@ void main() {
         tester,
         store: store,
         manual: false,
-        imageFitter: (draft, {build = _preview}) async {
+        imageFitter: (draft, {build = _preview, isStale}) async {
           expect(draft.samples, hasLength(1));
           expect(draft.samples.single.capture.referenceClient, selectedClient);
           expect(draft.samples.single.validation, isFalse);
@@ -1407,7 +1398,7 @@ void main() {
         tester,
         store: store,
         manual: false,
-        imageFitter: (draft, {build = _preview}) async =>
+        imageFitter: (draft, {build = _preview, isStale}) async =>
             const GalCalibrationImageFit(
               reason: 'inconsistent_samples',
               sampleIndex: 0,
@@ -1470,7 +1461,7 @@ void main() {
             }) async => client == selectedClient
             ? _preview(text: text, client: client, rect: rect, layout: layout)
             : const GalCalibrationPreview(boxes: [], reason: 'overflow'),
-        imageFitter: (draft, {build = _preview}) async =>
+        imageFitter: (draft, {build = _preview, isStale}) async =>
             GalCalibrationImageFit(
               draft: GalLookupCalibrationDraft(
                 rect: draft.rect,
@@ -1520,7 +1511,7 @@ void main() {
       tester,
       store: store,
       manual: false,
-      imageFitter: (draft, {build = _preview}) async =>
+      imageFitter: (draft, {build = _preview, isStale}) async =>
           const GalCalibrationImageFit(reason: 'multiline_required'),
     );
     await tester.tap(
@@ -1564,7 +1555,7 @@ void main() {
               previews++;
               return const GalCalibrationPreview(boxes: [], reason: 'overflow');
             },
-        imageFitter: (draft, {build = _preview}) async {
+        imageFitter: (draft, {build = _preview, isStale}) async {
           expect(draft.samples.map((s) => s.validation), [true, false, false]);
           return const GalCalibrationImageFit(
             reason: 'inconsistent_samples',

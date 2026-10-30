@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/media/online/online_work_detail.dart';
 
@@ -12,8 +12,12 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
+          // 与生产同形：头部是 M3E MediaDetailHero，作为 MediaDetailLayout 的
+          // header 通栏铺开、自带页边距（spacing.page）；外面再套一层 16 的列表
+          // 内边距是旧版（头部不自带边距）的宿主形状，会把窄屏可用宽度多吃掉
+          // 32，测的就不是真实版式了。
           body: ListView(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.zero,
             children: <Widget>[
               OnlineWorkHeader(
                 cover: const ColoredBox(
@@ -57,8 +61,11 @@ void main() {
     final Rect c = rectOf(tester, 'c');
     expect(a.top, greaterThanOrEqualTo(cover.bottom));
     expect(a.left, lessThan(cover.right), reason: '占满整宽，从左边起排');
-    expect(b.top, a.top, reason: '同一行横排');
-    expect(c.top, a.top, reason: '同一行横排');
+    // 紧凑 hero（MediaDetailActionBar._buildCompact）：主按钮放不下最小宽时独占
+    // 一行，次按钮在它下面同一行横排——仍然不是每个按钮各占一行的竖条。
+    expect(b.top, greaterThanOrEqualTo(a.top));
+    expect(c.top, b.top, reason: '次按钮同一行横排');
+    expect(c.left, greaterThan(b.right), reason: '次按钮同一行横排');
   });
 
   testWidgets('宽屏：主操作区仍在封面右侧', (WidgetTester tester) async {

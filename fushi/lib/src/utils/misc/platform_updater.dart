@@ -1,6 +1,9 @@
+import 'dart:ffi';
 import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
+import 'package:flutter/foundation.dart' show visibleForTesting;
+import 'package:fushi_compute/fushi_compute.dart' show ffcSha256File;
 
 import 'package:fushi/src/mining/galgame_helper_installer.dart'
     show kGalgameHelperInstallDirectoryName;
@@ -102,6 +105,32 @@ String? _assetVersionStamp(Object? raw) {
   return trimmed.isEmpty ? null : trimmed;
 }
 
+/// 本进程**亲手**按发布方公布的 SHA-256 校验通过的更新包（BUG-3567）。
+///
+/// 安装包落在用户可写的 updates 目录，旁边的 `.meta.json` 同样可写，都不能当「这个文件
+/// 已校验」的凭据；只有下载引擎在本进程里刚核过的结论可信。下载完成（或复用已完成的
+/// 下载）且资产带有公布的哈希时由下载层登记；安装层据此决定能否把安装器经 UAC 提权，
+/// 并把这个哈希交给 launcher 在锁住文件后复核。进程内状态：重启后清空，届时重新下载 /
+/// 复用会再走一遍校验并重新登记。
+abstract final class UpdateDownloadTrust {
+  static final Map<String, String> _verified = <String, String>{};
+
+  static String _key(String path) => File(path).absolute.path.toLowerCase();
+
+  /// 下载层：[file] 已按 [sha256Digest]（发布方公布的值）校验通过。
+  static void recordVerified(File file, String sha256Digest) {
+    final String digest = sha256Digest.trim().toLowerCase();
+    if (!RegExp(r'^[0-9a-f]{64}$').hasMatch(digest)) return;
+    _verified[_key(file.path)] = digest;
+  }
+
+  /// 安装层：[file] 在本进程里按公布哈希校验过的话返回那个哈希，否则 null。
+  static String? verifiedSha256For(File file) => _verified[_key(file.path)];
+
+  @visibleForTesting
+  static void debugReset() => _verified.clear();
+}
+
 /// 每平台的更新策略：选包（[selectAsset]）+ 安装（[apply]）。
 /// 共享的 GitHub 拉取/版本比较/下载浮层仍在 UpdateChecker。
 abstract class PlatformUpdater {
@@ -138,7 +167,7 @@ bool platformSupportsInAppInstall() =>
     Platform.isAndroid || Platform.isWindows || Platform.isMacOS;
 
 /// Flutter `--split-per-abi` 产出的 Android ABI 标签（CI 的 `app-<abi>-release.apk`
-/// 即据此重命名为 `hibiki-<version>-<abi>.apk`，见 `.github/workflows/release.yml`）。
+/// 即据此重命名为 `fushi-<version>-<abi>.apk`，见 `.github/workflows/release.yml`）。
 /// 作为「stable release 资产命名」单一真相源的一部分，供 [synthesizeStableAssetNames]
 /// 在没有 GitHub API 资产清单时（TODO-404：纯 GFW 下检查只能拿到 302 跳转里的 tag）
 /// 重建候选资产名。
@@ -170,7 +199,7 @@ List<String> synthesizeStableAssetNames(String version) {
     // 老用户升到桥后即可识别后续 fushi-* 资产。Android 无更新桥（跨包名不能
     // 就地更新，迁移链即通道），其 APK 行保持旧名直到老包停止发布。
     'fushi-$version-windows-setup.exe',
-    'fushi-$version-macos.zip',
+    'fushi-$version-macos-arm64.zip',
     for (final String abi in kAndroidReleaseAbis) 'fushi-$version-$abi.apk',
   ];
   return List<String>.unmodifiable(names);
@@ -195,7 +224,7 @@ const String kFushiAssetPrefix = 'fushi-';
 ///
 /// 改名过渡期两个产品从同一个 GitHub 仓库发版（桥包 `app.hibiki.reader` 的 `hibiki-*`
 /// 与本体的 `fushi-*`），历史 release 里还躺着更早的无前缀资产。而挑包判据只看平台后缀
-/// （`.apk` / `-windows-setup.exe` / `-macos.zip`），区分不出产品族——Android 上装到别族
+/// （`.apk` / `-windows-setup.exe` / `-macos-arm64.zip`），区分不出产品族——Android 上装到别族
 /// 就是跨包名跨签名，系统直接拒（`INSTALL_FAILED_UPDATE_INCOMPATIBLE`）或并存成第二个
 /// 空 app；桌面上则是把自己覆盖安装成已退场的老产品。
 ///
@@ -265,14 +294,23 @@ bool _windowsAssetMatchesChannel(String name, UpdateChannel channel) {
   };
 }
 
-/// macOS 更新产物由 CI `release-desktop.yml` 的 apple job 以
-/// `ditto -c -k --keepParent hibiki.app` 打成 `hibiki-<version>-macos.zip`。debug
+/// macOS 更新产物由 CI `release-desktop.yml` 的 macos job 以
+/// `ditto -c -k --keepParent fushi.app` 打成 `fushi-<version>-macos-arm64.zip`。debug
 /// 通道的版本串内嵌 `-debug.<seq>`，故 debug 包名恒含 `-debug.`（与 Windows 同规则）。
+///
+/// 2026-10 起 macOS 版只出 Apple Silicon（arm64），资产名从 `-macos.zip` 改成
+/// `-macos-arm64.zip`：已发出去的旧版本（universal，可能跑在 Intel Mac 上）的更新器
+/// 只认 `-macos.zip`，改名让它们**选不中** arm64-only 的包——否则 Intel Mac 上的旧版
+/// 会自动下载、替换成一个根本启动不了的 app。本版本只跑在 arm64 上，两种名字都认
+/// （旧名的包是 universal，在 arm64 上照常能跑）。
+bool _isMacosAssetName(String name) =>
+    name.endsWith('-macos-arm64.zip') || name.endsWith('-macos.zip');
+
 bool _isDebugMacosAsset(String name) =>
-    name.endsWith('-macos.zip') && name.contains('-debug.');
+    _isMacosAssetName(name) && name.contains('-debug.');
 
 bool _macosAssetMatchesChannel(String name, UpdateChannel channel) {
-  if (!name.endsWith('-macos.zip')) return false;
+  if (!_isMacosAssetName(name)) return false;
   return switch (channel) {
     UpdateChannel.debug => _isDebugMacosAsset(name),
     UpdateChannel.stable || UpdateChannel.beta => !_isDebugMacosAsset(name),
@@ -360,13 +398,14 @@ class WindowsUpdater extends PlatformUpdater {
       file.path,
       targetVersion: version,
       handoffMarkerFile: WindowsUpdateHandoff.markerFile(file.parent),
+      expectedSha256: UpdateDownloadTrust.verifiedSha256For(file),
     );
   }
 }
 
-/// macOS：去沙盒后的应用内自替换（Phase 3）。选 `-macos.zip` 包；apply 交给
+/// macOS：去沙盒后的应用内自替换（Phase 3）。选 `-macos-arm64.zip` 包；apply 交给
 /// [MacInstaller.runAndExit]——解压→写握手标记→分离脚本等本进程退出后替换
-/// `/Applications/hibiki.app` 并重启→`exit(0)`。替换失败由脚本回滚旧版本、下次
+/// `/Applications/fushi.app` 并重启→`exit(0)`。替换失败由脚本回滚旧版本、下次
 /// 启动经 [MacUpdateHandoff.reconcile] 提示，绝不留坏档。
 class MacUpdater extends PlatformUpdater {
   @override
@@ -465,14 +504,18 @@ class AndroidInstaller {
 /// - `/SUPPRESSMSGBOXES`：配合 `/VERYSILENT` 抑制 Inno 的错误/选择弹窗，避免
 ///   `DeleteFile failed code 5` 把用户留在 Select action。
 /// - `/NOCLOSEAPPLICATIONS` + `/NOFORCECLOSEAPPLICATIONS`：禁止 Inno /
-///   RestartManager 自动关闭或强制结束任何残留 Hibiki / libmpv 持有进程。
+///   RestartManager 自动关闭或强制结束任何残留 Fushi / libmpv 持有进程。
 /// - `/NORESTARTAPPLICATIONS`：不让 RestartManager 自动拉起被它管理的应用。
 /// - `/NORESTART`：禁止安装器重启**操作系统**（我们只想重启 app，不重启系统）。
-/// - `/DIR=`：应用内更新只写当前运行 `hibiki.exe` 所在目录，不追随注册表或历史路径。
+/// - `/DIR=`：应用内更新只写当前运行 `fushi.exe` 所在目录，不追随注册表或历史路径。
+/// - [kWindowsInstallerNoRelaunchSwitch]（仅 [suppressAppRelaunch]）：提权安装时
+///   `fushi.iss` 跳过 `[Run]` 自启——被 UAC 提权的安装器拉起的 app 会继承管理员令牌，
+///   改由仍是普通权限的 launcher 在安装结束后拉回 app。
 List<String> windowsInstallerArgs(
   String installerPath, {
   String? logPath,
   String? targetInstallDir,
+  bool suppressAppRelaunch = false,
 }) =>
     <String>[
       '/VERYSILENT',
@@ -485,7 +528,20 @@ List<String> windowsInstallerArgs(
       if (targetInstallDir != null && targetInstallDir.trim().isNotEmpty)
         '/DIR=$targetInstallDir',
       '/LOG=${logPath ?? windowsInstallerLogPath(installerPath)}',
+      if (suppressAppRelaunch) kWindowsInstallerNoRelaunchSwitch,
     ];
+
+/// `fushi.iss` 的 `ShouldLaunchAppAfterInstall` 认的开关名，两侧须一致。
+const String kWindowsInstallerNoRelaunchSwitch = '/FUSHINORELAUNCH';
+
+/// launcher 的提权开关：用 UAC（`ShellExecuteExW` + `runas`）启动安装器。
+const String kWindowsUpdateLauncherElevateFlag = '--elevate';
+
+/// 提权时必带：安装包应有的 SHA-256（发布方公布的那个）。launcher 以「拒绝写 / 删 /
+/// 改名共享」打开安装包、在**持有该句柄**的状态下重算哈希，对得上才经 UAC 拉起，并一直
+/// 握着句柄到安装器结束——校验之后、提权执行之前，同用户的其它进程换不掉这个文件
+/// （安装包在用户可写的 updates 目录里，BUG-3567）。
+const String kWindowsUpdateLauncherInstallerSha256Flag = '--installer-sha256';
 
 const String kWindowsUpdateLauncherExecutable = 'fushi_update_launcher.exe';
 
@@ -576,8 +632,16 @@ List<String> windowsUpdateLauncherArgs({
   required String installerPath,
   required List<String> installerArgs,
   String? appExecutablePath,
+  String? elevatedInstallerSha256,
 }) =>
     <String>[
+      // 非 null = 经 UAC 提权启动安装器；提权只接受带着已校验哈希的安装包，
+      // 所以两者绑成一个参数，不存在「提权但不带哈希」的组合。
+      if (elevatedInstallerSha256 != null) ...<String>[
+        kWindowsUpdateLauncherElevateFlag,
+        kWindowsUpdateLauncherInstallerSha256Flag,
+        _requireSha256Hex(elevatedInstallerSha256),
+      ],
       '--marker',
       markerPath,
       '--parent-pid',
@@ -591,6 +655,18 @@ List<String> windowsUpdateLauncherArgs({
       '--',
       ...installerArgs,
     ];
+
+String _requireSha256Hex(String value) {
+  final String normalized = value.trim().toLowerCase();
+  if (!RegExp(r'^[0-9a-f]{64}$').hasMatch(normalized)) {
+    throw ArgumentError.value(
+      value,
+      'elevatedInstallerSha256',
+      'must be a 64-char hex SHA-256 digest',
+    );
+  }
+  return normalized;
+}
 
 /// launcher 副本的落地目录名（在 updates 目录下，**安装目录之外**）。
 const String kWindowsUpdateLauncherStageDirName = 'launcher';
@@ -647,6 +723,21 @@ Future<String?> stageWindowsUpdateLauncher({
   }
 }
 
+/// 提权安装时 Inno 日志的落点：安装目录本身（`{app}`）。只在探针判定当前用户在
+/// [installDir] 里建不了文件时使用——这正是同用户进程无法在此预置 junction / 硬链接 /
+/// 符号链接的保证；普通用户对安装目录有读权限，reconcile 能照常读回。文件名带本次交接
+/// 时刻，避免读到上一轮提权安装留下的旧日志；`fushi.iss` 安装成功后清掉其余的
+/// [kWindowsElevatedInstallLogPrefix]`*.log`，卸载时一并删除。
+String windowsElevatedInstallerLogPath(String installDir, DateTime startedAt) {
+  final String dir = installDir.replaceFirst(RegExp(r'[\\/]+$'), '');
+  return '$dir${Platform.pathSeparator}'
+      '$kWindowsElevatedInstallLogPrefix'
+      '${startedAt.toUtc().millisecondsSinceEpoch}.log';
+}
+
+/// 与 `fushi.iss` 的 `CleanupStaleElevatedInstallLogs` / `[UninstallDelete]` 一致。
+const String kWindowsElevatedInstallLogPrefix = 'fushi-update-install-';
+
 String windowsInstallerLogPath(String installerPath) {
   final int sep = _lastPathSeparatorIndex(installerPath);
   final String dir = sep >= 0 ? installerPath.substring(0, sep) : '';
@@ -679,7 +770,7 @@ class UpdateInstallerException implements Exception {
 
 /// 下载产物是否是真正的 Windows 可执行文件：PE 文件以 DOS「MZ」魔数
 /// (0x4D 0x5A) 开头。GFW 下走的 GitHub 代理镜像（ghfast.top / ghproxy）可能用
-/// HTTP 200 回一个 HTML 限流/错误页，被原样写进 `hibiki-<v>.exe`；把这种字节喂给
+/// HTTP 200 回一个 HTML 限流/错误页，被原样写进 `fushi-<v>.exe`；把这种字节喂给
 /// `Process.start` 在 Windows 上行为不可控（ERROR_BAD_EXE_FORMAT 等），必须先拦掉。
 bool isWindowsExecutableHeader(List<int> header) =>
     header.length >= 2 && header[0] == 0x4D && header[1] == 0x5A;
@@ -724,9 +815,15 @@ class WindowsInstaller {
       List<String> args,
     )? startProcess,
     void Function(int code)? exitProcess,
+    Future<WindowsInstallDirWriteProbe> Function(Directory dir)?
+        probeInstallDirWritable,
+    String? expectedSha256,
+    Future<String> Function(File file)? hashFile,
+    bool Function(int pid)? grantForegroundTo,
   }) async {
     final DateTime Function() clock = now ?? DateTime.now;
-    final String innoLogPath = windowsInstallerLogPath(installerPath);
+    // 提权安装时改写到受保护位置，见 [windowsElevatedInstallerLogPath]。
+    String innoLogPath = windowsInstallerLogPath(installerPath);
     final String resolvedExecutablePath =
         currentExecutablePath ?? Platform.resolvedExecutable;
     final Directory currentInstallDir = File(resolvedExecutablePath).parent;
@@ -752,6 +849,23 @@ class WindowsInstaller {
         } catch (_) {/* best-effort cleanup */}
         throw UpdateInstallerException(
             'downloaded file is not a Windows executable: $installerPath');
+      }
+      // BUG-3567：安装包放在用户可写的 updates 目录里，下载时的校验之后它仍可能被换掉
+      // （CLI `update download` 与 `update install` 之间可以隔任意久）。交接前按发布方
+      // 公布的哈希再核一次：对不上就删掉、不交接。
+      if (expectedSha256 != null) {
+        final String expected = expectedSha256.trim().toLowerCase();
+        final String actual =
+            (await (hashFile ?? _sha256OfInstaller)(installer)).toLowerCase();
+        if (actual != expected) {
+          try {
+            installer.deleteSync();
+          } catch (_) {/* best-effort cleanup */}
+          throw UpdateInstallerException(
+            'installer SHA-256 mismatch (expected $expected, got $actual): '
+            '$installerPath',
+          );
+        }
       }
     } catch (e, stack) {
       await _markLaunchFailed(handoffMarkerFile, e, clock(), stack);
@@ -786,13 +900,14 @@ class WindowsInstaller {
           rawDiagnostics.currentInstallDir ?? currentInstallDir.path,
       targetInstallDir: targetInstallDir,
     );
+    final DateTime handoffStartedAt = clock();
     if (targetVersion != null && handoffMarkerFile != null) {
       await WindowsUpdateHandoff.writePending(
         markerFile: handoffMarkerFile,
         targetVersion: targetVersion,
         installerPath: installerPath,
         innoLogPath: innoLogPath,
-        startedAt: clock(),
+        startedAt: handoffStartedAt,
         diagnostics: diagnostics,
       );
       ErrorLogService.instance.log(
@@ -804,8 +919,65 @@ class WindowsInstaller {
     }
 
     try {
-      if (Platform.isWindows) {
-        await ensureWindowsInstallTargetWritable(Directory(targetInstallDir));
+      final bool useDelayedLauncher = handoffMarkerFile != null;
+      // 安装目录以当前权限写不进去（典型是手动提权装进了 C:\Program Files）：
+      // 不再让用户「以管理员身份重开 Fushi」——只把安装器本身经 UAC 提权，app 继续以
+      // 普通权限运行。提权只能由 launcher 做（它在 app 退出后才拉起安装器），所以没有
+      // launcher 的直启路径仍按旧行为报错。
+      //
+      // 只有「拒绝访问」才提权：磁盘满、受控文件夹访问、路径坏掉这类失败，管理员权限也
+      // 救不了，弹 UAC 只会让用户白点一次再看到同一个失败。提权还要求发布方公布了安装包
+      // 的 SHA-256：launcher 会在锁住文件后按它复核，拿不到就不提权执行（BUG-3567）。
+      bool elevateInstaller = false;
+      final Future<WindowsInstallDirWriteProbe> Function(Directory dir)?
+          probeWritable = probeInstallDirWritable ??
+              (Platform.isWindows ? probeWindowsInstallTargetWritable : null);
+      final WindowsInstallDirWriteProbe writeProbe = probeWritable == null
+          ? WindowsInstallDirWriteProbe.writable
+          : await probeWritable(Directory(targetInstallDir));
+      if (writeProbe != WindowsInstallDirWriteProbe.writable) {
+        final String? cannotElevateReason =
+            writeProbe != WindowsInstallDirWriteProbe.accessDenied
+                ? 'the failure is not a permission problem'
+                : !useDelayedLauncher
+                    ? 'there is no update launcher to elevate the installer'
+                    : expectedSha256 == null
+                        ? 'the release did not publish a SHA-256 digest for '
+                            'the installer, so it cannot be verified before '
+                            'running it as administrator'
+                        : null;
+        if (cannotElevateReason != null) {
+          throw UpdateInstallerException(
+            'Cannot write to installation directory: $targetInstallDir '
+            '($cannotElevateReason). Close Fushi and run the installer as '
+            'administrator, or reinstall Fushi to a user-writable folder.',
+          );
+        }
+        elevateInstaller = true;
+        // 提权的 Inno 不能把日志写进用户可写的 updates 目录：同用户进程可以预先在
+        // 那里放 junction / 符号链接，把一次管理员身份的写重定向到任意位置。改写进
+        // 安装目录本身——探针刚证明当前用户在那里建不了文件，也就放不了链接；
+        // 普通权限仍可读，reconcile 照常按 marker 里的路径读回（BUG-3567）。
+        innoLogPath = windowsElevatedInstallerLogPath(
+          targetInstallDir,
+          handoffStartedAt,
+        );
+        if (targetVersion != null && handoffMarkerFile != null) {
+          await WindowsUpdateHandoff.writePending(
+            markerFile: handoffMarkerFile,
+            targetVersion: targetVersion,
+            installerPath: installerPath,
+            innoLogPath: innoLogPath,
+            startedAt: handoffStartedAt,
+            diagnostics: diagnostics,
+          );
+        }
+        ErrorLogService.instance.log(
+          'WindowsInstaller.elevate',
+          'Install dir $targetInstallDir is not writable with the current '
+              'privileges; the update launcher will start the installer '
+              'elevated (UAC) and relaunch Fushi unelevated afterwards.',
+        );
       }
       // 先收干净我们自己拉起的辅助子进程（ffmpeg/ffprobe 的可执行文件就在安装目录里），
       // 再把安装交出去。它们不随 app 退出而死（Dart 的 Process.start 不绑 job object），
@@ -828,8 +1000,8 @@ class WindowsInstaller {
         installerPath,
         logPath: innoLogPath,
         targetInstallDir: Platform.isWindows ? targetInstallDir : null,
+        suppressAppRelaunch: elevateInstaller,
       );
-      final bool useDelayedLauncher = handoffMarkerFile != null;
       final String installedLauncherPath = windowsUpdateLauncherPath(
         currentExecutablePath: resolvedExecutablePath,
       );
@@ -879,6 +1051,7 @@ class WindowsInstaller {
               installerPath: installerPath,
               installerArgs: args,
               appExecutablePath: resolvedExecutablePath,
+              elevatedInstallerSha256: elevateInstaller ? expectedSha256 : null,
             )
           : args;
       if (useDelayedLauncher &&
@@ -903,6 +1076,20 @@ class WindowsInstaller {
         executable,
         launchArgs,
       );
+      // UAC 同意框只在发起方窗口处于前台时直接弹出，否则只在任务栏闪烁。此刻用户刚
+      // 点了「更新」，本进程就是前台进程，是唯一有权把前台让给 launcher 的一方；
+      // 定向让渡（不用 ASFW_ANY），launcher 发起提权前再自己置前台（BUG-3567）。
+      final int? launcherPid = started.pid;
+      if (elevateInstaller && launcherPid != null && launcherPid > 0) {
+        final bool granted = (grantForegroundTo ??
+            (Platform.isWindows
+                ? _allowSetForegroundWindow
+                : (int _) => false))(launcherPid);
+        ErrorLogService.instance.log(
+          'WindowsInstaller.elevate',
+          'AllowSetForegroundWindow(launcher pid=$launcherPid) -> $granted',
+        );
+      }
       ErrorLogService.instance.log(
         'WindowsInstaller.launch',
         useDelayedLauncher
@@ -929,14 +1116,28 @@ class WindowsInstaller {
     }
 
     // launcher 已成功启动（分离进程）。当前实例只让出自己的 AppMutex / exe 锁；
-    // 其他 hibiki.exe / WebView2 实例交给安装器自己的 hibiki.iss InitializeSetup 处理
+    // 其他 fushi.exe / WebView2 实例交给安装器自己的 fushi.iss InitializeSetup 处理
     // （先 WM_CLOSE 优雅关闭给落盘机会，再按 image 名强制结束），而不是靠 Inno
     // 的 RestartManager（已用 /NOCLOSEAPPLICATIONS + /NOFORCECLOSEAPPLICATIONS 关掉）。
-    // 只有安装器杀不掉的真外部锁（非 hibiki/WebView2 占用目标目录 libmpv）才在 preflight
+    // 只有安装器杀不掉的真外部锁（非 Fushi/WebView2 占用目标目录 libmpv）才在 preflight
     // 硬中止并要求用户手动关闭（见 _throwIfWindowsInstallBlocked，TODO-1181）。
     await Future<void>.delayed(Duration.zero);
     await WindowsNativePreExit.prepareForExit(WindowsExitReason.update);
     (exitProcess ?? exit)(0);
+  }
+
+  static Future<String> _sha256OfInstaller(File file) =>
+      ffcSha256File(file.path);
+
+  static bool _allowSetForegroundWindow(int pid) {
+    try {
+      final int Function(int) allow = DynamicLibrary.open('user32.dll')
+          .lookupFunction<Int32 Function(Uint32), int Function(int)>(
+              'AllowSetForegroundWindow');
+      return allow(pid) != 0;
+    } catch (_) {
+      return false;
+    }
   }
 
   static Future<List<int>> _readHeaderBytes(File file) async {
@@ -949,13 +1150,13 @@ class WindowsInstaller {
   }
 
   /// 启动安装器前的最后一道占用检查。**只对安装器无法自愈的真外部锁硬中止**；能被
-  /// 安装器按 image 名关闭的进程（其他 `hibiki.exe` 实例 / WebView2 子进程）不再中止。
+  /// 安装器按 image 名关闭的进程（其他 `fushi.exe` 实例 / WebView2 子进程）不再中止。
   ///
-  /// 根因（TODO-1181）：`hibiki.iss` 的 `InitializeSetup()` 在 Inno 的 AppMutex 检查
-  /// 之前，先对 `hibiki.exe` 树发 `WM_CLOSE`（优雅关闭，给正在写 DB 的其他实例落盘机会）、
-  /// 轮询 `FushiSingleInstanceMutex` 释放，再按 image 名强制结束 `hibiki.exe` +
-  /// `msedgewebview2.exe`。即安装器本就能自己关掉其他 Hibiki 实例并解开 mutex 死锁。旧的
-  /// Dart 预检却在**启动安装器之前**就因「检测到其他 hibiki.exe」硬 throw，用户永远走不到
+  /// 根因（TODO-1181）：`fushi.iss` 的 `InitializeSetup()` 在 Inno 的 AppMutex 检查
+  /// 之前，先对 `fushi.exe` 树发 `WM_CLOSE`（优雅关闭，给正在写 DB 的其他实例落盘机会）、
+  /// 轮询 `FushiSingleInstanceMutex` 释放，再按 image 名强制结束 `fushi.exe` +
+  /// `msedgewebview2.exe`。即安装器本就能自己关掉其他 Fushi 实例并解开 mutex 死锁。旧的
+  /// Dart 预检却在**启动安装器之前**就因「检测到其他 fushi.exe」硬 throw，用户永远走不到
   /// 这段自愈，只能被迫手动关进程——是过度防御。故这里改为：安装器杀得掉的占用进程只记警告、
   /// 继续启动安装器交给 `.iss` 处理；只有安装器**确实**处置不掉的外部锁（镜像不在安装目录
   /// 树内、也不是 Fushi/WebView2 的进程，见 [_installerCanClose]）才保留硬中止。
@@ -975,13 +1176,13 @@ class WindowsInstaller {
             ))
         .toList(growable: false);
     if (externalLocks.isEmpty) {
-      // 只剩安装器能强杀的 hibiki.exe / WebView2 实例：不中止，记警告后继续启动安装器，
+      // 只剩安装器能强杀的 fushi.exe / WebView2 实例：不中止，记警告后继续启动安装器，
       // 由 .iss InitializeSetup 的 WM_CLOSE(优雅落盘)→强杀 序列关掉它们并解开 mutex。
       ErrorLogService.instance.log(
         'WindowsInstaller.installBlockersDeferred',
         'Other Fushi/WebView2 processes are still running; continuing the '
             'update and letting the installer close them (WM_CLOSE then '
-            'force-terminate via hibiki.iss). Target: $target. '
+            'force-terminate via fushi.iss). Target: $target. '
             'Deferred: ${_summarizeBlockingProcesses(blockers)}. '
             'Installer log: $innoLogPath',
       );
@@ -1471,19 +1672,49 @@ String _normalizeWindowsPath(String path) {
       .toLowerCase();
 }
 
-Future<void> ensureWindowsInstallTargetWritable(Directory installDir) async {
+/// [probeWindowsInstallTargetWritable] 的结论。
+enum WindowsInstallDirWriteProbe {
+  /// 当前权限能在安装目录里建文件。
+  writable,
+
+  /// `ERROR_ACCESS_DENIED`：权限不够（典型是 `C:\Program Files`），提权能解决。
+  accessDenied,
+
+  /// 其它失败（磁盘满、受控文件夹访问、路径无效…），提权解决不了。
+  failed,
+}
+
+/// Win32 `ERROR_ACCESS_DENIED`。
+const int _kWin32ErrorAccessDenied = 5;
+
+/// 以当前进程权限实测 [installDir] 是否可写（真建一个探针文件再删掉——ACL / 继承 /
+/// 拒绝项的组合只有让系统自己判最可靠）。失败原因写进日志，由调用方决定是提权交接
+/// 还是报错。
+Future<WindowsInstallDirWriteProbe> probeWindowsInstallTargetWritable(
+  Directory installDir,
+) async {
   final File probe = File(
     '${installDir.path}${Platform.pathSeparator}.fushi-update-write-test',
   );
   try {
     await installDir.create(recursive: true);
-    await probe.writeAsString('hibiki updater preflight', flush: true);
-  } catch (e) {
-    throw UpdateInstallerException(
-      'Cannot write to installation directory: ${installDir.path}. '
-      'Close Fushi and run the installer as administrator, or reinstall '
-      'Fushi to a user-writable folder. Details: $e',
+    await probe.writeAsString('fushi updater preflight', flush: true);
+    return WindowsInstallDirWriteProbe.writable;
+  } on FileSystemException catch (e) {
+    ErrorLogService.instance.log(
+      'WindowsInstaller.installDirNotWritable',
+      'Cannot write to installation directory ${installDir.path} with the '
+          'current privileges: $e',
     );
+    return e.osError?.errorCode == _kWin32ErrorAccessDenied
+        ? WindowsInstallDirWriteProbe.accessDenied
+        : WindowsInstallDirWriteProbe.failed;
+  } catch (e) {
+    ErrorLogService.instance.log(
+      'WindowsInstaller.installDirNotWritable',
+      'Cannot write to installation directory ${installDir.path}: $e',
+    );
+    return WindowsInstallDirWriteProbe.failed;
   } finally {
     try {
       if (await probe.exists()) await probe.delete();
@@ -1504,7 +1735,7 @@ class MacSwapStartedProcess {
 /// **纯函数**：从运行中可执行文件路径反解出所属 `.app` 包路径。
 ///
 /// macOS 下 `Platform.resolvedExecutable` 形如
-/// `/Applications/hibiki.app/Contents/MacOS/hibiki`，取从右起第一个以 `.app` 结尾的
+/// `/Applications/fushi.app/Contents/MacOS/fushi`，取从右起第一个以 `.app` 结尾的
 /// 路径段，返回到该段为止的前缀（即 bundle 根）。没有 `.app` 段（如以裸二进制运行、
 /// 命令行测试）→ null，调用方据此拒绝应用内替换、回退打开发布页。
 String? macAppBundlePathForExecutable(String executablePath) {
@@ -1608,8 +1839,8 @@ bool isZipHeader(List<int> header) =>
     header.length >= 2 && header[0] == 0x50 && header[1] == 0x4B;
 
 class MacInstaller {
-  /// 解压下载好的 `-macos.zip`→写握手标记与替换脚本→分离启动脚本→退出本进程，
-  /// 让脚本在本进程退出后替换 `/Applications/hibiki.app` 并重启。
+  /// 解压下载好的 `-macos-arm64.zip`→写握手标记与替换脚本→分离启动脚本→退出本进程，
+  /// 让脚本在本进程退出后替换 `/Applications/fushi.app` 并重启。
   ///
   /// 根因防护（对齐 Windows 的崩溃防护）：
   /// 1. 先校验产物确实是 zip（PK 魔数），拦掉代理 HTML/截断文件。

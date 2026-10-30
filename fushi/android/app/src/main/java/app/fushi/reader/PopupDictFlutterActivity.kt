@@ -13,8 +13,8 @@ import io.flutter.embedding.android.FlutterActivityLaunchConfigs.BackgroundMode
 /**
  * Transparent FlutterActivity (in the :popup process) that hosts the warm
  * popup engine and renders the nested-capable Flutter PopupDictionaryPage for
- * external dictionary lookups. Replaces the old native PopupDictActivity for
- * the PROCESS_TEXT / SEND / TRANSLATE / fushi://lookup entry points.
+ * external dictionary lookups: the PROCESS_TEXT / SEND / TRANSLATE /
+ * fushi://lookup entry points.
  */
 class PopupDictFlutterActivity : FlutterActivity() {
     companion object {
@@ -52,6 +52,24 @@ class PopupDictFlutterActivity : FlutterActivity() {
         const val EXTRA_SUBTITLE_BOTTOM: String = "subtitleBottom"
 
         /**
+         * 截屏识字（BUG-3487）：被点字所在 ML Kit text block 的全文（块内各行按 `\n`
+         * 拼接）与 EXTRA_PROCESS_TEXT 那一行在块里的起始 UTF-16 偏移。Dart 查词窗据此截出
+         * 含被点字的整句作制卡 `{sentence}`；竖排 / 折行长句不再只剩被点的那一行。
+         * 缺省（旧入口 / 悬浮字幕 / 系统划词）时句子回落为整行，行为同 BUG-2900。
+         */
+        const val EXTRA_SOURCE_BLOCK: String = "sourceBlock"
+        const val EXTRA_SOURCE_BLOCK_OFFSET: String = "sourceBlockOffset"
+
+        /**
+         * 截屏识字制卡带图（反馈 Gz7z6Y6Mbr）：定格帧在 app 缓存里的文件路径（大图不走
+         * Intent，`:popup` 进程按路径读），以及所点文本块 / 被点行在那张图里的像素框
+         * （各 4 个 int：left, top, right, bottom）。「截屏识字制卡带图」关着时不带。
+         */
+        const val EXTRA_CARD_IMAGE_PATH: String = "cardImagePath"
+        const val EXTRA_CARD_IMAGE_BLOCK: String = "cardImageBlock"
+        const val EXTRA_CARD_IMAGE_LINE: String = "cardImageLine"
+
+        /**
          * 悬浮球「剪贴板查词」：activity 拿到窗口焦点后**自己**读剪贴板再查。
          * Android 10+ 只有前台且有输入焦点的 app 能读剪贴板，后台的悬浮球服务读不到，
          * 所以不能由服务读好再塞进 EXTRA_PROCESS_TEXT。剪贴板为空时留一个只有搜索栏
@@ -81,8 +99,8 @@ class PopupDictFlutterActivity : FlutterActivity() {
          * flutter_inappwebview WebView inside the :popup process. Android forbids
          * two processes sharing one WebView data directory (crbug.com/558377), so
          * the :popup process must use a distinct suffix before any WebView is
-         * created — mirroring the legacy native PopupDictActivity. Must run before
-         * the engine renders, hence the first line of onCreate.
+         * created. Must run before the engine renders, hence the first line of
+         * onCreate.
          */
         private fun configureWebViewDataDir() {
             if (webViewDataDirConfigured) return
@@ -91,8 +109,8 @@ class PopupDictFlutterActivity : FlutterActivity() {
                 try {
                     WebView.setDataDirectorySuffix("popup")
                 } catch (e: IllegalStateException) {
-                    // Another :popup entry point (legacy PopupDictActivity) already
-                    // set the suffix in this process — same dir, safe to ignore.
+                    // WebView was already initialised in this process, so the
+                    // suffix can no longer be set; the process keeps its first one.
                 }
             }
         }
@@ -124,7 +142,8 @@ class PopupDictFlutterActivity : FlutterActivity() {
         val charIndex: Int = extractCharIndex(intent)
         val anchor: IntArray? = extractAnchorRect(intent)
         val subtitle: IntArray? = extractSubtitleRect(intent)
-        PopupEngineHolder.setPendingText(text, charIndex, anchor, subtitle)
+        val sourceBlock: PopupEngineHolder.SourceBlock? = extractSourceBlock(intent)
+        PopupEngineHolder.setPendingText(text, charIndex, anchor, subtitle, sourceBlock)
         engineWasCold = PopupEngineHolder.ensureEngine(this)
         PopupEngineHolder.setOnFinish(this) { runOnUiThread { finish() } }
         super.onCreate(savedInstanceState)
@@ -136,7 +155,7 @@ class PopupDictFlutterActivity : FlutterActivity() {
         if (!engineWasCold) {
             // Warm reuse: Dart is already mounted and won't re-poll
             // getInitialProcessText, so push the new term explicitly.
-            PopupEngineHolder.pushProcessText(text, charIndex, anchor, subtitle)
+            PopupEngineHolder.pushProcessText(text, charIndex, anchor, subtitle, sourceBlock)
             // 悬浮球空查词窗：热引擎上把空词也推过去，清掉上一次的词。剪贴板查词等拿到
             // 焦点读完剪贴板再决定推什么，避免先清空再填词闪一下。
             if (text.isBlank() && !clipboardReadPending && wantsEmptySearch(intent)) {
@@ -167,6 +186,7 @@ class PopupDictFlutterActivity : FlutterActivity() {
             extractCharIndex(intent),
             extractAnchorRect(intent),
             extractSubtitleRect(intent),
+            extractSourceBlock(intent),
         )
         clipboardReadPending = intent.getBooleanExtra(EXTRA_READ_CLIPBOARD, false)
         if (text.isBlank() && !clipboardReadPending && wantsEmptySearch(intent)) {
@@ -285,6 +305,27 @@ class PopupDictFlutterActivity : FlutterActivity() {
      */
     private fun extractCharIndex(intent: Intent?): Int {
         return intent?.getIntExtra(EXTRA_CHAR_INDEX, -1) ?: -1
+    }
+
+    /**
+     * 截屏识字带来的所属块全文与本行在块里的起点（BUG-3487），没有就是 null。偏移越界
+     * 的载荷一律当作没有，Dart 侧回落为整行句子。
+     */
+    private fun extractSourceBlock(intent: Intent?): PopupEngineHolder.SourceBlock? {
+        if (intent == null) return null
+        val block: String = intent.getStringExtra(EXTRA_SOURCE_BLOCK) ?: return null
+        val offset: Int = intent.getIntExtra(EXTRA_SOURCE_BLOCK_OFFSET, -1)
+        if (offset < 0 || offset > block.length) return null
+        val imagePath: String? = intent.getStringExtra(EXTRA_CARD_IMAGE_PATH)
+        val imageBlock: IntArray? = intent.getIntArrayExtra(EXTRA_CARD_IMAGE_BLOCK)
+        val imageLine: IntArray? = intent.getIntArrayExtra(EXTRA_CARD_IMAGE_LINE)
+        val cardImage: PopupEngineHolder.CardImage? =
+            if (imagePath.isNullOrEmpty() || imageBlock?.size != 4 || imageLine?.size != 4) {
+                null
+            } else {
+                PopupEngineHolder.CardImage(imagePath, imageBlock, imageLine)
+            }
+        return PopupEngineHolder.SourceBlock(block, offset, cardImage)
     }
 
     /**

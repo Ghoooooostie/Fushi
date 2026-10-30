@@ -41,13 +41,20 @@ void main() {
       expect(ModuleId.games.prefKey, 'module_games_enabled');
       expect(ModuleId.browse.prefKey, 'module_downloads_enabled');
       expect(ModuleId.lookup.prefKey, 'module_dictionaries_enabled');
+    });
+
+    test('「浏览器」模块刻意换了新键：旧扩展模块的开关不再生效', () {
+      // 2026-10-19 用户拍板：「浏览器扩展」模块升级为「浏览器」并「重置一下这个
+      // 开关」。旧键 module_browser_extension_enabled 不得再解析成任何模块，
+      // 否则关过扩展的老用户升级后看不到新模块。
+      expect(ModuleId.web.prefKey, 'module_web_enabled');
       expect(
-        ModuleId.browserExtension.prefKey,
-        'module_browser_extension_enabled',
+        ModuleId.tryParsePrefKey('module_browser_extension_enabled'),
+        isNull,
       );
     });
 
-    test('平台判据只有 games / browserExtension / downloads 三条', () {
+    test('平台判据只有 downloads 一条（浏览器 2026-10-19 起五端都有）', () {
       for (final ModuleId id in ModuleId.values) {
         final bool onWindowsDesktop = id.availableOn(
           isWindows: true,
@@ -64,18 +71,10 @@ void main() {
           isAndroid: true,
         );
         expect(onWindowsDesktop, isTrue, reason: 'Windows 桌面上全部模块都可用');
-        if (id == ModuleId.browserExtension) {
-          expect(onAndroid, isFalse, reason: '$id 是桌面限定');
-        } else {
-          expect(
-            onAndroid,
-            isTrue,
-            reason: '$id 在 Android 上可用（games 是串流接收端形态）',
-          );
-        }
+        expect(onAndroid, isTrue, reason: '$id 在 Android 上可用（games 是串流接收端形态）');
       }
-      // galgame hook 只做 Windows、串流接收端只做 Android：macOS/Linux 与 iOS
-      // 都没有 games。
+      // games 处处可用，只是形态不同：Windows 本机库，其余平台串流接收端
+      // （形态断言见下面「games 的两种形态」）。
       expect(
         ModuleId.games.availableOn(
           isWindows: false,
@@ -83,7 +82,7 @@ void main() {
           isIOS: false,
           isAndroid: false,
         ),
-        isFalse,
+        isTrue,
       );
       expect(
         ModuleId.games.availableOn(
@@ -92,18 +91,21 @@ void main() {
           isIOS: true,
           isAndroid: false,
         ),
-        isFalse,
+        isTrue,
       );
-      // 浏览器扩展是「电脑才有」，非 Windows 桌面照样有。
+      // 浏览器模块五端都有（通用 app 内浏览不属于 App Store 受限能力）；其中的
+      // 浏览器扩展子页仍是「电脑才有」。
       expect(
-        ModuleId.browserExtension.availableOn(
+        ModuleId.web.availableOn(
           isWindows: false,
-          isDesktop: true,
-          isIOS: false,
+          isDesktop: false,
+          isIOS: true,
           isAndroid: false,
         ),
         isTrue,
       );
+      expect(browserExtensionSupportedOn(isDesktop: true), isTrue);
+      expect(browserExtensionSupportedOn(isDesktop: false), isFalse);
       // 下载中心：唯一一条不是「这个平台做不做得到」的判据。完整边界与它的
       // 兄弟能力（发现源 / 在线漫画源）见 test/build/ios_store_compliance_guard_test.dart。
       expect(
@@ -117,16 +119,27 @@ void main() {
       );
     });
 
-    test('games 的两种形态：Windows 本机库、Android 串流接收端，其余平台没有', () {
+    test('games 的两种形态：Windows 本机库，其余平台都是串流接收端', () {
+      expect(GamesModuleForm.on(isWindows: true), GamesModuleForm.localLibrary);
       expect(
-        GamesModuleForm.on(isWindows: true, isAndroid: false),
-        GamesModuleForm.localLibrary,
-      );
-      expect(
-        GamesModuleForm.on(isWindows: false, isAndroid: true),
+        GamesModuleForm.on(isWindows: false),
         GamesModuleForm.streamClient,
       );
-      expect(GamesModuleForm.on(isWindows: false, isAndroid: false), isNull);
+      for (final (bool desktop, bool ios, bool android) in <(bool, bool, bool)>[
+        (true, false, false), // macOS / Linux
+        (false, true, false), // iOS
+        (false, false, true), // Android
+      ]) {
+        expect(
+          ModuleId.games.availableOn(
+            isWindows: false,
+            isDesktop: desktop,
+            isIOS: ios,
+            isAndroid: android,
+          ),
+          isTrue,
+        );
+      }
     });
   });
 
@@ -139,9 +152,9 @@ void main() {
         isIOS: true,
         isAndroid: false,
       );
-      expect(ios.isEnabled(ModuleId.games), isFalse);
-      expect(ios.isEnabled(ModuleId.browserExtension), isFalse);
+      expect(ios.isEnabled(ModuleId.browse), isFalse);
       expect(ios.isEnabled(ModuleId.books), isTrue);
+      expect(ios.isEnabled(ModuleId.web), isTrue);
 
       final ModuleVisibility android = ModuleVisibility.resolve(
         prefOf: (ModuleId _) => true,
@@ -151,7 +164,7 @@ void main() {
         isAndroid: true,
       );
       expect(android.isEnabled(ModuleId.games), isTrue);
-      expect(android.isEnabled(ModuleId.browserExtension), isFalse);
+      expect(android.isEnabled(ModuleId.web), isTrue);
     });
 
     test('resolve 尊重 pref：平台可用但用户关掉的不出现', () {
@@ -173,12 +186,58 @@ void main() {
   });
 
   group('HomeTab 映射', () {
-    test('首页与设置恒在——它们是全部模块关光后的安全回退面', () {
-      expect(moduleOfHomeTab(HomeTab.home), isNull);
+    test('设置恒在——它是全部模块关光后的安全回退面', () {
       expect(moduleOfHomeTab(HomeTab.settings), isNull);
       const ModuleVisibility none = ModuleVisibility(<ModuleId>{});
-      expect(isHomeTabVisible(HomeTab.home, none), isTrue);
       expect(isHomeTabVisible(HomeTab.settings, none), isTrue);
+    });
+
+    test('首页是可关模块（2026-10-09 用户反馈「首页没用但偏偏不给关」）', () {
+      expect(moduleOfHomeTab(HomeTab.home), ModuleId.home);
+      expect(homeTabOfModule(ModuleId.home), HomeTab.home);
+      expect(ModuleId.home.prefKey, 'module_home_enabled');
+      const ModuleVisibility none = ModuleVisibility(<ModuleId>{});
+      expect(isHomeTabVisible(HomeTab.home, none), isFalse);
+      expect(
+        isHomeTabVisible(
+          HomeTab.home,
+          const ModuleVisibility(<ModuleId>{ModuleId.home}),
+        ),
+        isTrue,
+      );
+    });
+
+    test('至少保留一个导航模块：最后一个有 tab 的模块才算「最后一个」', () {
+      // 只剩首页 + 横切模块：首页是最后一个导航模块，关不掉。
+      const ModuleVisibility onlyHome = ModuleVisibility(<ModuleId>{
+        ModuleId.home,
+        ModuleId.sync,
+        ModuleId.listening,
+      });
+      expect(isLastNavigationModule(ModuleId.home, onlyHome), isTrue);
+      // 横切模块没有 tab，永远不是「最后一个导航模块」。
+      expect(isLastNavigationModule(ModuleId.sync, onlyHome), isFalse);
+      expect(hasAnyNavigationModule(onlyHome), isTrue);
+
+      // 首页 + 书架：两个都能单独关。
+      const ModuleVisibility two = ModuleVisibility(<ModuleId>{
+        ModuleId.home,
+        ModuleId.books,
+      });
+      expect(isLastNavigationModule(ModuleId.home, two), isFalse);
+      expect(isLastNavigationModule(ModuleId.books, two), isFalse);
+
+      // 只剩书架：书架是最后一个；已经关着的首页不算。
+      const ModuleVisibility onlyBooks = ModuleVisibility(<ModuleId>{
+        ModuleId.books,
+      });
+      expect(isLastNavigationModule(ModuleId.books, onlyBooks), isTrue);
+      expect(isLastNavigationModule(ModuleId.home, onlyBooks), isFalse);
+
+      const ModuleVisibility crossCutOnly = ModuleVisibility(<ModuleId>{
+        ModuleId.sync,
+      });
+      expect(hasAnyNavigationModule(crossCutOnly), isFalse);
     });
 
     test('homeTabOfModule 与 moduleOfHomeTab 互为逆映射', () {
@@ -198,10 +257,11 @@ void main() {
       }
     });
 
-    test('四个横切模块没有 tab（只有设置分类与散落入口）', () {
+    test('五个横切模块没有 tab（只有设置分类与散落入口）', () {
       expect(homeTabOfModule(ModuleId.listening), isNull);
       expect(homeTabOfModule(ModuleId.cardCreation), isNull);
       expect(homeTabOfModule(ModuleId.services), isNull);
+      expect(homeTabOfModule(ModuleId.ai), isNull);
       expect(homeTabOfModule(ModuleId.sync), isNull);
     });
   });
@@ -258,6 +318,33 @@ void main() {
       );
     });
 
+    test('AI 是独立模块：关 AI 只藏「设置 › AI」，不连坐在线服务', () {
+      expect(
+        moduleOfSettingsDestination(SettingsDestinationId.ai),
+        ModuleId.ai,
+      );
+      final ModuleVisibility noAi = ModuleVisibility(
+        ModuleId.values.toSet()..remove(ModuleId.ai),
+      );
+      expect(isAiModuleEnabled(noAi), isFalse);
+      expect(
+        isSettingsDestinationVisible(SettingsDestinationId.ai, noAi),
+        isFalse,
+      );
+      expect(
+        isSettingsDestinationVisible(SettingsDestinationId.services, noAi),
+        isTrue,
+      );
+      final ModuleVisibility noServices = ModuleVisibility(
+        ModuleId.values.toSet()..remove(ModuleId.services),
+      );
+      expect(isAiModuleEnabled(noServices), isTrue);
+      expect(
+        isSettingsDestinationVisible(SettingsDestinationId.ai, noServices),
+        isTrue,
+      );
+    });
+
     test('模块关掉后它的分类确实不可见', () {
       const ModuleVisibility none = ModuleVisibility(<ModuleId>{});
       for (final SettingsDestinationId id in SettingsDestinationId.values) {
@@ -277,6 +364,10 @@ void main() {
       // 用户拍板：关掉「查词」只关页面入口，阅读器/视频里的划词弹窗要照常能用，
       // 弹窗里的「上/下一个词条」自然也得留着。
       expect(moduleOfShortcutScope(ShortcutScope.dictionaryPopup), isNull);
+    });
+
+    test('app 内浏览器恒在——视频站点入口也会打开它，不只属于 web 模块', () {
+      expect(moduleOfShortcutScope(ShortcutScope.webBrowser), isNull);
     });
 
     test('app 外系统级取词热键跟着 lookup 关——关掉模块不该还能装系统钩子', () {

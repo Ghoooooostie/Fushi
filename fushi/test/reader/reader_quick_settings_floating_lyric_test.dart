@@ -8,19 +8,22 @@ import '../pages/reader_fushi_page_source_corpus.dart';
 /// pin the load-bearing wiring that a refactor could silently break.
 void main() {
   group('desktop floating lyric guards', () {
-    test('channel isSupported includes Windows alongside Android', () {
+    test('channel isSupported delegates to the single platform predicate', () {
       final File file = File(
         'lib/src/media/audiobook/floating_lyric_channel.dart',
       );
       final String src = file.readAsStringSync();
-      // The strip is the Windows counterpart of the Android overlay, so both
-      // platforms must pass the gate; macOS/Linux must stay excluded.
+      // 平台判据只写一处（floatingLyricBackendAvailableOn，行为在
+      // floating_lyric_channel_test 里按 OS 取值逐个钉）；isSupported 不得再自己
+      // 拼 Platform.isXxx，否则入口与 channel 会各说各的。
       expect(
-        src.contains('Platform.isAndroid || Platform.isWindows'),
+        RegExp(
+          r'platformOverride \?\?\s*floatingLyricBackendAvailableOn\(\s*'
+          r'Platform\.operatingSystem',
+        ).hasMatch(src),
         isTrue,
-        reason: 'isSupported must allow Android and Windows.',
+        reason: 'isSupported must delegate to floatingLyricBackendAvailableOn.',
       );
-      expect(src.contains('Platform.isMacOS'), isFalse);
       expect(src.contains('Platform.isLinux'), isFalse);
     });
 
@@ -44,11 +47,13 @@ void main() {
       // 鼠标位置。丢了这个参数卡片会退回跟着光标飘。
       //
       // 用正则而不是整段字面量 contains：这个签名在源码里是折行写的，行宽一变
-      // 字面量就不匹配，守卫会红在「格式变了」而不是「参数没了」。
+      // 字面量就不匹配，守卫会红在「格式变了」而不是「参数没了」。tall 格式会在
+      // 末参后补尾逗号再换行收括号，所以 `,?\s*` 也放过。
       expect(
-        RegExp(r'_lookupFromFloatingLyric\(\s*String text,\s*int index,\s*'
-                r'Rect\? wordRect\)')
-            .hasMatch(reader),
+        RegExp(
+          r'_lookupFromFloatingLyric\(\s*String text,\s*int index,\s*'
+          r'Rect\? wordRect,?\s*\)',
+        ).hasMatch(reader),
         isTrue,
         reason: 'Lookup handler must carry the tapped word rect so the card '
             'anchors to the word instead of the mouse.',

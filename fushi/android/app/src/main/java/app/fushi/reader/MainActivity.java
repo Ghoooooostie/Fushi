@@ -22,7 +22,6 @@ import androidx.annotation.NonNull;
 import android.net.Uri;
 
 import io.flutter.embedding.engine.FlutterEngine;
-import io.flutter.embedding.engine.FlutterShellArgs;
 import io.flutter.plugin.common.MethodChannel;
 
 import android.provider.Settings;
@@ -89,6 +88,7 @@ public class MainActivity extends AudioServiceActivity {
     // 系统画中画。持有 Activity，所以是实例而不是静态注册：onDestroy 要断开它，
     // onPictureInPictureModeChanged 要把系统的进出事件转发给它。
     private PictureInPictureChannelHandler pictureInPictureChannelHandler;
+    private MusicOutputChannelHandler musicOutputChannelHandler;
     // 互联配对链接写 NFC 贴纸：读卡模式挂在 Activity 上，同样是实例、onDestroy 断开。
     private NfcTagWriterChannelHandler nfcTagWriterChannelHandler;
     private MethodChannel.Result pendingSafResult;
@@ -118,37 +118,25 @@ public class MainActivity extends AudioServiceActivity {
             new GamepadTriggerKeySynthesizer(this::dispatchKeyEvent);
 
     @Override
-    protected void attachBaseContext(Context newBase) {
-        SharedPreferences prefs = newBase.getSharedPreferences(SPLASH_PREFS, MODE_PRIVATE);
-        if (prefs.contains(PreferenceKeys.SPLASH_IS_DARK)) {
-            boolean isDark = prefs.getBoolean(PreferenceKeys.SPLASH_IS_DARK, false);
-            int currentNight = newBase.getResources().getConfiguration().uiMode
-                    & Configuration.UI_MODE_NIGHT_MASK;
-            boolean systemDark = currentNight == Configuration.UI_MODE_NIGHT_YES;
-            if (isDark != systemDark) {
-                Configuration config = new Configuration(
-                        newBase.getResources().getConfiguration());
-                config.uiMode = (config.uiMode & ~Configuration.UI_MODE_NIGHT_MASK)
-                        | (isDark ? Configuration.UI_MODE_NIGHT_YES
-                                  : Configuration.UI_MODE_NIGHT_NO);
-                super.attachBaseContext(newBase.createConfigurationContext(config));
-                return;
-            }
-        }
-        super.attachBaseContext(newBase);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Splash 缓存只设置窗口背景；保留系统 uiMode，让 Flutter 正确跟随系统明暗。
         SharedPreferences splashPrefs = getSharedPreferences(SPLASH_PREFS, MODE_PRIVATE);
         int bgColor = splashPrefs.getInt(PreferenceKeys.SPLASH_BG_COLOR, 0);
         if (bgColor != 0) {
             getWindow().setBackgroundDrawable(new ColorDrawable(bgColor));
         }
         context = MainActivity.this;
+        // Whole app runs on Impeller; the Skia switch was removed. Delete the stale
+        // render-backend prefs file (impellerDisabled) left by older versions.
+        // deleteSharedPreferences removes the file itself, so this only does work on
+        // the first launch after upgrading; afterwards there is nothing to delete.
+        // (The old edit().clear().apply() recreated and rewrote an empty file on
+        // every onCreate instead of clearing it once.)
+        deleteSharedPreferences(PreferenceKeys.FILE_RENDER);
         ankiChannelHandler = new AnkiChannelHandler(context);
         ttsChannelHandler = new TtsChannelHandler(context);
         pictureInPictureChannelHandler = new PictureInPictureChannelHandler(context);
+        musicOutputChannelHandler = new MusicOutputChannelHandler(context);
         nfcTagWriterChannelHandler = new NfcTagWriterChannelHandler(context);
         // Manga extensions are an optional subsystem. Its constructor wires up
         // Injekt, whose reified type resolution is only as sound as the R8 keep
@@ -176,20 +164,66 @@ public class MainActivity extends AudioServiceActivity {
     // BUG-195: On API 26+ every View defaults to defaultFocusHighlightEnabled=true,
     // so when touch mode is exited the framework draws a system focus rectangle on
     // the currently focused View -- including the FlutterView host that hosts the
-    // whole UI. On some skins (Samsung OneUI 6.5) that system frame overlaps Hibiki's
-    // own keyboard/gamepad focus ring drawn in Flutter (see hibiki_focus_ring.dart),
+    // whole UI. On some skins (Samsung OneUI 6.5) that system frame overlaps Fushi's
+    // own keyboard/gamepad focus ring drawn in Flutter (see fushi_focus_ring.dart),
     // giving a double highlight. We disable only the Android system default highlight
     // here; the Flutter self-drawn focus ring and focus navigation are untouched.
     // Done in code on the decorView (rather than only a theme attribute) because the
     // FlutterSurfaceView host is created programmatically inside super.onCreate, so a
     // direct setDefaultFocusHighlightEnabled(false) on the window's view hierarchy is
     // the deterministic place to kill it.
+    //
+    // BUG-3485: defaultFocusHighlightEnabled is a PER-VIEW flag -- setting it on the
+    // decorView never reached the full-screen FlutterView, which is the view that
+    // actually holds focus. Once a gamepad press left touch mode, the system drew
+    // its frame around the FlutterView (= a faint ring along the screen edges) even
+    // with Fushi's own focus ring turned off. So the suppression now targets the
+    // FlutterView and, through a global focus-change listener, whatever view
+    // (e.g. a WebView platform view) takes focus later.
+    private boolean focusHighlightListenerInstalled = false;
+
     private void disableSystemFocusHighlight() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             android.view.View decorView = getWindow().getDecorView();
             if (decorView != null) {
                 decorView.setDefaultFocusHighlightEnabled(false);
+                if (!focusHighlightListenerInstalled) {
+                    decorView.getViewTreeObserver().addOnGlobalFocusChangeListener(
+                            (oldFocus, newFocus) -> {
+                                if (newFocus != null) {
+                                    newFocus.setDefaultFocusHighlightEnabled(false);
+                                }
+                            });
+                    focusHighlightListenerInstalled = true;
+                }
             }
+            android.view.View flutterView = findViewById(FLUTTER_VIEW_ID);
+            if (flutterView != null) {
+                flutterView.setDefaultFocusHighlightEnabled(false);
+            }
+            android.view.View focused = getCurrentFocus();
+            if (focused != null) {
+                focused.setDefaultFocusHighlightEnabled(false);
+            }
+        }
+    }
+
+    // BUG-3485: key events only reach Flutter through the FOCUSED view chain
+    // (ViewGroup.dispatchKeyEvent forwards to mFocused). Since API 28 a window in
+    // touch mode is not given initial focus, so after launch (or after a focused
+    // platform view went away) no view is focused: a gamepad BUTTON_B never reaches
+    // FlutterView, the app reports it unhandled, and Generic.kcm's `fallback BACK`
+    // pops the page -- bypassing the shortcut registry, so clearing every "back"
+    // binding did nothing. A and Y only "fixed" it because their fallbacks
+    // (DPAD_CENTER / SPACE) are navigation/typing keys that leave touch mode, which
+    // makes ViewRootImpl hand default focus to the FlutterView. Give the
+    // FlutterView (focusable in touch mode) focus before dispatching instead, so
+    // the very first key is decided by Flutter's own key pipeline.
+    private void ensureKeyFocusTarget() {
+        if (getCurrentFocus() != null) return;
+        android.view.View flutterView = findViewById(FLUTTER_VIEW_ID);
+        if (flutterView != null) {
+            flutterView.requestFocus();
         }
     }
 
@@ -241,6 +275,10 @@ public class MainActivity extends AudioServiceActivity {
         if (pictureInPictureChannelHandler != null) {
             pictureInPictureChannelHandler.destroy();
             pictureInPictureChannelHandler = null;
+        }
+        if (musicOutputChannelHandler != null) {
+            musicOutputChannelHandler.destroy();
+            musicOutputChannelHandler = null;
         }
         // HBK-AUDIT-057: the static floating-service channels are bound to this
         // engine's messenger; clear their handlers and null them so stale
@@ -323,6 +361,7 @@ public class MainActivity extends AudioServiceActivity {
             adjustSystemVolume(code == KeyEvent.KEYCODE_VOLUME_UP);
             return true;
         }
+        ensureKeyFocusTarget();
         return super.dispatchKeyEvent(event);
     }
 
@@ -466,13 +505,16 @@ public class MainActivity extends AudioServiceActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        // BUG-3602/3603：截屏 OCR 的宿主 Activity 被 ROM 静默丢弃、或 screenOcrFinished
+        // 在主界面销毁期间没送到时，应用内悬浮球会一直藏着；回到前台时按真实状态收尾。
+        FloatingBallChannel.onHostResumed();
         // BUG-438/TODO-889: re-apply the system focus-highlight suppression on
         // resume. disableSystemFocusHighlight() runs once in onCreate. With
         // navigation now in android:configChanges a gamepad plug/unplug is kept
         // alive (onConfigurationChanged), but onResume is still a belt-and-braces
         // path for skins that re-attach the decorView and reset
         // defaultFocusHighlightEnabled back to true, re-exposing the system focus
-        // rectangle over Hibiki own focus ring. Re-applying here (and in
+        // rectangle over Fushi own focus ring. Re-applying here (and in
         // onConfigurationChanged) keeps it killed.
         disableSystemFocusHighlight();
         // BUG-427/TODO-852: belt-and-braces for OEMs whose settings page does
@@ -506,7 +548,7 @@ public class MainActivity extends AudioServiceActivity {
                 && context.getPackageManager().canRequestPackageInstalls();
         if (!granted) {
             installResult.error("INSTALL_PERMISSION_REQUIRED",
-                "Enable installing unknown apps for Hibiki, then retry", null);
+                "Enable installing unknown apps for Fushi, then retry", null);
             return;
         }
         if (apkPath == null || apkPath.isEmpty()) {
@@ -559,54 +601,6 @@ public class MainActivity extends AudioServiceActivity {
         f.delete();
     }
 
-    // TODO-1232: choose the rendering backend before the Flutter engine is
-    // created. A command-line "--enable-impeller=false" takes precedence over the
-    // AndroidManifest EnableImpeller default at engine init (see FlutterEngineFlags
-    // docs), so appending it here flips the backend for THIS launch only -- no
-    // rebuild, no adb. This runs at engine start, before any Dart code, so the
-    // resolution below is the AUTHORITATIVE decision; RenderBackendService in Dart
-    // only mirrors it for the settings toggle + diagnostics.
-    @Override
-    public FlutterShellArgs getFlutterShellArgs() {
-        FlutterShellArgs args = super.getFlutterShellArgs();
-        if (isImpellerDisabledPref()) {
-            args.add(FlutterShellArgs.ARG_DISABLE_IMPELLER);
-        }
-        return args;
-    }
-
-    // TODO-1232: the effective "disable Impeller (use Skia)" decision for THIS
-    // launch. Android DEFAULTS TO IMPELLER (never-set -> false) so the majority
-    // keeps Impeller's smoother rendering / no Skia first-frame shader jank.
-    // Impeller silently fails to composite media_kit's external SurfaceProducer
-    // video texture on a FEW Android GPUs (e.g. Mali-G76 / Android 11, BUG-597),
-    // leaving video black while decode + texture handshake are fully green -- those
-    // devices degrade via the discoverable one-tap "switch to Skia + restart" entry
-    // in the player settings sheet (writes this pref = true, then restarts), rather
-    // than flipping every Android user to Skia. An EXPLICIT user choice overrides
-    // this default in either direction (explicit > platform default); only the
-    // never-set case falls back to Impeller. Mirrors
-    // RenderBackendService.resolveImpellerDisabled(storedPref, isAndroid: true).
-    private boolean isImpellerDisabledPref() {
-        Boolean raw = getImpellerDisabledRawPref();
-        return raw != null ? raw : false;
-    }
-
-    // TODO-1232: raw persisted intent as a tri-state -- null when the user has
-    // never touched the render-backend switch, else the stored boolean. Kept
-    // separate from isImpellerDisabledPref() so the "render" channel can hand Dart
-    // the same tri-state (RenderBackendService resolves the platform default),
-    // keeping the toggle/diagnostics mirror in lock-step with the engine-start
-    // decision above.
-    private Boolean getImpellerDisabledRawPref() {
-        SharedPreferences prefs =
-                getSharedPreferences(PreferenceKeys.FILE_RENDER, MODE_PRIVATE);
-        if (!prefs.contains(PreferenceKeys.RENDER_IMPELLER_DISABLED)) {
-            return null;
-        }
-        return prefs.getBoolean(PreferenceKeys.RENDER_IMPELLER_DISABLED, false);
-    }
-
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
         super.configureFlutterEngine(flutterEngine);
@@ -614,6 +608,9 @@ public class MainActivity extends AudioServiceActivity {
         SelectionActionChannel.registerWith(flutterEngine, this);
         SystemOcrChannel.registerWith(flutterEngine, this);
         ClipboardImageChannel.registerWith(flutterEngine, getApplicationContext());
+        SystemProxyChannel.registerWith(flutterEngine, getApplicationContext());
+        // 上次进程退出原因 + onTrimMemory 记录（Dart previous_exit_log.dart 启动时读一次）。
+        ProcessExitChannel.registerWith(flutterEngine, getApplicationContext());
         MigrationChannelHandler.registerWith(flutterEngine, getApplicationContext());
         DownloadKeepAliveService.registerWith(flutterEngine, getApplicationContext());
         // 全局悬浮球（系统常驻球 + 截屏 OCR）。传 Activity：申请悬浮窗权限 / 发起截屏确认
@@ -639,6 +636,9 @@ public class MainActivity extends AudioServiceActivity {
         }
         if (pictureInPictureChannelHandler != null) {
             pictureInPictureChannelHandler.register(flutterEngine);
+        }
+        if (musicOutputChannelHandler != null) {
+            musicOutputChannelHandler.register(flutterEngine);
         }
         if (mihonChannelHandler != null) {
             mihonChannelHandler.register(flutterEngine);
@@ -772,6 +772,16 @@ public class MainActivity extends AudioServiceActivity {
                         launchApkInstaller(apkFile, result);
                     } catch (Exception e) {
                         result.error("INSTALL_ERROR", e.getMessage(), null);
+                    }
+                } else if ("installMachineId".equals(call.method)) {
+                    // 安装统计的机器标识种子（updates/install_attestation.dart）：ANDROID_ID
+                    // 在 Android 8+ 按签名密钥 + 设备 + 用户稳定，重装不变。只在本机做 HMAC 种子，
+                    // Dart 侧不上传、不落盘原值。取不到返回 null，Dart 侧回退随机种子。
+                    try {
+                        result.success(Settings.Secure.getString(
+                            getContentResolver(), Settings.Secure.ANDROID_ID));
+                    } catch (Exception e) {
+                        result.success(null);
                     }
                 } else {
                     result.notImplemented();
@@ -1086,7 +1096,7 @@ public class MainActivity extends AudioServiceActivity {
                                     if (!name.isEmpty()) families.add(name);
                                 }
                             } catch (Exception e) {
-                                android.util.Log.w("hibiki-fonts", "Failed to parse " + path, e);
+                                android.util.Log.w("fushi-fonts", "Failed to parse " + path, e);
                             }
                         }
                         List<Map<String, Object>> entries = new ArrayList<>(families.size());
@@ -1095,7 +1105,7 @@ public class MainActivity extends AudioServiceActivity {
                             entry.put("family", family);
                             entries.add(entry);
                         }
-                        android.util.Log.d("hibiki-fonts", "Found " + entries.size() + " font families");
+                        android.util.Log.d("fushi-fonts", "Found " + entries.size() + " font families");
                         new Handler(Looper.getMainLooper()).post(() -> result.success(entries));
                     });
                 } else {
@@ -1217,41 +1227,6 @@ public class MainActivity extends AudioServiceActivity {
                     default:
                         result.notImplemented();
                         break;
-                }
-            });
-
-        // TODO-1232 A3: render-backend experiment toggle. Dart writes the flag
-        // here; MainActivity.getFlutterShellArgs reads it at the NEXT launch to
-        // decide whether to disable Impeller (Skia fallback). Persisted to a
-        // native prefs file this app owns so it is readable pre-engine.
-        new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(),
-                ChannelNames.RENDER)
-            .setMethodCallHandler((call, result) -> {
-                switch (call.method) {
-                    case "isImpellerDisabled":
-                        // TODO-1232: return the RAW tri-state (null = never set);
-                        // Dart applies the platform default so the toggle and the
-                        // engine-start decision (getFlutterShellArgs ->
-                        // isImpellerDisabledPref) agree on "unset -> Skia on Android".
-                        result.success(getImpellerDisabledRawPref());
-                        break;
-                    case "setImpellerDisabled": {
-                        final Object arg = call.arguments;
-                        if (!(arg instanceof Boolean)) {
-                            result.error("INVALID_ARG",
-                                "setImpellerDisabled requires a boolean", null);
-                            break;
-                        }
-                        getSharedPreferences(PreferenceKeys.FILE_RENDER, MODE_PRIVATE)
-                                .edit()
-                                .putBoolean(PreferenceKeys.RENDER_IMPELLER_DISABLED,
-                                        (Boolean) arg)
-                                .apply();
-                        result.success(null);
-                        break;
-                    }
-                    default:
-                        result.notImplemented();
                 }
             });
     }

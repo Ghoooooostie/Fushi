@@ -4,13 +4,31 @@ import 'dart:io';
 import 'package:ffi/ffi.dart';
 
 DynamicLibrary _openNativeLib() {
+  // 宿主显式给了绝对路径（无头服务端按 bundle 布局 `bin/../lib/` 定位）就只认它：
+  // 找错库时宁可在这里抛出，也不悄悄退回裸名加载一份别处的旧库。
+  final String? override = FushidictsFfiBindings.libraryPathOverride;
+  if (override != null && override.isNotEmpty) {
+    return DynamicLibrary.open(override);
+  }
   if (Platform.isAndroid) return DynamicLibrary.open('libfushidicts_ffi.so');
   if (Platform.isWindows) return DynamicLibrary.open('fushidicts_ffi.dll');
   if (Platform.isMacOS) return DynamicLibrary.open('libfushidicts_ffi.dylib');
-  if (Platform.isLinux) return DynamicLibrary.open('libfushidicts_ffi.so');
+  if (Platform.isLinux) return _openLinuxBundled('libfushidicts_ffi.so');
   if (Platform.isIOS) return DynamicLibrary.process();
   throw UnsupportedError(
       'fushidicts: unsupported platform ${Platform.operatingSystem}');
+}
+
+/// Linux bundle 把随包 .so 装在 `<exe 目录>/lib/`。runner 的 RUNPATH
+/// (`$ORIGIN/lib`) 只作用于 exe 自己的直接依赖，**不**作用于 Dart VM（在
+/// libflutter_linux_gtk.so 里）发起的 `dlopen`，所以裸名加载找不到它——
+/// pdfium_dart 在 Linux 上同样按这个绝对路径加载。exe 旁没有（flutter test /
+/// 纯 Dart 宿主）时退回裸名，交给 LD_LIBRARY_PATH / 系统路径。
+DynamicLibrary _openLinuxBundled(String name) {
+  final String bundled =
+      '${File(Platform.resolvedExecutable).parent.path}/lib/$name';
+  if (File(bundled).existsSync()) return DynamicLibrary.open(bundled);
+  return DynamicLibrary.open(name);
 }
 
 // ── C struct mirrors ────────────────────────────────────────────────
@@ -84,6 +102,14 @@ final class FfiLookupResult extends Struct {
 
 final class FfiLookupResults extends Struct {
   external Pointer<FfiLookupResult> results;
+  @Int32()
+  external int count;
+}
+
+/// `fushidicts_tokenize` 的返回：每段的 UTF-16 码元数（+ 可选的每段读音）。
+final class FfiTokenizeResult extends Struct {
+  external Pointer<Int32> lengths;
+  external Pointer<Pointer<Utf8>> readings;
   @Int32()
   external int count;
 }
@@ -188,6 +214,17 @@ typedef _LookupWithOptionsDart = FfiLookupResults Function(
     int freqOrder,
     Pointer<Utf8> primaryReading);
 
+// 带 flags 的 lookup（bit0 = 中文简→繁回落）；老导出签名不动。
+typedef _LookupWithFlagsDart = FfiLookupResults Function(
+    Pointer<Void> handle,
+    Pointer<Utf8> text,
+    int maxResults,
+    int scanLength,
+    Pointer<Utf8> freqDict,
+    int freqOrder,
+    Pointer<Utf8> primaryReading,
+    int flags);
+
 typedef _FreeLookupResultsDart = void Function(Pointer<FfiLookupResults> r);
 
 typedef _GetStylesDart = FfiDictStyles Function(Pointer<Void> handle);
@@ -209,9 +246,32 @@ typedef _LookupPopupJsonDart = Pointer<Utf8> Function(Pointer<Void> handle,
 
 typedef _FreeStringDart = void Function(Pointer<Utf8> s);
 
+// [text] 是带长 UTF-8 缓冲（[textBytes] 字节，不靠结尾 NUL 定界）：Dart 字符串里
+// 合法的 U+0000 是正文的一部分（HBK-AUDIT-007）。
+typedef _TokenizeNative = FfiTokenizeResult Function(Pointer<Void> handle,
+    Pointer<Uint8> text, Int32 textBytes, Int32 scanLength, Int32 withReadings);
+typedef _TokenizeDart = FfiTokenizeResult Function(Pointer<Void> handle,
+    Pointer<Uint8> text, int textBytes, int scanLength, int withReadings);
+
+typedef _FreeTokenizeResultDart = void Function(Pointer<FfiTokenizeResult> r);
+
+typedef _MatchLengthNative = Int32 Function(
+    Pointer<Void> handle, Pointer<Utf8> text, Int32 scanLength);
+typedef _MatchLengthDart = int Function(
+    Pointer<Void> handle, Pointer<Utf8> text, int scanLength);
+
+typedef _RetainDart = int Function(Pointer<Void> handle);
+
 // ── bindings class ──────────────────────────────────────────────────
 
 class FushidictsFfiBindings {
+  /// 原生库的绝对路径覆盖（null = 各平台默认的裸名 / exe 旁 `lib/` 搜索）。
+  ///
+  /// isolate 局部：后台 isolate（`FushiDicts.importDictionary`）由调用方带过去。
+  /// 必须在首次创建绑定（首个 `FushiDicts` 实例 / 导入 / 探测）之前设好——绑定
+  /// 一旦创建就缓存，之后改它不会换库。
+  static String? libraryPathOverride;
+
   FushidictsFfiBindings() {
     _lib = _openNativeLib();
 
@@ -228,6 +288,10 @@ class FushidictsFfiBindings {
         'fushidicts_create');
     destroy = _lib.lookupFunction<Void Function(Pointer<Void>), _DestroyDart>(
         'fushidicts_destroy');
+    retain = _lib.lookupFunction<Int32 Function(Pointer<Void>), _RetainDart>(
+        'fushidicts_retain');
+    release = _lib.lookupFunction<Void Function(Pointer<Void>), _DestroyDart>(
+        'fushidicts_release');
     addTermDict = _lib.lookupFunction<_AddDictNative, _AddDictDart>(
         'fushidicts_add_term_dict');
     addFreqDict = _lib.lookupFunction<_AddDictNative, _AddDictDart>(
@@ -252,6 +316,10 @@ class FushidictsFfiBindings {
         FfiLookupResults Function(Pointer<Void>, Pointer<Utf8>, Int32, Int32,
             Pointer<Utf8>, Int32, Pointer<Utf8>),
         _LookupWithOptionsDart>('fushidicts_lookup_with_options');
+    lookupWithFlags = _lib.lookupFunction<
+        FfiLookupResults Function(Pointer<Void>, Pointer<Utf8>, Int32, Int32,
+            Pointer<Utf8>, Int32, Pointer<Utf8>, Int32),
+        _LookupWithFlagsDart>('fushidicts_lookup_with_flags');
     freeLookupResults = _lib.lookupFunction<
         Void Function(Pointer<FfiLookupResults>),
         _FreeLookupResultsDart>('fushidicts_free_lookup_results');
@@ -277,6 +345,13 @@ class FushidictsFfiBindings {
     freeString =
         _lib.lookupFunction<Void Function(Pointer<Utf8>), _FreeStringDart>(
             'fushidicts_free_string');
+    tokenize = _lib.lookupFunction<_TokenizeNative, _TokenizeDart>(
+        'fushidicts_tokenize');
+    freeTokenizeResult = _lib.lookupFunction<
+        Void Function(Pointer<FfiTokenizeResult>),
+        _FreeTokenizeResultDart>('fushidicts_free_tokenize_result');
+    matchLength = _lib.lookupFunction<_MatchLengthNative, _MatchLengthDart>(
+        'fushidicts_match_length');
   }
   late final DynamicLibrary _lib;
 
@@ -284,7 +359,14 @@ class FushidictsFfiBindings {
   late final _ProbeDictContentDart probeDictContent;
   late final _FreeImportResultDart freeImportResult;
   late final _CreateDart create;
+  /// `fushidicts_destroy` 是**退役**：还掉宿主的引用，在飞借用（[retain]）都还完才销毁。
   late final _DestroyDart destroy;
+
+  /// 借一个句柄引用（1 = 借到，0 = 已退役）。调用方必须自己仍持有一个引用。
+  late final _RetainDart retain;
+
+  /// 还一个 [retain] 借来的引用；最后一个归还时销毁句柄（解除文件映射）。
+  late final _DestroyDart release;
   late final _AddDictDart addTermDict;
   late final _AddDictDart addFreqDict;
   late final _AddDictDart addPitchDict;
@@ -294,6 +376,7 @@ class FushidictsFfiBindings {
   late final _FreeQueryResultDart freeQueryResult;
   late final _LookupDart lookup;
   late final _LookupWithOptionsDart lookupWithOptions;
+  late final _LookupWithFlagsDart lookupWithFlags;
   late final _FreeLookupResultsDart freeLookupResults;
   late final _GetStylesDart getStyles;
   late final _FreeStylesDart freeStyles;
@@ -303,6 +386,31 @@ class FushidictsFfiBindings {
   late final _FreeKanjiResultsDart freeKanjiResults;
   late final _LookupPopupJsonDart lookupPopupJson;
   late final _FreeStringDart freeString;
+  late final _TokenizeDart tokenize;
+  late final _FreeTokenizeResultDart freeTokenizeResult;
+  late final _MatchLengthDart matchLength;
+}
+
+// ── 已导入词典的 redirect_glossary.flag 迁移（按需解析） ──────────────
+
+typedef _EnsureRedirectFlagNative = Int32 Function(Pointer<Utf8> dir);
+typedef EnsureRedirectFlagDart = int Function(Pointer<Utf8> dir);
+
+/// `fushidicts_ensure_redirect_flag` 的绑定，**用到时才解析**（理由同
+/// [lookupZstdDecompressFile]：这是一次性迁移，随包旧库缺这个导出时只让迁移报
+/// 「不支持」，不能连累整套查词绑定在构造时抛）。
+///
+/// 原生语义（`query.cpp` 的 `ensure_redirect_glossary_flag`）：已有与当前 blobs.bin
+/// 大小一致的标记文件就直接读它返回；否则整本扫描（单本最多约 1 s）并写回标记。
+/// 返回 1 = 含纯重定向 glossary，0 = 不含，-1 = 读不了。不需要查询句柄。
+EnsureRedirectFlagDart? lookupEnsureRedirectFlag() {
+  try {
+    return _openNativeLib()
+        .lookupFunction<_EnsureRedirectFlagNative, EnsureRedirectFlagDart>(
+            'fushidicts_ensure_redirect_flag');
+  } on ArgumentError {
+    return null;
+  }
 }
 
 // ── zstd 文件解压（按需解析） ───────────────────────────────────────
@@ -322,6 +430,42 @@ ZstdDecompressFileDart? lookupZstdDecompressFile() {
     return _openNativeLib()
         .lookupFunction<_ZstdDecompressFileNative, ZstdDecompressFileDart>(
             'fushidicts_zstd_decompress_file');
+  } on ArgumentError {
+    return null;
+  }
+}
+
+// ── 语料词元（「我库里的例句」，按需解析） ───────────────────────────────
+
+typedef _CorpusTermsNative = Int32 Function(
+    Pointer<Void> handle,
+    Pointer<Uint8> input,
+    Int32 inputLen,
+    Int32 scanLength,
+    Pointer<Pointer<Uint8>> out,
+    Pointer<Int32> outLen);
+typedef CorpusTermsDart = int Function(
+    Pointer<Void> handle,
+    Pointer<Uint8> input,
+    int inputLen,
+    int scanLength,
+    Pointer<Pointer<Uint8>> out,
+    Pointer<Int32> outLen);
+typedef _FreeBytesNative = Void Function(Pointer<Uint8> p);
+typedef FreeBytesDart = void Function(Pointer<Uint8> p);
+
+/// `fushidicts_corpus_terms` / `fushidicts_free_bytes` 的绑定，**用到时才解析**（理由同
+/// [lookupZstdDecompressFile]：这是「我库里的例句」建索引的喂入路径，随包旧库缺这个导出
+/// 时只让建索引报不可用，不连累查词绑定）。线格式见 native/fushidicts/fushidicts_ffi.cpp。
+({CorpusTermsDart corpusTerms, FreeBytesDart freeBytes})? lookupCorpusTerms() {
+  try {
+    final DynamicLibrary lib = _openNativeLib();
+    return (
+      corpusTerms: lib.lookupFunction<_CorpusTermsNative, CorpusTermsDart>(
+          'fushidicts_corpus_terms'),
+      freeBytes: lib.lookupFunction<_FreeBytesNative, FreeBytesDart>(
+          'fushidicts_free_bytes'),
+    );
   } on ArgumentError {
     return null;
   }

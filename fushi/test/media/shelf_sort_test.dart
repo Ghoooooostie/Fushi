@@ -49,6 +49,44 @@ void main() {
       expect(naturalCompare('abc', 'abcd'), lessThan(0));
       expect(naturalCompare('第2卷·特典', '第2卷'), greaterThan(0));
     });
+
+    test('BUG-3347：全角数字与半角数字同一把数值尺（用户漫画库实际书名）', () {
+      // 「志乃と恋 ２」「志乃と恋 ４」是全角数字，「志乃と恋 3」是半角——旧实现按
+      // 码元比，'3'(0x33) < '２'(0xFF12)，排成 3 < ２ < ４。
+      final List<String> titles = <String>[
+        '志乃と恋 ４',
+        '志乃と恋 3',
+        '志乃と恋',
+        '志乃と恋 ２',
+        '志乃と恋　10',
+      ]..sort(naturalCompare);
+      expect(titles, <String>[
+        '志乃と恋',
+        '志乃と恋 ２',
+        '志乃と恋 3',
+        '志乃と恋 ４',
+        '志乃と恋　10',
+      ]);
+      expect(naturalCompare('第２卷', '第10卷'), lessThan(0));
+      expect(naturalCompare('ＡＢＣ', 'abd'), lessThan(0), reason: '全角字母同样折半角');
+    });
+  });
+
+  test('BUG-3347：书架排序键的名称取卡片显示名（改名覆盖层），不读 DB 原始列', () {
+    // 用户改名「志乃と恋 [3574f94a]」→「志乃と恋」后，按原名排序会把它排到
+    // 「志乃と恋 3」之后（'3' < '['），卡片上看就是乱序。
+    final String source = File(
+      'lib/src/pages/implementations/reader_fushi_history_page.dart',
+    ).readAsStringSync();
+    final int start = source.indexOf('ShelfSortKey _shelfGroupSortKey(');
+    expect(start, isNonNegative);
+    final String titleOf = source.substring(
+      source.indexOf('String titleOf(', start),
+      source.indexOf('int recentOf(', start),
+    );
+    expect(titleOf, contains('displayTitleForBook('));
+    expect(titleOf, isNot(contains('s.epub?.title')));
+    expect(titleOf, isNot(contains('s.srt?.title')));
   });
 
   group('compareShelfSortKeys', () {
@@ -128,6 +166,65 @@ void main() {
           0,
         );
       }
+    });
+  });
+
+  group('手动排序（排序模式拖出来的顺序）', () {
+    test('有名次按名次升序；没名次的排在前面、彼此按导入时间倒序', () {
+      final Map<String, int> ranks = <String, int>{'b': 0, 'a': 1};
+      int cmp(ShelfSortKey x, ShelfSortKey y) => compareShelfSortKeys(
+            x,
+            y,
+            ShelfSortMode.manual,
+            manualRanks: ranks,
+          );
+      expect(cmp(_key(tieKey: 'b'), _key(tieKey: 'a')), lessThan(0));
+      expect(
+        cmp(_key(tieKey: 'new', importedAt: 1), _key(tieKey: 'b')),
+        lessThan(0),
+        reason: '排好之后新导入的不沉底',
+      );
+      expect(
+        cmp(
+          _key(tieKey: 'n2', importedAt: 9),
+          _key(tieKey: 'n1', importedAt: 3),
+        ),
+        lessThan(0),
+      );
+    });
+
+    test('持久化往返保序，tieKey 里的逗号不切断', () {
+      const List<String> order = <String>['c1', 'a,b|x', 'k'];
+      final Map<String, int> ranks =
+          decodeShelfManualOrder(encodeShelfManualOrder(order));
+      expect(ranks, <String, int>{'c1': 0, 'a,b|x': 1, 'k': 2});
+      expect(decodeShelfManualOrder(''), isEmpty);
+    });
+
+    test('一次拖动：可见槽按新序回填，被筛掉的单元原位不动', () {
+      expect(
+        moveInShelfManualOrder(
+          all: <String>['a', 'h1', 'b', 'h2', 'c'],
+          visible: <String>['a', 'b', 'c'],
+          from: 0,
+          to: 2,
+        ),
+        <String>['b', 'h1', 'c', 'h2', 'a'],
+      );
+      expect(
+        moveInShelfManualOrder(
+          all: <String>['a', 'b'],
+          visible: <String>['a', 'b'],
+          from: 5,
+          to: 0,
+        ),
+        <String>['a', 'b'],
+        reason: '越界 from 原样返回',
+      );
+    });
+
+    test('fromName 认得 manual', () {
+      expect(ShelfSortMode.fromName('manual'), ShelfSortMode.manual);
     });
   });
 

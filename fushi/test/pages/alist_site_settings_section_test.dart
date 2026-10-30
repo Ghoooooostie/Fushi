@@ -7,7 +7,7 @@ import 'dart:io';
 
 import 'package:drift/drift.dart' show DatabaseConnection;
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -22,6 +22,7 @@ import 'package:fushi/src/pages/implementations/alist_site_settings_section.dart
 import 'package:fushi/utils.dart';
 
 import '../helpers/test_platform_services.dart';
+import '../helpers/glass_unwrap.dart';
 
 void main() {
   final TestWidgetsFlutterBinding binding =
@@ -29,7 +30,7 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir = Directory.systemTemp.createTempSync('hibiki_alist_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync('fushi_alist_pp');
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -54,7 +55,7 @@ void main() {
     db = FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
     prefs = PreferencesRepository(db);
     await prefs.loadFromDb();
-    storeDir = Directory.systemTemp.createTempSync('hibiki_alist_settings');
+    storeDir = Directory.systemTemp.createTempSync('fushi_alist_settings');
     appModel = AppModel(testPlatformServices())
       ..wireLocalAudioForTesting(prefsRepo: prefs, databaseDirectory: storeDir);
   });
@@ -101,6 +102,17 @@ void main() {
       appModel.mediaDiscoveryService.sources
           .whereType<AListDiscoverySource>()
           .where((AListDiscoverySource s) => s.isUserConfigured);
+
+  // 3-enoE7FpS：「显示在」没有视频（发现页下载源不收视频），设置区要指明视频的
+  // 入口在视频库的 AList 来源。
+  testWidgets('设置区写明 AList 视频的入口', (WidgetTester tester) async {
+    await pumpSection(tester);
+    expect(
+      find.byKey(const ValueKey<String>('alist-site-video-hint')),
+      findsOneWidget,
+    );
+    expect(find.text(t.discovery_alist_video_hint), findsOneWidget);
+  });
 
   testWidgets('加一个游客站：账号留空也写穿偏好，并立刻进注册表', (WidgetTester tester) async {
     await pumpSection(tester);
@@ -212,8 +224,7 @@ void main() {
     );
     expect(
       tester
-          .widget<OutlinedButton>(
-              find.byKey(const ValueKey<String>('alist-site-0-test')))
+          .widget<OutlinedButton>(glassUnwrap<OutlinedButton>(find.byKey(const ValueKey<String>('alist-site-0-test'))))
           .onPressed,
       isNull,
       reason: '配置无效时测试连接不可用',

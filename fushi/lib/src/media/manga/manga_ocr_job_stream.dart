@@ -27,7 +27,7 @@ import 'package:fushi/src/media/manga/ocr/manga_ocr_engine.dart';
 import 'package:fushi/src/media/manga/ocr/system_ocr_manga_service.dart';
 import 'package:fushi_engine/ocr/manga_ai_ocr_refiner.dart';
 import 'package:fushi_engine/ocr/manga_ocr_folder_job.dart';
-import 'package:fushi_engine/ocr/manga_ocr_model_fingerprint.dart';
+import 'package:fushi_engine/ocr/manga_ocr_local_model.dart';
 import 'package:fushi_engine/ocr/manga_ocr_pipeline.dart'
     show mangaOcrPageOrder;
 import 'package:fushi_engine/ocr/manga_ocr_service.dart';
@@ -140,7 +140,9 @@ Stream<MangaOcrBackgroundEvent> mangaOcrLocalEvents(
         )
       : null;
   final String engineSignature = serviceCachePath == null
-      ? await resolveInstalledLocalMangaOcrEngineSignature()
+      ? await resolveInstalledLocalMangaOcrEngineSignature(
+          model: spec.engines.localModel ?? kDefaultMangaOcrLocalModel,
+        )
       : p.basename(serviceCachePath);
   final Directory cacheDir = Directory(
     serviceCachePath ??
@@ -432,6 +434,8 @@ Stream<MangaOcrBackgroundEvent> mangaOcrRemoteEvents(
   if (target == null) {
     throw StateError(t.manga_remote_ocr_no_host);
   }
+  // 远程 finished 事件不带页数（done/total 恒 0）：用前面进度事件报过的总页数。
+  int pagesTotal = 0;
   await for (final MangaOcrRemoteEvent event in spec.engines.remoteRunner!.run(
     target: target,
     imageDirPath: spec.imageDirPath,
@@ -439,14 +443,18 @@ Stream<MangaOcrBackgroundEvent> mangaOcrRemoteEvents(
   )) {
     if (event.finished) {
       yield MangaOcrBackgroundEvent.finished(
-        pagesTotal: event.total,
+        pagesTotal: pagesTotal,
         resultPath: event.mangaJsonPath!,
         external: false,
       );
     } else {
+      if (event.total > 0) pagesTotal = event.total;
+      // 上传与 host 识别是两段各自从 0 数到总页数的进度：阶段必须带出去，否则
+      // 消费方只看到同一条进度走完又从 0 再走一遍（BUG-3605）。
       yield MangaOcrBackgroundEvent.progress(
         pagesDone: event.done,
         pagesTotal: event.total,
+        uploading: event.uploading,
       );
     }
   }

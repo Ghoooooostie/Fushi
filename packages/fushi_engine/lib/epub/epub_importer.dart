@@ -11,12 +11,22 @@ import 'package:fushi_engine/epub/epub_book.dart';
 import 'package:fushi_engine/sync/ttu_filename.dart';
 import 'package:fushi_engine/utils/misc/fushi_time_format.dart';
 import 'package:fushi_engine/epub/epub_parser.dart';
+import 'package:fushi_engine/epub/epub_series.dart';
 import 'package:fushi_engine/epub/epub_storage.dart';
 import 'package:fushi_engine/foundation/engine_log.dart';
 import 'package:meta/meta.dart';
 
 class EpubImporter {
   EpubImporter._();
+
+  static int _tempSeq = 0;
+
+  /// 解包临时目录名（BUG-3337）。只用毫秒戳时，同一毫秒起跑的两次导入（同时
+  /// 下载多本对端书、几本几乎同时落地）会解进**同一个** `.tmp-<ms>`，互相覆盖
+  /// 解包内容再各自搬走。进程内单调序号保证并发导入各占一个目录。
+  @visibleForTesting
+  static String nextTempDirName() =>
+      '.tmp-${DateTime.now().millisecondsSinceEpoch}-${_tempSeq++}';
 
   /// Import an EPUB file into the database.
   ///
@@ -29,8 +39,7 @@ class EpubImporter {
     required String fileName,
     DuplicatePolicy policy = const DuplicatePolicy.suffix(),
   }) async {
-    final int tempId = DateTime.now().millisecondsSinceEpoch;
-    final String tempDir = await EpubStorage.bookDirectory('.tmp-$tempId');
+    final String tempDir = await EpubStorage.bookDirectory(nextTempDirName());
 
     final _ParseResult result = await Isolate.run(() => _parseInIsolate(_ParseArgs(bytes: bytes, extractDir: tempDir)));
     return _persistParsed(
@@ -68,8 +77,7 @@ class EpubImporter {
     DuplicatePolicy policy = const DuplicatePolicy.suffix(),
     int? sourceId,
   }) async {
-    final int tempId = DateTime.now().millisecondsSinceEpoch;
-    final String tempDir = await EpubStorage.bookDirectory('.tmp-$tempId');
+    final String tempDir = await EpubStorage.bookDirectory(nextTempDirName());
 
     final _ParseResult result = await Isolate.run(() => _parseFromPathInIsolate(_ParseArgsFromPath(filePath: filePath, extractDir: tempDir)));
     return _persistParsed(
@@ -196,6 +204,9 @@ class EpubImporter {
           // v115：OPF dc:identifier 里校验通过的 ISBN（已规范成 ISBN-13），排行榜
           // 作品匹配的强 ID。没有合法 ISBN → NULL。
           isbn: book.isbn != null ? Value(book.isbn) : const Value.absent(),
+          // n4KC1azJvw：OPF 声明的系列（没有也写类型标记，存量回填据此跳过）。
+          // 书架系列归组优先认它，标题启发式只兜底。
+          sourceMetadata: Value(encodeEpubSeriesMetadata(book.series)),
         ),
       );
 
@@ -273,8 +284,7 @@ class EpubImporter {
     required String epubFilePath,
     required String extractDir,
   }) async {
-    final int tempId = DateTime.now().millisecondsSinceEpoch;
-    final String tempDir = await EpubStorage.bookDirectory('.tmp-$tempId');
+    final String tempDir = await EpubStorage.bookDirectory(nextTempDirName());
     try {
       final _ParseResult result = await Isolate.run(() => _parseFromPathInIsolate(_ParseArgsFromPath(filePath: epubFilePath, extractDir: tempDir)));
       // chaptersJson / coverHref 都是**相对**解压根的路径，先算再搬位置等价。

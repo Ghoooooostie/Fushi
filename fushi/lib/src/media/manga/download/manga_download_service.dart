@@ -19,8 +19,11 @@
 /// （BUG-1433 的「就地重试不新建行」语义）。
 ///
 /// **合规**：本服务**不**挂 `StoreRestrictedCapability.downloads`——互联对端漫画
-/// 在 iOS 是保留的在线源，改成必须下载后读，若下载被门挡住就是死路。Mihon /
-/// Aidoku 入口继续受 `onlineMangaSource` 门控（iOS 无入口）。
+/// 在 iOS 是保留的在线源，改成必须下载后读，若下载被门挡住就是死路。Mihon
+/// 入口继续受 `onlineMangaSource` 门控（iOS 无入口）。Kavita 按运行时问用户自配
+/// 服务器能力（直读与下载 iOS 都保留，2026-10-27 用户拍板），判据收在
+/// `online_manga_download_gate.dart`，[MangaDownloadService.enqueueChapter] 再判
+/// 一次兜住所有入队路径（作品页 / 阅读器 / 订阅自动下载 / 下载中心）。
 library;
 
 import 'dart:async';
@@ -39,6 +42,7 @@ import 'package:fushi/src/media/manga/library/online_manga_library_entry.dart';
 import 'package:fushi/src/media/manga/library/online_manga_library_service.dart';
 import 'package:fushi/src/media/manga/library/online_manga_runtime_adapter.dart';
 import 'package:fushi/src/media/manga/download/manga_download_sidecar.dart';
+import 'package:fushi/src/media/manga/download/online_manga_download_gate.dart';
 import 'package:fushi/src/media/manga/manga_json_writeback.dart';
 import 'package:fushi/src/media/manga/mihon/manga_page_provider.dart';
 import 'package:fushi/src/media/manga/online/mokuro_moe_volume_downloader.dart';
@@ -344,6 +348,9 @@ class MangaDownloadService {
     required OnlineMangaChapter chapter,
     required bool autoOcr,
   }) async {
+    if (!onlineMangaChapterDownloadsAvailable(entry.runtime)) {
+      throw StateError('Chapter downloads are unavailable on this platform');
+    }
     final String bookKey = OnlineMangaLibraryService.bookKeyOf(entry);
     final String jobId = mangaDownloadJobId(
       kind: MangaDownloadJobKind.chapter,
@@ -948,7 +955,13 @@ class MangaDownloadService {
   /// 续跑时找磁盘上已落地的第 [index] 页（任意扩展名，`.tmp` 除外，空文件不算）。
   Future<_PageFile?> _existingPageFile(Directory images, int index) async {
     final String stem = _pageStem(index);
-    for (final String ext in const <String>['.jpg', '.png', '.webp', '.gif']) {
+    for (final String ext in const <String>[
+      '.jpg',
+      '.png',
+      '.webp',
+      '.gif',
+      '.avif',
+    ]) {
       final File file = File(p.join(images.path, '$stem$ext'));
       if (await file.exists() && await file.length() > 0) {
         return _PageFile(
@@ -968,6 +981,10 @@ class MangaDownloadService {
         return '.webp';
       case 'image/gif':
         return '.gif';
+      case 'image/avif':
+        // 以前落进 default 存成 `.jpg`：WebView 按扩展名给 image/jpeg、导入白名单也照旧，
+        // 但内容其实是 AVIF，换扩展名就能对上真实格式。
+        return '.avif';
       default:
         return '.jpg';
     }

@@ -8,13 +8,28 @@ import 'package:flutter/foundation.dart';
 /// 用户库里的 `sourceMetadata` JSON。
 enum OnlineMangaRuntimeKind {
   mihon('mihon'),
+
+  /// 已移除的 Aidoku 运行时。宿主与源代码已整体删除，枚举值只为旧版本留下的
+  /// 书架条目保留（wire 值已进用户库，冻结）；分派到
+  /// `LegacyAidokuLibraryAdapter`，一律回报不可用。
   aidoku('aidoku'),
 
   /// 已配对的互联对端（把对端漫画库当成一个源，按页在线读）。
   ///
   /// 它没有「扩展包」，`extensionPackage` 恒是 [kInterconnectMangaPackage]、
   /// `sourceId` 恒是对端库那一维的常量，`seriesKey` = 对端 `bookKey`。
-  interconnect('interconnect');
+  interconnect('interconnect'),
+
+  /// 网页漫画：在 app 内浏览器里打开的漫画站章节页，扫图后交给阅读器。
+  ///
+  /// 没有扩展包，`extensionPackage` 恒是 [kWebComicMangaPackage]、`sourceId` 是
+  /// 站点 host，`seriesKey` 是站点规则推出的作品身份（推不出时 = 章节 URL）。
+  /// 章节 `raw` 存章节页 URL、扫到的图、上下章链接与取图请求头。
+  web('web'),
+
+  /// 用户自配的 Kavita 服务器（按章在线读 CBZ）。`extensionPackage` 恒是
+  /// `kKavitaMangaPackage`、`sourceId` = 服务器配置 id、`seriesKey` = Kavita seriesId。
+  kavita('kavita');
 
   const OnlineMangaRuntimeKind(this.wireValue);
 
@@ -45,10 +60,15 @@ const String kInterconnectMangaPackage = 'fushi.interconnect';
 /// ⚠️ 同样已进 bookKey，**永不可改**。
 const String kInterconnectMangaSourceId = 'library';
 
+/// 网页漫画在书架身份里占的「扩展包」位（同 [kInterconnectMangaPackage] 的理由）。
+///
+/// ⚠️ 值进 bookKey 与磁盘目录名，**永不可改**。
+const String kWebComicMangaPackage = 'fushi.web';
+
 /// 归一化后的章节。
 ///
 /// [raw] 保留**运行时原生 payload**，因为翻页最终还是要把它交回
-/// `MihonRuntime.getPages` / `AidokuRuntime.getPages`。归一化只覆盖「展示 +
+/// 运行时（如 `MihonRuntime.getPages`）。归一化只覆盖「展示 +
 /// 身份」这几个字段：如果把 raw 丢掉换成完全结构化的模型，每加一个源就要
 /// 在中间层补一次字段映射，而中间层根本不需要理解那些字段。
 @immutable

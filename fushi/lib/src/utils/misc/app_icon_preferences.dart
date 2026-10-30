@@ -4,6 +4,8 @@ import 'package:flutter/foundation.dart' show ValueNotifier, immutable;
 import 'package:flutter/painting.dart'
     show AssetImage, FileImage, ImageProvider, ResizeImage;
 import 'package:flutter/services.dart' show ByteData, rootBundle;
+import 'package:fushi/src/utils/components/accent_logo_image.dart';
+import 'package:fushi/src/utils/misc/logo_accent_tint.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -31,6 +33,11 @@ const String customIconKey = 'custom';
 /// 侧栏品牌位最大仅约 48 逻辑像素；给高 DPI 留足余量，但绝不把用户选择的
 /// 8K/相机原图整帧解码进 Flutter ImageCache。
 const int appIconDecodePixelWidth = 256;
+
+/// 用户自选图标在裁剪阶段的长边上限（像素）。各端实际用到的最大尺寸是
+/// Android 快捷方式 512px、Windows 窗口图标 256px，1024 留足余量；不再把整张
+/// 相机原图按全分辨率解码、裁剪、编码再交给原生（BUG-3601）。
+const int appIconSourceMaxPixels = 1024;
 
 /// 当前真正生效的应用图标。
 ///
@@ -91,7 +98,14 @@ AppIconSelection resolveAppIconSelection({
 
 /// 当前选择对应的 Flutter 图片源。组件和启动预缓存共用这个映射，保证窗口恢复与
 /// 侧栏显示不会再次分叉。
-ImageProvider<Object> appIconImageProvider(AppIconSelection selection) {
+///
+/// [tint]（由当前主题 primary 推出）给了就让内置吉祥物图标跟随强调色
+/// （[tintedLogoImageProvider]；基线紫下仍是原 [AssetImage]）。用户自定义的图片
+/// 永远原样显示，不换色。
+ImageProvider<Object> appIconImageProvider(
+  AppIconSelection selection, {
+  LogoAccentTint? tint,
+}) {
   if (selection.usesCustomFile) {
     return ResizeImage(
       FileImage(File(selection.customPath!)),
@@ -99,9 +113,14 @@ ImageProvider<Object> appIconImageProvider(AppIconSelection selection) {
       allowUpscaling: false,
     );
   }
-  return AssetImage(
-    windowIconAssetForPreset(selection.presetKey) ??
-        presetIconAssets['default']!,
+  final String asset =
+      windowIconAssetForPreset(selection.presetKey) ??
+      presetIconAssets['default']!;
+  if (tint == null) return AssetImage(asset);
+  return tintedLogoImageProvider(
+    asset,
+    tint: tint,
+    decodeWidth: appIconDecodePixelWidth,
   );
 }
 

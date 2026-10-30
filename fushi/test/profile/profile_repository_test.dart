@@ -4,6 +4,8 @@ import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/profile/profile_repository.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
+import 'package:fushi/src/srs/srs_providers.dart'
+    show kSrsLapisMigrationReminderPrefKey;
 import 'package:fushi_anki/fushi_anki.dart';
 import 'package:fushi_core/fushi_core.dart';
 
@@ -85,6 +87,21 @@ Future<Map<String, DictionaryMetaRow>> _dictByName(FushiDatabase db) async {
 }
 
 void main() {
+  test('BUG-3784：两个仓储实例并发 ensureDefaultProfile 只建一个 Default、不撞唯一约束', () async {
+    final FushiDatabase db = await _openDb();
+    // 视图模型首次加载与控制通道 / AI 的 reload 各拿一个实例，同时跑。
+    await Future.wait(<Future<void>>[
+      _repo(db).ensureDefaultProfile(),
+      _repo(db).ensureDefaultProfile(),
+      _repo(db).ensureDefaultProfile(),
+    ]);
+    final List<ProfileRow> profiles = await db.getAllProfiles();
+    expect(profiles.map((ProfileRow p) => p.name), <String>['Default']);
+    // 合并只管在途的那次：跑完之后再调照常重新检查（不缓存结果）。
+    await _repo(db).ensureDefaultProfile();
+    expect(await db.getAllProfiles(), hasLength(1));
+  });
+
   group('ProfileRepository orchestration', () {
     test('snapshot + apply round-trips non-excluded prefs', () async {
       final db = await _openDb();
@@ -207,6 +224,24 @@ void main() {
       expect(await db.getPref('font_size'), '16'); // restored over live 99
       expect(await db.getPref('stray_key'), isNull); // pruned (not in snapshot)
       expect(await db.getPref('active_profile_id'), '7'); // excluded → kept
+    });
+
+    test('切到老 Profile 不会删掉旧 Lapis 迁移横幅的「不再提醒」', () async {
+      final db = await _openDb();
+      final repo = _repo(db);
+      // 老 Profile 的快照建于用户点「不再提醒」之前。
+      final pid = await repo.createProfile('A');
+      await db.setPref('font_size', '16');
+      await repo.snapshotCurrentSettings(pid);
+
+      await db.setPref(kSrsLapisMigrationReminderPrefKey, 'false');
+      await repo.snapshotCurrentSettings(await repo.createProfile('B'));
+
+      await repo.applyProfile(pid);
+
+      expect(await db.getPref(kSrsLapisMigrationReminderPrefKey), 'false');
+      expect(await _prefKeys(db, pid),
+          isNot(contains(kSrsLapisMigrationReminderPrefKey)));
     });
 
     test(
@@ -754,6 +789,56 @@ void main() {
       expect(row.type, 'kanji', reason: 'type 是安装事实');
       expect(row.metadataJson, '{"live":2}',
           reason: 'metadataJson 会被重导/在线更新整体重建，快照不得回写');
+    });
+
+    test(
+        'BUG-3573: 混合词典汉字部分的开关 / 位置跟 profile 走，'
+        'metadataJson 其余安装事实保持 live 值', () async {
+      final db = await _openDb();
+      final repo = _repo(db);
+      final pidA = await repo.createProfile('A');
+      final pidB = await repo.createProfile('B');
+
+      Future<void> seed(Map<String, String> metadata) =>
+          db.upsertDictionaryMeta(DictionaryMetadataCompanion(
+            name: const Value('Mixed'),
+            formatKey: const Value('yomitan'),
+            order: const Value(0),
+            type: const Value('term'),
+            metadataJson: Value(jsonEncode(metadata)),
+            hiddenLanguagesJson: const Value('[]'),
+            collapsedLanguagesJson: const Value('[]'),
+          ));
+      Future<Map<String, dynamic>> liveMeta() async =>
+          jsonDecode((await _dictByName(db))['Mixed']!.metadataJson)
+              as Map<String, dynamic>;
+
+      // A：汉字部分关掉、排到第 3 位。B：默认（两键都没有）。
+      await seed(<String, String>{
+        'hasKanji': 'true',
+        'kanjiHidden': 'true',
+        'kanjiOrder': '3',
+      });
+      await repo.snapshotCurrentSettings(pidA);
+      await seed(<String, String>{'hasKanji': 'true'});
+      await repo.snapshotCurrentSettings(pidB);
+
+      // 之后在线更新重建了 metadata（安装事实变了），当前停在 B。
+      await seed(<String, String>{'hasKanji': 'true', 'revision': 'v2'});
+
+      await repo.applyProfile(pidA);
+      Map<String, dynamic> live = await liveMeta();
+      expect(live['kanjiHidden'], 'true', reason: 'A 的汉字部分开关回到 A');
+      expect(live['kanjiOrder'], '3');
+      expect(live['revision'], 'v2', reason: '其余键是安装事实，不被旧快照盖回去');
+
+      await repo.applyProfile(pidB);
+      live = await liveMeta();
+      expect(live.containsKey('kanjiHidden'), isFalse,
+          reason: 'B 没关过汉字部分：切回 B 必须恢复默认，而不是沿用 A 的');
+      expect(live.containsKey('kanjiOrder'), isFalse);
+      expect(live['revision'], 'v2');
+      expect(live['hasKanji'], 'true');
     });
 
     test('order change follows profile switch', () async {

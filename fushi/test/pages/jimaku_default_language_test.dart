@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:drift/drift.dart' hide isNull;
 import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
@@ -10,14 +10,17 @@ import 'package:http/testing.dart';
 import 'package:fushi_core/fushi_core.dart';
 
 import 'package:fushi/i18n/strings.g.dart';
+import 'package:fushi_engine/media/torrent/bt_site_config.dart';
 import 'package:fushi_engine/media/torrent/anime_download_config.dart';
 import 'package:fushi_engine/media/torrent/nyaa_client.dart';
 import 'package:fushi/src/media/video/anilist_client.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/pages/implementations/anime_download_dialog.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 
 import '../helpers/test_platform_services.dart';
+import '../helpers/glass_unwrap.dart';
 
 /// 「设置 → 视频 → 字幕 → 默认字幕语言」的生效链路专项测试
 /// （`settings_schema_coverage_test` 的 `kCoveredElsewhere` 指向本文件）。
@@ -57,6 +60,18 @@ class _FakeAppModel extends AppModel {
   _FakeAppModel({required this.defaultLanguage})
       : super(testPlatformServices());
 
+  // Fushi 不内置 BT 站：番剧选种走用户添加的 Nyaa 式站点。
+  @override
+  List<BtSiteConfig> get btSites => <BtSiteConfig>[
+    BtSiteConfig(
+      id: 'test-anime-site',
+      baseUrl: Uri.parse('https://nyaa.si'),
+      format: BtSiteFormat.nyaa,
+      domains: const <BtSiteDomain>{BtSiteDomain.anime},
+      nyaaCategories: const <BtSiteDomain, String>{BtSiteDomain.anime: '1_0'},
+    ),
+  ];
+
   final String defaultLanguage;
 
   @override
@@ -74,6 +89,10 @@ class _FakeAppModel extends AppModel {
 
   @override
   bool get torrentUploadIntroShown => true;
+
+  // BT 前的 P2P 说明不在这些用例的范围里。
+  @override
+  bool get p2pDownloadNoticeDismissed => true;
 
   @override
   Future<http.Client> createDownloadHttpClient() async =>
@@ -191,13 +210,13 @@ Future<void> _pumpDialog(WidgetTester tester, String language) async {
   ));
   await tester.pumpAndSettle();
   // 触发一次字幕搜索，语言选择器才会出现（它依赖搜到的条目）。
-  await tester.tap(find.byIcon(Icons.search).last);
+  await tester.tap(find.byIcon(FushiIcons.search).last);
   await tester.pumpAndSettle();
 }
 
 bool _chipSelected(WidgetTester tester, String label) {
   final Iterable<ChoiceChip> chips = tester
-      .widgetList<ChoiceChip>(find.byType(ChoiceChip))
+      .widgetList<ChoiceChip>(glassUnwrapAll<ChoiceChip>(find.byType(ChoiceChip)))
       .where((ChoiceChip c) => (c.label as Text).data == label);
   expect(chips, isNotEmpty, reason: '语言 chip「$label」应存在');
   return chips.first.selected;

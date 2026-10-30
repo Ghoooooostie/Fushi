@@ -38,16 +38,16 @@ class AppleSpeechTranscriptionService extends AsrTranscriptionService {
   AppleSpeechTranscriptionService({
     AppleSpeechPlatform? platform,
     Future<Directory> Function()? jobsRoot,
-  })  : _platform = platform ?? MethodChannelAppleSpeech(),
-        _jobsRootOverride = jobsRoot,
-        super(
-          // 父类构造要一个 backend，但本服务把每一个会用到它的方法都覆写了，
-          // ONNX 那条路在这里结构上不可达（`buildFactory` 永远不会被调）。
-          backend: const AsrIsolateBackend(buildFactory: _unusedOnnxFactory),
-          // 同理：Apple 原生引擎自己做端点检测，不经本仓的 VAD 切段。父类要求
-          // 显式声明素材属性（见 AsrAudioProfile），这里填一个不会被用到的值。
-          audioProfile: AsrAudioProfile.cleanSpeech,
-        );
+  }) : _platform = platform ?? MethodChannelAppleSpeech(),
+       _jobsRootOverride = jobsRoot,
+       super(
+         // 父类构造要一个 backend，但本服务把每一个会用到它的方法都覆写了，
+         // ONNX 那条路在这里结构上不可达（`buildFactory` 永远不会被调）。
+         backend: const AsrIsolateBackend(buildFactory: _unusedOnnxFactory),
+         // 同理：Apple 原生引擎自己做端点检测，不经本仓的 VAD 切段。父类要求
+         // 显式声明素材属性（见 AsrAudioProfile），这里填一个不会被用到的值。
+         audioProfile: AsrAudioProfile.cleanSpeech,
+       );
 
   final AppleSpeechPlatform _platform;
   final Future<Directory> Function()? _jobsRootOverride;
@@ -72,11 +72,10 @@ class AppleSpeechTranscriptionService extends AsrTranscriptionService {
   Future<Directory> jobDirFor(
     List<String> audioPaths,
     AsrLanguage language,
+    {List<AsrSegmentSpan>? segments}
   ) async {
     final Directory root = await _jobsRoot();
-    return Directory(
-      p.join(root.path, appleSpeechJobId(audioPaths, language)),
-    );
+    return Directory(p.join(root.path, appleSpeechJobId(audioPaths, language)));
   }
 
   /// 纯函数：由文件名、字节数与引擎 id 派生稳定 id（与父类 `jobIdFor` 同构）。
@@ -152,6 +151,7 @@ class AppleSpeechTranscriptionService extends AsrTranscriptionService {
   Future<AsrJobState?> existingState(
     List<String> audioPaths,
     AsrLanguage language,
+    {List<AsrSegmentSpan>? segments}
   ) async {
     final Directory dir = await jobDirFor(audioPaths, language);
     final File state = File(p.join(dir.path, AsrJobFiles.state));
@@ -172,6 +172,7 @@ class AppleSpeechTranscriptionService extends AsrTranscriptionService {
   Future<String?> finishedSrtPath(
     List<String> audioPaths,
     AsrLanguage language,
+    {List<AsrSegmentSpan>? segments}
   ) async {
     final AsrJobState? state = await existingState(audioPaths, language);
     if (state == null || !state.finished) return null;
@@ -181,7 +182,11 @@ class AppleSpeechTranscriptionService extends AsrTranscriptionService {
   }
 
   @override
-  Future<void> discard(List<String> audioPaths, AsrLanguage language) async {
+  Future<void> discard(
+    List<String> audioPaths,
+    AsrLanguage language, {
+    List<AsrSegmentSpan>? segments,
+  }) async {
     final Directory dir = await jobDirFor(audioPaths, language);
     if (dir.existsSync()) await dir.delete(recursive: true);
   }
@@ -192,7 +197,17 @@ class AppleSpeechTranscriptionService extends AsrTranscriptionService {
     required AsrLanguage language,
     required AsrEncoderVariant variant,
     required AsrAccelerationPreference preference,
+    List<AsrSegmentSpan>? segments,
   }) async {
+    // 系统语音识别自己切段，没有「按给定分段识别」这条路；视频字幕管线的
+    // MOSS 分段只走 ONNX 后端，误传进来要显式失败而不是悄悄忽略分段。
+    if (segments != null) {
+      throw ArgumentError.value(
+        segments,
+        'segments',
+        'Apple speech transcription does not support caller-given segments',
+      );
+    }
     final Directory dir = await jobDirFor(audioPaths, language);
     await dir.create(recursive: true);
     return AppleSpeechRunningTranscription(
@@ -247,9 +262,9 @@ class AppleSpeechRunningTranscription implements AsrRunningTranscription {
 
   @override
   OnnxProviderResolution get encoderResolution => const OnnxProviderResolution(
-        requested: <OnnxExecutionProvider>[OnnxExecutionProvider.cpu],
-        effective: OnnxExecutionProvider.cpu,
-      );
+    requested: <OnnxExecutionProvider>[OnnxExecutionProvider.cpu],
+    effective: OnnxExecutionProvider.cpu,
+  );
 
   @override
   bool get greedyGraphAvailable => false;
@@ -288,16 +303,15 @@ class AppleSpeechRunningTranscription implements AsrRunningTranscription {
       int fileIndex,
       int processedMs,
       int totalMs,
-    ) =>
-        AsrTranscribeProgress(
-          fileIndex: fileIndex,
-          filesTotal: audioPaths.length,
-          processedMs: processedMs,
-          totalMs: totalMs,
-          speechMs: processedMs,
-          segmentsDone: cues.length,
-          elapsed: clock.elapsed,
-        );
+    ) => AsrTranscribeProgress(
+      fileIndex: fileIndex,
+      filesTotal: audioPaths.length,
+      processedMs: processedMs,
+      totalMs: totalMs,
+      speechMs: processedMs,
+      segmentsDone: cues.length,
+      elapsed: clock.elapsed,
+    );
 
     void emit(AsrTranscribeEvent event) {
       if (!events.isClosed) events.add(event);
@@ -334,9 +348,7 @@ class AppleSpeechRunningTranscription implements AsrRunningTranscription {
         );
         offsetMs += result.durationMs;
         fileDurationsMs.add(result.durationMs);
-        emit(
-          AsrTranscribeProgressEvent(progressAt(index, offsetMs, offsetMs)),
-        );
+        emit(AsrTranscribeProgressEvent(progressAt(index, offsetMs, offsetMs)));
       }
 
       if (_cancelled) {

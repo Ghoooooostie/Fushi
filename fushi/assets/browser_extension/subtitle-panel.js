@@ -124,7 +124,23 @@
     if (/(^|\.)netflix\.com$/.test(location.hostname) && m) return m[1];
     return (location.hostname + location.pathname).replace(/\|/g, '_');
   }
-  function videoEl() { return document.querySelector('video'); }
+  // 正片 <video>：video-target.js 按全屏元素 / 可见面积挑（BUG-3143/3144：第一个 <video> 常是
+  // 预告片、广告位或缩略图预览，浮层贴错元素）。契约缺席（单测壳）时回落旧取法。
+  function videoEl() {
+    if (typeof window.fushiMainVideo === 'function') {
+      var v = window.fushiMainVideo();
+      if (v) return v;
+    }
+    return document.querySelector('video');
+  }
+  // 覆盖层父级里 position:fixed 的坐标系（BUG-3143：站点给全屏容器 / body 加 transform 时
+  // fixed 的包含块不再是视口，视口坐标会整体偏移出屏）。契约缺席时恒等。
+  function fixedOriginOf(el) {
+    if (el && el.parentNode && typeof window.fushiFixedOrigin === 'function') {
+      try { return window.fushiFixedOrigin(el.parentNode); } catch (_) { /* fallthrough */ }
+    }
+    return { x: 0, y: 0, sx: 1, sy: 1 };
+  }
   function videoTimeMs() {
     var v = videoEl();
     return v && typeof v.currentTime === 'number' ? Math.round(v.currentTime * 1000) : 0;
@@ -137,34 +153,17 @@
 
   // DOM 采样 live 轨的伪语言码（content.js FUSHI_LIVE_LANG）：排序垫底 + 显示中文标签。
   var LIVE_LANG = 'live';
+  // 列表次序与活动轨判据是共享纯函数（subtitle-adapters.js，manifest 里先于本文件装入；
+  // app 内浏览器的 YouTube 页内字幕也调同一份）。
   function tracksForVideo() {
-    var store = window.fushiEpisodeCues || null;
-    var vid = videoKey();
-    var out = [];
-    if (!store || !vid) return out;
-    for (var key in store) {
-      var sep = key.indexOf('|');
-      if (sep < 0) continue;
-      if (key.slice(0, sep) !== String(vid)) continue;
-      var cues = store[key];
-      if (cues && cues.length) out.push({ lang: key.slice(sep + 1), key: key, cues: cues });
-      // BUG-2194：按需加载的占位轨（清单已到、cue 未取）也列出来，让用户能选中触发加载。
-      else if (window.fushiLazyTracks && window.fushiLazyTracks[key]) {
-        out.push({ lang: key.slice(sep + 1), key: key, cues: [], pending: true });
-      }
-    }
-    out.sort(function (a, b) {
-      // 已加载整集轨在前，占位轨其次，实时采集轨垫底。
-      var al = a.lang === LIVE_LANG ? 2 : (a.pending ? 1 : 0);
-      var bl = b.lang === LIVE_LANG ? 2 : (b.pending ? 1 : 0);
-      if (al !== bl) return al - bl;
-      return a.lang < b.lang ? -1 : (a.lang > b.lang ? 1 : 0);
-    });
-    return out;
+    return fushiListSubtitleTracks(window.fushiEpisodeCues || null, videoKey(),
+      window.fushiLazyTracks || null, LIVE_LANG);
   }
   // 占位轨被选为活动轨 → 请桥真取（同一 key 5 秒内不重复请求；取失败用户重选即可再试）。
   function requestLazyIfPending(track) {
     if (!track || !track.pending || typeof window.fushiRequestLazyTrack !== 'function') return;
+    // 手机遥控的被动轮询只读状态，不替用户去取占位轨（Netflix 取轨会临时切站点字幕）。
+    if (remote && remote.passive) return;
     var now = Date.now();
     st.lazyRequestedAt = st.lazyRequestedAt || {};
     if (now - (st.lazyRequestedAt[track.key] || 0) < 5000) return;
@@ -214,7 +213,16 @@
   // 进/退全屏常给 body 挂 transform 或 scroll-lock（position:fixed;top:-Npx）——fixed 的
   // 包含块会跟着变成那个带 transform 的祖先，视口坐标落进歪掉的坐标系，每 200ms 重测
   // 一百次也还是歪的（用户报「退出全屏字幕错位」修不尽的根因）。html 自己从不被 transform。
-  function parentForOverlay() { return document.fullscreenElement || document.documentElement; }
+  // BUG-3450：挂载点交给 video-target.js 的视频锚定（全屏元素是 <video> 时也退回 <html>——媒体
+  // 元素的子节点永远不渲染）。契约缺席（单测壳）时回落旧取法。
+  function parentForOverlay() {
+    var VA = window.fushiVideoAnchor;
+    if (VA && typeof VA.host === 'function') {
+      var h = VA.host();
+      if (h) return h;
+    }
+    return document.fullscreenElement || document.documentElement;
+  }
 
   function seekTo(ms) {
     ms = Math.max(0, Math.round(ms));
@@ -370,6 +378,8 @@
       var el = document.createElement('div');
       el.id = 'fushi-subtitle-overlay';
       el.setAttribute('data-theme', resolveTheme());
+      // 外观风格（M3E / 液态玻璃）只管拖柄 / 缩放把手这些外框件；字幕文字本身全走 --fushi-sub-*。
+      if (window.fushiTheme && typeof window.fushiTheme.stampStyle === 'function') window.fushiTheme.stampStyle(el);
       // 文字层与拖柄分开：fushiRenderCueText 会先清空目标节点再写，若直接写在根节点上，
       // 拖柄每次换句都被抹掉。拖柄用 CSS ::before 画图形，不带文本节点——content.js 的
       // fushiSubtitleCaretAtPoint 会遍历覆盖层下的所有文本节点取词，拖柄不能混进正文。
@@ -379,6 +389,10 @@
       grip.className = 'fushi-subtitle-overlay-grip';
       grip.setAttribute('title', tr('overlay_grip_title'));
       grip.setAttribute('aria-hidden', 'true');
+      // M3E 拖柄图标 drag_indicator（icons.js 内联 SVG：只有 <path>，没有文本节点，取词遍历碰不到）。
+      if (typeof window.fushiIcon === 'function') {
+        try { grip.appendChild(window.fushiIcon('drag_indicator', { size: 20 })); } catch (_) {}
+      }
       // 右下角缩放把手：与拖柄同构（::before 画图形、不带文本节点，取词遍历不会碰到它）。
       var resize = document.createElement('span');
       resize.className = 'fushi-subtitle-overlay-resize';
@@ -534,7 +548,32 @@
   function hideSubtitleOverlay() {
     st.overlayCue = null;
     st.overlayRenderedCue = null;
+    unwatchOverlay();
     if (st.overlayEl && st.overlayEl.parentNode) st.overlayEl.parentNode.removeChild(st.overlayEl);
+  }
+
+  // BUG-3450：覆盖层显示期间订阅视频锚定的帧观察——视频矩形一变（剧场模式、侧栏收起、SPA
+  // 换片、播放器自己缩放、内部滚动容器滚动）下一帧就重摆，不等 200ms tick。只重摆，不重渲染。
+  var overlayUnwatch = null;
+  function watchOverlay() {
+    if (overlayUnwatch) return;
+    var VA = window.fushiVideoAnchor;
+    if (!VA || typeof VA.watch !== 'function') return;
+    overlayUnwatch = VA.watch(function () { replaceOverlay(); });
+  }
+  function unwatchOverlay() {
+    if (!overlayUnwatch) return;
+    try { overlayUnwatch(); } catch (_) {}
+    overlayUnwatch = null;
+  }
+  function replaceOverlay() {
+    var el = st.overlayEl;
+    if (!el || !st.overlayCue || !el.parentNode) return;
+    var video = videoEl();
+    if (!video || typeof video.getBoundingClientRect !== 'function') return;
+    var rect = video.getBoundingClientRect();
+    if (!rect || rect.width <= 0 || rect.height <= 0) return;
+    placeOverlay(el, rect, currentOverlayPos());
   }
 
   function updateSubtitleOverlay(cue) {
@@ -564,6 +603,7 @@
     renderOverlayCue(cue);
     placeOverlay(el, rect, currentOverlayPos());
     applyOverlayBlur(el);
+    watchOverlay();
   }
 
   // 本刻应生效的位置：拖动中用会话里的实时值（tick 每 200ms 重摆也不会把字幕拽回原位），
@@ -591,11 +631,11 @@
     var cx = rect.left + rect.width * pos.x;
     var halfToEdge = Math.max(0, Math.min(cx, vv - cx));
     var maxW = Math.max(200, Math.min(vv * 0.94, (halfToEdge - 6) * 2));
-    el.style.left = cx + 'px';
     // 底边锚定：文本块从这条线**往上**长。旧版中心锚 84% 时，非全屏矮视频（~200px 高）会垂出
     // 视频底缘压住进度条——底锚后任何视频高度都出不了界。
-    el.style.top = (rect.top + rect.height * pos.y) + 'px';
-    el.style.maxWidth = Math.round(maxW) + 'px';
+    var anchorY = rect.top + rect.height * pos.y;
+    var origin = setOverlayPoint(el, cx, anchorY);
+    el.style.maxWidth = Math.round(maxW / origin.sx) + 'px';
     // 底板宽 / 高（外观设置 boxWidth / boxHeight，视频盒的百分比；0 = 随内容）。是视频盒的比例
     // 而非视口的，所以不能交给 CSS 百分比，随每次重摆按当前 rect 折 px；宽仍被上面的 max-width
     // 夹住，永远不出视口。subtitle-style.js 缺席（旧测试壳）时不写，观感同旧版。
@@ -603,6 +643,40 @@
       var style = currentOverlayStyle();
       window.fushiSubtitleStyle.applyBox(el, style, rect);
       fitOverlayText(el, style, rect);
+    }
+    // BUG-3450：底边锚点不许高到让文本块探出视频顶缘——与拖动时 overlayPosFromPoint 同一条
+    // 不变式，但在**摆放**这一层按实测高再守一次。分数坐标是全站共用的一份存档，任何一次在
+    // 「盒子实测比设想高」时算出的位置（站点 CSS 把底板撑成满屏高、自适应缩放压到下限仍放不下
+    // 的长句）都会把 y 存成 ≈0；不在这里夹，那份坏存档就让之后每个站点的字幕都长在视频上方、
+    // 飞出屏幕。只夹显示、不改存档：用户拖动 / 缩放时才写新位置。
+    var h = renderedOverlayHeight(el);
+    if (h > 0) {
+      var minBy = rect.top + Math.min(h, rect.height);
+      if (anchorY < minBy) setOverlayPoint(el, cx, minBy);
+    }
+  }
+
+  // 视口坐标 (x, y) = 覆盖层「水平中心 + 底边」落点。走视频锚定（挂载点 / 定位方式 / 包含块
+  // 原点一处定，见 video-target.js）；契约缺席（单测壳）时按旧的 fixed 折算。返回包含块 origin。
+  function setOverlayPoint(el, x, y) {
+    var VA = window.fushiVideoAnchor;
+    if (VA && typeof VA.placeAt === 'function') {
+      try { return VA.placeAt(el, x, y, videoEl()).origin; } catch (_) { /* fallthrough */ }
+    }
+    var origin = fixedOriginOf(el);
+    el.style.left = ((x - origin.x) / origin.sx) + 'px';
+    el.style.top = ((y - origin.y) / origin.sy) + 'px';
+    return origin;
+  }
+
+  // 覆盖层在视口坐标里的实测高（含站点包含块缩放）。量不到（测试壳 / 未排版）给 0。
+  function renderedOverlayHeight(el) {
+    if (!el || typeof el.getBoundingClientRect !== 'function') return 0;
+    try {
+      var b = el.getBoundingClientRect();
+      return b && isFinite(b.height) && b.height > 0 ? b.height : 0;
+    } catch (_) {
+      return 0;
     }
   }
 
@@ -806,7 +880,19 @@
       x: (d.left + wpx / 2 - rect.left) / rect.width,
       y: (d.top + hpx - rect.top) / rect.height,
     });
-    if (st.overlayEl && st.overlayCue) placeOverlay(st.overlayEl, rect, d.pos);
+    if (st.overlayEl && st.overlayCue) {
+      placeOverlay(st.overlayEl, rect, d.pos);
+      // BUG-3450：hpx 只是「设想的」高（min-height）。底板实测可能更高——自适应缩放压到下限
+      // 仍放不下的长句、站点 CSS 把它撑高（anichan 全屏的 `.wp-stage.fs>*{height:100%}`）。
+      // 底边锚 = 设想高时，多出来的那截全部往上长：每拖一次左上角就上移一截，在全屏里一次就把
+      // y 算成负数夹到 0（字幕长在视频顶缘上方、飞出屏幕，而这份位置是全站共用的）。
+      // 按实测高把底边重新落到「钉住的左上角 + 真实高」。
+      var realH = renderedOverlayHeight(st.overlayEl);
+      if (realH > 0 && Math.abs(realH - hpx) > 0.5) {
+        d.pos = clampOverlayPos({ x: d.pos.x, y: (d.top + realH - rect.top) / rect.height });
+        placeOverlay(st.overlayEl, rect, d.pos);
+      }
+    }
     try { e.preventDefault(); } catch (_) {}
   }
 
@@ -935,16 +1021,8 @@
   function refreshHeadless() {
     st.videoId = videoKey();
     var tracks = tracksForVideo();
-    var active = null;
-    for (var i = 0; i < tracks.length; i++) {
-      if (tracks[i].lang === st.activeLang) active = tracks[i];
-    }
-    var fullTrackArrived = st.activeLang === LIVE_LANG &&
-      tracks.length && tracks[0].lang !== LIVE_LANG;
-    if (!active || fullTrackArrived) {
-      active = tracks.length ? tracks[0] : null;
-      st.activeLang = active ? active.lang : null;
-    }
+    var active = fushiResolveActiveSubtitleTrack(tracks, st.activeLang, LIVE_LANG);
+    st.activeLang = active ? active.lang : null;
     requestLazyIfPending(active);
     var off = trackOffset(active ? active.key : null);
     st.cues = active ? shiftedCues(active.cues, off) : [];
@@ -1002,6 +1080,14 @@
     store[key] = base;
     delete st.trackOffsets[key];
     st.activeLang = label;
+    // BUG-3145：装外挂轨 = 用户明确要在这个视频上看 Fushi 字幕。字幕能力总门（SETTING_KEY，
+    // 缺省关）没开时 tick() 直接返回、覆盖层一个字都不画——从 Chrome 自己的侧边栏入口或
+    // 「查字幕」装轨都会落到这里，用户只看到「已加载 N 条」却什么都不显示，要把「Fushi 字幕」
+    // 拨关再拨开（那一下顺带写开总门）才出来。拖放入口（drop 监听）本就先开门，这里补齐其余入口。
+    if (!st.enabled) {
+      try { var gate = {}; gate[SETTING_KEY] = true; chrome.storage.local.set(gate); } catch (_) {}
+      applyEnabled(true);
+    }
     showPanel();
     toast(tr('subtitle_external_loaded', { n: base.length }));
   }
@@ -1011,7 +1097,9 @@
     if (!c) return fallback;
     if (c.state === 'yomitan-conflict') return tr('conn_yomitan_conflict', { port: c.port || 19633 });
     if (c.state === 'unauthorized') return tr('conn_unauthorized');
+    if (c.state === 'forbidden') return tr('conn_forbidden');
     if (c.state === 'offline') return tr('conn_api_off');
+    if (c.state === 'no-response') return tr('conn_no_response');
     return fallback;
   }
 
@@ -1028,6 +1116,12 @@
       st.dropHint = document.createElement('div');
       st.dropHint.id = 'fushi-subtitle-drop-hint';
       st.dropHint.textContent = tr('subtitle_drop_hint');
+      if (window.fushiTheme && typeof window.fushiTheme.stampStyle === 'function') window.fushiTheme.stampStyle(st.dropHint);
+    }
+    if (typeof st.dropHint.setAttribute === 'function') {
+      st.dropHint.setAttribute('data-theme', resolveTheme());
+      // 外观风格（液态玻璃 / M3E），与 content.js toast 同一判据。
+      st.dropHint.setAttribute('data-style', window.fushiTheme && window.fushiTheme.style === 'glass' ? 'glass' : 'm3e');
     }
     var parent = parentForOverlay();
     if (st.dropHint.parentNode !== parent) parent.appendChild(st.dropHint);
@@ -1104,6 +1198,8 @@
     seekTo(st.cues[i].startMs);
     return true;
   }
+  // 重播本句：回句首**并起播**（Dbd86l4kA-，与 App 视频页同口径：重播类动作一律起播，
+  // 只跳不播的是上一句 / 下一句）。
   function shortcutReplay() {
     if (!st.cues.length) return false;
     var now = videoTimeMs();
@@ -1111,6 +1207,13 @@
     if (idx < 0) idx = lastCueStartBefore(now);
     if (idx < 0) return false;
     seekTo(st.cues[idx].startMs);
+    var v = videoEl();
+    if (v && v.paused) {
+      try {
+        var played = v.play();
+        if (played && typeof played.catch === 'function') played.catch(function () {});
+      } catch (_) {}
+    }
     return true;
   }
   function shortcutOffset(deltaMs) {
@@ -1240,7 +1343,8 @@
       tracks: tracks.map(function (track) {
         return {
           lang: track.lang,
-          label: track.lang === LIVE_LANG ? tr('track_live_label') : track.lang,
+          label: track.lang === LIVE_LANG ? tr('track_live_label')
+            : ((window.fushiTrackLabels && window.fushiTrackLabels[track.key]) || track.lang),
           length: track.cues.length,
           pending: !!track.pending,
           signature: trackSignature(track),
@@ -1250,11 +1354,316 @@
     };
   }
 
+  // ── 播放器内嵌菜单（player-controls.js）的轨 / 偏移入口（用户群 10-09）──
+  // 与 Side Panel 消息同一份状态与执行端：选轨就是 fushiSubtitleSidePanelSelectTrack，偏移就是
+  // trackOffsets，不另起一条链路。菜单在视频画面上，所以选轨 / 填偏移是「就地看片」的入口。
+  window.fushiSubtitleTrackList = function () {
+    var state = sidePanelState(false);
+    return {
+      tracks: state.tracks,
+      active: state.activeLang,
+      offsetMs: state.offsetMs,
+      hasVideo: state.hasVideo,
+    };
+  };
+  // 选轨 = 用户明确要在这个视频上看这条 Fushi 字幕：总门没开时一并打开（同外挂轨安装）。
+  window.fushiSubtitleSelectTrack = function (lang) {
+    var wanted = String(lang || '');
+    var available = tracksForVideo();
+    var found = false;
+    for (var i = 0; i < available.length; i++) {
+      if (available[i].lang === wanted) { found = true; break; }
+    }
+    if (!found) return false;
+    st.activeLang = wanted;
+    if (!st.enabled) {
+      try { var gate = {}; gate[SETTING_KEY] = true; chrome.storage.local.set(gate); } catch (_) {}
+      applyEnabled(true);
+    } else {
+      refreshHeadless();
+    }
+    return true;
+  };
+  // 绝对偏移（毫秒）：手填数值（app 视频页同款「直接输入」），盗版源片头多出几十秒时不必
+  // 按几百下 ±0.1。0 = 复位。没有活动轨时返回 false（调用方提示，不吞）。
+  window.fushiSubtitleSetOffset = function (ms) {
+    if (!st.activeLang) refreshHeadless(); // 面板 / 侧边栏都没开过：先按同一规则挑出当前轨
+    var key = activeTrackKey();
+    var value = Math.round(Number(ms));
+    if (!key || !isFinite(value)) return false;
+    if (value === 0) delete st.trackOffsets[key];
+    else st.trackOffsets[key] = value;
+    refreshHeadless();
+    toast(tr('subtitle_offset_toast', { offset: fmtOffset(trackOffset(key)) }));
+    return true;
+  };
+
+  // ── 手机视频遥控（Fushi app 内浏览器宿主专用）──────────────────────────────
+  // app 内浏览器把「前台标签页的正片」登记成手机遥控的播放器（`fushiRemote*` 消息，app 侧
+  // web_browser_video_remote.dart）。浏览器扩展本身从不发这三条消息，所以扩展里这一节不会
+  // 被触发、零开销：视频事件监听只在第一次收到遥控消息时才挂。
+  //
+  // controlRevision 的语义与 app 原生播放器同（`VideoPlayerController.remoteControlRevision`）：
+  // 「有人在电脑前做了一次显式播放控制」（播放 / 暂停 / 拖动）就 +1，手机据此判断「查词暂停后
+  // 电脑前有没有人动过」、决定关弹窗时还续不续播。这里只计**不是遥控自己下发**的那部分
+  // （遥控下发的那次由 app 侧自己计，见 expectPlaying / expectSeek）；试听播到句尾的自动停下
+  // 也不计。
+  var remote = {
+    // remoteState 读状态期间为 true：见 requestLazyIfPending。
+    passive: false,
+    revision: 0,
+    boundVideo: null,
+    handlers: null,
+    // 遥控刚下发、尚未在视频事件上兑现的目标播放态 / seek（兑现的那一下不计数）。
+    expectPlaying: null,
+    expectSeek: false,
+    // 正在试听的区间（null = 没在试听）。
+    range: null,
+  };
+  function remotePlaying(v) {
+    return !!v && !v.paused && !v.ended;
+  }
+  function remoteStopRange(pause) {
+    var r = remote.range;
+    if (!r) return;
+    remote.range = null;
+    try { clearInterval(r.timer); } catch (_) {}
+    if (pause) remoteSetPlaying(videoEl(), false);
+  }
+  function remoteOnPlayState(playing) {
+    if (remote.expectPlaying === playing) { remote.expectPlaying = null; return; }
+    remote.expectPlaying = null;
+    remote.revision++;
+    // 电脑前有人按了播放 / 暂停：试听作废（与原生 playRangeMs「中途控制即放弃」同）。
+    remoteStopRange(false);
+  }
+  function remoteOnSeeking() {
+    if (remote.expectSeek) { remote.expectSeek = false; return; }
+    remote.revision++;
+    remoteStopRange(false);
+  }
+  function remoteHandlers() {
+    if (!remote.handlers) {
+      remote.handlers = {
+        play: function () { remoteOnPlayState(true); },
+        pause: function () { remoteOnPlayState(false); },
+        seeking: function () { remoteOnSeeking(); },
+      };
+    }
+    return remote.handlers;
+  }
+  // 换了正片元素（单页应用换集 / 换清晰度重建 <video>）就把监听挪过去。
+  function remoteWatch(v) {
+    if (remote.boundVideo === (v || null)) return;
+    var h = remoteHandlers();
+    var old = remote.boundVideo;
+    if (old && typeof old.removeEventListener === 'function') {
+      for (var k in h) { try { old.removeEventListener(k, h[k]); } catch (_) {} }
+    }
+    remote.boundVideo = v || null;
+    remote.expectPlaying = null;
+    remote.expectSeek = false;
+    if (v && typeof v.addEventListener === 'function') {
+      for (var t in h) { try { v.addEventListener(t, h[t]); } catch (_) {} }
+    }
+  }
+  function remoteSetPlaying(v, playing) {
+    if (!v) return;
+    // 只有真要翻转时才登记期望：已经是目标态时事件不会来，留着期望会吞掉下一次真手动操作。
+    if (remotePlaying(v) !== playing) remote.expectPlaying = playing;
+    try {
+      if (playing) {
+        var p = v.play();
+        if (p && typeof p.catch === 'function') {
+          p.catch(function () { if (remote.expectPlaying === true) remote.expectPlaying = null; });
+        }
+      } else {
+        v.pause();
+      }
+    } catch (_) {
+      remote.expectPlaying = null;
+    }
+  }
+  function remoteSeek(ms) {
+    // 只有真会触发 seeking 的那次才登记期望：没有正片元素时 seekTo 什么都不做，留着期望会
+    // 吞掉下一次电脑前的真手动拖动（与 remoteSetPlaying 同理）。
+    if (!videoEl()) return;
+    remote.expectSeek = true;
+    seekTo(ms);
+  }
+  // 试听：从 startMs 播到 endMs 自动停（与原生 playRangeMs 同语义）。到点的那次暂停是
+  // 试听自己的收尾，不计入 controlRevision。
+  function remotePlayRange(startMs, endMs) {
+    remoteStopRange(false);
+    var v = videoEl();
+    if (!v || !(endMs > startMs)) return false;
+    remoteSeek(startMs);
+    remoteSetPlaying(v, true);
+    var r = { start: startMs, end: endMs, landed: false, timer: null };
+    r.timer = setInterval(function () {
+      if (remote.range !== r) return;
+      var now = videoTimeMs();
+      // seek 落地前读到的还是旧位置：落进 [start-1s, end) 之后才开始判终点。
+      if (!r.landed) {
+        if (now >= r.start - 1000 && now < r.end) r.landed = true;
+        else return;
+      }
+      if (now < r.end) return;
+      remote.range = null;
+      try { clearInterval(r.timer); } catch (_) {}
+      var cur = videoEl();
+      if (cur && remotePlaying(cur)) {
+        remote.expectPlaying = false;
+        try { cur.pause(); } catch (_) { remote.expectPlaying = null; }
+      }
+    }, 40);
+    remote.range = r;
+    return true;
+  }
+  function remotePlayback() {
+    var v = videoEl();
+    remoteWatch(v);
+    var duration = v && typeof v.duration === 'number' && isFinite(v.duration) ? v.duration : 0;
+    var volume = v && typeof v.volume === 'number' ? (v.muted ? 0 : v.volume) : 0;
+    return {
+      positionMs: videoTimeMs(),
+      durationMs: Math.max(0, Math.round(duration * 1000)),
+      playing: remotePlaying(v),
+      rate: v && typeof v.playbackRate === 'number' ? v.playbackRate : 1,
+      volume: Math.max(0, Math.min(100, Math.round(volume * 100))),
+      controlRevision: remote.revision,
+      site: typeof fushiSite === 'function' ? fushiSite() : 'other',
+      title: (typeof document !== 'undefined' && document.title) || '',
+    };
+  }
+  function remoteState(includeCues) {
+    var state;
+    remote.passive = true;
+    try { state = sidePanelState(includeCues); } finally { remote.passive = false; }
+    state.remote = remotePlayback();
+    return state;
+  }
+  function remoteControl(msg) {
+    var v = videoEl();
+    remoteWatch(v);
+    if (!v) return { ok: false, error: 'no-video' };
+    var action = String(msg.action || '');
+    if (action === 'play') {
+      remoteStopRange(false);
+      remoteSetPlaying(v, true);
+    } else if (action === 'pause') {
+      remoteStopRange(false);
+      remoteSetPlaying(v, false);
+    } else if (action === 'seek') {
+      remoteStopRange(false);
+      remoteSeek(Math.max(0, Number(msg.ms) || 0));
+    } else if (action === 'volume') {
+      var n = Math.max(0, Math.min(100, Number(msg.volume) || 0));
+      try {
+        v.volume = n / 100;
+        if (n > 0 && v.muted) v.muted = false;
+      } catch (_) {}
+    } else if (action === 'playRange') {
+      if (!remotePlayRange(Number(msg.startMs) || 0, Number(msg.endMs) || 0)) {
+        return { ok: false, error: 'empty-range' };
+      }
+    } else if (action === 'stopRange') {
+      remoteStopRange(true);
+    } else if (action === 'selectTrack') {
+      // 与侧栏选轨（fushiSubtitleSidePanelSelectTrack）同一语义：只换活动轨，不动总开关。
+      var wanted = String(msg.lang || '');
+      var found = false;
+      var available = tracksForVideo();
+      for (var i = 0; i < available.length; i++) {
+        if (available[i].lang === wanted) { found = true; break; }
+      }
+      if (!found) return { ok: false, error: 'track-missing' };
+      st.activeLang = wanted;
+      // 手机明确选了这条：占位轨此刻去真取（与侧栏选轨后的下一次刷新同一条路）。
+      refreshHeadless();
+    } else {
+      return { ok: false, error: 'unknown-action' };
+    }
+    return remoteState(false);
+  }
+  // B 站可裁源的音轨直链（与 background.js 的 fushiResolveBilibili*Playurl 同两条请求）：
+  // app 宿主里本文件跑在页面主世界，带用户自己的会话取、只回传响应体。取不到 → null，
+  // app 侧按 background.js 同一规则降级（稿件让服务端自己解析、番剧不带可裁源）。
+  function remoteBilibiliPlayurl(clip) {
+    if (!clip || typeof fetch !== 'function') return Promise.resolve(null);
+    var base = 'https://api.bilibili.com';
+    var job;
+    if (clip.kind === 'bilibili-pgc') {
+      job = fetch(base + '/pgc/player/web/playurl?ep_id=' + encodeURIComponent(String(clip.id)) +
+        '&fnval=4048&fourk=1', { credentials: 'include' })
+        .then(function (r) { return r.ok ? r.text() : null; });
+    } else if (clip.kind === 'bilibili') {
+      var page = typeof clip.part === 'number' && clip.part >= 1 ? clip.part : 1;
+      job = fetch(base + '/x/web-interface/view?bvid=' + encodeURIComponent(String(clip.id)),
+        { credentials: 'include' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (view) {
+          if (!view || view.code !== 0 || !view.data) return null;
+          var pages = Array.isArray(view.data.pages) ? view.data.pages : [];
+          var entry = page <= pages.length ? pages[page - 1] : pages[0];
+          var cid = (entry && entry.cid) || view.data.cid;
+          if (!cid) return null;
+          return fetch(base + '/x/player/playurl?bvid=' + encodeURIComponent(String(clip.id)) +
+            '&cid=' + encodeURIComponent(String(cid)) + '&fnval=4048&fourk=1',
+          { credentials: 'include' })
+            .then(function (r) { return r.ok ? r.text() : null; });
+        });
+    } else {
+      return Promise.resolve(null);
+    }
+    var timeout = new Promise(function (resolve) { setTimeout(function () { resolve(null); }, 8000); });
+    return Promise.race([job.catch(function () { return null; }), timeout]).then(function (body) {
+      return typeof body === 'string' && body ? body : null;
+    });
+  }
+  // 遥控制卡要的页面侧素材：可裁原始流的身份（subtitle-providers.js fushiClipSource）、页面标题、
+  // 当前解码帧（YouTube / Netflix 不取：前者服务端从流里裁画面，后者 DRM 取不到）、B 站 playurl。
+  function remoteMineContext() {
+    var clip = typeof fushiClipSource === 'function' ? fushiClipSource() : null;
+    var out = {
+      ok: true,
+      site: typeof fushiSite === 'function' ? fushiSite() : 'other',
+      clip: clip,
+      title: (typeof document !== 'undefined' && document.title) || '',
+    };
+    var kind = clip && clip.kind;
+    if (kind !== 'youtube' && kind !== 'netflix' && typeof fushiCaptureVideoFrame === 'function') {
+      var frame = null;
+      try { frame = fushiCaptureVideoFrame(videoEl()); } catch (_) { frame = null; }
+      if (frame && frame.base64) out.screenshotBase64 = frame.base64;
+    }
+    if (kind === 'bilibili' || kind === 'bilibili-pgc') {
+      return remoteBilibiliPlayurl(clip).then(function (body) {
+        if (body) out.playurlBody = body;
+        return out;
+      });
+    }
+    return Promise.resolve(out);
+  }
+
   // 浏览器 Side Panel 与当前标签之间的唯一契约。列表 DOM 完全位于扩展页面；这里仅做
   // 序列化、seek、偏移、外挂轨安装和查词命令，不向宿主网页挂字幕列表节点。
   try {
     chrome.runtime.onMessage.addListener(function (msg, _sender, sendResponse) {
       if (!msg || typeof msg.type !== 'string') return false;
+      // app 内浏览器的手机视频遥控（见上方「手机视频遥控」一节；扩展里没人发这三条）。
+      if (msg.type === 'fushiRemoteState') {
+        sendResponse(remoteState(msg.includeCues === true));
+        return false;
+      }
+      if (msg.type === 'fushiRemoteControl') {
+        sendResponse(remoteControl(msg));
+        return false;
+      }
+      if (msg.type === 'fushiRemoteMineContext') {
+        remoteMineContext().then(sendResponse, function () { sendResponse({ ok: false }); });
+        return true;
+      }
       if (msg.type === 'fushiSubtitleSidePanelState') {
         sendResponse(sidePanelState(msg.includeCues === true));
         return false;
@@ -1279,7 +1688,12 @@
         var key = activeTrackKey();
         if (key) {
           if (msg.reset === true) delete st.trackOffsets[key];
-          else st.trackOffsets[key] = (st.trackOffsets[key] || 0) + (Number(msg.deltaMs) || 0);
+          else if (typeof msg.absoluteMs === 'number' && isFinite(msg.absoluteMs)) {
+            // 侧边栏手填偏移（与播放器菜单同一语义）：绝对值，0 = 复位。
+            var abs = Math.round(msg.absoluteMs);
+            if (abs === 0) delete st.trackOffsets[key];
+            else st.trackOffsets[key] = abs;
+          } else st.trackOffsets[key] = (st.trackOffsets[key] || 0) + (Number(msg.deltaMs) || 0);
         }
         sendResponse(sidePanelState(true));
         return false;
@@ -1339,10 +1753,27 @@
 
   document.addEventListener('fullscreenchange', function () {
     if (!st.enabled) return;
+    // 全屏切换打断进行中的拖动 / 缩放：会话里存的是旧坐标系的点，带进新画面只会把字幕甩飞。
+    endOverlayDrag(false);
+    endOverlayResize(false);
     sync();
     // 全屏切换后播放器整体挪位（body transform/滚动锁很常见）：立刻重测重摆一次，
     // 不等下一个 200ms tick——重挂父级（fsEl↔html）也在这一步完成。
     if (st.overlayCue) updateSubtitleOverlay(st.overlayCue);
+    // BUG-3143：站点常在 fullscreenchange **之后**才按新尺寸重排播放器（resize 回调 / 过渡动画），
+    // 这一刻量到的还是旧矩形；再等两帧（布局落定）按新几何重摆，并把覆盖层挪到父级最后一个
+    // 子节点——同为最高 z-index 时 DOM 靠后者在上，站点全屏后才插入的控件层不会再盖住缩放把手。
+    var settle = function () {
+      if (!st.overlayEl || !st.overlayEl.parentNode) return;
+      var parent = st.overlayEl.parentNode;
+      if (parent.lastElementChild && parent.lastElementChild !== st.overlayEl) parent.appendChild(st.overlayEl);
+      if (st.overlayCue) updateSubtitleOverlay(st.overlayCue);
+    };
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(function () { requestAnimationFrame(settle); });
+    } else {
+      settle();
+    }
   });
 
   var lastPath = location.pathname;

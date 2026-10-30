@@ -201,7 +201,7 @@ class _FakeLibraryService implements FushiLibraryHostService {
   Future<List<RemoteVideoInfo>> listVideos() async => <RemoteVideoInfo>[];
 
   @override
-  Future<bool> videoExists(String id) async => false;
+  Future<bool> videoExists(String id, {int episodeIndex = 0}) async => false;
 
   @override
   Future<void> importVideoSubtitle(File subtitleFile,
@@ -379,7 +379,7 @@ void main() {
     await backend.getRemoteLocalAudio(
       'NHK ラジオ',
       dest,
-      onProgress: progressValues.add,
+      onProgress: (double f, [int? _]) => progressValues.add(f),
     );
 
     expect(dest.readAsStringSync(), 'AUDIO:NHK ラジオ');
@@ -479,7 +479,7 @@ void main() {
     await backend.getRemoteAudiobook(
       '吾輩は猫であるAudio',
       dest,
-      onProgress: progressValues.add,
+      onProgress: (double f, [int? _]) => progressValues.add(f),
     );
 
     expect(dest.readAsStringSync(), 'AUDIOBOOK:吾輩は猫であるAudio');

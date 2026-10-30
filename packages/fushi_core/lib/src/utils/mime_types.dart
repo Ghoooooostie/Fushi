@@ -16,7 +16,7 @@
 /// 本表取 6 份覆盖面的**并集**（6 份之间无互相矛盾的映射）。前 5 份已改为直接查本表；
 /// fushi_anki 是无 fushi_core 依赖的独立模块，其副本改为本表的**镜像**，由
 /// `fushi/test/sync/mime_types_test.dart` 守卫锁定逐项一致。单词音频语境的
-/// `kAudioMimeByExtension`（hibiki `utils/misc/audio_mime.dart`，
+/// `kAudioMimeByExtension`（fushi `utils/misc/audio_mime.dart`，
 /// `.mp4/.aac/.webm → audio/*` 是刻意收窄，`audio_mime_test.dart` 锁定与本表的
 /// 分歧集合）与 manga 页 jpeg 兜底的图片服务不属本表，见各自注释。
 library;
@@ -28,6 +28,8 @@ const Map<String, String> kMimeTypeByExtension = <String, String>{
   'epub': 'application/epub+zip',
   'css': 'text/css',
   'js': 'application/javascript',
+  // ES module 脚本（app 内浏览器广告拦截按 MIME 判请求类型，缺项会把它判成 other）。
+  'mjs': 'application/javascript',
   // BUG-1199 / BUG-1203：`.htm` / `.xht` 与 `.html` / `.xhtml` 是同一类文档的合法
   // 扩展名。阅读器拦截器判「这是不是内容文档」现在以 OPF 声明的 media-type 为准
   // （`isHtmlMediaType`，见 `fushi/lib/src/epub/epub_book.dart`），本表只是 OPF
@@ -51,6 +53,7 @@ const Map<String, String> kMimeTypeByExtension = <String, String>{
   // 且无任何日志（编码器缺失有 fail-open 降级，渲染端不支持没有）。
   'avif': 'image/avif',
   'svg': 'image/svg+xml',
+  'ico': 'image/x-icon',
   // ── 字体 ──
   'woff': 'font/woff',
   'woff2': 'font/woff2',
@@ -61,6 +64,7 @@ const Map<String, String> kMimeTypeByExtension = <String, String>{
   // （`DictionaryFontCss._fontTypes`）——同一个字体文件两条注入路径 MIME 不一致，
   // 正是 `_fontFileUsable` 注释里自述禁止的那种分歧。
   'ttc': 'font/collection',
+  'eot': 'application/vnd.ms-fontobject',
   // ── 音频 ──
   'mp3': 'audio/mpeg',
   'm4a': 'audio/mp4',
@@ -77,6 +81,8 @@ const Map<String, String> kMimeTypeByExtension = <String, String>{
   'avi': 'video/x-msvideo',
   'mov': 'video/quicktime',
   'ts': 'video/mp2t',
+  // HLS 播放列表（网页视频的分片清单）。
+  'm3u8': 'application/vnd.apple.mpegurl',
   'm2ts': 'video/mp2t',
   'mts': 'video/mp2t',
   'flv': 'video/x-flv',

@@ -65,6 +65,11 @@ class _FakeLibraryService implements FushiLibraryHostService {
 
 /// ffprobe / ffmpeg 替身：探得出时长（转码闸门之一），没有内嵌字幕轨。
 class _ProbeBackend implements FfmpegBackend {
+  /// 查询类命令（BUG-2938 新增原语）：本假件不区分，交给 [run]。
+  @override
+  Future<FfmpegRunResult> runQuery(List<String> args, Duration timeout) =>
+      run(args, timeout);
+
   @override
   Future<FfmpegRunResult> run(List<String> args, Duration timeout) async =>
       FfmpegRunResult(returnCode: 0, output: '');
@@ -157,7 +162,7 @@ void main() {
     final InterconnectSyncBackend backend = await buildBackend();
     final File dest = File('${work.path}/sample.mp4');
     partOf(dest).writeAsBytesSync(source.sublist(0, 1000));
-    etagOf(dest).writeAsStringSync(videoFileEtag(lib.videoFile));
+    etagOf(dest).writeAsStringSync(await videoFileEtag(lib.videoFile));
 
     final List<int> received = <int>[];
     final List<int?> totals = <int?>[];
@@ -261,7 +266,7 @@ void main() {
     final int partLength = partOf(dest).lengthSync();
     expect(partLength, greaterThan(0));
     expect(partLength, lessThan(source.length));
-    expect(etagOf(dest).readAsStringSync(), videoFileEtag(lib.videoFile));
+    expect(etagOf(dest).readAsStringSync(), await videoFileEtag(lib.videoFile));
 
     final List<int> received = <int>[];
     await backend.downloadRemoteVideo(
@@ -323,7 +328,7 @@ void main() {
       final Uint8List source = _pattern(4096);
       await startServer(source);
       final String url = await streamUrl();
-      final String etag = videoFileEtag(lib.videoFile);
+      final String etag = await videoFileEtag(lib.videoFile);
 
       final HttpClientResponse full = await get(url);
       expect(full.statusCode, 200);

@@ -1,4 +1,6 @@
 import 'package:fushi/src/media/manga/manga_reading_mode.dart';
+import 'package:fushi/src/media/manga/manga_view_prefs.dart'
+    show kMangaSpreadOffsetDefault;
 
 /// Mihon-compatible page scaling choices.
 enum MangaScaleType { fitScreen, stretch, fitWidth, fitHeight, original, smart }
@@ -67,7 +69,6 @@ class MangaReaderPreferences {
     this.background = 'black',
     this.zoomStartPosition = 'automatic',
     this.rotation = 'free',
-    this.saveDirectory = 'chapter',
     this.zoomStart = 100,
     this.longStripSidePadding = 0,
     this.tapZones = MangaTapZonePreset.defaultZones,
@@ -115,6 +116,7 @@ class MangaReaderPreferences {
     this.colorFilterColor = '#F4ECD8',
     this.colorFilterOpacity = 20,
     this.ocrTrigger = 'automatic',
+    this.spreadOffset = kMangaSpreadOffsetDefault,
   });
 
   final MangaReadingMode mode;
@@ -123,7 +125,6 @@ class MangaReaderPreferences {
   final String background;
   final String zoomStartPosition;
   final String rotation;
-  final String saveDirectory;
   final int zoomStart;
   final int longStripSidePadding;
   final MangaTapZonePreset tapZones;
@@ -184,6 +185,9 @@ class MangaReaderPreferences {
   final int colorFilterOpacity;
   final String ocrTrigger;
 
+  /// 双页模式的跨页偏移：1 = 封面独占后再两两配对，0 = 从第一页起配对。
+  final int spreadOffset;
+
   Map<String, Object> toJson() => <String, Object>{
     'mode': mode.storageKey,
     'scaleType': scaleType.key,
@@ -191,7 +195,6 @@ class MangaReaderPreferences {
     'background': background,
     'zoomStartPosition': zoomStartPosition,
     'rotation': rotation,
-    'saveDirectory': saveDirectory,
     'zoomStart': zoomStart,
     'longStripSidePadding': longStripSidePadding,
     'tapZones': tapZones.key,
@@ -239,6 +242,7 @@ class MangaReaderPreferences {
     'colorFilterColor': colorFilterColor,
     'colorFilterOpacity': colorFilterOpacity,
     'ocrTrigger': ocrTrigger,
+    'spreadOffset': spreadOffset,
   };
 
   factory MangaReaderPreferences.fromJson(Map<String, Object?> json) {
@@ -282,11 +286,6 @@ class MangaReaderPreferences {
         'free',
         'portrait',
         'landscape',
-      }),
-      saveDirectory: text('saveDirectory', 'chapter', <String>{
-        'flat',
-        'book',
-        'chapter',
       }),
       zoomStart: number('zoomStart', 100, 50, 400),
       longStripSidePadding: number('longStripSidePadding', 0, 0, 24),
@@ -346,6 +345,7 @@ class MangaReaderPreferences {
         'automatic',
         'manual',
       }),
+      spreadOffset: number('spreadOffset', kMangaSpreadOffsetDefault, 0, 1),
     );
   }
 

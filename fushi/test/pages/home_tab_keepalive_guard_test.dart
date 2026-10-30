@@ -43,6 +43,9 @@ void main() {
     expect(literal.contains('HomeTab.browse'), isTrue,
         reason: '浏览 tab 必须保活（来源 / 发现页签挂载即对全部来源联网，'
             '切回不能丢搜索与结果再重拉；PR #1707 审查）');
+    expect(literal.contains('HomeTab.home'), isTrue,
+        reason: '首页 dashboard 必须保活（2026-10 切 tab 卡顿：不保活时每次切回都整页'
+            '重挂载、重跑整批统计聚合、重放进场动画）');
     expect(literal.contains('HomeTab.dictionaries'), isFalse,
         reason: '查词 tab 不得保活：靠 re-mount 消费桌面悬浮字幕 pending（TODO-376）');
     expect(literal.contains('HomeTab.settings'), isFalse,
@@ -58,6 +61,19 @@ void main() {
         reason: '保活 tab 必须惰性构建（访问过才建），避免启动即预拉未访问 tab 的远端');
     expect(src.contains('offstage: visible != tab'), isTrue,
         reason: '仅当前可见的保活 tab 露出，其余 Offstage 隐藏但不销毁');
+  });
+
+  test('隐藏的保活 tab 复用被藏起时构建的那份 widget（切 tab 不重建看不见的页）', () {
+    // 2026-10 切 tab 卡顿：buildBody 每次 new 页面 widget，Offstage 里看不见的
+    // 视频页 / 首页也跟着整页 build。隐藏 tab 必须走缓存，可见 tab 才重建。
+    expect(src.contains('_keepAliveTabContent(tab, visible: visible == tab)'),
+        isTrue,
+        reason: '保活 tab 内容必须经 _keepAliveTabContent 按可见性取缓存');
+    expect(src.contains('_hiddenTabContent[tab] ??= _buildTabContent(tab)'),
+        isTrue,
+        reason: '隐藏中的保活 tab 必须复用同一个 widget 实例，Flutter 才会跳过子树');
+    expect(src.contains('_hiddenTabContent.remove(tab)'), isTrue,
+        reason: '重新可见时必须丢掉缓存、按最新状态重建');
   });
 
   test('非保活 tab 仍按需构建（切走即销毁，保留挂载语义）', () {
@@ -105,19 +121,35 @@ void main() {
     final String videoSrc =
         File('lib/src/pages/implementations/home_video_page.dart')
             .readAsStringSync();
-    // 概览门控必须含 remoteVideos（否则无本地视频时整块消失）。
+    // 概览门控必须含远端条目（否则无本地视频时整块消失）。反馈 ZjKzpkfZ1N
+    // （13bf9d1b01）起首页分区吃未过滤的远端全量 `homeRemote`（首页没有筛选入口，
+    // 不能被别的分区选中的标签筛空），门控随之改成并入 homeRemote。
     expect(
-        videoSrc.contains('all.isNotEmpty || remoteVideos.isNotEmpty'), isTrue,
-        reason: 'BUG-995：概览门控必须并入 remoteVideos');
+        videoSrc.contains('all.isNotEmpty || homeRemote.isNotEmpty'), isTrue,
+        reason: 'BUG-995：概览门控必须并入远端条目（homeRemote）');
+    expect(
+        RegExp(r'final List<RemoteVideoInfo> homeRemote = <RemoteVideoInfo>\[\s*'
+                r'for \(final RemoteVideoInfo v in _visibleRemoteVideos\(')
+            .hasMatch(videoSrc),
+        isTrue,
+        reason: 'BUG-995：homeRemote 必须取自远端可见条目（_visibleRemoteVideos）');
     // _buildOverviewSection 必须接收 remoteVideos 并把它们并进概览 entries。
     expect(
         RegExp(r'_buildOverviewSection\(\s*[\s\S]*?List<RemoteVideoInfo>')
             .hasMatch(videoSrc),
         isTrue,
         reason: 'BUG-995：_buildOverviewSection 必须接收 remoteVideos 计入总数/继续观看');
-    // 远端续播卡必须存在（TODO-2486 起 hero 变体换形为「继续观看」行的远端卡，
-    // 远端续播仍走 _openRemote——只看远端视频时也有续播入口）。
-    expect(videoSrc.contains('_buildContinueRemoteCard'), isTrue,
-        reason: 'BUG-995：只看远端视频时「继续观看」行必须有远端续播卡');
+    // 远端续播卡必须存在（2026-10-28 起继续观看全在首屏 VideoContinueSpotlight，
+    // 远端条目经 _continueRemoteHero 进首屏、点卡走 _openRemote——只看远端视频时
+    // 也有续播入口）。
+    final int remoteHero = videoSrc.indexOf('_HomeHeroData _continueRemoteHero(');
+    expect(remoteHero, greaterThan(0),
+        reason: 'BUG-995：只看远端视频时首屏继续观看必须有远端续播卡');
+    expect(
+        videoSrc
+            .substring(remoteHero, videoSrc.indexOf('\n  }\n', remoteHero))
+            .contains('_openRemote('),
+        isTrue,
+        reason: 'BUG-995：远端续播卡点按走 _openRemote（流播）');
   });
 }

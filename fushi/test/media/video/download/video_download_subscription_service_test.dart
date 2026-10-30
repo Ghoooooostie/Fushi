@@ -18,6 +18,11 @@ import 'package:fushi_engine/media/video/download/video_resource_registry.dart';
 
 const int _nowAt = 1000;
 
+/// 用户 BT 站（测试数据）：provider id = `nyaa:<siteId>`，候选的 instance = siteId。
+/// 订阅行上存的仍是旧内置源写法 `nyaa`，由注册表解析到这个站。
+const String _nyaaSiteId = 'site-nyaa';
+const String _nyaaProviderId = 'nyaa:$_nyaaSiteId';
+
 Future<FushiDatabase> _openDatabase() async {
   final FushiDatabase database = FushiDatabase.forTesting(
     NativeDatabase.memory(
@@ -130,6 +135,27 @@ VideoDownloadSubscriptionService _service({
   return service;
 }
 
+/// 等订阅行到达 [predicate]。轮询只是「等事件」，正确性不依赖等待时长；
+/// 截止时间只是失败时的活性上限。
+Future<VideoDownloadSubscriptionRow> _waitForSubscription(
+  FushiDatabase database,
+  String subscriptionId,
+  bool Function(VideoDownloadSubscriptionRow row) predicate,
+) async {
+  final DateTime deadline = DateTime.now().add(const Duration(seconds: 10));
+  while (DateTime.now().isBefore(deadline)) {
+    final VideoDownloadSubscriptionRow? row =
+        await database.getVideoDownloadSubscription(subscriptionId);
+    if (row != null && predicate(row)) return row;
+    await Future<void>.delayed(const Duration(milliseconds: 10));
+  }
+  final VideoDownloadSubscriptionRow? last =
+      await database.getVideoDownloadSubscription(subscriptionId);
+  throw TimeoutException(
+    'subscription $subscriptionId did not reach expected state: $last',
+  );
+}
+
 void main() {
   test(
       'Nyaa strict rules include the selected first episode and persist outbox',
@@ -154,7 +180,7 @@ void main() {
       },
     );
     final _FakeResourceProvider provider = _FakeResourceProvider(
-      id: 'nyaa',
+      id: _nyaaProviderId,
       candidates: <VideoResourceCandidate>[
         _candidate(remoteId: 'old', episode: 1),
         _candidate(remoteId: 'wrong-group', episode: 2, group: 'Other'),
@@ -248,7 +274,7 @@ void main() {
         database: database,
         now: () => DateTime.fromMillisecondsSinceEpoch(atMs),
         provider: _FakeResourceProvider(
-          id: 'nyaa',
+          id: _nyaaProviderId,
           candidates: <VideoResourceCandidate>[
             _candidate(remoteId: 'ep-1', episode: 1),
           ],
@@ -465,7 +491,7 @@ void main() {
         autoRetryBudget: autoRetryBudget,
         now: () => DateTime.fromMillisecondsSinceEpoch(roundAt(round)),
         provider: _FakeResourceProvider(
-          id: 'nyaa',
+          id: _nyaaProviderId,
           candidates: <VideoResourceCandidate>[
             _candidate(remoteId: 'ep-1', episode: 1),
           ],
@@ -734,7 +760,7 @@ void main() {
     final VideoDownloadSubscriptionService service = _service(
       database: database,
       provider: _FakeResourceProvider(
-        id: 'nyaa',
+        id: _nyaaProviderId,
         candidates: <VideoResourceCandidate>[
           _candidate(
             remoteId: 'mushoku-iii-02',
@@ -823,7 +849,7 @@ void main() {
     final VideoDownloadSubscriptionService service = _service(
       database: database,
       provider: _FakeResourceProvider(
-        id: 'nyaa',
+        id: _nyaaProviderId,
         candidates: <VideoResourceCandidate>[
           _candidate(
             remoteId: 'duplicate-s03e02',
@@ -904,7 +930,7 @@ void main() {
       ),
     ];
     final _FakeResourceProvider provider = _FakeResourceProvider(
-      id: 'nyaa',
+      id: _nyaaProviderId,
       resultsByPage: <int, ProviderBatchResult<VideoResourceCandidate>>{
         1: ProviderBatchResult<VideoResourceCandidate>.success(firstPage),
         2: ProviderBatchResult<VideoResourceCandidate>.success(secondPage),
@@ -996,7 +1022,7 @@ void main() {
       ),
     );
     final _FakeResourceProvider provider = _FakeResourceProvider(
-      id: 'nyaa',
+      id: _nyaaProviderId,
       resultsByPage: <int, ProviderBatchResult<VideoResourceCandidate>>{
         1: ProviderBatchResult<VideoResourceCandidate>.success(repeated),
         2: ProviderBatchResult<VideoResourceCandidate>.success(repeated),
@@ -1049,7 +1075,7 @@ void main() {
           final int release = page * 100 + index;
           return _FakeResourceCandidate(
             providerId: 'nyaa',
-            instanceId: 'nyaa.si',
+            instanceId: _nyaaSiteId,
             remoteId: 'page-$page-release-$index',
             title: '[SubsPlease] Example Show - 1 [1080p]',
             infoHash: release.toRadixString(16).padLeft(40, '0'),
@@ -1063,7 +1089,7 @@ void main() {
       );
     }
     final _FakeResourceProvider provider = _FakeResourceProvider(
-      id: 'nyaa',
+      id: _nyaaProviderId,
       resultsByPage: pages,
     );
     int enqueueCount = 0;
@@ -1223,6 +1249,60 @@ void main() {
     );
   });
 
+  // 「编辑订阅」写入的标题关键词（包含全部 / 一个都不含），与版本规则叠加过滤。
+  test(
+      'title include / exclude keywords from subscription edit narrow releases',
+      () async {
+    final FushiDatabase database = await _openDatabase();
+    final int sourceId = await _insertVideoSource(database);
+    await _insertSubscription(
+      database,
+      id: 'keywords',
+      sourceId: sourceId,
+      resourceProvider: 'nyaa',
+      mediaKind: 'tv',
+      discoveryCategory: 'anime',
+      season: 1,
+      filters: <String, Object?>{
+        'strict': true,
+        'releaseGroup': 'SubsPlease',
+        'resolution': '1080p',
+        'trustedOnly': true,
+        kVideoSubscriptionTitleIncludeKey: <String>['example show'],
+        kVideoSubscriptionTitleExcludeKey: <String>['HEVC'],
+      },
+    );
+    final List<String> enqueued = <String>[];
+    final VideoDownloadSubscriptionService service = _service(
+      database: database,
+      provider: _FakeResourceProvider(
+        id: _nyaaProviderId,
+        candidates: <VideoResourceCandidate>[
+          _candidate(
+            remoteId: 'hevc',
+            episode: 1,
+            mediaTitle: '[SubsPlease] Example Show - 1 (HEVC) [1080p]',
+            seeders: 50,
+          ),
+          _candidate(remoteId: 'plain', episode: 1),
+          _candidate(
+            remoteId: 'other-show',
+            episode: 2,
+            mediaTitle: '[SubsPlease] Another Show - 2 [1080p]',
+          ),
+        ],
+      ),
+      enqueue: (VideoDownloadEnqueueRequest request) async {
+        enqueued.add(request.resource.remoteId);
+        return _persistFakeJob(database, request, 'job-${enqueued.length}');
+      },
+    );
+
+    await service.checkNow();
+
+    expect(enqueued, <String>['plain']);
+  });
+
   test('provider errors use exponential retry and redact credential URLs',
       () async {
     final FushiDatabase database = await _openDatabase();
@@ -1244,7 +1324,7 @@ void main() {
     final VideoDownloadSubscriptionService service = _service(
       database: database,
       provider: _FakeResourceProvider(
-        id: 'nyaa',
+        id: _nyaaProviderId,
         result: ProviderBatchResult<VideoResourceCandidate>.failure(
           const ExternalProviderFailure(
             providerId: 'nyaa',
@@ -1298,7 +1378,7 @@ void main() {
     final VideoDownloadSubscriptionService service = _service(
       database: database,
       provider: _FakeResourceProvider(
-        id: 'nyaa',
+        id: _nyaaProviderId,
         candidates: <VideoResourceCandidate>[
           _candidate(
             remoteId: 'revue-starlight-bd',
@@ -1362,7 +1442,7 @@ void main() {
     final VideoDownloadSubscriptionService service = _service(
       database: database,
       provider: _FakeResourceProvider(
-        id: 'nyaa',
+        id: _nyaaProviderId,
         candidates: <VideoResourceCandidate>[
           _candidate(
             remoteId: 'revue-starlight-bd',
@@ -1470,31 +1550,52 @@ void main() {
         ),
       ],
     );
-    addTearDown(provider.releaseSearch);
+    // 租约到期是注入时钟上的算术：时钟只在测试显式推进时走，心跳计时器晚到
+    // 多久（CI 满载）都跨不过租约边界——断言的是「续期发生了」，不是「调度
+    // 够快」。
+    const int leaseMs = 90;
+    int clockAt = _nowAt;
     final VideoDownloadSubscriptionService service = _service(
       database: database,
       provider: provider,
       enqueue: (VideoDownloadEnqueueRequest request) =>
           _persistFakeJob(database, request, 'lease-job'),
-      leaseDuration: const Duration(milliseconds: 90),
-      now: DateTime.now,
+      leaseDuration: const Duration(milliseconds: leaseMs),
+      now: () => DateTime.fromMillisecondsSinceEpoch(clockAt),
     );
+    // tearDown 后进先出：必须登记在 _service（其 dispose 会等在途的 check）
+    // 之后，断言失败时才先放行被挂起的搜索，而不是让 dispose 卡到测试超时。
+    addTearDown(provider.releaseSearch);
 
     final Future<void> check = service.checkNow();
     await provider.searchEntered.future.timeout(const Duration(seconds: 2));
-    await Future<void>.delayed(const Duration(milliseconds: 240));
-
-    final VideoDownloadSubscriptionRow held =
+    final VideoDownloadSubscriptionRow claimed =
         (await database.getVideoDownloadSubscription('lease-heartbeat'))!;
-    expect(held.claimedBy, 'subscription-test-worker');
-    expect(
-      held.claimExpiresAt,
-      greaterThan(DateTime.now().millisecondsSinceEpoch),
+    expect(claimed.claimedBy, 'subscription-test-worker');
+    expect(claimed.claimExpiresAt, _nowAt + leaseMs);
+
+    // 两次推进，第二次越过最初的到期点 _nowAt + leaseMs：只有心跳把租约
+    // 续到新时刻之后，worker 才仍持有它。
+    clockAt = _nowAt + 60;
+    await _waitForSubscription(
+      database,
+      'lease-heartbeat',
+      (VideoDownloadSubscriptionRow row) =>
+          row.claimExpiresAt == clockAt + leaseMs,
     );
+    clockAt = _nowAt + 120;
+    final VideoDownloadSubscriptionRow held = await _waitForSubscription(
+      database,
+      'lease-heartbeat',
+      (VideoDownloadSubscriptionRow row) =>
+          row.claimExpiresAt == clockAt + leaseMs,
+    );
+    expect(held.claimedBy, 'subscription-test-worker');
+    expect(held.claimExpiresAt, greaterThan(_nowAt + leaseMs));
     final VideoDownloadSubscriptionRow? stolen =
         await database.claimNextVideoDownloadSubscription(
       workerId: 'competing-subscription-worker',
-      nowAt: DateTime.now().millisecondsSinceEpoch,
+      nowAt: clockAt,
       leaseDurationMs: 1000,
     );
     expect(stolen, isNull);
@@ -1565,11 +1666,59 @@ void main() {
     expect(row.retryCount, 0);
     expect(row.lastError, isNull);
   });
+
+  test('BT 站来源找不到：订阅暂停在固定间隔，不指数退避、不发请求', () async {
+    final FushiDatabase database = await _openDatabase();
+    final int sourceId = await _insertVideoSource(database);
+    await _insertSubscription(
+      database,
+      id: 'no-site',
+      sourceId: sourceId,
+      // 旧内置源的持久化写法；当前没有任何 Nyaa 式用户站点。
+      resourceProvider: 'nyaa:nyaa.si',
+      mediaKind: 'tv',
+      discoveryCategory: 'anime',
+      filters: const <String, Object?>{},
+    );
+    // 注册表里只有别的格式的站点：不能被拿来顶 Nyaa 订阅。
+    final _FakeResourceProvider other = _FakeResourceProvider(
+      id: 'apibay:site-apibay',
+      candidates: <VideoResourceCandidate>[
+        _candidate(providerId: 'apibay', instanceId: 'site-apibay',
+            remoteId: 'x', episode: 1),
+      ],
+    );
+    int enqueued = 0;
+    int atMs = _nowAt;
+    final VideoDownloadSubscriptionService service = _service(
+      database: database,
+      provider: other,
+      now: () => DateTime.fromMillisecondsSinceEpoch(atMs),
+      enqueue: (VideoDownloadEnqueueRequest _) async {
+        enqueued++;
+        return 'unused';
+      },
+    );
+
+    for (int round = 0; round < 3; round++) {
+      await service.checkNow();
+      final VideoDownloadSubscriptionRow row =
+          (await database.getVideoDownloadSubscription('no-site'))!;
+      expect(row.lastError, kVideoSubscriptionBtSiteMissingError);
+      expect(isVideoSubscriptionBtSiteMissingError(row.lastError), isTrue);
+      expect(row.nextCheckAt,
+          atMs + const Duration(minutes: 15).inMilliseconds,
+          reason: '第 $round 轮：等用户加站点不是故障，间隔固定为基准间隔');
+      atMs = row.nextCheckAt! + 1;
+    }
+    expect(other.requestedPages, isEmpty, reason: '别的格式的站点不该被搜');
+    expect(enqueued, 0);
+  });
 }
 
 VideoResourceCandidate _candidate({
   String providerId = 'nyaa',
-  String instanceId = 'nyaa.si',
+  String instanceId = _nyaaSiteId,
   required String remoteId,
   int? episode,
   String? mediaTitle,
