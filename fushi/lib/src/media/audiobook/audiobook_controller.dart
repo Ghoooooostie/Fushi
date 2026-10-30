@@ -236,7 +236,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     if (_allBookCues.isEmpty) return false;
     final int idx = _allBookIndexAt(
       cues: _allBookCues,
-      audioFileIndex: _player.currentIndex ?? 0,
+      audioFileIndex: _currentFileIndex,
       effectiveMs: (posMs - delayMs.value).clamp(0, 1 << 30),
     );
     if (idx < 0 || idx == _playbackAllBookIdx) return false;
@@ -977,7 +977,7 @@ class AudiobookPlayerController extends ChangeNotifier {
       globalMs,
       _fileDurationsMs,
     );
-    final int currentIndex = _player.currentIndex ?? 0;
+    final int currentIndex = _currentFileIndex;
     if (target.fileIndex == currentIndex) {
       await _seekWithinFile(target.offsetMs);
       return;
@@ -1127,6 +1127,15 @@ class AudiobookPlayerController extends ChangeNotifier {
       _explicitSeekPlatformOp = null;
       _clearActivationRestore();
       _imageChapterPauseActive = false;
+      // 每轮载入都先清窗口状态：否则先读 TTS 再听普通有声书时 _isWindowed 会残留为真、
+      // _sourceBaseIndex 非零，普通书的索引映射会整体错位。
+      _isWindowed = false;
+      _sourceBaseIndex = 0;
+      _windowEnd = 0;
+      _ttsTotalLength = 0;
+      _ttsAllSources = null;
+      _ttsConcatSource = null;
+      _ttsWindowMaintaining = false;
 
       await _player.stop();
       _positionSub?.cancel();
@@ -1138,11 +1147,20 @@ class AudiobookPlayerController extends ChangeNotifier {
       if (audioSources != null) {
         assert(audioSources.length == audioFiles.length);
         try {
+          // TTS 朗读：只把头一窗喂给播放器（全书每句都建 child 会 OOM），
+          // 其余随播放由 [_maintainTtsWindow] 滚动补齐。
+          _isWindowed = true;
+          _sourceBaseIndex = 0;
+          _ttsTotalLength = audioSources.length;
+          _ttsAllSources = audioSources;
+          final int initialCount =
+              audioSources.length.clamp(0, _kTtsWindowSize);
+          _ttsConcatSource = ConcatenatingAudioSource(
+            children: audioSources.sublist(0, initialCount),
+          );
+          _windowEnd = initialCount;
           await _player
-              .setAudioSource(
-                ConcatenatingAudioSource(children: audioSources),
-                preload: false,
-              )
+              .setAudioSource(_ttsConcatSource!, preload: false)
               .timeout(const Duration(seconds: 60));
         } catch (e, stack) {
           debugPrint('AudiobookController.setSource(stream): $e\n$stack');
@@ -1196,9 +1214,12 @@ class AudiobookPlayerController extends ChangeNotifier {
               savedMs,
               _fileDurationsMs,
             );
+            // TTS 窗口模式：落点可能不在头一窗里（从历史位置恢复长书），先确保窗口
+            // 覆盖它，再换算成窗口内索引，否则会 seek 到越界下标。
+            final int globalTarget = await _ensureWindowContains(target.fileIndex);
             await _player.seek(
               Duration(milliseconds: target.offsetMs),
-              index: target.fileIndex,
+              index: _windowIndexOf(globalTarget),
             );
           }
         } catch (e, stack) {
@@ -1482,7 +1503,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     _clearActivationRestore();
     if (positionMs <= 0) return;
     _activationRestoreTarget = (
-      fileIndex: _player.currentIndex ?? 0,
+      fileIndex: _currentFileIndex,
       positionMs: positionMs,
     );
   }
@@ -1490,8 +1511,161 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// 播放位置的唯一读口（文件下标 + 文件内毫秒）。首次激活的落点没落定时，播放器
   /// 报的是平台载入的瞬态（0 / 还在前一个文件），一律以落点本身代替——悬浮字幕、
   /// 歌词入场锚定、跳句起点、进度条、落库都从这里取，不各读各的。
-  ({int fileIndex, int positionMs}) get _effectiveFilePosition {
+  // ── TTS 滑动窗口 ──────────────────────────────────────────────────────────
+  // 长书句子上千，把全书每句都塞进一个 ConcatenatingAudioSource 会让 ExoPlayer 在 Java
+  // 层给每个 child 建 MediaSourceHolder → 撑爆 256MB 堆 OOM 闪退。改为只把「当前句附近
+  // 的一窗」交给播放器，播放中动态在尾部补、从头部裁，内存恒定。
+  //
+  // 坐标约定（**一律换算到全书句索引再比较**，不要把局部索引和全局索引混用）：
+  //   [_sourceBaseIndex] = 窗口第 0 项的全书句索引
+  //   [_windowEnd]       = 窗口末项之后的**全书**句索引（不含）
+  //   窗口长度           = _windowEnd - _sourceBaseIndex
+  //   player.currentIndex 是局部索引；全书句索引 = _sourceBaseIndex + currentIndex
+  //
+  // 从头部裁剪时 [_windowEnd] **绝不能变**（全局末端没移动，移动的是起点）。早期实现
+  // 在这里减了 removeCount，导致 _windowEnd 落回已加载区间内部 → 下一轮把已在播放器里的
+  // 源重复 addAll → 列表无界增长、每个 positionStream tick 都增删 → CPU 打满 ANR；
+  // 同时 raw+base 指到错句，制卡音频落到另一句（BUG-3653 复发）。
+  bool _isWindowed = false;
+  int _sourceBaseIndex = 0;
+  int _windowEnd = 0;
+  int _ttsTotalLength = 0;
+  List<AudioSource>? _ttsAllSources;
+  ConcatenatingAudioSource? _ttsConcatSource;
+  bool _ttsWindowMaintaining = false;
+  static const int _kTtsWindowSize = 64;
+  static const int _kTtsWindowLookahead = 16;
+  static const int _kTtsWindowTrimKeep = 8;
+
+  /// 播放器**局部**索引 → **全书**句索引（窗口模式下所有索引换算的唯一入口）。
+  int get _currentFileIndex =>
+      _isWindowed
+          ? (_player.currentIndex ?? 0) + _sourceBaseIndex
+          : (_player.currentIndex ?? 0);
+
+  /// 全书句索引 → 播放器局部索引（显式 seek / initialIndex / 时长查表用）。
+  int _windowIndexOf(int globalIndex) =>
+      _isWindowed ? globalIndex - _sourceBaseIndex : globalIndex;
+
+  /// 窗口增删串行化：维护（positionStream）与重建（显式 seek）都改同一批字段，
+  /// 必须排队，否则 add/remove 与换源交错。
+  Future<void>? _ttsWindowMutex;
+
+  Future<T> _runWindowed<T>(Future<T> Function() op) {
+    final Future<void>? prev = _ttsWindowMutex;
+    final Completer<T> completer = Completer<T>();
+    final Future<void> myFuture = completer.future;
+    _ttsWindowMutex = myFuture;
+    (prev ?? Future<void>.value())
+        .then((_) async => completer.complete(await op()))
+        .catchError((Object e, StackTrace st) => completer.completeError(e, st));
+    return completer.future.whenComplete(() {
+      if (identical(_ttsWindowMutex, myFuture)) _ttsWindowMutex = null;
+    });
+  }
+
+  /// 确保全书句 [globalIndex] 在当前窗口内；不在则以它为中心重建。返回用于 seek 的
+  /// **全书**句索引（调用方再用 [_windowIndexOf] 换算）。
+  Future<int> _ensureWindowContains(int globalIndex) async {
+    if (!_isWindowed || _ttsAllSources == null || _ttsTotalLength == 0) {
+      return globalIndex;
+    }
+    final int clamped = globalIndex.clamp(0, _ttsTotalLength - 1);
+    if (clamped >= _sourceBaseIndex && clamped < _windowEnd) return clamped;
+    _ttsWindowMaintaining = true;
+    try {
+      await _runWindowed(() => _rebuildWindowAround(clamped));
+    } finally {
+      _ttsWindowMaintaining = false;
+    }
+    return clamped;
+  }
+
+  /// 以 [globalIndex] 为中心重建窗口。**不含**互斥/标志，调用方自行串行化
+  /// （[_maintainTtsWindow] 已在互斥内，直接调用，不可再走 [_runWindowed] 否则自等死锁）。
+  Future<void> _rebuildWindowAround(int globalIndex) async {
+    final List<AudioSource>? all = _ttsAllSources;
+    if (all == null || _ttsTotalLength == 0) return;
+    final int startBase =
+        (globalIndex - _kTtsWindowTrimKeep).clamp(0, _ttsTotalLength);
+    final int end = (startBase + _kTtsWindowSize).clamp(0, _ttsTotalLength);
+    final int len = end - startBase;
+    final int initialIndex =
+        len <= 0 ? 0 : (globalIndex - startBase).clamp(0, len - 1);
+    _sourceBaseIndex = startBase;
+    _ttsConcatSource = ConcatenatingAudioSource(
+      children: all.sublist(startBase, end),
+    );
+    _windowEnd = end;
+    await _player
+        .setAudioSource(
+          _ttsConcatSource!,
+          initialIndex: initialIndex,
+          preload: false,
+        )
+        .timeout(const Duration(seconds: 60));
+  }
+
+  /// 随播放推进补尾 / 裁头。快路径：无事可做直接返回，不让 positionStream 每帧抢互斥。
+  Future<void> _maintainTtsWindow() async {
+    if (!_isWindowed || _ttsWindowMaintaining) return;
+    final ConcatenatingAudioSource? concat = _ttsConcatSource;
+    final List<AudioSource>? all = _ttsAllSources;
+    if (concat == null || all == null) return;
+
     final int rawIndex = _player.currentIndex ?? 0;
+    final int globalCurrent = _sourceBaseIndex + rawIndex;
+    // 不变量自愈：记账一旦被破坏就重建，绝不带着坏状态继续增删（否则退化成失控循环）。
+    if (_windowEnd < _sourceBaseIndex) {
+      await _ensureWindowContains(globalCurrent);
+      return;
+    }
+    final bool needExtend =
+        globalCurrent >= _windowEnd - _kTtsWindowLookahead &&
+            _windowEnd < _ttsTotalLength;
+    final bool needTrim = rawIndex > _kTtsWindowTrimKeep;
+    if (!needExtend && !needTrim) return;
+
+    _ttsWindowMaintaining = true;
+    try {
+      await _runWindowed(() async {
+        final int cur = _player.currentIndex ?? 0;
+        final int gCur = _sourceBaseIndex + cur;
+        if (gCur >= _windowEnd - _kTtsWindowLookahead &&
+            _windowEnd < _ttsTotalLength) {
+          final int addEnd =
+              (_windowEnd + _kTtsWindowLookahead).clamp(0, _ttsTotalLength);
+          if (addEnd > _windowEnd) {
+            await concat.addAll(all.sublist(_windowEnd, addEnd));
+            _windowEnd = addEnd;
+          }
+        }
+        final int removeCount =
+            (_player.currentIndex ?? 0) - _kTtsWindowTrimKeep;
+        if (removeCount > 0) {
+          final int expectGlobal =
+              _sourceBaseIndex + (_player.currentIndex ?? 0);
+          await concat.removeRange(0, removeCount);
+          _sourceBaseIndex += removeCount;
+          // _windowEnd 保持不变（全局末端未移动）。
+          // 校验：removeRange 后 ExoPlayer 应把 currentIndex 前移 removeCount，使
+          // 「base + currentIndex」仍等于裁剪前的全书句索引。对不上说明映射已漂，
+          // 就地重建复位，绝不带着错位索引继续（制卡会取到别句的音频）。
+          final int shifted = _player.currentIndex ?? 0;
+          if (_sourceBaseIndex + shifted != expectGlobal) {
+            await _rebuildWindowAround(expectGlobal);
+          }
+        }
+      });
+    } catch (e, stack) {
+      debugPrint('AudiobookController.maintainTtsWindow: $e\n$stack');
+    } finally {
+      _ttsWindowMaintaining = false;
+    }
+  }
+
+  ({int fileIndex, int positionMs}) get _effectiveFilePosition {
+    final int rawIndex = _currentFileIndex;
     final int rawMs = _player.position.inMilliseconds;
     final ({int fileIndex, int positionMs})? target = _activationRestoreTarget;
     if (target != null &&
@@ -1534,7 +1708,7 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// 避免 just_audio 将位置重置到 0。
   Future<void> seekMs(int positionMs) async {
     await _loadReady.future;
-    _reportAudioJump(_globalBaseOfFile(_player.currentIndex ?? 0) + positionMs);
+    _reportAudioJump(_globalBaseOfFile(_currentFileIndex) + positionMs);
     await _seekWithinFile(positionMs);
   }
 
@@ -1561,7 +1735,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     if (_activationRestoreTarget != null &&
         _player.processingState != ProcessingState.loading) {
       _activationRestoreTarget = (
-        fileIndex: _player.currentIndex ?? 0,
+        fileIndex: _currentFileIndex,
         positionMs: clampedMs,
       );
     }
@@ -1585,9 +1759,11 @@ class AudiobookPlayerController extends ChangeNotifier {
       throw RangeError.value(positionMs, 'positionMs', 'Must be non-negative');
     }
     final List<IndexedAudioSource>? sequence = _player.sequence;
+    // 窗口模式下 sequence 只是当前这一窗，查时长要用窗口内下标。
+    final int localIndex = _windowIndexOf(fileIndex);
     final Duration? targetDuration =
-        sequence != null && fileIndex < sequence.length
-        ? sequence[fileIndex].duration
+        sequence != null && localIndex >= 0 && localIndex < sequence.length
+        ? sequence[localIndex].duration
         : null;
     if (targetDuration != null &&
         targetDuration.inMilliseconds > 0 &&
@@ -1653,13 +1829,32 @@ class AudiobookPlayerController extends ChangeNotifier {
     // BUG-3798：不清跨章守卫——它属于 reader 侧在飞的导航（见 [skipToCue]）。
     _currentCue = null;
     _currentCueIndex = -1;
+    // TTS 窗口模式：换声音同样只交一窗（以当前句为中心），并刷新窗口字段，
+    // 否则随后的 [_maintainTtsWindow] 会拿旧的 _ttsConcatSource 增删。
+    final ConcatenatingAudioSource nextSource;
+    if (_isWindowed) {
+      final int start =
+          (fileIndex - _kTtsWindowTrimKeep).clamp(0, audioSources.length);
+      final int end =
+          (start + _kTtsWindowSize).clamp(0, audioSources.length);
+      _sourceBaseIndex = start;
+      _ttsAllSources = audioSources;
+      _ttsTotalLength = audioSources.length;
+      nextSource = ConcatenatingAudioSource(
+        children: audioSources.sublist(start, end),
+      );
+      _ttsConcatSource = nextSource;
+      _windowEnd = end;
+    } else {
+      nextSource = ConcatenatingAudioSource(children: audioSources);
+    }
     _beginExplicitSeek(fileIndex, 0);
     try {
       await _awaitPlatformForExplicitSeek<Duration?>(
         () => _player
             .setAudioSource(
-              ConcatenatingAudioSource(children: audioSources),
-              initialIndex: fileIndex,
+              nextSource,
+              initialIndex: _windowIndexOf(fileIndex),
               initialPosition: Duration.zero,
               preload: false,
             )
@@ -1711,11 +1906,17 @@ class AudiobookPlayerController extends ChangeNotifier {
   }
 
   /// 下发显式 seek 并登记「平台尚未返回」窗口（见 [_explicitSeekPlatformPending]）。
-  Future<void> _seekPlatformForExplicitSeek(int fileIndex, int positionMs) =>
-      _awaitPlatformForExplicitSeek<void>(
-        () =>
-            _player.seek(Duration(milliseconds: positionMs), index: fileIndex),
-      );
+  Future<void> _seekPlatformForExplicitSeek(int fileIndex, int positionMs) async {
+    // TTS 窗口模式：目标句可能不在当前这一窗里（跳句 / 从历史位置恢复），先确保窗口
+    // 覆盖它（必要时重建），再换算成窗口内索引，否则会 seek 到越界下标。
+    final int globalIndex = await _ensureWindowContains(fileIndex);
+    await _awaitPlatformForExplicitSeek<void>(
+      () => _player.seek(
+        Duration(milliseconds: positionMs),
+        index: _windowIndexOf(globalIndex),
+      ),
+    );
+  }
 
   /// 显式 seek 的平台操作（seek / 整列换源）一律经这里：窗口期间产生的位置都是
   /// 操作之前的，不能作为「已到位」的证据（见 [_updateCurrentCue]）。
@@ -2068,6 +2269,8 @@ class AudiobookPlayerController extends ChangeNotifier {
           maxPeriod: _positionPollPeriod,
         )
         .listen((pos) {
+          // TTS 滑动窗口：随播放推进补尾 / 裁头。内部有快路径，无事可做立即返回。
+          unawaited(_maintainTtsWindow());
           _updateCurrentCue(pos.inMilliseconds);
         });
     // 订阅播放状态流：just_audio 内部状态翻转（包括焦点丢失、播完自动暂停）
@@ -2125,7 +2328,7 @@ class AudiobookPlayerController extends ChangeNotifier {
       // 一起，触发跨章回弹）。
       if (_explicitSeekPlatformPending) return;
       if (reachedExplicitSeekTargetForTesting(
-        currentFileIndex: _player.currentIndex ?? 0,
+        currentFileIndex: _currentFileIndex,
         posMs: posMs,
         targetFileIndex: _explicitSeekTargetFileIndex,
         targetMs: _explicitSeekTargetMs,
@@ -2144,7 +2347,7 @@ class AudiobookPlayerController extends ChangeNotifier {
       switch (classifyActivationTickForTesting(
         platformLoading: _player.processingState == ProcessingState.loading,
         durationMs: _player.duration?.inMilliseconds,
-        currentFileIndex: _player.currentIndex ?? 0,
+        currentFileIndex: _currentFileIndex,
         posMs: posMs,
         targetFileIndex: activation.fileIndex,
         targetMs: activation.positionMs,
@@ -2154,7 +2357,7 @@ class AudiobookPlayerController extends ChangeNotifier {
         case ActivationRestoreTick.unreachable:
           _clearActivationRestore();
         case ActivationRestoreTick.landed:
-          if ((_player.currentIndex ?? 0) > activation.fileIndex ||
+          if ((_currentFileIndex) > activation.fileIndex ||
               posMs >= activation.positionMs + _kActivationSettleProgressMs) {
             _clearActivationRestore();
           }
@@ -2175,10 +2378,13 @@ class AudiobookPlayerController extends ChangeNotifier {
       unawaited(_player.pause());
       if (returnTo != null) {
         unawaited(
-          _player.seek(
-            Duration(milliseconds: returnTo.positionMs),
-            index: returnTo.audioFileIndex,
-          ),
+          // 窗口模式下 audioFileIndex 是全书句索引，要换算成窗口内下标。
+          (_ensureWindowContains(returnTo.audioFileIndex).then((int global) {
+            return _player.seek(
+              Duration(milliseconds: returnTo.positionMs),
+              index: _windowIndexOf(global),
+            );
+          })),
         );
       }
       notifyListeners();
@@ -2200,7 +2406,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     // cue 时要把位置往回拨；负值相反。下界 clamp 到 0 避免负位置查询。
     // 上界不 clamp（_player.duration 可能暂未就绪），超出时 findCueIndex
     // 自行返回最后一个 cue 即可。
-    final int audioFileIndex = _player.currentIndex ?? 0;
+    final int audioFileIndex = _currentFileIndex;
     final List<AudioCue> fileCues = _chapterCuesForAudioFile(audioFileIndex);
     if (fileCues.isEmpty) return;
     final int effectiveMs = (posMs - delayMs.value).clamp(0, 1 << 30);
