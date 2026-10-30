@@ -108,7 +108,9 @@ extension _ReaderMining on _ReaderFushiPageState {
     final bool sentenceAudioUntrusted = ttsAudioRange.untrusted;
     final String? sourceUid = _bookUid;
     final int sourceOffset = sourceRange?.offset ?? _lastProgressCharOffset;
-    final CardSourceLink? sourceLink = sourceUid == null || sourceOffset < 0
+    // 非 final：拿不到句子音频时 [dropSentenceAudioLink] 会把它重建成「只记文本位置」
+    // 的版本（BUG-2196 ②），不留「有音频区间却没有音频」的不一致。
+    CardSourceLink? sourceLink = sourceUid == null || sourceOffset < 0
         ? null
         : CardSourceLink(
             kind: CardSourceKind.book,
