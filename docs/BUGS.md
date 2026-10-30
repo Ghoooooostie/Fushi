@@ -34,6 +34,13 @@
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
 > 共 3490 条。点号进各自文件。
+> 共 3259 条。点号进各自文件。
+
+| BUG | 修复 | 测试 | 标题 |
+|---|:--:|:--:|---|
+| [BUG-3653](bugs/BUG-3653-tts-mining-audio-wrong-sentence.md) | 🚧 | 🚧 | TTS 朗读制卡：句子音频按坐标定位落到另一句（两套归一化不同源） |
+| [BUG-3652](bugs/BUG-3652-tts-mining-sentence-audio-not-synthesized.md) | ✅ | ✅ | TTS 朗读制卡句子音频：未合成句被当成已存在文件喂 ffmpeg，整张卡判死 |
+> 共 3386 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|

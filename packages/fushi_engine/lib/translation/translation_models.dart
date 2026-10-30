@@ -100,9 +100,17 @@ class TranslationFailure implements Exception {
   ///
   /// 401/403（凭据失效）**不在**这个集合里——它由 [Translator.reset] 专门处理：
   /// 弃掉缓存的 JWT 重取一次，而不是盲目重试同一个必失败的请求。
+  ///
+  /// `http_429`（Too Many Requests）**必须在集合里**：网页翻译端点（彩云）的实际
+  /// 限流响应就是它，而 `_decodeBody` 抛的是拼接出来的 `http_429` 而不是字面量
+  /// `rate_limited`。漏了这一条意味着「限流一次 = 这段直接失败」，集中出现在读到
+  /// 十几段之后 —— 症状正是「翻译到一半就停了」（BUG-3369）。
   bool get isRetryable =>
       message == 'network_error' ||
       message == 'rate_limited' ||
+      message == 'http_429' ||
+      message == 'http_408' ||
+      message == 'http_425' ||
       message.startsWith('http_5');
 
   @override

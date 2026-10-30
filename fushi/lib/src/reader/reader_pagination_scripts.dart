@@ -6,6 +6,10 @@ import 'package:flutter/services.dart';
 import 'package:fushi/src/reader/reader_content_styles.dart';
 import 'package:fushi/src/reader/reader_page_turn_script.dart';
 import 'package:fushi/src/reader/reader_sentence_audio_ownership_script.dart';
+// 段落对照翻译：随页面一起注入。它是 `window.fushiTranslation` 的**唯一**定义处——
+// 各 Invocation 只是调用它，且都有存在性守卫（兜底返回 "[]"），漏了这行就会变成
+// 「开关开着却什么都没有」，且没有任何报错。
+import 'package:fushi/src/reader/reader_translation_scripts.dart';
 import 'package:fushi/src/reader/reader_sentence_audio_ruby_gap_script.dart';
 import 'package:fushi/src/reader/reader_study_unit_script.dart';
 import 'package:fushi/src/reader/reader_translation_scripts.dart';
@@ -1384,7 +1388,18 @@ window.__fushiInstallShell = function(C) {
   createWalker: function(rootNode) {
     var root = rootNode || document.body;
     return document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode: (n) => this.isFurigana(n) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+      acceptNode: (n) => {
+        if (this.isFurigana(n)) return NodeFilter.FILTER_REJECT;
+        // 排除整段对照译文块（.fushi-reader-translation）：译文是源段落的兄弟
+        // 节点，其文本若被字符偏移 / 进度计算计入，会导致「含译文」与「纯原文」
+        // 两态下锚点基准不一致 → 恢复时进度跳变（跳到很后面）。译文本身不
+        // 参与原文定位，必须跳过。
+        var p = n.parentElement;
+        if (p && p.closest('.fushi-reader-translation')) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
     });
   },
   getRect: function(target) {

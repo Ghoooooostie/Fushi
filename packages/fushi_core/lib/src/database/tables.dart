@@ -377,6 +377,21 @@ class DictionaryMetadata extends Table {
   /// 走 `preservedSettings` 继承通道。
   TextColumn get displayName => text().nullable()();
 
+  /// v117：词典数据在磁盘上的**实际目录**（绝对路径）。null = 沿用默认落点
+  /// `<dictionaryResourceDirectory>/<name>`（即 v116 及以前的全部既有词典）。
+  ///
+  /// 存在的理由只有一个：安卓上默认落点是 **app 私有目录**，卸载 app 即随之删除，
+  /// 而一本词典常见 1~6 GB、复制进来还要再占一倍体积。填了本列即「引用原文件」——
+  /// 导入时不打包不复制，直接登记用户选中的那个目录。
+  ///
+  /// 为什么不直接改 [name]：同 [displayName] 的理由——[name] 是主键、是 C++ 引擎
+  /// 装载时的词典名、是查词结果里的 `dictName`，被一串东西当外键。本列只覆盖
+  /// **去哪里找这本词典的数据**，不动身份。
+  ///
+  /// 引用与复制的判据是「本列是否为空」，与音频库的「路径是否在持久根之外派生」
+  /// 不同——词典没有持久根概念，必须显式存，否则重导/更新后无法区分两种来源。
+  TextColumn get resourcePath => text().nullable()();
+
   @override
   Set<Column> get primaryKey => {name};
 }

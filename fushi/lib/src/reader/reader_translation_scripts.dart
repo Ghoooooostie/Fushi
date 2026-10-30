@@ -89,15 +89,32 @@ if (!window.fushiTranslation) {
       if (semantic.length) {
         return Array.prototype.slice.call(semantic);
       }
-      var kids = Array.prototype.slice.call(scope.children);
-      return kids.filter(function(el) {
-        var nodes = el.childNodes;
-        for (var i = 0; i < nodes.length; i++) {
-          var n = nodes[i];
-          if (n.nodeType === 3 && (n.textContent || '').trim()) return true;
+      // 退化分支必须**递归**，且只收最外层那一个。
+      //
+      // 只看 scope.children 一层是不够的：日式小说 epub 大量用 <div> 分段并套多层
+      // 容器（<body><div class="wrap"><div>正文…</div></div>），一层 filter 拿到的
+      // 是外层 wrap——它没有直达文本 → 过滤后为空 → 整章扫到 0 段，界面上表现为
+      // 「翻译开关开着却什么都没出现」（真机实测：raw=[]）。
+      //
+      // 只收最外层是为了不给每个 <span>/<ruby> 单独插一段译文：祖先里已经有人带
+      // 直达文本的，就交给那个祖先。
+      var all = scope.getElementsByTagName('*');
+      var out = [];
+      for (var i = 0; i < all.length; i++) {
+        var el = all[i];
+        if (!hasOwnText(el)) continue;
+        var p = el.parentElement;
+        var nested = false;
+        while (p && p !== scope) {
+          if (hasOwnText(p)) {
+            nested = true;
+            break;
+          }
+          p = p.parentElement;
         }
-        return false;
-      });
+        if (!nested) out.push(el);
+      }
+      return out;
     }
 
     function hasOwnText(el) {
@@ -174,7 +191,12 @@ if (!window.fushiTranslation) {
           if (out.length >= limit) break;
           var el = list[i];
           if (el.getAttribute(DONE_ATTR)) continue;
-          if (!hasOwnText(el)) continue;
+          // 修复（见 docs/bugs/BUG-3370-reader-translation-span-wrap-stops.md）：
+          // 阅读器会把句子包进 <SPAN class="fushi-senten"> 做逐句音频高亮，段落从
+          // <P>文本</P> 变成 <P><SPAN>文本</SPAN></P>。原 hasOwnText 只认「直接文本
+          // 子节点」，此时返回 false 把整段跳过，表现为「滚动/高亮后翻译停止」。
+          // 语义块候选（p/li/…）应以整体 textContent 是否非空为判据。
+          if (!(el.textContent || '').trim()) continue;
           if (!inWindow(el, ahead)) continue;
           var text = (el.textContent || '').trim();
           // 太短的片段（页码、分隔线、"…"）译出来也没有对照价值，纯浪费往返。

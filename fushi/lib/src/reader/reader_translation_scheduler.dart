@@ -47,6 +47,13 @@ const int kReaderTranslationAheadPx = 600;
 /// 用户正在看的最后一段会排在队尾等几十个请求。一屏能读懂的段落本来就不超过十来个。
 const int kReaderTranslationMaxPerScan = 12;
 
+/// 失败段落的重试轮询间隔下限。
+///
+/// 与上层的协调层冷却阶梯是两个东西：那边管「这段第 N 次失败要等多久」，这边管「多久
+/// 去看一次有没有到期的段落」。取 2s 是让它明显短于最短冷却（2s 网络失败 / 4s 限流），
+/// 又不会轮询得太密。
+const Duration kReaderTranslationRetryPoll = Duration(seconds: 2);
+
 /// WebView 求值动作。`reader_fushi_page.dart` 传的是
 /// `_controller.evaluateJavascript(source: ...)`。
 typedef ReaderTranslationEval = Future<dynamic> Function(String source);
@@ -59,23 +66,46 @@ class ReaderTranslationScheduler {
     this.debounce = kReaderTranslationDebounce,
     this.aheadPx = kReaderTranslationAheadPx,
     this.maxPerScan = kReaderTranslationMaxPerScan,
+    this.retryPoll = kReaderTranslationRetryPoll,
+    ReaderTranslationCoordinator? coordinator,
   })  : _evaluate = evaluate,
         _client = client {
-    _coordinator = ReaderTranslationCoordinator(
-      fetch: _fetch,
-      onOutcome: _onOutcome,
-    );
+    // 注入的协调层（测试要用自定义冷却策略）也要挂上同一个回流口，否则译文没有出口。
+    _coordinator = coordinator ?? ReaderTranslationCoordinator(fetch: _fetch);
+    _coordinator.onOutcome = _onOutcome;
   }
 
   final ReaderTranslationEval _evaluate;
-  final TranslationClient _client;
+
+  /// 出站翻译客户端。**故意做成可变**：阅读器的每次「文档就绪」
+  /// （开书、翻章、切卷、重分页、宽变、设置热更）都会走阅读器页的
+  /// `_ensureTranslation` 重建一个新 `TranslationClient` 并 **关闭**旧的
+  /// （`_translationClient?.close()`）。而这个调度器是**跨章复用**的
+  /// （`_translation ?? ReaderTranslationScheduler(...)`），若仍持有那个已被关闭的
+  /// 旧客户端，下一次 `translate()` 必失败——表现为「第一卷能译，翻到第二卷 /
+  /// 下一章之后整屏空白，重试也救不回来」。
+  /// 复用时由 [attachClient] 把客户端同步成当前这一份（新建时两者本就一致），
+  /// 保证翻译永远打到「还活着」的客户端上。
+  TranslationClient _client;
+
+  /// 复用已有调度器时，把它的出站客户端同步成当前这一份。见 [_client] 的注释。
+  void attachClient(TranslationClient client) {
+    _client = client;
+  }
 
   final Duration debounce;
   final int aheadPx;
   final int maxPerScan;
 
+  /// 重试轮询的间隔下限（测试注入点；真实值见 [kReaderTranslationRetryPoll]）。
+  final Duration retryPoll;
+
   late final ReaderTranslationCoordinator _coordinator;
   Timer? _timer;
+
+  /// 失败段落的重试轮询定时器。`cancelForNavigation` 会把它连同失败池一起清掉：
+  /// 换了章之后旧 id 已经不属于当前文档，再重排也只是给已经不存在的段落发请求。
+  Timer? _retryTimer;
 
   /// 世代号：[cancelForNavigation] 自增。过期的 eval 结果与回填一律丢弃。
   int _navGeneration = 0;
@@ -112,6 +142,9 @@ class ReaderTranslationScheduler {
     if (languageChanged) {
       _coordinator.reset();
     }
+    // 重新打开翻译（同一语言）时，上次会话里还在冷却的段落要接着重来，否则它们
+    // 要等下一次滚动才可能被重新收集。
+    if (_coordinator.hasPendingRetry) _scheduleRetryFlush();
   }
 
   /// 文档就绪：让 JS 侧按当前 config 装一次样式与显隐。
@@ -157,6 +190,38 @@ class ReaderTranslationScheduler {
   void stop() {
     _timer?.cancel();
     _timer = null;
+    _retryTimer?.cancel();
+    _retryTimer = null;
+  }
+
+  /// 失败后挂一个重试轮询：失败了才挂，**不需要用户再去滚一下**。
+  ///
+  /// 这段自主性是 BUG-3369 的另一半修复。旧实现里失败段落只有「用户滚动 → 重新
+  /// collect → 再入队」这一条重来的路，而用户读到一半往往就停在那儿看——于是那一屏
+  /// 的空白会被钉到永久冷却为止。等待时长取「下一次到期时刻」与 [retryPoll] 的较大值，
+  /// 端点越快恢复回来得越早。
+  void _scheduleRetryFlush() {
+    if (!enabled || _retryTimer != null) return;
+    final DateTime now = DateTime.now();
+    Duration delay = retryPoll;
+    final DateTime? next = _coordinator.nextRetryAt;
+    if (next != null) {
+      final Duration wait = next.difference(now);
+      if (wait > delay) delay = wait;
+    }
+    _retryTimer = Timer(delay, _runRetryFlush);
+  }
+
+  Future<void> _runRetryFlush() async {
+    _retryTimer = null;
+    if (!enabled) return;
+    if (!_coordinator.hasPendingRetry) return;
+    final int requeued = await _coordinator.flushRetries();
+    // 真机取证锚点：这一段是「失败之后自己站起来」的那一跳。日志里出现
+    // `retry requeued=N` 就说明不是靠用户滚动触发的，是调度器自己把冷却到期的
+    // 段落排回了队列（BUG-3369 的修复点之二）。
+    debugPrint('[fushi-translation] retry requeued=$requeued');
+    if (_coordinator.hasPendingRetry) _scheduleRetryFlush();
   }
 
   Future<void> _runScan() async {
@@ -174,6 +239,18 @@ class ReaderTranslationScheduler {
     if (ownGeneration != _navGeneration) return;
 
     final List<ReaderTranslationTarget> targets = _parseTargets(raw);
+    // 真机取证锚点：`adb logcat | grep fushi-translation`。每次落定扫描一行，
+    // 直接暴露「收集到了几段」——收集恒为 0 / 恒为章首段落这类几何判定错误，
+    // 在这里一眼可见，不必再靠「没日志」反推。
+    //
+    // raw 预览（2.10.0 排查期加的）用来区分「JS 根本没扫到段落」与「扫到了但
+    // 请求失败」——两者在界面上都是「什么都没出现」，只有回传能分开。
+    final String rawPreview = raw is String ? raw : '$raw';
+    debugPrint(
+      '[fushi-translation] scan targets=${targets.length} '
+      'rawLen=${rawPreview.length} '
+      'raw=${rawPreview.substring(0, rawPreview.length > 500 ? 500 : rawPreview.length)}',
+    );
     if (targets.isEmpty) return;
     await _coordinator.enqueue(targets);
   }
@@ -204,8 +281,18 @@ class ReaderTranslationScheduler {
         '[fushi-translation] fail id=${outcome.targetId} '
         'code=${outcome.failureCode} engine=${_engineId.storageValue}',
       );
+      // 关键：挂上自主重试。用户的屏幕上这一屏可能永远不再滚动（他就在这一页读），
+      // 光等下一次 collect 等于把这一屏判了死刑。
+      _scheduleRetryFlush();
       return;
     }
+    // 真机取证锚点：译文每一次真正落地都留一行，配合上面的 `scan` / `fail` /
+    // `retry` 就能在 `adb logcat` 里把「译了多少段、断在哪、有没有自己接上」
+    // 完整读出来（BUG-3369 的设备复测口径）。
+    debugPrint(
+      '[fushi-translation] ok id=${outcome.targetId} '
+      'chars=${translated.length} engine=${_engineId.storageValue}',
+    );
     await _evaluate(
       ReaderTranslationScripts.applyTranslationInvocation(
         outcome.targetId,

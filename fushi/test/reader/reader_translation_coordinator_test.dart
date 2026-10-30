@@ -14,7 +14,11 @@ Future<void> settle([int times = 6]) async {
 }
 
 class _Harness {
-  _Harness({int maxCachedEntries = 300}) {
+  _Harness({
+    int maxCachedEntries = 300,
+    this.manualClock = false,
+    this.throttled = false,
+  }) {
     coordinator = ReaderTranslationCoordinator(
       fetch: (String text) async {
         calls.add(text);
@@ -29,6 +33,11 @@ class _Harness {
       },
       onOutcome: outcomes.add,
       maxCachedEntries: maxCachedEntries,
+      // 默认关掉节流：段与段之间真睡 800ms 会把测试拖成几秒一个，且不必要。
+      // 只有专门测「连续失败拉长间隔」的那一条才打开（[throttled]）。
+      minRequestInterval: throttled ? kMinRequestInterval : Duration.zero,
+      maxRequestInterval: throttled ? kMaxRequestInterval : Duration.zero,
+      now: () => manualClock ? _now : DateTime.now(),
     );
   }
 
@@ -36,12 +45,24 @@ class _Harness {
   final List<ReaderTranslationOutcome> outcomes = <ReaderTranslationOutcome>[];
   final Map<String, Completer<String>> _pending = <String, Completer<String>>{};
   ReaderTranslationFailure? nextFailure;
+  final bool manualClock;
+
+  /// 是否用真实的请求节流间隔（默认关）。
+  final bool throttled;
+
+  /// 手动时钟读数。冷却有可能长达几十秒，真睡是把测试拖死，只能推时钟。
+  DateTime _now = DateTime.utc(2026, 10, 19, 12);
 
   late final ReaderTranslationCoordinator coordinator;
+
+  void advance(Duration step) => _now = _now.add(step);
 
   bool complete(String text, [String value = '译文']) {
     final Completer<String>? pending = _pending.remove(text);
     if (pending == null) return false;
+    // 手动时钟：一次往返总要花点时间，推 1s 让「请求节流间隔」在测试里不是障碍
+    // （否则每一段后面都要真睡 800ms，测试就跑不动了）。
+    if (manualClock) advance(const Duration(seconds: 1));
     pending.complete(value);
     return true;
   }
@@ -51,6 +72,15 @@ class _Harness {
       if (outcome.targetId == id) return outcome;
     }
     return null;
+  }
+
+  /// 这一段**最后一次**的结局。同一段可能先失败后成功，只看第一条会误判成还失败着。
+  ReaderTranslationOutcome? lastOutcomeFor(String id) {
+    ReaderTranslationOutcome? found;
+    for (final ReaderTranslationOutcome outcome in outcomes) {
+      if (outcome.targetId == id) found = outcome;
+    }
+    return found;
   }
 }
 
@@ -129,7 +159,8 @@ void main() {
 
   group('串行：一次只飞一个', () {
     test('三段同时入队，任一时刻只有一个在飞', () async {
-      final _Harness h = _Harness();
+      // 手动时钟：段与段之间有 800ms 节流，真睡会让这个测试原地等一秒多。
+      final _Harness h = _Harness(manualClock: true);
       await h.coordinator.enqueue(<ReaderTranslationTarget>[
         _t('a', 'A'),
         _t('b', 'B'),
@@ -176,6 +207,20 @@ void main() {
       expect(h.outcomes, isEmpty);
     });
 
+    test('cancel 清掉失败重试池：旧文档的段落不该被排进新文档', () async {
+      final _Harness h = _Harness(manualClock: true);
+      h.nextFailure = const ReaderTranslationFailure('http_500');
+      await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
+      await settle();
+      expect(h.coordinator.hasPendingRetry, isTrue);
+
+      h.coordinator.cancel();
+
+      // DOM 已经重建，这里的 id 就算撞到新章的某个段落也不是同一段了。
+      expect(h.coordinator.hasPendingRetry, isFalse);
+      expect(await h.coordinator.flushRetries(), 0);
+    });
+
     test('cancel 不清缓存：滚回来还得立刻有译文', () async {
       final _Harness h = _Harness();
       await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
@@ -192,20 +237,108 @@ void main() {
     });
   });
 
-  group('失败：冷却而不是反复重打', () {
-    test('失败过的段落本次会话不再重试', () async {
-      final _Harness h = _Harness();
+  group('失败：按阶梯冷却后自动重试（BUG-3369）', () {
+    test('冷却期内重复入队不再重打同一段', () async {
+      final _Harness h = _Harness(manualClock: true);
       h.nextFailure = const ReaderTranslationFailure('network_error');
       await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
       await settle();
 
       expect(h.outcomeFor('a')?.failureCode, 'network_error');
+      expect(h.coordinator.hasPendingRetry, isTrue);
 
+      // 用户原地滚一下手 —— 同一段又被 collect 上来。此刻还在冷却窗口里（2s）。
       await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
       await settle();
 
-      // 用户每滚一次都重发同一个必失败的请求，会把 API 打得越来越糟。
+      // 用户每滚一次都重发同一个刚刚失败的端点请求，会把 API 打得越来越糟。
       expect(h.calls, <String>['A']);
+    });
+
+    test('冷却到期后 flushRetries 会把这一段重新排进来', () async {
+      final _Harness h = _Harness(manualClock: true);
+      h.nextFailure = const ReaderTranslationFailure('network_error');
+      await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
+      await settle();
+      expect(h.calls, <String>['A']);
+
+      final DateTime? next = h.coordinator.nextRetryAt;
+      expect(next, isNotNull);
+
+      // 还在冷却期内：flush 什么也不做。
+      await h.coordinator.flushRetries();
+      expect(h.calls, <String>['A']);
+
+      h.advance(const Duration(seconds: 3));
+      expect(await h.coordinator.flushRetries(), 1);
+
+      // 重试成功：这次请求真的发出去了，而且译文回填到同一个段落上。
+      h.complete('A', '译文A');
+      await settle();
+      expect(h.calls, <String>['A', 'A']);
+      expect(h.lastOutcomeFor('a')?.translatedText, '译文A');
+      expect(h.coordinator.hasPendingRetry, isFalse);
+    });
+
+    test('再失败一次：冷却阶梯变长，且不会被判死刑', () async {
+      final _Harness h = _Harness(manualClock: true);
+
+      // 第一次失败：t0 → 冷却 2s。
+      h.nextFailure = const ReaderTranslationFailure('network_error');
+      await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
+      await settle();
+
+      // 冷却到期后重试，又失败： attempts=2 → 冷却 5s。
+      h.advance(const Duration(seconds: 3));
+      h.nextFailure = const ReaderTranslationFailure('network_error');
+      await h.coordinator.flushRetries();
+      await settle();
+
+      // 旧实现在这里已经离「判死刑」（4 次）只差两步，且只剩唯一的滚动重试入口；
+      // 现在它是「待重试 + 更长的等待」，端点缓过来就自己补上。
+      expect(h.coordinator.hasPendingRetry, isTrue);
+      final DateTime? next = h.coordinator.nextRetryAt;
+      expect(next, isNotNull);
+      expect(
+        next!.difference(DateTime.utc(2026, 10, 19, 12)),
+        const Duration(seconds: 8), // 3s（推过的时钟）+ 5s 阶梯
+      );
+
+      // 推到下一次到期：这一段又被排进来，这次成功。
+      h.advance(const Duration(seconds: 5));
+      expect(await h.coordinator.flushRetries(), 1);
+      h.complete('A', '译文A');
+      await settle();
+      expect(h.lastOutcomeFor('a')?.translatedText, '译文A');
+      expect(h.coordinator.hasPendingRetry, isFalse);
+    });
+
+    test('限流类失败（429）冷却翻倍', () async {
+      final _Harness h = _Harness(manualClock: true);
+      h.nextFailure = const ReaderTranslationFailure('http_429');
+      await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
+      await settle();
+
+      expect(
+        h.coordinator.nextRetryAt!.difference(DateTime.utc(2026, 10, 19, 12)),
+        const Duration(seconds: 4), // 2s 阶梯翻倍
+      );
+    });
+
+    test('连续失败拉长请求间隔，成功即恢复', () async {
+      final _Harness h = _Harness(manualClock: true, throttled: true);
+      expect(h.coordinator.requestInterval, const Duration(milliseconds: 800));
+
+      h.nextFailure = const ReaderTranslationFailure('http_429');
+      await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
+      await settle();
+      expect(h.coordinator.requestInterval, const Duration(milliseconds: 1600));
+
+      h.advance(const Duration(seconds: 5));
+      await h.coordinator.flushRetries();
+      h.complete('A', '译文A');
+      await settle();
+      expect(h.coordinator.requestInterval, const Duration(milliseconds: 800));
     });
 
     test('未知异常也被收敛成码，不会把队列卡死', () async {
@@ -222,7 +355,7 @@ void main() {
     });
 
     test('reset 之后失败冷却与缓存一起清空（换了目标语言要靠它）', () async {
-      final _Harness h = _Harness();
+      final _Harness h = _Harness(manualClock: true);
       await h.coordinator.enqueue(<ReaderTranslationTarget>[_t('a', 'A')]);
       await settle();
       h.complete('A', '中文译文');

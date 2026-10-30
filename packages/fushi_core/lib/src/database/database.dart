@@ -2634,6 +2634,9 @@ class FushiDatabase extends _$FushiDatabase
               }
             }
           }
+          // 本地 develop 线：`dictionary_metadata.resource_path` 不占版本号
+          // （见 [_ensureDictionaryResourcePathColumn] 的注释），加列在
+          // [beforeOpen] 统一兜底，这里不再为它留阶梯步。
           if (from < 136) {
             // v136（AI 助手，docs/specs/2026-10-26-ai-operations-agent-design.md §5.3 /
             // D3 / D5）：ai_agent_sessions（对话存档）/ ai_agent_actions（操作记录）。

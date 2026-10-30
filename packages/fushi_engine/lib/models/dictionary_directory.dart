@@ -138,7 +138,8 @@ Future<DictDirDeleteOutcome> _deleteDictionaryDirectoryAttempts({
 /// 把删不掉的 [directory] 改名挪进资源根下的隔离区，空出词典名。
 Future<void> _quarantineDictionaryDirectory(Directory directory) async {
   final Directory pending = Directory(
-      path.join(directory.parent.path, kDictionaryPendingDeleteDirName));
+    path.join(directory.parent.path, kDictionaryPendingDeleteDirName),
+  );
   await pending.create(recursive: true);
   final String base = path.basename(directory.path);
   for (int n = 0; n < 1000; n++) {
@@ -153,8 +154,9 @@ Future<void> _quarantineDictionaryDirectory(Directory directory) async {
 /// 清理上一次运行留下的隔离区（进程重启后映射早已随进程消失，此时必能删掉）。
 /// 尽力而为：删不掉就留到下次启动，绝不阻断初始化。
 Future<void> purgePendingDictionaryDeletes(Directory resourceRoot) async {
-  final Directory pending =
-      Directory(path.join(resourceRoot.path, kDictionaryPendingDeleteDirName));
+  final Directory pending = Directory(
+    path.join(resourceRoot.path, kDictionaryPendingDeleteDirName),
+  );
   if (!pending.existsSync()) return;
   try {
     await pending.delete(recursive: true);
@@ -162,3 +164,20 @@ Future<void> purgePendingDictionaryDeletes(Directory resourceRoot) async {
     engineLog.log('dictDir.purgePending', e, stack);
   }
 }
+
+/// v117「引用导入」的准入判据：这个目录能不能**原地登记**而不必复制。
+///
+/// 只认散文件形态里已经组织好的那一类——顶层就有 `index.json`（已解压的
+/// Yomitan / migaku 词典目录）。这类目录引擎能直接按路径装载：磁盘布局已经是
+/// 引擎要的结构，登记的只是「去哪儿找它」。
+///
+/// MDX / DSL / 压缩包一律返回 false：它们必须先经 native 转成 `hash.table` /
+/// `blobs.bin` 那一套产物，不存在「原地可用」的形态，引用一个没转换的 mdx
+/// 等于登记了一个读不出来的路径。那种仍走复制式导入。
+///
+/// 放在引擎层而不是 UI 或导入器里，是因为**三处**都问同一个问题、且答案必须一致：
+/// 导入器用它决定要不要跑 native 转换、UI 用它决定这条路能不能走（以及给用户什么
+/// 提示）、后续若加「重新定位源目录」还得用它验新路径。散在三处各自判断，迟早出现
+/// 「UI 说能引用、导入器说不认识」的自相矛盾。
+bool isReferenceableDictionaryDirectory(String directoryPath) =>
+    File(path.join(directoryPath, 'index.json')).existsSync();

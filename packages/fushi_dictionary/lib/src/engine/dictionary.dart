@@ -121,7 +121,7 @@ class Dictionary {
       collapsedLanguages: List<String>.from(map['collapsedLanguages'] ?? []),
       expandedLanguages: List<String>.from(map['expandedLanguages'] ?? []),
       languageOverride: map['languageOverride'] as String?,
-      displayName: map['displayName'] as String?,
+      resourcePath: map['resourcePath'] as String?,
     );
   }
   Dictionary({
@@ -135,6 +135,7 @@ class Dictionary {
     this.expandedLanguages = const [],
     this.languageOverride,
     this.displayName,
+    this.resourcePath,
   });
 
   final String name;
@@ -171,6 +172,24 @@ class Dictionary {
   /// 与 [languageOverride] 同属「用户设置」，重导/在线更新时走 `preservedSettings`
   /// 继承，不会被包内 index.json 冲掉。
   String? displayName;
+
+  /// 这本词典的数据在磁盘上的**实际目录**（绝对路径）。null = 默认落点
+  /// `<dictionaryResourceDirectory>/<name>`（v116 及以前的既有词典全是这种）。
+  ///
+  /// 非 null 即「引用原文件」：导入时没有打包、没有复制，直接登记了用户选中的
+  /// 那个目录。这么做的唯一理由是安卓的默认落点是 **app 私有目录**——卸载 app
+  /// 即随之删除，而一本词典常见 1~6 GB，复制进来还要再占一倍体积。引用模式让数据
+  /// 留在用户自己看得见、管得着的地方。
+  ///
+  /// 它描述的是「这本词典装在哪」这一**安装事实**，不是用户偏好：重导 / 在线更新
+  /// 时由导入链路决定，不走 `preservedSettings` 继承。
+  String? resourcePath;
+
+  /// 是否以「引用外部目录」的方式安装（即没有复制进 app 私有资源目录）。
+  ///
+  /// 删除链路必须看这个：引用模式下删的是**用户的源目录**，因此要先给确认、
+  /// 且只删当初登记过的那个路径（见 `AppModel.deleteDictionary`）。
+  bool get isReferenced => (resourcePath?.trim() ?? '').isNotEmpty;
 
   /// yomitan `index.json` 声明的**词头语言**（词典在解释哪种语言）。
   /// 导入时由 `readSourceMetadataFromIndex` 落进 [metadata]；旧词典/本地包缺则空串。
@@ -241,6 +260,9 @@ class Dictionary {
       expandedLanguages: expandedLanguages,
       languageOverride: languageOverride,
       displayName: displayName,
+      // v117 新增列：不带上它，一次只想改 type 的 copyWith 就会把「这本词典引用
+      // 的是哪个外部目录」写成 NULL，静默退化成默认落点（而那里并没有数据）。
+      resourcePath: resourcePath,
     );
   }
 

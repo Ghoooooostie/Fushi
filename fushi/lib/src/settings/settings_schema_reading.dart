@@ -21,6 +21,50 @@ import 'package:fushi/utils.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:fushi/src/utils/adaptive/fushi_fold_posture.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
+
+/// 译文取色：复用 flutter_colorpicker 的取色盘，关掉 alpha（不透明度另有滑杆管）。
+/// 仿 [settings_schema_game.dart] 的 `_pickGalHookColor`，但这一处置读用户设置，
+/// 落盘经 `ctx.readerSource`，不碰外观系统。
+Future<Color?> _pickTranslationColor(
+  BuildContext context, {
+  required String title,
+  required Color initial,
+}) async {
+  Color picked = initial;
+  bool confirmed = false;
+  await showDialog<void>(
+    context: context,
+    builder: (BuildContext dialogContext) => AlertDialog(
+      title: Text(title),
+      content: SingleChildScrollView(
+        child: ColorPicker(
+          pickerColor: initial,
+          onColorChanged: (Color color) => picked = color,
+          portraitOnly: true,
+          enableAlpha: false,
+          displayThumbColor: true,
+          hexInputBar: true,
+          labelTypes: const <ColorLabelType>[],
+        ),
+      ),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () => Navigator.of(dialogContext).pop(),
+          child: Text(t.dialog_cancel),
+        ),
+        FilledButton(
+          onPressed: () {
+            confirmed = true;
+            Navigator.of(dialogContext).pop();
+          },
+          child: Text(t.dialog_done),
+        ),
+      ],
+    ),
+  );
+  return confirmed ? picked : null;
+}
 
 /// 译文取色：复用 flutter_colorpicker 的取色盘，关掉 alpha（不透明度另有滑杆管）。
 /// 仿 [settings_schema_game.dart] 的 `_pickGalHookColor`，但这一处置读用户设置，

@@ -41,10 +41,12 @@ class DictionaryOrderBadge extends StatelessWidget {
     final TextTheme textTheme = Theme.of(context).textTheme;
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     // 停用：退成浮起面那一阶的中性底（tokens 色阶，不在页面里自选容器色）。
-    final Color fill =
-        enabled ? tokens.surfaces.primaryContainer : tokens.surfaces.search;
-    final Color ink =
-        enabled ? scheme.onPrimaryContainer : scheme.onSurfaceVariant;
+    final Color fill = enabled
+        ? tokens.surfaces.primaryContainer
+        : tokens.surfaces.search;
+    final Color ink = enabled
+        ? scheme.onPrimaryContainer
+        : scheme.onSurfaceVariant;
     return SizedBox.square(
       dimension: 32,
       child: DecoratedBox(
@@ -235,6 +237,15 @@ class DictionaryManagerDetail extends StatelessWidget {
               _infoRow(context, t.dict_detail_version_label, versionLabel),
             _infoRow(context, t.dict_detail_format_label, formatLabel),
             _infoRow(context, t.dict_language_tooltip, languageLabel),
+            // v117：引用安装的词典数据不在 app 私有目录里——用户问「我的磁盘怎么没
+            // 变大」「卸载后词典还在哪」时要能在这里看到答案。
+            _infoRow(
+              context,
+              t.dict_detail_location_label,
+              dictionary.isReferenced
+                  ? dictionary.resourcePath!.trim()
+                  : t.dict_detail_location_internal,
+            ),
             _infoRow(
               context,
               t.dict_detail_source_label,
@@ -284,6 +295,13 @@ class DictionaryManagerDetail extends StatelessWidget {
           runSpacing: tokens.spacing.gap / 2,
           children: <Widget>[
             FushiTag(text: typeLabel, tone: FushiTagTone.accent, dense: true),
+            if (dictionary.isReferenced)
+              FushiTag(
+                text: t.dict_detail_reference_tag,
+                icon: Icons.drive_file_move_outline,
+                tone: FushiTagTone.neutral,
+                dense: true,
+              ),
             if (dictionary.isUpdatable)
               FushiTag(
                 text: t.dict_detail_source_online,
@@ -496,14 +514,18 @@ class DictionaryManagerOverview extends StatelessWidget {
         SizedBox(height: gap * 3),
         Row(
           children: <Widget>[
-            FushiIcon(Icons.touch_app_outlined,
-                size: 18, color: scheme.onSurfaceVariant),
+            FushiIcon(
+              Icons.touch_app_outlined,
+              size: 18,
+              color: scheme.onSurfaceVariant,
+            ),
             SizedBox(width: gap),
             Expanded(
               child: Text(
                 t.dict_detail_placeholder,
-                style: textTheme.bodyMedium
-                    ?.copyWith(color: scheme.onSurfaceVariant),
+                style: textTheme.bodyMedium?.copyWith(
+                  color: scheme.onSurfaceVariant,
+                ),
               ),
             ),
           ],
@@ -647,11 +669,8 @@ Future<int?> showDictionaryPositionDialog({
 }) {
   return showAppDialog<int>(
     context: context,
-    builder: (_) => DictionaryPositionDialog(
-      name: name,
-      position: position,
-      count: count,
-    ),
+    builder: (_) =>
+        DictionaryPositionDialog(name: name, position: position, count: count),
   );
 }
 
@@ -676,8 +695,9 @@ class DictionaryPositionDialog extends StatefulWidget {
 }
 
 class _DictionaryPositionDialogState extends State<DictionaryPositionDialog> {
-  late final TextEditingController _controller =
-      TextEditingController(text: '${widget.position + 1}');
+  late final TextEditingController _controller = TextEditingController(
+    text: '${widget.position + 1}',
+  );
 
   @override
   void initState() {

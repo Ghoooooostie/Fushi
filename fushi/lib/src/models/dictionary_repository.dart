@@ -256,6 +256,10 @@ class DictionaryRepository {
       expandedLanguages: expandedLanguages,
       languageOverride: r.languageOverride,
       displayName: r.displayName,
+      // v117：空串没有意义（「引用了根目录」不是一种安装方式），入库前归一成 null。
+      resourcePath: (r.resourcePath?.trim().isNotEmpty ?? false)
+          ? r.resourcePath!.trim()
+          : null,
     );
   }
 
@@ -271,6 +275,11 @@ class DictionaryRepository {
       expandedLanguagesJson: Value(jsonEncode(d.expandedLanguages)),
       languageOverride: Value(d.languageOverride),
       displayName: Value(d.displayName),
+      resourcePath: Value(
+        (d.resourcePath?.trim().isNotEmpty ?? false)
+            ? d.resourcePath!.trim()
+            : null,
+      ),
     );
   }
 

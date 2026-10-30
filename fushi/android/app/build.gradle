@@ -304,6 +304,9 @@ android {
             signingConfig signingConfigs.release
         }
         debug {
+            // 本地调试用：与线上 release 版（同包名、不同签名）并存安装。
+            // 勿提交——合并前必须还原。
+            applicationIdSuffix ".dev"
         }
     }
 

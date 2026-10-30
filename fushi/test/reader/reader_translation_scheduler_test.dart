@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:fushi/src/reader/reader_translation_coordinator.dart';
 import 'package:fushi/src/reader/reader_translation_scheduler.dart';
 import 'package:fushi_engine/translation/translation_client.dart';
 import 'package:fushi_engine/translation/translation_models.dart';
@@ -34,10 +35,15 @@ class _FakeWebView {
 /// 假的翻译引擎：可控地成功 / 失败，并记录被译的正文。
 class _FakeEngine {
   final List<String> translated = <String>[];
+
+  /// 真实发出的请求次数（含失败的那些）。只数 [translated] 会漏掉失败尝试，
+  /// 「失败后自动重试」这类断言就无从下笔。
+  int attempts = 0;
   String result = '这是译文';
   bool fail = false;
 
   Future<String> translate(String text) async {
+    attempts++;
     if (fail) {
       throw const TranslationFailure('network_error');
     }
@@ -155,6 +161,66 @@ void main() {
       expect(web.callsContaining('applyTranslation'), isEmpty);
     });
 
+    test('段落失败后不滚动也会自己重试，端点恢复即回填（BUG-3369）', () async {
+      final _FakeWebView web = _FakeWebView();
+      final _FakeEngine engine = _FakeEngine()..fail = true;
+      web.responses['collectVisibleTargets'] = '[{"id":"p1","text":"原文段落"}]';
+
+      // 零冷却 + 60ms 轮询：让「失败 → 自动重试」这条链在测试里几秒内走完。
+      final ReaderTranslationScheduler scheduler = _build(
+        web,
+        engine,
+        retryPoll: const Duration(milliseconds: 60),
+        coordinator: ReaderTranslationCoordinator(
+          fetch: (String text) => engine.translate(text),
+          cooldown: (String code, int attempts) => Duration.zero,
+        ),
+      )..enabled = true;
+
+      scheduler.scheduleVisibleScan();
+      await Future<void>.delayed(const Duration(milliseconds: 450));
+      // 第一次失败：什么也没插，而且**期间一次都没滚动过** —— 旧实现到这里就停死了，
+      // 重试只能等用户下一次滚动来重新 collect。
+      expect(web.callsContaining('applyTranslation'), isEmpty);
+
+      engine.fail = false; // 端点恢复
+      for (int i = 0; i < 60; i++) {
+        await Future<void>.delayed(const Duration(milliseconds: 100));
+        if (web.callsContaining('applyTranslation').isNotEmpty) break;
+      }
+
+      expect(engine.attempts, greaterThan(1), reason: '失败段被自动重排');
+      final Iterable<String> applied = web.callsContaining('applyTranslation');
+      expect(applied, hasLength(1));
+      expect(applied.single, contains('p1'));
+    });
+
+    test('换章之后不再对旧文档的重试段落发请求', () async {
+      final _FakeWebView web = _FakeWebView();
+      final _FakeEngine engine = _FakeEngine()..fail = true;
+      web.responses['collectVisibleTargets'] = '[{"id":"p1","text":"原文段落"}]';
+      final ReaderTranslationScheduler scheduler = _build(
+        web,
+        engine,
+        retryPoll: const Duration(milliseconds: 60),
+        coordinator: ReaderTranslationCoordinator(
+          fetch: (String text) => engine.translate(text),
+          cooldown: (String code, int attempts) => Duration.zero,
+        ),
+      )..enabled = true;
+
+      scheduler.scheduleVisibleScan();
+      await Future<void>.delayed(const Duration(milliseconds: 450));
+      expect(engine.attempts, 1, reason: '失败的那一次也算一次尝试');
+
+      // 换章：失败池清空，重试轮询不再有内容可排。
+      scheduler.cancelForNavigation();
+      engine.fail = false;
+      await Future<void>.delayed(const Duration(milliseconds: 400));
+
+      expect(engine.attempts, 1, reason: '旧文档的段落不该被重排');
+    });
+
     test('换目标语言会清空缓存（同一段不会拿旧语言译文顶上）', () async {
       final _FakeWebView web = _FakeWebView();
       final _FakeEngine engine = _FakeEngine();
@@ -173,8 +239,10 @@ void main() {
         target: TranslationTargetLanguage.english,
       );
       scheduler.scheduleVisibleScan();
+      // 段与段之间至少 800ms 节流，第二次请求要等过这道间隔才发出去；这里是真实
+      // 定时器，只能等（旧写法只等 120ms，这个断言一直是红的）。
       await Future<void>.delayed(const Duration(milliseconds: 400));
-      await Future<void>.delayed(const Duration(milliseconds: 120));
+      await Future<void>.delayed(const Duration(milliseconds: 1000));
 
       expect(engine.translated, <String>[
         '同一段',
@@ -217,7 +285,12 @@ void main() {
 
 /// 走**真实的** [TranslationClient] 路由，只把引擎换成假的：这样连「没装配的引擎 →
 /// engine_not_configured」那条路径也在测试覆盖范围内，而不是被替身绕过去。
-ReaderTranslationScheduler _build(_FakeWebView web, _FakeEngine engine) =>
+ReaderTranslationScheduler _build(
+  _FakeWebView web,
+  _FakeEngine engine, {
+  Duration retryPoll = kReaderTranslationRetryPoll,
+  ReaderTranslationCoordinator? coordinator,
+}) =>
     ReaderTranslationScheduler(
       evaluate: web.evaluate,
       client: TranslationClient(
@@ -225,6 +298,8 @@ ReaderTranslationScheduler _build(_FakeWebView web, _FakeEngine engine) =>
           TranslationEngineId.caiyun: _FakeTranslator(engine),
         },
       ),
+      retryPoll: retryPoll,
+      coordinator: coordinator,
     );
 
 /// 假的翻译引擎实现：成功 / 失败由 [_FakeEngine] 决定。

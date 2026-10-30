@@ -12,18 +12,30 @@ import 'package:fushi_engine/models/dictionary_directory.dart';
 import 'package:fushi_engine/utils/archive/native_zip.dart';
 import 'package:fushi/src/models/dictionary_repository.dart';
 
+/// native 词典转换的唯一入口形态。默认接 [importDictionaryViaFushidicts]；
+/// 测试注入假转换器（真 FFI 起不了）。
+typedef FushiDictsConverter =
+    Future<FushiImportResult> Function({
+      required String zipPath,
+      required String outputDir,
+      String breadcrumbDir,
+    });
+
 class DictionaryImportManager {
   DictionaryImportManager({
     required DictionaryRepository dictRepo,
     required Directory resourceDirectory,
     required Map<String, DictionaryFormat> formats,
-  })  : _dictRepo = dictRepo,
-        _resourceDirectory = resourceDirectory,
-        _formats = formats;
+    @visibleForTesting FushiDictsConverter? converterForTest,
+  }) : _dictRepo = dictRepo,
+       _resourceDirectory = resourceDirectory,
+       _formats = formats,
+       _convert = converterForTest ?? importDictionaryViaFushidicts;
 
   final DictionaryRepository _dictRepo;
   final Directory _resourceDirectory;
   final Map<String, DictionaryFormat> _formats;
+  final FushiDictsConverter _convert;
 
   /// BUG-1903：压缩包里**每个各自成典**的条目（`.mdx` / `.dsl`）。
   ///
@@ -86,8 +98,9 @@ class DictionaryImportManager {
 
       if (fileNames.isEmpty) return _formats['yomichan']!;
 
-      if (fileNames
-          .any((f) => f == 'index.json' || f.endsWith('/index.json'))) {
+      if (fileNames.any(
+        (f) => f == 'index.json' || f.endsWith('/index.json'),
+      )) {
         return _formats['yomichan']!;
       }
       if (fileNames.any((f) => f.endsWith('.mdx') || f.endsWith('.mdd'))) {
@@ -104,10 +117,9 @@ class DictionaryImportManager {
   DictionaryFormat detectFormatFromDirectory(Directory dir) {
     final indexFile = File(path.join(dir.path, 'index.json'));
     if (indexFile.existsSync()) return _formats['yomichan']!;
-    final hasJson = dir
-        .listSync()
-        .whereType<File>()
-        .any((f) => f.path.toLowerCase().endsWith('.json'));
+    final hasJson = dir.listSync().whereType<File>().any(
+      (f) => f.path.toLowerCase().endsWith('.json'),
+    );
     if (hasJson) return _formats['migaku']!;
     throw Exception(t.dictionary_unrecognized_format);
   }
@@ -123,7 +135,8 @@ class DictionaryImportManager {
   /// 情况（导入失败、或成功但 0 词条＝被吞空）才写入；正常成功不再落错误日志。
   /// BUG-927 想要的诊断（失败 / 0 词条）依旧可在错误日志查到。
   void _logImportResultSummary(String source, FushiImportResult result) {
-    final int total = result.termCount +
+    final int total =
+        result.termCount +
         result.metaCount +
         result.freqCount +
         result.pitchCount +
@@ -167,15 +180,88 @@ class DictionaryImportManager {
     required Function() onImportSuccess,
     required bool lowMemoryMode,
     VoidCallback? onMemoryError,
+
+    /// v117：true = **引用**导入，数据不进 app 私有目录。
+    ///
+    /// 两种形态都能吃：
+    /// - 目录本身就是已解压好的 Yomitan 词典（含 `index.json`）→ 原地登记，零转换；
+    /// - 目录里是**原始包**（`.zip` / `.mdx` / `.dsl`，含子目录里的）→ 逐个经 native
+    ///   转换，**转换产物写回包所在目录**（`<包所在目录>/<词典名>/`），原包不动，
+    ///   登记产物路径。转换这一步本身省不掉（引擎只认转换后的形态），但产物落在
+    ///   用户自己的 Documents 里：私有目录零占用，卸载重装词典还在。
+    ///
+    /// 默认 false，保持既有行为（复制进资源目录）——桌面默认的「拖进来」语义不能
+    /// 因为加了新能力就变。
+    bool referenceOriginal = false,
   }) async {
+    if (referenceOriginal) {
+      // v117 引用模式：目录本身就是一本**已解压好**的 Yomitan 词典时，直接登记它。
+      // 准入判据收在 [isReferenceableDictionaryDirectory]（引擎层），与 UI 无关：
+      // UI 不做预检（用户选「一堆原包」的目录照样进这条入口，由下面的批量转换接住）。
+      if (isReferenceableDictionaryDirectory(directory.path)) {
+        _dictRepo.clearDictionaryResultsCache();
+        progressNotifier.value = t.import_extract;
+
+        final String name = path.basename(directory.path);
+        final Dictionary? existing = _findByName(name);
+        final int order = existing?.order ?? _nextOrder();
+
+        // 这本若先前是**复制式**安装的，私有目录里还留着一份副本：换成引用之后那
+        // 份就成了孤儿，占着双倍空间且再也用不到。删的是 app 自己的文件，安全。
+        if (existing != null && !existing.isReferenced) {
+          await deleteDictionaryDirectory(
+            Directory(path.join(_resourceDirectory.path, name)),
+            reloadEngine: _dictRepo.rebuildEngine,
+          );
+        }
+
+        await _dictRepo.persistDictionary(
+          Dictionary(
+            order: order,
+            name: name,
+            formatKey: 'yomichan',
+            metadata: <String, String>{
+              ...readSourceMetadataFromIndex(directory),
+            },
+            hiddenLanguages: existing?.hiddenLanguages ?? const [],
+            collapsedLanguages: existing?.collapsedLanguages ?? const [],
+            expandedLanguages: existing?.expandedLanguages ?? const [],
+            languageOverride: existing?.languageOverride,
+            displayName: existing?.displayName,
+            // 关键：登记源目录。留空就退化成默认落点，而那里并没有数据。
+            resourcePath: directory.path,
+          ),
+        );
+
+        progressNotifier.value = t.import_complete;
+        onImportSuccess();
+        FushiToast.show(
+          msg: t.dict_import_success_summary(n: 1),
+          severity: ToastSeverity.success,
+        );
+        return;
+      }
+
+      // 目录里是原始包（zip / mdx / dsl，含子目录）：原地转换 + 引用登记。
+      await _referenceConvertDirectory(
+        directory: directory,
+        progressNotifier: progressNotifier,
+        countNotifier: countNotifier,
+        totalNotifier: totalNotifier,
+        onImportSuccess: onImportSuccess,
+        lowMemoryMode: lowMemoryMode,
+        onMemoryError: onMemoryError,
+      );
+      return;
+    }
+
     final entities = directory.listSync();
     // 逐个导入的次序是用户可见的（进度 i/N + failedNames 汇总），listSync
     // 的平台顺序不能当稳定输入——同文件 _importArchivedDictionaries 已经这么做。
     final zipFiles = entities.whereType<File>().where((f) {
       final ext = path.extension(f.path).toLowerCase();
       return ext == '.zip' || ext == '.dsl' || ext == '.mdx';
-    }).toList()
-      ..sort((File a, File b) => a.path.compareTo(b.path));
+    }).toList()..sort((File a, File b) => a.path.compareTo(b.path));
 
     if (zipFiles.isNotEmpty) {
       final cssFiles = entities
@@ -200,8 +286,7 @@ class DictionaryImportManager {
       }
 
       totalNotifier.value = zipFiles.length;
-      final List<DictionaryTaskFailure> failedNames =
-          <DictionaryTaskFailure>[];
+      final List<DictionaryTaskFailure> failedNames = <DictionaryTaskFailure>[];
       for (int i = 0; i < zipFiles.length; i++) {
         countNotifier.value = i + 1;
         try {
@@ -260,8 +345,10 @@ class DictionaryImportManager {
     try {
       progressNotifier.value = t.import_extract;
 
-      final tempZipPath =
-          path.join(_resourceDirectory.path, 'import_temp_dir.zip');
+      final tempZipPath = path.join(
+        _resourceDirectory.path,
+        'import_temp_dir.zip',
+      );
       final tempZip = File(tempZipPath);
 
       // 把整个目录读进内存再 zip 压缩是纯文件操作但很重（大词典目录可达数百
@@ -271,15 +358,17 @@ class DictionaryImportManager {
       await Isolate.run(() => packDirectoryToZip(directory.path, tempZipPath));
 
       try {
-        final tempOutputDir =
-            Directory(path.join(_resourceDirectory.path, 'import_temp'));
+        final tempOutputDir = Directory(
+          path.join(_resourceDirectory.path, 'import_temp'),
+        );
         if (tempOutputDir.existsSync()) {
           tempOutputDir.deleteSync(recursive: true);
         }
         tempOutputDir.createSync(recursive: true);
 
-        ErrorLogService.instance
-            .markImportStart('native 词典导入(目录)未返回：${directory.path}');
+        ErrorLogService.instance.markImportStart(
+          'native 词典导入(目录)未返回：${directory.path}',
+        );
         final FushiImportResult result;
         try {
           result = await importDictionaryViaFushidicts(
@@ -328,8 +417,10 @@ class DictionaryImportManager {
         _validatePath(finalDir);
         // 走原语：残留同名目录可能仍被引擎映射着，裸 deleteSync 在 Windows 上
         // 会抛 ERROR_USER_MAPPED_FILE（BUG-1756）。
-        await deleteDictionaryDirectory(finalDir,
-            reloadEngine: _dictRepo.rebuildEngine);
+        await deleteDictionaryDirectory(
+          finalDir,
+          reloadEngine: _dictRepo.rebuildEngine,
+        );
 
         if (innerDataDir.existsSync()) {
           await _publishImportedDir(innerDataDir, finalDir.path);
@@ -391,6 +482,214 @@ class DictionaryImportManager {
   /// 整合包内层 zip 递归解包的最大深度（外层不计）。
   static const int _kMaxNestedBundleDepth = 4;
 
+  /// 引用模式的暂存目录名（建在包所在目录下，转换完成后即删）。
+  static const String _kReferenceStageDirName = '.fushi_stage';
+
+  /// 递归收集 [rootPath] 下所有可转换的词典包（`.zip` / `.mdx` / `.dsl`），排序稳定。
+  ///
+  /// 跳过：点开头目录（暂存区 / 回收站类）；根下已带 `index.json` 的子树——那是
+  /// 先前转换好的产物（或用户自己解压好的可装载词典），不是包，重扫会把上一轮的
+  /// 成果再转一遍。
+  @visibleForTesting
+  static List<String> referenceImportPackagePaths(String rootPath) {
+    final List<String> found = <String>[];
+    void walk(String dirPath) {
+      List<FileSystemEntity> entities;
+      try {
+        entities = Directory(dirPath).listSync(followLinks: false);
+      } catch (_) {
+        return; // 不可读的子树按空处理
+      }
+      for (final FileSystemEntity entity in entities) {
+        if (entity is File) {
+          final String ext = path.extension(entity.path).toLowerCase();
+          if (ext == '.zip' || ext == '.mdx' || ext == '.dsl') {
+            found.add(entity.path);
+          }
+        } else if (entity is Directory) {
+          final String base = path.basename(entity.path);
+          if (base.startsWith('.')) continue;
+          if (File(path.join(entity.path, 'index.json')).existsSync()) continue;
+          walk(entity.path);
+        }
+      }
+    }
+
+    walk(rootPath);
+    return found..sort();
+  }
+
+  /// 引用模式的批量原地转换：逐包转换、产物落回包所在目录、登记引用。
+  ///
+  /// 单包失败不中断其余（与复制式批量同策略），最后同一套汇总提示。
+  Future<void> _referenceConvertDirectory({
+    required Directory directory,
+    required ValueNotifier<String> progressNotifier,
+    required ValueNotifier<int?> countNotifier,
+    required ValueNotifier<int?> totalNotifier,
+    required Function() onImportSuccess,
+    required bool lowMemoryMode,
+    VoidCallback? onMemoryError,
+  }) async {
+    _dictRepo.clearDictionaryResultsCache();
+    final List<String> packagePaths = referenceImportPackagePaths(
+      directory.path,
+    );
+    if (packagePaths.isEmpty) {
+      throw Exception(t.dictionary_unrecognized_format);
+    }
+
+    totalNotifier.value = packagePaths.length;
+    final List<DictionaryTaskFailure> failures = <DictionaryTaskFailure>[];
+    bool memorySignaled = false;
+    for (int i = 0; i < packagePaths.length; i++) {
+      countNotifier.value = i + 1;
+      try {
+        await _referenceConvertPackage(
+          package: File(packagePaths[i]),
+          progressNotifier: progressNotifier,
+        );
+      } catch (e, stack) {
+        ErrorLogService.instance.log('DictImport.reference', e, stack);
+        final bool mem = _isMemoryError(e) && !lowMemoryMode;
+        if (mem && !memorySignaled) {
+          memorySignaled = true;
+          onMemoryError?.call();
+        }
+        failures.add(
+          DictionaryTaskFailure(
+            name: path.basenameWithoutExtension(packagePaths[i]),
+            stage: DictionaryTaskStage.import,
+            error: e,
+          ),
+        );
+      }
+    }
+
+    progressNotifier.value = t.import_complete;
+    if (failures.isNotEmpty) {
+      FushiToast.show(
+        msg: formatImportFailureSummary(failures),
+        toastLength: Toast.LENGTH_LONG,
+        severity: ToastSeverity.error,
+      );
+    }
+    final int succeeded = packagePaths.length - failures.length;
+    if (succeeded > 0) {
+      FushiToast.show(
+        msg: t.dict_import_success_summary(n: succeeded),
+        severity: ToastSeverity.success,
+      );
+    }
+    onImportSuccess();
+  }
+
+  /// 转换**一个**原始包并把产物留在它旁边：
+  ///
+  /// native 转换先落进包所在目录的 `.fushi_stage/`（产物里带着词典真名的子目录），
+  /// 成功后把产物 rename 到 `<包所在目录>/<词典名>/`——同卷 rename 是 O(1)，不算
+  /// 复制。原包从头到尾不被触碰。此前用复制式装过的同名词典，其私有目录副本会被
+  /// 收走（换成引用后那份成了孤儿）。
+  Future<void> _referenceConvertPackage({
+    required File package,
+    required ValueNotifier<String> progressNotifier,
+  }) async {
+    final Directory outputRoot = package.parent;
+    final Directory stage = Directory(
+      path.join(outputRoot.path, _kReferenceStageDirName),
+    );
+    if (stage.existsSync()) stage.deleteSync(recursive: true);
+    stage.createSync(recursive: true);
+    try {
+      progressNotifier.value = t.import_extract;
+      await Future<void>.delayed(Duration.zero);
+
+      final FushiImportResult result;
+      ErrorLogService.instance.markImportStart(
+        'reference 转换未返回：${package.path}',
+      );
+      try {
+        result = await _convert(
+          zipPath: package.path,
+          outputDir: stage.path,
+          breadcrumbDir: ErrorLogService.instance.importStepBreadcrumbDir,
+        );
+      } finally {
+        ErrorLogService.instance.markImportEnd();
+      }
+      _logImportResultSummary('reference:${package.path}', result);
+      if (!result.success) {
+        throw Exception(
+          result.error.isNotEmpty ? result.error : t.import_failed,
+        );
+      }
+
+      final String name = _sanitizeTitle(result.title);
+      Directory dataDir = Directory(path.join(stage.path, name));
+      if (!dataDir.existsSync()) dataDir = stage;
+
+      final Directory finalDir = Directory(path.join(outputRoot.path, name));
+      if (finalDir.existsSync()) {
+        // 同名目录只允许在**我们自己的旧转换产物**（转换输出必带 index.json）上
+        // 覆盖；用户的同名普通文件夹绝不碰，报失败让人自己处理。
+        if (!File(path.join(finalDir.path, 'index.json')).existsSync()) {
+          throw Exception('同名目录已存在且不是词典转换产物：${finalDir.path}');
+        }
+        await deleteDictionaryDirectory(
+          finalDir,
+          reloadEngine: _dictRepo.rebuildEngine,
+        );
+      }
+
+      await _publishImportedDir(dataDir, finalDir.path);
+
+      // 与包同目录的 css 附件跟进产物（yomitan zip 自带样式，不依赖这个）。
+      for (final FileSystemEntity entity in outputRoot.listSync()) {
+        if (entity is File && entity.path.toLowerCase().endsWith('.css')) {
+          entity.copySync(path.join(finalDir.path, path.basename(entity.path)));
+        }
+      }
+
+      final Dictionary? existing = _findByName(name);
+      final int order = existing?.order ?? _nextOrder();
+      if (existing != null && !existing.isReferenced) {
+        // 旧复制式安装的私有副本收走（换引用后成了孤儿，占双倍空间）。
+        await deleteDictionaryDirectory(
+          Directory(path.join(_resourceDirectory.path, name)),
+          reloadEngine: _dictRepo.rebuildEngine,
+        );
+      }
+      await _dictRepo.persistDictionary(
+        Dictionary(
+          order: order,
+          name: name,
+          formatKey: 'yomichan',
+          type: _parseType(result.detectedType),
+          metadata: <String, String>{
+            ...readSourceMetadataFromIndex(finalDir),
+            if (result.kanjiCount > 0) 'hasKanji': 'true',
+            kDictTypeProbeKey: kDictTypeProbeVersion,
+          },
+          hiddenLanguages: existing?.hiddenLanguages ?? const [],
+          collapsedLanguages: existing?.collapsedLanguages ?? const [],
+          expandedLanguages: existing?.expandedLanguages ?? const [],
+          languageOverride: existing?.languageOverride,
+          displayName: existing?.displayName,
+          // 关键：登记转换产物的位置。留空就退化成默认落点，而那里并没有数据。
+          resourcePath: finalDir.path,
+        ),
+      );
+    } finally {
+      if (stage.existsSync()) {
+        try {
+          stage.deleteSync(recursive: true);
+        } catch (e, stack) {
+          ErrorLogService.instance.log('DictImport.reference.stage', e, stack);
+        }
+      }
+    }
+  }
+
   /// BUG-1903：把一个装了多本词典的压缩包拆开、逐本导入。
   ///
   /// 解压保持原有目录层级：MDX 的样式表 / 资源（`.css` / `.mdd`）就躺在它自己那本
@@ -405,8 +704,10 @@ class DictionaryImportManager {
     required bool lowMemoryMode,
     VoidCallback? onMemoryError,
   }) async {
-    final String baseWork =
-        path.join(_resourceDirectory.path, 'import_multi_temp');
+    final String baseWork = path.join(
+      _resourceDirectory.path,
+      'import_multi_temp',
+    );
     // BUG-2952：整合包里的内层 zip 自己也可能是一包多典，会递归回到这里。递归层
     // 必须用外层工作目录**里面**的独立目录——共用同一个固定目录会在外层还在逐本
     // 导入时把它整个删掉。外层 finally 删目录时连带清掉。
@@ -434,11 +735,14 @@ class DictionaryImportManager {
       final String workPath = work.path;
       await Isolate.run(() => extractZipFileToDirectory(zipPath, workPath));
 
-      final List<File> dictionaries =
-          work.listSync(recursive: true).whereType<File>().where((File f) {
-        final String ext = path.extension(f.path).toLowerCase();
-        return ext == '.mdx' || ext == '.dsl' || ext == '.zip';
-      }).toList();
+      final List<File> dictionaries = work
+          .listSync(recursive: true)
+          .whereType<File>()
+          .where((File f) {
+            final String ext = path.extension(f.path).toLowerCase();
+            return ext == '.mdx' || ext == '.dsl' || ext == '.zip';
+          })
+          .toList();
       // BUG-2952：多份 index.json 的整合包——每个带 index.json 的目录是一本
       // Yomitan 散文件词典，打成临时 zip 后走同一条 [importFromFile]。只有一份
       // index.json 且没有别的词典时不会走到这里（[isDictionaryBundle]）；只有
@@ -446,8 +750,9 @@ class DictionaryImportManager {
       final List<Directory> yomitanRoots = work
           .listSync(recursive: true)
           .whereType<File>()
-          .where((File f) =>
-              path.basename(f.path).toLowerCase() == 'index.json')
+          .where(
+            (File f) => path.basename(f.path).toLowerCase() == 'index.json',
+          )
           .map((File f) => f.parent)
           .toList();
       if (yomitanRoots.length > 1 || dictionaries.isNotEmpty) {
@@ -478,13 +783,13 @@ class DictionaryImportManager {
       }
       dictionaries.sort((File a, File b) => a.path.compareTo(b.path));
       if (dictionaries.length > 1) {
-        progressNotifier.value =
-            t.dict_import_bundle_detected(n: dictionaries.length);
+        progressNotifier.value = t.dict_import_bundle_detected(
+          n: dictionaries.length,
+        );
         await Future<void>.delayed(Duration.zero);
       }
 
-      final List<DictionaryTaskFailure> failedNames =
-          <DictionaryTaskFailure>[];
+      final List<DictionaryTaskFailure> failedNames = <DictionaryTaskFailure>[];
       for (int i = 0; i < dictionaries.length; i++) {
         final File dictionary = dictionaries[i];
         final List<File> cssFiles = Directory(path.dirname(dictionary.path))
@@ -532,8 +837,11 @@ class DictionaryImportManager {
         try {
           work.deleteSync(recursive: true);
         } catch (e, stack) {
-          ErrorLogService.instance
-              .log('DictImport.multiArchiveCleanup', e, stack);
+          ErrorLogService.instance.log(
+            'DictImport.multiArchiveCleanup',
+            e,
+            stack,
+          );
         }
       }
     }
@@ -572,8 +880,9 @@ class DictionaryImportManager {
         !forceReplaceExisting &&
         sourceOverride == null &&
         path.extension(file.path).toLowerCase() == '.zip') {
-      final List<String> archived =
-          archivedDictionaryEntries(_readZipFileNames(file));
+      final List<String> archived = archivedDictionaryEntries(
+        _readZipFileNames(file),
+      );
       if (isDictionaryBundle(archived)) {
         await _importArchivedDictionaries(
           archive: file,
@@ -592,8 +901,9 @@ class DictionaryImportManager {
       progressNotifier.value = t.import_extract;
       await Future<void>.delayed(Duration.zero);
 
-      final tempOutputDir =
-          Directory(path.join(_resourceDirectory.path, 'import_temp'));
+      final tempOutputDir = Directory(
+        path.join(_resourceDirectory.path, 'import_temp'),
+      );
       if (tempOutputDir.existsSync()) {
         tempOutputDir.deleteSync(recursive: true);
       }
@@ -644,8 +954,10 @@ class DictionaryImportManager {
       final finalDir = Directory(path.join(_resourceDirectory.path, name));
       _validatePath(finalDir);
       // 同上（BUG-1756）：删旧目录必须经原语，先让引擎释放映射。
-      await deleteDictionaryDirectory(finalDir,
-          reloadEngine: _dictRepo.rebuildEngine);
+      await deleteDictionaryDirectory(
+        finalDir,
+        reloadEngine: _dictRepo.rebuildEngine,
+      );
 
       if (innerDataDir.existsSync()) {
         await _publishImportedDir(innerDataDir, finalDir.path);
@@ -663,8 +975,10 @@ class DictionaryImportManager {
       }
       for (final fontDir in fontDirs) {
         if (fontDir.existsSync()) {
-          _copyDirectory(fontDir,
-              Directory(path.join(finalDir.path, path.basename(fontDir.path))));
+          _copyDirectory(
+            fontDir,
+            Directory(path.join(finalDir.path, path.basename(fontDir.path))),
+          );
         }
       }
 
@@ -716,6 +1030,17 @@ class DictionaryImportManager {
   }
 
   // ── private helpers ──────────────────────────────────────────────────
+
+  /// 按真名找已安装的词典（找不到返回 null）。
+  ///
+  /// 引用式导入覆盖同名旧装时用它来继承 order / 语言设置 / 显示名——那几样是
+  /// 用户设置，重导不该丢，语义与复制式导入的 `preservedSettings` 一致。
+  Dictionary? _findByName(String name) {
+    for (final Dictionary d in _dictRepo.dictionaries) {
+      if (d.name == name) return d;
+    }
+    return null;
+  }
 
   int _nextOrder() {
     final dicts = _dictRepo.dictionaries;
@@ -861,11 +1186,14 @@ class DictionaryImportManager {
     final ZipFileEncoder encoder = ZipFileEncoder();
     encoder.create(zipPath, level: ZipFileEncoder.STORE);
     try {
-      for (final FileSystemEntity entity
-          in directory.listSync(recursive: true)) {
+      for (final FileSystemEntity entity in directory.listSync(
+        recursive: true,
+      )) {
         if (entity is File && !skipped(entity.path)) {
-          final String relativePath =
-              path.relative(entity.path, from: directory.path);
+          final String relativePath = path.relative(
+            entity.path,
+            from: directory.path,
+          );
           final InputFileStream fileStream = InputFileStream(entity.path);
           try {
             encoder.addArchiveFile(
@@ -895,7 +1223,9 @@ class DictionaryImportManager {
   }
 
   static Future<void> _copyDirectoryAsync(
-      Directory source, Directory destination) async {
+    Directory source,
+    Directory destination,
+  ) async {
     await destination.create(recursive: true);
     await for (final entity in source.list()) {
       final newPath = path.join(destination.path, path.basename(entity.path));
@@ -1028,10 +1358,12 @@ class DictionaryImportManager {
         decision != UpdateDecision.replaceOldVersion) {
       return null;
     }
-    final Dictionary existing = replaceTarget ??
+    final Dictionary existing =
+        replaceTarget ??
         (decision == UpdateDecision.replaceExact
-            ? _dictRepo.dictionaries
-                .firstWhere((Dictionary d) => d.name == newName)
+            ? _dictRepo.dictionaries.firstWhere(
+                (Dictionary d) => d.name == newName,
+              )
             : _dictRepo.findUpdatable(newName)!);
     await _removeDictionaryDirAndMeta(existing.name);
     if (existing.name != newName && _dictRepo.hasDictionaryNamed(newName)) {
@@ -1075,9 +1407,9 @@ class DictionaryImportManager {
     Map<String, String> fromIndex,
     Map<String, String>? sourceOverride,
   ) {
-    final Map<String, String> override =
-        Map<String, String>.from(sourceOverride ?? const <String, String>{})
-          ..remove('revision');
+    final Map<String, String> override = Map<String, String>.from(
+      sourceOverride ?? const <String, String>{},
+    )..remove('revision');
     return <String, String>{...fromIndex, ...override};
   }
 
@@ -1154,11 +1486,15 @@ class DictionaryTaskFailure {
 
   /// 「下载失败：名字（原因）」——单条失败时的完整提示。
   String get headline => switch (stage) {
-        DictionaryTaskStage.download =>
-          t.dict_task_failed_download(name: name, reason: reason),
-        DictionaryTaskStage.import =>
-          t.dict_task_failed_import(name: name, reason: reason),
-      };
+    DictionaryTaskStage.download => t.dict_task_failed_download(
+      name: name,
+      reason: reason,
+    ),
+    DictionaryTaskStage.import => t.dict_task_failed_import(
+      name: name,
+      reason: reason,
+    ),
+  };
 
   /// 多条汇总里的一行。
   String get line => '$name: $reason';

@@ -2936,21 +2936,36 @@ class AppModel with ChangeNotifier {
 
   // 隐藏的词典（四种类型）一律不进引擎（BUG-177/TODO-094/BUG-3454）。always rebuild 即使全空：删掉最后一本要落进空引擎让
   // 旧 in-memory 索引失效，查询不再命中（BUG-171）。分桶 switch 收口在 [bucketDictPaths]。
+  /// 一本词典的数据目录在哪。
+  ///
+  /// v117 起「引用外部目录」安装的词典把绝对路径记在 [Dictionary.resourcePath] 上；
+  /// 没记的沿用默认落点 `<dictionaryResourceDirectory>/<name>`——v116 及以前的
+  /// 既有词典、以及所有复制式导入都走这条，所以旧数据无需迁移。
+  ///
+  /// 拼装只认这一个地方：装载（同步 / 异步两条）、删除、存在性判断全都经过它。
+  /// 散在各处迟早出现「引擎按新路径装、删除按旧路径删」这种错配——而引用模式下
+  /// 删错路径删的是用户的源目录，代价太大。
+  Directory _dictionaryDataDirectory(Dictionary d) {
+    final String referenced = d.resourcePath?.trim() ?? '';
+    if (referenced.isNotEmpty) return Directory(referenced);
+    return Directory(path.join(dictionaryResourceDirectory.path, d.name));
+  }
+
   void _rebuildDictPathsCache() {
     _migrateDictionaryTypes();
     final List<DictPathEntry> entries = <DictPathEntry>[];
     for (final d in dictRepo.dictionaries) {
-      final p = path.join(dictionaryResourceDirectory.path, d.name);
-      entries.add(
-        dictPathEntryOf(
-          type: d.type,
-          path: p,
-          exists: Directory(p).existsSync() && _dictDirMaterialized(p),
-          hidden: d.isHidden(JapaneseLanguage.instance),
-          metadata: d.metadata,
-          order: d.order,
-        ),
-      );
+      // 引用导入（不复制）时路径是用户目录，不是默认落点：统一走
+      // [_dictionaryDataDirectory]，避免「装载按引用路径、缓存按默认落点」错配。
+      final p = _dictionaryDataDirectory(d).path;
+      entries.add(dictPathEntryOf(
+        type: d.type,
+        path: p,
+        exists: Directory(p).existsSync() && _dictDirMaterialized(p),
+        hidden: d.isHidden(JapaneseLanguage.instance),
+        metadata: d.metadata,
+        order: d.order,
+      ));
     }
     final b = bucketDictPaths(entries);
     // 排期而不是就地重建：这个回调挂在**每一次**词典元数据写入上（导入每本、
@@ -3103,8 +3118,7 @@ class AppModel with ChangeNotifier {
     _migrateDictionaryTypes();
     final dictList = dictRepo.dictionaries;
     final List<String> paths = <String>[
-      for (final d in dictList)
-        path.join(dictionaryResourceDirectory.path, d.name),
+      for (final d in dictList) _dictionaryDataDirectory(d).path,
     ];
     final existsResults = await Future.wait([
       for (final p in paths) Directory(p).exists(),
@@ -8079,6 +8093,11 @@ class AppModel with ChangeNotifier {
 
   // ── dictionary import (delegated to DictionaryImportManager) ────────
 
+  /// v117：[referenceOriginal] = true 时不复制目录，只登记它的绝对路径。
+  ///
+  /// 安卓上默认落点是 app 私有目录（卸载即删），而一本词典常见 1~6 GB——引用模式
+  /// 让数据留在用户自己的目录里。仅对含 `index.json` 的已解压 Yomitan 目录生效，
+  /// 其余形态仍需经 native 转换，照旧复制（见 `DictionaryImportManager`）。
   Future<void> importDictionaryFromDirectory({
     required Directory directory,
     required ValueNotifier<String> progressNotifier,
@@ -8086,15 +8105,18 @@ class AppModel with ChangeNotifier {
     required ValueNotifier<int?> totalNotifier,
     required Function() onImportSuccess,
     VoidCallback? onMemoryError,
-  }) => _dictImportManager.importFromDirectory(
-    directory: directory,
-    progressNotifier: progressNotifier,
-    countNotifier: countNotifier,
-    totalNotifier: totalNotifier,
-    onImportSuccess: onImportSuccess,
-    lowMemoryMode: lowMemoryMode,
-    onMemoryError: onMemoryError,
-  );
+    bool referenceOriginal = false,
+  }) =>
+      _dictImportManager.importFromDirectory(
+        directory: directory,
+        progressNotifier: progressNotifier,
+        countNotifier: countNotifier,
+        totalNotifier: totalNotifier,
+        onImportSuccess: onImportSuccess,
+        lowMemoryMode: lowMemoryMode,
+        onMemoryError: onMemoryError,
+        referenceOriginal: referenceOriginal,
+      );
 
   Future<void> importDictionary({
     required File file,
@@ -8379,6 +8401,37 @@ class AppModel with ChangeNotifier {
     }
   }
 
+  /// 引用模式（v117）下删词典要连用户的**源目录**一起删——这是用户在设置里明确
+  /// 选的语义，但代价不可逆：一本词典常见 1~6 GB，且那个目录是用户自己的地方。
+  ///
+  /// 所以真动手前按事实做三道校验，任一不过就只撤元数据、**磁盘文件原样保留**：
+  ///
+  /// 1. 路径段数够多——拒掉存储根、文件系统根这类「父级」目录，那种一次就是灾难；
+  /// 2. 目录里确实躺着词典数据（`index.json` 或 `.mdx` / `.dsl`）——防止拿着一个
+  ///    被改过 / 认错的路径去删掉用户的某个普通文件夹；
+  /// 3. 目录当前存在——不存在就没什么可删，不必报错。
+  ///
+  /// 校验不过时**不弹「删除失败」**：app 侧该本词典确实已经移除，弹失败会误导。
+  /// 只落日志，供事后查「为什么文件还在」。
+  bool _canDeleteReferencedDirectory(Directory dir) {
+    final List<String> parts = dir.path
+        .split(Platform.pathSeparator)
+        .where((String s) => s.isNotEmpty)
+        .toList();
+    if (parts.length < 3) return false;
+    if (!dir.existsSync()) return false;
+    try {
+      if (File(path.join(dir.path, 'index.json')).existsSync()) return true;
+      return dir
+          .listSync(followLinks: false)
+          .whereType<File>()
+          .any((File f) => f.path.toLowerCase().endsWith('.mdx'));
+    } catch (_) {
+      // 列目录失败（权限 / 被卸载的外部存储）时按「不能确认」处理，宁可不删。
+      return false;
+    }
+  }
+
   Future<void> deleteDictionary(Dictionary dictionary) async {
     try {
       await clearDictionaryHistory();
@@ -8393,11 +8446,23 @@ class AppModel with ChangeNotifier {
       // 全在抛出点之后、永不执行。用户看到的就是「提示删除失败，重启后词典却没了」。
       await dictRepo.deleteDictionaryMeta(dictionary.name);
 
-      await deleteDictionaryDirectory(
-        Directory(path.join(dictionaryResourceDirectory.path, dictionary.name)),
-        // 删完把剩下的词典装回引擎（释放映射时整个引擎被清空了）。
-        reloadEngine: _rebuildDictPathsCache,
-      );
+      final Directory dataDir = _dictionaryDataDirectory(dictionary);
+      if (dictionary.isReferenced &&
+          !_canDeleteReferencedDirectory(dataDir)) {
+        // 引用模式：这里本该删的是用户源目录，校验不过就只撤元数据、文件留着。
+        // 不弹「删除失败」——app 侧确实已移除，弹失败是误导；落日志备查。
+        ErrorLogService.instance.log(
+          'deleteDictionary.keepReferencedDir',
+          'referenced directory kept on disk: ${dataDir.path}',
+          StackTrace.current,
+        );
+      } else {
+        await deleteDictionaryDirectory(
+          dataDir,
+          // 删完把剩下的词典装回引擎（释放映射时整个引擎被清空了）。
+          reloadEngine: _rebuildDictPathsCache,
+        );
+      }
       // 不再把删除传播到远端（BUG-086 / BUG-1566 那套已退役，BUG-2762）：两条同步
       // 通道都不再自动并集同步词典，远端那份不会被下一轮拉回来；它是用户经设置页
       // 「词典 · 传输」显式放上去的备份，本地删一本不该连坐删掉它。
