@@ -3172,6 +3172,23 @@ class AppModel with ChangeNotifier {
         ),
     ];
     final b = bucketDictPaths(entries);
+    // [DIAG-START] 临时诊断引用词典为何不装载（确认后删除）
+    debugPrint(
+      '[Fushi][DIAG] dictList=${dictList.length} existing=${existingDirs.length} '
+      'ready=${readyDirs.length} termBucket=${b.term.length}',
+    );
+    for (var i = 0; i < dictList.length; i++) {
+      final String rp = (dictList[i].resourcePath ?? '').trim();
+      if (rp.isEmpty) continue;
+      final String p = paths[i];
+      final bool ex = existsResults[i] && readyDirs.contains(p);
+      final bool hd = dictList[i].isHidden(JapaneseLanguage.instance);
+      debugPrint(
+        '[Fushi][DIAG] REF name=${dictList[i].name} exists=$ex hidden=$hd '
+        'ready=${readyDirs.contains(p)} inTerm=${b.term.contains(p)}',
+      );
+    }
+    // [DIAG-END]
     FushiDicts.scheduleTyped(
       termPaths: b.term,
       freqPaths: b.freq,
