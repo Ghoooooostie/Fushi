@@ -357,48 +357,6 @@ extension _ReaderNavigation on _ReaderFushiPageState {
 
   // ── 段落对照翻译 ──────────────────────────────────────────────────
 
-  /// 确保 [_translation] 存在且与当前设置一致。幂等，可重复调用。
-  ///
-  /// **关着就不建**：每个 translator 都持有一个出站 http.Client，而翻译默认关闭——
-  /// 开书即建等于让**每一个读者**（包括从不打开翻译的）都白占一份资源。真要打开时
-  /// 再建，代价只是一次对象分配；关掉时置 null，下次打开又是干净的。
-  void _ensureTranslation(ReaderSettings settings) {
-    if (!settings.translationEnabled) {
-      _translation = null;
-      return;
-    }
-    final InAppWebViewController? controller = _controller;
-    if (controller == null) return;
-
-    // 用户为翻译指派的 AI 提供商；没单独指派则跟随默认提供商。拿到 null（没配）
-    // 时 TranslationClient.standard 不会装配 llm 引擎，选 LLM 会自然落到
-    // engine_not_configured——一眼能懂的失败，而非崩。
-    final llmProvider =
-        appModelNoUpdate.prefsRepo.resolveAiFeatureProvider(AiFeature.translation);
-
-    // 阅读器生命周期内调用频率极低（换章 / 设置变更），每次重建换取「永远用最新
-    // provider」：用户在 AI 设置里换 key / 换家即时生效，不必重进阅读器。旧 client
-    // 持有的出站连接在此关掉，不关会攒空闲连接。
-    final TranslationClient client = TranslationClient.standard(llmProvider: llmProvider);
-    unawaited(_translationClient?.close() ?? Future<void>.value());
-    _translationClient = client;
-
-    final ReaderTranslationScheduler scheduler =
-        _translation ??
-        ReaderTranslationScheduler(
-          evaluate: (String source) =>
-              controller.evaluateJavascript(source: source),
-          client: client,
-        );
-    _translation = scheduler;
-    scheduler.applySettings(
-      enabled: settings.translationEnabled,
-      engineId: TranslationEngineId.fromStorage(settings.translationEngineId),
-      target: TranslationTargetLanguage.fromStorage(
-        settings.translationTargetLanguage,
-      ),
-    );
-  }
 
   /// 文档已就绪 → 翻译侧在此睁眼。调用点见 [_onRestoreComplete]，那是「新文档已经
   /// 可读」的唯一权威信号（换章节页、重恢复、平移重排都走那里）。
@@ -540,46 +498,6 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     );
   }
 
-  /// 文档已就绪 → 翻译侧在此睁眼。调用点见 [_onRestoreComplete]，那是「新文档已经
-  /// 可读」的唯一权威信号（换章节页、重恢复、平移重排都走那里）。
-  ///
-  /// 三步：按设置对齐 scheduler → 让 JS 侧按 config 装一次样式/显隐 → 排首屏扫描。
-  ///
-  /// 全程吞异常：翻译是**增强**功能。走到这里时阅读器已经恢复完成、用户可以读了，
-  /// 任何一步出错都不该连可用性一起赔进去，也不该污染这次 restore 的结果。
-  Future<void> _onTranslationDocumentReady() async {
-    final ReaderSettings? settings = _settings;
-    // 诊断打点（排查期保留）：把「读到了什么」如实打出来。翻译默认关闭、且
-    // ReaderSettings 走内存缓存，只看 UI 上开关是开的并不能证明这里读到的就是 true。
-    debugPrint(
-      '[translation] hook: hasSettings=${settings != null}, '
-      'enabled=${settings?.translationEnabled}, '
-      'visible=${settings?.translationVisible}, '
-      'engine=${settings?.translationEngineId}, '
-      'target=${settings?.translationTargetLanguage}',
-    );
-    if (settings == null) return;
-    try {
-      _ensureTranslation(settings);
-      final ReaderTranslationScheduler? scheduler = _translation;
-      debugPrint(
-        '[translation] after ensure: scheduler=${scheduler != null}, '
-        'schedulerEnabled=${scheduler?.enabled}',
-      );
-      if (scheduler == null || !scheduler.enabled) return;
-      await scheduler.installForDocument();
-      await scheduler.applyStyleLive(
-        color: settings.translationColor,
-        opacity: settings.translationOpacity,
-        visible: settings.translationVisible,
-      );
-      scheduler.scheduleVisibleScan();
-    } catch (error, stack) {
-      // 排查期无条件打印：异常被吞掉正是这次「什么都没发生」最难查的地方。
-      debugPrint('[translation] document-ready hook failed: $error');
-      debugPrint('[translation] stack: $stack');
-    }
-  }
 
   // ── Chapter Navigation ────────────────────────────────────────────
 
