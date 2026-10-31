@@ -961,6 +961,23 @@ class FushiDatabase extends _$FushiDatabase
   /// BUG-2335: version 97 also exists in a parallel migration history without
   /// the v96 expansion column. Reuse the additive migration on open so a
   /// matching user_version cannot skip the column required by the mapper.
+  /// 词典「引用导入（不复制）」的落点列 `dictionary_metadata.resource_path`
+  /// ——**本地 develop 线独有**（上游没有段落翻译 / 引用导入这条线）。
+  ///
+  /// 版本号槽位两度撞车（本地原定 v117 撞上游 Fushi SRS 的 v117；顺延 v125 又撞上游
+  /// v125 的 SRS 索引），因此**不再占用版本号**：纯加列 + 存在性守卫，幂等，
+  /// 由 [beforeOpen] 兜底（同 [_ensureDictionaryExpandedLanguagesColumn] 的处理方式）。
+  /// null 即沿用默认落点 `<dictionaryResourceDirectory>/<name>`，老数据无需回填。
+  Future<void> _ensureDictionaryResourcePathColumn(Migrator m) async {
+    if (await _tableExists('dictionary_metadata') &&
+        !await _columnExists('dictionary_metadata', 'resource_path')) {
+      await m.addColumn(
+        dictionaryMetadata,
+        dictionaryMetadata.resourcePath,
+      );
+    }
+  }
+
   Future<void> _ensureDictionaryExpandedLanguagesColumn(Migrator m) async {
     if (await _tableExists('dictionary_metadata') &&
         !await _columnExists('dictionary_metadata', 'expanded_languages_json')) {
@@ -2752,6 +2769,10 @@ class FushiDatabase extends _$FushiDatabase
           // Keep it after downgrade refusal and before any generated query;
           // do not rewrite user_version or replay unrelated migration steps.
           await _ensureDictionaryExpandedLanguagesColumn(createMigrator());
+
+          // 本地 develop 线的引用导入落点列，同样经不起「版本号撞车 → 老库跳过」，
+          // 与上一行同性质：幂等加列，放在降级拒绝之后、任何生成查询之前。
+          await _ensureDictionaryResourcePathColumn(createMigrator());
 
           // A hard process exit cannot run HomePage.dispose, so a scrape run
           // left in `running` would otherwise remain active forever. Reconcile
